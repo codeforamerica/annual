@@ -1,0 +1,28 @@
+---
+layout: default
+title: Code for America 2012 Annual Report
+---
+
+<divc class="navbutton"></div>
+
+<div id="page">
+
+  {% for page in site.posts %}
+  
+  <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
+    {{ post.content | strip_html | truncatewords: 100 }}
+
+  </div>
+  {% endfor %}  
+
+
+    <li><a class="posttitle" href="{{ post.url }}">{{ post.title }}</a><br />
+     
+      <p>{{ post.content | strip_html | truncatewords: 100 }} <a href="{{ post.url }}">more</a></p>
+
+    </li>
+
+  </ul>
+
+
+</div>

@@ -1,0 +1,15 @@
+/********
+ Resume
+****/
+
+.resume .print{ 
+  display:block;
+}
+
+.resume .screen{ 
+  display:none;
+}
+.resume div.links li{ 
+  padding:3px;
+  font-size:14px;
+}
