@@ -64,7 +64,7 @@ table {
 .header img {
   max-width: 91px;
   max-height: 63px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -74,6 +74,7 @@ table {
   color: #fff;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .header nav li:hover{
