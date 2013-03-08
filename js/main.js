@@ -1,9 +1,9 @@
 $(function(){
+
 	$('.cfalogo').hover(
 	function() {
 		$('nav').show();
 	});
-
 
 
   var height = $(window).height(),
