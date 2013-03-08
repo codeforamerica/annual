@@ -26,6 +26,7 @@ title: Code for America 2012 Annual Report
   
   <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
     {{ post.content  }}
+
   </div>
   {% endfor %}  
 
@@ -33,7 +34,10 @@ title: Code for America 2012 Annual Report
 
   {% if p.url != "/index.html" %}
     <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
-      {{ p.content | markdownify }} 
+      {{ p.content | markdownify }}
+      {% if p.imageurl %}
+      <img class="bgimg" src="{{p.imageurl}}" />
+      {% endif %}
     </div>
   {% endif %}
   {% endfor %}  

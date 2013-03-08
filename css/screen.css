@@ -58,6 +58,7 @@ table {
   position:fixed;
   right:30px;
   top:50px;
+  z-index:100;
 }
 
 .header img {
@@ -123,9 +124,19 @@ ul.posts {
   clear:both;
 }
 .quote{ 
+  position:relative;
   width:100%;
   height:100%;
 }
-.fullpage h1{ 
+.quote h1{ 
   text-align:center;
+  color:#fff;
+}
+.quote .bgimg{ 
+  position:absolute;
+  top:0px; 
+  bottom:0px;
+  left:0px;
+  right:0px;
+  z-index:-10;
 }
