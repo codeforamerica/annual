@@ -21,9 +21,9 @@ $(function(){
   	
     //hides nav when user starts to scroll
   	if($(window).scrollTop() > 0) {
-  		$("nav").hide();
+  		$("nav").fadeOut();
   	} else {
-  		$("nav").show();
+  		$("nav").fadeIn();
   	}
 
     console.log(($(window).scrollTop() % height) / height, Math.floor($(window).scrollTop() / height), "img#img-"+ Math.floor($(window).scrollTop() / height));
