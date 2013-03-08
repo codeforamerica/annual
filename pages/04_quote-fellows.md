@@ -1,7 +1,7 @@
 ---
 layout: fullpage
 title: quote2
-imageurl: /img/fellows.jpg
+imageurl: img/fellows.jpg
 order: 2
 ---
 

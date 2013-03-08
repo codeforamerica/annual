@@ -1,7 +1,7 @@
 ---
 layout: fullpage
 title: quote2
-imageurl: /img/city_hall.jpg
+imageurl: img/city_hall.jpg
 order: 1
 ---
 
