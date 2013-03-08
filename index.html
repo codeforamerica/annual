@@ -21,21 +21,24 @@ title: Code for America 2012 Annual Report
 
 <div id="page">
 
-  {% for page in site.posts %}
+
+  {% for post in site.posts %}
   
   <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
-    {{ post.content | strip_html | truncatewords: 100 }}
-
+    {{ post.content  }}
   </div>
   {% endfor %}  
 
-    <li><a class="posttitle" href="{{ post.url }}">{{ post.title }}</a><br />
-     
-      <p>{{ post.content | strip_html | truncatewords: 100 }} <a href="{{ post.url }}">more</a></p>
+  {% for p in site.pages %}
 
-    </li>
+  {% if p.url != "/index.html" %}
+    <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
+      {{ p.content | markdownify }} 
+    </div>
+  {% endif %}
+  {% endfor %}  
 
-  </ul>
+
 
 
 </div>
