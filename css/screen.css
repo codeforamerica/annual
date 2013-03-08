@@ -127,13 +127,16 @@ ul.posts {
   position:relative;
   width:100%;
   height:100%;
+  overflow:hidden;
 }
 .quote h1{ 
-  text-align:center;
+  text-align:left;
   color:#fff;
+  margin:150px 80px;
+  max-width:600px;
 }
-.quote .bgimg{ 
-  position:absolute;
+.bgimg{ 
+  position:fixed;
   top:0px; 
   bottom:0px;
   left:0px;

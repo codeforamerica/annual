@@ -17,18 +17,9 @@ title: Code for America 2012 Annual Report
 	</nav>
 </div>
 
-<div class="navbutton"></div>
-
 <div id="page">
 
 
-  {% for post in site.posts %}
-  
-  <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
-    {{ post.content  }}
-
-  </div>
-  {% endfor %}  
 
   {% for p in site.pages %}
 
@@ -36,7 +27,8 @@ title: Code for America 2012 Annual Report
     <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
       {{ p.content | markdownify }}
       {% if p.imageurl %}
-      <img class="bgimg" src="{{p.imageurl}}" />
+
+
       {% endif %}
     </div>
   {% endif %}
@@ -45,4 +37,13 @@ title: Code for America 2012 Annual Report
 
 
 
+
 </div>
+{% for p in site.pages %}
+
+  {% if p.url != "/index.html" %}
+    {% if p.imageurl %}
+       <img id="img-{{ p.order }}" class="bgimg" src="{{p.imageurl}}" />
+    {% endif %}
+  {% endif %}
+{% endfor %}  
