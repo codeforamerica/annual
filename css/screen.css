@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-  background-color: white;
+  background-color: #C82A45;
   font-family: 'Droid Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased
   text-align: center;
@@ -53,6 +53,33 @@ table {
 /* Home
 /*
 /*****************************************************************************/
+
+.header {
+  float: right;
+}
+
+.header img {
+  max-width: 91px;
+  max-height: 63px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.header nav {
+  display: none;
+}
+
+.header nav li{
+  list-style: none;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header nav li:hover{
+  text-decoration: underline;
+}
 
 ul.posts {
   list-style-type: none;
