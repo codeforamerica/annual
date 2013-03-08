@@ -59,6 +59,7 @@ table {
   right:30px;
   top:50px;
   z-index:100;
+  width: 180px;
 }
 
 .header img {

@@ -1,14 +1,13 @@
 $(function(){
 
-	$('.cfalogo').hover(
+  //shows nav when user hovers over the logo
+	$(".cfalogo").hover(
 	function() {
-		$('nav').show();
+		$("nav").show();
 	});
-
 
   var height = $(window).height(),
       width = $(window).width();
-
 
   var setSize = function(){
     height = $(window).height();
@@ -19,6 +18,13 @@ $(function(){
   }
 
   $(window).scroll(function(){
+  	
+    //hides nav when user starts to scroll
+  	if($(window).scrollTop() > 0) {
+  		$("nav").hide();
+  	} else {
+  		$("nav").show();
+  	}
 
     console.log(($(window).scrollTop() % height) / height, Math.floor($(window).scrollTop() / height), "img#img-"+ Math.floor($(window).scrollTop() / height));
 
