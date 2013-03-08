@@ -17,6 +17,7 @@ html, body {
 
 body {
   background-color: #C82A45;
+  color: #fff;
   font-family: 'Droid Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased
   text-align: center;
@@ -72,7 +73,6 @@ table {
 .header nav li{
   list-style: none;
   text-align: left;
-  color: #fff;
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 8px;
@@ -97,17 +97,32 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   font-size: 32px;
-  color: #fff;
   margin-top: 80px;
 }
 
-hr {
-  color: #fff;
-  width: 200px;
-  margin: 20px auto;
+.line {
+  width: 140px;
+  margin: 20px auto 25px;
+  border: 2px solid;
+  font-weight: normal;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .blurb {
+  width: 960px;
+  margin: 0 auto 30px;
+  font-weight: normal;
+}
+
+.span4 {
+  width: 280px;
+  float: left;
+  margin: auto 20px;
+}
+
+.row {
   width: 960px;
   margin: 0 auto;
 }
