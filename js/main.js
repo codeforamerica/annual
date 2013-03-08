@@ -3,7 +3,7 @@ $(function(){
   //shows nav when user hovers over the logo
 	$(".cfalogo").hover(
 	function() {
-		$("nav").show();
+		$("nav").fadeIn();
 	});
 
   var height = $(window).height(),

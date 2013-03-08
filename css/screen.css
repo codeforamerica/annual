@@ -87,11 +87,30 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-  ul.posts span {
-    color: #aaa;
-    font-family: Monaco, "Courier New", monospace;
-    font-size: 80%;
-  }
+ul.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  margin-top: 80px;
+}
+
+hr {
+  color: #fff;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.blurb {
+  width: 960px;
+  margin: 0 auto;
+}
 
 /*****************************************************************************/
 /*
