@@ -100,33 +100,6 @@ h2 {
   margin-top: 80px;
 }
 
-.line {
-  width: 140px;
-  margin: 20px auto 25px;
-  border: 2px solid;
-  font-weight: normal;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-}
-
-.blurb {
-  width: 960px;
-  margin: 0 auto 30px;
-  font-weight: normal;
-}
-
-.span4 {
-  width: 280px;
-  float: left;
-  margin: auto 20px;
-}
-
-.row {
-  width: 960px;
-  margin: 0 auto;
-}
-
 /*****************************************************************************/
 /*
 /* Site
@@ -164,7 +137,7 @@ h2 {
 .quote h1{ 
   text-align:left;
   color:#fff;
-  margin:150px 80px;
+  margin:80px 80px;
   max-width: 900px;
   font-size: 56px;
   text-shadow: 0px 4px 9px rgba(0, 0, 0, 1);0px rgba(255, 255, 255, 0.4);
@@ -178,4 +151,29 @@ h2 {
   right:0px;
   z-index:-10;
   opacity:0;
+}
+
+.year {
+  text-align: center;
+}
+
+.year h1 {
+  font-size: 200px;
+  text-align: center;
+  margin: 80px auto 0;
+  text-shadow: none;
+}
+
+.year p {
+  font-size: 56px;
+  margin: 0px 0 30px;
+}
+
+.year img {
+  max-width: 184px;
+  max-height: 250px;
+}
+
+.year h2 {
+  font-size: 72px;
 }

@@ -6,5 +6,5 @@ order: 1
 ---
 
 
-We are learning everyday that the people inside of government are the opportunity.
+We envision: a government for the people, by the people, that works for the 21st century
 =================

@@ -6,5 +6,5 @@ order: 0
 ---
 
 
-The problem isn't government. Government is ready for change.
+Code for America exists to help governments become more efficient and responsive and to enable citizens to take meaningful civic actions.
 ================

@@ -6,5 +6,5 @@ order: 2
 ---
 
 
-The fellows show what's possible.
+We’ve come a long way.
 =================

@@ -4,5 +4,5 @@ title: home
 ---
 
 
-Code for America is creating a government for the people, by the people and by the people.
+What would society look like if we felt about our government the way we feel about our iPhones?
 ================
