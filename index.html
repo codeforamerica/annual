@@ -24,7 +24,7 @@ title: Code for America 2012 Annual Report
   {% for p in site.pages %}
 
   {% if p.url != "/index.html" %}
-    <div class="page quote" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
+    <div class="page {{ p.pagetype }}" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
       {{ p.content | markdownify }}
       {% if p.imageurl %}
 

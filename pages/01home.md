@@ -1,6 +1,7 @@
 ---
 layout: fullpage
 title: home
+pagetype: quote
 ---
 
 
