@@ -18,7 +18,7 @@ html, body {
 body {
   background-color: #C82A45;
   color: #fff;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
   webkit-font-smoothing:subpixel-antialiased
   text-align: center;
 }
@@ -153,6 +153,11 @@ h2 {
   opacity:0;
 }
 
+.story {
+  width: 960px;
+  margin: 0 auto;
+}
+
 .year {
   text-align: center;
 }
@@ -164,7 +169,7 @@ h2 {
   text-shadow: none;
 }
 
-.year p {
+.year h3 {
   font-size: 56px;
   margin: 0px 0 30px;
 }
@@ -176,4 +181,19 @@ h2 {
 
 .year h2 {
   font-size: 72px;
+}
+
+.year p {
+  font-size: 24px;
+  text-align: left;
+}
+
+.cityLeaders iframe {
+  margin: 0 auto;
+  display: block;
+}
+
+.quote .bigYear h1 {
+  font-size: 73px;
+  text-transform: uppercase;
 }
