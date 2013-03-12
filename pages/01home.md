@@ -1,7 +1,9 @@
 ---
 layout: fullpage
 title: home
+imageurl: img/iphone.jpg
 pagetype: quote
+order: 0
 ---
 
 

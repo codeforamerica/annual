@@ -2,7 +2,7 @@
 layout: fullpage
 title: quote1
 imageurl: img/chicago_lunch.jpg
-order: 0
+order: 1
 pagetype: quote
 ---
 

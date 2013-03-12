@@ -2,7 +2,7 @@
 layout: fullpage
 title: quote2
 imageurl: img/fellows.jpg
-order: 2
+order: 3
 pagetype: quote
 ---
 

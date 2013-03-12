@@ -2,7 +2,7 @@
 layout: fullpage
 title: quote2
 imageurl: img/city_hall.jpg
-order: 1
+order: 2
 pagetype: quote
 ---
 
