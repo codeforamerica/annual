@@ -135,6 +135,16 @@ p {
   text-align: left;
 }
 
+.span2 {
+  width: 140px;
+  float: left;
+}
+
+.span4 {
+  width: 300px;
+  float: left;
+}
+
 .span6,
 .span6 p {
   width: 450px;
@@ -263,4 +273,13 @@ p {
 
 .getinvolved h1 {
   margin: 0px;
+}
+
+.cfa {
+  float: left;
+  padding: 30px;
+}
+
+.network .cfa {
+  background-color: #1B877F
 }
