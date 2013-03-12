@@ -7,5 +7,5 @@ pagetype: quote
 ---
 
 
-Code for America exists to help governments become more efficient and responsive and to enable citizens to take meaningful civic actions.
+What if interfaces to government were simple, beautiful, and easy to use.
 ================

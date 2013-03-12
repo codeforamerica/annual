@@ -7,5 +7,5 @@ pagetype: quote
 ---
 
 
-We envision: a government for the people, by the people, that works for the 21st century
+What if we raised not just our voices but also our hands. 
 =================

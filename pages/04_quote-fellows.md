@@ -6,6 +6,5 @@ order: 3
 pagetype: quote
 ---
 
-
-We’ve come a long way.
+Code for America envisions a world of the people, for the people, by the people for the 21st century.
 =================
