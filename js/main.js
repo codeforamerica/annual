@@ -17,7 +17,7 @@ $(function(){
     $("img.bgimg").css({width:width, height:height});
   }
 
-  $(window).scroll(function(){
+var onScroll = function(){
   	
     //hides nav when user starts to scroll
   	if($(window).scrollTop() > 0) {
@@ -43,11 +43,12 @@ $(function(){
     });
 
 
-  });
+  }
 
   setSize();
+  onScroll();
   $(window).resize(setSize);
-
+  $(window).scroll(onScroll);
 
 
 });
