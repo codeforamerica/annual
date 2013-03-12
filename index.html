@@ -43,7 +43,7 @@ title: Code for America 2012 Annual Report
 
   {% if p.url != "/index.html" %}
     {% if p.imageurl %}
-       <img id="img-{{ p.order }}" class="bgimg" src="{{p.imageurl}}" />
+       <img id="img-{{ p.order| minus:1 }}" class="bgimg" src="{{p.imageurl}}" />
     {% endif %}
   {% endif %}
 {% endfor %}  
