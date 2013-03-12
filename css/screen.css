@@ -32,15 +32,14 @@ p {
 }
 
 a {
-  color: #00a;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: black;
-}
-
-a:visited {
-  color: #a0a;
+  color: #C82A45;
+  border-bottom: #C82A45 solid 1px;
+  text-decoration: none;
 }
 
 table {
@@ -232,7 +231,7 @@ p {
   display: block;
 }
 
-.quote .bigYear h1 {
+.quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
 }
@@ -267,4 +266,9 @@ p {
 
 .bios p {
   margin-top: 0px;
+}
+
+.getinvolved h1 {
+  margin: 0px;
+}
 }
