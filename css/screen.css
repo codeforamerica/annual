@@ -74,10 +74,11 @@ table {
   display: block;
 }
 
-.header nav li{
+.header nav li {
   list-style: none;
   text-align: left;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 400;
   cursor: pointer;
   margin-bottom: 8px;
 }
@@ -130,7 +131,7 @@ h5 {
 
 p { 
   font-weight: 300;
-  font-size: 20px;
+  font-size: 24px;
   text-align: left;
 }
 

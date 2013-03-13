@@ -7,5 +7,5 @@ order: 0
 ---
 
 
-What would society look like if we felt about our government the way we feel about our iPhones?
+What would society look like if we felt about our government the way we feel about our smartphones?
 ================
