@@ -21,6 +21,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased;
   text-align: center;
+  font-weight: 600;
 }
 
 h1 {
@@ -70,14 +71,14 @@ table {
 .header img {
   max-width: 91px;
   max-height: 63px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: block;
 }
 
 .header nav li {
   list-style: none;
   text-align: left;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   cursor: pointer;
   margin-bottom: 8px;
@@ -141,14 +142,14 @@ p {
 }
 
 .span4 {
-  width: 530px;
+  width: 700px;
   float: left;
   margin-left: 200px;
 }
 
 .span6,
 .span6 p {
-  width: 450px;
+  width: 540px;
   float: left;
 }
 
@@ -259,7 +260,7 @@ p {
 }
 
 .blurb {
-  width: 960px;
+  width: 1080px;
 }
 
 .bioright {
