@@ -42,8 +42,10 @@ title: Code for America 2012 Annual Report
 {% for p in site.pages %}
 
   {% if p.url != "/index.html" %}
+    <div class="pagebg" style="background-color:#{{ p.bgcolor }};">
     {% if p.imageurl %}
-       <img id="img-{{ p.order| minus:1 }}" class="bgimg" src="{{p.imageurl}}" />
+      <img class="bgimg" src="{{p.imageurl}}" />
     {% endif %}
+    </div>
   {% endif %}
 {% endfor %}  
