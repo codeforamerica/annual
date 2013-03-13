@@ -204,7 +204,15 @@ p {
   list-style: none;
 }
 
-.bgimg{ 
+.story{ 
+  position:relative;
+  padding:80px 80px;
+  box-sizing: border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+}
+
+.pagebg{ 
   position:fixed;
   top:0px; 
   bottom:0px;
@@ -212,6 +220,10 @@ p {
   right:0px;
   z-index:-10;
   opacity:0;
+}
+.pagebg img{ 
+  width:100%;
+  height:100%;
 }
 
 .year h1 {
