@@ -254,7 +254,7 @@ p {
 }
 
 .bioleft {
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .bios {
@@ -278,6 +278,22 @@ p {
   float: right;
 }
 
+.bios .url {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 0 0 30px;
+}
+
+.bios.apps img {
+  max-width: 386px;
+  max-height: 243.5px;
+}
+
+.moreapps {
+  clear: both;
+}
+
 .community .cfa {
   background-color: #094861;
 }
@@ -298,7 +314,7 @@ p {
 .cfa {
   float: left;
   padding: 30px;
-  width: ;
+  margin: 50px 0;
 }
 
 .cfa img {
