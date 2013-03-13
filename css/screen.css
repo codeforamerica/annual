@@ -259,7 +259,11 @@ p {
 }
 
 .bios h3 {
-  margin-top: 15px;
+  margin-top: 0px;
+}
+
+.bios h5 {
+  margin-bottom: 15px;
 }
 
 .bios p {
