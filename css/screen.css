@@ -129,7 +129,6 @@ h5 {
 }
 
 p { 
-  width: 960px;
   font-weight: 300;
   font-size: 20px;
   text-align: left;
@@ -141,8 +140,9 @@ p {
 }
 
 .span4 {
-  width: 300px;
+  width: 530px;
   float: left;
+  margin-left: 200px;
 }
 
 .span6,
@@ -245,15 +245,8 @@ p {
   margin-top: 200px;
 }
 
-.thanks h2 {
-  text-align: center;
-  text-transform: uppercase;
-  margin: 350px auto 30px;
-}
-
-.thanks img {
-  max-height: 60px;
-  max-width: 242px;
+.blurb {
+  width: 960px;
 }
 
 .bioright {
@@ -273,6 +266,19 @@ p {
   margin-top: 0px;
 }
 
+.community .cfa {
+  background-color: #094861;
+}
+
+.market img {
+  margin: 30px 0px;
+  display: block;
+}
+
+.market .cfa {
+  background-color: #DE732A;
+}
+
 .getinvolved h1 {
   margin: 0px;
 }
@@ -280,8 +286,24 @@ p {
 .cfa {
   float: left;
   padding: 30px;
+  width: ;
+}
+
+.cfa img {
+  margin-top: 27px;
 }
 
 .network .cfa {
   background-color: #1B877F
+}
+
+.thanks h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 350px auto 30px;
+}
+
+.thanks img {
+  max-height: 60px;
+  max-width: 242px;
 }
