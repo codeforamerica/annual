@@ -1,8 +1,7 @@
 ---
 layout: fullpage
 title: quote1
-imageurl: img/chicago_lunch.jpg
-order: 1
+imageurl: img/chicago_cityhall.jpg
 pagetype: quote
 ---
 
