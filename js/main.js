@@ -40,11 +40,15 @@ $(function(){
         console.log(percPage);
 
 
-
-        $($("div.pagebg")[i]).fadeIn({duration:1000});
-        $($("div.pagebg")[i+1]).fadeOut({duration:1000});
-        $($("div.pagebg")[i-1]).fadeOut({duration:1000});
-
+/*        if(percPage > 0.){
+          $($("div.pagebg")[i]).fadeOut({duration:1000});
+          $($("div.pagebg")[i+1]).fadeIn({duration:1000});
+          $($("div.pagebg")[i-1]).fadeOut({duration:1000});
+        }else{*/
+          $($("div.pagebg")[i]).fadeIn({duration:1000});
+          $($("div.pagebg")[i+1]).fadeOut({duration:1000});
+          $($("div.pagebg")[i-1]).fadeOut({duration:1000});
+        //}
       
       }
     });
