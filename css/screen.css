@@ -137,14 +137,14 @@ p {
 }
 
 .span2 {
-  width: 140px;
+  width: 200px;
   float: left;
 }
 
 .span4 {
   width: 700px;
   float: left;
-  margin-left: 200px;
+  margin-left: 140px;
 }
 
 .span5 {
@@ -271,6 +271,12 @@ p {
 
 .blurb {
   width: 1080px;
+}
+
+img.stats, 
+.market img.stats {
+margin: 50px 240px;
+display: block;
 }
 
 .bioright {
