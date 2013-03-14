@@ -22,7 +22,7 @@ body {
   webkit-font-smoothing:subpixel-antialiased;
   text-align: center;
   font-weight: 600;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
 }
 h1 {
   margin-bottom: 1em;
@@ -50,6 +50,10 @@ table {
 
 .page {
   clear: both;
+}
+
+li {
+  list-style: none;
 }
 
 
@@ -121,6 +125,7 @@ h4 {
   text-transform: uppercase;
   text-align: left;
   font-size: 24px;
+  clear: both;
 }
 
 h5 {
@@ -156,6 +161,10 @@ p {
 .span6 p {
   width: 540px;
   float: left;
+}
+
+.fourcolumn {
+  width: 220px;
 }
 
 
@@ -203,6 +212,7 @@ p {
 }
 
 
+
 .quote h1,
 .story h1,
 .goals li { 
@@ -210,7 +220,6 @@ p {
   color:#fff;
   max-width: 900px;
   font-size: 56px;
-  text-shadow: 0px 4px 9px rgba(0, 0, 0, 1);0px rgba(255, 255, 255, 0.4);
   list-style: none;
 }
 
@@ -245,7 +254,6 @@ p {
 .year h1 {
   font-size: 200px;
   margin: 100px auto -100px 0;
-  text-shadow: none;
   color: #444;
 }
 
@@ -270,6 +278,14 @@ p {
 .quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
+}
+
+.themes {
+  margin: 200px 0px;
+}
+
+.themes .headline {
+  font-size: 50px;
 }
 
 .blurb {
