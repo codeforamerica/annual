@@ -234,10 +234,15 @@ p {
   height:100%;
 }
 
+.year {
+  color: #444;
+}
+
 .year h1 {
   font-size: 200px;
-  margin: 80px auto 0 0;
+  margin: 100px auto -100px 0;
   text-shadow: none;
+  color: #444;
 }
 
 .year h3 {
@@ -245,13 +250,13 @@ p {
   margin: 0px 0 30px;
 }
 
-.year img {
-  max-width: 184px;
-  max-height: 250px;
-}
-
 .year h2 {
   font-size: 72px;
+}
+
+.year img {
+  float: left;
+  margin: 50px 0 100px;
 }
 
 .cityLeaders iframe {
@@ -313,6 +318,11 @@ p {
 
 .moreapps {
   clear: both;
+  float: left;
+}
+
+.moreapps img {
+  margin-top: 30px;
 }
 
 .community .cfa {
