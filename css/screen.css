@@ -103,7 +103,7 @@ h2 {
   text-align: left;
   font-size: 40px;
   margin-top: 80px;
-  max-width: 960px;
+  max-width: 1080px;
 }
 
 h3 {
@@ -147,11 +147,18 @@ p {
   margin-left: 200px;
 }
 
+.span5 {
+  width: 460px;
+  float: left;
+}
+
 .span6,
 .span6 p {
   width: 540px;
   float: left;
 }
+
+
 
 /****************************************************************************/
 /*
@@ -208,9 +215,8 @@ p {
 
 .story{ 
   position:relative;
-  padding:80px 80px;
   box-sizing: border-box;
-  -moz-box-sizing:border-box; /* Firefox */
+  -moz-box-sizing:border-box; /* Firefox 
   -webkit-box-sizing:border-box; /* Safari */
 }
 
@@ -277,7 +283,7 @@ p {
 }
 
 .bios h3 {
-  margin-top: 0px;
+  margin-top: -15px;
 }
 
 .bios h5 {
@@ -288,7 +294,8 @@ p {
   margin-top: 0px;
 }
 
-.bios.right .span6 {
+.bios.right .span5,
+.bios.apps.right .span6 {
   float: right;
 }
 
@@ -300,8 +307,8 @@ p {
 }
 
 .bios.apps img {
-  max-width: 386px;
-  max-height: 243.5px;
+  max-width: 500px;
+  max-height: 315px;
 }
 
 .moreapps {
