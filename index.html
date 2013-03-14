@@ -21,11 +21,11 @@ title: Code for America 2012 Annual Report
 
 
 
-  {% for p in site.pages %}
+  {% sorted_for p in site.pages sort_by:url %}
 
   {% if p.url != "/index.html" %}
   <div class="page {{ p.pagetype }}" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
-  
+
       {{ p.content | markdownify }}
       {% if p.imageurl %}
 
@@ -34,7 +34,7 @@ title: Code for America 2012 Annual Report
   
   </div>
   {% endif %}
-  {% endfor %}  
+  {% endsorted_for %}
 
 
 
