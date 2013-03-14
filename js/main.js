@@ -26,15 +26,26 @@ $(function(){
     } else {
   	  $("nav").fadeIn();
     }
-  
+    //$("div.pagebg").css({opacity:1});  
     $(".page").each(function(i, el){
-      console.log(el, $(el).offset().top, $(el).offset().top+$(el).height(), $(window).scrollTop());
+      //if(i ==0)
+      //  console.log(el, $(el).offset().top, $(el).offset().top, $(el).outerHeight(), $(window).scrollTop());
+
       if(($(el).offset().top <= $(window).scrollTop()) &&
-         ($(el).offset().top+$(el).height() >= $(window).scrollTop())){
+         ($(el).offset().top+$(el).outerHeight() >= $(window).scrollTop())){
         //in transition 
       
-        $("div.pagebg").css({opacity:0});
-        $($("div.pagebg")[i]).css({opacity:1});
+        var percPage = ($(window).scrollTop() - $(el).offset().top) / ($(el).outerHeight());
+
+        console.log(percPage);
+
+
+
+        $($("div.pagebg")[i]).fadeIn({duration:1000});
+        $($("div.pagebg")[i+1]).fadeOut({duration:1000});
+        $($("div.pagebg")[i-1]).fadeOut({duration:1000});
+
+      
       }
     });
   }
