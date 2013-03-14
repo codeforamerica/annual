@@ -1,7 +1,7 @@
 ---
 layout: fullpage
 title: quote2
-imageurl: img/city_hall.jpg
+imageurl: img/alex_biden.jpg
 pagetype: quote
 ---
 
