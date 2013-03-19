@@ -6,5 +6,9 @@ pagetype: quote
 ---
 
 
-What if interfaces to government were simple, beautiful, and easy to use?
+What if interfaces 
+================
+to government were simple, 
+================
+beautiful, and easy to use?
 ================

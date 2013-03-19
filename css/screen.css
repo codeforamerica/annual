@@ -223,6 +223,9 @@ p {
   list-style: none;
 }
 
+.quote h1 {
+  margin-bottom: 0px;
+}
 .story{ 
   position:relative;
   width:100%;
@@ -349,41 +352,19 @@ display: block;
   margin-top: 30px;
 }
 
-.community .cfa {
-  background-color: #094861;
-}
-
 .market img {
   margin: 30px 0px;
   display: block;
-}
-
-.market .cfa {
-  background-color: #DE732A;
 }
 
 .getinvolved h1 {
   margin: 0px;
 }
 
-.cfa {
-  float: left;
-  padding: 30px;
-  margin: 50px 0;
-}
-
-.cfa img {
-  margin-top: 27px;
-}
-
-.network .cfa {
-  background-color: #1B877F
-}
-
 .thanks h2 {
   text-align: center;
   text-transform: uppercase;
-  margin: 350px auto 30px;
+  margin: 0px auto 30px;
 }
 
 .thanks img {
