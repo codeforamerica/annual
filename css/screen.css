@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-  background-color: #C82A45;
+  background:#fff;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased;
@@ -50,6 +50,9 @@ table {
 
 .page {
   clear: both;
+}
+.clear{ 
+  clear:both;
 }
 
 li {
@@ -351,10 +354,13 @@ display: block;
   position:relative;
 }
 
+
 #fellowshipMap{ 
   margin-left:400px;
   height:500px;
-
+  position:absolute;
+  top:0px;
+  right:0px;
 }
 
 #fellowshipMap path {
