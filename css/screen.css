@@ -395,7 +395,15 @@ display: block;
 }
 
 .bostonseal,
-.phillyseal {
+.phillyseal,
+.seattleseal,
+.austinseal, 
+.chiseal, 
+.detroitseal,
+.hnlseal,
+.maconseal,
+.nolaseal,
+.scseal {
   background-image: url('/img/city_seals.jpg');
   background-size: 59px;
   float: right;
@@ -413,6 +421,34 @@ display: block;
 
 .seattleseal {
   background-position: 0 -118px;
+}
+
+.austinseal {
+  background-position: 0 -177px;
+}
+
+.chiseal {
+  background-position: 0 -236px;
+}
+
+.detroitseal {
+  background-position: 0 -295px;
+}
+
+.hnlseal {
+  background-position: 0 -354px;
+}
+
+.maconseal {
+  background-position: 0 -413px;
+}
+
+.nolaseal {
+  background-position: 0 -472px;
+}
+
+.scseal {
+  background-position: 0 -531px;
 }
 
 
