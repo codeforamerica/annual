@@ -109,6 +109,14 @@ $(function(){
           }
 
         }
+      }else{
+        // since it was an add, and we are now outside of of the element, remove!
+
+/*        if(t.indexOf("fellowshipmap") >= 0){
+          var a = $(el).attr("data-action");
+          if((a == "add") && (svg !== undefined))
+            svg.select("circle.city").remove()
+        } */
       }
 
       //if the element is at the top of the page
@@ -117,11 +125,14 @@ $(function(){
 
         if(t.indexOf("addclass") >=0){
           $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
+          $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
+
         }
 
       }else{
 
         if(t.indexOf("addclass") >= 0){
+          $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
           $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
         }
 

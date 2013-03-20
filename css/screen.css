@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-  background-color: #C82A45;
+  background:#fff;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased;
@@ -50,6 +50,9 @@ table {
 
 .page {
   clear: both;
+}
+.clear{ 
+  clear:both;
 }
 
 li {
@@ -201,7 +204,7 @@ p {
 .quote,
 .story{ 
   position:relative;
-  padding:0px 80px 0px;
+  padding:400px 80px 0px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
@@ -351,6 +354,7 @@ display: block;
   position:relative;
 }
 
+
 #fellowshipMap{ 
   margin-left:400px;
   height:500px;
@@ -368,6 +372,7 @@ display: block;
   position:fixed !important;
   top:0px;
   right:80px !important;
+
 }
 
 .fellowshipyearfixed{ 
