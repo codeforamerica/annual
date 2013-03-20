@@ -399,6 +399,38 @@ display: block;
   margin:30px 0px;
 }
 
+.citycard .partnersection {
+  width: 190px;
+}
+
+
+.citycard hr {
+    border: solid 1px #FC2848;
+    margin-bottom: 10px;
+}
+
+.bostonseal,
+.phillyseal {
+  background-image: url('/img/city_seals.jpg');
+  background-size: 59px;
+  float: right;
+  width: 59px;
+  height: 59px;
+}
+
+.bostonseal {
+  background-position: 0 0;
+}
+
+.phillyseal {
+  background-position: 0 -59px;
+}
+
+.seattleseal {
+  background-position: 0 -118px;
+}
+
+
 .fellowship h1 {
   font-size: 100px;
   color: #333;
@@ -419,6 +451,7 @@ display: block;
 }
 
 .fellowship h5 {
+  color: #FC2848;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
