@@ -374,7 +374,6 @@ display: block;
 }
 
 #fellowshipMap{ 
-
   margin-left:400px;
   height:500px;
   position:absolute;
@@ -393,18 +392,61 @@ display: block;
   right:80px !important;
 }
 
-
 .citycard{ 
   height:600px;
-  border:solid 1px #ff0000;
+  border:solid 2px #FC2848;
   width:300px;
-  margin-bottom:30px;
+  margin:30px 0px;
+}
+
+.fellowship h1 {
+  font-size: 100px;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.fellowship h2 {
+  margin-top: 0px;
+  text-transform: uppercase;
+
+}
+
+.fellowship h4 {
+  background-color: #FC2848;
+  color: #fff;
+  text-shadow: none;
+  padding: 10px 20px;
+}
+
+.fellowship h5 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.fellowship .innercard {
+  padding: 20px;
+}
+
+.fellowship .cardsections {
+  margin-bottom: 30px;
+}
+
+.fellowship li {
+  text-shadow: none;
+}
+
+.people ul,
+.fellowship ul {
+  font-weight: 300;
+  text-align: left;
 }
 
 .people ul {
   float: left;
-  font-weight: 300;
   line-height: 26px;
-  text-align: left;
   margin: 0px 50px 50px 0px;
 }
+
