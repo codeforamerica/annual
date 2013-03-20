@@ -10,7 +10,7 @@ var cityLocations = {"philadelphia":[39.947, -75.162],
                      "detroit":[42.360, -83.059]};
 
 $(function(){
-
+  var usTopology;
   //shows nav when user hovers over the logo
   $(".cfalogo").hover(
 	function() {
@@ -27,6 +27,27 @@ $(function(){
     $(".quote").css({width:width, height:height});
     $(".story").css({width:width, "min-height":height});
     $("pagebg").css({width:width, height:height});
+
+
+    d3.select("#fellowshipMap svg")
+      .attr("width", width-500)
+      .attr("height", 0.5*(width-500));
+
+    projection = d3.geo.albersUsa().scale(width-500).translate([((width-500)/2), (((width-500)*0.5)/2)]);
+    path = d3.geo.path().projection(projection);;
+
+
+    if(svg !== undefined){
+      svg.selectAll("path").remove();
+      svg.selectAll("path")
+        .data(topojson.object(usTopology, usTopology.objects.states).geometries)
+        .enter().append("path")
+        .attr("d", path);
+    }
+    
+    //projection = d3.geo.albersUsa().scale(mapw).translate([(mapw/2), (maph/2)]);
+    //path = d3.geo.path().projection(projection);;
+
   }
 
   var fixedInlineElements = function(pos){
@@ -57,19 +78,25 @@ $(function(){
           var a = $(el).attr("data-action");
           var cities = $(el).attr("data-city").split(",");
           for(c in cities){
-            console.log(cities[c]);
+
           
             if(a == "add"){
               //add to map.
               
-              var coordinates = projection(cityLocations[cities[c]].reverse());
-              svg.append('svg:circle')
-                .attr('cx', coordinates[0])
-                .attr('cy', coordinates[1])
-                .attr('r', 5)
-                .attr('class', "city");
+              if(svg.select("circle.city."+cities[c])[0][0] === null){
 
-            }else if(a == "hightlight"){
+                var coordinates = projection(cityLocations[cities[c]].reverse());
+                svg.append('svg:circle')
+                  .attr('cx', coordinates[0])
+                  .attr('cy', coordinates[1])
+                  .attr('r', 5)
+                  .attr('class', "city "+cities[c]);
+              }
+
+            }else if(a == "highlight"){
+              console.log("highlight", cities[c]);
+              svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
+              svg.select("circle.city."+cities[c]).transition().duration(1000).style("fill", "red").attr("r", 15);
               //tranform is someway
             }
           }
@@ -119,11 +146,12 @@ $(function(){
   onScroll();
   $(window).resize(setSize);
   $(window).scroll(onScroll);
+  
 
-  var mapw = 700,
-  maph = 600;
+  var mapw = width-500;
+  var maph = (0.5*mapw);
 
-  var projection = d3.geo.albersUsa().scale(700).translate([(maph/2), (mapw/2)]);
+  var projection = d3.geo.albersUsa().scale(mapw).translate([(mapw/2), (maph/2)]);
   var path = d3.geo.path().projection(projection);;
 
 //  var path = d3.geo.path();
@@ -133,6 +161,7 @@ $(function(){
     .attr("height", maph);
 
   d3.json("js/us.json", function(error, topology) {
+    usTopology = topology; 
     svg.selectAll("path")
       .data(topojson.object(topology, topology.objects.states).geometries)
       .enter().append("path")

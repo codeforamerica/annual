@@ -378,7 +378,8 @@ display: block;
 }
 
 #fellowshipMap{ 
-  width: 700px;
+
+  margin-left:400px;
   height:500px;
   position:absolute;
   top:0px;
