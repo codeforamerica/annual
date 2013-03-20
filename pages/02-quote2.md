@@ -6,9 +6,9 @@ pagetype: quote
 ---
 
 
-What if we raised
+What if we offered government
 ================
-not just our voices
+not just our voices,
 ================
 but also our hands?
 =================
