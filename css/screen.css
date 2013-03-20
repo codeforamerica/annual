@@ -201,7 +201,7 @@ p {
 .quote,
 .story{ 
   position:relative;
-  padding:0px 80px 0px;
+  padding:400px 80px 0px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
@@ -354,9 +354,7 @@ display: block;
 #fellowshipMap{ 
   margin-left:400px;
   height:500px;
-  position:absolute;
-  top:0px;
-  right:0px;
+
 }
 
 #fellowshipMap path {
@@ -368,6 +366,7 @@ display: block;
   position:fixed !important;
   top:0px;
   right:80px !important;
+
 }
 
 .fellowshipyearfixed{ 
