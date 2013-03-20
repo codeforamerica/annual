@@ -131,12 +131,20 @@ $(function(){
       
         var percPage = ($(window).scrollTop() - $(el).offset().top) / ($(el).outerHeight());
 
-        console.log(percPage);
+//        console.log(percPage);
+
+
+        
 
           $($("div.pagebg")[i]).fadeIn({duration:700});
-          $($("div.pagebg")[i+1]).fadeOut({duration:700});
-          $($("div.pagebg")[i-1]).fadeOut({duration:700});
-      
+        //$($("div.pagebg")[i+1]).fadeOut({duration:700});
+        //$($("div.pagebg")[i-1]).fadeOut({duration:700});
+  
+       
+
+    
+      }else{
+        $($("div.pagebg")[i]).fadeOut({duration:500});
       }
     });
     
