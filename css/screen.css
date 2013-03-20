@@ -371,3 +371,35 @@ display: block;
   max-height: 60px;
   max-width: 242px;
 }
+
+.fellowship{ 
+  color:#333;
+  position:relative;
+}
+
+#fellowshipMap{ 
+  width: 700px;
+  height:500px;
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+
+#fellowshipMap path {
+  fill: #ccc;
+  stroke: #fff;
+}
+
+.fixed-top.apply{ 
+  position:fixed !important;
+  top:0px;
+  right:80px !important;
+}
+
+
+.citycard{ 
+  height:600px;
+  border:solid 1px #ff0000;
+  width:300px;
+  margin-bottom:30px;
+}
