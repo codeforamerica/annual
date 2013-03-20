@@ -163,10 +163,6 @@ p {
   float: left;
 }
 
-.fourcolumn {
-  width: 220px;
-}
-
 
 
 /****************************************************************************/
@@ -403,4 +399,12 @@ display: block;
   border:solid 1px #ff0000;
   width:300px;
   margin-bottom:30px;
+}
+
+.people ul {
+  float: left;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  margin: 0px 50px 50px 0px;
 }
