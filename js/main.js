@@ -68,6 +68,9 @@ $(function(){
     
   };
   var scrollTriggers = function(pos){
+
+    pos += $(window).height()/2;
+
     $("[data-trigger]").each(function(i, el){
       if(($(el).offset().top < pos) && 
          ($(el).offset().top + $(el).outerHeight()  > pos)){
