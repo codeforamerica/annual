@@ -201,7 +201,7 @@ p {
 .quote,
 .story{ 
   position:relative;
-  padding:400px 80px 0px;
+  padding:0px 80px 0px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
@@ -246,28 +246,6 @@ p {
   min-height:100%;
 }
 
-.year {
-  color: #444;
-}
-
-.year h1 {
-  font-size: 200px;
-  margin: 100px auto -100px 0;
-  color: #444;
-}
-
-.year h3 {
-  font-size: 56px;
-  margin: 0px 0 30px;
-}
-
-.year h2 {
-  font-size: 72px;
-}
-
-.year img {
-  margin: 50px auto 100px;
-}
 
 .cityLeaders iframe {
   display: block;
@@ -390,6 +368,13 @@ display: block;
   position:fixed !important;
   top:0px;
   right:80px !important;
+}
+
+.fellowshipyearfixed{ 
+  position:fixed;
+  top:0px;
+  left:80px;
+  background:#fff;
 }
 
 .citycard{ 

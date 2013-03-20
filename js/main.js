@@ -69,15 +69,18 @@ $(function(){
   };
   var scrollTriggers = function(pos){
 
-    pos += $(window).height()/2;
+    //pos += $(window).height()/2;
 
     $("[data-trigger]").each(function(i, el){
-      if(($(el).offset().top < pos) && 
-         ($(el).offset().top + $(el).outerHeight()  > pos)){
+      var t = $(el).attr("data-trigger").split(",");
+      //if the element is in the middle of the page
+      if(($(el).offset().top < (pos +$(window).height()/2)) && 
+         ($(el).offset().top + $(el).outerHeight()  > (pos + $(window).height()/2))){
 
-        var t = $(el).attr("data-trigger");
 
-        if(t === "fellowshipmap"){
+
+          
+        if(t.indexOf("fellowshipmap") >= 0){
           var a = $(el).attr("data-action");
           var cities = $(el).attr("data-city").split(",");
           for(c in cities){
@@ -99,10 +102,27 @@ $(function(){
             }else if(a == "highlight"){
               console.log("highlight", cities[c]);
               svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
-              svg.select("circle.city."+cities[c]).transition().duration(1000).style("fill", "red").attr("r", 15);
+              svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
+
               //tranform is someway
             }
           }
+
+        }
+      }
+
+      //if the element is at the top of the page
+      if(($(el).offset().top < pos) && 
+         ($(el).offset().top + $(el).outerHeight()  > pos)){
+
+        if(t.indexOf("addclass") >=0){
+          $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
+        }
+
+      }else{
+
+        if(t.indexOf("addclass") >= 0){
+          $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
         }
 
       }
