@@ -3,7 +3,7 @@ layout: fullpage
 title: ecosystem
 pagetype: story
 bgcolor: 111111
-published: false
+published: true
 ---
 
 <div class="bigtext">
