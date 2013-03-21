@@ -3,6 +3,7 @@ layout: fullpage
 title: ecosystem
 pagetype: story
 bgcolor: 111111
+published: false
 ---
 
 <div class="bigtext">
@@ -11,7 +12,7 @@ bgcolor: 111111
 
 <h2>A thriving ecosystem for civic innovation requires engaged communities, a healthy marketplace, and a support system for government innovators.</h2>
 
-<h2>So in 2012, Code for America not only expanded from three fellowship cities to eight.
+<h2>So in 2012, Code for America not only expanded from three fellowship cities to eight.<br />
 </h2>
 
 <div class="bigtext">
