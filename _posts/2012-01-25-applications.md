@@ -3,12 +3,10 @@ layout: fullpage
 title: Applications
 pagetype: story
 bgcolor: 22A7DA
---- 
+---
 
 <div class="cityLeaders">
   <h2>Working together with leaders in City Hall, they show what's possible.</h2>
-  <h2>The applications they build give citizens interfaces to government that are simple, beautiful, and easy to use.</h2>
-  <h2>The way they create those interfaces gives their partners hope for the future of government, and a reason to believe in public service.</h2>
   <iframe src="http://player.vimeo.com/video/60125263" width="500" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
 
@@ -87,5 +85,3 @@ bgcolor: 22A7DA
   <div class="textizen"></div>
   <div class="dailybrief"></div>
 </div>
-
-
