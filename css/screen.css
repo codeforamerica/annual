@@ -621,3 +621,236 @@ display: block;
 .dailybrief {
   background-position: 0 -2000px;
 }
+
+.aaron,
+.alan,
+.anna,
+.chacha,
+.erik,
+.jeremy,
+.joel,
+.john,
+.karla,
+.matt,
+.max,
+.michael,
+.michellek,
+.mjumbe,
+.pete,
+.ryan,
+.scott,
+.talin, 
+.tyler,
+.alexp,
+.alexy,
+.alicia,
+.amir,
+.angel,
+.aurelio,
+.ben,
+.diana,
+.eddie,
+.emily,
+.jesse,
+.jessica,
+.jim,
+.joe,
+.liz,
+.matth,
+.michellel,
+.mick,
+.nick,
+.prashant,
+.rob,
+.ruthie,
+.serena,
+.sheba,
+.tamara,
+.zach {
+  background-image: url('/img/fellows_headshot.jpg');
+  background-size: 59px;
+  float: left;
+  width: 59px;
+  height: 59px;
+/*  margin: 10px 10px 0 0;*/
+}
+
+.aaron {
+  background-position: 0 0;
+}
+
+.alan {
+  background-position: 0 -59px
+}
+
+.anna {
+  background-position: 0 -118px;
+}
+
+.chacha {
+  background-position: 0 -177px;
+}
+
+.erik {
+  background-position: 0 -236px;
+}
+
+.jeremy {
+  background-position: 0 -295px;
+}
+
+.joel {
+  background-position: 0 -354px;
+}
+
+.john {
+  background-position: 0 -413px;
+}
+
+.karla {
+  background-position: 0 -472px;
+}
+
+.matt {
+  background-position: 0 -531px;
+}
+
+.max {
+  background-position: 0 -590px;
+}
+
+.michael {
+  background-position: 0 -649px;
+}
+
+.michellek {
+  background-position: 0 -708px
+}
+
+.mjumbe {
+  background-position: 0 -767px;
+}
+
+.pete {
+  background-position: 0 -826px;
+}
+
+.ryan {
+  background-position: 0 -885px;
+}
+
+.scott {
+  background-position: 0 -944px;
+}
+
+.talin {
+  background-position: 0 -1003px;
+}
+
+.tyler {
+  background-position: 0 -1062px;
+}
+
+.alexp {
+  background-position: 0 -1121px;
+}
+
+.alexy {
+  background-position: 0 -1180px;
+}
+
+.alicia {
+  background-position: 0 -1239px;
+}
+
+.amir {
+  background-position: 0 -1298px
+}
+
+.angel {
+  background-position: 0 -1357px;
+}
+
+.aurelio {
+  background-position: 0 -1416px;
+}
+
+.ben {
+  background-position: 0 -1475px;
+}
+
+.diana {
+  background-position: 0 -1534px;
+}
+
+.eddie {
+  background-position: 0 -1593px;
+}
+
+.emily {
+  background-position: 0 -1652px;
+}
+
+.jesse {
+  background-position: 0 -1711px;
+}
+
+.jessica {
+  background-position: 0 -1770px;
+}
+
+.jim {
+  background-position: 0 -1829px;
+}
+
+.joe {
+  background-position: 0 -1888px
+}
+
+.liz {
+  background-position: 0 -1947px;
+}
+
+.matth {
+  background-position: 0 -2006px;
+}
+
+.michellel {
+  background-position: 0 -2065px;
+}
+
+.mick {
+  background-position: 0 -2124px;
+}
+
+.nick {
+  background-position: 0 -2183px;
+}
+
+.prashant {
+  background-position: 0 -2242px;
+}
+
+.rob {
+  background-position: 0 -2301px;
+}
+
+.ruthie {
+  background-position: 0 -2360px;
+}
+
+.serena {
+  background-position: 0 -2419px;
+}
+
+.sheba {
+  background-position: 0 -2478px;
+}
+
+.tamara {
+  background-position: 0 -2537px;
+}
+
+.zach {
+  background-position: 0 -2596px;
+}
