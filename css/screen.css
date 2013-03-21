@@ -854,3 +854,24 @@ display: block;
 .zach {
   background-position: 0 -2596px;
 }
+
+.companies {
+  background-color: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+.companies img {
+  width: 300px;
+  height: 200px;
+}
+
+.companies h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.companies p {
+  font-size: 16px;
+}
