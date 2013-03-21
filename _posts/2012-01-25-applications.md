@@ -65,7 +65,27 @@ bgcolor: 22A7DA
 
 <div class="moreapps">
   <h3>All 2012 apps</h3>
-  <img src="img/more_apps.png" />
+  <div class="srtracker"></div>
+  <div class="fm"></div>
+  <div class="labs"></div>
+  <div class="adopta"></div>
+  <div class="blight"></div>
+  <div class="blockee"></div>
+  <div class="hnlanswers"></div>
+  <div class="localdata"></div>
+  <div class="neighborhow"></div>
+  <div class="opencounter"></div>
+  <div class="openstatus"></div>
+  <div class="preparedly"></div>
+  <div class="routeview"></div>
+  <div class="opendata"></div>
+  <div class="socialmedia"></div>
+  <div class="pennywork"></div>
+  <div class="straymapper"></div>
+  <div class="supermayor"></div>
+  <div class="textmybus"></div>
+  <div class="textizen"></div>
+  <div class="dailybrief"></div>
 </div>
 
 
