@@ -21,7 +21,7 @@ title: Code for America 2012 Annual Report
 
 
 
-  {% sorted_for p in site.pages sort_by:url %}
+  {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
   <div class="page {{ p.pagetype }}" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
@@ -31,14 +31,14 @@ title: Code for America 2012 Annual Report
       <div class="clear"></div>  
   </div>
   {% endif %}
-  {% endsorted_for %}
+  {% endfor %}
 
 
 
 
 
 </div>
-{% for p in site.pages %}
+{% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
     <div class="pagebg" style="background-color:#{{ p.bgcolor }};">
