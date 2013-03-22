@@ -90,21 +90,22 @@ published: true
 		<ul>
 			<li>Stacy Donohue</li>
 			<li>Andrew Greenhill</li>
+            <li>Nigel Jacob</li>
 		</ul>
 		<ul>
-			<li>Nigel Jacob</li>
 			<li>John Lilly</li>
+            <li>Leonard Lin</li>
 		</ul>
 		<ul>
-			<li>Leonard Lin</li>
 			<li>Andrew McLaughlin</li>
+            <li>Jen Pahlka</li>
 		</ul>
 		<ul>
-			<li>Jen Pahlka</li>
 			<li>Eric Ries</li>
+            <li>Tim O'Reilly (Emeritus)</li>
 		</ul>
         <ul>
-			<li>Tim O'Reilly (Emeritus)</li>
+			
 		</ul>
 	</div>
 
@@ -167,4 +168,67 @@ published: true
 			<li>Tracy Viselli</li>
 		</ul>
 	</div>
+    
+    <div>
+		<h4>Mentors & Advisors</h4>
+		<div class="line"></div>
+		<ul>
+			<li>Sumit Agarwal</li>
+            <li>Mike Alfred</li>
+            <li>Ryan Alfred</li>
+            <li>Lane Becker</li>
+            <li>Ben Berkowitz</li>
+            <li>Zal Bilimoria</li>
+            <li>David Binetti</li>
+            <li>Stephen Bronstein</li>
+            <li>Dominic Campbell</li>
+            <li>Jeff Clavier</li>
+            <li>Danese Cooper</li>
+            <li>Christian Crumlish</li>
+		</ul>
+		<ul>
+			<li>Renee DiResta</li>
+            <li>Jeff Friedman</li>
+            <li>Akash Garg</li>
+            <li>Christie George</li>
+            <li>Denise Gershbein</li>
+            <li>Robert Goldberg</li>
+            <li>Kipp Harkness</li>
+            <li>Cyd Harrell</li>
+            <li>Marci Harris</li>
+            <li>Hillary Hartley</li>
+            <li>Gunnar Helikson</li>
+            <li>Hilary Hoeber</li>
+		</ul>
+		<ul>
+			<li>Andrew Hoppin</li>
+            <li>Ivan Kirigin</li>
+            <li>Micki Krimmel</li>
+            <li>John Lyman</li>
+            <li>Kevin Merritt</li>
+            <li>Jay Nath</li>
+            <li>Chris Osgood</li>
+            <li>Andrew Parker</li>
+            <li>DJ Patil</li>
+            <li>Gil Penchina</li>
+            <li>Steve Ressler</li>
+		</ul>
+		<ul>
+			<li>Ted Rheingold</li>
+            <li>Bob Richardson</li>
+            <li>Bryce Roberts</li>
+            <li>Manish Shah</li>
+            <li>Jonathan Siegel</li>
+            <li>Steve Spiker</li>
+            <li>Carl Tashian</li>
+            <li>Parker Thompson</li>
+            <li>John Tolva</li>
+            <li>Cali Tran</li>
+		</ul>
+	</div>
+    
+    
+    
+    
+    
 </div>
