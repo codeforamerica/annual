@@ -463,6 +463,11 @@ display: block;
   margin-bottom: 0px;
 }
 
+.fellowship .cfa h2{
+  font-size: 56px;
+  text-transform: none;
+}
+
 .fellowship h2 {
   margin-top: 0px;
   text-transform: uppercase;
@@ -530,7 +535,7 @@ display: block;
 .textmybus,
 .textizen,
 .dailybrief {
-  background-image: url('/img/apps_logos.png');
+  background-image: url('img/apps_logos.png');
   background-size: 100px;
   float: left;
   width: 100px;
@@ -667,7 +672,7 @@ display: block;
 .sheba,
 .tamara,
 .zach {
-  background-image: url('/img/fellows_headshot.jpg');
+  background-image: url('img/fellows_headshot.jpg');
   background-size: 59px;
   float: left;
   width: 59px;
