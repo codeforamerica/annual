@@ -210,15 +210,8 @@ p {
   -webkit-box-sizing:border-box; /* Safari */
 }
 
-<<<<<<< HEAD
-.quote h1,
-.story h1,
-=======
-
-
 .page.quote h1,
 .page.story h1,
->>>>>>> 3cfef6187fab1549b06941dd98d63be5c1a84943
 .goals li { 
   text-align:left;
   color:#fff;
@@ -456,7 +449,7 @@ display: block;
 .maconseal,
 .nolaseal,
 .scseal {
-  background-image: url('/img/city_seals.jpg');
+  background-image: url('../img/city_seals.jpg');
   background-size: 59px;
   float: right;
   width: 59px;
@@ -719,7 +712,7 @@ display: block;
 .sheba,
 .tamara,
 .zach {
-  background-image: url('img/fellows_headshot.jpg');
+  background-image: url('../img/fellows_headshot.jpg');
   background-size: 59px;
   float: left;
   width: 59px;
