@@ -216,4 +216,4 @@ $(function(){
 });
 
 
-
+$('.carousel').carousel()

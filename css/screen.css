@@ -210,14 +210,18 @@ p {
   -webkit-box-sizing:border-box; /* Safari */
 }
 
+<<<<<<< HEAD
+.quote h1,
+.story h1,
+=======
 
 
 .page.quote h1,
 .page.story h1,
+>>>>>>> 3cfef6187fab1549b06941dd98d63be5c1a84943
 .goals li { 
   text-align:left;
   color:#fff;
-  max-width: 900px;
   font-size: 56px;
   list-style: none;
 }
@@ -506,6 +510,11 @@ display: block;
   margin-bottom: 0px;
 }
 
+.fellowship .cfa h2{
+  font-size: 56px;
+  text-transform: none;
+}
+
 .fellowship h2 {
   margin-top: 0px;
   text-transform: uppercase;
@@ -573,7 +582,7 @@ display: block;
 .textmybus,
 .textizen,
 .dailybrief {
-  background-image: url('/img/apps_logos.png');
+  background-image: url('img/apps_logos.png');
   background-size: 100px;
   float: left;
   width: 100px;
@@ -710,7 +719,7 @@ display: block;
 .sheba,
 .tamara,
 .zach {
-  background-image: url('/img/fellows_headshot.jpg');
+  background-image: url('img/fellows_headshot.jpg');
   background-size: 59px;
   float: left;
   width: 59px;
@@ -898,6 +907,10 @@ display: block;
   background-position: 0 -2596px;
 }
 
+.ecosystem h1 {
+  margin-top: 70px;
+}
+
 .companies {
   background-color: #fff;
   color: #000;
@@ -927,8 +940,134 @@ display: block;
 
 .companies p {
   font-size: 16px;
+  line-height: 22px;
 }
 
 .companies a {
   color: #000;
+}
+
+.carousel {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 80px;
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+     -moz-transition: 0.6s ease-in-out left;
+       -o-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  line-height: 1;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: #222222;
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 23px;
+     -moz-border-radius: 23px;
+          border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.carousel-control.right {
+  right: 235px;
+  left: auto;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
 }
