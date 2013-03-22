@@ -575,7 +575,7 @@ display: block;
 .textmybus,
 .textizen,
 .dailybrief {
-  background-image: url('img/apps_logos.png');
+  background-image: url('../img/apps_logos.png');
   background-size: 100px;
   float: left;
   width: 100px;
