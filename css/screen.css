@@ -368,7 +368,7 @@ display: block;
 }
 
 .moreapps h3 {
-  margin-top: 10px;
+  margin-top: 1    0px;
 }
 
 .moreapps img {
@@ -527,6 +527,7 @@ display: block;
           transition: 0.6s ease-in-out right;
 
 }
+
 .fellowship .fellow.appear{ 
   right:100px;
 
@@ -534,8 +535,6 @@ display: block;
      -moz-transition: 0.6s ease-in-out right;
        -o-transition: 0.6s ease-in-out right;
           transition: 0.6s ease-in-out right;
-
-
 }
 
 
@@ -760,6 +759,7 @@ display: block;
   width: 75px;
   height: 75px;
   margin: 5px 5px 0 0;
+  /*  margin: 10px 10px 0 0;*/
 }
 
 .aaron {
