@@ -530,7 +530,7 @@ display: block;
 .textmybus,
 .textizen,
 .dailybrief {
-  background-image: url('/img/apps_logos.png');
+  background-image: url('img/apps_logos.png');
   background-size: 100px;
   float: left;
   width: 100px;
@@ -667,7 +667,7 @@ display: block;
 .sheba,
 .tamara,
 .zach {
-  background-image: url('/img/fellows_headshot.jpg');
+  background-image: url('img/fellows_headshot.jpg');
   background-size: 59px;
   float: left;
   width: 59px;
@@ -859,11 +859,21 @@ display: block;
   background-color: #fff;
   color: #000;
   text-shadow: none;
+  float: left;
+  margin-top: 20px;
+  height: 330px;
 }
 
 .companies img {
   width: 300px;
   height: 200px;
+  float: left;
+  padding: 20px 60px;
+}
+.companies .companyblurb {
+  float:left;
+  width: 500px;
+  padding: 40px 60px 40px 0;
 }
 
 .companies h5 {
@@ -874,4 +884,8 @@ display: block;
 
 .companies p {
   font-size: 16px;
+}
+
+.companies a {
+  color: #000;
 }
