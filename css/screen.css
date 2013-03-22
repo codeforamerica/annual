@@ -201,8 +201,8 @@ p {
   clear:both;
 }
 
-.quote,
-.story{ 
+.page.quote,
+.page.story{ 
   position:relative;
   padding:400px 80px 0px;
   box-sizing: border-box;
@@ -210,8 +210,15 @@ p {
   -webkit-box-sizing:border-box; /* Safari */
 }
 
+<<<<<<< HEAD
 .quote h1,
 .story h1,
+=======
+
+
+.page.quote h1,
+.page.story h1,
+>>>>>>> 3cfef6187fab1549b06941dd98d63be5c1a84943
 .goals li { 
   text-align:left;
   color:#fff;
@@ -219,16 +226,55 @@ p {
   list-style: none;
 }
 
-.quote h1 {
+.page.quote h1 {
   margin-bottom: 0px;
 }
-.story{ 
+.page.story{ 
   position:relative;
   width:100%;
   height:auto;
+  padding-top:10px;
+  padding-left:400px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox 
   -webkit-box-sizing:border-box; /* Safari */
+}
+
+.sidebar{ 
+  width:400px;
+  position:fixed;
+  left:0px;
+  top:0px;
+  bottom:0px;
+  z-index:-7;
+}
+.sidebartitle{ 
+  width:400px;
+  left:000px;
+  position:absolute;
+  top:20px;
+}
+
+.sidebartitle.appear{
+
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.sidebartitle h1{ 
+  font-size: 100px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.sidebartitle h2{ 
+  position:relative;
+  left:-400px;
+  margin-top:0px;
+}
+.sidebartitle.appear h2{ 
+  left:20px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+
 }
 
 .pagebg{ 
@@ -240,6 +286,9 @@ p {
   z-index:-10;
 
   display:none;
+}
+.pagebg.quote{ 
+  z-index:-5;
 }
 .pagebg img{ 
   min-width:100%;
@@ -349,6 +398,7 @@ display: block;
 .fellowship{ 
   color:#333;
   position:relative;
+  background:#fff;
 }
 
 
