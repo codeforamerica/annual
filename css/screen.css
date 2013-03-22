@@ -435,6 +435,9 @@ display: block;
   width:300px;
   margin:30px 0px;
   display:none;
+  position:absolute;
+  top:600px;
+
 }
 .cardholder{ 
   height:800px;

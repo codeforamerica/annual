@@ -97,6 +97,14 @@ $(function(){
                     .attr('cy', coordinates[1])
                     .attr('r', 5)
                     .attr('class', "city "+cities[c]);
+                  $("circle").hover(function(e){
+                    console.log($(e.currentTarget).attr("class").split(" ")[1])
+                    $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
+                  }, function(e){
+                    $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
+                  })
+
+
                 }
 
               }else if(a == "highlight"){
