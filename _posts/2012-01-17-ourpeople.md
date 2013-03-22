@@ -212,9 +212,9 @@ published: true
             <li>DJ Patil</li>
             <li>Gil Penchina</li>
             <li>Steve Ressler</li>
+            <li>Ted Rheingold</li>
 		</ul>
 		<ul>
-			<li>Ted Rheingold</li>
             <li>Bob Richardson</li>
             <li>Bryce Roberts</li>
             <li>Manish Shah</li>
