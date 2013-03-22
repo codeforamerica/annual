@@ -54,10 +54,11 @@ $(function(){
     $(".fixed-top").each(function(i, el){
 
       //console.log(pos, $(el).offset().top, $(el).parent().outerHeight(), ($(el).parent().outerHeight()+$(el).parent().offset().top));
-
+      console.log("fixed check", $(el).parent().offset().top, pos, $(el).parent().offset().top + $(el).parent().outerHeight(),  $(el).parent().outerHeight(), $(el).parent()[0]);
+      
       if(($(el).parent().offset().top < pos) && 
          ($(el).parent().offset().top + $(el).parent().outerHeight()  > pos)){
-
+        console.log("apply fixed");
         $(el).addClass("apply")
 
       }else{
@@ -83,26 +84,26 @@ $(function(){
           var a = $(el).attr("data-action");
           var cities = $(el).attr("data-city").split(",");
           for(c in cities){
-
+            if(svg !== undefined){
           
-            if(a == "add"){
-              //add to map.
-              
-              if(svg.select("circle.city."+cities[c])[0][0] === null){
+              if(a == "add"){
+                //add to map.
+                
+                if(svg.select("circle.city."+cities[c])[0][0] === null){
+                  
+                  var coordinates = projection(cityLocations[cities[c]].reverse());
+                  svg.append('svg:circle')
+                    .attr('cx', coordinates[0])
+                    .attr('cy', coordinates[1])
+                    .attr('r', 5)
+                    .attr('class', "city "+cities[c]);
+                }
 
-                var coordinates = projection(cityLocations[cities[c]].reverse());
-                svg.append('svg:circle')
-                  .attr('cx', coordinates[0])
-                  .attr('cy', coordinates[1])
-                  .attr('r', 5)
-                  .attr('class', "city "+cities[c]);
+              }else if(a == "highlight"){
+                console.log("highlight", cities[c]);
+                svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
+                svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
               }
-
-            }else if(a == "highlight"){
-              console.log("highlight", cities[c]);
-              svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
-              svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
-
               //tranform is someway
             }
           }
@@ -124,16 +125,36 @@ $(function(){
 
         if(t.indexOf("addclass") >=0){
           $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
-          //$($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
+          if($(el).attr("data-class-target").indexOf(".year") !== -1)
+            $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
 
         }
+        if(t.indexOf("2012") >= 0){
+          $(".yeartitle h1").text("2012");
+          $(".fellow.2012").addClass("appear");
 
+
+
+        }
+        if(t.indexOf("2011") >= 0){
+          $(".yeartitle h1").text("2011");
+          $(".fellow.2011").addClass("appear");
+
+        }
       }else{
 
         if(t.indexOf("addclass") >= 0){
-          //$($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
+          if($(el).attr("data-class-target").indexOf(".year") !== -1)
+            $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
           $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
         }
+        if(t.indexOf("2012") >= 0){
+          $(".fellow.2012").removeClass("appear");
+        }
+        if(t.indexOf("2011") >= 0){
+          $(".fellow.2011").removeClass("appear");
+        }
+
 
       }
 

@@ -258,11 +258,17 @@ p {
   color: #fff;
   margin-bottom: 0px;
 }
+.mapsidebar h1{ 
+  font-size: 100px;
+  color: #333;
+  margin-bottom: 0px;
+}
 .sidebartitle h2{ 
   position:relative;
   left:-400px;
   margin-top:0px;
 }
+
 .sidebartitle.appear h2{ 
   left:20px;
   transition: all 1s;
@@ -418,7 +424,7 @@ display: block;
 .fellowshipyearfixed{ 
   position:fixed;
   top:0px;
-  left:80px;
+  left:50px;
   background:#fff;
 }
 
@@ -427,6 +433,12 @@ display: block;
   border:solid 2px #FC2848;
   width:300px;
   margin:30px 0px;
+  display:none;
+}
+.cardholder{ 
+  height:800px;
+  width:300px;
+
 }
 
 .citycard .partnersection {
@@ -494,6 +506,30 @@ display: block;
 
 .scseal {
   background-position: 0 -531px;
+}
+.fellowship .mapsidebar{ 
+  float:left;
+  position:relative;
+  left:-350px;
+  top:-450px;
+
+}
+.fellowship .fellow{ 
+  position:fixed;
+  bottom:50px;
+  right:-800px;
+  height:200px;
+  width:600px;
+}
+.fellowship .fellow.appear{ 
+  right:100px;
+
+  -webkit-transition: 0.6s ease-in-out right;
+     -moz-transition: 0.6s ease-in-out right;
+       -o-transition: 0.6s ease-in-out right;
+          transition: 0.6s ease-in-out right;
+
+
 }
 
 
@@ -717,7 +753,7 @@ display: block;
   float: left;
   width: 59px;
   height: 59px;
-/*  margin: 10px 10px 0 0;*/
+  margin: 5px 5px 0 0;
 }
 
 .aaron {
