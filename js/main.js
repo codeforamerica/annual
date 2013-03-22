@@ -67,6 +67,8 @@ $(function(){
     });
     
   };
+
+//  var currentEls = {"top":[], "middle":[]};
   var scrollTriggers = function(pos){
 
     //pos += $(window).height()/2;
@@ -76,9 +78,6 @@ $(function(){
       //if the element is in the middle of the page
       if(($(el).offset().top < (pos +$(window).height()/2)) && 
          ($(el).offset().top + $(el).outerHeight()  > (pos + $(window).height()/2))){
-
-
-
           
         if(t.indexOf("fellowshipmap") >= 0){
           var a = $(el).attr("data-action");
@@ -112,7 +111,7 @@ $(function(){
       }else{
         // since it was an add, and we are now outside of of the element, remove!
 
-/*        if(t.indexOf("fellowshipmap") >= 0){
+        /*        if(t.indexOf("fellowshipmap") >= 0){
           var a = $(el).attr("data-action");
           if((a == "add") && (svg !== undefined))
             svg.select("circle.city").remove()
@@ -125,14 +124,14 @@ $(function(){
 
         if(t.indexOf("addclass") >=0){
           $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
-          $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
+          //$($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
 
         }
 
       }else{
 
         if(t.indexOf("addclass") >= 0){
-          $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
+          //$($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
           $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
         }
 
@@ -171,11 +170,12 @@ $(function(){
         //$($("div.pagebg")[i+1]).fadeOut({duration:700});
         //$($("div.pagebg")[i-1]).fadeOut({duration:700});
   
-       
+        $($("div.sidebartitle")[i]).addClass("appear");
 
     
       }else{
         $($("div.pagebg")[i]).fadeOut({duration:500});
+        $($("div.sidebartitle")[i]).removeClass("appear");
       }
     });
     

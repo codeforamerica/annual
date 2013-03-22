@@ -21,10 +21,21 @@ title: Code for America 2012 Annual Report
 
 
 
+  <div class="sidebar">
+
+    {% for p in site.posts %}
+    <div class="sidebartitle" >
+      <h1>2011</h1>
+      <h2>{{ p.title }}</h2>
+    </div>
+    {% endfor %}
+    
+  </div>
+  
   {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
-  <div class="page {{ p.pagetype }}" data-next="{{ post.next }}" data-prev="{{ post.prev }}">
+  <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }}">
 
       {{ p.content | markdownify }}
 
@@ -41,7 +52,7 @@ title: Code for America 2012 Annual Report
 {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
-    <div class="pagebg" style="background-color:#{{ p.bgcolor }};">
+    <div class="pagebg {{ p.pagetype }}" style="background-color:#{{ p.bgcolor }};">
     {% if p.imageurl %}
       <img class="bgimg" src="{{p.imageurl}}" />
     {% endif %}
