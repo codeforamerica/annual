@@ -109,8 +109,8 @@ $(function(){
 
               }else if(a == "highlight"){
                 console.log("highlight", cities[c]);
-                svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
-                svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
+                //svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
+                //svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
               }
               //tranform is someway
             }
