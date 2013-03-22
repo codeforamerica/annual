@@ -24,6 +24,7 @@ body {
   font-weight: 600;
   text-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
 }
+
 h1 {
   margin-bottom: 1em;
 }
@@ -155,17 +156,11 @@ p {
   margin-left: 140px;
 }
 
-.span5 {
-  width: 460px;
+.span5,
+.span5 p {
+  width: 455px;
   float: left;
 }
-
-.span6,
-.span6 p {
-  width: 540px;
-  float: left;
-}
-
 
 
 /****************************************************************************/
@@ -173,10 +168,6 @@ p {
 /* Site
 /*
 /*****************************************************************************/
-
-.site {
-
-}
 
 .title {
   color: #333;
@@ -222,6 +213,7 @@ p {
 .page.quote h1 {
   margin-bottom: 0px;
 }
+
 .page.story{ 
   position:relative;
   width:100%;
@@ -241,6 +233,7 @@ p {
   bottom:0px;
   z-index:-7;
 }
+
 .sidebartitle{ 
   width:400px;
   left:000px;
@@ -249,20 +242,24 @@ p {
 }
 
 .sidebartitle.appear{
-
   transition: all 1s;
   -webkit-transition: all 1s;
 }
+
 .sidebartitle h1{ 
   font-size: 100px;
   color: #fff;
-  margin-bottom: 0px;
+  margin: 0 0 0 50px;
+  text-align: left;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, .05);
 }
+
 .mapsidebar h1{ 
   font-size: 100px;
   color: #333;
   margin-bottom: 0px;
 }
+
 .sidebartitle h2{ 
   position:relative;
   left:-400px;
@@ -270,10 +267,10 @@ p {
 }
 
 .sidebartitle.appear h2{ 
-  left:20px;
+  left: 50px;
   transition: all 1s;
   -webkit-transition: all 1s;
-
+  text-transform: uppercase;
 }
 
 .pagebg{ 
@@ -314,7 +311,7 @@ p {
 }
 
 .blurb {
-  width: 1080px;
+  width: 940px;
 }
 
 img.stats, 
@@ -368,6 +365,10 @@ display: block;
 .moreapps {
   clear: both;
   float: left;
+}
+
+.moreapps h3 {
+  margin-top: 10px;
 }
 
 .moreapps img {
@@ -540,8 +541,8 @@ display: block;
 }
 
 .fellowship .cfa h2{
-  font-size: 56px;
   text-transform: none;
+  margin-top: 
 }
 
 .fellowship h2 {
@@ -946,19 +947,20 @@ display: block;
   text-shadow: none;
   float: left;
   margin-top: 20px;
-  height: 330px;
+  height: 380px;
 }
 
 .companies img {
   width: 300px;
   height: 200px;
   float: left;
-  padding: 20px 60px;
+  padding: 60px 60px 20px;
 }
+
 .companies .companyblurb {
   float:left;
-  width: 500px;
-  padding: 40px 60px 40px 0;
+  width: 385px;
+  padding: 40px 60px 0 0;
 }
 
 .companies h5 {
@@ -984,9 +986,8 @@ display: block;
 
 .carousel-inner {
   position: relative;
-  width: 100%;
   overflow: hidden;
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 .carousel-inner > .item {
@@ -1045,16 +1046,14 @@ display: block;
 .carousel-control {
   position: absolute;
   top: 40%;
-  left: 15px;
+  left: 0px;
   width: 40px;
   height: 40px;
-  margin-top: -20px;
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
   color: #ffffff;
   text-align: center;
-  background: #222222;
   border: 3px solid #ffffff;
   -webkit-border-radius: 23px;
      -moz-border-radius: 23px;
@@ -1064,7 +1063,7 @@ display: block;
 }
 
 .carousel-control.right {
-  right: 235px;
+  right: -40px;
   left: auto;
 }
 
@@ -1074,6 +1073,7 @@ display: block;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
+  border-bottom: 3px solid #ffffff;
 }
 
 .carousel-indicators {
