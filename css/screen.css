@@ -155,17 +155,11 @@ p {
   margin-left: 140px;
 }
 
-.span5 {
-  width: 460px;
+.span5,
+.span5 p {
+  width: 455px;
   float: left;
 }
-
-.span6,
-.span6 p {
-  width: 540px;
-  float: left;
-}
-
 
 
 /****************************************************************************/
@@ -504,8 +498,8 @@ display: block;
 }
 
 .fellowship .cfa h2{
-  font-size: 56px;
   text-transform: none;
+  margin-top: 
 }
 
 .fellowship h2 {
@@ -910,19 +904,20 @@ display: block;
   text-shadow: none;
   float: left;
   margin-top: 20px;
-  height: 330px;
+  height: 380px;
 }
 
 .companies img {
   width: 300px;
   height: 200px;
   float: left;
-  padding: 20px 60px;
+  padding: 60px 60px 20px;
 }
+
 .companies .companyblurb {
   float:left;
-  width: 500px;
-  padding: 40px 60px 40px 0;
+  width: 385px;
+  padding: 40px 60px 0 0;
 }
 
 .companies h5 {
@@ -948,9 +943,8 @@ display: block;
 
 .carousel-inner {
   position: relative;
-  width: 100%;
   overflow: hidden;
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 .carousel-inner > .item {
@@ -1009,7 +1003,7 @@ display: block;
 .carousel-control {
   position: absolute;
   top: 40%;
-  left: 15px;
+  left: 0px;
   width: 40px;
   height: 40px;
   margin-top: -20px;
@@ -1028,7 +1022,7 @@ display: block;
 }
 
 .carousel-control.right {
-  right: 235px;
+  right: -40px;
   left: auto;
 }
 
