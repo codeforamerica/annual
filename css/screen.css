@@ -512,7 +512,7 @@ display: block;
   float:left;
   position:relative;
   left:-350px;
-  top:-450px;
+  top:-350px;
 
 }
 .fellowship .fellow{ 
@@ -521,6 +521,11 @@ display: block;
   right:-800px;
   height:200px;
   width:600px;
+  -webkit-transition: 0.6s ease-in-out right;
+     -moz-transition: 0.6s ease-in-out right;
+       -o-transition: 0.6s ease-in-out right;
+          transition: 0.6s ease-in-out right;
+
 }
 .fellowship .fellow.appear{ 
   right:100px;
