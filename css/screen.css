@@ -24,6 +24,7 @@ body {
   font-weight: 600;
   text-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
 }
+
 h1 {
   margin-bottom: 1em;
 }
@@ -168,10 +169,6 @@ p {
 /*
 /*****************************************************************************/
 
-.site {
-
-}
-
 .title {
   color: #333;
   font-weight: bold;
@@ -216,6 +213,7 @@ p {
 .page.quote h1 {
   margin-bottom: 0px;
 }
+
 .page.story{ 
   position:relative;
   width:100%;
@@ -235,6 +233,7 @@ p {
   bottom:0px;
   z-index:-7;
 }
+
 .sidebartitle{ 
   width:400px;
   left:000px;
@@ -243,25 +242,29 @@ p {
 }
 
 .sidebartitle.appear{
-
   transition: all 1s;
   -webkit-transition: all 1s;
 }
+
 .sidebartitle h1{ 
   font-size: 100px;
   color: #fff;
-  margin-bottom: 0px;
+  margin: 0 0 0 50px;
+  text-align: left;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, .05);
 }
+
 .sidebartitle h2{ 
   position:relative;
   left:-400px;
   margin-top:0px;
 }
+
 .sidebartitle.appear h2{ 
-  left:20px;
+  left: 50px;
   transition: all 1s;
   -webkit-transition: all 1s;
-
+  text-transform: uppercase;
 }
 
 .pagebg{ 
@@ -302,7 +305,7 @@ p {
 }
 
 .blurb {
-  width: 1080px;
+  width: 940px;
 }
 
 img.stats, 
