@@ -3,6 +3,7 @@ layout: fullpage
 title: people
 pagetype: story
 bgcolor: C82A45
+published: true
 ---
 
 <div class="people">
@@ -101,6 +102,9 @@ bgcolor: C82A45
 		<ul>
 			<li>Jen Pahlka</li>
 			<li>Eric Ries</li>
+		</ul>
+        <ul>
+			<li>Tim O'Reilly (Emeritus)</li>
 		</ul>
 	</div>
 
