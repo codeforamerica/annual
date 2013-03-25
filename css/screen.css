@@ -1110,3 +1110,16 @@ display: block;
 .carousel-indicators .active {
   background-color: #fff;
 }
+
+.network .bios p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.network .bios h3 {
+  font-size: 26px;
+}
+
+.network .bios h5 {
+  font-size: 21px;
+}
