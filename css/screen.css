@@ -1123,3 +1123,63 @@ display: block;
 .network .bios h5 {
   font-size: 21px;
 }
+
+.getinvolved .press {
+  text-align: left;
+}
+
+.getinvolved .cnn {
+  background-image:url('../img/cnn.png');
+  background-size: 86px;
+  height: 40px;
+  width: 86px;
+}
+
+.getinvolved .mashable {
+  background-image:url('../img/mashable.png');
+  background-size: 123px;
+  width: 123px;
+  height: 40px;
+}
+
+.getinvolved .motherjones {
+  background-image:url('../img/motherjones.png');
+  background-size: 139px;
+  width: 139px;
+  height: 40px;
+}
+
+.getinvolved .npr {
+  background-image:url('../img/npr_logo_line.png');
+  background-size: 110px;
+  height: 40px;
+  width: 110px;
+}
+
+.getinvolved .wsj {
+  background-image:url('../img/wsj.png');
+  background-size: 226.5px;
+  width: 226.5px;
+  height: 40px;
+}
+
+.getinvolved .wp {
+  background-image:url('../img/wp.png');
+  background-size: 207px;
+  width: 207px;
+  height: 40px;
+}
+
+.getinvolved .cnn:hover,
+.getinvolved .mashable:hover,
+.getinvolved .motherjones:hover,
+.getinvolved .npr:hover,
+.getinvolved .wsj:hover,
+.getinvolved .wp:hover {
+  background-position: 0 -40px;
+}
+
+.getinvolved .press div {
+  margin-right: 20px;
+  float: left;
+}
