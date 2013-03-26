@@ -329,7 +329,7 @@ display: block;
 }
 
 .bioleft {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .bios {
@@ -621,7 +621,14 @@ display: block;
 .supermayor,
 .textmybus,
 .textizen,
-.dailybrief {
+.dailybrief,
+.nolaready,
+.atxfloods,
+.bike,
+.deepdish,
+.publicart,
+.scmap,
+.maconmap {
   background-image: url('../img/apps_logos.png');
   background-size: 100px;
   float: left;
@@ -712,6 +719,34 @@ display: block;
 
 .dailybrief {
   background-position: 0 -2000px;
+}
+
+.nolaready {
+  background-position: 0 -2100px;
+}
+
+.atxfloods {
+  background-position: 0 -2200px;
+}
+
+.bike {
+  background-position: 0 -2300px;
+}
+
+.deepdish {
+  background-position: 0 -2400px;
+}
+
+.publicart {
+  background-position: 0 -2500px;
+}
+
+.scmap {
+  background-position: 0 -2600px;
+}
+
+.maconmap {
+  background-position: 0 -2700px;
 }
 
 .aaron,
@@ -952,6 +987,14 @@ display: block;
   margin-top: 70px;
 }
 
+.apps .carousel-inner {
+  margin-left: 0px;
+}
+
+.apps img {
+  width: 470px;
+}
+
 .companies {
   background-color: #fff;
   color: #000;
@@ -1179,7 +1222,7 @@ display: block;
   background-position: 0 -40px;
 }
 
-.getinvolved .press div {
+.getinvolved .press div  {
   margin-right: 20px;
   float: left;
 }
