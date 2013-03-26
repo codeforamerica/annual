@@ -16,14 +16,14 @@ $(function(){
 	function() {
 	  $("nav").fadeIn();
 	});
-
+  
   var height = $(window).height(),
-    width = $(window).width();
+  width = $(window).width();
 
   var setSize = function(){
     height = $(window).height();
     width = $(window).width();
-
+    
     $(".quote").css({width:width, height:height});
     $(".story").css({width:width, "min-height":height});
     $("pagebg").css({width:width, height:height});
@@ -44,179 +44,178 @@ $(function(){
         .enter().append("path")
         .attr("d", path);
     }
-    
-    //projection = d3.geo.albersUsa().scale(mapw).translate([(mapw/2), (maph/2)]);
-    //path = d3.geo.path().projection(projection);;
-
   }
 
-  var fixedInlineElements = function(pos){
-    $(".fixed-top").each(function(i, el){
-
-      //console.log(pos, $(el).offset().top, $(el).parent().outerHeight(), ($(el).parent().outerHeight()+$(el).parent().offset().top));
-      console.log("fixed check", $(el).parent().offset().top, pos, $(el).parent().offset().top + $(el).parent().outerHeight(),  $(el).parent().outerHeight(), $(el).parent()[0]);
-      
-      if(($(el).parent().offset().top < pos) && 
-         ($(el).parent().offset().top + $(el).parent().outerHeight()  > pos)){
-        console.log("apply fixed");
-        $(el).addClass("apply")
-
-      }else{
-        $(el).removeClass("apply")
-        
+  var scrollEvent = {
+    handlers: {top:[], middle:[]},
+    currentElements: {top:[], middle:[]},
+    on:function(pos, el, addCb, removeCb){
+      var elements = el.toArray();
+      var i = 0;
+      for(e in elements){
+        scrollEvent.handlers[pos].push({el:elements[e], addCb:addCb, removeCb:removeCb, count:i});
+        i++;
       }
-    });
+    },
+    onScroll:function(){
+      var pos = $(window).scrollTop();
+      var height = $(window).height();
+      console.log(pos, height);
+      for(e in scrollEvent.handlers.middle){
+        var el = scrollEvent.handlers.middle[e].el;
+
+        //middle
+        if(($(el).offset().top <= (pos + height/2)) && 
+           ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
+          scrollEvent.setCurrentElement("middle", scrollEvent.handlers.middle[e]);
+        }else{
+          scrollEvent.removeCurrentElement("middle", scrollEvent.handlers.middle[e]);
+        }
+      }
+
+      for(e in scrollEvent.handlers.top){
+        var el = scrollEvent.handlers.top[e].el;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top <= pos) && 
+           ($(el).offset().top + $(el).outerHeight()  >= pos)){
+          scrollEvent.setCurrentElement("top", scrollEvent.handlers.top[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("top", scrollEvent.handlers.top[e]);
+        }
+      }
+    },
+    setCurrentElement:function(pos, handler){
+
+      if(scrollEvent.currentElements[pos].indexOf(handler.el) === -1){
+        scrollEvent.currentElements[pos].push(handler.el);
+        handler.addCb(handler.el,handler.count);
+      }
+    },
+    removeCurrentElement:function(pos, handler){
+
+      if(scrollEvent.currentElements[pos].indexOf(handler.el) >=0 ){
+        delete scrollEvent.currentElements[pos][scrollEvent.currentElements[pos].indexOf(handler.el)];
+        handler.removeCb(handler.el,handler.count);
+      }
+    }
+  };
+
+  scrollEvent.on("top", $(".fixed-top").parent(), function(el,i){
+    console.log("add fixed", el);
+    $(el).children().addClass("apply");
+  },function(el,i){
+    console.log("remove fixed", el);
+    $(el).children().removeClass("apply");
+  });
+
+  scrollEvent.on("top", $(".page"), function(el,i){
+    console.log("add", el, i);
+    $($("div.pagebg")[i]).fadeIn({duration:500});
+    $($("div.sidebartitle")[i]).addClass("appear");
+  }, function(el, i){
+    console.log("remove", el, i)
+    $($("div.pagebg")[i]).fadeOut({duration:700});
+    $($("div.sidebartitle")[i]).removeClass("appear");
+  });
+
+  scrollEvent.on("top", $("[data-trigger]"), function(el, i){
+    var t = $(el).attr("data-trigger").split(",");
+    if(t.indexOf("addclass") >=0){
+      $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
+      if($(el).attr("data-class-target").indexOf(".year") !== -1)
+        $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
+    }
+
+    if(t.indexOf("2012") >= 0){
+      $(".yeartitle h1").text("2012");
+      $(".fellow.2012").addClass("appear");
+    }
+
+    if(t.indexOf("2011") >= 0){
+      $(".yeartitle h1").text("2011");
+      $(".fellow.2011").addClass("appear");
+    }
+
+  }, function(el, i){
+    var t = $(el).attr("data-trigger").split(",");
+    if(t.indexOf("addclass") >= 0){
+      if($(el).attr("data-class-target").indexOf(".year") !== -1)
+        $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
+      $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
+    }
+
+    if(t.indexOf("2012") >= 0)
+      $(".fellow.2012").removeClass("appear");
     
-  };
 
-//  var currentEls = {"top":[], "middle":[]};
-  var scrollTriggers = function(pos){
+    if(t.indexOf("2011") >= 0)
+      $(".fellow.2011").removeClass("appear");
 
-    //pos += $(window).height()/2;
+  });
 
-    $("[data-trigger]").each(function(i, el){
-      var t = $(el).attr("data-trigger").split(",");
-      //if the element is in the middle of the page
-      if(($(el).offset().top < (pos +$(window).height()/2)) && 
-         ($(el).offset().top + $(el).outerHeight()  > (pos + $(window).height()/2))){
+  scrollEvent.on("middle", $("[data-trigger]"), function(el, i){
+    var t = $(el).attr("data-trigger").split(",");
+    if(t.indexOf("fellowshipmap") >= 0){
+      var a = $(el).attr("data-action");
+      var cities = $(el).attr("data-city").split(",");
+      for(c in cities){
+        if(svg !== undefined){
           
-        if(t.indexOf("fellowshipmap") >= 0){
-          var a = $(el).attr("data-action");
-          var cities = $(el).attr("data-city").split(",");
-          for(c in cities){
-            if(svg !== undefined){
-          
-              if(a == "add"){
-                //add to map.
-                
-                if(svg.select("circle.city."+cities[c])[0][0] === null){
-                  
-                  var coordinates = projection(cityLocations[cities[c]].reverse());
-                  svg.append('svg:circle')
-                    .attr('cx', coordinates[0])
-                    .attr('cy', coordinates[1])
-                    .attr('r', 5)
-                    .attr('class', "city "+cities[c]);
-                  $("circle").hover(function(e){
-                    console.log($(e.currentTarget).attr("class").split(" ")[1])
-                    $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
-                  }, function(e){
-                    $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
-                  })
+          if(a == "add"){
+            //add to map.
+            
+            if(svg.select("circle.city."+cities[c])[0][0] === null){
+              
+              var coordinates = projection(cityLocations[cities[c]].reverse());
+              svg.append('svg:circle')
+                .attr('cx', coordinates[0])
+                .attr('cy', coordinates[1])
+                .attr('r', 5)
+                .attr('class', "city "+cities[c]);
+              $("circle").hover(function(e){
+                console.log($(e.currentTarget).attr("class").split(" ")[1])
+                $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
+              }, function(e){
+                $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
+              });
 
 
-                }
-
-              }else if(a == "highlight"){
-                console.log("highlight", cities[c]);
-                //svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
-                //svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
-              }
-              //tranform is someway
             }
+
           }
-
         }
-      }else{
-        // since it was an add, and we are now outside of of the element, remove!
-
-        /*        if(t.indexOf("fellowshipmap") >= 0){
-          var a = $(el).attr("data-action");
-          if((a == "add") && (svg !== undefined))
-            svg.select("circle.city").remove()
-        } */
       }
-
-      //if the element is at the top of the page
-      if(($(el).offset().top < pos) && 
-         ($(el).offset().top + $(el).outerHeight()  > pos)){
-
-        if(t.indexOf("addclass") >=0){
-          $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
-          if($(el).attr("data-class-target").indexOf(".year") !== -1)
-            $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
-
-        }
-        if(t.indexOf("2012") >= 0){
-          $(".yeartitle h1").text("2012");
-          $(".fellow.2012").addClass("appear");
+    }
+  },function(el, i){});
 
 
 
-        }
-        if(t.indexOf("2011") >= 0){
-          $(".yeartitle h1").text("2011");
-          $(".fellow.2011").addClass("appear");
-
-        }
-      }else{
-
-        if(t.indexOf("addclass") >= 0){
-          if($(el).attr("data-class-target").indexOf(".year") !== -1)
-            $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
-          $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
-        }
-        if(t.indexOf("2012") >= 0){
-          $(".fellow.2012").removeClass("appear");
-        }
-        if(t.indexOf("2011") >= 0){
-          $(".fellow.2011").removeClass("appear");
-        }
-
-
-      }
-
-    });
-
-  };
-
-  
-  var onScroll = function(){
-  	var pos = $(window).scrollTop();
-    //hides nav when user starts to scroll
+  $(window).scroll(function(){
     if($(window).scrollTop() > 0) {
   	  $("nav").fadeOut();
     } else {
   	  $("nav").fadeIn();
     }
-    //$("div.pagebg").css({opacity:1});  
-    $(".page").each(function(i, el){
-      //if(i ==0)
-      //  console.log(el, $(el).offset().top, $(el).offset().top, $(el).outerHeight(), $(window).scrollTop());
-
-      if(($(el).offset().top <= $(window).scrollTop()) &&
-         ($(el).offset().top+$(el).outerHeight() >= $(window).scrollTop())){
-        //in transition 
-      
-        var percPage = ($(window).scrollTop() - $(el).offset().top) / ($(el).outerHeight());
-
-//        console.log(percPage);
+  });
 
 
-        
 
-          $($("div.pagebg")[i]).fadeIn({duration:700});
-        //$($("div.pagebg")[i+1]).fadeOut({duration:700});
-        //$($("div.pagebg")[i-1]).fadeOut({duration:700});
-  
-        $($("div.sidebartitle")[i]).addClass("appear");
 
-    
-      }else{
-        $($("div.pagebg")[i]).fadeOut({duration:500});
-        $($("div.sidebartitle")[i]).removeClass("appear");
-      }
-    });
-    
-    fixedInlineElements(pos);
-    scrollTriggers(pos)
 
-  }
+
+
+
+
+
+
+
 
   setSize();
-  onScroll();
+  scrollEvent.onScroll();
   $(window).resize(setSize);
-  $(window).scroll(onScroll);
+  $(window).scroll(scrollEvent.onScroll);
   
 
   var mapw = width-500;

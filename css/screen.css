@@ -264,13 +264,13 @@ p {
   position:relative;
   left:-400px;
   margin-top:0px;
+  text-transform: uppercase;
 }
 
 .sidebartitle.appear h2{ 
   left: 50px;
   transition: all 1s;
   -webkit-transition: all 1s;
-  text-transform: uppercase;
 }
 
 .pagebg{ 
@@ -280,12 +280,16 @@ p {
   left:0px;
   right:0px;
   z-index:-10;
-
   display:none;
+
 }
 .pagebg.quote{ 
   z-index:-5;
 }
+.pagebg.appear{ 
+
+}
+
 .pagebg img{ 
   min-width:100%;
   min-height:100%;
