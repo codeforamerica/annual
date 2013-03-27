@@ -51,7 +51,7 @@ $(function(){
       svg.append('svg:circle')
         .attr('cx', coordinates[0])
         .attr('cy', coordinates[1])
-        .attr('r', 5)
+        .attr('r', 10)
         .attr('class', "city "+c+" y"+cityLocations[c].year);
       $("circle").hover(function(e){
         $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
