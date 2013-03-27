@@ -376,6 +376,7 @@ display: block;
 .captains {
   clear: both;
   float: left;
+  max-width: 960px;
 }
 
 .moreapps h3 {
@@ -1225,63 +1226,63 @@ margin-bottom: 10px;
 }
 
 .jeff {
-  background-position: 0 -100px;
+  background-position: 0 0px;
 }
 
 .andrew {
-  background-position: 0 -200px;
+  background-position: 0 -100px;
 }
 
 .bret {
-  background-position: 0 -300px;
+  background-position: 0 -200px;
 }
 
 .burt {
-  background-position: 0 -400px;
+  background-position: 0 -300px;
 }
 
 .chip {
-  background-position: 0 -500px;
+  background-position: 0 -400px;
 }
 
 .chris {
-  background-position: 0 -600px;
+  background-position: 0 -500px;
 }
 
 .chriswhit {
-  background-position: 0 -700px;
+  background-position: 0 -600px;
 }
 
 .emma {
-  background-position: 0 -800px;
+  background-position: 0 -700px;
 }
 
 .harlan {
-  background-position: 0 -900px;
+  background-position: 0 -800px;
 }
 
 .jason {
-  background-position: 0 -1000px;
+  background-position: 0 -900px;
 }
 
 .jeff {
-  background-position: 0 -1100px;
+  background-position: 0 -1000px;
 }
 
 .jon {
-  background-position: 0 -1200px;
+  background-position: 0 -1100px;
 }
 
 .kevin {
-  background-position: 0 -1300px;
+  background-position: 0 -1200px;
 }
 
 .michelle {
-  background-position: 0 -1400px;
+  background-position: 0 -1300px;
 }
 
 .steve {
-  background-position: 0 -1500px;
+  background-position: 0 -1400px;
 }
 
 
