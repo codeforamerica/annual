@@ -372,7 +372,8 @@ display: block;
   text-align: left;
 }
 
-.moreapps {
+.moreapps,
+.captains {
   clear: both;
   float: left;
 }
