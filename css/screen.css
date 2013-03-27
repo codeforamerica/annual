@@ -139,6 +139,13 @@ h5 {
   font-weight: 300;
 }
 
+h6 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 p { 
   font-weight: 300;
   font-size: 17px;
@@ -312,6 +319,7 @@ p {
 
 .themes .headline {
   font-size: 50px;
+  margin-top: 0px;
 }
 
 .blurb {
@@ -402,7 +410,6 @@ display: block;
   position:relative;
   background:#fff;
 }
-
 
 #fellowshipMap{ 
   margin-left:400px;
