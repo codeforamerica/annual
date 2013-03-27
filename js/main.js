@@ -262,4 +262,6 @@ $(function(){
 });
 
 
-$('.carousel').carousel()
+// $('.carousel').carousel()
+
+$('[id^="myCarousel"]').carousel();

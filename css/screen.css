@@ -333,7 +333,7 @@ display: block;
 }
 
 .bioleft {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .bios {
@@ -362,7 +362,6 @@ display: block;
   font-size: 19px;
   font-weight: bold;
   text-align: left;
-  margin: 10px 0 0 30px;
 }
 
 .bios.apps img {
@@ -629,7 +628,14 @@ display: block;
 .supermayor,
 .textmybus,
 .textizen,
-.dailybrief {
+.dailybrief,
+.nolaready,
+.atxfloods,
+.bike,
+.deepdish,
+.publicart,
+.scmap,
+.maconmap {
   background-image: url('../img/apps_logos.png');
   background-size: 100px;
   float: left;
@@ -720,6 +726,34 @@ display: block;
 
 .dailybrief {
   background-position: 0 -2000px;
+}
+
+.nolaready {
+  background-position: 0 -2100px;
+}
+
+.atxfloods {
+  background-position: 0 -2200px;
+}
+
+.bike {
+  background-position: 0 -2300px;
+}
+
+.deepdish {
+  background-position: 0 -2400px;
+}
+
+.publicart {
+  background-position: 0 -2500px;
+}
+
+.scmap {
+  background-position: 0 -2600px;
+}
+
+.maconmap {
+  background-position: 0 -2700px;
 }
 
 .aaron,
@@ -960,6 +994,10 @@ display: block;
   margin-top: 70px;
 }
 
+.apps img {
+  width: 470px;
+}
+
 .companies {
   background-color: #fff;
   color: #000;
@@ -1001,6 +1039,10 @@ display: block;
   position: relative;
   margin-bottom: 20px;
   line-height: 1;
+}
+
+.apps .carousel-inner {
+  margin-left: 0px;
 }
 
 .carousel-inner {
@@ -1083,6 +1125,29 @@ display: block;
 
 .carousel-control.right {
   left: 939px;
+}
+
+.apps .carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 23px;
+     -moz-border-radius: 23px;
+          border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.apps .carousel-control.right {
+  left: 400px;
 }
 
 .carousel-control:hover,
@@ -1187,7 +1252,7 @@ display: block;
   background-position: 0 -40px;
 }
 
-.getinvolved .press div {
+.getinvolved .press div  {
   margin-right: 20px;
   float: left;
 }
