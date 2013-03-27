@@ -1,14 +1,14 @@
-var cityLocations = {"philadelphia11":[39.947, -75.162], 
-                     "philadelphia12":[39.947, -75.162], 
-                     "boston":[42.352, -71.053],
-                     "seattle":[47.604, -122.326],
-                     "macon":[32.8398, -83.6365],
-                     "santacruz":[36.9724, -122.0306],
-                     "chicago":[41.886, -87.655],
-                     "honolulu":[21.305, -157.859],
-                     "neworleans":[29.986, -90.093],
-                     "austin":[30.276, -97.756],
-                     "detroit":[42.360, -83.059]};
+var cityLocations = {"philadelphia11":{coords:[39.947, -75.162], year:"2011"},
+                     "philadelphia12":{coords:[39.947, -75.162], year:"2012"}, 
+                     "boston":{coords:[42.352, -71.053], year:"2011"},
+                     "seattle":{coords:[47.604, -122.326], year:"2011"},
+                     "macon":{coords:[32.8398, -83.6365], year:"2012"},
+                     "santacruz":{coords:[36.9724, -122.0306],year:"2012"},
+                     "chicago":{coords:[41.886, -87.655],year:"2012"},
+                     "honolulu":{coords:[21.305, -157.859],year:"2012"},
+                     "neworleans":{coords:[29.986, -90.093],year:"2012"},
+                     "austin":{coords:[30.276, -97.756],year:"2012"},
+                     "detroit":{coords:[42.360, -83.059], year:"2012"}};
 
 $(function(){
   var usTopology;
@@ -28,7 +28,7 @@ $(function(){
     $(".quote").css({width:width, height:height});
     $(".story").css({width:width, "min-height":height});
     $("pagebg").css({width:width, height:height});
-
+    
 
     d3.select("#fellowshipMap svg")
       .attr("width", width-500)
@@ -38,13 +38,30 @@ $(function(){
     path = d3.geo.path().projection(projection);;
 
 
-    if(svg !== undefined){
-      svg.selectAll("path").remove();
-      svg.selectAll("path")
-        .data(topojson.object(usTopology, usTopology.objects.states).geometries)
-        .enter().append("path")
-        .attr("d", path);
+
+    svg.selectAll("path").remove();
+    svg.selectAll("path")
+      .data(topojson.object(usTopology, usTopology.objects.states).geometries)
+      .enter().append("path")
+      .attr("d", path);
+
+    svg.selectAll("circle").remove();
+    for(c in cityLocations){
+      var coordinates = projection(cityLocations[c].coords.reverse());
+      svg.append('svg:circle')
+        .attr('cx', coordinates[0])
+        .attr('cy', coordinates[1])
+        .attr('r', 5)
+        .attr('class', "city "+c+" y"+cityLocations[c].year);
+      $("circle").hover(function(e){
+        $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
+      }, function(e){
+        $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
+      });
     }
+
+
+    
   }
 
   var scrollEvent = {
@@ -61,6 +78,9 @@ $(function(){
     onScroll:function(){
       var pos = $(window).scrollTop();
       var height = $(window).height();
+
+      if(pos < 0)
+        return;
 
       for(e in scrollEvent.handlers.middle){
         var el = scrollEvent.handlers.middle[e].el;
@@ -115,7 +135,7 @@ $(function(){
     if($(el).attr("class").indexOf("quote") >= 0)
       $("div.sidebartitle").hide();
     else{
-      $($("div.sidebartitle")[i]).show()
+      $($("div.sidebartitle")[i]).show();
       $($("div.sidebartitle")[i]).addClass("appear");
     }
   }, function(el, i){
@@ -137,9 +157,10 @@ $(function(){
     
 
     
-    if(t.indexOf("2012") >= 0)
+    if(t.indexOf("2012") >= 0){
       $(".fellow.y2012").addClass("appear");
-    
+      $(".city.y2012").fadeIn();
+    }
 
 
     
@@ -148,8 +169,10 @@ $(function(){
       $(".yeartitle h1").text("2011");
     
 
-    if(t.indexOf("2011") >= 0)
+    if(t.indexOf("2011") >= 0){
       $(".fellow.y2011").addClass("appear");
+      $(".city.y2011").fadeIn();
+    }
     
 
   }, function(el, i){
@@ -158,64 +181,18 @@ $(function(){
     if(t.indexOf("yeartitle") >=0)
       $(".yeartitle").removeClass("fellowshipyearfixed");
 
-    if(t.indexOf("2012") >= 0)
+    if(t.indexOf("2012") >= 0){
       $(".fellow.y2012").removeClass("appear");
+      $(".city.y2012").hide();
+    }
     
 
-    if(t.indexOf("2011") >= 0)
+    if(t.indexOf("2011") >= 0){
       $(".fellow.y2011").removeClass("appear");
+      $(".city.y2011").hide();
+    }
 
   });
-
-  scrollEvent.on("top", $("[data-trigger]"), function(el, i){
-    var t = $(el).attr("data-trigger").split(",");
-    if(t.indexOf("fellowshipmap") >= 0){
-      var a = $(el).attr("data-action");
-      var cities = $(el).attr("data-city").split(",");
-      for(c in cities){
-        if(svg !== undefined){
-          
-          if(a == "add"){
-            //add to map.
-
-            if(svg.select("circle.city."+cities[c])[0][0] === null){
-              console.log("add city", cities[c]);              
-              var coordinates = projection(cityLocations[cities[c]].reverse());
-              svg.append('svg:circle')
-                .attr('cx', coordinates[0])
-                .attr('cy', coordinates[1])
-                .attr('r', 5)
-                .attr('class', "city "+cities[c]);
-              $("circle").hover(function(e){
-                $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
-              }, function(e){
-                $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
-              });
-
-
-            }
-
-          }
-        }
-      }
-    }
-  },function(el, i){
-    var t = $(el).attr("data-trigger").split(",");
-    if(t.indexOf("fellowshipmap") >= 0){
-      var a = $(el).attr("data-action");
-      var cities = $(el).attr("data-city").split(",");
-      for(c in cities){
-        if(svg !== undefined){
-          if(a == "add"){
-            console.log("remove city", cities[c]);              
-            $("circle.city."+cities[c]).remove();
-          }
-        }
-      }
-    }
-  });
-
-
 
   $(window).scroll(function(){
     if($(window).scrollTop() > 0) {
@@ -237,9 +214,8 @@ $(function(){
 
 
 
-  setSize();
+
   scrollEvent.onScroll();
-  $(window).resize(setSize);
   $(window).scroll(scrollEvent.onScroll);
   
 
@@ -262,7 +238,10 @@ $(function(){
       .enter().append("path")
       .attr("d", path);
 
-
+    
+    
+    setSize();
+    $(window).resize(setSize);
 
   });
 
