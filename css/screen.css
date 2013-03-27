@@ -202,7 +202,7 @@ p {
 .page.quote,
 .page.story{ 
   position:relative;
-  padding:300px 80px 0px;
+  padding:300px 80px 100px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
