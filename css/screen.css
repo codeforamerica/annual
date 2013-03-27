@@ -236,7 +236,7 @@ p {
 
 .sidebartitle{ 
   width:400px;
-  left:000px;
+  left:0px;
   position:absolute;
   top:20px;
 }
@@ -307,7 +307,7 @@ p {
 }
 
 .themes {
-  margin: 200px 0px;
+  margin: 200px 0px 0px;
 }
 
 .themes .headline {
@@ -447,8 +447,12 @@ display: block;
   top:600px;
 
 }
+.cardholder.y2011{
+  margin-top:200px;
+
+} 
 .cardholder{ 
-  height:800px;
+  height:500px;
   width:300px;
 
 }

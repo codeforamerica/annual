@@ -26,7 +26,9 @@ title: Code for America 2012 Annual Report
     {% for p in site.posts %}
     <div class="sidebartitle" >
       <h1>2012</h1>
-      <h2>{{ p.title }}</h2>
+      {% if p.title != "stats" %}
+      <h2>{{ p.title }}{{ p.notitle }}</h2>
+      {% endif %}
     </div>
     {% endfor %}
     

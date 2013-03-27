@@ -1,4 +1,5 @@
-var cityLocations = {"philadelphia":[39.947, -75.162], 
+var cityLocations = {"philadelphia11":[39.947, -75.162], 
+                     "philadelphia12":[39.947, -75.162], 
                      "boston":[42.352, -71.053],
                      "seattle":[47.604, -122.326],
                      "macon":[32.8398, -83.6365],
@@ -60,7 +61,7 @@ $(function(){
     onScroll:function(){
       var pos = $(window).scrollTop();
       var height = $(window).height();
-      console.log(pos, height);
+
       for(e in scrollEvent.handlers.middle){
         var el = scrollEvent.handlers.middle[e].el;
 
@@ -88,74 +89,78 @@ $(function(){
     },
     setCurrentElement:function(pos, handler){
 
-      if(scrollEvent.currentElements[pos].indexOf(handler.el) === -1){
-        scrollEvent.currentElements[pos].push(handler.el);
+      if(scrollEvent.currentElements[pos].indexOf(handler) === -1){
+        scrollEvent.currentElements[pos].push(handler);
         handler.addCb(handler.el,handler.count);
       }
     },
     removeCurrentElement:function(pos, handler){
 
-      if(scrollEvent.currentElements[pos].indexOf(handler.el) >=0 ){
-        delete scrollEvent.currentElements[pos][scrollEvent.currentElements[pos].indexOf(handler.el)];
+      if(scrollEvent.currentElements[pos].indexOf(handler) >=0 ){
+        delete scrollEvent.currentElements[pos][scrollEvent.currentElements[pos].indexOf(handler)];
         handler.removeCb(handler.el,handler.count);
       }
     }
   };
 
   scrollEvent.on("top", $(".fixed-top").parent(), function(el,i){
-    console.log("add fixed", el);
     $(el).children().addClass("apply");
   },function(el,i){
-    console.log("remove fixed", el);
     $(el).children().removeClass("apply");
   });
 
   scrollEvent.on("top", $(".page"), function(el,i){
-    console.log("add", el, i);
     $($("div.pagebg")[i]).fadeIn({duration:500});
     $($("div.sidebartitle")[i]).addClass("appear");
   }, function(el, i){
-    console.log("remove", el, i)
     $($("div.pagebg")[i]).fadeOut({duration:700});
     $($("div.sidebartitle")[i]).removeClass("appear");
   });
 
   scrollEvent.on("top", $("[data-trigger]"), function(el, i){
     var t = $(el).attr("data-trigger").split(",");
-    if(t.indexOf("addclass") >=0){
-      $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
-      if($(el).attr("data-class-target").indexOf(".year") !== -1)
-        $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
-    }
 
-    if(t.indexOf("2012") >= 0){
+
+    if(t.indexOf("yeartitle")>=0)
+      $(".yeartitle").addClass("fellowshipyearfixed");
+
+
+    if(t.indexOf("title2012") >= 0)
       $(".yeartitle h1").text("2012");
-      $(".fellow.2012").addClass("appear");
-    }
+    
 
-    if(t.indexOf("2011") >= 0){
-      $(".yeartitle h1").text("2011");
-      $(".fellow.2011").addClass("appear");
-    }
-
-  }, function(el, i){
-    var t = $(el).attr("data-trigger").split(",");
-    if(t.indexOf("addclass") >= 0){
-      if($(el).attr("data-class-target").indexOf(".year") !== -1)
-        $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
-      $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
-    }
-
+    
     if(t.indexOf("2012") >= 0)
-      $(".fellow.2012").removeClass("appear");
+      $(".fellow.y2012").addClass("appear");
+    
+
+
+    
+
+    if(t.indexOf("title2011") >= 0)
+      $(".yeartitle h1").text("2011");
     
 
     if(t.indexOf("2011") >= 0)
-      $(".fellow.2011").removeClass("appear");
+      $(".fellow.y2011").addClass("appear");
+    
+
+  }, function(el, i){
+    var t = $(el).attr("data-trigger").split(",");
+
+    if(t.indexOf("yeartitle") >=0)
+      $(".yeartitle").removeClass("fellowshipyearfixed");
+
+    if(t.indexOf("2012") >= 0)
+      $(".fellow.y2012").removeClass("appear");
+    
+
+    if(t.indexOf("2011") >= 0)
+      $(".fellow.y2011").removeClass("appear");
 
   });
 
-  scrollEvent.on("middle", $("[data-trigger]"), function(el, i){
+  scrollEvent.on("top", $("[data-trigger]"), function(el, i){
     var t = $(el).attr("data-trigger").split(",");
     if(t.indexOf("fellowshipmap") >= 0){
       var a = $(el).attr("data-action");
@@ -165,9 +170,9 @@ $(function(){
           
           if(a == "add"){
             //add to map.
-            
+
             if(svg.select("circle.city."+cities[c])[0][0] === null){
-              
+              console.log("add city", cities[c]);              
               var coordinates = projection(cityLocations[cities[c]].reverse());
               svg.append('svg:circle')
                 .attr('cx', coordinates[0])
@@ -175,7 +180,6 @@ $(function(){
                 .attr('r', 5)
                 .attr('class', "city "+cities[c]);
               $("circle").hover(function(e){
-                console.log($(e.currentTarget).attr("class").split(" ")[1])
                 $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeIn(300);
               }, function(e){
                 $(".citycard[data-city='"+$(e.currentTarget).attr("class").split(" ")[1]+"']").fadeOut(500);
@@ -188,7 +192,21 @@ $(function(){
         }
       }
     }
-  },function(el, i){});
+  },function(el, i){
+    var t = $(el).attr("data-trigger").split(",");
+    if(t.indexOf("fellowshipmap") >= 0){
+      var a = $(el).attr("data-action");
+      var cities = $(el).attr("data-city").split(",");
+      for(c in cities){
+        if(svg !== undefined){
+          if(a == "add"){
+            console.log("remove city", cities[c]);              
+            $("circle.city."+cities[c]).remove();
+          }
+        }
+      }
+    }
+  });
 
 
 
