@@ -364,11 +364,6 @@ display: block;
   text-align: left;
 }
 
-.bios.apps img {
-  max-width: 500px;
-  max-height: 315px;
-}
-
 .moreapps {
   clear: both;
   float: left;
@@ -992,6 +987,10 @@ display: block;
 
 .apps img {
   width: 470px;
+}
+
+.apps h3 {
+margin-bottom: 10px;
 }
 
 .companies {
