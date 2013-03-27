@@ -20,7 +20,7 @@ body {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   webkit-font-smoothing:subpixel-antialiased;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
   text-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
 }
@@ -301,7 +301,6 @@ p {
   min-width:100%;
   min-height:100%;
 }
-
 
 .cityLeaders iframe {
   display: block;
