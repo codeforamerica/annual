@@ -1022,7 +1022,7 @@ margin-bottom: 10px;
 
 .companies .companyblurb {
   float:left;
-  width: 385px;
+  width: 370px;
   padding: 40px 60px 0 0;
 }
 
@@ -1055,6 +1055,10 @@ margin-bottom: 10px;
   position: relative;
   overflow: hidden;
   margin-left: 60px;
+}
+
+.market .carousel-inner {
+  max-width: 860px;
 }
 
 .carousel-inner > .item {
