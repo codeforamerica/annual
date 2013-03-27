@@ -20,6 +20,14 @@
    <script type="text/javascript" src="js/main.js"></script>
    <script src="http://d3js.org/d3.v3.min.js"></script>
    <script src="http://d3js.org/topojson.v0.min.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function() {
+        $('[id^="myCarousel"]').carousel({
+            interval: 5000,
+            cycle: true
+        });
+    });
+</script>
    {{ page.script }}
 </head>
 <body>

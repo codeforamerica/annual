@@ -139,6 +139,13 @@ h5 {
   font-weight: 300;
 }
 
+h6 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 p { 
   font-weight: 300;
   font-size: 17px;
@@ -312,6 +319,7 @@ p {
 
 .themes .headline {
   font-size: 50px;
+  margin-top: 0px;
 }
 
 .blurb {
@@ -364,14 +372,11 @@ display: block;
   text-align: left;
 }
 
-.bios.apps img {
-  max-width: 500px;
-  max-height: 315px;
-}
-
-.moreapps {
+.moreapps,
+.captains {
   clear: both;
   float: left;
+  max-width: 960px;
 }
 
 .moreapps h3 {
@@ -407,7 +412,6 @@ display: block;
   position:relative;
   background:#fff;
 }
-
 
 #fellowshipMap{ 
   margin-left:400px;
@@ -998,6 +1002,10 @@ display: block;
   width: 470px;
 }
 
+.apps h3 {
+margin-bottom: 10px;
+}
+
 .companies {
   background-color: #fff;
   color: #000;
@@ -1016,8 +1024,9 @@ display: block;
 
 .companies .companyblurb {
   float:left;
-  width: 385px;
+  width: 370px;
   padding: 40px 60px 0 0;
+  text-align: left;
 }
 
 .companies h5 {
@@ -1035,6 +1044,10 @@ display: block;
   color: #000;
 }
 
+.companies .contact {
+  line-height: 21px;
+}
+
 .carousel {
   position: relative;
   margin-bottom: 20px;
@@ -1049,6 +1062,10 @@ display: block;
   position: relative;
   overflow: hidden;
   margin-left: 60px;
+}
+
+.market .carousel-inner {
+  max-width: 860px;
 }
 
 .carousel-inner > .item {
@@ -1183,6 +1200,93 @@ display: block;
 .carousel-indicators .active {
   background-color: #fff;
 }
+
+.jeff,
+.andrew,
+.bret,
+.burt,
+.chip,
+.chris,
+.chriswhit,
+.dave,
+.emma,
+.harlan,
+.jason,
+.jeff,
+.jon,
+.kevin,
+.michelle,
+.steve {
+  background-image: url('../img/brigade_captains.jpg');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
+
+.jeff {
+  background-position: 0 0px;
+}
+
+.andrew {
+  background-position: 0 -100px;
+}
+
+.bret {
+  background-position: 0 -200px;
+}
+
+.burt {
+  background-position: 0 -300px;
+}
+
+.chip {
+  background-position: 0 -400px;
+}
+
+.chris {
+  background-position: 0 -500px;
+}
+
+.chriswhit {
+  background-position: 0 -600px;
+}
+
+.emma {
+  background-position: 0 -700px;
+}
+
+.harlan {
+  background-position: 0 -800px;
+}
+
+.jason {
+  background-position: 0 -900px;
+}
+
+.jeff {
+  background-position: 0 -1000px;
+}
+
+.jon {
+  background-position: 0 -1100px;
+}
+
+.kevin {
+  background-position: 0 -1200px;
+}
+
+.michelle {
+  background-position: 0 -1300px;
+}
+
+.steve {
+  background-position: 0 -1400px;
+}
+
+
+
 
 .network .bios p {
   font-size: 24px;
