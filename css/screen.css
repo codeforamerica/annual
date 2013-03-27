@@ -426,6 +426,10 @@ display: block;
   stroke: #fff;
 }
 
+#fellowshipMap .city{ 
+  display:none;
+}
+
 .fixed-top.apply{ 
   position:fixed !important;
   top:0px;
