@@ -62,6 +62,9 @@ $(function(){
       var pos = $(window).scrollTop();
       var height = $(window).height();
 
+      if(pos < 0)
+        return;
+
       for(e in scrollEvent.handlers.middle){
         var el = scrollEvent.handlers.middle[e].el;
 
@@ -115,7 +118,7 @@ $(function(){
     if($(el).attr("class").indexOf("quote") >= 0)
       $("div.sidebartitle").hide();
     else{
-      $($("div.sidebartitle")[i]).show()
+      $($("div.sidebartitle")[i]).show();
       $($("div.sidebartitle")[i]).addClass("appear");
     }
   }, function(el, i){
