@@ -152,7 +152,7 @@ p {
   text-align: left;
 }
 
-.span2 {
+/*.span2 {
   width: 200px;
   float: left;
 }
@@ -167,7 +167,7 @@ p {
 .span5 p {
   width: 455px;
   float: left;
-}
+}*/
 
 
 /****************************************************************************/
@@ -322,7 +322,8 @@ p {
 }
 
 .blurb {
-  width: 940px;
+  width: 100%;
+  max-width: 960px;
 }
 
 img.stats, 
@@ -1290,9 +1291,6 @@ margin-bottom: 10px;
   background-position: 0 -1400px;
 }
 
-
-
-
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
@@ -1364,4 +1362,20 @@ margin-bottom: 10px;
 .getinvolved .press div  {
   margin-right: 20px;
   float: left;
+}
+
+@media (max-width: 1454px) {
+
+  .apps img {
+    width: 400px;
+  }
+  .apps .carousel-control.right {
+    left: 347px;
+  }
+
+  iframe {
+    width: 400px;
+  }
+
+
 }
