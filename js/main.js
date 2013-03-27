@@ -111,10 +111,17 @@ $(function(){
 
   scrollEvent.on("top", $(".page"), function(el,i){
     $($("div.pagebg")[i]).fadeIn({duration:500});
-    $($("div.sidebartitle")[i]).addClass("appear");
+
+    if($(el).attr("class").indexOf("quote") >= 0)
+      $("div.sidebartitle").hide();
+    else{
+      $($("div.sidebartitle")[i]).show()
+      $($("div.sidebartitle")[i]).addClass("appear");
+    }
   }, function(el, i){
     $($("div.pagebg")[i]).fadeOut({duration:700});
     $($("div.sidebartitle")[i]).removeClass("appear");
+
   });
 
   scrollEvent.on("top", $("[data-trigger]"), function(el, i){
