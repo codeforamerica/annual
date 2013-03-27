@@ -1190,6 +1190,93 @@ margin-bottom: 10px;
   background-color: #fff;
 }
 
+.jeff,
+.andrew,
+.bret,
+.burt,
+.chip,
+.chris,
+.chriswhit,
+.dave,
+.emma,
+.harlan,
+.jason,
+.jeff,
+.jon,
+.kevin,
+.michelle,
+.steve {
+  background-image: url('../img/brigade_captains.jpg');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
+
+.jeff {
+  background-position: 0 -100px;
+}
+
+.andrew {
+  background-position: 0 -200px;
+}
+
+.bret {
+  background-position: 0 -300px;
+}
+
+.burt {
+  background-position: 0 -400px;
+}
+
+.chip {
+  background-position: 0 -500px;
+}
+
+.chris {
+  background-position: 0 -600px;
+}
+
+.chriswhit {
+  background-position: 0 -700px;
+}
+
+.emma {
+  background-position: 0 -800px;
+}
+
+.harlan {
+  background-position: 0 -900px;
+}
+
+.jason {
+  background-position: 0 -1000px;
+}
+
+.jeff {
+  background-position: 0 -1100px;
+}
+
+.jon {
+  background-position: 0 -1200px;
+}
+
+.kevin {
+  background-position: 0 -1300px;
+}
+
+.michelle {
+  background-position: 0 -1400px;
+}
+
+.steve {
+  background-position: 0 -1500px;
+}
+
+
+
+
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
