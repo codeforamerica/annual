@@ -1024,6 +1024,7 @@ margin-bottom: 10px;
   float:left;
   width: 370px;
   padding: 40px 60px 0 0;
+  text-align: left;
 }
 
 .companies h5 {
@@ -1039,6 +1040,10 @@ margin-bottom: 10px;
 
 .companies a {
   color: #000;
+}
+
+.companies .contact {
+  line-height: 21px;
 }
 
 .carousel {
