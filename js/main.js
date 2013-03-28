@@ -171,6 +171,10 @@ $(function(){
       $("#mapcontainer").css({"position":"absolute", "top":0});
     
   });
+  scrollEvent.on("top", $(".scrollout"), function(el, i){
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+  }, function(){});
+
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
 
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
