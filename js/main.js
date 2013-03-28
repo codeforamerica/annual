@@ -30,6 +30,9 @@ var cityLocations = [{
     "properties": { "city": "detroit", "year":"2012" }
 }];
 
+var color2011 = "c82a45",
+    color2012 = "227da7";
+
 
 $(function(){
   var usTopology;
@@ -52,8 +55,8 @@ $(function(){
   }
 
   var scrollEvent = {
-    handlers: {top:[], middle:[]},
-    currentElements: {top:[], middle:[]},
+    handlers: {top:[], middle:[], bottom:[]},
+    currentElements: {top:[], middle:[], bottom:[]},
     on:function(pos, el, addCb, removeCb){
       var elements = el.toArray();
       var i = 0;
@@ -93,6 +96,19 @@ $(function(){
           scrollEvent.removeCurrentElement("top", scrollEvent.handlers.top[e]);
         }
       }
+      for(e in scrollEvent.handlers.bottom){
+        var el = scrollEvent.handlers.bottom[e].el;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top <= (pos+ height)) && 
+           ($(el).offset().top + $(el).outerHeight()  >= (pos +height))){
+          scrollEvent.setCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
+        }
+      }
+
     },
     setCurrentElement:function(pos, handler){
 
@@ -125,6 +141,23 @@ $(function(){
     $($("div.sidebartitle")[i]).removeClass("appear");
 
   });
+  scrollEvent.on("top", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("bottom", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("middle", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+
+
 
   scrollEvent.on("top", $(".fellowship"), function(el,i){
     $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
@@ -140,7 +173,7 @@ $(function(){
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
 
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
-      $(".yeartitle h1").text("2011");
+      $(".yeartitle h1").css("color","#"+color2011).text("2011");
 
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2011';
@@ -152,7 +185,7 @@ $(function(){
     }
     
     if($(el).attr("class").indexOf("fellowship2012") >= 0){
-      $(".yeartitle h1").text("2012");
+      $(".yeartitle h1").css("color","#"+color2012).text("2012");
 
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2012';
@@ -213,9 +246,9 @@ $(function(){
 
 
     if(m.properties.year == "2011")
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+c82a45@2x.png");
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2011+"@2x.png");
     else
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+227da7@2x.png");
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2012+"@2x.png");
       
     return elem[0]; 
   }

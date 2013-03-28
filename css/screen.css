@@ -414,6 +414,19 @@ display: block;
   position:fixed !important;
 }
 
+.simplestyle-marker{ 
+  position:absolute;
+  top:0px;
+  transition: top 1s;
+  -webkit-transition: top 1s;  
+}
+
+.marker-popup{ 
+  width:600px;
+  max-width:600px;
+}
+
+
 .fellowshipyearfixed{ 
   position:fixed;
   top:0px;
@@ -572,6 +585,8 @@ display: block;
 
 .fellowship .innercard {
   padding: 20px;
+  max-height:200px;
+  overflow:auto;
 }
 
 .fellowship .cardsections {
