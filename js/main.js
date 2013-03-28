@@ -55,8 +55,8 @@ $(function(){
   }
 
   var scrollEvent = {
-    handlers: {top:[], middle:[], bottom:[]},
-    currentElements: {top:[], middle:[], bottom:[]},
+    handlers: {top:[], middle:[], bottom:[], inview:[]},
+    currentElements: {top:[], middle:[], bottom:[], inview:[]},
     on:function(pos, el, addCb, removeCb){
       var elements = el.toArray();
       var i = 0;
@@ -108,6 +108,19 @@ $(function(){
           scrollEvent.removeCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
         }
       }
+      for(e in scrollEvent.handlers.inview){
+        var el = scrollEvent.handlers.inview[e].el;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top + $(el).outerHeight() >= pos) && 
+           ($(el).offset().top   <= (pos +height))){
+          scrollEvent.setCurrentElement("inview", scrollEvent.handlers.inview[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("inview", scrollEvent.handlers.inview[e]);
+        }
+      }
+
 
     },
     setCurrentElement:function(pos, handler){
@@ -141,22 +154,11 @@ $(function(){
     $($("div.sidebartitle")[i]).removeClass("appear");
 
   });
-  scrollEvent.on("top", $("iframe[data-src]"), function(el,i){
+  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
     if($(el).attr("src") === undefined)
       $(el).attr("src", $(el).attr("data-src"))
   }, function(el, i, pos){
   });
-  scrollEvent.on("bottom", $("iframe[data-src]"), function(el,i){
-    if($(el).attr("src") === undefined)
-      $(el).attr("src", $(el).attr("data-src"))
-  }, function(el, i, pos){
-  });
-  scrollEvent.on("middle", $("iframe[data-src]"), function(el,i){
-    if($(el).attr("src") === undefined)
-      $(el).attr("src", $(el).attr("data-src"))
-  }, function(el, i, pos){
-  });
-
 
 
   scrollEvent.on("top", $(".fellowship"), function(el,i){
