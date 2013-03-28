@@ -398,6 +398,11 @@ display: block;
   display: block;
 }
 
+.cfa p {
+  font-size: 23px;
+  line-height: 30px;
+}
+
 .fellowship{ 
   color:#333;
   position:relative; height:100%; width:100%; 
@@ -511,6 +516,7 @@ display: block;
 .mapscroll{ 
   height:800px;
 }
+
 .fellowship .fellow{ 
   position:fixed;
   bottom:50px;
@@ -539,14 +545,11 @@ display: block;
   top:20px;
   left:50px;
 }
+
 .fellowship .yeartitle h1 {
   font-size: 100px;
   color: #333;
   margin-bottom: 0px;
-}
-
-.fellowship .cfa h2{
-  text-transform: none; 
 }
 
 .fellowship h2 {
