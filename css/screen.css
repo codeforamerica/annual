@@ -549,7 +549,7 @@ display: block;
 .fellowship .yeartitle h1 {
   font-size: 100px;
   color: #333;
-  margin-bottom: 0px;
+  margin: 50px 0px 0px; 
 }
 
 .fellowship h2 {
