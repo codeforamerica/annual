@@ -415,19 +415,6 @@ display: block;
   position:fixed !important;
 }
 
-.simplestyle-marker{ 
-  position:absolute;
-  top:0px;
-  transition: top 1s;
-  -webkit-transition: top 1s;  
-}
-
-.marker-popup{ 
-  width:600px;
-  max-width:600px;
-}
-
-
 .fellowshipyearfixed{ 
   position:fixed;
   top:0px;
@@ -522,7 +509,7 @@ display: block;
   background-position: 0 -531px;
 }
 .mapscroll{ 
-  height:500px;
+  height:800px;
 }
 .fellowship .fellow{ 
   position:fixed;
@@ -559,12 +546,11 @@ display: block;
 }
 
 .fellowship .cfa h2{
-  text-transform: none;
-  margin-top: 
+  text-transform: none; 
 }
 
 .fellowship h2 {
-  margin-top: 0px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
 
@@ -586,8 +572,6 @@ display: block;
 
 .fellowship .innercard {
   padding: 20px;
-  max-height:200px;
-  overflow:auto;
 }
 
 .fellowship .cardsections {
