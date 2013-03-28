@@ -314,11 +314,6 @@ iframe {
   margin-top: 0px;
 }
 
-.blurb {
-  width: 100%;
-  max-width: 960px;
-}
-
 img.stats, 
 .market img.stats {
 margin: 50px 240px;
@@ -366,7 +361,6 @@ display: block;
 .captains {
   clear: both;
   float: left;
-  max-width: 960px;
 }
 
 .moreapps h3 {
@@ -1185,6 +1179,11 @@ display: block;
 
 .carousel-indicators .active {
   background-color: #fff;
+}
+
+.community img {
+  margin: 0 auto;
+  display: block;
 }
 
 .jeff,
