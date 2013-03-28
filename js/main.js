@@ -142,8 +142,8 @@ $(function(){
 
   scrollEvent.on("middle", $(".page"), function(el,i){
     $($("div.pagebg")[i]).fadeIn({duration:500});
-
-    if($(el).attr("class").indexOf("quote") >= 0)
+    console.log($(el));
+    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
       $("div.sidebartitle").hide();
     else{
       $($("div.sidebartitle")[i]).show();
@@ -233,7 +233,7 @@ $(function(){
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler(), easey_handlers.DoubleClickHandler()]);
 
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
-
+  map.ui.zoomer.add();
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer);
 

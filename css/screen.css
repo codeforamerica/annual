@@ -419,7 +419,16 @@ display: block;
 #map.apply{ 
   position:fixed !important;
 }
-
+.zoomer{ 
+  top:210px;
+  left:50px;
+}
+.zoomin{ 
+  left:50px;
+}
+.zoomout{ 
+  top:239px;
+}
 .fellowshipyearfixed{ 
   position:fixed;
   top:0px;
