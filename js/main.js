@@ -31,18 +31,6 @@ var cityLocations = [{
 }];
 
 
-/*var cityLocations = {"philadelphia11":{coords:[39.947, -75.162], year:"2011"},
-                     "philadelphia12":{coords:[39.947, -75.162], year:"2012"}, 
-                     "boston":{coords:[42.352, -71.053], year:"2011"},
-                     "seattle":{coords:[47.604, -122.326], year:"2011"},
-                     "macon":{coords:[32.8398, -83.6365], year:"2012"},
-                     "santacruz":{coords:[36.9724, -122.0306],year:"2012"},
-                     "chicago":{coords:[41.886, -87.655],year:"2012"},
-                     "honolulu":{coords:[21.305, -157.859],year:"2012"},
-                     "neworleans":{coords:[29.986, -90.093],year:"2012"},
-                     "austin":{coords:[30.276, -97.756],year:"2012"},
-                     "detroit":{coords:[42.360, -83.059], year:"2012"}};
-*/
 $(function(){
   var usTopology;
   //shows nav when user hovers over the logo
@@ -59,7 +47,7 @@ $(function(){
     $(".scrollout").css({height:height});
     $(".fellowship").css({height:height});
     
-
+    scrollEvent.onScroll();
     
   }
 
@@ -158,7 +146,6 @@ $(function(){
         return f.properties['year'] === '2011';
       });
 
-
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
 
@@ -213,17 +200,24 @@ $(function(){
   var markerFactory = function(m) {
 
     // Create a marker using the simplestyle factory
-    var elem = mapbox.markers.simplestyle_factory(m);
+    var elem = $(mapbox.markers.simplestyle_factory(m));
 
     // Add function that centers marker on click
-    MM.addEvent(elem, 'click', function(e) {
+    MM.addEvent(elem[0], 'click', function(e) {
       map.ease.location({
         lat: m.geometry.coordinates[1],
         lon: m.geometry.coordinates[0]
       }).zoom(map.zoom()).optimal();
     });
-    console.log(elem);
-    return elem;
+
+
+
+    if(m.properties.year == "2011")
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+c82a45@2x.png");
+    else
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+227da7@2x.png");
+      
+    return elem[0]; 
   }
 
 
@@ -233,11 +227,6 @@ $(function(){
   interaction.formatter(function(feature) {
     var html = $(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").html()
 
-    var o = '<a target="_blank" href="' + feature.properties.url + '">' +
-      '<img src="' + feature.properties.image + '">' +
-      '<h2>' + feature.properties.city + '</h2>' +
-      '</a>';
-    
     return html;
   });
 
@@ -246,7 +235,7 @@ $(function(){
 
   // Attribute map
   map.ui.attribution.add()
-    .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+    .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
 
