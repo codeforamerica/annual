@@ -986,7 +986,25 @@ display: block;
 }
 
 .apps h3 {
-margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.stats h4,
+.page.story .stats h1 {
+  text-align: center;
+}
+
+.stats h4 {
+  border-bottom: 2px #fff solid;
+  font-weight: 300;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.page.story .stats h1 {
+  font-size: 85px;
+  margin-bottom: 20px;
 }
 
 .companies {
