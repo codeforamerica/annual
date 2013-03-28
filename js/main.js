@@ -22,6 +22,9 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
     "properties": { "city": "honolulu", "year":"2012" }
+},{
+    "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
+    "properties": { "city": "neworleans", "year":"2012" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
     "properties": { "city": "austin", "year":"2012" }
