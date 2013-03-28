@@ -112,6 +112,7 @@ h2 {
   font-size: 40px;
   margin-top: 80px;
   max-width: 1080px;
+  line-height: 50px;
 }
 
 h3 {
@@ -210,12 +211,12 @@ p {
 }
 
 .page.quote h1,
-.page.story h1,
-.goals li { 
+.page.story h1 { 
   text-align:left;
   color:#fff;
   font-size: 56px;
   list-style: none;
+  line-height: 60px;
 }
 
 .page.quote h1 {
@@ -246,7 +247,7 @@ p {
   width:400px;
   left:0px;
   position:absolute;
-  top:20px;
+  top:80px;
 }
 
 .sidebartitle.appear{
@@ -271,7 +272,7 @@ p {
 .sidebartitle h2{ 
   position:relative;
   left:-400px;
-  margin-top:0px;
+  margin-top:40px;
   text-transform: uppercase;
 }
 
