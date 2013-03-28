@@ -165,9 +165,10 @@ $(function(){
 
   }, function(el, i, pos){
 
-
-      $("#mapcontainer").css({"position":"absolute", "top":($(window).scrollTop() - $(".fellowship").offset().top), "bottom":"auto", "height":$(window).height()});
-
+    if($(".fellowship").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    else
+      $("#mapcontainer").css({"position":"absolute", "top":0});
     
   });
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
