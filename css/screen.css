@@ -178,19 +178,6 @@ p {
 /*
 /*****************************************************************************/
 
-.title {
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 2em;
-  font-size:48px;
-  padding:10px;
-  border-bottom:solid 1px #ccc;
-  font-family: 'Changa One', cursive;
-  margin-left:-40px;
-  padding-left:40px;
-  height:40px;
-}
-
 .line {
   border: white solid 2px;
   width: 200px;
@@ -250,11 +237,6 @@ p {
   top:80px;
 }
 
-.sidebartitle.appear{
-  transition: all 1s;
-  -webkit-transition: all 1s;
-}
-
 .sidebartitle h1{ 
   font-size: 100px;
   color: #fff;
@@ -278,8 +260,8 @@ p {
 
 .sidebartitle.appear h2{ 
   left: 50px;
-  transition: all 1s;
-  -webkit-transition: all 1s;
+  transition: left 1s;
+  -webkit-transition: left 1s;
 }
 
 .pagebg{ 
@@ -1374,7 +1356,7 @@ margin-bottom: 10px;
   float: left;
 }
 
-@media (max-width: 1454px) {
+/*@media (max-width: 1454px) {
 
   .apps img {
     width: 400px;
@@ -1387,5 +1369,53 @@ margin-bottom: 10px;
     width: 400px;
   }
 
+
+}*/
+
+@media (max-width: 1200px) {
+
+  .page.story {
+    padding-left: 250px;
+  }
+
+  .sidebar{ 
+    top:40px;
+  }
+
+  .sidebartitle{ 
+    top:0px;
+  }
+
+  .sidebartitle h1{ 
+    font-size: 60px;
+    margin-left: 30px;
+  } 
+
+  .sidebartitle h2{ 
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+
+  .sidebartitle.appear h2{ 
+    left: 30px;
+  }
+
+  iframe {
+    width: 340px;
+  }
+
+  .cityLeaders iframe {
+    width: 500px;
+    height: 300px;
+  }
+
+  .span5 {
+    width: 360px;
+  }
+
+  .bios.right .span5 {
+    margin-left: 0px;
+  }
 
 }
