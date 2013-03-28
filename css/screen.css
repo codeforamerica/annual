@@ -1025,10 +1025,9 @@ display: block;
 }
 
 .companies img {
-  width: 300px;
-  height: 200px;
   float: left;
-  padding: 5.3em 0 0 5em;
+  width: 82%;
+  padding: 3em 0 0 5em;
 }
 
 .companies .companyblurb {
