@@ -291,6 +291,10 @@ p {
   min-height:100%;
 }
 
+iframe {
+  width: 100%;
+}
+
 .cityLeaders iframe {
   display: block;
   margin-top: 50px;
@@ -347,7 +351,7 @@ display: block;
   margin-top: 0px;
 }
 
-.bios.right .span5,
+.bios.right .span6,
 .bios.apps.right .span6 {
   float: right;
 }
@@ -987,10 +991,6 @@ display: block;
 
 .ecosystem h1 {
   margin-top: 70px;
-}
-
-.apps img {
-  width: 470px;
 }
 
 .apps h3 {
