@@ -112,6 +112,7 @@ h2 {
   font-size: 40px;
   margin-top: 80px;
   max-width: 1080px;
+  line-height: 50px;
 }
 
 h3 {
@@ -130,6 +131,7 @@ h4 {
   text-align: left;
   font-size: 24px;
   clear: both;
+  margin-top: 50px;
 }
 
 h5 {
@@ -152,7 +154,7 @@ p {
   text-align: left;
 }
 
-.span2 {
+/*.span2 {
   width: 200px;
   float: left;
 }
@@ -167,7 +169,7 @@ p {
 .span5 p {
   width: 455px;
   float: left;
-}
+}*/
 
 
 /****************************************************************************/
@@ -175,19 +177,6 @@ p {
 /* Site
 /*
 /*****************************************************************************/
-
-.title {
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 2em;
-  font-size:48px;
-  padding:10px;
-  border-bottom:solid 1px #ccc;
-  font-family: 'Changa One', cursive;
-  margin-left:-40px;
-  padding-left:40px;
-  height:40px;
-}
 
 .line {
   border: white solid 2px;
@@ -213,12 +202,12 @@ p {
 
 
 .page.quote h1,
-.page.story h1,
-.goals li { 
+.page.story h1 { 
   text-align:left;
   color:#fff;
   font-size: 56px;
   list-style: none;
+  line-height: 60px;
 }
 
 .page.quote h1 {
@@ -249,12 +238,7 @@ p {
   width:400px;
   left:0px;
   position:absolute;
-  top:20px;
-}
-
-.sidebartitle.appear{
-  transition: all 1s;
-  -webkit-transition: all 1s;
+  top:80px;
 }
 
 .sidebartitle h1{ 
@@ -274,14 +258,14 @@ p {
 .sidebartitle h2{ 
   position:relative;
   left:-400px;
-  margin-top:0px;
+  margin-top:40px;
   text-transform: uppercase;
 }
 
 .sidebartitle.appear h2{ 
   left: 50px;
-  transition: all 1s;
-  -webkit-transition: all 1s;
+  transition: left 1s;
+  -webkit-transition: left 1s;
 }
 
 .pagebg{ 
@@ -326,7 +310,8 @@ p {
 }
 
 .blurb {
-  width: 940px;
+  width: 100%;
+  max-width: 960px;
 }
 
 img.stats, 
@@ -1282,20 +1267,20 @@ margin-bottom: 10px;
   background-position: 0 -1400px;
 }
 
-
-
-
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
+  line-height: 30px;
 }
 
 .network .bios h3 {
   font-size: 26px;
+  margin: 0px;
 }
 
 .network .bios h5 {
   font-size: 21px;
+  margin: 5px 0px 8px;
 }
 
 .press {
@@ -1356,4 +1341,68 @@ margin-bottom: 10px;
 .getinvolved .press div  {
   margin-right: 20px;
   float: left;
+}
+
+/*@media (max-width: 1454px) {
+
+  .apps img {
+    width: 400px;
+  }
+  .apps .carousel-control.right {
+    left: 347px;
+  }
+
+  iframe {
+    width: 400px;
+  }
+
+
+}*/
+
+@media (max-width: 1200px) {
+
+  .page.story {
+    padding-left: 250px;
+  }
+
+  .sidebar{ 
+    top:40px;
+  }
+
+  .sidebartitle{ 
+    top:0px;
+  }
+
+  .sidebartitle h1{ 
+    font-size: 60px;
+    margin-left: 30px;
+  } 
+
+  .sidebartitle h2{ 
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+
+  .sidebartitle.appear h2{ 
+    left: 30px;
+  }
+
+  iframe {
+    width: 340px;
+  }
+
+  .cityLeaders iframe {
+    width: 500px;
+    height: 300px;
+  }
+
+  .span5 {
+    width: 360px;
+  }
+
+  .bios.right .span5 {
+    margin-left: 0px;
+  }
+
 }
