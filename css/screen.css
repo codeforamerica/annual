@@ -321,16 +321,13 @@ margin: 50px 240px;
 display: block;
 }
 
-.bioright {
-  margin-left: 15px;
-}
-
-.apps .bioright {
-  margin-left: 50px;
-}
-
 .bioleft {
-  margin-right: 30px;
+  padding-right: 20px;
+}
+
+.bioright,
+.apps .bioright {
+  padding-left: 20px;
 }
 
 .bios {
