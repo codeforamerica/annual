@@ -1373,6 +1373,10 @@ display: block;
 
 @media (max-width: 1200px) {
 
+  h4 {
+    font-size: 20px;
+  }
+
   .page.quote {
     padding-bottom: 300px;
   }
@@ -1383,7 +1387,7 @@ display: block;
 
   .page.quote h1, .page.story h1 {
     font-size: 46px;
-    line-height: 42px;
+    line-height: 50px;
   }
 
   .cfa p {
@@ -1429,6 +1433,11 @@ display: block;
 
   .bios.right .span5 {
     margin-left: 0px;
+  }
+
+  .bios h5,
+  .network .bios h5 {
+    font-size: 17px;
   }
 
 }
