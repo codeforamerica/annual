@@ -1008,7 +1008,7 @@ display: block;
 .stats h4 {
   border-bottom: 2px #fff solid;
   font-weight: 300;
-  margin-top: 20px;
+  margin: 20px auto 30px;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1031,7 +1031,7 @@ display: block;
   width: 300px;
   height: 200px;
   float: left;
-  padding: 60px 60px 20px;
+  padding: 5.3em 0 0 5em;
 }
 
 .companies .companyblurb {
@@ -1070,11 +1070,6 @@ display: block;
   overflow: hidden;
   width: 100%;
 }
-
-/*.market .carousel-inner {
-  max-width: 860px;
-}
-*/
 
 .carousel-inner > .item {
   position: relative;
@@ -1136,6 +1131,7 @@ display: block;
   width: 40px;
   height: 40px;
   font-size: 60px;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
   line-height: 30px;
   color: #ffffff;
@@ -1154,11 +1150,12 @@ display: block;
 
 .apps .carousel-control {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 8px;
   width: 40px;
   height: 40px;
   font-size: 60px;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
   line-height: 30px;
   color: #ffffff;
@@ -1172,7 +1169,8 @@ display: block;
 }
 
 .apps .carousel-control.right {
-  left: 400px;
+  right: 8px;
+  left: auto;
 }
 
 .carousel-control:hover,
@@ -1185,24 +1183,8 @@ display: block;
 }
 
 .carousel-indicators {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 5;
-  margin: 0;
-  list-style: none;
-}
-
-.carousel-indicators li {
-  display: block;
-  float: left;
-  width: 10px;
-  height: 10px;
-  margin-left: 5px;
-  text-indent: -999px;
-  background-color: #ccc;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 5px;
+  bottom: -26px;
+  top: inherit;
 }
 
 .carousel-indicators .active {
@@ -1396,8 +1378,22 @@ display: block;
 
 @media (max-width: 1200px) {
 
+  .page.quote {
+    padding-bottom: 300px;
+  }
+
   .page.story {
     padding-left: 250px;
+  }
+
+  .page.quote h1, .page.story h1 {
+    font-size: 46px;
+    line-height: 42px;
+  }
+
+  .cfa p {
+    font-size: 19px;
+    line-height: 25px;
   }
 
   .sidebar{ 
