@@ -398,6 +398,11 @@ display: block;
   display: block;
 }
 
+.cfa p {
+  font-size: 23px;
+  line-height: 30px;
+}
+
 .fellowship{ 
   color:#333;
   position:relative; height:100%; width:100%; 
@@ -414,19 +419,6 @@ display: block;
 #map.apply{ 
   position:fixed !important;
 }
-
-.simplestyle-marker{ 
-  position:absolute;
-  top:0px;
-  transition: top 1s;
-  -webkit-transition: top 1s;  
-}
-
-.marker-popup{ 
-  width:600px;
-  max-width:600px;
-}
-
 
 .fellowshipyearfixed{ 
   position:fixed;
@@ -522,8 +514,9 @@ display: block;
   background-position: 0 -531px;
 }
 .mapscroll{ 
-  height:500px;
+  height:800px;
 }
+
 .fellowship .fellow{ 
   position:fixed;
   bottom:50px;
@@ -552,19 +545,15 @@ display: block;
   top:20px;
   left:50px;
 }
+
 .fellowship .yeartitle h1 {
   font-size: 100px;
   color: #333;
-  margin-bottom: 0px;
-}
-
-.fellowship .cfa h2{
-  text-transform: none;
-  margin-top: 
+  margin: 50px 0px 0px; 
 }
 
 .fellowship h2 {
-  margin-top: 0px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
 
@@ -586,8 +575,6 @@ display: block;
 
 .fellowship .innercard {
   padding: 20px;
-  max-height:200px;
-  overflow:auto;
 }
 
 .fellowship .cardsections {
@@ -1040,7 +1027,6 @@ display: block;
 
 .companies .companyblurb {
   float:left;
-  width: 370px;
   padding: 40px 60px 0 0;
   text-align: left;
 }
@@ -1070,19 +1056,16 @@ display: block;
   line-height: 1;
 }
 
-.apps .carousel-inner {
-  margin-left: 0px;
-}
-
 .carousel-inner {
   position: relative;
   overflow: hidden;
-  margin-left: 60px;
+  width: 100%;
 }
 
-.market .carousel-inner {
+/*.market .carousel-inner {
   max-width: 860px;
 }
+*/
 
 .carousel-inner > .item {
   position: relative;
@@ -1139,8 +1122,8 @@ display: block;
 
 .carousel-control {
   position: absolute;
-  top: 40%;
-  left: 0px;
+  top: 50%;
+  left: 10px;
   width: 40px;
   height: 40px;
   font-size: 60px;
@@ -1157,7 +1140,7 @@ display: block;
 }
 
 .carousel-control.right {
-  left: 939px;
+  right: 10px;
 }
 
 .apps .carousel-control {

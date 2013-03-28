@@ -30,8 +30,8 @@ var cityLocations = [{
     "properties": { "city": "detroit", "year":"2012" }
 }];
 
-var color2011 = "c82a45",
-    color2012 = "227da7";
+var color2011 = "ff3658",
+    color2012 = "C82A45";
 
 
 $(function(){
