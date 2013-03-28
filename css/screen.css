@@ -130,6 +130,7 @@ h4 {
   text-align: left;
   font-size: 24px;
   clear: both;
+  margin-top: 50px;
 }
 
 h5 {
@@ -1299,14 +1300,17 @@ margin-bottom: 10px;
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
+  line-height: 30px;
 }
 
 .network .bios h3 {
   font-size: 26px;
+  margin: 0px;
 }
 
 .network .bios h5 {
   font-size: 21px;
+  margin: 5px 0px 8px;
 }
 
 .press {
