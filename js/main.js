@@ -197,6 +197,7 @@ $(function(){
       $(".yeartitle h1").css("color","#"+color2011).text("2011");
       $(".yeartitle h2").css("color","#"+color2011).text("The fellowship");
       interaction.hideTooltips();
+
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2011';
       });
@@ -210,6 +211,7 @@ $(function(){
       $(".yeartitle h1").css("color","#"+color2012).text("2012");
       $(".yeartitle h2").css("color","#"+color2012).text("The fellowship");
       interaction.hideTooltips();
+
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2012';
       });
@@ -252,6 +254,16 @@ $(function(){
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
+
+  markerLayer.addCallback("markeradded", function(l, m){
+    
+    $(m.element).css("top", "-1000px");
+    
+    setTimeout(function(){
+      $(m.element).animate({"top":"0px"}, 400);
+    }, Math.random() * 300);
+
+  });
 
   var currentMarker = markerLayer.markers()[0];
 
