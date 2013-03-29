@@ -379,8 +379,9 @@ display: block;
 .getinvolved {
   background: rgba(255, 255, 255, .75);
   padding: 60px 80px;
-  max-width: 900px;
+  max-width: 700px;
   color: #000;
+  text-shadow: none;
 }
 
 .getinvolved h1 {
