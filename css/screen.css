@@ -487,6 +487,37 @@ display: block;
   color:#fff;
 }
 
+.marker-popup  .prev{ 
+  position:absolute;
+  top:100px;
+  left:-24px;
+  opacity:0.8;
+  color:#fff;
+  height:20px;
+  background:#333;
+  width:10px;
+  padding:20px 5px;
+  cursor:pointer;
+}
+
+.marker-popup  .next{
+  position:absolute;
+  top:100px;
+  right:-24px;
+  opacity:0.8;
+  color:#fff;
+  height:20px;
+  background:#333;
+  width:10px;
+  padding:20px 5px;
+  cursor:pointer;
+} 
+.marker-popup  .next:hover{
+  opacity:1.0;
+}
+.marker-popup  .prev:hover{
+  opacity:1.0;
+}
 .zoomer{ 
   top:210px;
   left:50px;

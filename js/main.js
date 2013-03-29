@@ -197,13 +197,14 @@ $(function(){
       $(".yeartitle h1").css("color","#"+color2011).text("2011");
       $(".yeartitle h2").css("color","#"+color2011).text("The fellowship");
       interaction.hideTooltips();
-
+      displayedMarkers = [];
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2011';
       });
 
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
+      setTimeout(showRandomTooltip, 1200);
 
     }
     
@@ -211,13 +212,14 @@ $(function(){
       $(".yeartitle h1").css("color","#"+color2012).text("2012");
       $(".yeartitle h2").css("color","#"+color2012).text("The fellowship");
       interaction.hideTooltips();
-
+      displayedMarkers = [];
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2012';
       });
       
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
+      setTimeout(showRandomTooltip, 1200);
 
     }
     
@@ -229,7 +231,22 @@ $(function(){
 
 
 
+  var showRandomTooltip = function(){
 
+    currentMarker = displayedMarkers[Math.floor(Math.random()*displayedMarkers.length)]
+
+    currentMarker.showTooltip();
+
+    point = map.locationPoint({
+      lat: currentMarker.data.geometry.coordinates[1],
+      lon: currentMarker.data.geometry.coordinates[0]
+    })
+
+    var quarter = map.dimensions.y * (1/ 4);
+    point.y -= quarter;
+    map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
+
+  }
 
   scrollEvent.onScroll();
   $(window).scroll(scrollEvent.onScroll);
@@ -255,17 +272,28 @@ $(function(){
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
+  var displayedMarkers = [];
+  var currentMarker = null;
+
+  markerLayer.sort(function(a, b) {
+    return a.geometry.coordinates[0] -
+      b.geometry.coordinates[0];
+  });
+
   markerLayer.addCallback("markeradded", function(l, m){
-    
+    if($(m.element).attr("class").indexOf("simplestyle-marker") === -1)
+      return;
+    displayedMarkers.push(m);
     $(m.element).css("top", "-1000px");
     
     setTimeout(function(){
       $(m.element).animate({"top":"0px"}, 400);
     }, Math.random() * 300);
 
+
   });
 
-  var currentMarker = markerLayer.markers()[0];
+
 
   var markerFactory = function(m) {
 
@@ -276,6 +304,14 @@ $(function(){
 
     // Add function that centers marker on click
     MM.addEvent(elem[0], 'click', function(e) {
+      console.log("click",$(e.toElement).attr("data-city"), $(e.toElement).attr("data-year"))
+      markers  = markerLayer.markers();
+      for(mark in markers){
+        if(($(e.toElement).attr("data-city") === markers[mark].data.properties.city) &&
+           ($(e.toElement).attr("data-year") === markers[mark].data.properties.year)){
+          currentMarker = markers[mark];
+        }        
+      }
 
       point = map.locationPoint({
         lat: m.geometry.coordinates[1],
@@ -296,14 +332,50 @@ $(function(){
     return elem[0]; 
   }
 
+  
+  var cycleMarker = function(direction){
+
+    var position = displayedMarkers.indexOf(currentMarker);
+
+    if(direction === "next"){
+
+       if(position +1 >= displayedMarkers.length)
+        position =0;
+      else
+        position++;
+
+    }else{
+      if(position -1 < 0)
+        position =displayedMarkers.length-1;
+      else
+        position--;
+    }
+    currentMarker = displayedMarkers[position];
+    displayedMarkers[position].showTooltip();
+
+    point = map.locationPoint({
+      lat: currentMarker.data.geometry.coordinates[1],
+      lon: currentMarker.data.geometry.coordinates[0]
+    })
+
+    var quarter = map.dimensions.y * (1/ 4);
+    point.y -= quarter;
+    map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
+    
+  }
+
 
   markerLayer.factory(markerFactory);
 
 
   interaction.formatter(function(feature) {
-    var html = $("<div>").append($(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
-    html = "<div class='close'>X</div>" +html;
+    var html = $("<div>").append($(".citycardscontainer .citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
+    html = "<div class='close'>X</div><div class='prev'>&lt;</div><div class='next'>&gt;</div>" +html;
     return html;
+  });
+
+  $("#map").delegate(".prev,.next", "click", function(e){
+    cycleMarker($(e.currentTarget).attr("class"));
   });
 
   $("#map").delegate(".close", "click", function(e){
