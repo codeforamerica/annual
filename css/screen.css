@@ -487,7 +487,6 @@ display: block;
   color:#fff;
 }
 
-
 .zoomer{ 
   top:210px;
   left:50px;
@@ -506,17 +505,31 @@ display: block;
   display:inherit;
 }
 
-.citycard{ 
-
-}
 .citycard .partnersection {
   width: 190px;
 }
 
+.citycard ul {
+  margin-left: 0px;
+}
+
 
 .citycard hr {
-    border: solid 1px #FC2848;
-    margin-bottom: 10px;
+  border: solid 1px #C82A45;
+  margin: 10px 0;
+  width: 220px;
+}
+
+.citycard[data-year="2011"] h4 { 
+ background: #FED100;
+}
+
+.citycard[data-year="2011"] hr {
+  border: solid 1px #FED100;
+}
+
+.citycard[data-year="2011"] h5 { 
+ color: #FED100;
 }
 
 .bostonseal,
@@ -620,14 +633,14 @@ display: block;
 }
 
 .fellowship h4 {
-  background-color: #FC2848;
+  background-color: #C82A45;
   color: #fff;
   text-shadow: none;
   padding: 10px 20px;
 }
 
 .fellowship h5 {
-  color: #FC2848;
+  color: #C82A45;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
