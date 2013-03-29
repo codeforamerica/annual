@@ -241,12 +241,12 @@ $(function(){
   var layer = mapbox.layer().id('tmcw.map-2f4ad161');
 
 
-  var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler(), easey_handlers.DoubleClickHandler()]);
+  var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
-  map.ui.zoomer.add();
+
   var markerLayer = mapbox.markers.layer().features(cityLocations);
-  var interaction = mapbox.markers.interaction(markerLayer);
+  var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
   var markerFactory = function(m) {
 
@@ -255,10 +255,14 @@ $(function(){
 
     // Add function that centers marker on click
     MM.addEvent(elem[0], 'click', function(e) {
-      map.ease.location({
+
+      point = map.locationPoint({
         lat: m.geometry.coordinates[1],
         lon: m.geometry.coordinates[0]
-      }).zoom(map.zoom()).optimal();
+      })
+      var quarter = map.dimensions.y * (3/ 8);
+      point.y -= quarter;
+      map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
 
 

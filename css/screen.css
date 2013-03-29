@@ -470,6 +470,16 @@ display: block;
 #map.apply{ 
   position:fixed !important;
 }
+.marker-popup{ 
+  max-width:600px;
+  width:600px;
+  padding:0px;
+}
+.marker-popup  h4{ 
+  margin:0px;
+}
+
+
 .zoomer{ 
   top:210px;
   left:50px;
@@ -638,7 +648,8 @@ display: block;
 }
 
 .fellowship .cardsections {
-  margin-bottom: 30px;
+  float:left;
+  width:250px;
 }
 
 .fellowship li {
