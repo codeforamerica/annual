@@ -82,7 +82,7 @@ $(function(){
         if(($(el).offset().top <= (pos + height/2)) && 
            ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
           scrollEvent.setCurrentElement("middle", scrollEvent.handlers.middle[e]);
-        }else{
+       }else{
           scrollEvent.removeCurrentElement("middle", scrollEvent.handlers.middle[e]);
         }
       }
@@ -192,7 +192,7 @@ $(function(){
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
       $(".yeartitle h1").css("color","#"+color2011).text("2011");
       $(".yeartitle h2").css("color","#"+color2011).text("The fellowship");
-
+      interaction.hideTooltips();
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2011';
       });
@@ -205,6 +205,7 @@ $(function(){
     if($(el).attr("class").indexOf("fellowship2012") >= 0){
       $(".yeartitle h1").css("color","#"+color2012).text("2012");
       $(".yeartitle h2").css("color","#"+color2012).text("The fellowship");
+      interaction.hideTooltips();
       markerLayer.filter(function(f) {
         return f.properties['year'] === '2012';
       });
@@ -248,10 +249,14 @@ $(function(){
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
+  var currentMarker = markerLayer.markers()[0];
+
   var markerFactory = function(m) {
 
     // Create a marker using the simplestyle factory
     var elem = $(mapbox.markers.simplestyle_factory(m));
+    elem.attr("data-city", m.properties.city);
+    elem.attr("data-year", m.properties.year);
 
     // Add function that centers marker on click
     MM.addEvent(elem[0], 'click', function(e) {
@@ -260,7 +265,7 @@ $(function(){
         lat: m.geometry.coordinates[1],
         lon: m.geometry.coordinates[0]
       })
-      var quarter = map.dimensions.y * (3/ 8);
+      var quarter = map.dimensions.y * (1/ 4);
       point.y -= quarter;
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
@@ -281,13 +286,13 @@ $(function(){
 
   interaction.formatter(function(feature) {
     var html = $(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").html()
-    //html = "<div class='close'>X</div>" +html;
+    html = "<div class='close'>X</div>" +html;
     return html;
   });
 
   $("#map").delegate(".close", "click", function(e){
-    map.setExtent(markerLayer.extent());
-    //console.log("click", $(e.currentTarget).parent());
+    interaction.hideTooltips();
+    map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
   });
 
   map.addLayer(markerLayer).setExtent(markerLayer.extent());
