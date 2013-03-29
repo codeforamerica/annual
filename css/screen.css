@@ -376,8 +376,64 @@ display: block;
   display: block;
 }
 
+.getinvolved {
+  background: rgba(255, 255, 255, .75);
+  padding: 60px 80px;
+  max-width: 900px;
+  color: #000;
+}
+
 .getinvolved h1 {
   margin: 0px;
+}
+
+.getinvolved h4 {
+  text-transform: none;
+  margin-top: 20px;
+}
+
+.getinvolved h5 {
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.getinvolved p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.getinvolved img {
+  width: 40%;
+  margin-top: 25px;
+}
+
+.getinvolved a {
+  color: #000;
+}
+
+.getinvolved span {
+  font-weight: 700;
+}
+
+.getinvolved li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.getinvolved form {
+  background: gray;
+  padding: 25px 40px;
+  width: 300px;
+  margin: 20px auto 40px;
+}
+
+.getinvolved label {
+  color: #fff;
+}
+
+.getinvolved .keynote {
+  margin-top: 40px;
 }
 
 .thanks h2 {
@@ -985,6 +1041,13 @@ display: block;
 
 .ecosystem h1 {
   margin-top: 70px;
+}
+
+.ecosystem h2 {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 35px;
+  margin-top: 58px;
 }
 
 .apps h3 {
