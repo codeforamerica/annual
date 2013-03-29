@@ -1377,10 +1377,24 @@ display: block;
   height: 40px;
 }
 
-.press .wp {
-  background-image:url('../img/wp.png');
-  background-size: 207px;
-  width: 207px;
+.press .msnbc {
+  background-image:url('../img/msnbc.png');
+  background-size: 73px;
+  width: 73px;
+  height: 50px;
+}
+
+.press .csm {
+  background-image:url('../img/csm.png');
+  background-size: 115px;
+  height: 40px;
+  width: 115px;
+}
+
+.press .techcrunch {
+  background-image:url('../img/techcrunch.png');
+  background-size: 165px;
+  width: 165px;
   height: 40px;
 }
 
@@ -1389,8 +1403,13 @@ display: block;
 .press .motherjones:hover,
 .press .npr:hover,
 .press .wsj:hover,
-.press .wp:hover {
+.press .csm:hover,
+.press .techcrunch:hover {
   background-position: 0 -40px;
+}
+
+.press .msnbc:hover {
+  background-position: 0 -50px;
 }
 
 .getinvolved .press div  {
