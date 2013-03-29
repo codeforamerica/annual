@@ -289,7 +289,7 @@ $(function(){
 
 
   interaction.formatter(function(feature) {
-    var html = $("<div>").append($(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']")).html();
+    var html = $("<div>").append($(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
     html = "<div class='close'>X</div>" +html;
     return html;
   });
