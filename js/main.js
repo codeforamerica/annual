@@ -163,7 +163,13 @@ $(function(){
   }, function(el, i, pos){
   });
 
+  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
 
+    $("#mapcontainer").css({"position":"absolute", "top":0});
+    $(".yeartitle h1").css("color","#"+color2011).text("2011");
+
+  }, function(el, i, pos){
+  });
   scrollEvent.on("top", $(".fellowship"), function(el,i){
     $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
 
@@ -178,6 +184,7 @@ $(function(){
   });
   scrollEvent.on("top", $(".scrollout"), function(el, i){
       $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+
   }, function(){});
 
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
