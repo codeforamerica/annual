@@ -674,6 +674,31 @@ iframe {
   margin: 0px 50px 50px 0px;
 }
 
+.people .google,
+.people .knight,
+.people .on {
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.people .google {
+  background-image: url('../img/google.png');
+  background-size: 105px;
+  width: 105px;
+}
+
+.people .knight {
+  background-image: url('../img/knight.png');
+  background-size: 185px;
+  width: 185px;
+}
+
+.people .on {
+  background-image: url('../img/on.png');
+  background-size: 135px;
+  width: 135px;
+}
+
 .srtracker,
 .fm,
 .labs,
