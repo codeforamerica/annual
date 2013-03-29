@@ -33,7 +33,7 @@ var cityLocations = [{
     "properties": { "city": "detroit", "year":"2012" }
 }];
 
-var color2011 = "ffd200",
+var color2011 = "fedd44",
     color2012 = "C82A45";
 
 
