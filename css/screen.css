@@ -1073,7 +1073,7 @@ display: block;
 }
 
 .companies {
-  background-color: #fff;
+  background-color: rgba(255,255,255, .75);
   color: #000;
   text-shadow: none;
   float: left;
@@ -1082,7 +1082,6 @@ display: block;
 }
 
 .companies img {
-  float: left;
   width: 82%;
   padding: 3em 0 0 5em;
 }
@@ -1091,6 +1090,11 @@ display: block;
   float:left;
   padding: 40px 60px 0 0;
   text-align: left;
+}
+
+.companies .companyblurb img {
+  width: 40%;
+  padding-top: 0px;
 }
 
 .companies h5 {
@@ -1177,48 +1181,17 @@ display: block;
   left: 100%;
 }
 
+.apps .carousel-control ,
 .carousel-control {
   position: absolute;
   top: 50%;
   left: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 60px;
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  background: none;
 }
 
 .carousel-control.right {
   right: 10px;
-}
-
-.apps .carousel-control {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  width: 40px;
-  height: 40px;
-  font-size: 60px;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 .apps .carousel-control.right {
@@ -1242,6 +1215,11 @@ display: block;
 
 .carousel-indicators .active {
   background-color: #fff;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .community img {
