@@ -376,8 +376,64 @@ display: block;
   display: block;
 }
 
+.getinvolved {
+  background: rgba(255, 255, 255, .75);
+  padding: 60px 80px;
+  max-width: 900px;
+  color: #000;
+}
+
 .getinvolved h1 {
   margin: 0px;
+}
+
+.getinvolved h4 {
+  text-transform: none;
+  margin-top: 20px;
+}
+
+.getinvolved h5 {
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.getinvolved p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.getinvolved img {
+  width: 40%;
+  margin-top: 25px;
+}
+
+.getinvolved a {
+  color: #000;
+}
+
+.getinvolved span {
+  font-weight: 700;
+}
+
+.getinvolved li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.getinvolved form {
+  background: gray;
+  padding: 25px 40px;
+  width: 300px;
+  margin: 20px auto 40px;
+}
+
+.getinvolved label {
+  color: #fff;
+}
+
+.getinvolved .keynote {
+  margin-top: 40px;
 }
 
 .thanks h2 {
@@ -998,6 +1054,13 @@ display: block;
   margin-top: 70px;
 }
 
+.ecosystem h2 {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 35px;
+  margin-top: 58px;
+}
+
 .apps h3 {
   margin-bottom: 10px;
 }
@@ -1021,7 +1084,7 @@ display: block;
 }
 
 .companies {
-  background-color: #fff;
+  background-color: rgba(255,255,255, .75);
   color: #000;
   text-shadow: none;
   float: left;
@@ -1030,7 +1093,6 @@ display: block;
 }
 
 .companies img {
-  float: left;
   width: 82%;
   padding: 3em 0 0 5em;
 }
@@ -1039,6 +1101,11 @@ display: block;
   float:left;
   padding: 40px 60px 0 0;
   text-align: left;
+}
+
+.companies .companyblurb img {
+  width: 40%;
+  padding-top: 0px;
 }
 
 .companies h5 {
@@ -1125,48 +1192,17 @@ display: block;
   left: 100%;
 }
 
+.apps .carousel-control ,
 .carousel-control {
   position: absolute;
   top: 50%;
   left: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 60px;
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  background: none;
 }
 
 .carousel-control.right {
   right: 10px;
-}
-
-.apps .carousel-control {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  width: 40px;
-  height: 40px;
-  font-size: 60px;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 .apps .carousel-control.right {
@@ -1190,6 +1226,11 @@ display: block;
 
 .carousel-indicators .active {
   background-color: #fff;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .community img {
