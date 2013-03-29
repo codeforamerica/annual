@@ -505,7 +505,9 @@ display: block;
   background:#fff;
   display:inherit;
 }
-
+.citycardscontainer{ 
+  display:none;
+}
 .citycard{ 
 
 }
