@@ -281,12 +281,18 @@ $(function(){
 
   interaction.formatter(function(feature) {
     var html = $(".citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").html()
-
+    //html = "<div class='close'>X</div>" +html;
     return html;
   });
 
+  $("#map").delegate(".close", "click", function(e){
+    map.setExtent(markerLayer.extent());
+    //console.log("click", $(e.currentTarget).parent());
+  });
 
   map.addLayer(markerLayer).setExtent(markerLayer.extent());
+
+  $($("#map").children()[1]).css("z-index", "1");
 
   // Attribute map
   map.ui.attribution.add()

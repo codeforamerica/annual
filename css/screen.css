@@ -478,6 +478,13 @@ display: block;
 .marker-popup  h4{ 
   margin:0px;
 }
+.marker-popup  .close{ 
+  position:absolute;
+  top:8px;
+  right:8px;
+  opacity:0.8;
+  color:#fff;
+}
 
 
 .zoomer{ 
@@ -610,8 +617,8 @@ display: block;
 }
 
 .fellowship .yeartitle{ 
-  z-index:1000;
-  position:absolute;
+  z-index:0;
+  position:relative;
   top:20px;
   left:50px;
 }
