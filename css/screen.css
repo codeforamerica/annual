@@ -381,6 +381,7 @@ display: block;
   padding: 60px 80px;
   max-width: 700px;
   color: #000;
+  text-shadow: none;
 }
 
 .getinvolved h1 {
