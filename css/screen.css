@@ -314,12 +314,6 @@ iframe {
   margin-top: 0px;
 }
 
-img.stats, 
-.market img.stats {
-margin: 50px 240px;
-display: block;
-}
-
 .bioleft {
   padding-right: 20px;
 }
@@ -1085,14 +1079,14 @@ display: block;
 .stats h4 {
   border-bottom: 2px #fff solid;
   font-weight: 300;
-  margin: 20px auto 30px;
+  margin: 20px 40px 20px 0px;
   padding-bottom: 10px;
   text-transform: uppercase;
 }
 
 .page.story .stats h1 {
   font-size: 85px;
-  margin-bottom: 20px;
+  margin: 0px 40px 20px 0px;
 }
 
 .companies {
