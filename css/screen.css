@@ -291,6 +291,10 @@ p {
   min-height:100%;
 }
 
+iframe {
+  width: 100%;
+}
+
 .cityLeaders iframe {
   display: block;
   margin-top: 50px;
@@ -310,27 +314,19 @@ p {
   margin-top: 0px;
 }
 
-.blurb {
-  width: 100%;
-  max-width: 960px;
-}
-
 img.stats, 
 .market img.stats {
 margin: 50px 240px;
 display: block;
 }
 
-.bioright {
-  margin-left: 15px;
-}
-
-.apps .bioright {
-  margin-left: 50px;
-}
-
 .bioleft {
-  margin-right: 30px;
+  padding-right: 20px;
+}
+
+.bioright,
+.apps .bioright {
+  padding-left: 20px;
 }
 
 .bios {
@@ -350,7 +346,7 @@ display: block;
   margin-top: 0px;
 }
 
-.bios.right .span5,
+.bios.right .span6,
 .bios.apps.right .span6 {
   float: right;
 }
@@ -365,7 +361,6 @@ display: block;
 .captains {
   clear: both;
   float: left;
-  max-width: 960px;
 }
 
 .moreapps h3 {
@@ -992,10 +987,6 @@ display: block;
   margin-top: 70px;
 }
 
-.apps img {
-  width: 470px;
-}
-
 .apps h3 {
   margin-bottom: 10px;
 }
@@ -1028,10 +1019,9 @@ display: block;
 }
 
 .companies img {
-  width: 300px;
-  height: 200px;
   float: left;
-  padding: 5.3em 0 0 5em;
+  width: 82%;
+  padding: 3em 0 0 5em;
 }
 
 .companies .companyblurb {
@@ -1189,6 +1179,11 @@ display: block;
 
 .carousel-indicators .active {
   background-color: #fff;
+}
+
+.community img {
+  margin: 0 auto;
+  display: block;
 }
 
 .jeff,
@@ -1351,6 +1346,10 @@ display: block;
   float: left;
 }
 
+.press div {
+  margin: 20px 0;
+}
+
 /*@media (max-width: 1454px) {
 
   .apps img {
@@ -1378,6 +1377,10 @@ display: block;
 
 @media (max-width: 1200px) {
 
+  h4 {
+    font-size: 20px;
+  }
+
   .page.quote {
     padding-bottom: 300px;
   }
@@ -1388,7 +1391,7 @@ display: block;
 
   .page.quote h1, .page.story h1 {
     font-size: 46px;
-    line-height: 42px;
+    line-height: 50px;
   }
 
   .cfa p {
@@ -1434,6 +1437,11 @@ display: block;
 
   .bios.right .span5 {
     margin-left: 0px;
+  }
+
+  .bios h5,
+  .network .bios h5 {
+    font-size: 17px;
   }
 
 }
