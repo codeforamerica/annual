@@ -1334,17 +1334,24 @@ display: block;
   background-position: 0 -1400px;
 }
 
+.market .bios p {
+margin-top: 24px;
+}
+
+.market .bios.right.bioquote p,
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
 }
 
+.market .bios.right.bioquote h3,
 .network .bios h3 {
   font-size: 26px;
   margin: 0px;
 }
 
+.market .bios.right.bioquote h5,
 .network .bios h5 {
   font-size: 21px;
   margin: 5px 0px 8px;
