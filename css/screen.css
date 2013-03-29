@@ -1383,7 +1383,6 @@ margin-top: 24px;
 .press .cnn {
   background-image:url('../img/cnn.png');
   background-size: 86px;
-  height: 40px;
   width: 86px;
 }
 
@@ -1391,28 +1390,25 @@ margin-top: 24px;
   background-image:url('../img/mashable.png');
   background-size: 123px;
   width: 123px;
-  height: 40px;
 }
 
 .press .motherjones {
   background-image:url('../img/motherjones.png');
   background-size: 139px;
   width: 139px;
-  height: 40px;
 }
 
 .press .npr {
   background-image:url('../img/npr_logo_line.png');
   background-size: 110px;
-  height: 40px;
   width: 110px;
+  margin-top: 28px;
 }
 
 .press .wsj {
   background-image:url('../img/wsj.png');
   background-size: 226.5px;
   width: 226.5px;
-  height: 40px;
 }
 
 .press .msnbc {
@@ -1425,7 +1421,6 @@ margin-top: 24px;
 .press .csm {
   background-image:url('../img/csm.png');
   background-size: 115px;
-  height: 40px;
   width: 115px;
 }
 
@@ -1433,6 +1428,15 @@ margin-top: 24px;
   background-image:url('../img/techcrunch.png');
   background-size: 165px;
   width: 165px;
+}
+
+.press .cnn,
+.press .mashable,
+.press .motherjones,
+.press .npr,
+.press .wsj,
+.press .csm,
+.press .techcrunch  {
   height: 40px;
 }
 
