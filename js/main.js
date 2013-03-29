@@ -149,7 +149,6 @@ $(function(){
 
   scrollEvent.on("middle", $(".page"), function(el,i){
     $($("div.pagebg")[i]).fadeIn({duration:500});
-    console.log($(el));
     if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
       $("div.sidebartitle").hide();
     else{
@@ -204,7 +203,7 @@ $(function(){
 
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
-      setTimeout(showRandomTooltip, 1200);
+      //setTimeout(showRandomTooltip, 1200);
 
     }
     
@@ -219,7 +218,7 @@ $(function(){
       
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
-      setTimeout(showRandomTooltip, 1200);
+      //setTimeout(showRandomTooltip, 1200);
 
     }
     
@@ -304,9 +303,10 @@ $(function(){
 
     // Add function that centers marker on click
     MM.addEvent(elem[0], 'click', function(e) {
-      console.log("click",$(e.toElement).attr("data-city"), $(e.toElement).attr("data-year"))
       markers  = markerLayer.markers();
       for(mark in markers){
+        if($(markers[mark].element).attr("class").indexOf("simplestyle-marker") === -1)
+          continue;
         if(($(e.toElement).attr("data-city") === markers[mark].data.properties.city) &&
            ($(e.toElement).attr("data-year") === markers[mark].data.properties.year)){
           currentMarker = markers[mark];
