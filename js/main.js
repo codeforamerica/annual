@@ -37,6 +37,10 @@ var color2011 = "ffd200",
     color2012 = "C82A45";
 
 
+if((console === undefined)||(console.log === undefined)){
+  window.console = {log:function(){}};
+}
+
 $(function(){
   var usTopology;
   //shows nav when user hovers over the logo
