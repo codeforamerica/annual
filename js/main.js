@@ -189,7 +189,7 @@ $(function(){
       $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
 
   }, function(){});
-
+  var arrowInterval =0;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
 
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
@@ -220,14 +220,25 @@ $(function(){
 
       //setTimeout(showRandomTooltip, 1200);
 
+      arrowInterval = setInterval(function(){
+        $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+          $(".downarrow").animate({opacity:0}, 800, "swing");
+        })}, 2000);
+
     }
     
 
 
   }, function(el, i){
-
+    clearInterval(arrowInterval);
+    $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
+  $(".downarrow").click(function(){
+    $("html body").animate({
+         scrollTop: $("div.story div.fellows").offset().top
+     }, 1500);
+  })
 
 
   var showRandomTooltip = function(){
