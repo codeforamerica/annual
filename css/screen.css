@@ -408,10 +408,11 @@ margin-left: 0px;
 .getinvolved h4 {
   text-transform: none;
   margin-top: 19px;
+  font-size: 22px;
 }
 
 .getinvolved h5 {
-  font-size: 19px;
+  font-size: 17px;
   margin-top: 13px;
 }
 
@@ -443,7 +444,7 @@ margin-left: 0px;
   background: rgba(255,255,255, .7);
   padding: 25px 40px;
   width: 500px;
-  margin: 20px auto;
+  margin: 25px auto;
 }
 
 .getinvolved label {
