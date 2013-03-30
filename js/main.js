@@ -194,7 +194,7 @@ $(function(){
 
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
       $(".yeartitle h1").css("color","#"+color2011).text("2011");
-      $(".yeartitle h2").css("color","#"+color2011).text("The fellowship");
+      $(".yeartitle h2").css("color","#"+color2011);
       interaction.hideTooltips();
       displayedMarkers = [];
       markerLayer.filter(function(f) {
@@ -209,7 +209,7 @@ $(function(){
     
     if($(el).attr("class").indexOf("fellowship2012") >= 0){
       $(".yeartitle h1").css("color","#"+color2012).text("2012");
-      $(".yeartitle h2").css("color","#"+color2012).text("The fellowship");
+      $(".yeartitle h2").css("color","#"+color2012);
       interaction.hideTooltips();
       displayedMarkers = [];
       markerLayer.filter(function(f) {
@@ -381,7 +381,7 @@ $(function(){
 
   interaction.formatter(function(feature) {
     var html = $("<div>").append($(".citycardscontainer .citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
-    html = "<div class='close'>X</div><div class='prev'>&lt;</div><div class='next'>&gt;</div>" +html;
+    html = "<div class='close'>X</div>" +html;
     return html;
   });
 
