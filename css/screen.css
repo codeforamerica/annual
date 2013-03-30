@@ -157,22 +157,25 @@ p {
   text-align: left;
 }
 
-/*.span2 {
-  width: 200px;
-  float: left;
+input[type="text"] {
+  border-radius: 0px;
 }
 
-.span4 {
-  width: 700px;
-  float: left;
-  margin-left: 140px;
+.btn {
+  border-radius: 0px;
+  background: #C82A45;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Arvo', 'Georgia', serif;
+  margin-left: 5px;
 }
 
-.span5,
-.span5 p {
-  width: 455px;
-  float: left;
-}*/
+.btn:hover {
+  background: #b1263d;
+  color: #fff;
+  text-shadow: none;
+}
 
 
 /****************************************************************************/
@@ -387,6 +390,15 @@ margin-left: 0px;
   max-width: 700px;
   color: #000;
   text-shadow: none;
+  font-family: 'Arvo', 'Georgia', serif;
+}
+
+.getinvolved p:first-child:first-letter { 
+  float: left; 
+  font-size: 48px;
+  line-height: 50px;
+  padding-right: 8px; 
+  padding-left: 3px; 
 }
 
 .getinvolved h1 {
@@ -395,17 +407,17 @@ margin-left: 0px;
 
 .getinvolved h4 {
   text-transform: none;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
 .getinvolved h5 {
-  font-size: 20px;
-  margin-top: 18px;
+  font-size: 19px;
+  margin-top: 13px;
 }
 
 .getinvolved p {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .getinvolved img {
@@ -428,14 +440,15 @@ margin-left: 0px;
 }
 
 .getinvolved form {
-  background: gray;
+  background: rgba(255,255,255, .7);
   padding: 25px 40px;
-  width: 300px;
-  margin: 20px auto 40px;
+  width: 500px;
+  margin: 20px auto;
 }
 
 .getinvolved label {
-  color: #fff;
+  color: #000;
+  margin-right: 10px;
 }
 
 .thanks h2 {
