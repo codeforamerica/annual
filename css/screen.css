@@ -472,6 +472,19 @@ margin-left: 0px;
 #map.apply{ 
   position:fixed !important;
 }
+.downarrow{ 
+  position:absolute;
+  bottom:30px;
+  right:40px;
+  opacity:0;
+}
+.downarrow svg{ 
+  color:#fff;
+  fill:#fff;
+  height:100px;
+  width:50px;
+}
+
 .marker-popup{ 
   max-width:600px;
   width:600px;
