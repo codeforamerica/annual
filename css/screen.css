@@ -347,6 +347,15 @@ iframe {
   float: right;
 }
 
+.bios.right .span6 {
+padding-left: 20px;
+}
+
+.bios.right .span6.bioleft {
+padding-left: 0px;
+margin-left: 0px;
+}
+
 .bios .url {
   font-size: 19px;
   font-weight: bold;
@@ -427,10 +436,6 @@ iframe {
 
 .getinvolved label {
   color: #fff;
-}
-
-.getinvolved .keynote {
-  margin-top: 40px;
 }
 
 .thanks h2 {
@@ -1476,13 +1481,27 @@ margin-top: 24px;
   width: 165px;
 }
 
+.press .ted {
+  background-image:url('../img/ted.png');
+  background-size: 95px;
+  width: 95px;
+}
+
+.press .sxsw {
+  background-image:url('../img/sxsw.png');
+  background-size: 167px;
+  width: 167px;
+}
+
 .press .cnn,
 .press .mashable,
 .press .motherjones,
 .press .npr,
 .press .wsj,
 .press .csm,
-.press .techcrunch  {
+.press .techcrunch,
+.press .ted,
+.press .sxsw {
   height: 40px;
 }
 
@@ -1492,7 +1511,9 @@ margin-top: 24px;
 .press .npr:hover,
 .press .wsj:hover,
 .press .csm:hover,
-.press .techcrunch:hover {
+.press .techcrunch:hover,
+.press .ted:hover,
+.press .sxsw:hover {
   background-position: 0 -40px;
 }
 
@@ -1509,21 +1530,10 @@ margin-top: 24px;
   margin: 20px 0;
 }
 
-/*@media (max-width: 1454px) {
+.press .keynotes {
+  margin-top: 50px;
+}
 
-  .apps img {
-    width: 400px;
-  }
-  .apps .carousel-control.right {
-    left: 347px;
-  }
-
-  iframe {
-    width: 400px;
-  }
-
-
-}*/
 
 @media (min-width: 1200px) {
   .container,
@@ -1592,10 +1602,6 @@ margin-top: 24px;
 
   .span5 {
     width: 360px;
-  }
-
-  .bios.right .span5 {
-    margin-left: 0px;
   }
 
   .bios h5,
