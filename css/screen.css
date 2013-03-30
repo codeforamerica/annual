@@ -1347,8 +1347,6 @@ margin-left: 0px;
   padding-top: 0px;
 }
 
-
-
 .jeff,
 .andrew,
 .bret,
@@ -1364,6 +1362,7 @@ margin-left: 0px;
 .jon,
 .kevin,
 .michelle,
+.scott,
 .steve {
   background-image: url('../img/brigade_captains.jpg');
   background-size: 100px;
@@ -1373,32 +1372,32 @@ margin-left: 0px;
   margin: 20px 20px 0 0;
 }
 
-.jeff {
+.andrew {
   background-position: 0 0px;
 }
 
-.andrew {
+.bret {
   background-position: 0 -100px;
 }
 
-.bret {
+.burt {
   background-position: 0 -200px;
 }
 
-.burt {
+.chip {
   background-position: 0 -300px;
 }
 
-.chip {
-  background-position: 0 -400px;
-}
-
 .chris {
-  background-position: 0 -600px;
+  background-position: 0 -400px;
 }
 
 .chriswhit {
   background-position: 0 -500px;
+}
+
+.dave {
+  background-position: 0 -600px;
 }
 
 .emma {
@@ -1429,8 +1428,12 @@ margin-left: 0px;
   background-position: 0 -1300px;
 }
 
-.steve {
+.scott {
   background-position: 0 -1400px;
+}
+
+.steve {
+  background-position: 0 -1500px;
 }
 
 .market h4 {
