@@ -270,6 +270,11 @@ $(function(){
     cycle: true
   });
 
+  $('.captpop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
+
 
   // Create map
   var layer = mapbox.layer().id('tmcw.map-2f4ad161');
