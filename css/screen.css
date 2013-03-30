@@ -347,6 +347,15 @@ iframe {
   float: right;
 }
 
+.bios.right .span6 {
+padding-left: 20px;
+}
+
+.bios.right .span6.bioleft {
+padding-left: 0px;
+margin-left: 0px;
+}
+
 .bios .url {
   font-size: 19px;
   font-weight: bold;
@@ -1580,10 +1589,6 @@ margin-top: 24px;
 
   .span5 {
     width: 360px;
-  }
-
-  .bios.right .span5 {
-    margin-left: 0px;
   }
 
   .bios h5,
