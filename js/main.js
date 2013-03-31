@@ -42,6 +42,9 @@ if((console === undefined)||(console.log === undefined)){
 }
 
 $(function(){
+  setTimeout(function(){
+    $("#loading").fadeOut();
+  }, 1000);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
