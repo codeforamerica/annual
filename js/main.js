@@ -38,7 +38,7 @@ var color2011 = "fedd44",
 
 
 if((console === undefined)||(console.log === undefined)){
-  window.console = {log:function(){}};
+  console = {log:function(){}};
 }
 
 $(function(){
