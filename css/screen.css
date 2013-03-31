@@ -320,12 +320,12 @@ iframe {
 }
 
 .bioleft {
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .bioright,
 .apps .bioright {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .bios {
@@ -333,8 +333,9 @@ iframe {
   float: left;
 }
 
-.bios h3 {
-  margin-top: -15px;
+.bios h3,
+.network .bios p {
+  margin-top: -6px;
 }
 
 .bios h5 {
@@ -345,18 +346,13 @@ iframe {
   margin-top: 0px;
 }
 
-.bios.right .span6,
-.bios.apps.right .span6 {
-  float: right;
-}
-
 .bios.right .span6 {
 padding-left: 20px;
 }
 
 .bios.right .span6.bioleft {
-padding-left: 0px;
-margin-left: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 
 .bios .url {
@@ -567,8 +563,9 @@ margin-left: 0px;
 .citycardscontainer{ 
   display:none;
 }
-.citycard{ 
 
+.citycard a {  
+  color: #000;
 }
 
 .citycard .partnersection {
@@ -1227,7 +1224,9 @@ margin-left: 0px;
   position: relative;
   margin-bottom: 20px;
   line-height: 1;
+  padding-right: 10px;
 }
+
 
 .carousel-inner {
   position: relative;
@@ -1302,7 +1301,7 @@ margin-left: 0px;
 }
 
 .apps .carousel-control.right {
-  right: 8px;
+  right: 20px;
   left: auto;
 }
 
@@ -1330,7 +1329,7 @@ margin-left: 0px;
 }
 
 .community img {
-  margin: 0 auto;
+  margin: 0;
   display: block;
 }
 
@@ -1657,16 +1656,8 @@ margin-left: 0px;
   }
 
   iframe {
-    width: 340px;
-  }
-
-  .cityLeaders iframe {
-    width: 500px;
-    height: 300px;
-  }
-
-  .span5 {
-    width: 360px;
+    width: 100%;
+    height: 32%;
   }
 
   .bios h5,
