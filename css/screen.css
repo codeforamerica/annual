@@ -108,6 +108,7 @@ li {
   right:0px;
   bottom:0px;
   z-index:100;
+  display:none;
 }
 
 #loading img{
