@@ -100,6 +100,30 @@ li {
   text-decoration: underline;
 }
 
+#loading{ 
+  background:#eee;
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:100;
+  display:none;
+}
+
+#loading img{
+  display:block;
+  margin:200px auto 0px;
+}
+ 
+#loading p{ 
+  margin:20px auto;
+  text-transform:uppercase;
+  color:#666;
+  text-align:center;
+}
+
+
 ul.posts {
   list-style-type: none;
   margin-bottom: 2em;

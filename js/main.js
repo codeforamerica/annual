@@ -36,12 +36,14 @@ var cityLocations = [{
 var color2011 = "fedd44",
     color2012 = "C82A45";
 
-
-if((console === undefined)||(console.log === undefined)){
-  window.console = {log:function(){}};
+if (typeof console === "undefined" || typeof console.log === "undefined") {
+  console = {log:function(){}};
 }
 
 $(function(){
+  setTimeout(function(){
+    $("#loading").fadeOut();
+  }, 1000);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
