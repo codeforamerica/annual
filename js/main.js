@@ -36,8 +36,7 @@ var cityLocations = [{
 var color2011 = "fedd44",
     color2012 = "C82A45";
 
-
-if((console === undefined)||(console.log === undefined)){
+if (typeof console === "undefined" || typeof console.log === "undefined") {
   console = {log:function(){}};
 }
 
