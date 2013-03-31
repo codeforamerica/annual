@@ -635,6 +635,10 @@ padding-left: 20px;
   display:inherit;
 }
 
+.popover {
+  z-index: 1100;
+}
+
 .citycardscontainer{ 
   display:none;
 }
@@ -651,11 +655,9 @@ padding-left: 20px;
   margin-left: 0px;
 }
 
-
 .citycard hr {
   border: solid 1px #C82A45;
   margin: 10px 0;
-  width: 220px;
 }
 
 .citycard[data-year="2011"] h4 { 
@@ -788,11 +790,6 @@ padding-left: 20px;
 
 .fellowship .innercard {
   padding: 20px;
-}
-
-.fellowship .cardsections {
-  float:left;
-  width:250px;
 }
 
 .fellowship li {
@@ -1000,7 +997,7 @@ padding-left: 20px;
 .mjumbe,
 .pete,
 .ryan,
-.scott,
+.scotts,
 .talin, 
 .tyler,
 .alexp,
@@ -1030,10 +1027,10 @@ padding-left: 20px;
 .tamara,
 .zach {
   background-image: url('../img/fellows_headshot.jpg');
-  background-size: 75px;
+  background-size: 50px;
   float: left;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   margin: 5px 5px 0 0;
   /*  margin: 10px 10px 0 0;*/
 }
@@ -1043,179 +1040,179 @@ padding-left: 20px;
 }
 
 .alan {
-  background-position: 0 -75px
+  background-position: 0 -50px
 }
 
 .anna {
-  background-position: 0 -150px;
+  background-position: 0 -100px;
 }
 
 .chacha {
-  background-position: 0 -225px;
+  background-position: 0 -150px;
 }
 
 .erik {
-  background-position: 0 -300px;
+  background-position: 0 -200px;
 }
 
 .jeremy {
-  background-position: 0 -375px;
+  background-position: 0 -250px;
 }
 
 .joel {
-  background-position: 0 -450px;
+  background-position: 0 -300px;
 }
 
 .john {
-  background-position: 0 -525px;
+  background-position: 0 -350px;
 }
 
 .karla {
-  background-position: 0 -600px;
+  background-position: 0 -400px;
 }
 
 .matt {
-  background-position: 0 -675px;
+  background-position: 0 -450px;
 }
 
 .max {
-  background-position: 0 -750px;
+  background-position: 0 -500px;
 }
 
 .michael {
-  background-position: 0 -825px;
+  background-position: 0 -550px;
 }
 
 .michellek {
-  background-position: 0 -900px
+  background-position: 0 -600px
 }
 
 .mjumbe {
-  background-position: 0 -975px;
+  background-position: 0 -650px;
 }
 
 .pete {
-  background-position: 0 -1050px;
+  background-position: 0 -700px;
 }
 
 .ryan {
-  background-position: 0 -1125px;
+  background-position: 0 -750px;
 }
 
-.scott {
-  background-position: 0 -1200px;
+.scotts {
+  background-position: 0 -800px;
 }
 
 .talin {
-  background-position: 0 -1275px;
+  background-position: 0 -850px;
 }
 
 .tyler {
-  background-position: 0 -1350px;
+  background-position: 0 -900px;
 }
 
 .alexp {
-  background-position: 0 -1425px;
+  background-position: 0 -950px;
 }
 
 .alexy {
-  background-position: 0 -1500px;
+  background-position: 0 -1000px;
 }
 
 .alicia {
-  background-position: 0 -1575px;
+  background-position: 0 -1050px;
 }
 
 .amir {
-  background-position: 0 -1650px
+  background-position: 0 -1100px
 }
 
 .angel {
-  background-position: 0 -1725px;
+  background-position: 0 -1150px;
 }
 
 .aurelio {
-  background-position: 0 -1800px;
+  background-position: 0 -1200px;
 }
 
 .ben {
-  background-position: 0 -1875px;
+  background-position: 0 -1250px;
 }
 
 .diana {
-  background-position: 0 -1950px;
+  background-position: 0 -1300px;
 }
 
 .eddie {
-  background-position: 0 -2025px;
+  background-position: 0 -1350px;
 }
 
 .emily {
-  background-position: 0 -2100px;
+  background-position: 0 -1400px;
 }
 
 .jesse {
-  background-position: 0 -2175px;
+  background-position: 0 -1450px;
 }
 
 .jessica {
-  background-position: 0 -2250px;
+  background-position: 0 -1500px;
 }
 
 .jim {
-  background-position: 0 -2325px;
+  background-position: 0 -1550px;
 }
 
 .joe {
-  background-position: 0 -2400px
+  background-position: 0 -1600px
 }
 
 .liz {
-  background-position: 0 -2475px;
+  background-position: 0 -1650px;
 }
 
 .matth {
-  background-position: 0 -2550px;
+  background-position: 0 -1700px;
 }
 
 .michellel {
-  background-position: 0 -2625px;
+  background-position: 0 -1750px;
 }
 
 .mick {
-  background-position: 0 -2700px;
+  background-position: 0 -1800px;
 }
 
 .nick {
-  background-position: 0 -2775px;
+  background-position: 0 -1850px;
 }
 
 .prashant {
-  background-position: 0 -2850px;
+  background-position: 0 -1900px;
 }
 
 .rob {
-  background-position: 0 -2925px;
+  background-position: 0 -1950px;
 }
 
 .ruthie {
-  background-position: 0 -3000px;
+  background-position: 0 -2000px;
 }
 
 .serena {
-  background-position: 0 -3075px;
+  background-position: 0 -2050px;
 }
 
 .sheba {
-  background-position: 0 -3150px;
+  background-position: 0 -2100px;
 }
 
 .tamara {
-  background-position: 0 -3225px;
+  background-position: 0 -2150px;
 }
 
 .zach {
-  background-position: 0 -3300px;
+  background-position: 0 -2200px;
 }
 
 .ecosystem h1 {
@@ -1372,11 +1369,10 @@ padding-left: 20px;
 }
 
 .carousel-control.right {
-  right: 10px;
+  right: 20px;
 }
 
 .apps .carousel-control.right {
-  right: 20px;
   left: auto;
 }
 
@@ -1408,7 +1404,8 @@ padding-left: 20px;
   display: block;
 }
 
-.captains a:hover {
+.captains a:hover,
+.fellowcard a:hover {
   border-bottom: none;
 }
 

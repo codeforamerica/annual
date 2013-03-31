@@ -277,6 +277,11 @@ $(function(){
     trigger: 'hover'
   });
 
+  $('.fellowpop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
+
 
   // Create map
   var layer = mapbox.layer().id('tmcw.map-2f4ad161');
