@@ -322,11 +322,14 @@ input[type="text"] {
 
 iframe {
   width: 100%;
+  min-height: 200px;
 }
 
 .cityLeaders iframe {
   display: block;
   margin-top: 50px;
+  height: 48%;
+  min-height: 300px;
 }
 
 .quote .bigtext h1 {
