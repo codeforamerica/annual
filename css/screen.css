@@ -180,22 +180,25 @@ p {
   text-align: left;
 }
 
-/*.span2 {
-  width: 200px;
-  float: left;
+input[type="text"] {
+  border-radius: 0px;
 }
 
-.span4 {
-  width: 700px;
-  float: left;
-  margin-left: 140px;
+.btn {
+  border-radius: 0px;
+  background: #C82A45;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Arvo', 'Georgia', serif;
+  margin-left: 5px;
 }
 
-.span5,
-.span5 p {
-  width: 455px;
-  float: left;
-}*/
+.btn:hover {
+  background: #b1263d;
+  color: #fff;
+  text-shadow: none;
+}
 
 
 /****************************************************************************/
@@ -410,6 +413,15 @@ margin-left: 0px;
   max-width: 700px;
   color: #000;
   text-shadow: none;
+  font-family: 'Arvo', 'Georgia', serif;
+}
+
+.getinvolved p:first-child:first-letter { 
+  float: left; 
+  font-size: 48px;
+  line-height: 50px;
+  padding-right: 8px; 
+  padding-left: 3px; 
 }
 
 .getinvolved h1 {
@@ -418,17 +430,18 @@ margin-left: 0px;
 
 .getinvolved h4 {
   text-transform: none;
-  margin-top: 20px;
+  margin-top: 19px;
+  font-size: 22px;
 }
 
 .getinvolved h5 {
-  font-size: 20px;
-  margin-top: 18px;
+  font-size: 17px;
+  margin-top: 13px;
 }
 
 .getinvolved p {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .getinvolved img {
@@ -451,14 +464,15 @@ margin-left: 0px;
 }
 
 .getinvolved form {
-  background: gray;
+  background: rgba(255,255,255, .7);
   padding: 25px 40px;
-  width: 300px;
-  margin: 20px auto 40px;
+  width: 500px;
+  margin: 25px auto;
 }
 
 .getinvolved label {
-  color: #fff;
+  color: #000;
+  margin-right: 10px;
 }
 
 .thanks h2 {
@@ -1343,6 +1357,33 @@ margin-left: 0px;
   display: block;
 }
 
+.captains a:hover {
+  border-bottom: none;
+}
+
+.captains .popover {
+  border-radius: 0px;
+}
+
+.captains .popover-title,
+.captains .popover-content {
+  color: #000;
+  text-shadow: none;
+}
+ 
+.captains .popover-title {
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding-bottom: 0px;
+} 
+
+.captains .popover-content {
+  font-weight: 300;
+  font-style: italic;
+  padding-top: 0px;
+}
+
 .jeff,
 .andrew,
 .bret,
@@ -1358,6 +1399,7 @@ margin-left: 0px;
 .jon,
 .kevin,
 .michelle,
+.scott,
 .steve {
   background-image: url('../img/brigade_captains.jpg');
   background-size: 100px;
@@ -1367,31 +1409,31 @@ margin-left: 0px;
   margin: 20px 20px 0 0;
 }
 
-.jeff {
+.andrew {
   background-position: 0 0px;
 }
 
-.andrew {
+.bret {
   background-position: 0 -100px;
 }
 
-.bret {
+.burt {
   background-position: 0 -200px;
 }
 
-.burt {
+.chip {
   background-position: 0 -300px;
 }
 
-.chip {
+.chris {
   background-position: 0 -400px;
 }
 
-.chris {
+.chriswhit {
   background-position: 0 -500px;
 }
 
-.chriswhit {
+.dave {
   background-position: 0 -600px;
 }
 
@@ -1423,31 +1465,54 @@ margin-left: 0px;
   background-position: 0 -1300px;
 }
 
-.steve {
+.scott {
   background-position: 0 -1400px;
 }
 
+.steve {
+  background-position: 0 -1500px;
+}
+
+.market h4 {
+  margin-top: 40px;
+}
+
+.market .stats {
+  margin-bottom: 10px;
+}
+
+.market .bios {
+  margin: 0px auto 40px;
+}
+
 .market .bios p {
-margin-top: 24px;
+  margin-top: 24px;
+}
+
+.market .bios.right.bioquote {
+  margin-top: 0px;
 }
 
 .market .bios.right.bioquote p,
 .network .bios p {
   font-size: 24px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 34px;
+  margin-bottom: 10px;
 }
 
 .market .bios.right.bioquote h3,
 .network .bios h3 {
   font-size: 26px;
   margin: 0px;
+  text-align: right;
 }
 
 .market .bios.right.bioquote h5,
 .network .bios h5 {
   font-size: 21px;
   margin: 5px 0px 8px;
+  text-align: right;
 }
 
 .press {
