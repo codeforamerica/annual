@@ -25,7 +25,15 @@ title: Code for America 2012 Annual Report
   <p>2012 Annual Report</p>
 </div>
 
+{% for p in site.posts %}
 
+  {% if p.url != "/index.html" %}
+    <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};">
+    </div>
+  {% endif %}
+{% endfor %}  
+
+    
 <div id="page">
   <div class="sidebar">
 
@@ -59,10 +67,3 @@ title: Code for America 2012 Annual Report
 
 
 </div>
-{% for p in site.posts %}
-
-  {% if p.url != "/index.html" %}
-    <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};">
-    </div>
-  {% endif %}
-{% endfor %}  
