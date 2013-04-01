@@ -44,9 +44,17 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 $(function(){
+  var readytoshow = false;
+  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  });
   setTimeout(function(){
-    $("#loading").fadeOut();
-  }, 1000);
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  }, 1500);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
