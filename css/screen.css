@@ -850,7 +850,7 @@ padding-left: 20px;
 .preparedly,
 .routeview,
 .opendata,
-.socialmedia,
+.socialcity,
 .pennywork,
 .straymapper,
 .supermayor,
@@ -928,7 +928,7 @@ padding-left: 20px;
   background-position: 0 -1300px;
 }
 
-.socialmedia {
+.socialcity {
   background-position: 0 -1400px;
 }
 
@@ -1408,21 +1408,23 @@ padding-left: 20px;
 }
 
 .captains a:hover,
-.fellowcard a:hover {
+.fellowcard a:hover,
+.moreapps a:hover {
   border-bottom: none;
 }
 
-.captains .popover {
+.popover {
   border-radius: 0px;
 }
 
-.captains .popover-title,
-.captains .popover-content {
+.popover-title,
+.popover-content {
   color: #000;
   text-shadow: none;
 }
  
-.captains .popover-title {
+.popover-title,
+.popover-title {
   font-weight: 700;
   background: none;
   border: none;
