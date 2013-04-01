@@ -101,7 +101,7 @@ li {
 }
 
 #loading{ 
-  background:#eee;
+  background:#C82A45;
   position:fixed;
   top:0px;
   left:0px;
@@ -114,14 +114,24 @@ li {
   display:block;
   margin:200px auto 0px;
 }
- 
-#loading p{ 
-  margin:20px auto;
-  text-transform:uppercase;
-  color:#666;
-  text-align:center;
+
+#loading h1,
+#loading p {
+  text-align: center;
+  color:#fff;
 }
 
+#loading h1 {
+  font-size: 220px;
+  margin: 90px auto 117px;
+  font-weight: 600;
+}
+ 
+#loading p{ 
+  text-transform:uppercase;
+  font-size: 63px;
+  font-weight: 300;
+}
 
 ul.posts {
   list-style-type: none;
