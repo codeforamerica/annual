@@ -1741,3 +1741,20 @@ padding-left: 20px;
   }
 
 }
+
+@media (max-width: 1070px) {
+  .getinvolved form {
+    width: 311px;
+  }
+}
+
+@media (max-width: 880px) {
+  .getinvolved form {
+    width: 200px;
+    padding: 24px 39px 24px 20px;
+  }
+
+  .btn {
+    margin: 6px 0 0;
+  }
+}
