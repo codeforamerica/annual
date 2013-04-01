@@ -64,9 +64,9 @@ $(function(){
     height = $(window).height();
     width = $(window).width();
     
-    $(".quote").css({width:width, height:height});
+    $(".quote").css({width:width, "min-height":height});
     $(".story").css({width:width, "min-height":height});
-    $(".pagebg").css({width:width, height:height});
+    $(".pagebg").css({width:width, "min-height":height});
     $(".scrollout").css({height:height});
     $(".fellowship").css({height:height});
     
