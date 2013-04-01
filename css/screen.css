@@ -108,7 +108,6 @@ li {
   right:0px;
   bottom:0px;
   z-index:100;
-  display:none;
 }
 
 #loading img{
@@ -220,6 +219,7 @@ input[type="text"] {
 
 .page.quote,
 .page.story{ 
+  overflow-x:hidden;
   position:relative;
   padding:300px 80px 100px;
   box-sizing: border-box;

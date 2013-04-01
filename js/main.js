@@ -44,9 +44,17 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 $(function(){
+  var readytoshow = false;
+  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  });
   setTimeout(function(){
-    $("#loading").fadeOut();
-  }, 1000);
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  }, 1500);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
@@ -195,11 +203,13 @@ $(function(){
 
   }, function(){});
   var arrowInterval =0;
+  var mapcurrentyear = "2011";
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
 
     if($(el).attr("class").indexOf("fellowship2011") >= 0){
       $(".yeartitle h1").css("color","#"+color2011).text("2011");
-      $(".yeartitle h2").css("color","#"+color2011);
+      $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
+      mapcurrentyear = "2011";
       interaction.hideTooltips();
       displayedMarkers = [];
       markerLayer.filter(function(f) {
@@ -214,7 +224,8 @@ $(function(){
     
     if($(el).attr("class").indexOf("fellowship2012") >= 0){
       $(".yeartitle h1").css("color","#"+color2012).text("2012");
-      $(".yeartitle h2").css("color","#"+color2012);
+      $(".yeartitle h2").css("color","#"+color2012).text("The Fellowship");
+      mapcurrentyear = "2012";
       interaction.hideTooltips();
       displayedMarkers = [];
       markerLayer.filter(function(f) {
@@ -224,15 +235,12 @@ $(function(){
       map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
       //setTimeout(showRandomTooltip, 1200);
-
-      arrowInterval = setInterval(function(){
-        $(".downarrow").animate({opacity:1}, 800, "swing", function(){
-          $(".downarrow").animate({opacity:0}, 800, "swing");
-        })}, 2000);
-
     }
-    
 
+    arrowInterval = setInterval(function(){
+      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+        $(".downarrow").animate({opacity:0}, 800, "swing");
+      })}, 2000);
 
   }, function(el, i){
     clearInterval(arrowInterval);
@@ -240,9 +248,16 @@ $(function(){
   });
 
   $(".downarrow").click(function(){
-    $("html body").animate({
-         scrollTop: $("div.story div.fellows").offset().top
-     }, 1500);
+
+    if(mapcurrentyear === "2011"){
+     $("html body").animate({
+        scrollTop: $("div.fellowship2012.mapscroll").offset().top
+      }, 1500);
+    }else if(mapcurrentyear === "2012"){
+      $("html body").animate({
+        scrollTop: $("div.story div.fellows").offset().top - 60
+      }, 1500);
+    }
   })
 
 
