@@ -284,7 +284,7 @@ $(function(){
 
 
   // Create map
-  var layer = mapbox.layer().id('tmcw.map-2f4ad161');
+  var layer = mapbox.layer().id('dmt.map-cdkzgmkx');
 
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
