@@ -1809,17 +1809,17 @@ padding-left: 20px;
   }
 
   #loading img {
-    width: 30%;
+    width: 300px;
     margin-top: 100px;
   }
 
   #loading h1 {
-    font-size: 9em;
+    font-size: 130px;
     margin: 50px auto 60px;
   }
  
-  #loading p{ 
-    font-size: 3em;
+  #loading p { 
+    font-size: 38px;
   }
 
 }
