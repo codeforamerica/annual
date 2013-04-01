@@ -1693,33 +1693,33 @@ padding-left: 20px;
   font-weight: 700;
 }
 
-.financials ul {
-  margin-left: 0px;
-  font-weight: 300;
+.financials .programs {
+  margin-bottom: 5px;
 }
 
-.financials ul.programs {
-  margin-left: 25px;
-  margin-top: -10px;
+.financials .programs p {
+  margin: 4px 0px 17px 25px;
 }
 
-.financials .rightcol ul.programs {
+.financials .programs .rightcol p{
   margin: 0px 25px 10px 0px;
 }
 
-.financials li {
+.financials p {
   font-size: 17px;
-  line-height: 24px;
+  line-height: 5px;
+  margin: 10px 0;
 }
+
 
 .financials .rightcol h5,
 .financials .rightcol h4,
-.financials .rightcol li {
+.financials .rightcol p {
   text-align: right;
 }
 
 .financials br {
-  line-height: 24px;
+  line-height: 30px;
 }
 
 
@@ -1795,6 +1795,22 @@ padding-left: 20px;
   .getinvolved form {
     width: 311px;
   }
+}
+
+@media (max-width: 980px) {
+  .financials p {
+    line-height: 22px;
+    margin: 5px 0;
+  }
+
+  .financials .programs p {
+    line-height: 5px;
+  }
+
+  .financials br {
+    line-height: 54px;
+  }
+
 }
 
 @media (max-width: 880px) {
