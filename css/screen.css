@@ -219,6 +219,7 @@ input[type="text"] {
 
 .page.quote,
 .page.story{ 
+  overflow-x:hidden;
   position:relative;
   padding:300px 80px 100px;
   box-sizing: border-box;
