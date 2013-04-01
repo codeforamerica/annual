@@ -7,10 +7,13 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
     "properties": { "city": "seattle", "year": "2011" }
-},{
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.4183, 37.7750]},
+    "properties": { "city": "sanfrancisco", "year":"2011" }
+}, {
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
     "properties": { "city": "philadelphia", "year": "2012" }
-},{
+}, {
     "geometry": { "type": "Point", "coordinates": [-83.6365, 32.8398]},
     "properties": { "city": "macon", "year":"2012" }
 }, {
@@ -281,6 +284,12 @@ $(function(){
     placement: 'top',
     trigger: 'hover'
   });
+
+  $('.appspop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
+
 
 
   // Create map
