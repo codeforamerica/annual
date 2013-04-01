@@ -1453,7 +1453,9 @@ padding-left: 20px;
 .kevin,
 .michelle,
 .scott,
-.steve {
+.steve,
+.eddiet,
+.noel {
   background-image: url('../img/brigade_captains.jpg');
   background-size: 100px;
   float: left;
@@ -1524,6 +1526,14 @@ padding-left: 20px;
 
 .steve {
   background-position: 0 -1500px;
+}
+
+.eddiet {
+  background-position: 0 -1600px;
+}
+
+.noel {
+  background-position: 0 -1700px;
 }
 
 .market h4 {
