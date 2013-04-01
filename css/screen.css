@@ -112,7 +112,7 @@ li {
 
 #loading img{
   display:block;
-  margin:200px auto 0px;
+  margin:100px auto 0px;
 }
 
 #loading h1,
@@ -1806,6 +1806,20 @@ padding-left: 20px;
   .bios h5,
   .network .bios h5 {
     font-size: 17px;
+  }
+
+  #loading img {
+    width: 30%;
+    margin-top: 100px;
+  }
+
+  #loading h1 {
+    font-size: 9em;
+    margin: 50px auto 60px;
+  }
+ 
+  #loading p{ 
+    font-size: 3em;
   }
 
 }
