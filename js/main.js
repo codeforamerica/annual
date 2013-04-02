@@ -492,10 +492,10 @@ $(function(){
     $(".financialsgroup").each(function(i, el) {
       var group = $(el).attr("data-group");
       $(el).hover(function() {
-       // $(".financialsgroup").addClass('active');
+        $(el).addClass("active");
         $('.group' + group).addClass('active');
       }, function(){
-        //$(".financialsgroup").removeClass('active');
+        $(el).removeClass("active");
         $('.group' + group).removeClass('active');
       });
     });
