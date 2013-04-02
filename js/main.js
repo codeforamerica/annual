@@ -260,7 +260,7 @@ $(function(){
     }
   })
  scrollEvent.on("top", $(".page"), function(el,i){
-   console.log("in section", $(el).attr("data-section"));
+
    $(".header li").removeClass("selected");;
    if($(el).attr("data-section") !== "")
      $(".header li."+$(el).attr("data-section")).addClass("selected");
@@ -269,7 +269,7 @@ $(function(){
 
  });
  scrollEvent.on("bottom", $(".page"), function(el,i){
-   console.log("in section", $(el).attr("data-section"));
+
    $(".header li").removeClass("selected");;
    if($(el).attr("data-section") !== "")
      $(".header li."+$(el).attr("data-section")).addClass("selected");
