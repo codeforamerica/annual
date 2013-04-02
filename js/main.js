@@ -472,28 +472,60 @@ $(function(){
     .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
-  var colors = ["#f0f", "#0ff", "#f00", "#ff0", "#0f9", "#fff", "#000", "#0f0"];
+  var colors = ["#5db7ad", "#88c5be", "#9ccdc8", "#aed5d1", "#c2dedb", "#d4e7e5", "#e8f2f1", "#FFFFFF"];
 
   $(".bargraph").each(function(i, el){
 
     var that = this;
 
-    var total = 0;
+    var total = 0; 
+    // Count all the money for each data point in the source
     $("."+$(el).attr("data-source")).each(function(i, el){
-
+      // remove commas and dollar signs
       total += parseInt($(el).text().replace(/,/g, "").replace("$", ""));
-
     });
-    $("."+$(el).attr("data-source")).each(function(i, el){
 
-      var count = parseInt($(el).text().replace(/,/g, "").replace("$", ""));
-      var section = $("<div></div>").css({width:Math.floor((count/total)*100)+"%", height:"60px",  background:colors[i], "float":"right"});
-
-      $(el).hover(function(){
-        $(section).css({position:"relative", "top": "-10px"});
+    // for each group add the hover events
+    $(".financialsgroup").each(function(i, el) {
+      var group = $(el).attr("data-group");
+      $(el).hover(function() {
+        $('.group' + group).addClass('active');
       }, function(){
-        $(section).css({position:"relative", "top": "0px"});
+        $('.group' + group).removeClass('active');
       });
+    });
+
+    // for each data point add a section to the graph and hover events
+    $("."+$(el).attr("data-source")).each(function(i, el){
+      var count = parseInt($(el).text().replace(/,/g, "").replace("$", ""));
+      var perc = (count/total)*100;
+      var group = $(el).attr("data-group");
+
+      // create section
+      var section = $("<div class='graphsection'></div>").css({
+        width:perc + "%",
+        background:colors[i]
+      });
+
+      // add classs for group
+      if(group !== undefined) {
+        $(el).addClass('group' + group);
+        section.addClass('group' + group);
+      }
+
+      //hover over the numbers
+      $(el).hover(highlight, unhighlight);
+      $(section).hover(highlight, unhighlight);
+
+      function  highlight() {
+        $(el).addClass('active');
+        $(section).addClass('active');
+      }
+
+      function unhighlight() {
+        $(el).removeClass('active');
+        $(section).removeClass('active');
+      }
 
 
       $(that).append(section);
