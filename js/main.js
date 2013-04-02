@@ -255,7 +255,7 @@ $(function(){
       }, 1500);
     }else if(mapcurrentyear === "2012"){
       $("html body").animate({
-        scrollTop: $("div.story div.fellows").offset().top - 60
+        scrollTop: $("div.story div.cityLeaders").offset().top - 20
       }, 1500);
     }
   })
@@ -280,7 +280,7 @@ $(function(){
 
   $(".header nav li").on("click touchend", function(e){
     var section = $(e.currentTarget).attr("class").split(" ")[0];
-    $("html body").scrollTop( $($("div.page[data-section='"+section+"']")[0]).offset().top)
+    $("html body").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
   });
 
 
