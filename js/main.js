@@ -505,7 +505,7 @@ $(function(){
       var group = $(el).attr("data-group");
       $(el).hover(function() {
         $(el).addClass("active");
-        $('.group' + group).parents("").addClass('active');
+        $('.group' + group).addClass('active');
       }, function(){
         $(el).removeClass("active");
         $('.group' + group).removeClass('active');
