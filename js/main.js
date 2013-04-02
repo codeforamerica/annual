@@ -475,7 +475,7 @@ $(function(){
   var colors = ["#f0f", "#0ff", "#f00", "#ff0", "#0f9", "#fff", "#000", "#0f0"];
 
   $(".bargraph").each(function(i, el){
-    console.log(i, el);
+
     var that = this;
 
     var total = 0;
@@ -499,7 +499,7 @@ $(function(){
       $(that).append(section);
     });
 
-    console.log("total", total);
+
 
   });
 
