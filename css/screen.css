@@ -1795,7 +1795,6 @@ img.progicons {
   margin: 10px 0;
 }
 
-
 .financials .rightcol h5,
 .financials .rightcol h4,
 .financials .rightcol p {
@@ -1820,6 +1819,14 @@ img.progicons {
 
   h4 {
     font-size: 20px;
+  }
+
+  .header img {
+    margin-right: 20px;
+  }
+
+  .header nav li {
+    margin-right: 17px;
   }
 
   .page.quote {
