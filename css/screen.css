@@ -73,6 +73,10 @@ li {
 /*
 /*****************************************************************************/
 
+.navbar .container {
+  margin-left: 50px;
+}
+
 .navbar .brand {
   max-width: 60px;
 }
@@ -1996,17 +2000,13 @@ img.progicons {
 
 @media (max-width: 1200px) {
 
+  .navbar .container {
+    margin-left: 30px;
+  }
+  
   h4 {
     font-size: 20px;
   }
-
-/*  .header img {
-    margin-right: 20px;
-  }
-
-  .header nav li {
-    margin-right: 17px;
-  }*/
 
   .page.quote {
     padding-bottom: 300px;
