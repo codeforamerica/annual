@@ -69,7 +69,7 @@ $(function(){
     $(".pagebg").css({width:width, "min-height":height});
     $(".scrollout").css({height:height});
     $(".fellowship").css({height:height});
-    
+    $(".mapscroll").css({height:height});
     scrollEvent.onScroll();
     
   }
