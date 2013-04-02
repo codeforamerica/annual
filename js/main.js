@@ -295,9 +295,11 @@ $(function(){
     trigger: 'hover'
   });
 
-  $('.fellowpop').popover({
-    placement: 'top',
-    trigger: 'hover'
+  $('.fellowpop').hover(function(e){
+    var name = $(e.currentTarget).attr('data-original-title');
+    $(e.currentTarget).parents('.innercard').find('.name').text(name);
+  }, function(e){    
+    $(e.currentTarget).parents('.innercard').find('.name').text('');
   });
 
   $('.appspop').popover({
