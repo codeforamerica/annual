@@ -542,6 +542,12 @@ padding-left: 20px;
   color: #000;
 }
 
+.getinvolved a:hover,
+.companies a:hover {
+  color: #C82A45;
+  border-bottom: #C82A45 solid 1px;
+}
+
 .getinvolved span {
   font-weight: 700;
 }
