@@ -23,7 +23,6 @@ body {
   text-align: left;
   font-weight: 600;
   text-shadow: 0px 2px 6px rgba(0, 0, 0, .4);
-
 }
 
 h1 {
@@ -38,11 +37,12 @@ p {
 a {
   color: #fff;
   text-decoration: none;
+  font-weight: 700;
 }
 
 a:hover {
-  color: #C82A45;
-  border-bottom: #C82A45 solid 1px;
+  color: #fff;
+  border-bottom: #fff solid 1px;
   text-decoration: none;
 }
 
@@ -540,6 +540,12 @@ padding-left: 20px;
 
 .getinvolved a {
   color: #000;
+}
+
+.getinvolved a:hover,
+.companies a:hover {
+  color: #C82A45;
+  border-bottom: #C82A45 solid 1px;
 }
 
 .getinvolved span {
@@ -1463,6 +1469,7 @@ padding-left: 20px;
 img.progicons {
   width: 50px;
   height: 50px;
+  margin-top: -7px;
 }
 
 .market img.progicons {
@@ -1472,6 +1479,10 @@ img.progicons {
 .community img {
   margin: 0;
   display: block;
+}
+
+.community h5.anchorage {
+  margin-top: -12px;
 }
 
 .captains a:hover,
@@ -1641,7 +1652,7 @@ img.progicons {
 .market .bios.right.bioquote h5,
 .network .bios h5 {
   font-size: 21px;
-  margin: 5px 0px 8px;
+  margin: 0px 0px 3px;
   text-align: right;
 }
 
