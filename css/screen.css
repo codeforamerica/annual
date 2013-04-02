@@ -1829,6 +1829,10 @@ img.progicons {
   background-color: #ffaa21 !important;
 }
 
+.expenses.bargraph,
+.revenues.bargraph {
+  margin-top: 30px;
+}
 
 
 @media (min-width: 1200px) {
