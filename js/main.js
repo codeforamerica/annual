@@ -280,7 +280,7 @@ $(function(){
 
   $(".header nav li").on("click touchend", function(e){
     var section = $(e.currentTarget).attr("class").split(" ")[0];
-    $("html body").scrollTop( $($("div.page[data-section='"+section+"']")[0]).offset().top)
+    $("html body").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
   });
 
 

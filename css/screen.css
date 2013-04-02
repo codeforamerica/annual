@@ -243,6 +243,7 @@ input[type="text"] {
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
+  padding-bottom:400px;
 }
 .page.story.nosidebar{ 
   padding:0px;
@@ -416,7 +417,7 @@ iframe {
 }
 
 .themes {
-  margin: 200px 0px 0px;
+  margin: 0px 0px 0px;
 }
 
 .themes .span10 {
