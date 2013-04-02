@@ -412,7 +412,7 @@ $(function(){
         lat: m.geometry.coordinates[1],
         lon: m.geometry.coordinates[0]
       })
-      var quarter = map.dimensions.y * (1/ 4);
+      var quarter = map.dimensions.y * (3/ 8);
       point.y -= quarter;
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
@@ -453,7 +453,7 @@ $(function(){
       lon: currentMarker.data.geometry.coordinates[0]
     })
 
-    var quarter = map.dimensions.y * (1/ 4);
+    var quarter = map.dimensions.y * (1/ 8);
     point.y -= quarter;
     map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     
@@ -510,7 +510,7 @@ $(function(){
       var group = $(el).attr("data-group");
       $(el).hover(function() {
         $(el).addClass("active");
-        $('.group' + group).parents("").addClass('active');
+        $('.group' + group).addClass('active');
       }, function(){
         $(el).removeClass("active");
         $('.group' + group).removeClass('active');
