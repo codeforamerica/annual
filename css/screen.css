@@ -38,6 +38,7 @@ a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 a:hover {
@@ -1807,6 +1808,20 @@ img.progicons {
 
 .financials br {
   line-height: 30px;
+}
+
+.expenses a:hover,
+.revenues a:hover {
+  border-bottom: none;
+}
+
+.expenses .popover-content,
+.revenues .popover-content {
+  font-size: 14px;
+}
+
+.revenues .popover-content {
+  line-height: 22px;
 }
 
 .expensesdata, 
