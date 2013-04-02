@@ -1869,6 +1869,15 @@ img.progicons {
   .getinvolved form {
     width: 311px;
   }
+
+  .stats h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .page.story .stats h1 {
+    font-size: 60px;
+  }
 }
 
 @media (max-width: 980px) {
