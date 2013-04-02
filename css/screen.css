@@ -1830,8 +1830,13 @@ img.progicons {
 }
 
 .expensesdata.active,
-.revenuedata.active {
+.revenuedata.active,
+.financialsgroup.active {
   color: #ffaa21;
+}
+
+.financialsgroup {
+  cursor: pointer;
 }
 
 .graphsection {
