@@ -247,7 +247,7 @@ $(function(){
     $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
-  $(".downarrow").click(function(){
+  $(".downarrow").on("click touchend", function(){
 
     if(mapcurrentyear === "2011"){
      $("html body").animate({
@@ -425,7 +425,7 @@ $(function(){
     cycleMarker($(e.currentTarget).attr("class"));
   });
 
-  $("#map").delegate(".close", "click", function(e){
+  $("#map").delegate(".close", "touchend click", function(e){
     interaction.hideTooltips();
     map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
   });
