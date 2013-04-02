@@ -261,24 +261,24 @@ $(function(){
   })
  scrollEvent.on("top", $(".page"), function(el,i){
 
-   $(".header li").removeClass("selected");;
+   $(".navbar li").removeClass("active");;
    if($(el).attr("data-section") !== "")
-     $(".header li."+$(el).attr("data-section")).addClass("selected");
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
    
  },function(){
 
  });
  scrollEvent.on("bottom", $(".page"), function(el,i){
 
-   $(".header li").removeClass("selected");;
+   $(".navbar li").removeClass("active");;
    if($(el).attr("data-section") !== "")
-     $(".header li."+$(el).attr("data-section")).addClass("selected");
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
    
  },function(){
 
  });
 
-  $(".header nav li").on("click touchend", function(e){
+  $(".navbar .nav li").on("click touchend", function(e){
     var section = $(e.currentTarget).attr("class").split(" ")[0];
     $("html body").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
   });

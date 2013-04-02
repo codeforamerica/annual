@@ -2,69 +2,79 @@
 layout: default
 title: Code for America 2012 Annual Report
 ---
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#"><img class="cfalogo" src="img/cfa_logo.png" alt="Code for America logo" /></a>
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="nav-collapse collapse">
+          <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <ul class="nav">
+            <li class="navfellowship"><a href="#">Fellowship</a></li>
+            <li class="navapps"><a href="#">Applications</a></li>
+            <li class="navbrigade"><a href="#">Brigade</a></li>
+            <li class="navaccelerator"><a href="#">Accelerator</a></li>
+            <li class="navpeernetwork"><a href="#">Peer Network</a></li>
+            <li class="navfoundersnote"><a href="#">Jen's Note</a></li>
+            <li class="navpeople"><a href="#">People</a></li>
+            <li class="navfinancials"><a href="#">Financials</a></li>
+          </ul> <!-- nav -->
+        </div> <!-- collapse -->
+      </div> <!-- container -->
+    </div> <!-- navbar-inner -->
+  </div> <!-- navbar -->
 
-<div class="header">
-  <a href="/"><img class="cfalogo" src="img/cfa_logo.png" alt="Code for America logo" /></a>
-  <nav>
-	<ul class="nav">
-	  <li class="navfellowship">Fellowship</li>
-    <li class="navapps">Applications</li>
-	  <li class="navbrigade">Brigade</li>
-	  <li class="navaccelerator">Accelerator</li>
-	  <li class="navpeernetwork">Peer Network</li>
-	  <li class="navfoundersnote">Jen's Note</li>
-    <li class="navpeople">People</li>
-	  <li class="navfinancials">Financials</li>
-	</ul>
-  </nav>
-</div> 
-
-
-<div id="loading">
-  <img src="img/CfA_logo_white.png" />
-  <h1>2012</h1> 
-  <p>Annual Report</p>
-</div>
-
-{% for p in site.posts %}
-
-  {% if p.url != "/index.html" %}
-    <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};" >
-    </div>
-  {% endif %}
-{% endfor %}  
-
-    
-<div id="page">
-  <div class="sidebar">
-
-    {% for p in site.posts %}
-
-    <div class="sidebartitle" >
-
-      <h1>2012</h1>
-      {% if p.title != "stats" %}
-      <h2>{{ p.title }}</h2>
-
-      {% endif %}
-    </div>
-
-    {% endfor %}
-    
+  <div id="loading">
+    <img src="img/CfA_logo_white.png" />
+    <h1>2012</h1> 
+    <p>Annual Report</p>
   </div>
-  
+
   {% for p in site.posts %}
 
-  {% if p.url != "/index.html" %}
-  <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}" data-section="nav{{ p.section }}">
-      {{ p.content | markdownify }}
-      <div class="clear"></div>  
+    {% if p.url != "/index.html" %}
+      <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};" >
+      </div>
+    {% endif %}
+  {% endfor %}  
+
+      
+  <div id="page">
+    <div class="sidebar">
+
+      {% for p in site.posts %}
+
+      <div class="sidebartitle" >
+
+        <h1>2012</h1>
+        {% if p.title != "stats" %}
+        <h2>{{ p.title }}</h2>
+
+        {% endif %}
+      </div>
+
+      {% endfor %}
+      
+    </div>
+    
+    {% for p in site.posts %}
+
+    {% if p.url != "/index.html" %}
+    <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}" data-section="nav{{ p.section }}">
+        {{ p.content | markdownify }}
+        <div class="clear"></div>  
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+
+
+
   </div>
-  {% endif %}
-  {% endfor %}
-
-
-
-
-
-</div>
