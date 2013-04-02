@@ -319,11 +319,13 @@ $(function(){
     trigger: 'hover'
   });
 
-  $('.fellowpop').hover(function(e){
+
+  $('#map').delegate(".fellowpop", "mouseenter", function(e){
     var name = $(e.currentTarget).attr('data-original-title');
     $(e.currentTarget).parents('.innercard').find('.name').text(name);
-  }, function(e){    
-    $(e.currentTarget).parents('.innercard').find('.name').text('');
+  });
+  $("#map").delegate(".fellowpop", "mouseleave", function(e){
+    $(e.currentTarget).parents('.innercard').find('.name').html('&nbsp;');
   });
 
   $('.appspop').popover({
