@@ -1829,6 +1829,14 @@ img.progicons {
   max-width: 960px;
 }
 
+.sharebutton{ 
+  position:fixed;
+  bottom:10px;
+  left:30px;
+  z-index:100;
+  height:30px;
+}
+
 
 @media (min-width: 1200px) {
   .container {
