@@ -194,6 +194,7 @@ $(function(){
 
     $("#mapcontainer").css({"position":"absolute", "top":0});
     $(".yeartitle h1").css("color","#"+color2011).text("2011");
+    $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
 
   }, function(el, i, pos){
   });
