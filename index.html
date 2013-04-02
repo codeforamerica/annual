@@ -3,20 +3,20 @@ layout: default
 title: Code for America 2012 Annual Report
 ---
 
-<!-- <div class="header">
-	<a href="/"><img class="cfalogo" src="img/cfa_logo.png" alt="Code for America logo" /></a>
-	<nav>
-		<ul class="nav">
-			<li>Fellowship</li>
-			<li>Brigade</li>
-			<li>Accelerator</li>
-			<li>Peer Network</li>
-			<li>Get Involved</li>
-      <li>People</li>
-			<li>Financials</li>
-		</ul>
-	</nav>
-</div> -->
+<div class="header">
+  <a href="/"><img class="cfalogo" src="img/cfa_logo.png" alt="Code for America logo" /></a>
+  <nav>
+	<ul class="nav">
+	  <li class="navfellowship">Fellowship</li>
+	  <li class="navbrigade">Brigade</li>
+	  <li class="navaccelerator">Accelerator</li>
+	  <li class="navpeernetwork">Peer Network</li>
+	  <li class="navfoundersnote">Jen's Note</li>
+      <li class="navpeople">People</li>
+	  <li class="navfinancials">Financials</li>
+	</ul>
+  </nav>
+</div> 
 
 
 <div id="loading">
@@ -28,7 +28,7 @@ title: Code for America 2012 Annual Report
 {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
-    <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};">
+    <div class="pagebg {{ p.pagetype }} {{ p.image }}" style="background-color:#{{ p.bgcolor }};" >
     </div>
   {% endif %}
 {% endfor %}  
@@ -55,7 +55,7 @@ title: Code for America 2012 Annual Report
   {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
-  <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}">
+  <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}" data-section="nav{{ p.section }}">
       {{ p.content | markdownify }}
       <div class="clear"></div>  
   </div>

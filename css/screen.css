@@ -74,17 +74,20 @@ li {
 
 .header {
   position:fixed;
-  right:30px;
-  top:50px;
+  left:0px;
+  right:0px;
+  top:0px;
   z-index:100;
-  width: 180px;
+  height: 40px;
+  background:#eee;
+  padding:5px 100px;
+  color:#333;
 }
-
 .header img {
   max-width: 91px;
   max-height: 63px;
   margin-bottom: 30px;
-  display: block;
+  float:left;
 }
 
 .header nav li {
@@ -92,10 +95,14 @@ li {
   text-align: left;
   font-size: 14px;
   font-weight: 400;
+  float:left;
   cursor: pointer;
-  margin-bottom: 8px;
+  margin: 0px 5px 5px 5px;
+  cursor:pointer;
 }
-
+.header nav li.selected {
+  text-decoration: underline;
+}
 .header nav li:hover{
   text-decoration: underline;
 }
