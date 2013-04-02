@@ -472,6 +472,39 @@ $(function(){
     .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
+  var colors = ["#f0f", "#0ff", "#f00", "#ff0", "#0f9", "#fff", "#000", "#0f0"];
+
+  $(".bargraph").each(function(i, el){
+    console.log(i, el);
+    var that = this;
+
+    var total = 0;
+    $("."+$(el).attr("data-source")).each(function(i, el){
+
+      total += parseInt($(el).text().replace(/,/g, "").replace("$", ""));
+
+    });
+    $("."+$(el).attr("data-source")).each(function(i, el){
+
+      var count = parseInt($(el).text().replace(/,/g, "").replace("$", ""));
+      var section = $("<div></div>").css({width:Math.floor((count/total)*100)+"%", height:"60px",  background:colors[i], "float":"right"});
+
+      $(el).hover(function(){
+        $(section).css({position:"relative", "top": "-10px"});
+      }, function(){
+        $(section).css({position:"relative", "top": "0px"});
+      });
+
+
+      $(that).append(section);
+    });
+
+    console.log("total", total);
+
+  });
+
+
+
 
 });
 
