@@ -81,6 +81,8 @@ $(function(){
       var elements = el.toArray();
       var i = 0;
       for(e in elements){
+        if(typeof elements[e] !== "object")
+          continue;
         scrollEvent.handlers[pos].push({el:elements[e], addCb:addCb, removeCb:removeCb, count:i});
         i++;
       }
@@ -91,10 +93,13 @@ $(function(){
 
       if(pos < 0)
         return;
-
+      
       for(e in scrollEvent.handlers.middle){
         var el = scrollEvent.handlers.middle[e].el;
+        if(typeof el !== "object")
+          continue;
 
+        console.log(el);
         //middle
         if(($(el).offset().top <= (pos + height/2)) && 
            ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
@@ -106,6 +111,8 @@ $(function(){
 
       for(e in scrollEvent.handlers.top){
         var el = scrollEvent.handlers.top[e].el;
+        if(typeof el !== "object")
+          continue;
 
         //if the element is at the top of the page
         if(($(el).offset().top <= pos) && 
@@ -118,6 +125,8 @@ $(function(){
       }
       for(e in scrollEvent.handlers.bottom){
         var el = scrollEvent.handlers.bottom[e].el;
+        if(typeof el !== "object")
+          continue;
 
         //if the element is at the top of the page
         if(($(el).offset().top <= (pos+ height)) && 
@@ -130,6 +139,8 @@ $(function(){
       }
       for(e in scrollEvent.handlers.inview){
         var el = scrollEvent.handlers.inview[e].el;
+        if(typeof el !== "object")
+          continue;
 
         //if the element is at the top of the page
         if(($(el).offset().top + $(el).outerHeight() >= pos) && 
@@ -183,6 +194,7 @@ $(function(){
 
     $("#mapcontainer").css({"position":"absolute", "top":0});
     $(".yeartitle h1").css("color","#"+color2011).text("2011");
+    $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
 
   }, function(el, i, pos){
   });
@@ -383,7 +395,7 @@ $(function(){
     MM.addEvent(elem[0], 'click', function(e) {
       markers  = markerLayer.markers();
       for(mark in markers){
-        if($(markers[mark].element).attr("class").indexOf("simplestyle-marker") === -1)
+        if((typeof markers[mark] !== "object") || ($(markers[mark].element).attr("class").indexOf("simplestyle-marker") === -1))
           continue;
         if(($(e.toElement).attr("data-city") === markers[mark].data.properties.city) &&
            ($(e.toElement).attr("data-year") === markers[mark].data.properties.year)){
@@ -493,7 +505,7 @@ $(function(){
       var group = $(el).attr("data-group");
       $(el).hover(function() {
         $(el).addClass("active");
-        $('.group' + group).addClass('active');
+        $('.group' + group).parents("").addClass('active');
       }, function(){
         $(el).removeClass("active");
         $('.group' + group).removeClass('active');
