@@ -1845,7 +1845,6 @@ img.progicons {
 
   iframe {
     width: 100%;
-  
   }
 
   .bios h5,
@@ -1865,6 +1864,14 @@ img.progicons {
  
   #loading p { 
     font-size: 38px;
+  }
+
+  .companies {
+    height: 400px;
+  }
+
+  .companies .companyblurb {
+    padding: 20px 60px 0 30px;
   }
 
 }
