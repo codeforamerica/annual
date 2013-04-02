@@ -411,6 +411,10 @@ iframe {
   margin: 200px 0px 0px;
 }
 
+.themes .span10 {
+  margin-left: 10px;
+}
+
 .themes .headline {
   font-size: 50px;
   margin-top: 0px;
