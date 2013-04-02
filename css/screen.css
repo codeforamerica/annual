@@ -175,6 +175,7 @@ h5 {
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
+  line-height: 30px;
 }
 
 h6 {
@@ -1621,6 +1622,14 @@ img.progicons {
   font-size: 21px;
   margin: 5px 0px 8px;
   text-align: right;
+}
+
+.market .stats h4 {
+  margin-top: 20px;
+}
+
+.market h4.process {
+  margin-top: 50px;
 }
 
 .press {
