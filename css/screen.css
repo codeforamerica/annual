@@ -558,6 +558,10 @@ padding-left: 20px;
   display: block;
 }
 
+.cfa {
+  margin-bottom: 200px;
+}
+
 .cfa p {
   font-size: 24px;
   line-height: 30px;
@@ -1864,6 +1868,15 @@ img.progicons {
 @media (max-width: 1070px) {
   .getinvolved form {
     width: 311px;
+  }
+
+  .stats h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .page.story .stats h1 {
+    font-size: 60px;
   }
 }
 
