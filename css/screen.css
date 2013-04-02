@@ -132,6 +132,7 @@ li {
 #loading p {
   text-align: center;
   color:#fff;
+  text-shadow: none;
 }
 
 #loading h1 {
