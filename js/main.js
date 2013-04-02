@@ -255,7 +255,7 @@ $(function(){
       }, 1500);
     }else if(mapcurrentyear === "2012"){
       $("html body").animate({
-        scrollTop: $("div.story div.cityleaders").offset().top - 60
+        scrollTop: $("div.story div.cityLeaders").offset().top - 20
       }, 1500);
     }
   })
