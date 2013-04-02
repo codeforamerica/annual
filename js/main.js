@@ -432,6 +432,11 @@ $(function(){
 
   map.addLayer(markerLayer).setExtent(markerLayer.extent());
 
+  markerLayer.filter(function(f) {
+    return f.properties['year'] === '';
+  });
+
+
   $($("#map").children()[1]).css("z-index", "1");
 
   // Attribute map
