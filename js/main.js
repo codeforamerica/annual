@@ -331,6 +331,11 @@ $(function(){
     trigger: 'hover'
   });
 
+  $('.morefellowspop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
+
   $('#map').delegate(".fellowpop", "mouseenter", function(e){
     var name = $(e.currentTarget).attr('data-original-title');
     $(e.currentTarget).parents('.innercard').find('.name').text(name);
