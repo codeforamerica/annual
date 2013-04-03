@@ -90,6 +90,7 @@ li {
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
   background-color: #1b1b1b;
+  border-color: #1b1b1b;
 }
 
 #loading{ 
@@ -349,10 +350,10 @@ input[type="text"] {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellows.jpg', sizingMethod='scale')";
 }
 .pagebg.imagebigdata{ 
-  background: url("../img/big_data.jpg");
+  background: url("../img/communal_lunch.jpg");
   background-size:cover;
   background-position:center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/communal_lunch.jpg', sizingMethod='scale')";
 }
 .pagebg.imagehonolulu{ 
   background: url("../img/honolulu.jpg");
