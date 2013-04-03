@@ -291,6 +291,7 @@ $(function(){
  });
 
   $(".navbar .nav li").on("click touchend", function(e){
+    e.preventDefault();
     var section = $(e.currentTarget).attr("class").split(" ")[0];
     $("html body").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
   });
