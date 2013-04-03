@@ -290,10 +290,10 @@ $(function(){
 
  });
 
-  $(".navbar .nav li").on("click touchend", function(e){
+  $(".navbar .nav li a").on("click touchend", function(e){
     e.preventDefault();
-    var section = $(e.currentTarget).attr("class").split(" ")[0];
-    $("html body").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
+    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
+    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
   });
 
 
