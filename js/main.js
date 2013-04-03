@@ -322,7 +322,7 @@ $(function(){
   $(window).resize(setSize);
 
   $('[id^="myCarousel"]').carousel({
-    interval: 5000,
+    interval: false,
     cycle: true
   });
 

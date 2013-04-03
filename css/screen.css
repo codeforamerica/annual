@@ -1434,12 +1434,12 @@ padding-left: 20px;
   text-shadow: none;
   float: left;
   margin-top: 20px;
-  height: 380px;
+  height: 367px;
 }
 
 .companies img {
   width: 82%;
-  padding: 3em 0 0 5em;
+  padding: 0px 0px 0px 5em;
 }
 
 .companies .companyblurb {
@@ -1622,7 +1622,8 @@ img.progicons {
   padding-bottom: 0px;
 } 
 
-.captains .popover-content {
+.captains .popover-content,
+.morefellows .popover-content {
   font-weight: 300;
   font-style: italic;
   padding-top: 0px;
@@ -2079,10 +2080,6 @@ img.progicons {
  
   #loading p { 
     font-size: 38px;
-  }
-
-  .companies {
-    height: 400px;
   }
 
   .companies .companyblurb {
