@@ -1927,6 +1927,11 @@ img.progicons {
   margin-left: 25px;
 }
 
+.icon-question-sign.icon-white {
+  position: absolute;
+  margin: -5px 0px 0px 2px;
+}
+
 .financials .rightcol h5,
 .financials .rightcol h4,
 .financials .rightcol p {
@@ -1959,7 +1964,7 @@ img.progicons {
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
-  color: #ffaa21;
+  color: #f7c21f;
 }
 
 .financialsgroup {
@@ -1973,7 +1978,7 @@ img.progicons {
 }
 
 .graphsection.active {
-  background-color: #ffaa21 !important;
+  background-color: #f7c21f !important;
 }
 
 .expenses.bargraph,
@@ -1989,6 +1994,7 @@ img.progicons {
   z-index:100;
   height:70px;
 }
+
 .sharebutton iframe{ 
   min-height:auto;
 }
