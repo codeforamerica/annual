@@ -1434,7 +1434,7 @@ padding-left: 20px;
   text-shadow: none;
   float: left;
   margin-top: 20px;
-  height: 367px;
+  height: 345px;
 }
 
 .companies img {
@@ -1999,6 +1999,13 @@ img.progicons {
   min-height:auto;
 }
 
+@media(max-width: 1300px) {
+  .stats h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1000px;
@@ -2086,6 +2093,10 @@ img.progicons {
  
   #loading p { 
     font-size: 38px;
+  }
+
+  .companies {
+    height: 369px;
   }
 
   .companies .companyblurb {
