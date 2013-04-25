@@ -353,7 +353,7 @@ input[type="text"] {
   background: url("../img/communal_lunch.jpg");
   background-size:cover;
   background-position:center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/communal_lunch.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data.jpg', sizingMethod='scale')";
 }
 .pagebg.imagehonolulu{ 
   background: url("../img/honolulu.jpg");
