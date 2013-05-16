@@ -1,8 +1,14 @@
 Code for America Annual Report.
 
-This site is build using jekyll. To run:
+Install
+-------
 
-`sudo gem install jekyll`
+This site is build using jekyll.
 
-`jekyll --server --auto`
+    sudo gem install jekyll
+
+Run
+---
+
+    jekyll --server --auto
 
