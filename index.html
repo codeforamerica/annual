@@ -71,6 +71,7 @@ title: Code for America 2012 Annual Report
   {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
+  <a name="{{ p.section }}"></a>
   <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}" data-section="nav{{ p.section }}">
     {{ p.content | markdownify }}
     <div class="clear"></div>  
