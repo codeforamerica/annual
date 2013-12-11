@@ -392,6 +392,10 @@ iframe {
   min-height: 200px;
 }
 
+iframe.twitter-share-button{ 
+  min-height:20px;
+}
+
 .cityLeaders iframe {
   display: block;
   margin-top: 50px;
