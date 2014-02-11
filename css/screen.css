@@ -43,7 +43,7 @@ a {
 
 a:hover {
   color: #fff;
-  border-bottom: #fff solid 1px;
+  /*border-bottom: #fff solid 1px;*/
   text-decoration: none;
 }
 
