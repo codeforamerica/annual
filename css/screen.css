@@ -181,7 +181,7 @@ h6 {
 
 p { 
   font-weight: 300;
-  font-size: 17px;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -1802,91 +1802,93 @@ img.progicons {
   text-align: left;
 }
 
+.press .cnn,
+.press .atlanticcities,
+.press .latimes,
+.press .usatoday,
+.press .pbs,
+.press .time,
+.press .cnet,
+.press .details,
+.press .globaljournal,
+.press .fastco {
+  height: 76px;
+  margin-bottom: 40px;
+}
+
+.press .cnn:hover,
+.press .atlanticcities:hover,
+.press .latimes:hover,
+.press .usatoday:hover,
+.press .pbs:hover,
+.press .time:hover,
+.press .cnet:hover,
+.press .details:hover,
+.press .globaljournal:hover,
+.press .fastco:hover  {
+  background-position: 0 -76px;
+}
+
 .press .cnn {
   background-image:url('../img/cnn.png');
   background-size: 86px;
   width: 86px;
 }
 
-.press .mashable {
-  background-image:url('../img/mashable.png');
-  background-size: 123px;
-  width: 123px;
+.press .atlanticcities{
+  background-image:url('../img/atlanticcities.png');
+  background-size: 183px;
+  width: 183px;
 }
 
-.press .motherjones {
-  background-image:url('../img/motherjones.png');
-  background-size: 139px;
-  width: 139px;
+.press .latimes {
+  background-image:url('../img/losangelestimes.png');
+  background-size: 640px;
+  width: 640px;
 }
 
-.press .npr {
-  background-image:url('../img/npr_logo_line.png');
-  background-size: 110px;
-  width: 110px;
-  margin-top: 28px;
+.press .usatoday {
+  background-image:url('../img/usatoday.png');
+  background-size: 162.5px;
+  width: 162.5px;
 }
 
-.press .wsj {
-  background-image:url('../img/wsj.png');
-  background-size: 226.5px;
-  width: 226.5px;
+.press .pbs {
+  background-image:url('../img/pbs.png');
+  background-size: 197px;
+  width: 197px;
 }
 
-.press .msnbc {
-  background-image:url('../img/msnbc.png');
-  background-size: 73px;
-  width: 73px;
-  height: 50px;
+.press .time {
+  background-image:url('../img/time.png');
+  background-size: 276px;
+  width: 276px;
 }
 
-.press .csm {
-  background-image:url('../img/csm.png');
-  background-size: 115px;
-  width: 115px;
+.press .cnet {
+  background-image:url('../img/cnet.png');
+  background-size: 103px;
+  width: 103px;
 }
 
-.press .techcrunch {
-  background-image:url('../img/techcrunch.png');
-  background-size: 165px;
-  width: 165px;
+.press .details {
+  background-image:url('../img/details.png');
+  background-size: 335px;
+  width: 335px;
 }
 
-.press .ted {
-  background-image:url('../img/ted.png');
-  background-size: 95px;
-  width: 95px;
+.press .globaljournal {
+  background-image:url('../img/globaljournal.png');
+  background-size: 299px;
+  width: 299px;
 }
 
-.press .sxsw {
-  background-image:url('../img/sxsw.png');
-  background-size: 167px;
-  width: 167px;
+.press .fastco {
+  background-image:url('../img/fastco.png');
+  background-size: 533px;
+  width: 533px;
 }
 
-.press .cnn,
-.press .mashable,
-.press .motherjones,
-.press .npr,
-.press .wsj,
-.press .csm,
-.press .techcrunch,
-.press .ted,
-.press .sxsw {
-  height: 40px;
-}
-
-.press .cnn:hover,
-.press .mashable:hover,
-.press .motherjones:hover,
-.press .npr:hover,
-.press .wsj:hover,
-.press .csm:hover,
-.press .techcrunch:hover,
-.press .ted:hover,
-.press .sxsw:hover {
-  background-position: 0 -40px;
-}
 
 .press .msnbc:hover {
   background-position: 0 -50px;
