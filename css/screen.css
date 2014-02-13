@@ -43,7 +43,7 @@ a {
 
 a:hover {
   color: #fff;
-  /*border-bottom: #fff solid 1px;*/
+  border-bottom: #fff solid 1px;
   text-decoration: none;
 }
 
@@ -477,9 +477,10 @@ padding-left: 20px;
 }
 
 .market img {
-  margin: 30px 0px;
+  margin: 0px 0px;
   display: block;
 }
+
 
 .getinvolved {
   background: rgba(255, 255, 255, .75);
@@ -879,21 +880,6 @@ padding-left: 20px;
   background-image: url('../img/on.png');
   background-size: 135px;
   width: 135px;
-}
-
-/*****************************************************************************/
-/*
-/* Application specific styling
-/*
-/*****************************************************************************/
-
-.appspop {
-  background-image: url('../img/apps_logos.png');
-  background-size: 100px;
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin: 20px 20px 0 0;
 }
 
 .srtracker,
@@ -1772,7 +1758,7 @@ img.progicons {
 }
 
 .market .bios {
-  margin: 0px auto 40px;
+  margin-top: 30px;
 }
 
 .market .bios p {
