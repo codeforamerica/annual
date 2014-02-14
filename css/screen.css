@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6435252/678502/css/fonts.css" />
+
 /*****************************************************************************/
 /*
 /* Common
@@ -26,6 +28,7 @@ body {
 }
 
 h1 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   margin-bottom: 1em;
 }
 
@@ -139,13 +142,15 @@ ul.posts span {
 }
 
 h2 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 80px;
-  line-height: 50px;
+  line-height: 40px;
 }
 
 h3 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   font-size: 40px;
   text-align: left;
   text-transform: uppercase;
@@ -157,7 +162,7 @@ h3 span {
 }
 
 h4 {
-  text-transform: uppercase;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
   text-align: left;
   font-size: 24px;
   clear: both;
@@ -165,6 +170,7 @@ h4 {
 }
 
 h5 {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
   text-align: left;
   font-size: 24px;
   font-style: italic;
@@ -179,9 +185,9 @@ h6 {
   text-transform: uppercase;
 }
 
-p { 
+p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -574,7 +580,7 @@ padding-left: 20px;
 }
 
 .cfa p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
 }
 
