@@ -44,7 +44,7 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 $(function(){
-  var readytoshow = true;
+  // var readytoshow = true;
   // $('#title').load(function() {
   //   if(readytoshow)
   //     $("#loading").fadeOut({duration:1000});
@@ -64,7 +64,6 @@ $(function(){
     height = $(window).height();
     width = $(window).width();
     
-    // $("#title").css({width:width, "min-height":height});
     $(".quote").css({width:width, "min-height":height});
     $(".story").css({width:width, "min-height":height});
     $(".pagebg").css({width:width, "min-height":height});
