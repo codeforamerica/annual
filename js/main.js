@@ -44,17 +44,17 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 $(function(){
-  var readytoshow = false;
-  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
-    if(readytoshow)
-      $("#loading").fadeOut({duration:1000});
-    readytoshow = true;
-  });
-  setTimeout(function(){
-    if(readytoshow)
-      $("#loading").fadeOut({duration:1000});
-    readytoshow = true;
-  }, 1500);
+  var readytoshow = true;
+  // $('#title').load(function() {
+  //   if(readytoshow)
+  //     $("#loading").fadeOut({duration:1000});
+  //   readytoshow = true;
+  // });
+  // setTimeout(function(){
+  //   if(readytoshow)
+  //     $("#loading").fadeOut({duration:1000});
+  //   readytoshow = true;
+  // }, 1500);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
@@ -64,6 +64,7 @@ $(function(){
     height = $(window).height();
     width = $(window).width();
     
+    // $("#title").css({width:width, "min-height":height});
     $(".quote").css({width:width, "min-height":height});
     $(".story").css({width:width, "min-height":height});
     $(".pagebg").css({width:width, "min-height":height});

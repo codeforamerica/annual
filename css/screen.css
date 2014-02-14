@@ -93,35 +93,35 @@ li {
   border-color: #1b1b1b;
 }
 
-#loading{ 
+#title{ 
   background:#C82A45;
-  position:fixed;
+/*  position:fixed;
   top:0px;
   left:0px;
   right:0px;
   bottom:0px;
-  z-index:10000;
+  z-index:10000;*/
 }
 
-#loading img{
+#title img{
   display:block;
-  margin:100px auto 0px;
+  margin:-200px auto 0px;
 }
 
-#loading h1,
-#loading p {
+#title h1,
+#title p {
   text-align: center;
   color:#fff;
   text-shadow: none;
 }
 
-#loading h1 {
+#title h1 {
   font-size: 220px;
   margin: 90px auto 117px;
   font-weight: 600;
 }
  
-#loading p{ 
+#title p{ 
   text-transform:uppercase;
   font-size: 63px;
   font-weight: 300;
@@ -2110,19 +2110,21 @@ img.progicons {
     font-size: 17px;
   }
 
-  #loading img {
+  #title img {
     width: 300px;
     margin-top: 100px;
   }
 
-  #loading h1 {
+  #title h1 {
     font-size: 130px;
-    margin: 50px auto 60px;
+    /*margin: 50px auto 60px;*/
   }
  
-  #loading p { 
+  #title p { 
     font-size: 38px;
   }
+
+
 
   .companies {
     height: 369px;
