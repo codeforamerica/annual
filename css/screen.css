@@ -108,7 +108,7 @@ li {
 
 #title img{
   display:block;
-  margin:-200px auto 0px;
+  margin:-175px auto 0px;
 }
 
 #title h1,
@@ -119,14 +119,14 @@ li {
 }
 
 #title h1 {
-  font-size: 220px;
-  margin: 90px auto 117px;
+  font-size: 189px;
+  margin: 78px auto 105px;
   font-weight: 600;
 }
  
 #title p{ 
   text-transform:uppercase;
-  font-size: 63px;
+  font-size: 65px;
   font-weight: 300;
 }
 
