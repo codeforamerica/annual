@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6435252/678502/css/fonts.css" />
+
 /*****************************************************************************/
 /*
 /* Common
@@ -26,7 +28,8 @@ body {
 }
 
 h1 {
-  margin-bottom: 1em;
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  margin: .25em .25em 1em 0em;
 }
 
 p {
@@ -69,6 +72,29 @@ li {
 
 /*****************************************************************************/
 /*
+/* 2013 Updates
+/*
+/*****************************************************************************/
+
+.stats2013{
+  border-left: 2px solid white;
+  padding: 20px 0px 25px 30px;
+  margin-left: 15px;
+}
+
+.stats2013 p{
+  margin: 0px;
+}
+
+.stats2013 h3{
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
+  margin: 0px 0px 8px 0px;
+  line-height: 40px;
+}
+
+
+/*****************************************************************************/
+/*
 /* Home
 /*
 /*****************************************************************************/
@@ -105,7 +131,7 @@ li {
 
 #title img{
   display:block;
-  margin:-200px auto 0px;
+  margin:-175px auto 0px;
 }
 
 #title h1,
@@ -116,14 +142,14 @@ li {
 }
 
 #title h1 {
-  font-size: 220px;
-  margin: 90px auto 117px;
+  font-size: 189px;
+  margin: 78px auto 105px;
   font-weight: 600;
 }
  
 #title p{ 
   text-transform:uppercase;
-  font-size: 63px;
+  font-size: 65px;
   font-weight: 300;
 }
 
@@ -139,17 +165,20 @@ ul.posts span {
 }
 
 h2 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 80px;
-  line-height: 50px;
+  line-height: 40px;
 }
 
 h3 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   font-size: 40px;
+  letter-spacing: 4px;
   text-align: left;
   text-transform: uppercase;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 h3 span {
@@ -157,14 +186,16 @@ h3 span {
 }
 
 h4 {
-  text-transform: uppercase;
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  letter-spacing: 2px;
   text-align: left;
   font-size: 24px;
   clear: both;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 h5 {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
   text-align: left;
   font-size: 24px;
   font-style: italic;
@@ -179,9 +210,9 @@ h6 {
   text-transform: uppercase;
 }
 
-p { 
+p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -239,7 +270,6 @@ input[type="text"] {
 
 .page.quote h1,
 .page.story h1 { 
-  text-align:left;
   color:#fff;
   font-size: 56px;
   list-style: none;
@@ -424,6 +454,10 @@ iframe.twitter-share-button{
   padding-right: 15px;
 }
 
+.bioleft p {
+  text-align: right;
+}
+
 .bioright,
 .apps .bioright {
   padding-left: 15px;
@@ -475,6 +509,7 @@ padding-left: 20px;
 .moreapps img {
   margin-top: 30px;
 }
+
 
 .market img {
   margin: 0px 0px;
@@ -573,8 +608,12 @@ padding-left: 20px;
   margin-bottom: 200px;
 }
 
+.cfa h1{
+  text-align: right;
+}
+
 .cfa p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
 }
 
@@ -1433,24 +1472,6 @@ a.appspop:hover  {
   margin-bottom: 10px;
 }
 
-.stats h4,
-.page.story .stats h1 {
-  text-align: center;
-}
-
-.stats h4 {
-  border-bottom: 2px #fff solid;
-  font-weight: 300;
-  margin: 20px 40px 20px 0px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.page.story .stats h1 {
-  font-size: 85px;
-  margin: 0px 40px 20px 0px;
-}
-
 .companies {
   background-color: rgba(255,255,255, .75);
   color: #000;
@@ -2200,3 +2221,11 @@ img.progicons {
   }
 
 }
+
+
+
+
+
+
+
+
