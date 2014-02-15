@@ -1620,6 +1620,10 @@ img.progicons {
   margin-top: -12px;
 }
 
+.community .people ul {
+  margin: 0px 0px 8px 0px;
+}
+
 .captains a:hover,
 .fellowcard a:hover,
 .moreapps a:hover,
