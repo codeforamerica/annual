@@ -91,7 +91,7 @@ $(function(){
       var pos = $(window).scrollTop();
       var height = $(window).height();
 
-      if(pos == 0) 
+      if(pos < 0)
         return;
       
       for(e in scrollEvent.handlers.middle){
@@ -358,7 +358,7 @@ $(function(){
 
 
   // Create map
-  var layer = mapbox.layer().id('dmt.map-cdkzgmkx');
+  var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
 
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
