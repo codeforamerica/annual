@@ -119,15 +119,6 @@ li {
   border-color: #1b1b1b;
 }
 
-#title{ 
-  /*background:#C82A45;*/
-/*  position:fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  bottom:0px;
-  z-index:10000;*/
-}
 
 #title img{
   display:block;
@@ -2138,22 +2129,6 @@ img.progicons {
   .network .bios h5 {
     font-size: 17px;
   }
-
-  #title img {
-    width: 300px;
-    margin-top: 100px;
-  }
-
-  #title h1 {
-    font-size: 130px;
-    /*margin: 50px auto 60px;*/
-  }
- 
-  #title p { 
-    font-size: 38px;
-  }
-
-
 
   .companies {
     height: 369px;
