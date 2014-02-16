@@ -44,17 +44,17 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 }
 
 $(function(){
-  // var readytoshow = true;
-  // $('#title').load(function() {
-  //   if(readytoshow)
-  //     $("#loading").fadeOut({duration:1000});
-  //   readytoshow = true;
-  // });
-  // setTimeout(function(){
-  //   if(readytoshow)
-  //     $("#loading").fadeOut({duration:1000});
-  //   readytoshow = true;
-  // }, 1500);
+  var readytoshow = false;
+  $('#title').load(function() {
+    if(readytoshow)
+      $("#title").fadeOut({duration:1000});
+    readytoshow = true;
+  });
+  setTimeout(function(){
+    if(readytoshow)
+      $("#title").fadeOut({duration:1000});
+    readytoshow = true;
+  }, 1500);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
@@ -91,7 +91,7 @@ $(function(){
       var pos = $(window).scrollTop();
       var height = $(window).height();
 
-      if(pos < 0)
+      if(pos == 0) 
         return;
       
       for(e in scrollEvent.handlers.middle){
@@ -99,7 +99,7 @@ $(function(){
         if(typeof el !== "object")
           continue;
 
-        console.log(el);
+        // console.log(el);
         //middle
         if(($(el).offset().top <= (pos + height/2)) && 
            ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
@@ -169,6 +169,7 @@ $(function(){
       }
     }
   };
+
 
 
   scrollEvent.on("middle", $(".page"), function(el,i){
