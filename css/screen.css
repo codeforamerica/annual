@@ -353,6 +353,13 @@ input[type="text"] {
 .pagebg.appear{ 
 
 }
+
+.pagebg.imagestreetmixback{ 
+  background: url("../img/streetmixback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/streetmixback.jpg', sizingMethod='scale')";
+}
 .pagebg.imageiphone{ 
   background: url("../img/iphone.jpg") no-repeat;
   background-size:cover;
