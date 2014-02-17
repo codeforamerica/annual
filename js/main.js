@@ -36,32 +36,32 @@ var cityLocations = [{
     "properties": { "city": "detroit", "year":"2012" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2012" }
+    "properties": { "city": "san francisco", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
-    "properties": { "city": "oakland", "year":"2012" }
+    "properties": { "city": "oakland", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
-    "properties": { "city": "san mateo", "year":"2012" }
+    "properties": { "city": "san mateo", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
-    "properties": { "city": "las vegas", "year":"2012" }
+    "properties": { "city": "las vegas", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-    "properties": { "city": "kansas city mo", "year":"2012" }
+    "properties": { "city": "kansas city mo", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "city": "louisville", "year":"2012" }
+    "properties": { "city": "louisville", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
-    "properties": { "city": "summit county", "year":"2012" }
+    "properties": { "city": "summit county", "year":"2013" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
-    "properties": { "city": "new york", "year":"2012" }
+    "properties": { "city": "new york", "year":"2013" }
 }];
 
-var color2011 = "fedd44",
-    color2012 = "C82A45";
+var fellowshipColor = "C82A45";
+    
 
 if (typeof console === "undefined" || typeof console.log === "undefined") {
   console = {log:function(){}};
@@ -218,8 +218,7 @@ $(function(){
   scrollEvent.on("bottom", $(".fellowship"), function(el,i){
 
     $("#mapcontainer").css({"position":"absolute", "top":0});
-    $(".yeartitle h1").css("color","#"+color2011).text("2011");
-    $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
+    $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
 
   }, function(el, i, pos){
   });
@@ -242,37 +241,36 @@ $(function(){
   var arrowInterval =0;
   var mapcurrentyear = "2011";
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
+    console.log(el);
 
-    if($(el).attr("class").indexOf("fellowship2011") >= 0){
-      $(".yeartitle h1").css("color","#"+color2011).text("2011");
-      $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
-      mapcurrentyear = "2011";
-      interaction.hideTooltips();
-      displayedMarkers = [];
-      markerLayer.filter(function(f) {
-        return f.properties['year'] === '2011';
-      });
+    // if($(el).attr("class").indexOf("fellowship2011") >= 0){
+    //   $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
+    //   mapcurrentyear = "2011";
+      // interaction.hideTooltips();
+      // displayedMarkers = [];
+    //   // markerLayer.filter(function(f) {
+    //   //   return f.properties['year'] === '2011';
+    //   // });
 
-      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+    //   map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
-      //setTimeout(showRandomTooltip, 1200);
+    //   //setTimeout(showRandomTooltip, 1200);
 
-    }
+    // }
     
-    if($(el).attr("class").indexOf("fellowship2012") >= 0){
-      $(".yeartitle h1").css("color","#"+color2012).text("2012");
-      $(".yeartitle h2").css("color","#"+color2012).text("The Fellowship");
-      mapcurrentyear = "2012";
-      interaction.hideTooltips();
-      displayedMarkers = [];
-      markerLayer.filter(function(f) {
-        return f.properties['year'] === '2012';
-      });
+    // if($(el).attr("class").indexOf("fellowship2012") >= 0){
+    //   $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
+    //   mapcurrentyear = "2012";
+    //   interaction.hideTooltips();
+    //   displayedMarkers = [];
+    //   // markerLayer.filter(function(f) {
+    //   //   return f.properties['year'] === '2012';
+    //   // });
       
-      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+      // map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
 
-      //setTimeout(showRandomTooltip, 1200);
-    }
+    //   //setTimeout(showRandomTooltip, 1200);
+    // }
 
     arrowInterval = setInterval(function(){
       $(".downarrow").animate({opacity:1}, 800, "swing", function(){
@@ -286,15 +284,9 @@ $(function(){
 
   $(".downarrow").on("click touchend", function(){
 
-    if(mapcurrentyear === "2011"){
      $("html body").animate({
-        scrollTop: $("div.fellowship2012.mapscroll").offset().top
+        scrollTop: $("div.mapscroll").offset().top
       }, 1500);
-    }else if(mapcurrentyear === "2012"){
-      $("html body").animate({
-        scrollTop: $("div.story div.cityLeaders").offset().top - 20
-      }, 1500);
-    }
   })
  scrollEvent.on("top", $(".page"), function(el,i){
 
@@ -387,7 +379,7 @@ $(function(){
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
-  // map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
+  map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
@@ -404,12 +396,11 @@ $(function(){
     if($(m.element).attr("class").indexOf("simplestyle-marker") === -1)
       return;
     displayedMarkers.push(m);
-    $(m.element).css("top", "-1000px");
+    // $(m.element).css("top", "-1000px");
     
     setTimeout(function(){
       $(m.element).animate({"top":"0px"}, 400);
     }, Math.random() * 300);
-
 
   });
 
@@ -443,12 +434,7 @@ $(function(){
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
 
-
-
-    if(m.properties.year == "2011")
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2011+"@2x.png");
-    else
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2012+"@2x.png");
+    elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
       
     return elem[0]; 
   }
@@ -504,11 +490,55 @@ $(function(){
     map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
   });
 
-  map.addLayer(markerLayer).setExtent(markerLayer.extent());
 
-  markerLayer.filter(function(f) {
-    return f.properties['year'] === '';
-  });
+    
+
+
+// A closure for clicking years. You give it a year, and it returns a function
+      // that, when run, clicks that year. It's this way in order to be used as both an
+      // event handler and run manually.
+      function click_year(y) {
+          return function() {
+            $('.fellowship'+y).css('color' ,' #fff');
+              markerLayer.filter(function(f) {
+                  return f.properties.year <= y;
+              });
+              return false;
+          };
+      }
+
+      click_year(2011)();
+      setTimeout(function(){
+        click_year(2012)()
+        map.addLayer(markerLayer);
+      }, 2500);
+
+      setTimeout(function(){
+        click_year(2013)()
+        map.addLayer(markerLayer);
+      }, 5000);
+
+      map.addLayer(markerLayer);
+
+    
+
+      
+
+  // $('.fellowship2011').click(function(){
+  //   markerLayer.filter(function(f) {
+  //     return f.properties['year'] === '2011';
+  //   });
+  // });
+  // $('.fellowship2012').click(function(){
+  //   markerLayer.filter(function(f) {
+  //     return f.properties['year'] === '2012';
+  //   });
+  // });
+  // $('.fellowship2013').click(function(){
+  //   markerLayer.filter(function(f) {
+  //     return f.properties['year'] === '2013';
+  //   });
+  // });
 
 
   $($("#map").children()[1]).css("z-index", "1");
