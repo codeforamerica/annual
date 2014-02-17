@@ -34,6 +34,30 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
     "properties": { "city": "detroit", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
+    "properties": { "city": "san mateo", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
+    "properties": { "city": "las vegas", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+    "properties": { "city": "kansas city mo", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
+    "properties": { "city": "summit county", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2012" }
 }];
 
 var color2011 = "fedd44",
@@ -363,7 +387,7 @@ $(function(){
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
-  map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
+  // map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
