@@ -92,6 +92,21 @@ li {
   line-height: 40px;
 }
 
+.community .bios{
+  margin: 20px 0px 65px 0px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logo img {
+  max-width: 85px;
+}
+
+
 
 /*****************************************************************************/
 /*
@@ -167,7 +182,6 @@ h3 {
   font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   font-size: 40px;
   letter-spacing: 4px;
-  text-align: left;
   text-transform: uppercase;
   margin-top: 0px;
 }
@@ -186,8 +200,7 @@ h4 {
 }
 
 h5 {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  text-align: left;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
@@ -1812,24 +1825,26 @@ img.progicons {
 
 .market .bios.right.bioquote p,
 .network .bios p {
-  font-size: 24px;
-  font-weight: 700;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 300;
   line-height: 34px;
   margin-bottom: 10px;
 }
 
 .market .bios.right.bioquote h3,
 .network .bios h3 {
-  font-size: 26px;
-  margin: 0px;
-  text-align: right;
+  font-size: 19px;
+  margin: 20px 0px 0px 0px;
+  text-align: left;
 }
 
 .market .bios.right.bioquote h5,
 .network .bios h5 {
-  font-size: 21px;
-  margin: 0px 0px 3px;
-  text-align: right;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0px 0px 0px 0px;
+  text-align: left;
 }
 
 .market .stats h4 {
