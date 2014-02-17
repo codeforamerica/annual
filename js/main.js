@@ -325,122 +325,6 @@ $(function(){
 
 
 
-  scrollEvent.on("middle", $(".page"), function(el,i){
-    $($("div.pagebg")[i]).fadeIn({duration:500});
-    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
-      $("div.sidebartitle").hide();
-    else{
-      $($("div.sidebartitle")[i]).show();
-      $($("div.sidebartitle")[i]).addClass("appear");
-    }
-  }, function(el, i){
-    $($("div.pagebg")[i]).fadeOut({duration:700});
-    $($("div.sidebartitle")[i]).removeClass("appear");
-
-  });
-  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
-    if($(el).attr("src") === undefined)
-      $(el).attr("src", $(el).attr("data-src"))
-  }, function(el, i, pos){
-  });
-
-  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
-
-    $("#mapcontainer").css({"position":"absolute", "top":0});
-    $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
-
-  }, function(el, i, pos){
-  });
-  scrollEvent.on("top", $(".fellowship"), function(el,i){
-    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
-
-
-  }, function(el, i, pos){
-
-    if($(".fellowship").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-    else
-      $("#mapcontainer").css({"position":"absolute", "top":0});
-    
-  });
-  scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-
-  }, function(){});
-  var arrowInterval =0;
-  var mapcurrentyear = "2011";
-  scrollEvent.on("middle", $(".mapscroll"), function(el,i){
-    console.log(el);
-
-    // if($(el).attr("class").indexOf("fellowship2011") >= 0){
-    //   $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
-    //   mapcurrentyear = "2011";
-      // interaction.hideTooltips();
-      // displayedMarkers = [];
-    //   // markerLayer.filter(function(f) {
-    //   //   return f.properties['year'] === '2011';
-    //   // });
-
-    //   map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
-
-    //   //setTimeout(showRandomTooltip, 1200);
-
-    // }
-    
-    // if($(el).attr("class").indexOf("fellowship2012") >= 0){
-    //   $(".yeartitle h2").css("color","#"+fellowshipColor).text("The Fellowship");
-    //   mapcurrentyear = "2012";
-    //   interaction.hideTooltips();
-    //   displayedMarkers = [];
-    //   // markerLayer.filter(function(f) {
-    //   //   return f.properties['year'] === '2012';
-    //   // });
-      
-      // map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
-
-    //   //setTimeout(showRandomTooltip, 1200);
-    // }
-
-    arrowInterval = setInterval(function(){
-      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
-        $(".downarrow").animate({opacity:0}, 800, "swing");
-      })}, 2000);
-
-  }, function(el, i){
-    clearInterval(arrowInterval);
-    $(".downarrow").animate({opacity:1}, 800, "swing");
-  });
-
-  $(".downarrow").on("click touchend", function(){
-
-     $("html body").animate({
-        scrollTop: $("div.mapscroll").offset().top
-      }, 1500);
-  })
- scrollEvent.on("top", $(".page"), function(el,i){
-
-   $(".navbar li").removeClass("active");;
-   if($(el).attr("data-section") !== "")
-     $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
- },function(){
-
- });
- scrollEvent.on("bottom", $(".page"), function(el,i){
-
-   $(".navbar li").removeClass("active");;
-   if($(el).attr("data-section") !== "")
-     $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
- },function(){
-
- });
-
-  $(".navbar .nav li a").on("click touchend", function(e){
-    e.preventDefault();
-    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
-    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
-  });
 
 
 
@@ -482,14 +366,6 @@ $(function(){
     placement: 'top',
     trigger: 'hover'
   });
-
-  // $('#map').delegate(".fellowpop", "mouseenter", function(e){
-  //   var name = $(e.currentTarget).attr('data-original-title');
-  //   $(e.currentTarget).parents('.innercard').find('.name').text(name);
-  // });
-  // $("#map").delegate(".fellowpop", "mouseleave", function(e){
-  //   $(e.currentTarget).parents('.innercard').find('.name').html('&nbsp;');
-  // });
 
   $('.appspop').popover({
     placement: 'top',
@@ -619,6 +495,12 @@ $(function(){
     map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
   });
 
+  var years = ["2011", "2012", "2013"]
+
+$.each(years, function(index, value){
+  $('.map'+value).click(click_year(value));
+});
+
 
     
 
@@ -636,38 +518,8 @@ $(function(){
           };
       }
 
-      click_year(2011)();
-      setTimeout(function(){
-        click_year(2012)()
-        map.addLayer(markerLayer);
-      }, 2500);
-
-      setTimeout(function(){
-        click_year(2013)()
-        map.addLayer(markerLayer);
-      }, 5000);
-
       map.addLayer(markerLayer);
 
-    
-
-      
-
-  // $('.fellowship2011').click(function(){
-  //   markerLayer.filter(function(f) {
-  //     return f.properties['year'] === '2011';
-  //   });
-  // });
-  // $('.fellowship2012').click(function(){
-  //   markerLayer.filter(function(f) {
-  //     return f.properties['year'] === '2012';
-  //   });
-  // });
-  // $('.fellowship2013').click(function(){
-  //   markerLayer.filter(function(f) {
-  //     return f.properties['year'] === '2013';
-  //   });
-  // });
 
 
   $($("#map").children()[1]).css("z-index", "1");
@@ -744,6 +596,102 @@ $(function(){
 
 
 
+  scrollEvent.on("middle", $(".page"), function(el,i){
+    $($("div.pagebg")[i]).fadeIn({duration:500});
+    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
+      $("div.sidebartitle").hide();
+    else{
+      $($("div.sidebartitle")[i]).show();
+      $($("div.sidebartitle")[i]).addClass("appear");
+    }
+  }, function(el, i){
+    $($("div.pagebg")[i]).fadeOut({duration:700});
+    $($("div.sidebartitle")[i]).removeClass("appear");
+
+  });
+  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+
+  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+
+    $("#mapcontainer").css({"position":"absolute", "top":0});
+
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("top", $(".fellowship"), function(el,i){
+    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
+
+
+  }, function(el, i, pos){
+
+    if($(".fellowship").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    else
+      $("#mapcontainer").css({"position":"absolute", "top":0});
+    
+  });
+  scrollEvent.on("top", $(".scrollout"), function(el, i){
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+
+  }, function(){});
+  var arrowInterval =0;
+  var mapcurrentyear = "2011";
+  scrollEvent.on("middle", $(".mapscroll"), function(el,i){
+    $('.yeartitle div').css('color' ,' #000');
+    click_year(2011)();
+      setTimeout(function(){
+        click_year(2012)()
+        map.addLayer(markerLayer);
+      }, 2500);
+
+      setTimeout(function(){
+        click_year(2013)()
+        map.addLayer(markerLayer);
+      }, 5000);
+
+    arrowInterval = setInterval(function(){
+      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+        $(".downarrow").animate({opacity:0}, 800, "swing");
+      })}, 2000);
+
+  }, function(el, i){
+    clearInterval(arrowInterval);
+    $(".downarrow").animate({opacity:1}, 800, "swing");
+  });
+
+  $(".downarrow").on("click touchend", function(){
+
+     $("html body").animate({
+        scrollTop: $("div.mapscroll").offset().top
+      }, 1500);
+  })
+ scrollEvent.on("top", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+ scrollEvent.on("bottom", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+
+  $(".navbar .nav li a").on("click touchend", function(e){
+    e.preventDefault();
+    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
+    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
+  });
 
 });
 
