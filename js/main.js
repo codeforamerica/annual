@@ -1,219 +1,588 @@
-var cityLocations = {"philadelphia":[39.947, -75.162], 
-                     "boston":[42.352, -71.053],
-                     "seattle":[47.604, -122.326],
-                     "macon":[32.8398, -83.6365],
-                     "santacruz":[36.9724, -122.0306],
-                     "chicago":[41.886, -87.655],
-                     "honolulu":[21.305, -157.859],
-                     "neworleans":[29.986, -90.093],
-                     "austin":[30.276, -97.756],
-                     "detroit":[42.360, -83.059]};
+var cityLocations = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "year": "2011" }
+},  {
+    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
+    "properties": { "city": "boston", "year": "2011" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
+    "properties": { "city": "seattle", "year": "2011" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.4183, 37.7750]},
+    "properties": { "city": "sanfrancisco", "year":"2011" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "year": "2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-83.6365, 32.8398]},
+    "properties": { "city": "macon", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
+    "properties": { "city": "santacruz", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
+    "properties": { "city": "chicago", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
+    "properties": { "city": "honolulu", "year":"2012" }
+},{
+    "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
+    "properties": { "city": "neworleans", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
+    "properties": { "city": "detroit", "year":"2012" }
+}];
+
+var color2011 = "fedd44",
+    color2012 = "C82A45";
+
+if (typeof console === "undefined" || typeof console.log === "undefined") {
+  console = {log:function(){}};
+}
 
 $(function(){
+  var readytoshow = false;
+  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  });
+  setTimeout(function(){
+    if(readytoshow)
+      $("#loading").fadeOut({duration:1000});
+    readytoshow = true;
+  }, 1500);
   var usTopology;
   //shows nav when user hovers over the logo
-  $(".cfalogo").hover(
-	function() {
-	  $("nav").fadeIn();
-	});
-
   var height = $(window).height(),
-    width = $(window).width();
+  width = $(window).width();
 
   var setSize = function(){
     height = $(window).height();
     width = $(window).width();
-
-    $(".quote").css({width:width, height:height});
+    
+    $(".quote").css({width:width, "min-height":height});
     $(".story").css({width:width, "min-height":height});
-    $("pagebg").css({width:width, height:height});
-
-
-    d3.select("#fellowshipMap svg")
-      .attr("width", width-500)
-      .attr("height", 0.5*(width-500));
-
-    projection = d3.geo.albersUsa().scale(width-500).translate([((width-500)/2), (((width-500)*0.5)/2)]);
-    path = d3.geo.path().projection(projection);;
-
-
-    if(svg !== undefined){
-      svg.selectAll("path").remove();
-      svg.selectAll("path")
-        .data(topojson.object(usTopology, usTopology.objects.states).geometries)
-        .enter().append("path")
-        .attr("d", path);
-    }
+    $(".pagebg").css({width:width, "min-height":height});
+    $(".scrollout").css({height:height});
+    $(".fellowship").css({height:height});
+    $(".mapscroll").css({height:height});
+    scrollEvent.onScroll();
     
-    //projection = d3.geo.albersUsa().scale(mapw).translate([(mapw/2), (maph/2)]);
-    //path = d3.geo.path().projection(projection);;
-
   }
 
-  var fixedInlineElements = function(pos){
-    $(".fixed-top").each(function(i, el){
-
-      //console.log(pos, $(el).offset().top, $(el).parent().outerHeight(), ($(el).parent().outerHeight()+$(el).parent().offset().top));
-
-      if(($(el).parent().offset().top < pos) && 
-         ($(el).parent().offset().top + $(el).parent().outerHeight()  > pos)){
-
-        $(el).addClass("apply")
-
-      }else{
-        $(el).removeClass("apply")
-        
+  var scrollEvent = {
+    handlers: {top:[], middle:[], bottom:[], inview:[]},
+    currentElements: {top:[], middle:[], bottom:[], inview:[]},
+    on:function(pos, el, addCb, removeCb){
+      var elements = el.toArray();
+      var i = 0;
+      for(e in elements){
+        if(typeof elements[e] !== "object")
+          continue;
+        scrollEvent.handlers[pos].push({el:elements[e], addCb:addCb, removeCb:removeCb, count:i});
+        i++;
       }
-    });
-    
-  };
-  var scrollTriggers = function(pos){
+    },
+    onScroll:function(){
+      var pos = $(window).scrollTop();
+      var height = $(window).height();
 
-    //pos += $(window).height()/2;
-
-    $("[data-trigger]").each(function(i, el){
-      var t = $(el).attr("data-trigger").split(",");
-      //if the element is in the middle of the page
-      if(($(el).offset().top < (pos +$(window).height()/2)) && 
-         ($(el).offset().top + $(el).outerHeight()  > (pos + $(window).height()/2))){
-
-
-
-          
-        if(t.indexOf("fellowshipmap") >= 0){
-          var a = $(el).attr("data-action");
-          var cities = $(el).attr("data-city").split(",");
-          for(c in cities){
-
-          
-            if(a == "add"){
-              //add to map.
-              
-              if(svg.select("circle.city."+cities[c])[0][0] === null){
-
-                var coordinates = projection(cityLocations[cities[c]].reverse());
-                svg.append('svg:circle')
-                  .attr('cx', coordinates[0])
-                  .attr('cy', coordinates[1])
-                  .attr('r', 5)
-                  .attr('class', "city "+cities[c]);
-              }
-
-            }else if(a == "highlight"){
-              console.log("highlight", cities[c]);
-              svg.selectAll("circle.city").transition().duration(1000).style("fill", "333").attr("r", 5);
-              svg.select("circle.city."+cities[c]).transition().duration(600).style("fill", "red").attr("r", 15);
-
-              //tranform is someway
-            }
-          }
-
-        }
-      }else{
-        // since it was an add, and we are now outside of of the element, remove!
-
-/*        if(t.indexOf("fellowshipmap") >= 0){
-          var a = $(el).attr("data-action");
-          if((a == "add") && (svg !== undefined))
-            svg.select("circle.city").remove()
-        } */
-      }
-
-      //if the element is at the top of the page
-      if(($(el).offset().top < pos) && 
-         ($(el).offset().top + $(el).outerHeight()  > pos)){
-
-        if(t.indexOf("addclass") >=0){
-          $($(el).attr("data-class-target")).addClass($(el).attr("data-class"));
-          $($(el).attr("data-class-target")).parent().css("padding-top", $($(el).attr("data-class-target")).height());
-
-        }
-
-      }else{
-
-        if(t.indexOf("addclass") >= 0){
-          $($(el).attr("data-class-target")).parent().css("padding-top", "inherit");
-          $($(el).attr("data-class-target")).removeClass($(el).attr("data-class"));
-        }
-
-      }
-
-    });
-
-  };
-
-  
-  var onScroll = function(){
-  	var pos = $(window).scrollTop();
-    //hides nav when user starts to scroll
-    if($(window).scrollTop() > 0) {
-  	  $("nav").fadeOut();
-    } else {
-  	  $("nav").fadeIn();
-    }
-    //$("div.pagebg").css({opacity:1});  
-    $(".page").each(function(i, el){
-      //if(i ==0)
-      //  console.log(el, $(el).offset().top, $(el).offset().top, $(el).outerHeight(), $(window).scrollTop());
-
-      if(($(el).offset().top <= $(window).scrollTop()) &&
-         ($(el).offset().top+$(el).outerHeight() >= $(window).scrollTop())){
-        //in transition 
+      if(pos < 0)
+        return;
       
-        var percPage = ($(window).scrollTop() - $(el).offset().top) / ($(el).outerHeight());
+      for(e in scrollEvent.handlers.middle){
+        var el = scrollEvent.handlers.middle[e].el;
+        if(typeof el !== "object")
+          continue;
 
-//        console.log(percPage);
-
-
-        
-
-          $($("div.pagebg")[i]).fadeIn({duration:700});
-        //$($("div.pagebg")[i+1]).fadeOut({duration:700});
-        //$($("div.pagebg")[i-1]).fadeOut({duration:700});
-  
-       
-
-    
-      }else{
-        $($("div.pagebg")[i]).fadeOut({duration:500});
+        console.log(el);
+        //middle
+        if(($(el).offset().top <= (pos + height/2)) && 
+           ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
+          scrollEvent.setCurrentElement("middle", scrollEvent.handlers.middle[e]);
+       }else{
+          scrollEvent.removeCurrentElement("middle", scrollEvent.handlers.middle[e]);
+        }
       }
-    });
+
+      for(e in scrollEvent.handlers.top){
+        var el = scrollEvent.handlers.top[e].el;
+        if(typeof el !== "object")
+          continue;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top <= pos) && 
+           ($(el).offset().top + $(el).outerHeight()  >= pos)){
+          scrollEvent.setCurrentElement("top", scrollEvent.handlers.top[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("top", scrollEvent.handlers.top[e]);
+        }
+      }
+      for(e in scrollEvent.handlers.bottom){
+        var el = scrollEvent.handlers.bottom[e].el;
+        if(typeof el !== "object")
+          continue;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top <= (pos+ height)) && 
+           ($(el).offset().top + $(el).outerHeight()  >= (pos +height))){
+          scrollEvent.setCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
+        }
+      }
+      for(e in scrollEvent.handlers.inview){
+        var el = scrollEvent.handlers.inview[e].el;
+        if(typeof el !== "object")
+          continue;
+
+        //if the element is at the top of the page
+        if(($(el).offset().top + $(el).outerHeight() >= pos) && 
+           ($(el).offset().top   <= (pos +height))){
+          scrollEvent.setCurrentElement("inview", scrollEvent.handlers.inview[e]);
+
+        }else{
+          scrollEvent.removeCurrentElement("inview", scrollEvent.handlers.inview[e]);
+        }
+      }
+
+
+    },
+    setCurrentElement:function(pos, handler){
+
+      if(scrollEvent.currentElements[pos].indexOf(handler) === -1){
+        scrollEvent.currentElements[pos].push(handler);
+        handler.addCb(handler.el,handler.count);
+      }
+    },
+    removeCurrentElement:function(pos, handler){
+
+      if(scrollEvent.currentElements[pos].indexOf(handler) >=0 ){
+        delete scrollEvent.currentElements[pos][scrollEvent.currentElements[pos].indexOf(handler)];
+        handler.removeCb(handler.el,handler.count);
+      }
+    }
+  };
+
+
+  scrollEvent.on("middle", $(".page"), function(el,i){
+    $($("div.pagebg")[i]).fadeIn({duration:500});
+    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
+      $("div.sidebartitle").hide();
+    else{
+      $($("div.sidebartitle")[i]).show();
+      $($("div.sidebartitle")[i]).addClass("appear");
+    }
+  }, function(el, i){
+    $($("div.pagebg")[i]).fadeOut({duration:700});
+    $($("div.sidebartitle")[i]).removeClass("appear");
+
+  });
+  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+
+  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+
+    $("#mapcontainer").css({"position":"absolute", "top":0});
+    $(".yeartitle h1").css("color","#"+color2011).text("2011");
+    $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
+
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("top", $(".fellowship"), function(el,i){
+    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
+
+
+  }, function(el, i, pos){
+
+    if($(".fellowship").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    else
+      $("#mapcontainer").css({"position":"absolute", "top":0});
     
-    fixedInlineElements(pos);
-    scrollTriggers(pos)
+  });
+  scrollEvent.on("top", $(".scrollout"), function(el, i){
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+
+  }, function(){});
+  var arrowInterval =0;
+  var mapcurrentyear = "2011";
+  scrollEvent.on("middle", $(".mapscroll"), function(el,i){
+
+    if($(el).attr("class").indexOf("fellowship2011") >= 0){
+      $(".yeartitle h1").css("color","#"+color2011).text("2011");
+      $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
+      mapcurrentyear = "2011";
+      interaction.hideTooltips();
+      displayedMarkers = [];
+      markerLayer.filter(function(f) {
+        return f.properties['year'] === '2011';
+      });
+
+      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+
+      //setTimeout(showRandomTooltip, 1200);
+
+    }
+    
+    if($(el).attr("class").indexOf("fellowship2012") >= 0){
+      $(".yeartitle h1").css("color","#"+color2012).text("2012");
+      $(".yeartitle h2").css("color","#"+color2012).text("The Fellowship");
+      mapcurrentyear = "2012";
+      interaction.hideTooltips();
+      displayedMarkers = [];
+      markerLayer.filter(function(f) {
+        return f.properties['year'] === '2012';
+      });
+      
+      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+
+      //setTimeout(showRandomTooltip, 1200);
+    }
+
+    arrowInterval = setInterval(function(){
+      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+        $(".downarrow").animate({opacity:0}, 800, "swing");
+      })}, 2000);
+
+  }, function(el, i){
+    clearInterval(arrowInterval);
+    $(".downarrow").animate({opacity:1}, 800, "swing");
+  });
+
+  $(".downarrow").on("click touchend", function(){
+
+    if(mapcurrentyear === "2011"){
+     $("html body").animate({
+        scrollTop: $("div.fellowship2012.mapscroll").offset().top
+      }, 1500);
+    }else if(mapcurrentyear === "2012"){
+      $("html body").animate({
+        scrollTop: $("div.story div.cityLeaders").offset().top - 20
+      }, 1500);
+    }
+  })
+ scrollEvent.on("top", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+ scrollEvent.on("bottom", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+
+  $(".navbar .nav li a").on("click touchend", function(e){
+    e.preventDefault();
+    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
+    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
+  });
+
+
+
+  var showRandomTooltip = function(){
+
+    currentMarker = displayedMarkers[Math.floor(Math.random()*displayedMarkers.length)]
+
+    currentMarker.showTooltip();
+
+    point = map.locationPoint({
+      lat: currentMarker.data.geometry.coordinates[1],
+      lon: currentMarker.data.geometry.coordinates[0]
+    })
+
+    var quarter = map.dimensions.y * (1/ 4);
+    point.y -= quarter;
+    map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
 
   }
 
-  setSize();
-  onScroll();
-  $(window).resize(setSize);
-  $(window).scroll(onScroll);
+  scrollEvent.onScroll();
+  $(window).scroll(scrollEvent.onScroll);
   
+    
+  setSize();
+  $(window).resize(setSize);
 
-  var mapw = width-500;
-  var maph = (0.5*mapw);
+  $('[id^="myCarousel"]').carousel({
+    interval: false,
+    cycle: true
+  });
 
-  var projection = d3.geo.albersUsa().scale(mapw).translate([(mapw/2), (maph/2)]);
-  var path = d3.geo.path().projection(projection);;
+  $('.captpop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
 
-//  var path = d3.geo.path();
+  $('.morefellowspop').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
 
-  var svg = d3.select("#fellowshipMap").append("svg")
-    .attr("width", mapw)
-    .attr("height", maph);
+  $('#map').delegate(".fellowpop", "mouseenter", function(e){
+    var name = $(e.currentTarget).attr('data-original-title');
+    $(e.currentTarget).parents('.innercard').find('.name').text(name);
+  });
+  $("#map").delegate(".fellowpop", "mouseleave", function(e){
+    $(e.currentTarget).parents('.innercard').find('.name').html('&nbsp;');
+  });
 
-  d3.json("js/us.json", function(error, topology) {
-    usTopology = topology; 
-    svg.selectAll("path")
-      .data(topojson.object(topology, topology.objects.states).geometries)
-      .enter().append("path")
-      .attr("d", path);
+  $('.appspop').popover({
+    placement: 'top',
+    trigger: 'hover',
+  });
+
+  $('.footnote').popover({
+    placement: 'top',
+    trigger: 'hover'
+  });
+
+
+  // Create map
+  var layer = mapbox.layer().id('dmt.map-cdkzgmkx');
+
+
+  var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
+
+  map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
+
+  var markerLayer = mapbox.markers.layer().features(cityLocations);
+  var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
+
+  var displayedMarkers = [];
+  var currentMarker = null;
+
+  markerLayer.sort(function(a, b) {
+    return a.geometry.coordinates[0] -
+      b.geometry.coordinates[0];
+  });
+
+  markerLayer.addCallback("markeradded", function(l, m){
+    if($(m.element).attr("class").indexOf("simplestyle-marker") === -1)
+      return;
+    displayedMarkers.push(m);
+    $(m.element).css("top", "-1000px");
+    
+    setTimeout(function(){
+      $(m.element).animate({"top":"0px"}, 400);
+    }, Math.random() * 300);
+
+
+  });
+
+
+
+  var markerFactory = function(m) {
+
+    // Create a marker using the simplestyle factory
+    var elem = $(mapbox.markers.simplestyle_factory(m));
+    elem.attr("data-city", m.properties.city);
+    elem.attr("data-year", m.properties.year);
+
+    // Add function that centers marker on click
+    MM.addEvent(elem[0], 'click', function(e) {
+      markers  = markerLayer.markers();
+      for(mark in markers){
+        if((typeof markers[mark] !== "object") || ($(markers[mark].element).attr("class").indexOf("simplestyle-marker") === -1))
+          continue;
+        if(($(e.toElement).attr("data-city") === markers[mark].data.properties.city) &&
+           ($(e.toElement).attr("data-year") === markers[mark].data.properties.year)){
+          currentMarker = markers[mark];
+        }        
+      }
+
+      point = map.locationPoint({
+        lat: m.geometry.coordinates[1],
+        lon: m.geometry.coordinates[0]
+      })
+      var quarter = map.dimensions.y * (3/ 8);
+      point.y -= quarter;
+      map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
+    });
+
+
+
+    if(m.properties.year == "2011")
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2011+"@2x.png");
+    else
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2012+"@2x.png");
+      
+    return elem[0]; 
+  }
+
+  
+  var cycleMarker = function(direction){
+
+    var position = displayedMarkers.indexOf(currentMarker);
+
+    if(direction === "next"){
+
+       if(position +1 >= displayedMarkers.length)
+        position =0;
+      else
+        position++;
+
+    }else{
+      if(position -1 < 0)
+        position =displayedMarkers.length-1;
+      else
+        position--;
+    }
+    currentMarker = displayedMarkers[position];
+    displayedMarkers[position].showTooltip();
+
+    point = map.locationPoint({
+      lat: currentMarker.data.geometry.coordinates[1],
+      lon: currentMarker.data.geometry.coordinates[0]
+    })
+
+    var quarter = map.dimensions.y * (1/ 8);
+    point.y -= quarter;
+    map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
+    
+  }
+
+
+  markerLayer.factory(markerFactory);
+
+
+  interaction.formatter(function(feature) {
+    var html = $("<div>").append($(".citycardscontainer .citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
+    html = "<div class='close'>X</div>" +html;
+    return html;
+  });
+
+  $("#map").delegate(".prev,.next", "click", function(e){
+    cycleMarker($(e.currentTarget).attr("class"));
+  });
+
+  $("#map").delegate(".close", "touchend click", function(e){
+    interaction.hideTooltips();
+    map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
+  });
+
+  map.addLayer(markerLayer).setExtent(markerLayer.extent());
+
+  markerLayer.filter(function(f) {
+    return f.properties['year'] === '';
+  });
+
+
+  $($("#map").children()[1]).css("z-index", "1");
+
+  // Attribute map
+  map.ui.attribution.add()
+    .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
+
+
+  var colors = ["#5db7ad", "#88c5be", "#9ccdc8", "#aed5d1", "#c2dedb", "#d4e7e5", "#e8f2f1", "#FFFFFF"];
+
+  $(".bargraph").each(function(i, el){
+
+    var that = this;
+
+    var total = 0; 
+    // Count all the money for each data point in the source
+    $("."+$(el).attr("data-source")).each(function(i, el){
+      // remove commas and dollar signs
+      total += parseInt($(el).text().replace(/,/g, "").replace("$", ""));
+    });
+
+    // for each group add the hover events
+    $(".financialsgroup").each(function(i, el) {
+      var group = $(el).attr("data-group");
+      $(el).hover(function() {
+        $(el).addClass("active");
+        $('.group' + group).addClass('active');
+      }, function(){
+        $(el).removeClass("active");
+        $('.group' + group).removeClass('active');
+      });
+    });
+
+    // for each data point add a section to the graph and hover events
+    $("."+$(el).attr("data-source")).each(function(i, el){
+      var count = parseInt($(el).text().replace(/,/g, "").replace("$", ""));
+      var perc = (count/total)*100;
+      var group = $(el).attr("data-group");
+
+      // create section
+      var section = $("<div class='graphsection'></div>").css({
+        width:perc + "%",
+        background:colors[i]
+      });
+
+      // add classs for group
+      if(group !== undefined) {
+        $(el).addClass('group' + group);
+        section.addClass('group' + group);
+      }
+
+      //hover over the numbers
+      $(el).hover(highlight, unhighlight);
+      $(section).hover(highlight, unhighlight);
+
+      function  highlight() {
+        $(el).addClass('active');
+        $(section).addClass('active');
+      }
+
+      function unhighlight() {
+        $(el).removeClass('active');
+        $(section).removeClass('active');
+      }
+
+
+      $(that).append(section);
+    });
 
 
 
   });
 
+
+
+
 });
 
 
+if (!Array.prototype.indexOf)
+{
+  Array.prototype.indexOf = function(elt /*, from*/)
+  {
+    var len = this.length >>> 0;
 
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0)
+         ? Math.ceil(from)
+         : Math.floor(from);
+    if (from < 0)
+      from += len;
+
+    for (; from < len; from++)
+    {
+      if (from in this &&
+          this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
