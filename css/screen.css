@@ -96,6 +96,16 @@ li {
   margin: 20px 0px 65px 0px;
 }
 
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logo img {
+  max-width: 85px;
+}
+
 
 
 /*****************************************************************************/
