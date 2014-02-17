@@ -51,13 +51,13 @@ var cityLocations = [{
     "properties": { "city": "neworleans", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "lives" }
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "lives"}
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
     "properties": { "city": "detroit", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "story": "lives" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "lives" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
     "properties": { "city": "oakland", "year":"2013", "type": "fellowship" }
@@ -109,12 +109,6 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
     "properties": { "city": "washington dc", "year":"2013", "type": "brigade" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
-    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "house" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
-    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "lives" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
     "properties": { "city": "richmond ca", "year":"2013", "type": "peer" }
@@ -181,15 +175,36 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
     "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer" }
+}];
+
+var dataStandards = [{
+    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
+    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "lives" }
+}, {
+  "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+  "properties": { "city": "kansas city mo", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
+    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012", "type": "story", "story": "lives"}
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "story", "story": "lives" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.906474, 43.038902]},
-    "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"code across" }
+    "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.285873, 36.850769]},
-    "properties": { "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"code across" }
+    "properties": { "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"codeacross" }
 }];
 
 var fellowshipColor = "e87d2b";
+var highlightColor = "69579C";
     
 
 if (typeof console === "undefined" || typeof console.log === "undefined") {
@@ -387,6 +402,8 @@ $(function(){
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
+  var standarsLayer = mapbox.markers.layer().features(dataStandards);
+
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
   var displayedMarkers = [];
@@ -439,11 +456,15 @@ $(function(){
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
 
-    elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
+    if(m.properties.type == "story")
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-l+"+highlightColor+"@2x.png");
+    else
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
       
     return elem[0]; 
   }
 
+  
   
   var cycleMarker = function(direction){
 
@@ -478,6 +499,7 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
+  standarsLayer.factory(markerFactory);
 
 
   interaction.formatter(function(feature) {
@@ -501,24 +523,54 @@ $.each(years, function(index, value){
   $('.map'+value).click(click_year(value));
 });
 
-
-    
-
-
 // A closure for clicking years. You give it a year, and it returns a function
-      // that, when run, clicks that year. It's this way in order to be used as both an
-      // event handler and run manually.
-      function click_year(y) {
-          return function() {
-            $('.map'+y).css('color' ,' #fff');
-              markerLayer.filter(function(f) {
-                  return f.properties.year <= y;
-              });
-              return false;
-          };
-      }
+// that, when run, clicks that year. It's this way in order to be used as both an
+// event handler and run manually.
+function click_year(y) {
+    return function() {
+      $('.map'+y).css('color' ,' #fff')
+        markerLayer.filter(function(f) {
+            return f.properties.year <= y;
+        });
+        return false;
+    };
+}
 
-      map.addLayer(markerLayer);
+$('#filter-lives').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  map.addLayer(standarsLayer);
+  markerLayer.filter(function(f) {
+      return f.properties['story'] === 'lives';
+  });
+  return false;
+});
+
+$('#filter-flu').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  markerLayer.filter(function(f) {
+      return f.properties['story'] === 'flu';
+  });
+  return false;
+});
+
+$('#filter-codeacross').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  markerLayer.filter(function(f) {
+      return f.properties['story'] === 'codeacross';
+  });
+  return false;
+});
+
+map.addLayer(markerLayer);
 
 
 
