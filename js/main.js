@@ -1,43 +1,211 @@
 var cityLocations = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2011" }
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship" }
 },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "city": "seattle", "year": "2011" }
+    "properties": { "city": "seattle", "year": "2011", "type": "fellowship" }
 }, {
-    "geometry": { "type": "Point", "coordinates": [-122.4183, 37.7750]},
-    "properties": { "city": "sanfrancisco", "year":"2011" }
+    "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
+    "properties": { "city": "asheville", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
+    "properties": { "city": "grand rapids", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-76.349444, 36.975]},
+    "properties": { "city": "hampton roads", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.00, 38.05]},
+    "properties": { "city": "lexington", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
+    "properties": { "city": "raleigh", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-69.233333, 45.250556]},
+    "properties": { "city": "maine", "year":"2012", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-77.310791, 38.848264]},
+    "properties": { "city": "nova", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2012" }
+    "properties": { "city": "philadelphia", "year": "2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.6365, 32.8398]},
-    "properties": { "city": "macon", "year":"2012" }
+    "properties": { "city": "macon", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
-    "properties": { "city": "santacruz", "year":"2012" }
+    "properties": { "city": "santacruz", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "city": "chicago", "year":"2012" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
-    "properties": { "city": "honolulu", "year":"2012" }
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship" }
 },{
     "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
-    "properties": { "city": "neworleans", "year":"2012" }
+    "properties": { "city": "neworleans", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "city": "austin", "year":"2012" }
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "lives"}
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
-    "properties": { "city": "detroit", "year":"2012" }
+    "properties": { "city": "detroit", "year":"2012", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
+    "properties": { "city": "summit county", "year":"2013", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-150.02, 61.17]},
+    "properties": { "city": "anchorage", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-73.15, 44.47]},
+    "properties": { "city": "burlington", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
+    "properties": { "city": "houston", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-80.28, 25.8]},
+    "properties": { "city": "miami", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-111.97, 40.78]},
+    "properties": { "city": "salt lake city", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-95.90, 36.20]},
+    "properties": { "city": "tulsa", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
+    "properties": { "city": "washington dc", "year":"2013", "type": "brigade" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
+    "properties": { "city": "richmond ca", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.330766, 32.755488]},
+    "properties": { "city": "fort worth", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-76.612189, 39.290385]},
+    "properties": { "city": "baltimore", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-77.240515, 39.154743]},
+    "properties": { "city": "Montgomery County  MD", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-82.800103, 27.965853]},
+    "properties": { "city": "Clearwater FL", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.156077, 37.724930]},
+    "properties": { "city": "San Leandro  CA", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-117.350594, 33.158093]},
+    "properties": { "city": "Carlsbad CA", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-104.821363, 38.833882]},
+    "properties": { "city": "Colorado Springs CO", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-78.886694, 33.689060]},
+    "properties": { "city": "Myrtle Beach SC", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.143019, 37.441883]},
+    "properties": { "city": "Palo Alto  CA", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-87.346427, 41.593370]},
+    "properties": { "city": "Gary IN", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.133068, 33.214841]},
+    "properties": { "city": "Denton TX", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-87.687697, 42.045072]},
+    "properties": { "city": "Evanston IL", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-106.609991, 35.110703]},
+    "properties": { "city": "Albuquerque  NM", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.676207, 45.523452]},
+    "properties": { "city": "Portland OR", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-84.387982, 33.748995]},
+    "properties": { "city": "Atlanta  GA", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-86.526386, 39.165325]},
+    "properties": { "city": "Bloomington  IN", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-89.093995, 42.271131]},
+    "properties": { "city": "Rockford IL", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-73.756232, 42.652579]},
+    "properties": { "city": "Albany NY", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-96.800451, 32.780140]},
+    "properties": { "city": "Dallas TX", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-105.500548, 40.151211]},
+    "properties": { "city": "Boulder County CO", "year":"2013", "type": "peer" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
+    "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer" }
 }];
 
-var color2011 = "fedd44",
-    color2012 = "C82A45";
+var dataStandards = [{
+    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
+    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "lives" }
+}, {
+  "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+  "properties": { "city": "kansas city mo", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
+    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012", "type": "story", "story": "lives"}
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "story", "story": "lives" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-87.906474, 43.038902]},
+    "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-76.285873, 36.850769]},
+    "properties": { "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"codeacross" }
+}];
+
+var fellowshipColor = "e87d2b";
+var highlightColor = "69579C";
+    
 
 if (typeof console === "undefined" || typeof console.log === "undefined") {
   console = {log:function(){}};
@@ -172,130 +340,6 @@ $(function(){
 
 
 
-  scrollEvent.on("middle", $(".page"), function(el,i){
-    $($("div.pagebg")[i]).fadeIn({duration:500});
-    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
-      $("div.sidebartitle").hide();
-    else{
-      $($("div.sidebartitle")[i]).show();
-      $($("div.sidebartitle")[i]).addClass("appear");
-    }
-  }, function(el, i){
-    $($("div.pagebg")[i]).fadeOut({duration:700});
-    $($("div.sidebartitle")[i]).removeClass("appear");
-
-  });
-  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
-    if($(el).attr("src") === undefined)
-      $(el).attr("src", $(el).attr("data-src"))
-  }, function(el, i, pos){
-  });
-
-  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
-
-    $("#mapcontainer").css({"position":"absolute", "top":0});
-    $(".yeartitle h1").css("color","#"+color2011).text("2011");
-    $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
-
-  }, function(el, i, pos){
-  });
-  scrollEvent.on("top", $(".fellowship"), function(el,i){
-    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
-
-
-  }, function(el, i, pos){
-
-    if($(".fellowship").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-    else
-      $("#mapcontainer").css({"position":"absolute", "top":0});
-    
-  });
-  scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-
-  }, function(){});
-  var arrowInterval =0;
-  var mapcurrentyear = "2011";
-  scrollEvent.on("middle", $(".mapscroll"), function(el,i){
-
-    if($(el).attr("class").indexOf("fellowship2011") >= 0){
-      $(".yeartitle h1").css("color","#"+color2011).text("2011");
-      $(".yeartitle h2").css("color","#"+color2011).text("The Fellowship");
-      mapcurrentyear = "2011";
-      interaction.hideTooltips();
-      displayedMarkers = [];
-      markerLayer.filter(function(f) {
-        return f.properties['year'] === '2011';
-      });
-
-      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
-
-      //setTimeout(showRandomTooltip, 1200);
-
-    }
-    
-    if($(el).attr("class").indexOf("fellowship2012") >= 0){
-      $(".yeartitle h1").css("color","#"+color2012).text("2012");
-      $(".yeartitle h2").css("color","#"+color2012).text("The Fellowship");
-      mapcurrentyear = "2012";
-      interaction.hideTooltips();
-      displayedMarkers = [];
-      markerLayer.filter(function(f) {
-        return f.properties['year'] === '2012';
-      });
-      
-      map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
-
-      //setTimeout(showRandomTooltip, 1200);
-    }
-
-    arrowInterval = setInterval(function(){
-      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
-        $(".downarrow").animate({opacity:0}, 800, "swing");
-      })}, 2000);
-
-  }, function(el, i){
-    clearInterval(arrowInterval);
-    $(".downarrow").animate({opacity:1}, 800, "swing");
-  });
-
-  $(".downarrow").on("click touchend", function(){
-
-    if(mapcurrentyear === "2011"){
-     $("html body").animate({
-        scrollTop: $("div.fellowship2012.mapscroll").offset().top
-      }, 1500);
-    }else if(mapcurrentyear === "2012"){
-      $("html body").animate({
-        scrollTop: $("div.story div.cityLeaders").offset().top - 20
-      }, 1500);
-    }
-  })
- scrollEvent.on("top", $(".page"), function(el,i){
-
-   $(".navbar li").removeClass("active");;
-   if($(el).attr("data-section") !== "")
-     $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
- },function(){
-
- });
- scrollEvent.on("bottom", $(".page"), function(el,i){
-
-   $(".navbar li").removeClass("active");;
-   if($(el).attr("data-section") !== "")
-     $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
- },function(){
-
- });
-
-  $(".navbar .nav li a").on("click touchend", function(e){
-    e.preventDefault();
-    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
-    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
-  });
 
 
 
@@ -338,14 +382,6 @@ $(function(){
     trigger: 'hover'
   });
 
-  $('#map').delegate(".fellowpop", "mouseenter", function(e){
-    var name = $(e.currentTarget).attr('data-original-title');
-    $(e.currentTarget).parents('.innercard').find('.name').text(name);
-  });
-  $("#map").delegate(".fellowpop", "mouseleave", function(e){
-    $(e.currentTarget).parents('.innercard').find('.name').html('&nbsp;');
-  });
-
   $('.appspop').popover({
     placement: 'top',
     trigger: 'hover',
@@ -366,6 +402,8 @@ $(function(){
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
+  var standarsLayer = mapbox.markers.layer().features(dataStandards);
+
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
   var displayedMarkers = [];
@@ -380,12 +418,11 @@ $(function(){
     if($(m.element).attr("class").indexOf("simplestyle-marker") === -1)
       return;
     displayedMarkers.push(m);
-    $(m.element).css("top", "-1000px");
+    // $(m.element).css("top", "-1000px");
     
     setTimeout(function(){
       $(m.element).animate({"top":"0px"}, 400);
     }, Math.random() * 300);
-
 
   });
 
@@ -419,16 +456,15 @@ $(function(){
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
 
-
-
-    if(m.properties.year == "2011")
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2011+"@2x.png");
+    if(m.properties.type == "story")
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-l+"+highlightColor+"@2x.png");
     else
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+color2012+"@2x.png");
+      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
       
     return elem[0]; 
   }
 
+  
   
   var cycleMarker = function(direction){
 
@@ -463,10 +499,11 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
+  standarsLayer.factory(markerFactory);
 
 
   interaction.formatter(function(feature) {
-    var html = $("<div>").append($(".citycardscontainer .citycard[data-city='"+feature.properties.city+"'][data-year='"+feature.properties.year+"']").clone()).html();
+    var html = $("<div>").append($(".citycardscontainer [data-year='"+feature.properties.year+"']").clone()).html();
     html = "<div class='close'>X</div>" +html;
     return html;
   });
@@ -480,11 +517,61 @@ $(function(){
     map.ease.to(map.extentCoordinate(markerLayer.extent())).optimal();
   });
 
-  map.addLayer(markerLayer).setExtent(markerLayer.extent());
+  var years = ["2011", "2012", "2013"]
 
+$.each(years, function(index, value){
+  $('.map'+value).click(click_year(value));
+});
+
+// A closure for clicking years. You give it a year, and it returns a function
+// that, when run, clicks that year. It's this way in order to be used as both an
+// event handler and run manually.
+function click_year(y) {
+    return function() {
+      $('.map'+y).css('color' ,' #fff')
+        markerLayer.filter(function(f) {
+            return f.properties.year <= y;
+        });
+        return false;
+    };
+}
+
+$('#filter-lives').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  map.addLayer(standarsLayer);
   markerLayer.filter(function(f) {
-    return f.properties['year'] === '';
+      return f.properties['story'] === 'lives';
   });
+  return false;
+});
+
+$('#filter-flu').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  markerLayer.filter(function(f) {
+      return f.properties['story'] === 'flu';
+  });
+  return false;
+});
+
+$('#filter-codeacross').click(function(e) {
+  $('#map-story ul li a').removeClass('active');
+  $(this).addClass = 'active';
+  // The setFilter function takes a GeoJSON feature object
+  // and returns true to show it or false to hide it.
+  markerLayer.filter(function(f) {
+      return f.properties['story'] === 'codeacross';
+  });
+  return false;
+});
+
+map.addLayer(markerLayer);
+
 
 
   $($("#map").children()[1]).css("z-index", "1");
@@ -561,6 +648,102 @@ $(function(){
 
 
 
+  scrollEvent.on("middle", $(".page"), function(el,i){
+    $($("div.pagebg")[i]).fadeIn({duration:500});
+    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
+      $("div.sidebartitle").hide();
+    else{
+      $($("div.sidebartitle")[i]).show();
+      $($("div.sidebartitle")[i]).addClass("appear");
+    }
+  }, function(el, i){
+    $($("div.pagebg")[i]).fadeOut({duration:700});
+    $($("div.sidebartitle")[i]).removeClass("appear");
+
+  });
+  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+
+  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+
+    $("#mapcontainer").css({"position":"absolute", "top":0});
+
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("top", $(".fellowship"), function(el,i){
+    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
+
+
+  }, function(el, i, pos){
+
+    if($(".fellowship").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    else
+      $("#mapcontainer").css({"position":"absolute", "top":0});
+    
+  });
+  scrollEvent.on("top", $(".scrollout"), function(el, i){
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+
+  }, function(){});
+  var arrowInterval =0;
+  var mapcurrentyear = "2011";
+  scrollEvent.on("middle", $(".mapscroll"), function(el,i){
+    $('.yeartitle div').css('color' ,' #000');
+    click_year(2011)();
+      setTimeout(function(){
+        click_year(2012)()
+        map.addLayer(markerLayer);
+      }, 2500);
+
+      setTimeout(function(){
+        click_year(2013)()
+        map.addLayer(markerLayer);
+      }, 5000);
+
+    arrowInterval = setInterval(function(){
+      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+        $(".downarrow").animate({opacity:0}, 800, "swing");
+      })}, 2000);
+
+  }, function(el, i){
+    clearInterval(arrowInterval);
+    $(".downarrow").animate({opacity:1}, 800, "swing");
+  });
+
+  $(".downarrow").on("click touchend", function(){
+
+     $("html body").animate({
+        scrollTop: $("div.mapscroll").offset().top
+      }, 1500);
+  })
+ scrollEvent.on("top", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+ scrollEvent.on("bottom", $(".page"), function(el,i){
+
+   $(".navbar li").removeClass("active");;
+   if($(el).attr("data-section") !== "")
+     $(".navbar li."+$(el).attr("data-section")).addClass("active");
+   
+ },function(){
+
+ });
+
+  $(".navbar .nav li a").on("click touchend", function(e){
+    e.preventDefault();
+    var section = $(e.currentTarget).parent().attr("class").split(" ")[0];
+    $("body,html").animate({scrollTop: $($("div.page[data-section='"+section+"']")[0]).offset().top}, 1000);
+  });
 
 });
 
