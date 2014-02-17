@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6435252/678502/css/fonts.css" />
+
 /*****************************************************************************/
 /*
 /* Common
@@ -26,7 +28,8 @@ body {
 }
 
 h1 {
-  margin-bottom: 1em;
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  margin: .25em .25em 1em 0em;
 }
 
 p {
@@ -69,6 +72,44 @@ li {
 
 /*****************************************************************************/
 /*
+/* 2013 Updates
+/*
+/*****************************************************************************/
+
+.stats2013{
+  border-left: 2px solid white;
+  padding: 20px 0px 25px 30px;
+  margin-left: 15px;
+}
+
+.stats2013 p{
+  margin: 0px;
+}
+
+.stats2013 h3{
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
+  margin: 0px 0px 8px 0px;
+  line-height: 40px;
+}
+
+.community .bios{
+  margin: 20px 0px 65px 0px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logo img {
+  max-width: 85px;
+}
+
+
+
+/*****************************************************************************/
+/*
 /* Home
 /*
 /*****************************************************************************/
@@ -93,37 +134,28 @@ li {
   border-color: #1b1b1b;
 }
 
-#loading{ 
-  background:#C82A45;
-  position:fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  bottom:0px;
-  z-index:10000;
-}
 
-#loading img{
+#title img{
   display:block;
-  margin:100px auto 0px;
+  margin:-175px auto 0px;
 }
 
-#loading h1,
-#loading p {
+#title h1,
+#title p {
   text-align: center;
   color:#fff;
   text-shadow: none;
 }
 
-#loading h1 {
-  font-size: 220px;
-  margin: 90px auto 117px;
+#title h1 {
+  font-size: 189px;
+  margin: 78px auto 105px;
   font-weight: 600;
 }
  
-#loading p{ 
+#title p{ 
   text-transform:uppercase;
-  font-size: 63px;
+  font-size: 65px;
   font-weight: 300;
 }
 
@@ -139,17 +171,19 @@ ul.posts span {
 }
 
 h2 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 80px;
-  line-height: 50px;
+  line-height: 40px;
 }
 
 h3 {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   font-size: 40px;
-  text-align: left;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 h3 span {
@@ -157,15 +191,16 @@ h3 span {
 }
 
 h4 {
-  text-transform: uppercase;
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  letter-spacing: 2px;
   text-align: left;
   font-size: 24px;
   clear: both;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 h5 {
-  text-align: left;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
@@ -179,9 +214,9 @@ h6 {
   text-transform: uppercase;
 }
 
-p { 
+p {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 18px;
   text-align: left;
 }
 
@@ -239,7 +274,6 @@ input[type="text"] {
 
 .page.quote h1,
 .page.story h1 { 
-  text-align:left;
   color:#fff;
   font-size: 56px;
   list-style: none;
@@ -424,6 +458,10 @@ iframe.twitter-share-button{
   padding-right: 15px;
 }
 
+.bioleft p {
+  text-align: right;
+}
+
 .bioright,
 .apps .bioright {
   padding-left: 15px;
@@ -476,10 +514,12 @@ padding-left: 20px;
   margin-top: 30px;
 }
 
+
 .market img {
-  margin: 30px 0px;
+  margin: 0px 0px;
   display: block;
 }
+
 
 .getinvolved {
   background: rgba(255, 255, 255, .75);
@@ -572,8 +612,12 @@ padding-left: 20px;
   margin-bottom: 200px;
 }
 
+.cfa h1{
+  text-align: right;
+}
+
 .cfa p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
 }
 
@@ -719,6 +763,14 @@ padding-left: 20px;
   text-shadow: none;
 }
 
+.cityseal {
+  background-image: url('../img/city_seals.jpg');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
 
 .bostonseal,
 .phillyseal,
@@ -879,6 +931,23 @@ padding-left: 20px;
   background-image: url('../img/on.png');
   background-size: 135px;
   width: 135px;
+}
+
+/*
+Temporary css for image placeholders
+*/
+
+.appspop {
+  background-image: url('../img/apps_logos.png');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
+
+a.appspop:hover  {
+  border: none;
 }
 
 .srtracker,
@@ -1415,24 +1484,6 @@ padding-left: 20px;
   margin-bottom: 10px;
 }
 
-.stats h4,
-.page.story .stats h1 {
-  text-align: center;
-}
-
-.stats h4 {
-  border-bottom: 2px #fff solid;
-  font-weight: 300;
-  margin: 20px 40px 20px 0px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.page.story .stats h1 {
-  font-size: 85px;
-  margin: 0px 40px 20px 0px;
-}
-
 .companies {
   background-color: rgba(255,255,255, .75);
   color: #000;
@@ -1602,6 +1653,10 @@ img.progicons {
   margin-top: -12px;
 }
 
+.community .people ul {
+  margin: 0px 0px 8px 0px;
+}
+
 .captains a:hover,
 .fellowcard a:hover,
 .moreapps a:hover,
@@ -1757,7 +1812,7 @@ img.progicons {
 }
 
 .market .bios {
-  margin: 0px auto 40px;
+  margin-top: 30px;
 }
 
 .market .bios p {
@@ -1770,24 +1825,26 @@ img.progicons {
 
 .market .bios.right.bioquote p,
 .network .bios p {
-  font-size: 24px;
-  font-weight: 700;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 300;
   line-height: 34px;
   margin-bottom: 10px;
 }
 
 .market .bios.right.bioquote h3,
 .network .bios h3 {
-  font-size: 26px;
-  margin: 0px;
-  text-align: right;
+  font-size: 19px;
+  margin: 20px 0px 0px 0px;
+  text-align: left;
 }
 
 .market .bios.right.bioquote h5,
 .network .bios h5 {
-  font-size: 21px;
-  margin: 0px 0px 3px;
-  text-align: right;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0px 0px 0px 0px;
+  text-align: left;
 }
 
 .market .stats h4 {
@@ -1802,91 +1859,93 @@ img.progicons {
   text-align: left;
 }
 
+.press .cnn,
+.press .atlanticcities,
+.press .latimes,
+.press .usatoday,
+.press .pbs,
+.press .time,
+.press .cnet,
+.press .details,
+.press .globaljournal,
+.press .fastco {
+  height: 76px;
+  margin-bottom: 40px;
+}
+
+.press .cnn:hover,
+.press .atlanticcities:hover,
+.press .latimes:hover,
+.press .usatoday:hover,
+.press .pbs:hover,
+.press .time:hover,
+.press .cnet:hover,
+.press .details:hover,
+.press .globaljournal:hover,
+.press .fastco:hover  {
+  background-position: 0 -76px;
+}
+
 .press .cnn {
   background-image:url('../img/cnn.png');
   background-size: 86px;
   width: 86px;
 }
 
-.press .mashable {
-  background-image:url('../img/mashable.png');
-  background-size: 123px;
-  width: 123px;
+.press .atlanticcities{
+  background-image:url('../img/atlanticcities.png');
+  background-size: 183px;
+  width: 183px;
 }
 
-.press .motherjones {
-  background-image:url('../img/motherjones.png');
-  background-size: 139px;
-  width: 139px;
+.press .latimes {
+  background-image:url('../img/losangelestimes.png');
+  background-size: 640px;
+  width: 640px;
 }
 
-.press .npr {
-  background-image:url('../img/npr_logo_line.png');
-  background-size: 110px;
-  width: 110px;
-  margin-top: 28px;
+.press .usatoday {
+  background-image:url('../img/usatoday.png');
+  background-size: 162.5px;
+  width: 162.5px;
 }
 
-.press .wsj {
-  background-image:url('../img/wsj.png');
-  background-size: 226.5px;
-  width: 226.5px;
+.press .pbs {
+  background-image:url('../img/pbs.png');
+  background-size: 197px;
+  width: 197px;
 }
 
-.press .msnbc {
-  background-image:url('../img/msnbc.png');
-  background-size: 73px;
-  width: 73px;
-  height: 50px;
+.press .time {
+  background-image:url('../img/time.png');
+  background-size: 276px;
+  width: 276px;
 }
 
-.press .csm {
-  background-image:url('../img/csm.png');
-  background-size: 115px;
-  width: 115px;
+.press .cnet {
+  background-image:url('../img/cnet.png');
+  background-size: 103px;
+  width: 103px;
 }
 
-.press .techcrunch {
-  background-image:url('../img/techcrunch.png');
-  background-size: 165px;
-  width: 165px;
+.press .details {
+  background-image:url('../img/details.png');
+  background-size: 335px;
+  width: 335px;
 }
 
-.press .ted {
-  background-image:url('../img/ted.png');
-  background-size: 95px;
-  width: 95px;
+.press .globaljournal {
+  background-image:url('../img/globaljournal.png');
+  background-size: 299px;
+  width: 299px;
 }
 
-.press .sxsw {
-  background-image:url('../img/sxsw.png');
-  background-size: 167px;
-  width: 167px;
+.press .fastco {
+  background-image:url('../img/fastco.png');
+  background-size: 533px;
+  width: 533px;
 }
 
-.press .cnn,
-.press .mashable,
-.press .motherjones,
-.press .npr,
-.press .wsj,
-.press .csm,
-.press .techcrunch,
-.press .ted,
-.press .sxsw {
-  height: 40px;
-}
-
-.press .cnn:hover,
-.press .mashable:hover,
-.press .motherjones:hover,
-.press .npr:hover,
-.press .wsj:hover,
-.press .csm:hover,
-.press .techcrunch:hover,
-.press .ted:hover,
-.press .sxsw:hover {
-  background-position: 0 -40px;
-}
 
 .press .msnbc:hover {
   background-position: 0 -50px;
@@ -2086,20 +2145,6 @@ img.progicons {
     font-size: 17px;
   }
 
-  #loading img {
-    width: 300px;
-    margin-top: 100px;
-  }
-
-  #loading h1 {
-    font-size: 130px;
-    margin: 50px auto 60px;
-  }
- 
-  #loading p { 
-    font-size: 38px;
-  }
-
   .companies {
     height: 369px;
   }
@@ -2174,3 +2219,11 @@ img.progicons {
   }
 
 }
+
+
+
+
+
+
+
+
