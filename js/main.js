@@ -628,7 +628,7 @@ $(function(){
       // event handler and run manually.
       function click_year(y) {
           return function() {
-            $('.fellowship'+y).css('color' ,' #fff');
+            $('.map'+y).css('color' ,' #fff');
               markerLayer.filter(function(f) {
                   return f.properties.year <= y;
               });

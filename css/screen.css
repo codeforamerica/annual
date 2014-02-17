@@ -106,6 +106,15 @@ li {
   max-width: 85px;
 }
 
+.yeartitle div {
+  display: inline;
+  font-size: 40px;
+  padding: 10px;
+  margin: 50px 5px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+}
 
 
 /*****************************************************************************/
