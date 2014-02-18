@@ -76,46 +76,6 @@ li {
 /*
 /*****************************************************************************/
 
-.stats2013{
-  border-left: 2px solid white;
-  padding: 20px 0px 25px 30px;
-  margin-left: 15px;
-}
-
-.stats2013 p{
-  margin: 0px;
-}
-
-.stats2013 h3{
-  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  margin: 0px 0px 8px 0px;
-  line-height: 40px;
-}
-
-.community .bios{
-  margin: 20px 0px 65px 0px;
-}
-
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
-}
-
-.logo img {
-  max-width: 85px;
-}
-
-.yeartitle div {
-  display: inline;
-  font-size: 40px;
-  padding: 10px;
-  margin: 50px 5px;
-  cursor: pointer;
-  position: relative;
-  top: 50px;
-}
-
 #map-story {
     position: absolute;
     top: 50px;
@@ -144,7 +104,8 @@ li {
 }
 
 #map-story a:hover {
-    background: #7ab5d6;
+    background: #e87d2b;
+    border-left-width: 0px;
 }
 
 #map-story li:last-child a {
@@ -159,9 +120,92 @@ li {
 }
 
 #map-story a.active {
-    background: #2f3d4a;
-    border-color: #2f3d4a;
+    background: #e87d2b;
     color: #FFF;
+    border-left-width: 0px;
+}
+
+#marker {
+        position:absolute;
+        margin-top:-25px;
+        margin-left:-25px;
+        width:50px;
+        height:50px;
+        display:none;
+        pointer-events:all;
+    }
+
+.community .bios{
+  margin: 20px 0px 65px 0px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.logo img {
+  max-width: 85px;
+}
+
+.stats2013{
+  border-left: 2px solid white;
+  padding: 20px 0px 25px 30px;
+  margin-left: 15px;
+}
+
+.stats2013 p{
+  margin: 0px;
+}
+
+.stats2013 h3{
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
+  margin: 0px 0px 8px 0px;
+  line-height: 40px;
+}
+
+.storyContainer {
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  z-index: 99;
+  background: #e87d2b;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.storyContainer p {
+    font-size: 13px;
+    color: #000;
+    display: block;
+    margin: 0;
+    padding: 0;
+    min-width: 138px;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.superHeadline {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  font-size: 80px;
+  color: #fff;
+  margin: 30px 0px 0px 00px;
+  text-align: left;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, .5);
+  text-transform: uppercase;
+  padding: 0px 0px 75px 0px;
+}
+
+.yeartitle div {
+  display: inline;
+  font-size: 40px;
+  padding: 10px;
+  margin: 50px 5px;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
 }
 
 
@@ -191,28 +235,37 @@ li {
   border-color: #1b1b1b;
 }
 
-
-#title img{
-  display:block;
-  margin:-175px auto 0px;
+#loading{ 
+  background:#C82A45;
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:10000;
 }
 
-#title h1,
-#title p {
+#loading img{
+  display:block;
+  margin:100px auto 0px;
+}
+
+#loading h1,
+#loading p {
   text-align: center;
   color:#fff;
   text-shadow: none;
 }
 
-#title h1 {
-  font-size: 189px;
-  margin: 78px auto 105px;
+#loading h1 {
+  font-size: 220px;
+  margin: 90px auto 117px;
   font-weight: 600;
 }
  
-#title p{ 
+#loading p{ 
   text-transform:uppercase;
-  font-size: 65px;
+  font-size: 63px;
   font-weight: 300;
 }
 
@@ -316,14 +369,19 @@ input[type="text"] {
 
 .page.quote,
 .page.story{ 
-  overflow-x:hidden;
-  position:relative;
-  padding:300px 80px 100px;
+  overflow-x: hidden;
+  position: relative;
+  padding: 300px 80px 100px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
   padding-bottom:400px;
 }
+
+.page.story{ 
+  padding: 80px 80px 100px;
+}
+
 .page.story.nosidebar{ 
   padding:0px;
 }
@@ -715,7 +773,7 @@ padding-left: 20px;
 }
 
 .cfa {
-  margin-bottom: 200px;
+  /*margin-bottom: 200px;*/
 }
 
 .cfa h1{
@@ -2250,6 +2308,20 @@ img.progicons {
   .network .bios h5 {
     font-size: 17px;
   }
+
+  #loading img {
+      width: 300px;
+      margin-top: 100px;
+    }
+
+    #loading h1 {
+      font-size: 130px;
+      margin: 50px auto 60px;
+    }
+
+    #loading p { 
+      font-size: 38px;
+}
 
   .companies {
     height: 369px;
