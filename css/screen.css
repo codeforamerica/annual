@@ -125,6 +125,16 @@ li {
     border-left-width: 0px;
 }
 
+#marker {
+        position:absolute;
+        margin-top:-25px;
+        margin-left:-25px;
+        width:50px;
+        height:50px;
+        display:none;
+        pointer-events:all;
+    }
+
 .community .bios{
   margin: 20px 0px 65px 0px;
 }

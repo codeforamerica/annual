@@ -44,7 +44,17 @@ section: network
         <polygon  style="stroke:none; fill:#fff;" 
                   points="100,-600 100,200  500,-200 500,100  0,600  -500,100 -500,-200 -100,200 -100,-600 " />
       </svg>
-    </div>    
+    </div> 
+    <svg id='marker' xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="f1" x="-10%" y="-10%" height="200%" width="200%">
+          <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
+          <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+      </defs>
+      <circle cx="25" cy="25" r="9" style="stroke-width: 1.5; stroke: #fff; fill:#e87d2b" filter="url(#f1)" />  
+    </svg> 
   </div>
   <div class="mapscroll"></div>
 

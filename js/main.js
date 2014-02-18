@@ -473,7 +473,10 @@ $(function(){
 
 
 
-  var markerFactory = function(m) {
+  var markerFactory = function() {
+    var m = document.getElementById('marker').cloneNode(true);
+      m.style.display = 'block';
+      return m;
 
     // Create a marker using the simplestyle factory
     var elem = $(mapbox.markers.simplestyle_factory(m));
