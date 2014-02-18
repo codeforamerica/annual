@@ -205,7 +205,7 @@ var dataStandards = [{
 
 var fellowshipColor = "e87d2b";
 var highlightColor = "69579C";
-    
+
 
 if (typeof console === "undefined" || typeof console.log === "undefined") {
   console = {log:function(){}};
@@ -231,7 +231,7 @@ $(function(){
   var setSize = function(){
     height = $(window).height();
     width = $(window).width();
-    
+
     $(".quote").css({width:width, "min-height":height});
     $(".story").css({width:width, "min-height":height});
     $(".pagebg").css({width:width, "min-height":height});
@@ -239,7 +239,7 @@ $(function(){
     $(".fellowship").css({height:height});
     $(".mapscroll").css({height:height});
     scrollEvent.onScroll();
-    
+
   }
 
   var scrollEvent = {
@@ -261,7 +261,7 @@ $(function(){
 
       if(pos < 0)
         return;
-      
+
       for(e in scrollEvent.handlers.middle){
         var el = scrollEvent.handlers.middle[e].el;
         if(typeof el !== "object")
@@ -269,8 +269,8 @@ $(function(){
 
         // console.log(el);
         //middle
-        if(($(el).offset().top <= (pos + height/2)) && 
-           ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
+        if(($(el).offset().top <= (pos + height/2)) &&
+           ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){
           scrollEvent.setCurrentElement("middle", scrollEvent.handlers.middle[e]);
        }else{
           scrollEvent.removeCurrentElement("middle", scrollEvent.handlers.middle[e]);
@@ -283,7 +283,7 @@ $(function(){
           continue;
 
         //if the element is at the top of the page
-        if(($(el).offset().top <= pos) && 
+        if(($(el).offset().top <= pos) &&
            ($(el).offset().top + $(el).outerHeight()  >= pos)){
           scrollEvent.setCurrentElement("top", scrollEvent.handlers.top[e]);
 
@@ -297,7 +297,7 @@ $(function(){
           continue;
 
         //if the element is at the top of the page
-        if(($(el).offset().top <= (pos+ height)) && 
+        if(($(el).offset().top <= (pos+ height)) &&
            ($(el).offset().top + $(el).outerHeight()  >= (pos +height))){
           scrollEvent.setCurrentElement("bottom", scrollEvent.handlers.bottom[e]);
 
@@ -311,7 +311,7 @@ $(function(){
           continue;
 
         //if the element is at the top of the page
-        if(($(el).offset().top + $(el).outerHeight() >= pos) && 
+        if(($(el).offset().top + $(el).outerHeight() >= pos) &&
            ($(el).offset().top   <= (pos +height))){
           scrollEvent.setCurrentElement("inview", scrollEvent.handlers.inview[e]);
 
@@ -362,8 +362,8 @@ $(function(){
 
   scrollEvent.onScroll();
   $(window).scroll(scrollEvent.onScroll);
-  
-    
+
+
   setSize();
   $(window).resize(setSize);
 
@@ -385,6 +385,7 @@ $(function(){
   $('.appspop').popover({
     placement: 'top',
     trigger: 'hover',
+    html: true
   });
 
   $('.footnote').popover({
@@ -419,7 +420,7 @@ $(function(){
       return;
     displayedMarkers.push(m);
     // $(m.element).css("top", "-1000px");
-    
+
     setTimeout(function(){
       $(m.element).animate({"top":"0px"}, 400);
     }, Math.random() * 300);
@@ -444,7 +445,7 @@ $(function(){
         if(($(e.toElement).attr("data-city") === markers[mark].data.properties.city) &&
            ($(e.toElement).attr("data-year") === markers[mark].data.properties.year)){
           currentMarker = markers[mark];
-        }        
+        }
       }
 
       point = map.locationPoint({
@@ -460,12 +461,12 @@ $(function(){
       elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-l+"+highlightColor+"@2x.png");
     else
       elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
-      
-    return elem[0]; 
+
+    return elem[0];
   }
 
-  
-  
+
+
   var cycleMarker = function(direction){
 
     var position = displayedMarkers.indexOf(currentMarker);
@@ -494,7 +495,7 @@ $(function(){
     var quarter = map.dimensions.y * (1/ 8);
     point.y -= quarter;
     map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
-    
+
   }
 
 
@@ -587,7 +588,7 @@ map.addLayer(markerLayer);
 
     var that = this;
 
-    var total = 0; 
+    var total = 0;
     // Count all the money for each data point in the source
     $("."+$(el).attr("data-source")).each(function(i, el){
       // remove commas and dollar signs
@@ -683,7 +684,7 @@ map.addLayer(markerLayer);
       $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
     else
       $("#mapcontainer").css({"position":"absolute", "top":0});
-    
+
   });
   scrollEvent.on("top", $(".scrollout"), function(el, i){
       $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
@@ -725,7 +726,7 @@ map.addLayer(markerLayer);
    $(".navbar li").removeClass("active");;
    if($(el).attr("data-section") !== "")
      $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
+
  },function(){
 
  });
@@ -734,7 +735,7 @@ map.addLayer(markerLayer);
    $(".navbar li").removeClass("active");;
    if($(el).attr("data-section") !== "")
      $(".navbar li."+$(el).attr("data-section")).addClass("active");
-   
+
  },function(){
 
  });
