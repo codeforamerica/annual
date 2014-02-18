@@ -1,18 +1,21 @@
 var cityLocations = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship" }
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "flu" }
+},  {
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "codeacross"}
 },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011", "type": "fellowship" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "city": "seattle", "year": "2011", "type": "fellowship" }
+    "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
     "properties": { "city": "asheville", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
-    "properties": { "city": "grand rapids", "year":"2012", "type": "brigade" }
+    "properties": { "city": "grand rapids", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.349444, 36.975]},
     "properties": { "city": "hampton roads", "year":"2012", "type": "brigade" }
@@ -21,7 +24,7 @@ var cityLocations = [{
     "properties": { "city": "lexington", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
-    "properties": { "city": "raleigh", "year":"2012", "type": "brigade" }
+    "properties": { "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
     "properties": { "city": "San Diego", "year":"2012", "type": "brigade" }
@@ -42,43 +45,61 @@ var cityLocations = [{
     "properties": { "city": "santacruz", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "city": "chicago", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
-    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross" }
 },{
     "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
     "properties": { "city": "neworleans", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "lives"}
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "standards"}
+}, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross"}
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
     "properties": { "city": "detroit", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "lives" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "standards" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
-    "properties": { "city": "oakland", "year":"2013", "type": "fellowship" }
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
-    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship" }
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
-    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship" }
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story": "lives" }
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story": "standards" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story": "lives" }
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story": "standards" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
-    "properties": { "city": "summit county", "year":"2013", "type": "fellowship" }
+    "properties": { "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
+    "properties": { "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
-    "properties": { "city": "new york", "year":"2013", "type": "fellowship" }
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-150.02, 61.17]},
     "properties": { "city": "anchorage", "year":"2013", "type": "brigade" }
@@ -87,19 +108,16 @@ var cityLocations = [{
     "properties": { "city": "burlington", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
-    "properties": { "city": "houston", "year":"2013", "type": "brigade" }
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.28, 25.8]},
     "properties": { "city": "miami", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
-    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade" }
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
-    "properties": { "city": "sacramento", "year":"2013", "type": "brigade" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
-    "properties": { "city": "sacramento", "year":"2013", "type": "brigade" }
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-111.97, 40.78]},
     "properties": { "city": "salt lake city", "year":"2013", "type": "brigade" }
@@ -108,7 +126,7 @@ var cityLocations = [{
     "properties": { "city": "tulsa", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
-    "properties": { "city": "washington dc", "year":"2013", "type": "brigade" }
+    "properties": { "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
     "properties": { "city": "richmond ca", "year":"2013", "type": "peer" }
@@ -175,33 +193,21 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
     "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer" }
-}];
-
-var dataStandards = [{
-    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
-    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "lives" }
-}, {
-  "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-  "properties": { "city": "kansas city mo", "year":"2013", "type": "story", "story": "lives" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
-    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "lives" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "city": "austin", "year":"2012", "type": "story", "story": "lives"}
-}, {
-    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "city": "louisville", "year":"2013", "type": "story", "story": "lives" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "type": "story", "story": "lives" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.906474, 43.038902]},
     "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.285873, 36.850769]},
     "properties": { "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"codeacross" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
+    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "standards" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
+    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
 }];
+
+var dataStandards;
 
 var fellowshipColor = "e87d2b";
 var highlightColor = "69579C";
@@ -403,7 +409,6 @@ $(function(){
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().features(cityLocations);
-  var standarsLayer = mapbox.markers.layer().features(dataStandards);
 
   var interaction = mapbox.markers.interaction(markerLayer).exclusive(true).showOnHover(false);//.hideOnMove(false);
 
@@ -457,10 +462,7 @@ $(function(){
       map.ease.location(map.pointLocation(point)).zoom(map.zoom()).optimal();
     });
 
-    if(m.properties.type == "story")
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-l+"+highlightColor+"@2x.png");
-    else
-      elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
+    elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
 
     return elem[0];
   }
@@ -500,7 +502,6 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
-  standarsLayer.factory(markerFactory);
 
 
   interaction.formatter(function(feature) {
@@ -520,58 +521,57 @@ $(function(){
 
   var years = ["2011", "2012", "2013"]
 
-$.each(years, function(index, value){
-  $('.map'+value).click(click_year(value));
-});
-
-// A closure for clicking years. You give it a year, and it returns a function
-// that, when run, clicks that year. It's this way in order to be used as both an
-// event handler and run manually.
-function click_year(y) {
-    return function() {
-      $('.map'+y).css('color' ,' #fff')
-        markerLayer.filter(function(f) {
-            return f.properties.year <= y;
-        });
-        return false;
-    };
-}
-
-$('#filter-lives').click(function(e) {
-  $('#map-story ul li a').removeClass('active');
-  $(this).addClass = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  map.addLayer(standarsLayer);
-  markerLayer.filter(function(f) {
-      return f.properties['story'] === 'lives';
+  $.each(years, function(index, value){
+    $('.map'+value).click(click_year(value));
   });
-  return false;
-});
 
-$('#filter-flu').click(function(e) {
-  $('#map-story ul li a').removeClass('active');
-  $(this).addClass = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  markerLayer.filter(function(f) {
-      return f.properties['story'] === 'flu';
+  // A closure for clicking years. You give it a year, and it returns a function
+  // that, when run, clicks that year. It's this way in order to be used as both an
+  // event handler and run manually.
+  function click_year(y) {
+      return function() {
+        $('.map'+y).css('color' ,' #fff')
+          markerLayer.filter(function(f) {
+              return f.properties.year <= y;
+          });
+          return false;
+      };
+  }
+
+  $('#filter-lives').click(function(e) {
+    $('#map-story ul li a').removeClass('active');
+    $(this).addClass = 'active';
+    // The setFilter function takes a GeoJSON feature object
+    // and returns true to show it or false to hide it.
+    markerLayer.filter(function(f) {
+        return f.properties['story'] === 'standards';
+    });
+    return false;
   });
-  return false;
-});
 
-$('#filter-codeacross').click(function(e) {
-  $('#map-story ul li a').removeClass('active');
-  $(this).addClass = 'active';
-  // The setFilter function takes a GeoJSON feature object
-  // and returns true to show it or false to hide it.
-  markerLayer.filter(function(f) {
-      return f.properties['story'] === 'codeacross';
+  $('#filter-flu').click(function(e) {
+    $('#map-story ul li a').removeClass('active');
+    $(this).addClass = 'active';
+    // The setFilter function takes a GeoJSON feature object
+    // and returns true to show it or false to hide it.
+    markerLayer.filter(function(f) {
+        return f.properties['story'] === 'flu';
+    });
+    return false;
   });
-  return false;
-});
 
-map.addLayer(markerLayer);
+  $('#filter-codeacross').click(function(e) {
+    $('#map-story ul li a').removeClass('active');
+    $(this).addClass = 'active';
+    // The setFilter function takes a GeoJSON feature object
+    // and returns true to show it or false to hide it.
+    markerLayer.filter(function(f) {
+        return f.properties['story'] === 'codeacross';
+    });
+    return false;
+  });
+
+  map.addLayer(markerLayer);
 
 
 
