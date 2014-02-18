@@ -144,7 +144,8 @@ li {
 }
 
 #map-story a:hover {
-    background: #7ab5d6;
+    background: #e87d2b;
+    border-left-width: 0px;
 }
 
 #map-story li:last-child a {
@@ -159,9 +160,31 @@ li {
 }
 
 #map-story a.active {
-    background: #2f3d4a;
-    border-color: #2f3d4a;
+    background: #e87d2b;
     color: #FFF;
+    border-left-width: 0px;
+}
+
+.storyContainer {
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  z-index: 99;
+  background: #e87d2b;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.storyContainer p {
+    font-size: 13px;
+    color: #000;
+    display: block;
+    margin: 0;
+    padding: 0;
+    min-width: 138px;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: none;
 }
 
 

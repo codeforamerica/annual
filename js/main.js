@@ -536,13 +536,20 @@ $(function(){
           });
           return false;
       };
+        $.collapse('hide');
   }
 
-  $('#filter-lives').click(function(e) {
+  /*
+    Map story events
+  */
+
+  $('#filter-standards').click(function(e) {
+    clearTimeout(timer);
+    $('#standards').collapse('show');
+    $('#flu').collapse('hide');
+    $('#codeacross').collapse('hide');
     $('#map-story ul li a').removeClass('active');
-    $(this).addClass = 'active';
-    // The setFilter function takes a GeoJSON feature object
-    // and returns true to show it or false to hide it.
+    $(this).addClass('active');
     markerLayer.filter(function(f) {
         return f.properties['story'] === 'standards';
     });
@@ -550,10 +557,13 @@ $(function(){
   });
 
   $('#filter-flu').click(function(e) {
+    clearTimeout(timer);
+    $('#flu').collapse('show');
+    $('#standards').collapse('hide');
+    $('#codeacross').collapse('hide');
+    
     $('#map-story ul li a').removeClass('active');
-    $(this).addClass = 'active';
-    // The setFilter function takes a GeoJSON feature object
-    // and returns true to show it or false to hide it.
+    $(this).addClass('active');
     markerLayer.filter(function(f) {
         return f.properties['story'] === 'flu';
     });
@@ -561,10 +571,12 @@ $(function(){
   });
 
   $('#filter-codeacross').click(function(e) {
+    clearTimeout(timer);
+    $('#codeacross').collapse('show');
+    $('#flu').collapse('hide');
+    $('#standards').collapse('hide');
     $('#map-story ul li a').removeClass('active');
-    $(this).addClass = 'active';
-    // The setFilter function takes a GeoJSON feature object
-    // and returns true to show it or false to hide it.
+    $(this).addClass('active');
     markerLayer.filter(function(f) {
         return f.properties['story'] === 'codeacross';
     });
@@ -692,26 +704,27 @@ $(function(){
   }, function(){});
   var arrowInterval =0;
   var mapcurrentyear = "2011";
+  var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
     $('.yeartitle div').css('color' ,' #000');
     click_year(2011)();
-      setTimeout(function(){
+      timer = setTimeout(function(){
         click_year(2012)()
         map.addLayer(markerLayer);
       }, 2500);
 
-      setTimeout(function(){
+      timer = setTimeout(function(){
         click_year(2013)()
         map.addLayer(markerLayer);
       }, 5000);
 
-    arrowInterval = setInterval(function(){
-      $(".downarrow").animate({opacity:1}, 800, "swing", function(){
-        $(".downarrow").animate({opacity:0}, 800, "swing");
-      })}, 2000);
+    // arrowInterval = setInterval(function(){
+    //   $(".downarrow").animate({opacity:1}, 800, "swing", function(){
+    //     $(".downarrow").animate({opacity:0}, 800, "swing");
+    //   })}, 2000);
 
   }, function(el, i){
-    clearInterval(arrowInterval);
+    // clearInterval(arrowInterval);
     $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
