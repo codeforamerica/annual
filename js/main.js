@@ -219,16 +219,16 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 
 $(function(){
   var readytoshow = false;
-  $('#title').load(function() {
+  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
     if(readytoshow)
-      $("#title").fadeOut({duration:1000});
+      $("#loading").fadeOut({duration:1000});
     readytoshow = true;
   });
   setTimeout(function(){
     if(readytoshow)
-      $("#title").fadeOut({duration:1000});
+      $("#loading").fadeOut({duration:1000});
     readytoshow = true;
-  }, 1500);
+  }, 1000);
   var usTopology;
   //shows nav when user hovers over the logo
   var height = $(window).height(),
@@ -344,9 +344,48 @@ $(function(){
     }
   };
 
+  
+  scrollEvent.on("middle", $(".page"), function(el,i){
+    $($("div.pagebg")[i]).fadeIn({duration:500});
+    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
+      $("div.sidebartitle").hide();
+    else{
+      $($("div.sidebartitle")[i]).show();
+      $($("div.sidebartitle")[i]).addClass("appear");
+    }
+  }, function(el, i){
+    $($("div.pagebg")[i]).fadeOut({duration:700});
+    $($("div.sidebartitle")[i]).removeClass("appear");
+
+  });
+  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
+    if($(el).attr("src") === undefined)
+      $(el).attr("src", $(el).attr("data-src"))
+  }, function(el, i, pos){
+  });
+
+  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+
+    $("#mapcontainer").css({"position":"absolute", "top":0});
+
+  }, function(el, i, pos){
+  });
+  scrollEvent.on("top", $(".fellowship"), function(el,i){
+    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
 
 
+  }, function(el, i, pos){
 
+    if($(".fellowship").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    else
+      $("#mapcontainer").css({"position":"absolute", "top":0});
+
+  });
+  scrollEvent.on("top", $(".scrollout"), function(el, i){
+      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+
+  }, function(){});
 
 
   var showRandomTooltip = function(){
@@ -659,49 +698,6 @@ $(function(){
 
   });
 
-
-
-  scrollEvent.on("middle", $(".page"), function(el,i){
-    $($("div.pagebg")[i]).fadeIn({duration:500});
-    if(($(el).attr("class").indexOf("quote") >= 0) || ($(el).attr("class").indexOf("nosidebar") >= 0))
-      $("div.sidebartitle").hide();
-    else{
-      $($("div.sidebartitle")[i]).show();
-      $($("div.sidebartitle")[i]).addClass("appear");
-    }
-  }, function(el, i){
-    $($("div.pagebg")[i]).fadeOut({duration:700});
-    $($("div.sidebartitle")[i]).removeClass("appear");
-
-  });
-  scrollEvent.on("inview", $("iframe[data-src]"), function(el,i){
-    if($(el).attr("src") === undefined)
-      $(el).attr("src", $(el).attr("data-src"))
-  }, function(el, i, pos){
-  });
-
-  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
-
-    $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  }, function(el, i, pos){
-  });
-  scrollEvent.on("top", $(".fellowship"), function(el,i){
-    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
-
-
-  }, function(el, i, pos){
-
-    if($(".fellowship").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-    else
-      $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  });
-  scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
-
-  }, function(){});
   var arrowInterval =0;
   var mapcurrentyear = "2011";
   var timer;
