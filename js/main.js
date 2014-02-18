@@ -45,14 +45,14 @@ if (typeof console === "undefined" || typeof console.log === "undefined") {
 
 $(function(){
   var readytoshow = false;
-  $('<img/>').attr('src', 'img/iphone.jpg').load(function() {
+  $('#title').load(function() {
     if(readytoshow)
-      $("#loading").fadeOut({duration:1000});
+      $("#title").fadeOut({duration:1000});
     readytoshow = true;
   });
   setTimeout(function(){
     if(readytoshow)
-      $("#loading").fadeOut({duration:1000});
+      $("#title").fadeOut({duration:1000});
     readytoshow = true;
   }, 1500);
   var usTopology;
@@ -99,7 +99,7 @@ $(function(){
         if(typeof el !== "object")
           continue;
 
-        console.log(el);
+        // console.log(el);
         //middle
         if(($(el).offset().top <= (pos + height/2)) && 
            ($(el).offset().top + $(el).outerHeight()  >= (pos + height/2))){          
@@ -169,6 +169,7 @@ $(function(){
       }
     }
   };
+
 
 
   scrollEvent.on("middle", $(".page"), function(el,i){
@@ -357,7 +358,7 @@ $(function(){
 
 
   // Create map
-  var layer = mapbox.layer().id('dmt.map-cdkzgmkx');
+  var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
 
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
