@@ -360,6 +360,48 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/streetmixback.jpg', sizingMethod='scale')";
 }
+.pagebg.imagelivesback{ 
+  background: url("../img/livesback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/livesback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepromptlyback{ 
+  background: url("../img/promptlyback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/promptlyback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagefellowsback{ 
+  background: url("../img/fellowsback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellowsback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagebrigadeback{ 
+  background: url("../img/brigadeback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/brigadeback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagestartupback{ 
+  background: url("../img/startupback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/startupback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepeerback{ 
+  background: url("../img/peerback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/peerback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagecodeforallback{ 
+  background: url("../img/codeforallback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
+}
 .pagebg.imageiphone{ 
   background: url("../img/iphone.jpg") no-repeat;
   background-size:cover;
