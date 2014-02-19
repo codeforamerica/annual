@@ -208,6 +208,20 @@ li {
   top: 50px;
 }
 
+.stories{
+}
+
+.stories h1{
+  text-align: right;
+  margin-right: 0px;
+}
+
+.stories p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: right;
+}
+
 
 /*****************************************************************************/
 /*
@@ -784,6 +798,7 @@ padding-left: 20px;
   font-size: 18px;
   line-height: 30px;
 }
+
 
 .fellowship{ 
   color:#333;
