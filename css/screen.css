@@ -213,7 +213,11 @@ li {
 
 .stories h1{
   text-align: right;
-  margin-right: 0px;
+  margin-right: 10px;
+}
+
+.stories h2{
+  margin-top: 0px;
 }
 
 .stories p {
