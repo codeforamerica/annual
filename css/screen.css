@@ -1832,6 +1832,14 @@ img.progicons {
   border-radius: 0px;
 }
 
+.popover-content{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.popovertopshim{
+  margin-top: 50px;
+}
+
 .popover-title,
 .popover-content {
   color: #000;
@@ -1843,6 +1851,7 @@ img.progicons {
   font-weight: 700;
   background: none;
   border: none;
+  letter-spacing: 1px;
   padding-bottom: 0px;
 } 
 
