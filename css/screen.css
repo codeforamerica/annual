@@ -2223,7 +2223,7 @@ img.progicons {
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
-  color: #f7c21f;
+  color: #e87d2b;
 }
 
 .financialsgroup {
@@ -2237,7 +2237,7 @@ img.progicons {
 }
 
 .graphsection.active {
-  background-color: #f7c21f !important;
+  background-color: #e87d2b !important;
 }
 
 .expenses.bargraph,
