@@ -376,8 +376,8 @@ input[type="text"] {
 /*****************************************************************************/
 
 .line {
-  border: white solid 2px;
-  width: 200px;
+  border: white solid 1px;
+  width: 80%;
   margin: 20px 0px;
 }
 
