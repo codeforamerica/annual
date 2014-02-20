@@ -2053,7 +2053,12 @@ img.progicons {
   text-align: left;
 }
 
-.press .cnn,
+/*******************************************/
+
+/* Press */
+
+/************************/
+
 .press .atlanticcities,
 .press .latimes,
 .press .usatoday,
@@ -2063,11 +2068,11 @@ img.progicons {
 .press .details,
 .press .globaljournal,
 .press .fastco {
-  height: 76px;
-  margin-bottom: 40px;
+  height: 60px;
+  margin-bottom: 30px;
 }
 
-.press .cnn:hover,
+
 .press .atlanticcities:hover,
 .press .latimes:hover,
 .press .usatoday:hover,
@@ -2077,67 +2082,63 @@ img.progicons {
 .press .details:hover,
 .press .globaljournal:hover,
 .press .fastco:hover  {
-  background-position: 0 -76px;
+  background-position: 0 -60px;
 }
 
-.press .cnn {
-  background-image:url('../img/cnn.png');
-  background-size: 86px;
-  width: 86px;
-}
+/* .7895 */
 
 .press .atlanticcities{
   background-image:url('../img/atlanticcities.png');
-  background-size: 183px;
-  width: 183px;
+  background-size: 145px;
+  width: 145px;
 }
 
 .press .latimes {
   background-image:url('../img/losangelestimes.png');
-  background-size: 640px;
-  width: 640px;
+  background-size: 509px;
+  width: 509px;
 }
 
 .press .usatoday {
   background-image:url('../img/usatoday.png');
-  background-size: 162.5px;
-  width: 162.5px;
+  background-size: 129px;
+  width: 129px;
 }
 
 .press .pbs {
   background-image:url('../img/pbs.png');
-  background-size: 197px;
-  width: 197px;
+  background-size: 156px;
+  width: 156px;
 }
 
 .press .time {
   background-image:url('../img/time.png');
-  background-size: 276px;
-  width: 276px;
+  background-size: 218px;
+  width: 218px;
 }
 
 .press .cnet {
   background-image:url('../img/cnet.png');
-  background-size: 103px;
-  width: 103px;
+  background-size: 81px;
+  width: 81px;
 }
 
 .press .details {
   background-image:url('../img/details.png');
-  background-size: 335px;
-  width: 335px;
+  background-size: 265px;
+  width: 265px;
 }
 
 .press .globaljournal {
   background-image:url('../img/globaljournal.png');
-  background-size: 299px;
-  width: 299px;
+  background-size: 236px;
+  width: 236px;
 }
 
 .press .fastco {
   background-image:url('../img/fastco.png');
-  background-size: 533px;
-  width: 533px;
+  background-size: 421px;
+  width: 421px;
 }
 
 
