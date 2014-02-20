@@ -539,6 +539,12 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
 }
+.pagebg.imageofficesummit{ 
+  background: url("../img/officesummit.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
+}
 .pagebg.imageiphone{ 
   background: url("../img/iphone.jpg") no-repeat;
   background-size:cover;
