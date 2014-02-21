@@ -1,210 +1,222 @@
 var cityLocations = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "flu" }
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "flu" }
 },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "active": "false", "city": "boston", "year": "2011", "type": "fellowship", "story": "flu" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "active": "false", "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
-    "properties": { "active": "false", "city": "asheville", "year":"2012", "type": "brigade" }
+    "properties": { "city": "asheville", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
-    "properties": { "active": "false", "city": "grand rapids", "year":"2012", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "grand rapids", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.349444, 36.975]},
-    "properties": { "active": "false", "city": "hampton roads", "year":"2012", "type": "brigade" }
+    "properties": { "city": "hampton roads", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.00, 38.05]},
-    "properties": { "active": "false", "city": "lexington", "year":"2012", "type": "brigade" }
+    "properties": { "city": "lexington", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
-    "properties": { "active": "false", "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
-    "properties": { "active": "false", "city": "San Diego", "year":"2012", "type": "brigade", "story": "codeacross" }
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story": "codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-69.233333, 45.250556]},
-    "properties": { "active": "false", "city": "maine", "year":"2012", "type": "brigade" }
+    "properties": { "city": "maine", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.310791, 38.848264]},
-    "properties": { "active": "false", "city": "nova", "year":"2012", "type": "brigade" }
+    "properties": { "city": "nova", "year":"2012", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "year": "2012", "type": "fellowship" }
+    "properties": { "city": "philadelphia", "year": "2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.6365, 32.8398]},
-    "properties": { "active": "false", "city": "macon", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "macon", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
-    "properties": { "active": "false", "city": "santacruz", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "santacruz", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "active": "false", "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
-    "properties": { "active": "false", "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross" }
 },{
     "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
-    "properties": { "active": "false", "city": "neworleans", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "neworleans", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "active": "false", "city": "austin", "year":"2012", "type": "fellowship", "story": "standards"}
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story": "standards"}
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "active": "false", "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross"}
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross"}
 }, {
     "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
-    "properties": { "active": "false", "city": "detroit", "year":"2012", "type": "fellowship" }
+    "properties": { "city": "detroit", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story": "standards" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "standards" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
-    "properties": { "active": "false", "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
-    "properties": { "active": "false", "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
-    "properties": { "active": "false", "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-    "properties": { "active": "false", "city": "kansas city mo", "year":"2013", "type": "fellowship", "story": "standards" }
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story": "standards" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-    "properties": { "active": "false", "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "active": "false", "city": "louisville", "year":"2013", "type": "fellowship", "story": "standards" }
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story": "standards" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "active": "false", "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
-    "properties": { "active": "false", "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
-    "properties": { "active": "false", "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
-    "properties": { "active": "false", "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross" }
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-150.02, 61.17]},
-    "properties": { "active": "false", "city": "anchorage", "year":"2013", "type": "brigade" }
+    "properties": { "city": "anchorage", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-73.15, 44.47]},
-    "properties": { "active": "false", "city": "burlington", "year":"2013", "type": "brigade" }
+    "properties": { "city": "burlington", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
-    "properties": { "active": "false", "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.28, 25.8]},
-    "properties": { "active": "false", "city": "miami", "year":"2013", "type": "brigade" }
+    "properties": { "city": "miami", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
-    "properties": { "active": "false", "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
-    "properties": { "active": "false", "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-111.97, 40.78]},
-    "properties": { "active": "false", "city": "salt lake city", "year":"2013", "type": "brigade" }
+    "properties": { "city": "salt lake city", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-95.90, 36.20]},
-    "properties": { "active": "false", "city": "tulsa", "year":"2013", "type": "brigade" }
+    "properties": { "city": "tulsa", "year":"2013", "type": "brigade" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
-    "properties": { "active": "false", "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross" }
+    "properties": { "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
-    "properties": { "active": "false", "city": "richmond ca", "year":"2013", "type": "peer" }
+    "properties": { "city": "richmond ca", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.330766, 32.755488]},
-    "properties": { "active": "false", "city": "fort worth", "year":"2013", "type": "peer" }
+    "properties": { "city": "fort worth", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.612189, 39.290385]},
-    "properties": { "active": "false", "city": "baltimore", "year":"2013", "type": "peer" }
+    "properties": { "city": "baltimore", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.240515, 39.154743]},
-    "properties": { "active": "false", "city": "Montgomery County  MD", "year":"2013", "type": "peer" }
+    "properties": { "city": "Montgomery County  MD", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-82.800103, 27.965853]},
-    "properties": { "active": "false", "city": "Clearwater FL", "year":"2013", "type": "peer" }
+    "properties": { "city": "Clearwater FL", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.156077, 37.724930]},
-    "properties": { "active": "false", "city": "San Leandro  CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "San Leandro  CA", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.350594, 33.158093]},
-    "properties": { "active": "false", "city": "Carlsbad CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Carlsbad CA", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-104.821363, 38.833882]},
-    "properties": { "active": "false", "city": "Colorado Springs CO", "year":"2013", "type": "peer" }
+    "properties": { "city": "Colorado Springs CO", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-78.886694, 33.689060]},
-    "properties": { "active": "false", "city": "Myrtle Beach SC", "year":"2013", "type": "peer" }
+    "properties": { "city": "Myrtle Beach SC", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.143019, 37.441883]},
-    "properties": { "active": "false", "city": "Palo Alto  CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Palo Alto  CA", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.346427, 41.593370]},
-    "properties": { "active": "false", "city": "Gary IN", "year":"2013", "type": "peer" }
+    "properties": { "city": "Gary IN", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.133068, 33.214841]},
-    "properties": { "active": "false", "city": "Denton TX", "year":"2013", "type": "peer" }
+    "properties": { "city": "Denton TX", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.687697, 42.045072]},
-    "properties": { "active": "false", "city": "Evanston IL", "year":"2013", "type": "peer" }
+    "properties": { "city": "Evanston IL", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-106.609991, 35.110703]},
-    "properties": { "active": "false", "city": "Albuquerque  NM", "year":"2013", "type": "peer" }
+    "properties": { "city": "Albuquerque  NM", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.676207, 45.523452]},
-    "properties": { "active": "false", "city": "Portland OR", "year":"2013", "type": "peer" }
+    "properties": { "city": "Portland OR", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-84.387982, 33.748995]},
-    "properties": { "active": "false", "city": "Atlanta  GA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Atlanta  GA", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-86.526386, 39.165325]},
-    "properties": { "active": "false", "city": "Bloomington  IN", "year":"2013", "type": "peer" }
+    "properties": { "city": "Bloomington  IN", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-89.093995, 42.271131]},
-    "properties": { "active": "false", "city": "Rockford IL", "year":"2013", "type": "peer" }
+    "properties": { "city": "Rockford IL", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-73.756232, 42.652579]},
-    "properties": { "active": "false", "city": "Albany NY", "year":"2013", "type": "peer" }
+    "properties": { "city": "Albany NY", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-96.800451, 32.780140]},
-    "properties": { "active": "false", "city": "Dallas TX", "year":"2013", "type": "peer" }
+    "properties": { "city": "Dallas TX", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-105.500548, 40.151211]},
-    "properties": { "active": "false", "city": "Boulder County CO", "year":"2013", "type": "peer" }
+    "properties": { "city": "Boulder County CO", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
-    "properties": { "active": "false", "city": "Charlotte  NC", "year":"2013", "type": "peer" }
+    "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.906474, 43.038902]},
-    "properties": { "active": "false", "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
+    "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.285873, 36.850769]},
-    "properties": { "active": "false", "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"codeacross" }
+    "properties": { "city": "Norfolk  VA", "year":"2013", "type": "story", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
-    "properties": { "active": "false", "city": "wake county", "year":"2013", "type": "story", "story": "standards" }
+    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "standards" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
-    "properties": { "active": "false", "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
+    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
 }];
 
 var summit = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "summit" }
+},  {
+    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "summit" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
+    "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"summit" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
+    "properties": { "city": "asheville", "year":"2012", "type": "brigade" }
+}, {
     "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
     "properties": { "city": "Olathe", "year":"2013", "marker-size": "large", "marker-color": "#69579C" }
   }, {
@@ -214,78 +226,78 @@ var summit = [{
 
 var codeacross = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "story": "codeacross", "marker-size": "large", "marker-color": "#69579C"}
+    "properties": { "city": "philadelphia", "story": "codeacross", "marker-size": "large", "marker-color": "#69579C"}
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "active": "false", "city": "seattle", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "seattle", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
-    "properties": { "active": "false", "city": "grand rapids", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "grand rapids", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
-    "properties": { "active": "false", "city": "raleigh", "story":"codeacross","marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "raleigh", "story":"codeacross","marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
-    "properties": { "active": "false", "city": "San Diego", "year":"2012", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
-    "properties": { "active": "false", "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
-    "properties": { "active": "false", "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
-    "properties": { "active": "false", "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
-    "properties": { "active": "false", "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
-    "properties": { "active": "false", "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
-    "properties": { "active": "false", "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C"}
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C"}
   }, {
     "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
-    "properties": { "active": "false", "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
-    "properties": { "active": "false", "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
-    "properties": { "active": "false", "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
-    "properties": { "active": "false", "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
-      "properties": { "active": "false", "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+      "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-      "properties": { "active": "false", "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+      "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
-      "properties": { "active": "false", "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+      "properties": { "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
-      "properties": { "active": "false", "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+      "properties": { "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
 }]
 
 var flu = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#69579C", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#69579C", "marker-size": "large", "marker-color": "#69579C" }
   },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "active": "false", "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "active": "false", "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
 
 }]
 
