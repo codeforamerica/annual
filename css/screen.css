@@ -81,6 +81,7 @@ li {
     top: 50px;
     right: 10px;
     z-index: 100;
+    background: #fff;
 }
 
 #map-story ul {
@@ -147,6 +148,11 @@ li {
 
 .logo img {
   max-width: 85px;
+}
+
+.panel-collapse {
+  background: #e87d2b;
+  padding: 0px 5px;
 }
 
 .stats2013{
