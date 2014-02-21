@@ -1025,61 +1025,45 @@ padding-left: 20px;
   margin: 20px 20px 0 0;
 }
 
-.bostonseal,
-.phillyseal,
-.seattleseal,
-.austinseal, 
-.chiseal, 
-.detroitseal,
-.hnlseal,
-.maconseal,
-.nolaseal,
-.scseal {
-  background-image: url('../img/city_seals.jpg');
-  background-size: 59px;
-  float: right;
-  width: 59px;
-  height: 59px;
-}
 
-.bostonseal {
+.sf {
   background-position: 0 0;
 }
 
-.phillyseal {
-  background-position: 0 -59px;
+.lv {
+  background-position: 0 -100px;
 }
 
-.seattleseal {
-  background-position: 0 -118px;
+.ok {
+  background-position: 0 -200px;
 }
 
-.austinseal {
-  background-position: 0 -177px;
+.sc {
+  background-position: 0 -300px;
 }
 
-.chiseal {
-  background-position: 0 -236px;
+.lo {
+  background-position: 0 -400px;
 }
 
-.detroitseal {
-  background-position: 0 -295px;
+.nyc {
+  background-position: 0 -500px;
 }
 
-.hnlseal {
-  background-position: 0 -354px;
+.sb {
+  background-position: 0 -600px;
 }
 
-.maconseal {
-  background-position: 0 -413px;
+.smc {
+  background-position: 0 -700px;
 }
 
-.nolaseal {
-  background-position: 0 -472px;
+.kcks {
+  background-position: 0 -800px;
 }
 
-.scseal {
-  background-position: 0 -531px;
+.kcmo{
+  background-position: 0 -900px;
 }
 .mapscroll{ 
   height:800px;
@@ -2037,35 +2021,35 @@ img.progicons {
   margin-top: 30px;
 }
 
-.market .bios p {
-  margin-top: 24px;
-}
-
 .market .bios.right.bioquote {
   margin-top: 0px;
 }
 
-.market .bios.right.bioquote p,
+.community .bios p,
+.market .bios p,
 .network .bios p {
-  /*font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
-  text-transform: uppercase;
-  font-size: 26px;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
+  font-size: 20px;
   font-weight: 300;
-  line-height: 34px;
-  margin-bottom: 10px;*/
+  line-height: 24px;
+  margin-bottom: 10px;
 }
 
-.market .bios.right.bioquote h3,
+.community .bios h3,
+.market .bios h3,
 .network .bios h3 {
-/*  font-size: 19px;
-  margin: 20px 0px 0px 0px;
-  text-align: left;*/
+  font-size: 18px;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
 }
 
-.market .bios.right.bioquote h5,
+.community .bios h5,
+.market .bios h5,
 .network .bios h5 {
 /*  font-size: 16px;
   line-height: 20px;
+  font-size: 16px;
+  line-height: 15px;
   margin: 0px 0px 0px 0px;
   text-align: left;*/
 }
