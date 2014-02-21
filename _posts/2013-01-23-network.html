@@ -9,10 +9,7 @@ published: true
 section: network
 ---
 
-
-
 <div class="fellowship">
-  
   <div id="mapcontainer">
     <div id="map"></div>
     <div class="yeartitle">
@@ -21,22 +18,51 @@ section: network
       <div class="map2013">2013</div>
     </div>
     
-    <div id='map-story'>
-      <ul>
-          <li><a id='filter-standards' data-toggle="collapse" data-target="#standards">Data Standards</a></li>
-          <li><a id='filter-flu' data-toggle="collapse" data-target="#flue">Flu Shot Finder</a></li>
-          <li><a id='filter-codeacross'data-toggle="collapse" data-target="#codeacross">Code Across America</a></li>
-      </ul>
+    <div class="panel-group span3" id="map-story">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <a class="flu" data-toggle="collapse" data-parent="#map-story" href="#flu">
+              Flu Shot Finder
+            </a>
+          </div>
+        </div>
+        <div id="flu" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>A Chicago brigade member built an app to find flu shot providers that 3 other cities in the CfA network have re-deployed, using a standard data specification to enable the common app. <a href="http://www.huffingtonpost.com/mark-headd/how-technology-can-fight-the-flu_b_4495730.html">Read more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <a class="codeacross" data-toggle="collapse" data-parent="#map-story" href="#codeacross">
+              Code Across 2013
+            </a>
+          </div>
+        </div>
+        <div id="codeacross" class="panel-collapse collapse" >
+          <div class="panel-body">
+           <p>We activated the Code for America network through a national weekend of civic innovation where we built beta apps, liberated datasets and held write-a-thons to foster community and get citizens to engage with their local governments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <a class="summit" data-toggle="collapse" data-parent="#map-story" href="#standards">
+              Summit
+            </a>
+          </div>
+        </div>
+        <div id="standards" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>We brought together civic hackers and city staff, mayors and mentors, designers and developers from around the globe to discuss what happened in the civic tech movement in 2013 -- to share insights and learnings. For three days, 500 passionate citizens from around the world talked, listened, and learned about how to work together and make our communities better.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="standards" class="storyContainer span3 collapse out">
-      <p>We created data standards that put information directly in the hands of citizens by integrating restaurant inspections and residential code enforcements with consumer platforms such as Yelp and Trulia.</p>
-    </div>
-    <div id="flu" class="storyContainer span3 collapse out">
-      <p>A Chicago brigade member built an app to find flu shot providers that 3 other cities in the CfA network have re-deployed, using a standard data specification to enable the common app. <a href="http://www.huffingtonpost.com/mark-headd/how-technology-can-fight-the-flu_b_4495730.html">Read more</a></p>
-    </div>
-    <div id="codeacross" class="storyContainer span3 collapse out">
-      <p>We activated the Code for America network through a national weekend of civic innovation where we built beta apps, liberated datasets and held write-a-thons to foster community and get citizens to engage with their local governments.</p>
-      </div>      
+
 
     <div class="downarrow">
       <svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +79,7 @@ section: network
           <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
         </filter>
       </defs>
-      <circle cx="25" cy="25" r="9" style="stroke-width: 1.5; stroke: #fff; fill:#e87d2b" filter="url(#f1)" />  
+      <circle cx="25" cy="25" r="9" style="stroke-width: 1.5; stroke: #e5e5e5; fill:#e87d2b" filter="url(#f1)" />  
     </svg> 
   </div>
   <div class="mapscroll"></div>
