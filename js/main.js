@@ -6,7 +6,7 @@ var cityLocations = [{
     "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "codeacross"}
 },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-color": "#ffffff" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
     "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross" }
@@ -460,10 +460,11 @@ $(function(){
   });
 
   markerLayer.addCallback("markeradded", function(l, m){
-    if($(m.element).attr("class").indexOf("simplestyle-marker") === -1)
-      return;
     displayedMarkers.push(m);
-    // $(m.element).css("top", "-1000px");
+    // console.log(displayedMarkers);
+    if($(m.element).attr("class").indexOf("marker") === -1)
+      return;
+    $(m.element).css("top", "-1000px");
 
     setTimeout(function(){
       $(m.element).animate({"top":"0px"}, 400);
@@ -474,6 +475,8 @@ $(function(){
 
 
   var markerFactory = function() {
+
+
     var m = document.getElementById('marker').cloneNode(true);
       m.style.display = 'block';
       return m;
@@ -594,7 +597,10 @@ $(function(){
     // $('#map-story ul li a').removeClass('active');
     // $(this).addClass('active');
     markerLayer.filter(function(f) {
-        return f.properties['story'] === 'flu';
+        f.properties['story'] === 'flu';
+        f.properties['marker-color'] = '#00000'
+        console.log(f);
+        return
     });
     return false;
   });
@@ -606,8 +612,10 @@ $(function(){
     // $('#standards').collapse('hide');
     // $('#map-story ul li a').removeClass('active');
     // $(this).addClass('active');
-    markerLayer.filter(function(f) {
-        return f.properties['story'] === 'codeacross';
+    b = markerLayer.filter(function(f) {
+        f.properties['story'] === 'codeacross';
+        f.properties['marker-color'] == '#00000'
+        return 
     });
     return false;
   });
