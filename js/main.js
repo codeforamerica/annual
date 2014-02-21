@@ -909,15 +909,15 @@ $(function(){
   function click_year(y) {
       return function() {
         $('.map'+y).css('color' ,' #fff')
-
+        $svg = $("#marker");
+        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
         map.removeLayer(codeacrossLayer)
         map.removeLayer(summitLayer)
         map.removeLayer(fluLayer)
           markerLayer.filter(function(f) {
                return f.properties.year <= y;
           });
-        $svg = $("#marker");
-        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+        
           return false;
       };
         $.collapse('hide');
