@@ -2018,23 +2018,23 @@ img.progicons {
 .market .bios.right.bioquote p,
 .network .bios p {
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 34px;
+  line-height: 24px;
   margin-bottom: 10px;
 }
 
 .market .bios.right.bioquote h3,
 .network .bios h3 {
-  font-size: 19px;
-  margin: 20px 0px 0px 0px;
+  font-size: 18px;
+  margin: 10px 0px 0px 0px;
   text-align: left;
 }
 
 .market .bios.right.bioquote h5,
 .network .bios h5 {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 15px;
   margin: 0px 0px 0px 0px;
   text-align: left;
 }
