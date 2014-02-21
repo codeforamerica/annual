@@ -819,6 +819,10 @@ padding-left: 20px;
   line-height: 30px;
 }
 
+.cfa a {
+  font-weight: 300;
+}
+
 
 .fellowship{ 
   color:#333;
@@ -2269,6 +2273,11 @@ img.progicons {
   }
 
   .cfa p {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .cfa a {
     font-size: 19px;
     line-height: 25px;
   }
