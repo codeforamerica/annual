@@ -237,6 +237,7 @@ li {
 }
 
 
+
 /*****************************************************************************/
 /*
 /* Home
@@ -1653,7 +1654,7 @@ a.appspop:hover  {
 
 .companies img {
   width: 82%;
-  padding: 0px 0px 0px 5em;
+  padding: 40px 0px 0px 5em;
 }
 
 .companies .companyblurb {
