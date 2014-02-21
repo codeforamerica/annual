@@ -236,6 +236,30 @@ li {
   margin: 0px 0px 8px 0px;
 }
 
+.title {
+  min-height: 400px;
+  padding-bottom: 200px;
+}
+
+.title h1,
+.title p {
+  text-align: center;
+  color:#fff;
+  text-shadow: none;
+}
+
+.title h1 {
+  font-size: 180px !important;
+  margin: 90px auto 117px;
+  font-weight: 600;
+}
+ 
+.title p{ 
+  text-transform:uppercase;
+  font-size: 63px;
+  font-weight: 300;
+}
+
 
 
 /*****************************************************************************/
@@ -265,7 +289,7 @@ li {
 }
 
 #loading{ 
-  background:#C82A45;
+  background:#399fd3;
   position:fixed;
   top:0px;
   left:0px;
@@ -408,7 +432,7 @@ input[type="text"] {
 }
 
 .page.story{ 
-  padding: 80px 80px 100px;
+  /*padding: 80px 80px 100px;*/
 }
 
 .page.story.nosidebar{ 
@@ -2344,19 +2368,19 @@ img.progicons {
     font-size: 17px;
   }
 
-  #loading img {
-      width: 300px;
-      margin-top: 100px;
-    }
+#loading img {
+    width: 300px;
+    margin-top: 100px;
+  }
 
-    #loading h1 {
-      font-size: 130px;
-      margin: 50px auto 60px;
-    }
+  #loading h1 {
+    font-size: 130px;
+    margin: 50px auto 60px;
+  }
 
-    #loading p { 
-      font-size: 38px;
-}
+  #loading p { 
+    font-size: 38px;
+  }
 
   .companies {
     height: 369px;
