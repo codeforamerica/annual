@@ -206,24 +206,30 @@ var cityLocations = [{
 
 var summit = [{
     "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
-    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "summit" }
+    "properties": { "city": "Olathe", "year":"2013", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
-    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "summit" }
+    "properties": { "city": "wake county", "year":"2013", "marker-size": "large", "marker-color": "#69579C" }
   }]
 
 var codeacross = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "codeacross", 'marker-size': 'large', 'marker-color': '#f0a'}
+    "properties": { "active": "false", "city": "philadelphia", "story": "codeacross", "marker-size": "large", "marker-color": "#69579C"}
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
-    "properties": { "active": "false", "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross", 'marker-size': 'large', 'marker-color': '#f0a' }
+    "properties": { "active": "false", "city": "seattle", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
-    "properties": { "active": "false", "city": "grand rapids", "year":"2012", "type": "brigade", "story":"codeacross", 'marker-size': 'large', 'marker-color': '#f0a' }
+    "properties": { "active": "false", "city": "grand rapids", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
-    "properties": { "active": "false", "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross",'marker-size': 'large', 'marker-color': '#f0a' }
+    "properties": { "active": "false", "city": "raleigh", "story":"codeacross","marker-size": "large", "marker-color": "#69579C" }
+}]
+
+var flu = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "active": "false", "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+
 }]
 
 var dataStandards;
@@ -617,16 +623,20 @@ $(function(){
 
   $('#flu').on('shown.bs.collapse', function () {
     clearTimeout(timer);
-    // $('#flu').collapse('show');
-    // $('#standards').collapse('hide');
-    // $('#codeacross').collapse('hide');
-    
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
     markerLayer.filter(function(f) {
-        return f.properties['story'] != 'flu';
+       return false;
+    });
+    markerLayer.filter(function(f) {
+        return f.properties['story'] !== 'flu';
         
     });
+
+    map.removeLayer(summitLayer);
+    map.removeLayer(codeacrossLayer);
+    fluLayer = mapbox.markers.layer().features(flu);
+    fluLayer.named('flu')
+    map.addLayer(fluLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#flu').on('hidden.bs.collapse', function () {  
@@ -635,21 +645,19 @@ $(function(){
 
   $('#codeacross').on('shown.bs.collapse', function () {
     clearTimeout(timer);
-    // $('#codeacross').collapse('show');
-    // $('#flu').collapse('hide');
-    // $('#standards').collapse('hide');
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
     markerLayer.filter(function(f) {
-      console.log(f.properties['story'] != 'codeacross');
-        return f.properties['story'] != 'codeacross';
+       return false;
+    });
+    markerLayer.filter(function(f) {
+       return f.properties['story'] !== 'codeacross';
     });
 
-      map.removeLayer(summitLayer);
-      codeacrossLayer = mapbox.markers.layer().features(codeacross);
-      codeacrossLayer.named('codeacross')
-      map.addLayer(codeacrossLayer);
-      console.log(map.layers);
+    map.removeLayer(summitLayer);
+    map.removeLayer(fluLayer);
+    codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    codeacrossLayer.named('codeacross')
+    map.addLayer(codeacrossLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#codeacross').on('hidden.bs.collapse', function () {  
@@ -659,20 +667,15 @@ $(function(){
 
   $('#summit').on('shown.bs.collapse', function () {
     clearTimeout(timer);
-    // $('#standards').collapse('show');
-    // $('#flu').collapse('hide');
-    // $('#codeacross').collapse('hide');
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
     
     markerLayer.filter(function(f) {
-        return f.properties['story'] != 'summit';
+        return f.properties['story'] !== 'summit';
     });
     map.removeLayer(codeacrossLayer)
+    map.removeLayer(fluLayer);
     summitLayer = mapbox.markers.layer().features(summit);
     map.addLayer(summitLayer);
-    // map.insertLayerAt(0, summitLayer);
-    console.log(map.getLayers());
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#summit').on('hidden.bs.collapse', function () {  
