@@ -2,11 +2,8 @@ var cityLocations = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
     "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "flu" }
 },  {
-    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "codeacross"}
-},  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-color": "#ffffff" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
     "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"codeacross" }
@@ -27,7 +24,7 @@ var cityLocations = [{
     "properties": { "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
-    "properties": { "city": "San Diego", "year":"2012", "type": "brigade" }
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story": "codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-69.233333, 45.250556]},
     "properties": { "city": "maine", "year":"2012", "type": "brigade" }
@@ -63,9 +60,6 @@ var cityLocations = [{
     "properties": { "city": "detroit", "year":"2012", "type": "fellowship" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "standards" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
     "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
@@ -85,9 +79,6 @@ var cityLocations = [{
 }, {
     "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
     "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross" }
-}, {
-    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
-    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story": "standards" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
     "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross" }
@@ -129,70 +120,70 @@ var cityLocations = [{
     "properties": { "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
-    "properties": { "city": "richmond ca", "year":"2013", "type": "peer" }
+    "properties": { "city": "richmond ca", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.330766, 32.755488]},
-    "properties": { "city": "fort worth", "year":"2013", "type": "peer" }
+    "properties": { "city": "fort worth", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-76.612189, 39.290385]},
-    "properties": { "city": "baltimore", "year":"2013", "type": "peer" }
+    "properties": { "city": "baltimore", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-77.240515, 39.154743]},
     "properties": { "city": "Montgomery County  MD", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-82.800103, 27.965853]},
-    "properties": { "city": "Clearwater FL", "year":"2013", "type": "peer" }
+    "properties": { "city": "Clearwater FL", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.156077, 37.724930]},
-    "properties": { "city": "San Leandro  CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "San Leandro  CA", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.350594, 33.158093]},
-    "properties": { "city": "Carlsbad CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Carlsbad CA", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-104.821363, 38.833882]},
-    "properties": { "city": "Colorado Springs CO", "year":"2013", "type": "peer" }
+    "properties": { "city": "Colorado Springs CO", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-78.886694, 33.689060]},
     "properties": { "city": "Myrtle Beach SC", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.143019, 37.441883]},
-    "properties": { "city": "Palo Alto  CA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Palo Alto  CA", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.346427, 41.593370]},
     "properties": { "city": "Gary IN", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-97.133068, 33.214841]},
-    "properties": { "city": "Denton TX", "year":"2013", "type": "peer" }
+    "properties": { "city": "Denton TX", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.687697, 42.045072]},
-    "properties": { "city": "Evanston IL", "year":"2013", "type": "peer" }
+    "properties": { "city": "Evanston IL", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-106.609991, 35.110703]},
-    "properties": { "city": "Albuquerque  NM", "year":"2013", "type": "peer" }
+    "properties": { "city": "Albuquerque  NM", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-122.676207, 45.523452]},
     "properties": { "city": "Portland OR", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-84.387982, 33.748995]},
-    "properties": { "city": "Atlanta  GA", "year":"2013", "type": "peer" }
+    "properties": { "city": "Atlanta  GA", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-86.526386, 39.165325]},
-    "properties": { "city": "Bloomington  IN", "year":"2013", "type": "peer" }
+    "properties": { "city": "Bloomington  IN", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-89.093995, 42.271131]},
     "properties": { "city": "Rockford IL", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-73.756232, 42.652579]},
-    "properties": { "city": "Albany NY", "year":"2013", "type": "peer" }
+    "properties": { "city": "Albany NY", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-96.800451, 32.780140]},
     "properties": { "city": "Dallas TX", "year":"2013", "type": "peer" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-105.500548, 40.151211]},
-    "properties": { "city": "Boulder County CO", "year":"2013", "type": "peer" }
+    "properties": { "city": "Boulder County CO", "year":"2013", "type": "peer", "story":"summit" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
-    "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer" }
+    "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer", "story":"summit"  }
 }, {
     "geometry": { "type": "Point", "coordinates": [-87.906474, 43.038902]},
     "properties": { "city": "Milwaukee  WI", "year":"2013", "type": "story", "story":"codeacross" }
@@ -206,6 +197,346 @@ var cityLocations = [{
     "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
     "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
 }];
+
+var summit = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  },  {
+    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
+    "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
+    "properties": { "city": "asheville", "year":"2012", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-85.00, 38.05]},
+    "properties": { "city": "lexington", "year":"2012", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
+    "properties": { "city": "raleigh", "year":"2012", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  },{
+    "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
+    "properties": { "city": "neworleans", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
+    "properties": { "city": "santacruz", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
+    "properties": { "city": "detroit", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b"}
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-150.02, 61.17]},
+    "properties": { "city": "anchorage", "year":"2013", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.898619, 35.994033]},
+    "properties": { "city": "durham", "year":"2012", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-111.97, 40.78]},
+    "properties": { "city": "salt lake city", "year":"2013", "type": "brigade", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+    "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-99.133208, 19.432608]},
+    "properties": { "city": "mexico city", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+    "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
+    "properties": { "city": "summit county", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
+    "properties": { "city": "south bend", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.347749, 37.935758]},
+    "properties": { "city": "richmond ca", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-97.330766, 32.755488]},
+    "properties": { "city": "fort worth", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-76.612189, 39.290385]},
+    "properties": { "city": "baltimore", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-82.800103, 27.965853]},
+    "properties": { "city": "Clearwater FL", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.156077, 37.724930]},
+    "properties": { "city": "San Leandro  CA", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-117.350594, 33.158093]},
+    "properties": { "city": "Carlsbad CA", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-104.821363, 38.833882]},
+    "properties": { "city": "Colorado Springs CO", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.143019, 37.441883]},
+    "properties": { "city": "Palo Alto  CA", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-97.133068, 33.214841]},
+    "properties": { "city": "Denton TX", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-87.687697, 42.045072]},
+    "properties": { "city": "Evanston IL", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-106.609991, 35.110703]},
+    "properties": { "city": "Albuquerque  NM", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-84.387982, 33.748995]},
+    "properties": { "city": "Atlanta  GA", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-86.526386, 39.165325]},
+    "properties": { "city": "Bloomington  IN", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-73.756232, 42.652579]},
+    "properties": { "city": "Albany NY", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-105.500548, 40.151211]},
+    "properties": { "city": "Boulder County CO", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-80.843127, 35.227087]},
+    "properties": { "city": "Charlotte  NC", "year":"2013", "type": "peer", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-80.008775, 40.445081]},
+    "properties": { "city": "Allegheny County, pa", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-105.087484, 39.802764]},
+    "properties": { "city": "Arvada", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-85.309680, 35.045630]},
+    "properties": { "city": "Chattanooga", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-81.695409, 41.499495]},
+    "properties": { "city": "Cleveland", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-104.984718, 39.737567]},
+    "properties": { "city": "Denver", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.310765, 37.916133]},
+    "properties": { "city": "El Cerrito", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-106.496805, 31.769956]},
+    "properties": { "city": "El Paso", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.430201, 45.500136]},
+    "properties": { "city": "Gresham", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-116.310009, 33.663357]},
+    "properties": { "city": "La Quinta", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-118.195617, 33.768321]},
+    "properties": { "city": "Long Beach", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.114130, 37.385218]},
+    "properties": { "city": "Los Altos", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-118.243685, 34.052234]},
+    "properties": { "city": "Los Angeles", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-89.401230, 43.073052]},
+    "properties": { "city": "Madison", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-111.831472, 33.415184]},
+    "properties": { "city": "Mesa", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-80.130045, 25.790654]},
+    "properties": { "city": "Miami Beach", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-86.783333, 36.166667]},
+    "properties": { "city": "Nashville", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-118.144516, 34.147785]},
+    "properties": { "city": "Pasadena", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.231635, 37.824371]},
+    "properties": { "city": "Piedmont", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-79.995886, 40.440625]},
+    "properties": { "city": "Pittsburgh", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-93.061598, 44.996399]},
+    "properties": { "city": "Ramsey County", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.121512, 47.673988]},
+    "properties": { "city": "Redmond", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-77.436048, 37.540725]},
+    "properties": { "city": "Richmond VA", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-98.493628, 29.424122]},
+    "properties": { "city": "San Antonio", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.719546, 37.293891]},
+    "properties": { "city": "Santa Clara County", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-118.491191, 34.019454]},
+    "properties": { "city": "Santa Monica", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-81.099834, 32.083541]},
+    "properties": { "city": "Savannah", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.425223, 37.739651]},
+    "properties": { "city": "Tracy", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-110.926479, 32.221743]},
+    "properties": { "city": "Tuscon", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.256637, 38.104086]},
+    "properties": { "city": "Vallejo", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-89.817346, 44.383576]},
+    "properties": { "city": "Wisconsin Rapids", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-94.769159, 39.098681]},
+    "properties": { "city": "Wyandotte County", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-66.105722, 18.466334]},
+    "properties": { "city": "San Juan", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-81.626790, 41.319776]},
+    "properties": { "city": "Brecksville", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.894955, 37.339386]},
+    "properties": { "city": "San Jose", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [138.599959, -34.928621]},
+    "properties": { "city": "Adelaide", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-81.519005, 41.081445]},
+    "properties": { "city": "Akron", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.275801, 37.520215]},
+    "properties": { "city": "Belmont", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [139.753595, 35.694003]},
+    "properties": { "city": "Chiyoda-ku", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-105.221100, 39.755543]},
+    "properties": { "city": "Golden", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [5.799913, 53.201233]},
+    "properties": { "city": "Leeuwarden ", "year":"2013", "story":"summit", "marker-size": "large", "marker-color": "#e87d2b" }
+}]
+
+var codeacross = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "story": "codeacross", "marker-size": "large", "marker-color": "#e87d2b"}
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
+    "properties": { "city": "seattle", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-85.668056, 42.963333]},
+    "properties": { "city": "grand rapids", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
+    "properties": { "city": "raleigh", "story":"codeacross","marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
+    "properties": { "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
+    "properties": { "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
+    "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b"}
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
+    "properties": { "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+      "properties": { "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+      "properties": { "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
+      "properties": { "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
+      "properties": { "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
+}]
+
+var flu = [{
+    "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
+    "properties": { "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b", "marker-size": "large", "marker-color": "#e87d2b" }
+  },  {
+    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+
+}]
 
 var dataStandards;
 
@@ -570,71 +901,135 @@ $(function(){
     $('.map'+value).click(click_year(value));
   });
 
+  var summitLayer, codeacrossLayer, fluLayer
+
   // A closure for clicking years. You give it a year, and it returns a function
   // that, when run, clicks that year. It's this way in order to be used as both an
   // event handler and run manually.
   function click_year(y) {
       return function() {
         $('.map'+y).css('color' ,' #fff')
+
+        map.removeLayer(codeacrossLayer)
+        map.removeLayer(summitLayer)
+        map.removeLayer(fluLayer)
           markerLayer.filter(function(f) {
-              return f.properties.year <= y;
+               return f.properties.year <= y;
           });
+        $svg = $("#marker");
+        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
           return false;
       };
         $.collapse('hide');
   }
 
+  map.addLayer(markerLayer);
+
   /*
     Map story events
   */
+  
 
-  $('.flu').hover(function(e) {
+  $('#flu').on('shown.bs.collapse', function () {
     clearTimeout(timer);
-    // $('#flu').collapse('show');
-    // $('#standards').collapse('hide');
-    // $('#codeacross').collapse('hide');
-    
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
-        f.properties['story'] === 'flu';
-        f.properties['marker-color'] = '#00000'
-        console.log(f);
-        return
+       return f.properties['story'] !== 'flu';
     });
-    return false;
+
+    map.removeLayer(summitLayer);
+    map.removeLayer(codeacrossLayer);
+    fluLayer = mapbox.markers.layer().features(flu);
+    fluLayer.named('flu')
+    map.addLayer(fluLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
-  $('.codeacross').hover(function(e) {
-    clearTimeout(timer);
-    // $('#codeacross').collapse('show');
-    // $('#flu').collapse('hide');
-    // $('#standards').collapse('hide');
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
-    b = markerLayer.filter(function(f) {
-        f.properties['story'] === 'codeacross';
-        f.properties['marker-color'] == '#00000'
-        return 
-    });
-    return false;
-  });
-
-
-  $('.summit').hover(function(e) {
-    clearTimeout(timer);
-    // $('#standards').collapse('show');
-    // $('#flu').collapse('hide');
-    // $('#codeacross').collapse('hide');
-    // $('#map-story ul li a').removeClass('active');
-    // $(this).addClass('active');
+  $('#flu').on('hidden.bs.collapse', function () {  
     markerLayer.filter(function(f) {
-        return f.properties['story'] === 'standards';
+       return false;
     });
-    return false;
+    map.removeLayer(fluLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
   });
 
-  map.addLayer(markerLayer);
+  $('#codeacross').on('shown.bs.collapse', function () {
+    clearTimeout(timer);
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return f.properties['story'] !== 'codeacross';
+    });
+
+    map.removeLayer(summitLayer);
+    map.removeLayer(fluLayer);
+    codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    codeacrossLayer.named('codeacross')
+    map.addLayer(codeacrossLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
+  });
+
+  $('#codeacross').on('hidden.bs.collapse', function () { 
+    markerLayer.filter(function(f) {
+       return false;
+    }); 
+    map.removeLayer(codeacrossLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
+  });
+
+
+  $('#summit').on('shown.bs.collapse', function () {
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    clearTimeout(timer);
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+        return f.properties['story'] !== 'summit';
+    });
+    map.removeLayer(codeacrossLayer)
+    map.removeLayer(fluLayer);
+    summitLayer = mapbox.markers.layer().features(summit);
+    map.addLayer(summitLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
+  });
+
+  $('#summit').on('hidden.bs.collapse', function () {  
+    markerLayer.filter(function(f) {
+       return false;
+    });
+    map.removeLayer(summitLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
+  });
+
+  
+
 
 
 
@@ -645,7 +1040,7 @@ $(function(){
     .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
-  var colors = ["#5db7ad", "#88c5be", "#9ccdc8", "#aed5d1", "#c2dedb", "#d4e7e5", "#e8f2f1", "#FFFFFF"];
+  var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
 
   $(".bargraph").each(function(i, el){
 

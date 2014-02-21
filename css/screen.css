@@ -150,6 +150,11 @@ li {
   max-width: 85px;
 }
 
+.networkTitle {
+  background: #399fd3;
+  padding-top: 100px;
+}
+
 .panel-collapse {
   background: #e87d2b;
   padding: 0px 5px;
@@ -236,6 +241,31 @@ li {
   margin: 0px 0px 8px 0px;
 }
 
+.title {
+  min-height: 400px;
+  padding-bottom: 200px;
+}
+
+.title h1,
+.title p {
+  text-align: center;
+  color:#fff;
+  text-shadow: none;
+}
+
+.title h1 {
+  font-size: 180px !important;
+  margin: 90px auto 117px;
+  font-weight: 600;
+}
+ 
+.title p{ 
+  text-transform:uppercase;
+  font-size: 63px;
+  font-weight: 300;
+}
+
+
 
 /*****************************************************************************/
 /*
@@ -264,7 +294,7 @@ li {
 }
 
 #loading{ 
-  background:#C82A45;
+  background:#399fd3;
   position:fixed;
   top:0px;
   left:0px;
@@ -407,7 +437,7 @@ input[type="text"] {
 }
 
 .page.story{ 
-  padding: 80px 80px 100px;
+  /*padding: 80px 80px 100px;*/
 }
 
 .page.story.nosidebar{ 
@@ -551,6 +581,26 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
 }
+.pagebg.imageopen-closed{ 
+  background: url("../img/open-closed.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
+}
+.pagebg.imagegood_governance{ 
+  background: url("../img/good_governance.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+}
+.pagebg.imageforthepeople{ 
+  background: url("../img/forthepeople.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
+}
+
+
 .pagebg.imageiphone{ 
   background: url("../img/iphone.jpg") no-repeat;
   background-size:cover;
@@ -817,6 +867,10 @@ padding-left: 20px;
 .cfa p {
   font-size: 18px;
   line-height: 30px;
+}
+
+.cfa a {
+  font-weight: 300;
 }
 
 
@@ -1637,7 +1691,7 @@ a.appspop:hover  {
 
 .companies img {
   width: 82%;
-  padding: 0px 0px 0px 5em;
+  padding: 40px 0px 0px 5em;
 }
 
 .companies .companyblurb {
@@ -1967,36 +2021,37 @@ img.progicons {
   margin-top: 30px;
 }
 
-.market .bios p {
-  margin-top: 24px;
-}
-
 .market .bios.right.bioquote {
   margin-top: 0px;
 }
 
-.market .bios.right.bioquote p,
+.community .bios p,
+.market .bios p,
 .network .bios p {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  font-size: 26px;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
+  font-size: 20px;
   font-weight: 300;
-  line-height: 34px;
+  line-height: 24px;
   margin-bottom: 10px;
 }
 
-.market .bios.right.bioquote h3,
+.community .bios h3,
+.market .bios h3,
 .network .bios h3 {
-  font-size: 19px;
-  margin: 20px 0px 0px 0px;
+  font-size: 18px;
+  margin: 10px 0px 0px 0px;
   text-align: left;
 }
 
-.market .bios.right.bioquote h5,
+.community .bios h5,
+.market .bios h5,
 .network .bios h5 {
-  font-size: 16px;
+/*  font-size: 16px;
   line-height: 20px;
+  font-size: 16px;
+  line-height: 15px;
   margin: 0px 0px 0px 0px;
-  text-align: left;
+  text-align: left;*/
 }
 
 .market .stats h4 {
@@ -2257,6 +2312,11 @@ img.progicons {
     line-height: 25px;
   }
 
+  .cfa a {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
   .sidebar{ 
     top:40px;
   }
@@ -2298,19 +2358,19 @@ img.progicons {
     font-size: 17px;
   }
 
-  #loading img {
-      width: 300px;
-      margin-top: 100px;
-    }
+#loading img {
+    width: 300px;
+    margin-top: 100px;
+  }
 
-    #loading h1 {
-      font-size: 130px;
-      margin: 50px auto 60px;
-    }
+  #loading h1 {
+    font-size: 130px;
+    margin: 50px auto 60px;
+  }
 
-    #loading p { 
-      font-size: 38px;
-}
+  #loading p { 
+    font-size: 38px;
+  }
 
   .companies {
     height: 369px;
