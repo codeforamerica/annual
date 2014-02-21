@@ -1987,6 +1987,7 @@ img.progicons {
   margin-top: 0px;
 }
 
+.community .bios p,
 .market .bios p,
 .network .bios p {
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
@@ -1996,6 +1997,7 @@ img.progicons {
   margin-bottom: 10px;
 }
 
+.community .bios h3,
 .market .bios h3,
 .network .bios h3 {
   font-size: 18px;
@@ -2003,6 +2005,7 @@ img.progicons {
   text-align: left;
 }
 
+.community .bios h5,
 .market .bios h5,
 .network .bios h5 {
   font-size: 16px;
