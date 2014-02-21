@@ -1983,15 +1983,11 @@ img.progicons {
   margin-top: 30px;
 }
 
-.market .bios p {
-  margin-top: 24px;
-}
-
 .market .bios.right.bioquote {
   margin-top: 0px;
 }
 
-.market .bios.right.bioquote p,
+.market .bios p,
 .network .bios p {
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
   font-size: 20px;
@@ -2000,14 +1996,14 @@ img.progicons {
   margin-bottom: 10px;
 }
 
-.market .bios.right.bioquote h3,
+.market .bios h3,
 .network .bios h3 {
   font-size: 18px;
   margin: 10px 0px 0px 0px;
   text-align: left;
 }
 
-.market .bios.right.bioquote h5,
+.market .bios h5,
 .network .bios h5 {
   font-size: 16px;
   line-height: 15px;
