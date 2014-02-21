@@ -650,7 +650,7 @@ $(function(){
     .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
-  var colors = ["#5db7ad", "#88c5be", "#9ccdc8", "#aed5d1", "#c2dedb", "#d4e7e5", "#e8f2f1", "#FFFFFF"];
+  var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
 
   $(".bargraph").each(function(i, el){
 
