@@ -585,42 +585,43 @@ $(function(){
     Map story events
   */
 
-  $('#filter-standards').click(function(e) {
+  $('.flu').click(function(e) {
     clearTimeout(timer);
-    $('#standards').collapse('show');
-    $('#flu').collapse('hide');
-    $('#codeacross').collapse('hide');
-    $('#map-story ul li a').removeClass('active');
-    $(this).addClass('active');
-    markerLayer.filter(function(f) {
-        return f.properties['story'] === 'standards';
-    });
-    return false;
-  });
-
-  $('#filter-flu').click(function(e) {
-    clearTimeout(timer);
-    $('#flu').collapse('show');
-    $('#standards').collapse('hide');
-    $('#codeacross').collapse('hide');
+    // $('#flu').collapse('show');
+    // $('#standards').collapse('hide');
+    // $('#codeacross').collapse('hide');
     
-    $('#map-story ul li a').removeClass('active');
-    $(this).addClass('active');
+    // $('#map-story ul li a').removeClass('active');
+    // $(this).addClass('active');
     markerLayer.filter(function(f) {
         return f.properties['story'] === 'flu';
     });
     return false;
   });
 
-  $('#filter-codeacross').click(function(e) {
+  $('.codeacross').click(function(e) {
     clearTimeout(timer);
-    $('#codeacross').collapse('show');
-    $('#flu').collapse('hide');
-    $('#standards').collapse('hide');
-    $('#map-story ul li a').removeClass('active');
-    $(this).addClass('active');
+    // $('#codeacross').collapse('show');
+    // $('#flu').collapse('hide');
+    // $('#standards').collapse('hide');
+    // $('#map-story ul li a').removeClass('active');
+    // $(this).addClass('active');
     markerLayer.filter(function(f) {
         return f.properties['story'] === 'codeacross';
+    });
+    return false;
+  });
+
+
+  $('.summit').click(function(e) {
+    clearTimeout(timer);
+    // $('#standards').collapse('show');
+    // $('#flu').collapse('hide');
+    // $('#codeacross').collapse('hide');
+    // $('#map-story ul li a').removeClass('active');
+    // $(this).addClass('active');
+    markerLayer.filter(function(f) {
+        return f.properties['story'] === 'standards';
     });
     return false;
   });
