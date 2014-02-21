@@ -207,6 +207,14 @@ var cityLocations = [{
     "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
 }];
 
+var summit = [{
+    "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
+    "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
+    "properties": { "city": "wake county", "year":"2013", "type": "story", "story": "summit" }
+  }]
+
 var dataStandards;
 
 var fellowshipColor = "e87d2b";
@@ -588,7 +596,7 @@ $(function(){
     Map story events
   */
 
-  $('.flu').hover(function(e) {
+  $('#flu').on('shown.bs.collapse', function () {
     clearTimeout(timer);
     // $('#flu').collapse('show');
     // $('#standards').collapse('hide');
@@ -597,31 +605,29 @@ $(function(){
     // $('#map-story ul li a').removeClass('active');
     // $(this).addClass('active');
     markerLayer.filter(function(f) {
-        f.properties['story'] === 'flu';
-        f.properties['marker-color'] = '#00000'
-        console.log(f);
-        return
+        return f.properties['story'] === 'flu';
+        
     });
-    return false;
   });
 
-  $('.codeacross').hover(function(e) {
+  // $('.codeacross').hover(function(e) {
+    $('#codeacross').on('shown.bs.collapse', function () {
+  // do something…
+// })
     clearTimeout(timer);
     // $('#codeacross').collapse('show');
     // $('#flu').collapse('hide');
     // $('#standards').collapse('hide');
     // $('#map-story ul li a').removeClass('active');
     // $(this).addClass('active');
-    b = markerLayer.filter(function(f) {
-        f.properties['story'] === 'codeacross';
-        f.properties['marker-color'] == '#00000'
-        return 
+    markerLayer.filter(function(f) {
+        return f.properties['story'] === 'codeacross';
+        // f.properties['marker-color'] == '#00000'
     });
-    return false;
   });
 
 
-  $('.summit').hover(function(e) {
+  $('#summit').on('shown.bs.collapse', function () {
     clearTimeout(timer);
     // $('#standards').collapse('show');
     // $('#flu').collapse('hide');
@@ -629,9 +635,8 @@ $(function(){
     // $('#map-story ul li a').removeClass('active');
     // $(this).addClass('active');
     markerLayer.filter(function(f) {
-        return f.properties['story'] === 'standards';
+        return f.properties['story'] === 'summit';
     });
-    return false;
   });
 
   map.addLayer(markerLayer);
@@ -645,7 +650,7 @@ $(function(){
     .content('<a href="http://mapbox.com/about/maps">Map by Mapbox</a>');
 
 
-  var colors = ["#5db7ad", "#88c5be", "#9ccdc8", "#aed5d1", "#c2dedb", "#d4e7e5", "#e8f2f1", "#FFFFFF"];
+  var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
 
   $(".bargraph").each(function(i, el){
 
