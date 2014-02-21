@@ -9,82 +9,95 @@ published: true
 section: network
 ---
 
-<div class="fellowship">
-  <div id="mapcontainer">
-    <div id="map"></div>
-    <div class="yeartitle">
-      <div class="map2011">2011</div>
-      <div class="map2012">2012</div>
-      <div class="map2013">2013</div>
+<div class="networkTitle">
+  <div class="row-fluid">
+    <div class="span12 summary offset2">
+      <h3>Thousands of citizens and dozens of cities have built a powerful network.</h3>
+      <p>We’ve more than doubled the number of volunteer Brigade chapters in the US, with 3,000+ members, and
+our the Peer Network for government officials is now active in 50+ cities. Beyond our shores, we have
+launched our first international program, Code for All. Together this network is a platform for scaling
+innovation virally, replicating apps, data standards, and policies across the country.</p>
     </div>
-    
-    <div class="panel-group span3" id="map-story">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-title">
-            <a class="flu" data-toggle="collapse" data-parent="#map-story" href="#flu">
-              Flu Shot Finder
-            </a>
-          </div>
-        </div>
-        <div id="flu" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>A Chicago brigade member built an app to find flu shot providers that 3 other cities in the CfA network have re-deployed, using a standard data specification to enable the common app. <a href="http://www.huffingtonpost.com/mark-headd/how-technology-can-fight-the-flu_b_4495730.html">Read more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-title">
-            <a data-toggle="collapse" data-parent="#map-story" href="#codeacross">
-              Code Across 2013
-            </a>
-          </div>
-        </div>
-        <div id="codeacross" class="panel-collapse collapse" >
-          <div class="panel-body">
-           <p>We activated the Code for America network through a national weekend of civic innovation where we built beta apps, liberated datasets and held write-a-thons to foster community and get citizens to engage with their local governments.</p>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-title">
-            <a class="summit" data-toggle="collapse" data-parent="#map-story" href="#summit">
-              Summit
-            </a>
-          </div>
-        </div>
-        <div id="summit" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p>We brought together civic hackers and city staff, mayors and mentors, designers and developers from around the globe to discuss what happened in the civic tech movement in 2013 -- to share insights and learnings. For three days, 500 passionate citizens from around the world talked, listened, and learned about how to work together and make our communities better.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="downarrow">
-      <svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
-            version="1.0" width="500px" height="600px" viewBox="-500, -600 ,1000, 1200" >
-        <polygon  style="stroke:none; fill:#fff;" 
-                  points="100,-600 100,200  500,-200 500,100  0,600  -500,100 -500,-200 -100,200 -100,-600 " />
-      </svg>
-    </div> 
-    <svg id='marker' xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="f1" x="-10%" y="-10%" height="200%" width="200%">
-          <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
-          <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
-          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-        </filter>
-      </defs>
-      <circle cx="25" cy="25" r="7" style="stroke-width: 1; stroke: #e5e5e5; fill:#e87d2b" filter="url(#f1)" />  
-    </svg> 
   </div>
-  <div class="mapscroll"></div>
+<div class="fellowship">
+  <div class="row-fluid">
+    <div id="mapcontainer">
+      <div id="map"></div>
+      <div class="yeartitle">
+        <div class="map2011">2011</div>
+        <div class="map2012">2012</div>
+        <div class="map2013">2013</div>
+      </div>
+      
+      <div class="panel-group span3" id="map-story">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a class="flu" data-toggle="collapse" data-parent="#map-story" href="#flu">
+                Flu Shot Finder
+              </a>
+            </div>
+          </div>
+          <div id="flu" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>A Chicago brigade member built an app to find flu shot providers that 3 other cities in the CfA network have re-deployed, using a standard data specification to enable the common app. <a href="http://www.huffingtonpost.com/mark-headd/how-technology-can-fight-the-flu_b_4495730.html">Read more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a data-toggle="collapse" data-parent="#map-story" href="#codeacross">
+                Code Across 2013
+              </a>
+            </div>
+          </div>
+          <div id="codeacross" class="panel-collapse collapse" >
+            <div class="panel-body">
+             <p>We activated the Code for America network through a national weekend of civic innovation where we built beta apps, liberated datasets and held write-a-thons to foster community and get citizens to engage with their local governments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a class="summit" data-toggle="collapse" data-parent="#map-story" href="#summit">
+                Summit
+              </a>
+            </div>
+          </div>
+          <div id="summit" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>We brought together civic hackers and city staff, mayors and mentors, designers and developers from around the globe to discuss what happened in the civic tech movement in 2013 -- to share insights and learnings. For three days, 500 passionate citizens from around the world talked, listened, and learned about how to work together and make our communities better.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="downarrow">
+        <svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+              version="1.0" width="500px" height="600px" viewBox="-500, -600 ,1000, 1200" >
+          <polygon  style="stroke:none; fill:#fff;" 
+                    points="100,-600 100,200  500,-200 500,100  0,600  -500,100 -500,-200 -100,200 -100,-600 " />
+        </svg>
+      </div> 
+      <svg id='marker' xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="f1" x="-10%" y="-10%" height="200%" width="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+          </filter>
+        </defs>
+        <circle cx="25" cy="25" r="7" style="stroke-width: 1; stroke: #e5e5e5; fill:#e87d2b" filter="url(#f1)" />  
+      </svg> 
+    </div>
+    <div class="mapscroll"></div>
+  </div>
 
   
 </div>
 
 <div class="scrollout mapscroll"></div>
+</div>
