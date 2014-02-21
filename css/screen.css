@@ -1993,8 +1993,8 @@ img.progicons {
 
 .market .bios.right.bioquote p,
 .network .bios p {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  font-size: 18px;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
+  font-size: 20px;
   font-weight: 300;
   line-height: 24px;
   margin-bottom: 10px;
