@@ -150,6 +150,11 @@ li {
   max-width: 85px;
 }
 
+.networkTitle {
+  background: #399fd3;
+  padding-top: 100px;
+}
+
 .panel-collapse {
   background: #e87d2b;
   padding: 0px 5px;
