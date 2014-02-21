@@ -588,7 +588,7 @@ $(function(){
     Map story events
   */
 
-  $('.flu').click(function(e) {
+  $('.flu').hover(function(e) {
     clearTimeout(timer);
     // $('#flu').collapse('show');
     // $('#standards').collapse('hide');
@@ -605,7 +605,7 @@ $(function(){
     return false;
   });
 
-  $('.codeacross').click(function(e) {
+  $('.codeacross').hover(function(e) {
     clearTimeout(timer);
     // $('#codeacross').collapse('show');
     // $('#flu').collapse('hide');
@@ -621,7 +621,7 @@ $(function(){
   });
 
 
-  $('.summit').click(function(e) {
+  $('.summit').hover(function(e) {
     clearTimeout(timer);
     // $('#standards').collapse('show');
     // $('#flu').collapse('hide');
