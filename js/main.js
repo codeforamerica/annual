@@ -909,18 +909,21 @@ $(function(){
   function click_year(y) {
       return function() {
         $('.map'+y).css('color' ,' #fff')
+
         map.removeLayer(codeacrossLayer)
         map.removeLayer(summitLayer)
         map.removeLayer(fluLayer)
           markerLayer.filter(function(f) {
                return f.properties.year <= y;
           });
+        $svg = $("#marker");
+        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
           return false;
       };
         $.collapse('hide');
   }
 
-  
+  map.addLayer(markerLayer);
 
   /*
     Map story events
@@ -929,12 +932,12 @@ $(function(){
 
   $('#flu').on('shown.bs.collapse', function () {
     clearTimeout(timer);
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
-       return false;
-    });
-    markerLayer.filter(function(f) {
-        return f.properties['story'] !== 'flu';
-        
+       return f.properties['story'] !== 'flu';
     });
 
     map.removeLayer(summitLayer);
@@ -946,14 +949,26 @@ $(function(){
   });
 
   $('#flu').on('hidden.bs.collapse', function () {  
+    markerLayer.filter(function(f) {
+       return false;
+    });
     map.removeLayer(fluLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
   });
 
   $('#codeacross').on('shown.bs.collapse', function () {
     clearTimeout(timer);
-    markerLayer.filter(function(f) {
-       return false;
-    });
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return f.properties['story'] !== 'codeacross';
     });
@@ -966,16 +981,28 @@ $(function(){
     $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
-  $('#codeacross').on('hidden.bs.collapse', function () {  
+  $('#codeacross').on('hidden.bs.collapse', function () { 
+    markerLayer.filter(function(f) {
+       return false;
+    }); 
     map.removeLayer(codeacrossLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
   });
 
 
   $('#summit').on('shown.bs.collapse', function () {
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
     clearTimeout(timer);
-    markerLayer.filter(function(f) {
-       return false;
-    });
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
         return f.properties['story'] !== 'summit';
     });
@@ -987,10 +1014,21 @@ $(function(){
   });
 
   $('#summit').on('hidden.bs.collapse', function () {  
+    markerLayer.filter(function(f) {
+       return false;
+    });
     map.removeLayer(summitLayer)
+    map.removeLayer(markerLayer);
+
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return true;
+    });
   });
 
-  map.addLayer(markerLayer);
+  
 
 
 
