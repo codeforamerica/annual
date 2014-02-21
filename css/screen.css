@@ -551,6 +551,26 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
 }
+.pagebg.imageopen_closed{ 
+  background: url("../img/open_closed.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open_closed.jpg', sizingMethod='scale')";
+}
+.pagebg.imagegood_governance{ 
+  background: url("../img/good_governance.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+}
+.pagebg.imageforthepeople{ 
+  background: url("../img/forthepeople.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
+}
+
+
 .pagebg.imageiphone{ 
   background: url("../img/iphone.jpg") no-repeat;
   background-size:cover;
