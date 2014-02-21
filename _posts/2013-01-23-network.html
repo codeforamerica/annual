@@ -85,12 +85,15 @@ innovation virally, replicating apps, data standards, and policies across the co
       <svg id='marker' xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
           <filter id="f1" x="-10%" y="-10%" height="200%" width="200%">
-            <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
-            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="4" />
-            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+            <feOffset dx="2" dy="4" />
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
           </filter>
         </defs>
-        <circle cx="25" cy="25" r="7" style="stroke-width: 1; stroke: #e5e5e5; fill:#e87d2b" filter="url(#f1)" />  
+        <circle id="markerCircle" cx="25" cy="25" r="7" style="stroke-width: 1; stroke: #e5e5e5;" filter="url(#f1)" />  
       </svg> 
     </div>
     <div class="mapscroll"></div>
