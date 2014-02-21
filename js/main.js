@@ -24,7 +24,7 @@ var cityLocations = [{
     "properties": { "active": "false", "city": "raleigh", "year":"2012", "type": "brigade", "story":"codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
-    "properties": { "active": "false", "city": "San Diego", "year":"2012", "type": "brigade" }
+    "properties": { "active": "false", "city": "San Diego", "year":"2012", "type": "brigade", "story": "codeacross" }
 }, {
     "geometry": { "type": "Point", "coordinates": [-69.233333, 45.250556]},
     "properties": { "active": "false", "city": "maine", "year":"2012", "type": "brigade" }
@@ -224,11 +224,68 @@ var codeacross = [{
   }, {
     "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
     "properties": { "active": "false", "city": "raleigh", "story":"codeacross","marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
+    "properties": { "active": "false", "city": "San Diego", "year":"2012", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "active": "false", "city": "new york", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "active": "false", "city": "oakland", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-122.333, 37.4023]},
+    "properties": { "active": "false", "city": "san mateo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+}, {
+    "geometry": { "type": "Point", "coordinates": [-115.12, 36.10]},
+    "properties": { "active": "false", "city": "las vegas", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
+    "properties": { "active": "false", "city": "honolulu", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+    "properties": { "active": "false", "city": "austin", "year":"2012", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C"}
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
+    "properties": { "active": "false", "city": "houston", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
+    "properties": { "active": "false", "city": "minneapolis", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "active": "false", "city": "sacramento", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-77.04, 38.85]},
+    "properties": { "active": "false", "city": "washington dc", "year":"2013", "type": "brigade", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-94.581299, 39.087436]},
+      "properties": { "active": "false", "city": "kansas city mo", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-85.748291, 38.242495]},
+      "properties": { "active": "false", "city": "louisville", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-81.499, 41.137]},
+      "properties": { "active": "false", "city": "summit county", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-86.251990, 41.676355]},
+      "properties": { "active": "false", "city": "south bend", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#69579C" }
 }]
 
 var flu = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "active": "false", "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+    "properties": { "active": "false", "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#69579C", "marker-size": "large", "marker-color": "#69579C" }
+  },  {
+    "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
+    "properties": { "active": "false", "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
+    "properties": { "active": "false", "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
+    "properties": { "active": "false", "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#69579C" }
 
 }]
 
