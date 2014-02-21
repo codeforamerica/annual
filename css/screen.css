@@ -1291,58 +1291,8 @@ a.appspop:hover  {
   background-position: 0 -2700px;
 }
 
-.aaron,
-.alan,
-.anna,
-.chacha,
-.erik,
-.jeremy,
-.joel,
-.john,
-.karla,
-.matt,
-.max,
-.michael,
-.michellek,
-.mjumbe,
-.pete,
-.ryan,
-.scotts,
-.talin, 
-.tyler,
-.alexp,
-.alexy,
-.alicia,
-.amir,
-.angel,
-.aurelio,
-.ben,
-.diana,
-.eddie,
-.emily,
-.jesse,
-.jessica,
-.jim,
-.joe,
-.liz,
-.matth,
-.michellel,
-.mick,
-.nick,
-.prashant,
-.rob,
-.ruthie,
-.serena,
-.sheba,
-.tamara,
-.zach {
-  background-image: url('../img/fellows_headshot.jpg');
-  background-size: 50px;
-  float: left;
-  width: 50px;
-  height: 50px;
-  margin: 5px 5px 0 0;
-}
+
+/* 2011 Fellows */
 
 .aaron {
   background-position: 0 0;
@@ -1419,6 +1369,8 @@ a.appspop:hover  {
 .tyler {
   background-position: 0 -900px;
 }
+
+/* 2012 fellows */
 
 .alexp {
   background-position: 0 -950px;
@@ -1524,32 +1476,35 @@ a.appspop:hover  {
   background-position: 0 -2200px;
 }
 
-.morefellowspop.alexp,
-.morefellowspop.alexy,
-.morefellowspop.alicia,
-.morefellowspop.amir,
-.morefellowspop.angel,
-.morefellowspop.aurelio,
-.morefellowspop.ben,
-.morefellowspop.diana,
-.morefellowspop.eddie,
-.morefellowspop.emily,
-.morefellowspop.jesse,
-.morefellowspop.jessica,
-.morefellowspop.jim,
-.morefellowspop.joe,
-.morefellowspop.liz,
-.morefellowspop.matth,
-.morefellowspop.michellel,
-.morefellowspop.mick,
-.morefellowspop.nick,
-.morefellowspop.prashant,
-.morefellowspop.rob,
-.morefellowspop.ruthie,
-.morefellowspop.serena,
-.morefellowspop.sheba,
-.morefellowspop.tamara,
-.morefellowspop.zach {
+/* 2013 Fellows */
+
+.morefellowspop.alanw,
+.morefellowspop.andrewh,
+.morefellowspop.andyh,
+.morefellowspop.anselmb,
+.morefellowspop.arielk,
+.morefellowspop.cjb,
+.morefellowspop.crisc,
+.morefellowspop.dana,
+.morefellowspop.daveg,
+.morefellowspop.donelizaj,
+.morefellowspop.ezras,
+.morefellowspop.jacobs,
+.morefellowspop.katiel,
+.morefellowspop.lauram,
+.morefellowspop.lindsayb,
+.morefellowspop.louh,
+.morefellowspop.march,
+.morefellowspop.marcinw,
+.morefellowspop.moncefb,
+.morefellowspop.rebeccaa,
+.morefellowspop.reeddg,
+.morefellowspop.richaa,
+.morefellowspop.ryanc,
+.morefellowspop.shaunakk,
+.morefellowspop.sheilad,
+.morefellowspop.sophiap,
+.morefellowspop.tamaramp {
   background-image: url('../img/fellows_headshot.jpg');
   background-size: 100px;
   float: left;
@@ -1558,108 +1513,112 @@ a.appspop:hover  {
   margin: 20px 20px 0 0;
 }
 
-.morefellowspop.alexp {
-  background-position: 0 -1900px;
+.morefellowspop.alanw {
+  background-position: 0 -5347px;
 }
 
-.morefellowspop.alexy {
-  background-position: 0 -2000px;
+.morefellowspop.andrewh {
+  background-position: 0 -5447px;
 }
 
-.morefellowspop.alicia {
-  background-position: 0 -2100px;
+.morefellowspop.andyh {
+  background-position: 0 -5547px;
 }
 
-.morefellowspop.amir {
-  background-position: 0 -2200px
+.morefellowspop.anselmb {
+  background-position: 0 -5647px
 }
 
-.morefellowspop.angel {
-  background-position: 0 -2300px;
+.morefellowspop.arielk {
+  background-position: 0 -5747px
 }
 
-.morefellowspop.aurelio {
-  background-position: 0 -2400px;
+.morefellowspop.cjb {
+  background-position: 0 -5847px;
 }
 
-.morefellowspop.ben {
-  background-position: 0 -2500px;
+.morefellowspop.crisc {
+  background-position: 0 -5947px;
 }
 
-.morefellowspop.diana {
-  background-position: 0 -2600px;
+.morefellowspop.dana {
+  background-position: 0 -6047px;
 }
 
-.morefellowspop.eddie {
-  background-position: 0 -2700px;
+.morefellowspop.daveg {
+  background-position: 0 -6147px;
 }
 
-.morefellowspop.emily {
-  background-position: 0 -2800px;
+.morefellowspop.donelizaj {
+  background-position: 0 -6247px;
 }
 
-.morefellowspop.jesse {
-  background-position: 0 -2900px;
+.morefellowspop.ezras {
+  background-position: 0 -6347px;
 }
 
-.morefellowspop.jessica {
-  background-position: 0 -3000px;
+.morefellowspop.jacobs {
+  background-position: 0 -6447px;
 }
 
-.morefellowspop.jim {
-  background-position: 0 -3100px;
+.morefellowspop.katiel {
+  background-position: 0 -6547px;
 }
 
-.morefellowspop.joe {
-  background-position: 0 -3200px;
+.morefellowspop.lauram {
+  background-position: 0 -6647px;
 }
 
-.morefellowspop.liz {
-  background-position: 0 -3300px;
+.morefellowspop.lindsayb {
+  background-position: 0 -6747px;
 }
 
-.morefellowspop.matth {
-  background-position: 0 -3400px;
+.morefellowspop.louh {
+  background-position: 0 -6847px;
 }
 
-.morefellowspop.michellel {
-  background-position: 0 -3500px;
+.morefellowspop.march {
+  background-position: 0 -6947px;
 }
 
-.morefellowspop.mick {
-  background-position: 0 -3600px;
+.morefellowspop.marcinw {
+  background-position: 0 -7047px;
 }
 
-.morefellowspop.nick {
-  background-position: 0 -3700px;
+.morefellowspop.moncefb {
+  background-position: 0 -7147px;
 }
 
-.morefellowspop.prashant {
-  background-position: 0 -3800px;
+.morefellowspop.rebeccaa {
+  background-position: 0 -7247px;
 }
 
-.morefellowspop.rob {
-  background-position: 0 -3900px;
+.morefellowspop.reeddg {
+  background-position: 0 -7347px;
 }
 
-.morefellowspop.ruthie {
-  background-position: 0 -4000px;
+.morefellowspop.richaa {
+  background-position: 0 -7447px;
 }
 
-.morefellowspop.serena {
-  background-position: 0 -4100px;
+.morefellowspop.ryanc {
+  background-position: 0 -7547px;
 }
 
-.morefellowspop.sheba {
-  background-position: 0 -4200px;
+.morefellowspop.shaunakk {
+  background-position: 0 -7647px;
 }
 
-.morefellowspop.tamara {
-  background-position: 0 -4300px;
+.morefellowspop.sheilad {
+  background-position: 0 -7747px;
 }
 
-.morefellowspop.zach {
-  background-position: 0 -4400px;
+.morefellowspop.sophiap {
+  background-position: 0 -7847px;
+}
+
+.morefellowspop.tamaramp {
+  background-position: 0 -7947px;
 }
 
 .ecosystem h1 {
@@ -1872,6 +1831,7 @@ img.progicons {
 
 .popover-title,
 .popover-content {
+  font-weight: 300;
   color: #000;
   text-shadow: none;
 }
@@ -1888,7 +1848,6 @@ img.progicons {
 .captains .popover-content,
 .morefellows .popover-content {
   font-weight: 300;
-  font-style: italic;
   padding-top: 0px;
 }
 
