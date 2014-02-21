@@ -581,11 +581,11 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
 }
-.pagebg.imageopen_closed{ 
-  background: url("../img/open_closed.jpg") no-repeat;
+.pagebg.imageopen-closed{ 
+  background: url("../img/open-closed.jpg") no-repeat;
   background-size:cover;
   background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open_closed.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
 }
 .pagebg.imagegood_governance{ 
   background: url("../img/good_governance.jpg") no-repeat;
