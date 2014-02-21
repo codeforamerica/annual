@@ -207,22 +207,88 @@ var cityLocations = [{
 var summit = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
     "properties": { "city": "philadelphia", "year": "2011", "type": "fellowship", "story": "summit" }
-},  {
+  },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
     "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "summit" }
-}, {
+  }, {
     "geometry": { "type": "Point", "coordinates": [-122.326, 47.604]},
     "properties": { "city": "seattle", "year": "2011", "type": "fellowship", "story":"summit" }
-}, {
+  }, {
     "geometry": { "type": "Point", "coordinates": [-82.553889, 35.600833]},
-    "properties": { "city": "asheville", "year":"2012", "type": "brigade" }
+    "properties": { "city": "asheville", "year":"2012", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-85.00, 38.05]},
+    "properties": { "city": "lexington", "year":"2012", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.78, 35.87]},
+    "properties": { "city": "raleigh", "year":"2012", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-117.13, 32.82]},
+    "properties": { "city": "San Diego", "year":"2012", "type": "brigade", "story": "summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-74.003, 40.701]},
+    "properties": { "city": "new york", "year":"2013", "type": "fellowship", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.16, 37.48]},
+    "properties": { "city": "oakland", "year":"2013", "type": "fellowship", "story":"summit" }
+  },{
+      "geometry": { "type": "Point", "coordinates": [-90.087, 29.968]},
+      "properties": { "city": "neworleans", "year":"2012", "type": "fellowship", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-122.0306, 36.9724]},
+    "properties": { "city": "santacruz", "year":"2012", "type": "fellowship", "story":"summit" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
+      "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-83.059, 42.360]},
+    "properties": { "city": "detroit", "year":"2012", "type": "fellowship", "story":"summit" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-157.859, 21.305]},
+      "properties": { "city": "honolulu", "year":"2012", "type": "fellowship", "story":"summit" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-97.756, 30.276]},
+      "properties": { "city": "austin", "year":"2012", "type": "fellowship", "story":"summit"}
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-150.02, 61.17]},
+    "properties": { "city": "anchorage", "year":"2013", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-78.898619, 35.994033]},
+    "properties": { "city": "durham", "year":"2012", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-95.35, 29.97]},
+    "properties": { "city": "houston", "year":"2013", "type": "brigade", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [-93.47, 44.83]},
+    "properties": { "city": "minneapolis", "year":"2013", "type": "brigade", "story":"summit" }
 }, {
+    "geometry": { "type": "Point", "coordinates": [-121.50, 38.52]},
+    "properties": { "city": "sacramento", "year":"2013", "type": "brigade", "story":"summit" }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }, {
     "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
     "properties": { "city": "Olathe", "year":"2013", "marker-size": "large", "marker-color": "#69579C" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-78.652504, 35.790429]},
     "properties": { "city": "wake county", "year":"2013", "marker-size": "large", "marker-color": "#69579C" }
-  }]
+
+}]
 
 var codeacross = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
