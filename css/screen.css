@@ -1845,9 +1845,6 @@ img.progicons {
   display: block;
 }
 
-.community h5.anchorage {
-  margin-top: -12px;
-}
 
 .community .people ul {
   margin: 0px 0px 8px 0px;
@@ -2046,12 +2043,12 @@ img.progicons {
 .community .bios h5,
 .market .bios h5,
 .network .bios h5 {
-/*  font-size: 16px;
+  font-size: 16px;
   line-height: 20px;
   font-size: 16px;
   line-height: 15px;
   margin: 0px 0px 0px 0px;
-  text-align: left;*/
+  text-align: left;
 }
 
 .market .stats h4 {
