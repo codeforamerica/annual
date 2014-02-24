@@ -166,18 +166,21 @@ li {
 
 .stats2013{
   border-left: 2px solid white;
-  padding: 20px 0px 25px 30px;
+  padding: 5px 0px 10px 20px;
   margin-left: 15px;
 }
 
 .stats2013 p{
+  font-size: 14px;
+  line-height: 14px;
   margin: 0px;
 }
 
 .stats2013 h3{
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  margin: 0px 0px 8px 0px;
-  line-height: 40px;
+  font-size: 35px;
+  margin: 0px 0px 7px 0px;
+  line-height: 30px;
 }
 
 .storyContainer {
@@ -269,6 +272,9 @@ li {
   font-weight: 300;
 }
 
+.featuredapps p{
+  margin: 0px;
+}
 
 
 /*****************************************************************************/
@@ -554,8 +560,8 @@ input[type="text"] {
 
 .line {
   border: white solid 1px;
-  width: 80%;
-  margin: 20px 0px;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
 }
 
 .clear{ 
