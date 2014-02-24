@@ -572,7 +572,7 @@ $(function(){
 
   // Create map
   var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
-
+  var storyLayer
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
@@ -584,14 +584,14 @@ $(function(){
   var displayedMarkers = [];
   var currentMarker = null;
 
-  markerLayer.sort(function(a, b) {
-    return a.geometry.coordinates[0] -
-      b.geometry.coordinates[0];
-  });
+  // markerLayer.sort(function(a, b) {
+  //   return a.geometry.coordinates[0] -
+  //     b.geometry.coordinates[0];
+  // });
 
   markerLayer.addCallback("markeradded", function(l, m){
-    console.log("markeradded");
-    console.log($(m.element));
+    // console.log("markeradded");
+    // console.log($(m.element));
     displayedMarkers.push(m);
     // console.log(displayedMarkers);
     // if($(m.element).attr("class").indexOf("marker") === -1)
@@ -665,6 +665,7 @@ $(function(){
   });
 
   var summitLayer, codeacrossLayer, fluLayer
+  var stories = ["summit", "codeacross", "flu"]
 
   // A closure for clicking years. You give it a year, and it returns a function
   // that, when run, clicks that year. It's this way in order to be used as both an
@@ -694,21 +695,22 @@ $(function(){
   
 
   $('#flu').on('shown.bs.collapse', function () {
-    clearTimeout(timer);
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
-    map.removeLayer(markerLayer);
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return f.properties['story'] !== 'flu';
-    });
+    addStories("flu")
+    // clearTimeout(timer);
+    // $svg = $("#marker");
+    // $("#markerCircle", $svg).attr('style', "fill:#999595");
+    // map.removeLayer(markerLayer);
+    // map.addLayer(markerLayer)
+    // markerLayer.filter(function(f) {
+    //    return f.properties['story'] !== 'flu';
+    // });
 
-    map.removeLayer(summitLayer);
-    map.removeLayer(codeacrossLayer);
-    fluLayer = mapbox.markers.layer().features(flu);
-    fluLayer.named('flu')
-    map.addLayer(fluLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+    // map.removeLayer(summitLayer);
+    // map.removeLayer(codeacrossLayer);
+    // fluLayer = mapbox.markers.layer().features(flu);
+    // fluLayer.named('flu')
+    // map.addLayer(fluLayer);
+    // $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#flu').on('hidden.bs.collapse', function () {  
@@ -727,21 +729,22 @@ $(function(){
   });
 
   $('#codeacross').on('shown.bs.collapse', function () {
-    clearTimeout(timer);
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
-    map.removeLayer(markerLayer);
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return f.properties['story'] !== 'codeacross';
-    });
+    addStories("codeacross")
+    // clearTimeout(timer);
+    // $svg = $("#marker");
+    // $("#markerCircle", $svg).attr('style', "fill:#999595");
+    // map.removeLayer(markerLayer);
+    // map.addLayer(markerLayer)
+    // markerLayer.filter(function(f) {
+    //    return f.properties['story'] !== 'codeacross';
+    // });
 
-    map.removeLayer(summitLayer);
-    map.removeLayer(fluLayer);
-    codeacrossLayer = mapbox.markers.layer().features(codeacross);
-    codeacrossLayer.named('codeacross')
-    map.addLayer(codeacrossLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+    // map.removeLayer(summitLayer);
+    // map.removeLayer(fluLayer);
+    // codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    // codeacrossLayer.named('codeacross')
+    // map.addLayer(codeacrossLayer);
+    // $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#codeacross').on('hidden.bs.collapse', function () { 
@@ -792,7 +795,37 @@ $(function(){
   });
 
   
+function addStories(name) {
+  clearTimeout(timer);
+  $svg = $("#marker");
+  $("#markerCircle", $svg).attr('style', "fill:#999595");
+  // map.removeLayer(markerLayer);
+  // map.addLayer(markerLayer)
+  // markerLayer.filter(function(f) {
+  //    return f.properties['story'] !== name;
+  // });
 
+  // map.removeLayer(summitLayer);
+  // map.removeLayer(fluLayer);
+  // codeacrossLayer = mapbox.markers.layer().features(codeacross);
+  // codeacrossLayer.named('codeacross')
+  // map.addLayer(codeacrossLayer);
+  // $('.simplestyle-marker').parent().css("z-index", "100")
+
+
+  $.each(stories, function(index, storyName) {
+    console.log(storyName);
+    if(storyName !== name) {
+      map.removeLayer(storyName+'Layer');
+      storyLayer = mapbox.markers.layer().features(name);
+      console.log(storyLayer);
+      storyLayer.named(name)
+    } else {
+      map.addLayer(storyLayer);
+      $('.simplestyle-marker').parent().css("z-index", "100")
+    }
+  });
+}
 
 
 
