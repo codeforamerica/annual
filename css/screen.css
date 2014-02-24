@@ -566,11 +566,10 @@ input[type="text"] {
 .page.story{ 
   overflow-x: hidden;
   position: relative;
-  padding: 300px 80px 100px;
+  padding: 150px 80px 100px 135px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
-  padding-bottom:400px;
 }
 
 .page.story{ 
@@ -586,8 +585,10 @@ input[type="text"] {
 .page.story h1 { 
   color:#fff;
   font-size: 56px;
+  letter-spacing: 1px;
   list-style: none;
-  line-height: 60px;
+  line-height: 75px;
+  padding-top: 40px;
 }
 
 .page.quote h1 {
