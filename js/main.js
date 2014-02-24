@@ -791,14 +791,16 @@ $(function(){
   });
 
   markerLayer.addCallback("markeradded", function(l, m){
+    console.log("markeradded");
+    console.log($(m.element));
     displayedMarkers.push(m);
     // console.log(displayedMarkers);
-    if($(m.element).attr("class").indexOf("marker") === -1)
-      return;
-    $(m.element).css("top", "-1000px");
+    // if($(m.element).attr("class").indexOf("marker") === -1)
+    //   return;
+    // $(m.element).css("top", "-1000px");
 
+    $(m.element).fadeIn(400);
     setTimeout(function(){
-      $(m.element).animate({"top":"0px"}, 400);
     }, Math.random() * 300);
 
   });
