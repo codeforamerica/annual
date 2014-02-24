@@ -242,8 +242,8 @@ li {
 }
 
 .title {
-  min-height: 400px;
-  padding-bottom: 200px;
+  min-height: 0px;
+  padding-bottom: 0px;
 }
 
 .title h1,
@@ -254,7 +254,7 @@ li {
 }
 
 .title h1 {
-  font-size: 180px !important;
+  font-size: 130px !important;
   margin: 90px auto 117px;
   font-weight: 600;
 }
