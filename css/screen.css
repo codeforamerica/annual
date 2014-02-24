@@ -2516,6 +2516,10 @@ img.progicons {
   .companies .companyblurb {
     padding: 20px 60px 0 30px;
   }
+  .carousel-control.right,
+  .carousel-control.left {
+    font-size: 60px;
+  }
 
 }
 
@@ -2564,6 +2568,7 @@ img.progicons {
   .btn {
     margin: 6px 0 0;
   }
+
 }
 
  @media (max-width: 767px) {
