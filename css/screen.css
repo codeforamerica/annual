@@ -140,6 +140,10 @@ li {
   margin: 20px 0px 65px 0px;
 }
 
+.page.homeQuote{ 
+  padding-top: 50px !important;
+}
+
 .logo {
   display: block;
   margin-left: auto;
