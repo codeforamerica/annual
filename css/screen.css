@@ -1930,11 +1930,11 @@ a.appspop:hover  {
 
 .apps .carousel-control ,
 .carousel-control {
-  position: absolute;
+/*  position: absolute;
   top: 50%;
   left: 10px;
   font-family: 'Helvetica Neue', sans-serif;
-  background: none;
+  background: none;*/
 }
 
 .carousel-control.right {
