@@ -276,8 +276,10 @@ li {
   margin: 0px;
 }
 
-.morefellows{
-  margin-top: 175px;
+.morefellows,
+.themes,
+.community{
+  margin: 250px 0px 100px;
 }
 
 
@@ -837,10 +839,6 @@ iframe.twitter-share-button{
 .quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
-}
-
-.themes {
-  margin: 0px 0px 0px;
 }
 
 .themes .span10 {
@@ -1993,6 +1991,10 @@ img.progicons {
 .community img {
   margin: 0;
   display: block;
+}
+
+.community p{
+  margin: 0px;
 }
 
 
