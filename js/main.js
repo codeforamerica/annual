@@ -672,7 +672,10 @@ $(function(){
   // event handler and run manually.
   function click_year(y) {
       return function() {
-        $('.map'+y).css('color' ,' #fff')
+        // $('.map'+y).css('color' ,' #fff')
+        // $('.map'+y).tab('hide')
+        console.log($('.map'+y+' a[href="#'+y+'"]'));
+        $('a[href="#'+y+'"]').tab('show')
         $svg = $("#marker");
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
         map.removeLayer(codeacrossLayer)
@@ -695,22 +698,22 @@ $(function(){
   
 
   $('#flu').on('shown.bs.collapse', function () {
-    addStories("flu")
-    // clearTimeout(timer);
-    // $svg = $("#marker");
-    // $("#markerCircle", $svg).attr('style', "fill:#999595");
-    // map.removeLayer(markerLayer);
-    // map.addLayer(markerLayer)
-    // markerLayer.filter(function(f) {
-    //    return f.properties['story'] !== 'flu';
-    // });
+    // addStories("flu")
+    clearTimeout(timer);
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return f.properties['story'] !== 'flu';
+    });
 
-    // map.removeLayer(summitLayer);
-    // map.removeLayer(codeacrossLayer);
-    // fluLayer = mapbox.markers.layer().features(flu);
-    // fluLayer.named('flu')
-    // map.addLayer(fluLayer);
-    // $('.simplestyle-marker').parent().css("z-index", "100")
+    map.removeLayer(summitLayer);
+    map.removeLayer(codeacrossLayer);
+    fluLayer = mapbox.markers.layer().features(flu);
+    fluLayer.named('flu')
+    map.addLayer(fluLayer);
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#flu').on('hidden.bs.collapse', function () {  
@@ -721,7 +724,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    $("#markerCircle", $svg).attr('style', "fill:#000");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -729,21 +732,21 @@ $(function(){
   });
 
   $('#codeacross').on('shown.bs.collapse', function () {
-    addStories("codeacross")
-    // clearTimeout(timer);
-    // $svg = $("#marker");
-    // $("#markerCircle", $svg).attr('style', "fill:#999595");
-    // map.removeLayer(markerLayer);
-    // map.addLayer(markerLayer)
-    // markerLayer.filter(function(f) {
-    //    return f.properties['story'] !== 'codeacross';
-    // });
+    // addStories("codeacross")
+    clearTimeout(timer);
+    $svg = $("#marker");
+    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    map.removeLayer(markerLayer);
+    map.addLayer(markerLayer)
+    markerLayer.filter(function(f) {
+       return f.properties['story'] !== 'codeacross';
+    });
 
-    // map.removeLayer(summitLayer);
-    // map.removeLayer(fluLayer);
-    // codeacrossLayer = mapbox.markers.layer().features(codeacross);
-    // codeacrossLayer.named('codeacross')
-    // map.addLayer(codeacrossLayer);
+    map.removeLayer(summitLayer);
+    map.removeLayer(fluLayer);
+    codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    codeacrossLayer.named('codeacross')
+    map.addLayer(codeacrossLayer);
     // $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
@@ -755,7 +758,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    $("#markerCircle", $svg).attr('style', "fill:#000");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -787,7 +790,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+    $("#markerCircle", $svg).attr('style', "fill:#000;stroke-width:1;stroke:#fff;");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -906,16 +909,16 @@ function addStories(name) {
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
     $('.yeartitle div').css('color' ,' #000');
-    click_year(2011)();
-      timer = setTimeout(function(){
-        click_year(2012)()
-        map.addLayer(markerLayer);
-      }, 2500);
+    // click_year(2013)();
+    //   timer = setTimeout(function(){
+    //     click_year(2012)()
+    //     map.addLayer(markerLayer);
+    //   }, 2500);
 
-      timer = setTimeout(function(){
-        click_year(2013)()
-        map.addLayer(markerLayer);
-      }, 5000);
+    //   timer = setTimeout(function(){
+    //     click_year(2013)()
+    //     map.addLayer(markerLayer);
+    //   }, 5000);
 
     // arrowInterval = setInterval(function(){
     //   $(".downarrow").animate({opacity:1}, 800, "swing", function(){

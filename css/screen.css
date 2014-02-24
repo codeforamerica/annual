@@ -84,6 +84,10 @@ li {
     background: #fff;
 }
 
+#map-story h5 {
+  padding: 0px 10px;
+}
+
 #map-story ul {
     list-style: none;
     margin: 0;
@@ -154,6 +158,41 @@ li {
   max-width: 85px;
 }
 
+.nav-tabs {
+  border: none;
+  margin: 0px;
+}
+
+.nav-tabs li {
+  border: none;
+  margin-bottom: -2px;
+}
+
+.nav-tabs li a {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  color: #000;
+  border-radius: 0px;
+}
+.nav-tabs li a:hover {
+  background: #e87d2b;
+  color: #fff;
+  border: none;
+}
+
+.nav-tabs li.active a {
+  background: #e87d2b;
+  color: #fff;
+  border: none;
+}
+
+.nav-tabs li.active a:hover {
+  background: #e87d2b;
+  color: #fff;
+  border: none;
+}
+
 .networkTitle {
   background: #636363;
   padding-top: 100px;
@@ -213,16 +252,6 @@ li {
   padding: 0px 0px 75px 0px;
 }
 
-.yeartitle div {
-  display: inline;
-  font-size: 40px;
-  padding: 10px;
-  margin: 50px 5px;
-  cursor: pointer;
-  position: relative;
-  top: 50px;
-}
-
 .stories{
 }
 
@@ -243,6 +272,11 @@ li {
 
 .network .people ul {
   margin: 0px 0px 8px 0px;
+}
+
+.tab-pane div {
+  background: #e87d2b;
+  padding: 15px 20px;
 }
 
 .title {
@@ -268,6 +302,23 @@ li {
   font-size: 63px;
   font-weight: 300;
 }
+
+.yearText {
+  background: #fff;
+  font-size: 16px;
+
+}
+
+.yeartitle .year {
+  /*display: inline;*/
+  font-size: 40px;
+  padding: 10px;
+  /*margin: 50px 5px;*/
+  cursor: pointer;
+/*  position: relative;
+  top: 50px;*/
+}
+
 
 
 
