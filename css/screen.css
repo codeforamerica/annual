@@ -242,8 +242,8 @@ li {
 }
 
 .title {
-  min-height: 400px;
-  padding-bottom: 200px;
+  min-height: 0px;
+  padding-bottom: 0px;
 }
 
 .title h1,
@@ -254,7 +254,7 @@ li {
 }
 
 .title h1 {
-  font-size: 180px !important;
+  font-size: 130px !important;
   margin: 90px auto 117px;
   font-weight: 600;
 }
@@ -716,7 +716,7 @@ iframe.twitter-share-button{
 }
 
 .bios {
-  margin: 50px auto;
+  margin: 35px auto;
   float: left;
 }
 
@@ -2025,33 +2025,36 @@ img.progicons {
   margin-top: 0px;
 }
 
+.morefellows .bios p,
 .community .bios p,
 .market .bios p,
 .network .bios p {
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 24px;
   margin-bottom: 10px;
 }
 
+.morefellows .bios h3,
 .community .bios h3,
 .market .bios h3,
 .network .bios h3 {
-  font-size: 18px;
-  margin: 10px 0px 0px 0px;
+  font-size: 20px;
+  margin: 20px 0px 0px 0px;
   text-align: left;
 }
 
+.morefellows .bios h5,
 .community .bios h5,
 .market .bios h5,
 .network .bios h5 {
-/*  font-size: 16px;
+font-size: 18px;
   line-height: 20px;
   font-size: 16px;
   line-height: 15px;
   margin: 0px 0px 0px 0px;
-  text-align: left;*/
+  text-align: left;
 }
 
 .market .stats h4 {
