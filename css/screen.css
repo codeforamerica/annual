@@ -643,9 +643,11 @@ input[type="text"] {
 }
 
 .sidebartitle h2{ 
+  font-size: 33px;
   position:relative;
   left:-400px;
-  margin-top:40px;
+  line-height: 45px;
+  margin-top:20px;
   text-transform: uppercase;
 }
 
