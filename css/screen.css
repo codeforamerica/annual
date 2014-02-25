@@ -87,6 +87,9 @@ li {
 
 #map-story h5 {
   padding: 0px 10px;
+  color: #6D6E71;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #map-story ul {
@@ -98,7 +101,7 @@ li {
 #map-story a {
     font-size: 13px;
     background: #FFF;
-    color: #2f3d4a;
+    color: #6D6E71;
     display: block;
     margin: 0;
     padding: 0;
@@ -107,10 +110,12 @@ li {
     min-width: 138px;
     padding: 10px;
     text-decoration: none;
+    text-shadow: none;
 }
 
 #map-story a:hover {
-    background: #e87d2b;
+    background: #fff;
+    color: #4D4D4D !important;
     border-left-width: 0px;
 }
 
@@ -126,8 +131,8 @@ li {
 }
 
 #map-story a.active {
-    background: #e87d2b;
-    color: #FFF;
+    background: #FFF;
+    color: #e87d2b;
     border-left-width: 0px;
 }
 
@@ -200,9 +205,16 @@ li {
 }
 
 .panel-collapse {
-  background: #e87d2b;
+  color: #e87d2b;
+  background: #fff;
   padding: 0px 5px;
 }
+
+.panel-body {
+  padding: 0px 10px 10px;
+  text-shadow: none;
+}
+
 
 .stats2013{
   border-left: 2px solid white;
