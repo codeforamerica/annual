@@ -33,7 +33,7 @@ h1 {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0em 0em 1em;
   line-height: 23px;
 }
 
@@ -77,6 +77,7 @@ li {
 /*****************************************************************************/
 
 #map-story {
+    margin-top: 20px;
     position: absolute;
     top: 50px;
     right: 10px;
@@ -86,6 +87,9 @@ li {
 
 #map-story h5 {
   padding: 0px 10px;
+  color: #6D6E71;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #map-story ul {
@@ -97,7 +101,7 @@ li {
 #map-story a {
     font-size: 13px;
     background: #FFF;
-    color: #2f3d4a;
+    color: #6D6E71;
     display: block;
     margin: 0;
     padding: 0;
@@ -106,10 +110,12 @@ li {
     min-width: 138px;
     padding: 10px;
     text-decoration: none;
+    text-shadow: none;
 }
 
 #map-story a:hover {
-    background: #e87d2b;
+    background: #fff;
+    color: #4D4D4D !important;
     border-left-width: 0px;
 }
 
@@ -125,8 +131,8 @@ li {
 }
 
 #map-story a.active {
-    background: #e87d2b;
-    color: #FFF;
+    background: #FFF;
+    color: #e87d2b;
     border-left-width: 0px;
 }
 
@@ -160,7 +166,7 @@ li {
 
 .nav-tabs {
   border: none;
-  margin: 0px;
+  margin: 45px 0px 0px;
 }
 
 .nav-tabs li {
@@ -169,54 +175,64 @@ li {
 }
 
 .nav-tabs li a {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  background: #fff;
-  color: #000;
+  background: #F7F7F7;
+  color: #6D6E71;
   border-radius: 0px;
 }
 .nav-tabs li a:hover {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #4D4D4D;
   border: none;
 }
 
 .nav-tabs li.active a {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #e87d2b;
   border: none;
 }
 
 .nav-tabs li.active a:hover {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #e87d2b;
   border: none;
 }
 
 .networkTitle {
-  background: #636363;
-  padding-top: 100px;
+  padding-top: 300px;
+  padding-left:20px;
 }
 
 .panel-collapse {
-  background: #e87d2b;
+  color: #e87d2b;
+  background: #fff;
   padding: 0px 5px;
 }
 
+.panel-body {
+  padding: 0px 10px 10px;
+  text-shadow: none;
+}
+
+
 .stats2013{
   border-left: 2px solid white;
-  padding: 20px 0px 25px 30px;
+  padding: 5px 0px 10px 20px;
   margin-left: 15px;
 }
 
 .stats2013 p{
+  font-size: 14px;
+  line-height: 14px;
   margin: 0px;
 }
 
 .stats2013 h3{
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  margin: 0px 0px 8px 0px;
-  line-height: 40px;
+  font-size: 35px;
+  margin: 0px 0px 7px 0px;
+  line-height: 30px;
 }
 
 .storyContainer {
@@ -275,8 +291,10 @@ li {
 }
 
 .tab-pane div {
-  background: #e87d2b;
+  background: #fff;
+  color: #e87d2b !important;
   padding: 15px 20px;
+  text-shadow: none;
 }
 
 .title {
@@ -303,6 +321,16 @@ li {
   font-weight: 300;
 }
 
+.featuredapps p{
+  margin: 0px;
+}
+
+.morefellows,
+.themes,
+.community,
+.network{
+  margin: 250px 0px 100px;
+}
 .yearText {
   background: #fff;
   font-size: 16px;
@@ -318,8 +346,6 @@ li {
 /*  position: relative;
   top: 50px;*/
 }
-
-
 
 
 /*****************************************************************************/
@@ -605,8 +631,8 @@ input[type="text"] {
 
 .line {
   border: white solid 1px;
-  width: 80%;
-  margin: 20px 0px;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
 }
 
 .clear{ 
@@ -617,11 +643,10 @@ input[type="text"] {
 .page.story{ 
   overflow-x: hidden;
   position: relative;
-  padding: 300px 80px 100px;
+  padding: 150px 80px 100px 135px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
-  padding-bottom:400px;
 }
 
 .page.story{ 
@@ -637,8 +662,10 @@ input[type="text"] {
 .page.story h1 { 
   color:#fff;
   font-size: 56px;
+  letter-spacing: 1px;
   list-style: none;
-  line-height: 60px;
+  line-height: 75px;
+  padding-top: 40px;
 }
 
 .page.quote h1 {
@@ -687,9 +714,11 @@ input[type="text"] {
 }
 
 .sidebartitle h2{ 
+  font-size: 35px;
   position:relative;
   left:-400px;
-  margin-top:40px;
+  line-height: 45px;
+  margin-top:20px;
   text-transform: uppercase;
 }
 
@@ -697,6 +726,10 @@ input[type="text"] {
   left: 50px;
   transition: left 1s;
   -webkit-transition: left 1s;
+}
+
+.sidebartitle h2 img {
+  width: 100px;
 }
 
 .pagebg{ 
@@ -875,10 +908,6 @@ iframe.twitter-share-button{
 .quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
-}
-
-.themes {
-  margin: 0px 0px 0px;
 }
 
 .themes .span10 {
@@ -2031,6 +2060,10 @@ img.progicons {
 .community img {
   margin: 0;
   display: block;
+}
+
+.community p{
+  margin: 0px;
 }
 
 
