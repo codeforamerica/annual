@@ -728,6 +728,10 @@ input[type="text"] {
   -webkit-transition: left 1s;
 }
 
+.sidebartitle h2 img {
+  width: 100px;
+}
+
 .pagebg{ 
   position:fixed;
   top:0px; 
