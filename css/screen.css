@@ -361,6 +361,7 @@ li {
 }
 
 
+
 /*****************************************************************************/
 /*
 /* Logos
@@ -2425,6 +2426,10 @@ img.progicons {
 
 .press .keynotes {
   margin-top: 50px;
+}
+
+.financials h3 {
+  margin-top: 90px;
 }
 
 .financials h4 {
