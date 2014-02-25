@@ -33,7 +33,7 @@ h1 {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0em 0em 1em;
   line-height: 23px;
 }
 
@@ -166,18 +166,21 @@ li {
 
 .stats2013{
   border-left: 2px solid white;
-  padding: 20px 0px 25px 30px;
+  padding: 5px 0px 10px 20px;
   margin-left: 15px;
 }
 
 .stats2013 p{
+  font-size: 14px;
+  line-height: 14px;
   margin: 0px;
 }
 
 .stats2013 h3{
   font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  text-transform: uppercase;
-  margin: 0px 0px 8px 0px;
-  line-height: 40px;
+  font-size: 35px;
+  margin: 0px 0px 7px 0px;
+  line-height: 30px;
 }
 
 .storyContainer {
@@ -269,6 +272,16 @@ li {
   font-weight: 300;
 }
 
+.featuredapps p{
+  margin: 0px;
+}
+
+.morefellows,
+.themes,
+.community,
+.network{
+  margin: 250px 0px 100px;
+}
 
 
 /*****************************************************************************/
@@ -554,8 +567,8 @@ input[type="text"] {
 
 .line {
   border: white solid 1px;
-  width: 80%;
-  margin: 20px 0px;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
 }
 
 .clear{ 
@@ -566,11 +579,10 @@ input[type="text"] {
 .page.story{ 
   overflow-x: hidden;
   position: relative;
-  padding: 300px 80px 100px;
+  padding: 150px 80px 100px 135px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
-  padding-bottom:400px;
 }
 
 .page.story{ 
@@ -586,8 +598,10 @@ input[type="text"] {
 .page.story h1 { 
   color:#fff;
   font-size: 56px;
+  letter-spacing: 1px;
   list-style: none;
-  line-height: 60px;
+  line-height: 75px;
+  padding-top: 40px;
 }
 
 .page.quote h1 {
@@ -636,9 +650,11 @@ input[type="text"] {
 }
 
 .sidebartitle h2{ 
+  font-size: 35px;
   position:relative;
   left:-400px;
-  margin-top:40px;
+  line-height: 45px;
+  margin-top:20px;
   text-transform: uppercase;
 }
 
@@ -824,10 +840,6 @@ iframe.twitter-share-button{
 .quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
-}
-
-.themes {
-  margin: 0px 0px 0px;
 }
 
 .themes .span10 {
@@ -1980,6 +1992,10 @@ img.progicons {
 .community img {
   margin: 0;
   display: block;
+}
+
+.community p{
+  margin: 0px;
 }
 
 
