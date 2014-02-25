@@ -77,6 +77,7 @@ li {
 /*****************************************************************************/
 
 #map-story {
+    margin-top: 20px;
     position: absolute;
     top: 50px;
     right: 10px;
@@ -160,7 +161,7 @@ li {
 
 .nav-tabs {
   border: none;
-  margin: 0px;
+  margin: 45px 0px 0px;
 }
 
 .nav-tabs li {
@@ -169,27 +170,27 @@ li {
 }
 
 .nav-tabs li a {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  background: #fff;
-  color: #000;
+  background: #F7F7F7;
+  color: #6D6E71;
   border-radius: 0px;
 }
 .nav-tabs li a:hover {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #4D4D4D;
   border: none;
 }
 
 .nav-tabs li.active a {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #e87d2b;
   border: none;
 }
 
 .nav-tabs li.active a:hover {
-  background: #e87d2b;
-  color: #fff;
+  background: #fff;
+  color: #e87d2b;
   border: none;
 }
 
@@ -275,8 +276,10 @@ li {
 }
 
 .tab-pane div {
-  background: #e87d2b;
+  background: #fff;
+  color: #e87d2b !important;
   padding: 15px 20px;
+  text-shadow: none;
 }
 
 .title {
