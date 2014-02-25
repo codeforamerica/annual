@@ -590,12 +590,7 @@ $(function(){
   // });
 
   markerLayer.addCallback("markeradded", function(l, m){
-    // console.log("markeradded");
-    // console.log($(m.element));
     displayedMarkers.push(m);
-    // console.log(displayedMarkers);
-    // if($(m.element).attr("class").indexOf("marker") === -1)
-    //   return;
      $(m.element).css("opacity", "0");
 
     $(m.element).fadeIn(400);
@@ -673,9 +668,6 @@ $(function(){
   // event handler and run manually.
   function click_year(y) {
       return function() {
-        // $('.map'+y).css('color' ,' #fff')
-        // $('.map'+y).tab('hide')
-        console.log($('.map'+y+' a[href="#'+y+'"]'));
         $('a[href="#'+y+'"]').tab('show')
         $svg = $("#marker");
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
@@ -725,7 +717,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#000");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -748,7 +740,7 @@ $(function(){
     codeacrossLayer = mapbox.markers.layer().features(codeacross);
     codeacrossLayer.named('codeacross')
     map.addLayer(codeacrossLayer);
-    // $('.simplestyle-marker').parent().css("z-index", "100")
+    $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
   $('#codeacross').on('hidden.bs.collapse', function () { 
@@ -759,7 +751,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#000");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -791,7 +783,7 @@ $(function(){
     map.removeLayer(markerLayer);
 
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#000;stroke-width:1;stroke:#fff;");
+    $("#markerCircle", $svg).attr('style', "fill:#e87d2b;");
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
        return true;
@@ -909,23 +901,7 @@ function addStories(name) {
   var mapcurrentyear = "2011";
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
-    $('.yeartitle div').css('color' ,' #000');
-    // click_year(2013)();
-    //   timer = setTimeout(function(){
-    //     click_year(2012)()
-    //     map.addLayer(markerLayer);
-    //   }, 2500);
-
-    //   timer = setTimeout(function(){
-    //     click_year(2013)()
-    //     map.addLayer(markerLayer);
-    //   }, 5000);
-
-    // arrowInterval = setInterval(function(){
-    //   $(".downarrow").animate({opacity:1}, 800, "swing", function(){
-    //     $(".downarrow").animate({opacity:0}, 800, "swing");
-    //   })}, 2000);
-
+    click_year(2013)();
   }, function(el, i){
     // clearInterval(arrowInterval);
     $(".downarrow").animate({opacity:1}, 800, "swing");
