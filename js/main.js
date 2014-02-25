@@ -596,10 +596,11 @@ $(function(){
     // console.log(displayedMarkers);
     // if($(m.element).attr("class").indexOf("marker") === -1)
     //   return;
-    // $(m.element).css("top", "-1000px");
+     $(m.element).css("opacity", "0");
 
     $(m.element).fadeIn(400);
     setTimeout(function(){
+      $(m.element).animate({opacity: 1}, 400)
     }, Math.random() * 300);
 
   });
