@@ -483,6 +483,8 @@ $(function(){
     else{
       $($("div.sidebartitle")[i]).show();
       $($("div.sidebartitle")[i]).addClass("appear");
+      $($("div.sidebartitle")[i]).css("left", "-500px");
+      $($("div.sidebartitle")[i]).animate({left: 50}, 800);
     }
   }, function(el, i){
     $($("div.pagebg")[i]).fadeOut({duration:700});
