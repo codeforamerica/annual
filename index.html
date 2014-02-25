@@ -58,7 +58,11 @@ title: Code for America 2013 Annual Report
     <div class="sidebartitle" >
       <h1>2013</h1>
       {% if p.title != "stats" %}
-      <h2>{{ p.title }}</h2>
+      <h2>{{ p.title }} <br/>
+      {% if p.icon %}
+        <img src="img/{{p.icon}}.png"/>
+      {% endif %}
+      </h2>
 
       {% endif %}
     </div>
