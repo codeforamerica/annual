@@ -149,6 +149,10 @@ li {
   padding-bottom: 50px;
 }
 
+.carousel-control {
+  top: 50%;
+}
+
 .community .bios{
   margin: 20px 0px 65px 0px;
 }
