@@ -145,6 +145,9 @@ li {
         display:none;
         pointer-events:all;
     }
+.appsIntro {
+  padding-bottom: 50px;
+}
 
 .community .bios{
   margin: 20px 0px 65px 0px;
