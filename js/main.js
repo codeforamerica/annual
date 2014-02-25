@@ -578,7 +578,7 @@ $(function(){
 
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
-  var markerLayer = mapbox.markers.layer().url("/js/cityLocations.geojson");
+  var markerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
 
 
   var displayedMarkers = [];
