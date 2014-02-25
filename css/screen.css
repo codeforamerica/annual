@@ -200,8 +200,8 @@ li {
 }
 
 .networkTitle {
-  background: #636363;
-  padding-top: 100px;
+  padding-top: 300px;
+  padding-left:20px;
 }
 
 .panel-collapse {
