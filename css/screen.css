@@ -814,6 +814,12 @@ input[type="text"] {
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
 }
+.pagebg.imagethanksback{ 
+  background: url("../img/thanksback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/thanksback.jpg', sizingMethod='scale')";
+}
 .pagebg.imageofficesummit{ 
   background: url("../img/officesummit.jpg") no-repeat;
   background-size:cover;
