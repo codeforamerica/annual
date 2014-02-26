@@ -207,7 +207,7 @@ li {
 }
 
 .networkTitle {
-  padding-top: 300px;
+  padding-top: 200px;
   padding-left:20px;
 }
 
@@ -323,7 +323,7 @@ li {
 }
 
 .page.quote .title {
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 .page.quote .title h1 {
@@ -346,7 +346,7 @@ li {
 .themes,
 .community,
 .network{
-  margin: 250px 0px 100px;
+  margin: 50px 0px 100px;
 }
 .yearText {
   background: #fff;
@@ -362,6 +362,10 @@ li {
   cursor: pointer;
 /*  position: relative;
   top: 50px;*/
+}
+
+.400margin{
+  margin-bottom: 400px;
 }
 
 
@@ -661,7 +665,7 @@ input[type="text"] {
 .page.story{ 
   overflow-x: hidden;
   position: relative;
-  padding: 150px 80px 300px 135px;
+  padding: 250px 80px 200px 100px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
@@ -2562,10 +2566,6 @@ img.progicons {
   
   h4 {
     font-size: 20px;
-  }
-
-  .page.quote {
-    padding-bottom: 300px;
   }
 
   .page.story {
