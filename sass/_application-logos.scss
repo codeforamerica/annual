@@ -4,6 +4,168 @@
 /*
 /*****************************************************************************/
 
+.appspop {
+  background-image: url('../img/apps_logos.png');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
+
+a.appspop:hover  {
+  border: none;
+}
+
+.srtracker,
+.fm,
+.labs,
+.adopta,
+.blight,
+.blockee,
+.hnlanswers,
+.localdata, 
+.neighborhow,
+.opencounter,
+.openstatus,
+.preparedly,
+.routeview,
+.opendata,
+.socialcity,
+.pennywork,
+.straymapper,
+.supermayor,
+.textmybus,
+.textizen,
+.dailybrief,
+.nolaready,
+.atxfloods,
+.bike,
+.deepdish,
+.publicart,
+.scmap,
+.maconmap {
+  background-image: url('../img/apps_logos.png');
+  background-size: 100px;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px 0 0;
+}
+
+.srtracker {
+  background-position: 0 0;
+}
+
+.fm {
+  background-position: 0 -100px;
+}
+
+.labs {
+  background-position: 0 -200px;
+}
+
+.adopta {
+  background-position: 0 -300px;
+}
+
+.blight {
+  background-position: 0 -400px;
+}
+
+.blockee {
+  background-position: 0 -500px;
+}
+
+.hnlanswers {
+  background-position: 0 -600px;
+}
+
+.localdata {
+  background-position: 0 -700px;
+}
+
+.neighborhow {
+  background-position: 0 -800px;
+}
+
+.opencounter {
+  background-position: 0 -900px;
+}
+
+.openstatus {
+  background-position: 0 -1000px;
+}
+
+.preparedly {
+  background-position: 0 -1100px;
+}
+
+.routeview {
+  background-position: 0 -1200px;
+}
+
+.opendata {
+  background-position: 0 -1300px;
+}
+
+.socialcity {
+  background-position: 0 -1400px;
+}
+
+.pennywork {
+  background-position: 0 -1500px;
+}
+
+.straymapper {
+  background-position: 0 -1600px;
+}
+
+.supermayor {
+  background-position: 0 -1700px;
+}
+
+.textmybus {
+  background-position: 0 -1800px;
+}
+
+.textizen {
+  background-position: 0 -1900px;
+}
+
+.dailybrief {
+  background-position: 0 -2000px;
+}
+
+.nolaready {
+  background-position: 0 -2100px;
+}
+
+.atxfloods {
+  background-position: 0 -2200px;
+}
+
+.bike {
+  background-position: 0 -2300px;
+}
+
+.deepdish {
+  background-position: 0 -2400px;
+}
+
+.publicart {
+  background-position: 0 -2500px;
+}
+
+.scmap {
+  background-position: 0 -2600px;
+}
+
+.maconmap {
+  background-position: 0 -2700px;
+}
+
+
 .appspop.adoptadrain {
   background-image: url('../img/apps/adoptadrain.png');
 }

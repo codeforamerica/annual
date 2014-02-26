@@ -5,19 +5,8 @@
 /*****************************************************************************/
 
 
-#map{
-  position:absolute; top:0; bottom:0; width:100%; 
-
-}
-#mapcontainer{
-  position:absolute; top:0; bottom:0; width:100%; 
-}
-
-#map.apply{ 
-  position:fixed !important;
-}
-
 #map-story {
+  margin-top: 20px;
   position: absolute;
   top: 50px;
   right: 10px;
@@ -27,18 +16,21 @@
 
 #map-story h5 {
   padding: 0px 10px;
+  color: #6D6E71;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #map-story ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #map-story a {
   font-size: 13px;
   background: #FFF;
-  color: #2f3d4a;
+  color: #6D6E71;
   display: block;
   margin: 0;
   padding: 0;
@@ -47,10 +39,12 @@
   min-width: 138px;
   padding: 10px;
   text-decoration: none;
+  text-shadow: none;
 }
 
 #map-story a:hover {
-  background: #e87d2b;
+  background: #fff;
+  color: #4D4D4D !important;
   border-left-width: 0px;
 }
 
@@ -66,8 +60,8 @@
 }
 
 #map-story a.active {
-  background: #e87d2b;
-  color: #FFF;
+  background: #FFF;
+  color: #e87d2b;
   border-left-width: 0px;
 }
 
@@ -79,118 +73,6 @@
   height:50px;
   display:none;
   pointer-events:all;
-}
-
-.storyContainer {
-  position: absolute;
-  top: 50px;
-  right: 170px;
-  z-index: 99;
-  background: #e87d2b;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.storyContainer p {
-  font-size: 13px;
-  color: #000;
-  display: block;
-  margin: 0;
-  padding: 0;
-  min-width: 138px;
-  padding: 10px;
-  text-decoration: none;
-  text-shadow: none;
-}
-
-.yearText {
-  background: #fff;
-  font-size: 16px;
-
-}
-
-.yeartitle .year {
-  font-size: 40px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.downarrow{ 
-  position:absolute;
-  bottom:30px;
-  right:40px;
-  opacity:0;
-}
-.downarrow svg{ 
-  color:#fff;
-  fill:#fff;
-  height:100px;
-  width:50px;
-}
-
-.marker-popup{ 
-  max-width:600px;
-  width:600px;
-  padding:0px;
-}
-.marker-popup  h4{ 
-  margin:0px;
-}
-.marker-popup  .close{ 
-  position:absolute;
-  top:8px;
-  right:8px;
-  opacity:0.8;
-  color:#fff;
-}
-
-.marker-popup  .prev{ 
-  position:absolute;
-  top:100px;
-  left:-24px;
-  opacity:0.8;
-  color:#fff;
-  height:20px;
-  background:#333;
-  width:10px;
-  padding:20px 5px;
-  cursor:pointer;
-}
-
-.marker-popup  .next{
-  position:absolute;
-  top:100px;
-  right:-24px;
-  opacity:0.8;
-  color:#fff;
-  height:20px;
-  background:#333;
-  width:10px;
-  padding:20px 5px;
-  cursor:pointer;
-} 
-.marker-popup  .next:hover{
-  opacity:1.0;
-}
-.marker-popup  .prev:hover{
-  opacity:1.0;
-}
-.zoomer{ 
-  top:210px;
-  left:50px;
-}
-.zoomin{ 
-  left:50px;
-}
-.zoomout{ 
-  top:239px;
-}
-.fellowshipyearfixed{ 
-  position:fixed;
-  top:0px;
-  left:50px;
-  background:#fff;
-  display:inherit;
 }
 
 .citycardscontainer{ 
@@ -241,3 +123,127 @@
   text-shadow: none;
 }
 
+.downarrow{ 
+  position:absolute;
+  bottom:30px;
+  right:40px;
+  opacity:0;
+}
+
+.downarrow svg{ 
+  color:#fff;
+  fill:#fff;
+  height:100px;
+  width:50px;
+}
+
+.mapscroll{ 
+  height:800px;
+}
+
+.marker-popup{ 
+  max-width:600px;
+  width:600px;
+  padding:0px;
+}
+
+.marker-popup  h4{ 
+  margin:0px;
+}
+
+.marker-popup  .close{ 
+  position:absolute;
+  top:8px;
+  right:8px;
+  opacity:0.8;
+  color:#fff;
+}
+
+.marker-popup  .prev{ 
+  position:absolute;
+  top:100px;
+  left:-24px;
+  opacity:0.8;
+  color:#fff;
+  height:20px;
+  background:#333;
+  width:10px;
+  padding:20px 5px;
+  cursor:pointer;
+}
+
+.marker-popup  .next{
+  position:absolute;
+  top:100px;
+  right:-24px;
+  opacity:0.8;
+  color:#fff;
+  height:20px;
+  background:#333;
+  width:10px;
+  padding:20px 5px;
+  cursor:pointer;
+} 
+.marker-popup  .next:hover{
+  opacity:1.0;
+}
+
+.marker-popup  .prev:hover{
+  opacity:1.0;
+}
+
+.fellowshipyearfixed{ 
+  position:fixed;
+  top:0px;
+  left:50px;
+  background:#fff;
+  display:inherit;
+}
+
+.storyContainer {
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  z-index: 99;
+  background: #e87d2b;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.storyContainer p {
+  font-size: 13px;
+  color: #000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  min-width: 138px;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+
+.yearText {
+  background: #fff;
+  font-size: 16px;
+
+}
+
+.yeartitle .year {
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.zoomer{ 
+  top:210px;
+  left:50px;
+}
+
+.zoomin{ 
+  left:50px;
+}
+
+.zoomout{ 
+  top:239px;
+}
