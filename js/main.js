@@ -374,10 +374,15 @@ $(function(){
     $(".pagebg").css({width:width, "min-height":height});
     $(".scrollout").css({height:height});
     $(".fellowship").css({height:height});
+    $(".map").css({height:height});
     $(".mapscroll").css({height:height});
     scrollEvent.onScroll();
 
   }
+
+  // var tabContentWidth = $('.yeartitle').css('width')
+  // console.log(tabContentWidth);
+  // $('.tab-content .tab-pane').css('width', tabContentWidth)
 
   var scrollEvent = {
     handlers: {top:[], middle:[], bottom:[], inview:[]},
@@ -495,26 +500,26 @@ $(function(){
   }, function(el, i, pos){
   });
 
-  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+  scrollEvent.on("bottom", $(".map"), function(el,i){
 
     $("#mapcontainer").css({"position":"absolute", "top":0});
 
   }, function(el, i, pos){
   });
-  scrollEvent.on("top", $(".fellowship"), function(el,i){
+  scrollEvent.on("top", $(".map"), function(el,i){
     $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
 
 
   }, function(el, i, pos){
 
-    if($(".fellowship").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    if($(".map").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
     else
       $("#mapcontainer").css({"position":"absolute", "top":0});
 
   });
   scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
 
   }, function(){});
 
@@ -688,9 +693,8 @@ $(function(){
   /*
     Map story events
   */
-  
 
-  $('#flu').on('shown.bs.collapse', function () {
+  $('a[href="#flu"]').on('show.bs.tab', function () {
     // addStories("flu")
     clearTimeout(timer);
     $svg = $("#marker");
@@ -709,22 +713,8 @@ $(function(){
     $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
-  $('#flu').on('hidden.bs.collapse', function () {  
-    markerLayer.filter(function(f) {
-       return false;
-    });
-    map.removeLayer(fluLayer)
-    map.removeLayer(markerLayer);
 
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
-    });
-  });
-
-  $('#codeacross').on('shown.bs.collapse', function () {
+  $('a[href="#codeacross"]').on('shown.bs.tab', function () {
     // addStories("codeacross")
     clearTimeout(timer);
     $svg = $("#marker");
@@ -743,23 +733,8 @@ $(function(){
     $('.simplestyle-marker').parent().css("z-index", "100")
   });
 
-  $('#codeacross').on('hidden.bs.collapse', function () { 
-    markerLayer.filter(function(f) {
-       return false;
-    }); 
-    map.removeLayer(codeacrossLayer)
-    map.removeLayer(markerLayer);
 
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
-    });
-  });
-
-
-  $('#summit').on('shown.bs.collapse', function () {
+  $('a[href="#summit"]').on('shown.bs.collapse', function () {
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     clearTimeout(timer);
@@ -773,21 +748,6 @@ $(function(){
     summitLayer = mapbox.markers.layer().features(summit);
     map.addLayer(summitLayer);
     $('.simplestyle-marker').parent().css("z-index", "100")
-  });
-
-  $('#summit').on('hidden.bs.collapse', function () {  
-    markerLayer.filter(function(f) {
-       return false;
-    });
-    map.removeLayer(summitLayer)
-    map.removeLayer(markerLayer);
-
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b;");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
-    });
   });
 
   

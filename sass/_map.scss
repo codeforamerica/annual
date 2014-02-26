@@ -148,6 +148,17 @@
   width:50px;
 }
 
+.map {
+  color: #333;
+  position:relative; height:100%; width:100%; 
+  .yeartitle{ 
+    z-index: 0;
+    position: relative;
+    top: 0px;
+    left: 400px;
+  }
+}
+
 .mapscroll{ 
   height:800px;
 }
