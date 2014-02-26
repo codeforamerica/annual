@@ -1530,7 +1530,7 @@ li {
 /*
 /*****************************************************************************/
 /* line 7, ../sass/_map.scss */
-#mapcontainer {
+#map {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1538,6 +1538,19 @@ li {
 }
 
 /* line 11, ../sass/_map.scss */
+#mapcontainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 15, ../sass/_map.scss */
+#map.apply {
+  position: fixed !important;
+}
+
+/* line 19, ../sass/_map.scss */
 #map-story {
   margin-top: 20px;
   position: absolute;
@@ -1547,7 +1560,7 @@ li {
   background: #fff;
 }
 
-/* line 20, ../sass/_map.scss */
+/* line 28, ../sass/_map.scss */
 #map-story h5 {
   padding: 0px 10px;
   color: #6D6E71;
@@ -1555,14 +1568,14 @@ li {
   font-weight: bold;
 }
 
-/* line 27, ../sass/_map.scss */
+/* line 35, ../sass/_map.scss */
 #map-story ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 33, ../sass/_map.scss */
+/* line 41, ../sass/_map.scss */
 #map-story a {
   font-size: 13px;
   background: #FFF;
@@ -1578,34 +1591,34 @@ li {
   text-shadow: none;
 }
 
-/* line 48, ../sass/_map.scss */
+/* line 56, ../sass/_map.scss */
 #map-story a:hover {
   background: #fff;
   color: #4D4D4D !important;
   border-left-width: 0px;
 }
 
-/* line 54, ../sass/_map.scss */
+/* line 62, ../sass/_map.scss */
 #map-story li:last-child a {
   border-bottom-width: 1px;
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
 
-/* line 60, ../sass/_map.scss */
+/* line 68, ../sass/_map.scss */
 #map-story li:first-child a {
   -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
 
-/* line 65, ../sass/_map.scss */
+/* line 73, ../sass/_map.scss */
 #map-story a.active {
   background: #FFF;
   color: #e87d2b;
   border-left-width: 0px;
 }
 
-/* line 71, ../sass/_map.scss */
+/* line 79, ../sass/_map.scss */
 #marker {
   position: absolute;
   margin-top: -25px;
@@ -1616,66 +1629,66 @@ li {
   pointer-events: all;
 }
 
-/* line 81, ../sass/_map.scss */
+/* line 89, ../sass/_map.scss */
 .citycardscontainer {
   display: none;
 }
 
-/* line 85, ../sass/_map.scss */
+/* line 93, ../sass/_map.scss */
 .citycard .tagline {
   text-shadow: none;
 }
 
-/* line 89, ../sass/_map.scss */
+/* line 97, ../sass/_map.scss */
 .citycard .tagline p {
   font-size: 16px;
   margin-top: 0px;
 }
 
-/* line 94, ../sass/_map.scss */
+/* line 102, ../sass/_map.scss */
 .citycard a {
   color: #000;
 }
 
-/* line 98, ../sass/_map.scss */
+/* line 106, ../sass/_map.scss */
 .citycard .partnersection {
   width: 190px;
 }
 
-/* line 102, ../sass/_map.scss */
+/* line 110, ../sass/_map.scss */
 .citycard ul {
   margin-left: 0px;
 }
 
-/* line 106, ../sass/_map.scss */
+/* line 114, ../sass/_map.scss */
 .citycard hr {
   border: solid 1px #C82A45;
   margin: 10px 0;
 }
 
-/* line 111, ../sass/_map.scss */
+/* line 119, ../sass/_map.scss */
 .citycard[data-year="2011"] h4 {
   background: #FED100;
 }
 
-/* line 115, ../sass/_map.scss */
+/* line 123, ../sass/_map.scss */
 .citycard[data-year="2011"] hr {
   border: solid 1px #FED100;
 }
 
-/* line 119, ../sass/_map.scss */
+/* line 127, ../sass/_map.scss */
 .citycard[data-year="2011"] h5 {
   color: #FED100;
 }
 
-/* line 123, ../sass/_map.scss */
+/* line 131, ../sass/_map.scss */
 .citycard .name {
   clear: both;
   padding-top: 10px;
   text-shadow: none;
 }
 
-/* line 129, ../sass/_map.scss */
+/* line 137, ../sass/_map.scss */
 .downarrow {
   position: absolute;
   bottom: 30px;
@@ -1683,7 +1696,7 @@ li {
   opacity: 0;
 }
 
-/* line 136, ../sass/_map.scss */
+/* line 144, ../sass/_map.scss */
 .downarrow svg {
   color: #fff;
   fill: #fff;
@@ -1691,24 +1704,24 @@ li {
   width: 50px;
 }
 
-/* line 143, ../sass/_map.scss */
+/* line 151, ../sass/_map.scss */
 .mapscroll {
   height: 800px;
 }
 
-/* line 147, ../sass/_map.scss */
+/* line 155, ../sass/_map.scss */
 .marker-popup {
   max-width: 600px;
   width: 600px;
   padding: 0px;
 }
 
-/* line 153, ../sass/_map.scss */
+/* line 161, ../sass/_map.scss */
 .marker-popup h4 {
   margin: 0px;
 }
 
-/* line 157, ../sass/_map.scss */
+/* line 165, ../sass/_map.scss */
 .marker-popup .close {
   position: absolute;
   top: 8px;
@@ -1717,7 +1730,7 @@ li {
   color: #fff;
 }
 
-/* line 165, ../sass/_map.scss */
+/* line 173, ../sass/_map.scss */
 .marker-popup .prev {
   position: absolute;
   top: 100px;
@@ -1731,7 +1744,7 @@ li {
   cursor: pointer;
 }
 
-/* line 178, ../sass/_map.scss */
+/* line 186, ../sass/_map.scss */
 .marker-popup .next {
   position: absolute;
   top: 100px;
@@ -1745,17 +1758,17 @@ li {
   cursor: pointer;
 }
 
-/* line 190, ../sass/_map.scss */
+/* line 198, ../sass/_map.scss */
 .marker-popup .next:hover {
   opacity: 1.0;
 }
 
-/* line 194, ../sass/_map.scss */
+/* line 202, ../sass/_map.scss */
 .marker-popup .prev:hover {
   opacity: 1.0;
 }
 
-/* line 198, ../sass/_map.scss */
+/* line 206, ../sass/_map.scss */
 .fellowshipyearfixed {
   position: fixed;
   top: 0px;
@@ -1764,7 +1777,7 @@ li {
   display: inherit;
 }
 
-/* line 206, ../sass/_map.scss */
+/* line 214, ../sass/_map.scss */
 .storyContainer {
   position: absolute;
   top: 50px;
@@ -1775,7 +1788,7 @@ li {
   border-radius: 3px;
 }
 
-/* line 216, ../sass/_map.scss */
+/* line 224, ../sass/_map.scss */
 .storyContainer p {
   font-size: 13px;
   color: #000;
@@ -1788,178 +1801,36 @@ li {
   text-shadow: none;
 }
 
-/* line 229, ../sass/_map.scss */
+/* line 237, ../sass/_map.scss */
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
-/* line 235, ../sass/_map.scss */
+/* line 243, ../sass/_map.scss */
 .yeartitle .year {
   font-size: 40px;
   padding: 10px;
   cursor: pointer;
 }
 
-/* line 241, ../sass/_map.scss */
+/* line 249, ../sass/_map.scss */
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
-/* line 246, ../sass/_map.scss */
+/* line 254, ../sass/_map.scss */
 .zoomin {
   left: 50px;
 }
 
-/* line 250, ../sass/_map.scss */
+/* line 258, ../sass/_map.scss */
 .zoomout {
   top: 239px;
 }
 
-/*******************************************/
-/* Press */
-/************************/
-/* line 7, ../sass/_press.scss */
-.press {
-  text-align: left;
-}
-
-/* line 19, ../sass/_press.scss */
-.press .atlanticcities,
-.press .latimes,
-.press .usatoday,
-.press .pbs,
-.press .time,
-.press .cnet,
-.press .details,
-.press .globaljournal,
-.press .fastco {
-  height: 40px;
-  margin-bottom: 30px;
-}
-
-/* line 30, ../sass/_press.scss */
-.press .pbs:hover,
-.press .time:hover,
-.press .details:hover,
-.press .globaljournal:hover,
-.press .fastco:hover {
-  background-position: 0 -40px;
-}
-
-/* line 38, ../sass/_press.scss */
-.press .atlanticcities:hover,
-.press .usatoday:hover,
-.press .pbs:hover,
-.press .cnet:hover {
-  background-position: 0 -60px;
-}
-
-/* .7895 */
-/* line 44, ../sass/_press.scss */
-.press .atlanticcities {
-  background-image: url("../img/atlanticcities.png");
-  background-size: 145px;
-  width: 145px;
-  height: 60px;
-}
-
-/* line 51, ../sass/_press.scss */
-.press .latimes {
-  background-image: url("../img/losangelestimes.png");
-  background-size: 340px;
-  width: 340px;
-}
-
-/* line 57, ../sass/_press.scss */
-.press .usatoday {
-  background-image: url("../img/usatoday.png");
-  background-size: 129px;
-  width: 129px;
-  height: 60px;
-}
-
-/* line 64, ../sass/_press.scss */
-.press .pbs {
-  background-image: url("../img/pbs.png");
-  background-size: 156px;
-  width: 156px;
-  height: 60px;
-}
-
-/* line 71, ../sass/_press.scss */
-.press .time {
-  background-image: url("../img/time.png");
-  background-size: 146px;
-  width: 146px;
-}
-
-/* line 77, ../sass/_press.scss */
-.press .cnet {
-  background-image: url("../img/cnet.png");
-  background-size: 81px;
-  width: 81px;
-  height: 60px;
-}
-
-/* line 84, ../sass/_press.scss */
-.press .details {
-  background-image: url("../img/details.png");
-  background-size: 177px;
-  width: 177px;
-}
-
-/* line 90, ../sass/_press.scss */
-.press .globaljournal {
-  background-image: url("../img/globaljournal.png");
-  background-size: 178px;
-  width: 178px;
-}
-
-/* line 96, ../sass/_press.scss */
-.press .fastco {
-  background-image: url("../img/fastco.png");
-  background-size: 281px;
-  width: 281px;
-}
-
-/* line 102, ../sass/_press.scss */
-.press .latimes:hover {
-  background-position: 0 -40px;
-}
-
-/* line 107, ../sass/_press.scss */
-.press .msnbc:hover {
-  background-position: 0 -50px;
-}
-
-/* line 111, ../sass/_press.scss */
-.press .details:hover {
-  background-position: 0 -40px;
-}
-
-/* line 115, ../sass/_press.scss */
-.press .globaljournal:hover {
-  background-position: 0 -45px;
-}
-
-/* line 119, ../sass/_press.scss */
-.getinvolved .press div {
-  margin-right: 20px;
-  float: left;
-}
-
-/* line 124, ../sass/_press.scss */
-.press div {
-  margin: 20px 0;
-}
-
-/* line 128, ../sass/_press.scss */
-.press .keynotes {
-  margin-top: 50px;
-}
-
+@impot "press";
 /*****************************************************************************/
 /*
 /* 2013 Updates
