@@ -675,7 +675,7 @@ $(function(){
     Map story events
   */
 
-  $('#innovation').on('show.bs.dropdown', function () {
+  $('#mapInnovation').on('show.bs.dropdown', function () {
     // addStories("innovation")
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
@@ -779,7 +779,6 @@ function addStories(name) {
 
 
   $.each(stories, function(index, storyName) {
-    console.log(storyName);
     if(storyName !== name) {
       map.removeLayer(storyName+'Layer');
       storyLayer = mapbox.markers.layer().features(name);
@@ -790,36 +789,6 @@ function addStories(name) {
     }
   });
 }
-
-// add a new line to the map, but one with no points - yet
-// var polyline = .polyline([]).addTo(map);
-
-// keep a tally of how many points we've added to the map
-var pointsAdded = 0;
-
-// start adding new points to the map
-
-
-function add(connection) {
-  // console.log(connection);
-
-    // // addLatLng takes a new latLng location and puts it at the end of the
-    // // line. You could pull points from your data or generate them - this
-    // // example just makes a sine wave with some math.
-    // polyline.addLatLng(
-    //     L.latLng(
-    //         Math.cos(pointsAdded / 20) * 30,
-    //         pointsAdded));
-
-    // // pan the map along with where the line is being added. optional, of course
-    // map.setView([0, pointsAdded], 3);
-
-    // // then, if we haven't already added a lot of points, queue up the page
-    // // to call add() in a 100 milliseconds
-    // if (++pointsAdded < 360) window.setTimeout(add, 100);
-}
-
-
 
   $($("#map").children()[1]).css("z-index", "1");
 
@@ -897,7 +866,7 @@ function add(connection) {
   var mapcurrentyear = "2011";
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
-    click_year(2013)();
+    yearMarkers(2013)();
   }, function(el, i){
     // clearInterval(arrowInterval);
     $(".downarrow").animate({opacity:1}, 800, "swing");
