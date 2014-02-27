@@ -500,29 +500,6 @@ $(function(){
   }, function(el, i, pos){
   });
 
-  // scrollEvent.on("bottom", $(".map"), function(el,i){
-
-  //   $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  // }, function(el, i, pos){
-  // });
-  // scrollEvent.on("top", $(".map"), function(el,i){
-  //   $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
-
-
-  // }, function(el, i, pos){
-
-  //   if($(".map").offset().top <= $(window).scrollTop())
-  //     $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
-  //   else
-  //     $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  // });
-  // scrollEvent.on("top", $(".scrollout"), function(el, i){
-  //     $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
-
-  // }, function(){});
-
 
   var showRandomTooltip = function(){
 
