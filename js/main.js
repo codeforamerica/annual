@@ -607,19 +607,9 @@ $(function(){
 
 
   var markerFactory = function() {
-
     var m = document.getElementById('marker').cloneNode(true);
       m.style.display = 'block';
       return m;
-
-    // // Create a marker using the simplestyle factory
-    // var elem = $(mapbox.markers.simplestyle_factory(m));
-    // elem.attr("data-city", m.properties.city);
-    // elem.attr("data-year", m.properties.year);
-
-    // elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
-
-    // return elem[0];
   }
 
 
@@ -696,7 +686,6 @@ $(function(){
         return highlight;
     });
     $('#markerHighlight').parent().css("z-index", "100")
-    add(innovationLayer);
   });
 
 
