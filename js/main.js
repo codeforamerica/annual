@@ -693,9 +693,9 @@ $(function(){
     Map story events
   */
 
-  $('a[href="#flu"]').on('show.bs.tab', function () {
+  $('#flu').on('show.bs.dropdown', function () {
+    console.log($(this));
     // addStories("flu")
-    clearTimeout(timer);
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     map.removeLayer(markerLayer);
@@ -715,7 +715,13 @@ $(function(){
         return highlight;
     });
     $('#markerHighlight').parent().css("z-index", "100")
+    add(fluLayer);
   });
+
+  $('#myDropdown').on('shown.bs.dropdown', function () {
+    console.log("hey");
+    console.log($(this));
+});
 
 
   $('a[href="#codeacross"]').on('shown.bs.tab', function () {
@@ -790,13 +796,40 @@ function addStories(name) {
     if(storyName !== name) {
       map.removeLayer(storyName+'Layer');
       storyLayer = mapbox.markers.layer().features(name);
-      console.log(storyLayer);
       storyLayer.named(name)
     } else {
       map.addLayer(storyLayer);
       $('.simplestyle-marker').parent().css("z-index", "100")
     }
   });
+}
+
+// add a new line to the map, but one with no points - yet
+// var polyline = .polyline([]).addTo(map);
+
+// keep a tally of how many points we've added to the map
+var pointsAdded = 0;
+
+// start adding new points to the map
+
+
+function add(connection) {
+  // console.log(connection);
+
+    // // addLatLng takes a new latLng location and puts it at the end of the
+    // // line. You could pull points from your data or generate them - this
+    // // example just makes a sine wave with some math.
+    // polyline.addLatLng(
+    //     L.latLng(
+    //         Math.cos(pointsAdded / 20) * 30,
+    //         pointsAdded));
+
+    // // pan the map along with where the line is being added. optional, of course
+    // map.setView([0, pointsAdded], 3);
+
+    // // then, if we haven't already added a lot of points, queue up the page
+    // // to call add() in a 100 milliseconds
+    // if (++pointsAdded < 360) window.setTimeout(add, 100);
 }
 
 
