@@ -1762,11 +1762,6 @@ li {
   margin: 10px;
 }
 
-/* line 201, ../sass/_map.scss */
-.mapscroll {
-  height: 800px;
-}
-
 /* line 205, ../sass/_map.scss */
 .mapStories .year {
   font-size: 40px;
@@ -1866,24 +1861,24 @@ li {
   text-shadow: none;
 }
 
-/* line 293, ../sass/_map.scss */
+/* line 292, ../sass/_map.scss */
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
-/* line 301, ../sass/_map.scss */
+/* line 298, ../sass/_map.scss */
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
-/* line 306, ../sass/_map.scss */
+/* line 303, ../sass/_map.scss */
 .zoomin {
   left: 50px;
 }
 
-/* line 310, ../sass/_map.scss */
+/* line 307, ../sass/_map.scss */
 .zoomout {
   top: 239px;
 }
@@ -2342,8 +2337,8 @@ iframe.twitter-share-button {
 /* line 81, ../sass/base.scss */
 .networkTitle {
   padding-top: 230px;
-  padding-left: 20px;
-  margin-bottom: -200px;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 /* line 87, ../sass/base.scss */
