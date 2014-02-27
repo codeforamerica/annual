@@ -346,6 +346,11 @@ a.appspop:hover {
 }
 
 /* line 289, ../sass/_application-logos.scss */
+.appspop.textmybus {
+  background-image: url("../img/apps/textmybus.png");
+}
+
+/* line 293, ../sass/_application-logos.scss */
 .appspop.tothetrails {
   background-image: url("../img/apps/tothetrails_logo.gif");
 }
