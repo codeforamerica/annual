@@ -738,12 +738,22 @@ $(function(){
 
   function yearMarkers(year) {
      $svg = $("#marker");
-      $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+     switch (year) {
+      case "2011":
+        $("#markerCircle", $svg).attr('style', "fill:#00a175");
+      break;
+      case "2012":
+        $("#markerCircle", $svg).attr('style', "fill:#fedd44");
+      break;
+      default:
+        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+      break;
+     }
       map.removeLayer(codeacrossLayer)
       map.removeLayer(summitLayer)
       map.removeLayer(innovationLayer)
       markerLayer.filter(function(f) {
-           return f.properties.year <= year;
+         return f.properties.year <= year;
       });
       return false;
   }
