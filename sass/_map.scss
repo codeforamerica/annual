@@ -88,6 +88,16 @@
   pointer-events:all;
 }
 
+#markerHighlight {
+  position:absolute;
+  margin-top:-25px;
+  margin-left:-25px;
+  width:50px;
+  height:50px;
+  display:none;
+  pointer-events:all;
+}
+
 .citycardscontainer{ 
   display:none;
 }
@@ -150,8 +160,52 @@
   width:50px;
 }
 
+.map {
+  color: #333;
+  position:relative; height:100%; width:100%; 
+  .mapStories{ 
+    z-index: 0;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.mapDropdown {
+  margin-top: 40px;
+  a {
+    background: #fff;
+    color: #000;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    &:hover {
+      background: $orange;
+      color: #fff;
+    }
+    &:active {
+      background: $orange;
+      color: #fff;
+    }
+  }
+  p.dropdown-menu {
+    width: 500px;
+    font-size: 15px;
+    text-shadow: none;
+    border: none;
+    padding: 5px;
+    border-radius: 0px;
+    margin: 10px;
+  }
+}
+
 .mapscroll{ 
   height:800px;
+}
+
+.mapStories .year {
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .marker-popup{ 
@@ -242,11 +296,7 @@
 
 }
 
-.yeartitle .year {
-  font-size: 40px;
-  padding: 10px;
-  cursor: pointer;
-}
+
 
 .zoomer{ 
   top:210px;

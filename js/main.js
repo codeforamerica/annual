@@ -323,18 +323,18 @@ var codeacross = [{
     "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
 }]
 
-var flu = [{
+var innovation = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "philadelphia", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b", "marker-size": "large", "marker-color": "#e87d2b" }
   },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
 
 }]
 
@@ -374,10 +374,15 @@ $(function(){
     $(".pagebg").css({width:width, "min-height":height});
     $(".scrollout").css({height:height});
     $(".fellowship").css({height:height});
+    $(".map").css({height:height});
     $(".mapscroll").css({height:height});
     scrollEvent.onScroll();
 
   }
+
+  // var tabContentWidth = $('.yeartitle').css('width')
+  // console.log(tabContentWidth);
+  // $('.tab-content .tab-pane').css('width', tabContentWidth)
 
   var scrollEvent = {
     handlers: {top:[], middle:[], bottom:[], inview:[]},
@@ -495,26 +500,26 @@ $(function(){
   }, function(el, i, pos){
   });
 
-  scrollEvent.on("bottom", $(".fellowship"), function(el,i){
+  scrollEvent.on("bottom", $(".map"), function(el,i){
 
     $("#mapcontainer").css({"position":"absolute", "top":0});
 
   }, function(el, i, pos){
   });
-  scrollEvent.on("top", $(".fellowship"), function(el,i){
+  scrollEvent.on("top", $(".map"), function(el,i){
     $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
 
 
   }, function(el, i, pos){
 
-    if($(".fellowship").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+    if($(".map").offset().top <= $(window).scrollTop())
+      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
     else
       $("#mapcontainer").css({"position":"absolute", "top":0});
 
   });
   scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".fellowship").height(), "bottom":"auto", "height":$(window).height()});
+      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
 
   }, function(){});
 
@@ -593,7 +598,6 @@ $(function(){
     displayedMarkers.push(m);
      $(m.element).css("opacity", "0");
 
-    $(m.element).fadeIn(400);
     setTimeout(function(){
       $(m.element).animate({opacity: 1}, 400)
     }, Math.random() * 300);
@@ -608,14 +612,14 @@ $(function(){
       m.style.display = 'block';
       return m;
 
-    // Create a marker using the simplestyle factory
-    var elem = $(mapbox.markers.simplestyle_factory(m));
-    elem.attr("data-city", m.properties.city);
-    elem.attr("data-year", m.properties.year);
+    // // Create a marker using the simplestyle factory
+    // var elem = $(mapbox.markers.simplestyle_factory(m));
+    // elem.attr("data-city", m.properties.city);
+    // elem.attr("data-year", m.properties.year);
 
-    elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
+    // elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
 
-    return elem[0];
+    // return elem[0];
   }
 
 
@@ -657,76 +661,47 @@ $(function(){
   var years = ["2011", "2012", "2013"]
 
   $.each(years, function(index, value){
-    $('.map'+value).click(click_year(value));
+    $('#'+value).on('show.bs.dropdown', function() {
+      yearMarkers(value)
+    })
   });
 
-  var summitLayer, codeacrossLayer, fluLayer
-  var stories = ["summit", "codeacross", "flu"]
-
-  // A closure for clicking years. You give it a year, and it returns a function
-  // that, when run, clicks that year. It's this way in order to be used as both an
-  // event handler and run manually.
-  function click_year(y) {
-      return function() {
-        $('a[href="#'+y+'"]').tab('show')
-        $svg = $("#marker");
-        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-        map.removeLayer(codeacrossLayer)
-        map.removeLayer(summitLayer)
-        map.removeLayer(fluLayer)
-          markerLayer.filter(function(f) {
-               return f.properties.year <= y;
-          });
-        
-          return false;
-      };
-        $.collapse('hide');
-  }
+  var summitLayer, codeacrossLayer, innovationLayer
+  var stories = ["summit", "codeacross", "innovation"]
 
   map.addLayer(markerLayer);
 
   /*
     Map story events
   */
-  
 
-  $('#flu').on('shown.bs.collapse', function () {
-    // addStories("flu")
-    clearTimeout(timer);
+  $('#innovation').on('show.bs.dropdown', function () {
+    // addStories("innovation")
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
-       return f.properties['story'] !== 'flu';
+       return f.properties['story'] !== 'innovation';
     });
 
     map.removeLayer(summitLayer);
     map.removeLayer(codeacrossLayer);
-    fluLayer = mapbox.markers.layer().features(flu);
-    fluLayer.named('flu')
-    map.addLayer(fluLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+    innovationLayer = mapbox.markers.layer().features(innovation);
+    innovationLayer.named('innovation')
+    map.addLayer(innovationLayer);
+    innovationLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
+    });
+    $('#markerHighlight').parent().css("z-index", "100")
+    add(innovationLayer);
   });
 
-  $('#flu').on('hidden.bs.collapse', function () {  
-    markerLayer.filter(function(f) {
-       return false;
-    });
-    map.removeLayer(fluLayer)
-    map.removeLayer(markerLayer);
 
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
-    });
-  });
-
-  $('#codeacross').on('shown.bs.collapse', function () {
+  $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
-    clearTimeout(timer);
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     map.removeLayer(markerLayer);
@@ -736,59 +711,53 @@ $(function(){
     });
 
     map.removeLayer(summitLayer);
-    map.removeLayer(fluLayer);
-    codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    map.removeLayer(innovationLayer);
+    codeacrossLayer = mapbox.markers.layer().features(codeacross)
     codeacrossLayer.named('codeacross')
-    map.addLayer(codeacrossLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
-  });
 
-  $('#codeacross').on('hidden.bs.collapse', function () { 
-    markerLayer.filter(function(f) {
-       return false;
-    }); 
-    map.removeLayer(codeacrossLayer)
-    map.removeLayer(markerLayer);
-
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
+    codeacrossLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
     });
+    map.addLayer(codeacrossLayer);
+    $('#markerHighlight').parent().css("z-index", "100")
   });
 
 
-  $('#summit').on('shown.bs.collapse', function () {
+  $('#summit').on('shown.bs.dropdown', function () {
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
-    clearTimeout(timer);
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
         return f.properties['story'] !== 'summit';
     });
     map.removeLayer(codeacrossLayer)
-    map.removeLayer(fluLayer);
+    map.removeLayer(innovationLayer);
     summitLayer = mapbox.markers.layer().features(summit);
     map.addLayer(summitLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+
+    summitLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
+    });
+    $('#markerHighlight').parent().css("z-index", "100")
   });
 
-  $('#summit').on('hidden.bs.collapse', function () {  
-    markerLayer.filter(function(f) {
-       return false;
-    });
-    map.removeLayer(summitLayer)
-    map.removeLayer(markerLayer);
 
-    $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#e87d2b;");
-    map.addLayer(markerLayer)
-    markerLayer.filter(function(f) {
-       return true;
-    });
-  });
+  function yearMarkers(year) {
+     $svg = $("#marker");
+      $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+      map.removeLayer(codeacrossLayer)
+      map.removeLayer(summitLayer)
+      map.removeLayer(innovationLayer)
+      markerLayer.filter(function(f) {
+           return f.properties.year <= year;
+      });
+      return false;
+  }
 
   
 function addStories(name) {
@@ -802,7 +771,7 @@ function addStories(name) {
   // });
 
   // map.removeLayer(summitLayer);
-  // map.removeLayer(fluLayer);
+  // map.removeLayer(innovationLayer);
   // codeacrossLayer = mapbox.markers.layer().features(codeacross);
   // codeacrossLayer.named('codeacross')
   // map.addLayer(codeacrossLayer);
@@ -814,13 +783,40 @@ function addStories(name) {
     if(storyName !== name) {
       map.removeLayer(storyName+'Layer');
       storyLayer = mapbox.markers.layer().features(name);
-      console.log(storyLayer);
       storyLayer.named(name)
     } else {
       map.addLayer(storyLayer);
       $('.simplestyle-marker').parent().css("z-index", "100")
     }
   });
+}
+
+// add a new line to the map, but one with no points - yet
+// var polyline = .polyline([]).addTo(map);
+
+// keep a tally of how many points we've added to the map
+var pointsAdded = 0;
+
+// start adding new points to the map
+
+
+function add(connection) {
+  // console.log(connection);
+
+    // // addLatLng takes a new latLng location and puts it at the end of the
+    // // line. You could pull points from your data or generate them - this
+    // // example just makes a sine wave with some math.
+    // polyline.addLatLng(
+    //     L.latLng(
+    //         Math.cos(pointsAdded / 20) * 30,
+    //         pointsAdded));
+
+    // // pan the map along with where the line is being added. optional, of course
+    // map.setView([0, pointsAdded], 3);
+
+    // // then, if we haven't already added a lot of points, queue up the page
+    // // to call add() in a 100 milliseconds
+    // if (++pointsAdded < 360) window.setTimeout(add, 100);
 }
 
 
