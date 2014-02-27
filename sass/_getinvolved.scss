@@ -7,6 +7,10 @@
   color: #000;
   text-shadow: none;
   font-family: 'Arvo', 'Georgia', serif;
+  margin: 100px 180px;
+  &.joinus {
+    margin: 0px;
+  }
 }
 
 .getinvolved p:first-child:first-letter { 
