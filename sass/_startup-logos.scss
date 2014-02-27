@@ -1,11 +1,19 @@
 /*****************************************************************************/
 /*
-/* City seals and styling
+/* Startup Logos
 /*
 /*****************************************************************************/
 
-.cityseal {
-  background-image: url('../img/city_seals.png');
+
+.startupspop.startup_CI,
+.startupspop.startup_LD,
+.startupspop.startup_TZ,
+.startupspop.startup_AS,
+.startupspop.startup_FAF,
+.startupspop.startup_OC,
+.startupspop.startup_SP,
+.startupspop.startup_SC {
+  background-image: url('../img/fellows_headshot.jpg');
   background-size: 100px;
   float: left;
   width: 100px;
@@ -13,42 +21,39 @@
   margin: 20px 20px 0 0;
 }
 
-.sf {
-  background-position: 0 0;
+.startupspop.startup_CI {
+  background-position: 0 0px;
 }
 
-.lv {
+.startupspop.startup_LD {
   background-position: 0 -100px;
 }
 
-.ok {
+.startupspop.startup_TZ {
   background-position: 0 -200px;
 }
 
-.sc {
+.startupspop.startup_AS {
   background-position: 0 -300px;
 }
 
-.lo {
+.startupspop.startup_FAF {
   background-position: 0 -400px;
 }
 
-.nyc {
+.startupspop.startup_OC {
   background-position: 0 -500px;
 }
 
-.sb {
+.startupspop.startup_SP {
   background-position: 0 -600px;
 }
 
-.smc {
+.startupspop.startup_SC  {
   background-position: 0 -700px;
 }
 
-.kcks {
-  background-position: 0 -800px;
-}
 
-.kcmo{
-  background-position: 0 -900px;
-}
+
+
+

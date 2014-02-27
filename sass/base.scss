@@ -8,7 +8,8 @@
 @import "global-reset";
 @import "media";
 @import "map";
-@impot "press";
+@import "press";
+@import "startup-logos";
 
 /*****************************************************************************/
 /*
@@ -175,6 +176,7 @@
 
 .page.quote .title h1 {
   line-height: 10px;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
 }
  
 .title p{ 
@@ -196,6 +198,11 @@
 
 .margin400 {
   margin-bottom: 400px;
+}
+
+.intropage p {
+  margin: 15px 0px;
+  line-height: 13px;
 }
 
 /*****************************************************************************/
@@ -290,12 +297,13 @@ h3 span {
 }
 
 h4 {
-  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
-  letter-spacing: 2px;
-  text-align: left;
-  font-size: 24px;
   clear: both;
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 25px;
   margin-top: 10px;
+  text-align: left;
 }
 
 h5 {
@@ -360,7 +368,7 @@ input[type="text"] {
 .page.story{ 
   overflow-x: hidden;
   position: relative;
-  padding: 250px 80px 200px 100px;
+  padding: 250px 80px 200px 130px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
@@ -421,7 +429,7 @@ input[type="text"] {
   color: #fff;
   margin: 30px 0px 0px 50px;
   text-align: left;
-  text-shadow: 0px 2px 6px rgba(0, 0, 0, .05);
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .mapsidebar h1{ 
@@ -1051,7 +1059,7 @@ img.progicons {
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
-  color: #e87d2b;
+  color: #fedd44;
 }
 
 .financialsgroup {
@@ -1065,7 +1073,7 @@ img.progicons {
 }
 
 .graphsection.active {
-  background-color: #e87d2b !important;
+  background-color: #fedd44 !important;
 }
 
 .expenses.bargraph,
