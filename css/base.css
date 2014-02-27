@@ -2342,8 +2342,8 @@ iframe.twitter-share-button {
 /* line 81, ../sass/base.scss */
 .networkTitle {
   padding-top: 230px;
-  padding-left: 20px;
-  margin-bottom: -200px;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 /* line 87, ../sass/base.scss */
