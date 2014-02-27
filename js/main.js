@@ -323,18 +323,18 @@ var codeacross = [{
     "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story":"codeacross", "marker-size": "large", "marker-color": "#e87d2b" }
 }]
 
-var flu = [{
+var innovation = [{
     "geometry": { "type": "Point", "coordinates": [-75.162, 39.947]},
-    "properties": { "city": "philadelphia", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "philadelphia", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b", "marker-size": "large", "marker-color": "#e87d2b" }
   },  {
     "geometry": { "type": "Point", "coordinates": [-71.053, 42.352]},
-    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "boston", "year": "2011", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-87.655, 41.886]},
-    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "chicago", "year":"2012", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
   }, {
     "geometry": { "type": "Point", "coordinates": [-122.26, 37.47]},
-    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "flu", "marker-size": "large", "marker-color": "#e87d2b" }
+    "properties": { "city": "san francisco", "year":"2013", "type": "fellowship", "story": "innovation", "marker-size": "large", "marker-color": "#e87d2b" }
 
 }]
 
@@ -661,31 +661,13 @@ $(function(){
   var years = ["2011", "2012", "2013"]
 
   $.each(years, function(index, value){
-    $('.map'+value).click(click_year(value));
+    $('#'+value).on('show.bs.dropdown', function() {
+      yearMarkers(value)
+    })
   });
 
-  var summitLayer, codeacrossLayer, fluLayer
-  var stories = ["summit", "codeacross", "flu"]
-
-  // A closure for clicking years. You give it a year, and it returns a function
-  // that, when run, clicks that year. It's this way in order to be used as both an
-  // event handler and run manually.
-  function click_year(y) {
-      return function() {
-        $('a[href="#'+y+'"]').tab('show')
-        $svg = $("#marker");
-        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
-        map.removeLayer(codeacrossLayer)
-        map.removeLayer(summitLayer)
-        map.removeLayer(fluLayer)
-          markerLayer.filter(function(f) {
-               return f.properties.year <= y;
-          });
-        
-          return false;
-      };
-        $.collapse('hide');
-  }
+  var summitLayer, codeacrossLayer, innovationLayer
+  var stories = ["summit", "codeacross", "innovation"]
 
   map.addLayer(markerLayer);
 
@@ -693,38 +675,32 @@ $(function(){
     Map story events
   */
 
-  $('#flu').on('show.bs.dropdown', function () {
-    console.log($(this));
-    // addStories("flu")
+  $('#innovation').on('show.bs.dropdown', function () {
+    // addStories("innovation")
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
-       return f.properties['story'] !== 'flu';
+       return f.properties['story'] !== 'innovation';
     });
 
     map.removeLayer(summitLayer);
     map.removeLayer(codeacrossLayer);
-    fluLayer = mapbox.markers.layer().features(flu);
-    fluLayer.named('flu')
-    map.addLayer(fluLayer);
-    fluLayer.factory(function(f) {
+    innovationLayer = mapbox.markers.layer().features(innovation);
+    innovationLayer.named('innovation')
+    map.addLayer(innovationLayer);
+    innovationLayer.factory(function(f) {
         var highlight = document.getElementById('markerHighlight').cloneNode(true);
         highlight.style.display = 'block';
         return highlight;
     });
     $('#markerHighlight').parent().css("z-index", "100")
-    add(fluLayer);
+    add(innovationLayer);
   });
 
-  $('#myDropdown').on('shown.bs.dropdown', function () {
-    console.log("hey");
-    console.log($(this));
-});
 
-
-  $('a[href="#codeacross"]').on('shown.bs.tab', function () {
+  $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
     clearTimeout(timer);
     $svg = $("#marker");
@@ -736,7 +712,7 @@ $(function(){
     });
 
     map.removeLayer(summitLayer);
-    map.removeLayer(fluLayer);
+    map.removeLayer(innovationLayer);
     codeacrossLayer = mapbox.markers.layer().features(codeacross)
     codeacrossLayer.named('codeacross')
 
@@ -750,7 +726,7 @@ $(function(){
   });
 
 
-  $('a[href="#summit"]').on('shown.bs.collapse', function () {
+  $('#summit').on('shown.bs.dropdown', function () {
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     clearTimeout(timer);
@@ -760,7 +736,7 @@ $(function(){
         return f.properties['story'] !== 'summit';
     });
     map.removeLayer(codeacrossLayer)
-    map.removeLayer(fluLayer);
+    map.removeLayer(innovationLayer);
     summitLayer = mapbox.markers.layer().features(summit);
     map.addLayer(summitLayer);
 
@@ -771,6 +747,18 @@ $(function(){
     });
     $('#markerHighlight').parent().css("z-index", "100")
   });
+
+
+  function yearMarkers(year) {
+     $svg = $("#marker");
+      $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+      map.removeLayer(codeacrossLayer)
+      map.removeLayer(summitLayer)
+      map.removeLayer(innovationLayer)
+      markerLayer.filter(function(f) {
+           return f.properties.year <= year;
+      });
+  }
 
   
 function addStories(name) {
@@ -784,7 +772,7 @@ function addStories(name) {
   // });
 
   // map.removeLayer(summitLayer);
-  // map.removeLayer(fluLayer);
+  // map.removeLayer(innovationLayer);
   // codeacrossLayer = mapbox.markers.layer().features(codeacross);
   // codeacrossLayer.named('codeacross')
   // map.addLayer(codeacrossLayer);
