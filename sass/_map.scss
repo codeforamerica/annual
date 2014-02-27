@@ -6,6 +6,15 @@
 /*
 /*****************************************************************************/
 
+#mapInset {
+  position: relative; 
+  top: 200px; 
+  bottom: 0; 
+  right: -900px;
+  width: 20%; 
+  border: 1px solid #fff;
+}
+
 #map{
   position:absolute; top:0; bottom:0; width:100%; 
 }

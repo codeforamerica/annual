@@ -577,9 +577,13 @@ $(function(){
 
   // Create map
   var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
+  var insetLayer =  mapbox.layer().id('codeforamerica.h9pfapk3');
   var storyLayer
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
+
+  var inset = mapbox.map('mapInset', insetLayer, null, [easey_handlers.DragHandler()]);
+  inset.centerzoom({lat: 0, lon: 0 }, 2)
 
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
