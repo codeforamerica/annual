@@ -702,7 +702,6 @@ $(function(){
 
   $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
-    clearTimeout(timer);
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
     map.removeLayer(markerLayer);
@@ -729,7 +728,6 @@ $(function(){
   $('#summit').on('shown.bs.dropdown', function () {
     $svg = $("#marker");
     $("#markerCircle", $svg).attr('style', "fill:#999595");
-    clearTimeout(timer);
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -758,6 +756,7 @@ $(function(){
       markerLayer.filter(function(f) {
            return f.properties.year <= year;
       });
+      return false;
   }
 
   
