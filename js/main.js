@@ -598,7 +598,6 @@ $(function(){
     displayedMarkers.push(m);
      $(m.element).css("opacity", "0");
 
-    $(m.element).fadeIn(400);
     setTimeout(function(){
       $(m.element).animate({opacity: 1}, 400)
     }, Math.random() * 300);
@@ -613,14 +612,14 @@ $(function(){
       m.style.display = 'block';
       return m;
 
-    // Create a marker using the simplestyle factory
-    var elem = $(mapbox.markers.simplestyle_factory(m));
-    elem.attr("data-city", m.properties.city);
-    elem.attr("data-year", m.properties.year);
+    // // Create a marker using the simplestyle factory
+    // var elem = $(mapbox.markers.simplestyle_factory(m));
+    // elem.attr("data-city", m.properties.city);
+    // elem.attr("data-year", m.properties.year);
 
-    elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
+    // elem.attr("src", "http://a.tiles.mapbox.com/v3/marker/pin-m+"+fellowshipColor+"@2x.png");
 
-    return elem[0];
+    // return elem[0];
   }
 
 
@@ -710,7 +709,12 @@ $(function(){
     fluLayer = mapbox.markers.layer().features(flu);
     fluLayer.named('flu')
     map.addLayer(fluLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+    fluLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
+    });
+    $('#markerHighlight').parent().css("z-index", "100")
   });
 
 
@@ -727,10 +731,16 @@ $(function(){
 
     map.removeLayer(summitLayer);
     map.removeLayer(fluLayer);
-    codeacrossLayer = mapbox.markers.layer().features(codeacross);
+    codeacrossLayer = mapbox.markers.layer().features(codeacross)
     codeacrossLayer.named('codeacross')
+
+    codeacrossLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
+    });
     map.addLayer(codeacrossLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+    $('#markerHighlight').parent().css("z-index", "100")
   });
 
 
@@ -747,7 +757,13 @@ $(function(){
     map.removeLayer(fluLayer);
     summitLayer = mapbox.markers.layer().features(summit);
     map.addLayer(summitLayer);
-    $('.simplestyle-marker').parent().css("z-index", "100")
+
+    summitLayer.factory(function(f) {
+        var highlight = document.getElementById('markerHighlight').cloneNode(true);
+        highlight.style.display = 'block';
+        return highlight;
+    });
+    $('#markerHighlight').parent().css("z-index", "100")
   });
 
   
