@@ -1731,30 +1731,62 @@ li {
 }
 
 /* line 174, ../sass/_map.scss */
+.mapDropdown {
+  margin-top: 40px;
+}
+/* line 176, ../sass/_map.scss */
+.mapDropdown a {
+  background: #fff;
+  color: #000;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 181, ../sass/_map.scss */
+.mapDropdown a:hover {
+  background: #e87d2b;
+  color: #fff;
+}
+/* line 185, ../sass/_map.scss */
+.mapDropdown a:active {
+  background: #e87d2b;
+  color: #fff;
+}
+/* line 190, ../sass/_map.scss */
+.mapDropdown p.dropdown-menu {
+  width: 500px;
+  font-size: 15px;
+  text-shadow: none;
+  border: none;
+  padding: 5px;
+  border-radius: 0px;
+  margin: 10px;
+}
+
+/* line 201, ../sass/_map.scss */
 .mapscroll {
   height: 800px;
 }
 
-/* line 178, ../sass/_map.scss */
+/* line 205, ../sass/_map.scss */
 .mapStories .year {
   font-size: 40px;
   padding: 10px;
   cursor: pointer;
 }
 
-/* line 184, ../sass/_map.scss */
+/* line 211, ../sass/_map.scss */
 .marker-popup {
   max-width: 600px;
   width: 600px;
   padding: 0px;
 }
 
-/* line 190, ../sass/_map.scss */
+/* line 217, ../sass/_map.scss */
 .marker-popup h4 {
   margin: 0px;
 }
 
-/* line 194, ../sass/_map.scss */
+/* line 221, ../sass/_map.scss */
 .marker-popup .close {
   position: absolute;
   top: 8px;
@@ -1763,7 +1795,7 @@ li {
   color: #fff;
 }
 
-/* line 202, ../sass/_map.scss */
+/* line 229, ../sass/_map.scss */
 .marker-popup .prev {
   position: absolute;
   top: 100px;
@@ -1777,7 +1809,7 @@ li {
   cursor: pointer;
 }
 
-/* line 215, ../sass/_map.scss */
+/* line 242, ../sass/_map.scss */
 .marker-popup .next {
   position: absolute;
   top: 100px;
@@ -1791,17 +1823,17 @@ li {
   cursor: pointer;
 }
 
-/* line 227, ../sass/_map.scss */
+/* line 254, ../sass/_map.scss */
 .marker-popup .next:hover {
   opacity: 1.0;
 }
 
-/* line 231, ../sass/_map.scss */
+/* line 258, ../sass/_map.scss */
 .marker-popup .prev:hover {
   opacity: 1.0;
 }
 
-/* line 235, ../sass/_map.scss */
+/* line 262, ../sass/_map.scss */
 .fellowshipyearfixed {
   position: fixed;
   top: 0px;
@@ -1810,7 +1842,7 @@ li {
   display: inherit;
 }
 
-/* line 243, ../sass/_map.scss */
+/* line 270, ../sass/_map.scss */
 .storyContainer {
   position: absolute;
   top: 50px;
@@ -1821,7 +1853,7 @@ li {
   border-radius: 3px;
 }
 
-/* line 253, ../sass/_map.scss */
+/* line 280, ../sass/_map.scss */
 .storyContainer p {
   font-size: 13px;
   color: #000;
@@ -1834,24 +1866,24 @@ li {
   text-shadow: none;
 }
 
-/* line 266, ../sass/_map.scss */
+/* line 293, ../sass/_map.scss */
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
-/* line 274, ../sass/_map.scss */
+/* line 301, ../sass/_map.scss */
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
-/* line 279, ../sass/_map.scss */
+/* line 306, ../sass/_map.scss */
 .zoomin {
   left: 50px;
 }
 
-/* line 283, ../sass/_map.scss */
+/* line 310, ../sass/_map.scss */
 .zoomout {
   top: 239px;
 }
