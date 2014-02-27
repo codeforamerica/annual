@@ -1,0 +1,80 @@
+@import "colors";
+
+.getinvolved {
+  background: rgba(255, 255, 255, .75);
+  padding: 60px 80px;
+  max-width: 700px;
+  color: #000;
+  text-shadow: none;
+  font-family: 'Arvo', 'Georgia', serif;
+  margin: 100px 180px;
+  &.joinus {
+    margin: 0px;
+  }
+}
+
+.getinvolved p:first-child:first-letter { 
+  float: left; 
+  font-size: 48px;
+  line-height: 50px;
+  padding-right: 8px; 
+  padding-left: 3px; 
+}
+
+.getinvolved h1 {
+  margin: 0px;
+  color: #000 !important;
+}
+
+.getinvolved h4 {
+  text-transform: none;
+  margin-top: 19px;
+  font-size: 22px;
+}
+
+.getinvolved h5 {
+  font-size: 17px;
+  margin-top: 13px;
+}
+
+.getinvolved p {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.getinvolved img {
+  width: 40%;
+  margin-top: 15px;
+}
+
+.getinvolved a {
+  color: #000;
+}
+
+.getinvolved a:hover,
+.companies a:hover {
+  color: #C82A45;
+  border-bottom: #C82A45 solid 1px;
+}
+
+.getinvolved span {
+  font-weight: 700;
+}
+
+.getinvolved li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.getinvolved form {
+  background: rgba(255,255,255, .7);
+  padding: 25px 40px;
+  width: 500px;
+  margin: 25px auto;
+}
+
+.getinvolved label {
+  color: #000;
+  margin-right: 10px;
+}
