@@ -2048,9 +2048,14 @@ li {
   color: #000;
   text-shadow: none;
   font-family: 'Arvo', 'Georgia', serif;
+  margin: 100px 180px;
+}
+/* line 11, ../sass/_getinvolved.scss */
+.getinvolved.joinus {
+  margin: 0px;
 }
 
-/* line 12, ../sass/_getinvolved.scss */
+/* line 16, ../sass/_getinvolved.scss */
 .getinvolved p:first-child:first-letter {
   float: left;
   font-size: 48px;
@@ -2059,62 +2064,62 @@ li {
   padding-left: 3px;
 }
 
-/* line 20, ../sass/_getinvolved.scss */
+/* line 24, ../sass/_getinvolved.scss */
 .getinvolved h1 {
   margin: 0px;
   color: #000 !important;
 }
 
-/* line 25, ../sass/_getinvolved.scss */
+/* line 29, ../sass/_getinvolved.scss */
 .getinvolved h4 {
   text-transform: none;
   margin-top: 19px;
   font-size: 22px;
 }
 
-/* line 31, ../sass/_getinvolved.scss */
+/* line 35, ../sass/_getinvolved.scss */
 .getinvolved h5 {
   font-size: 17px;
   margin-top: 13px;
 }
 
-/* line 36, ../sass/_getinvolved.scss */
+/* line 40, ../sass/_getinvolved.scss */
 .getinvolved p {
   font-size: 17px;
   line-height: 25px;
 }
 
-/* line 41, ../sass/_getinvolved.scss */
+/* line 45, ../sass/_getinvolved.scss */
 .getinvolved img {
   width: 40%;
   margin-top: 15px;
 }
 
-/* line 46, ../sass/_getinvolved.scss */
+/* line 50, ../sass/_getinvolved.scss */
 .getinvolved a {
   color: #000;
 }
 
-/* line 51, ../sass/_getinvolved.scss */
+/* line 55, ../sass/_getinvolved.scss */
 .getinvolved a:hover,
 .companies a:hover {
   color: #C82A45;
   border-bottom: #C82A45 solid 1px;
 }
 
-/* line 56, ../sass/_getinvolved.scss */
+/* line 60, ../sass/_getinvolved.scss */
 .getinvolved span {
   font-weight: 700;
 }
 
-/* line 60, ../sass/_getinvolved.scss */
+/* line 64, ../sass/_getinvolved.scss */
 .getinvolved li {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 300;
 }
 
-/* line 66, ../sass/_getinvolved.scss */
+/* line 70, ../sass/_getinvolved.scss */
 .getinvolved form {
   background: rgba(255, 255, 255, 0.7);
   padding: 25px 40px;
@@ -2122,7 +2127,7 @@ li {
   margin: 25px auto;
 }
 
-/* line 73, ../sass/_getinvolved.scss */
+/* line 77, ../sass/_getinvolved.scss */
 .getinvolved label {
   color: #000;
   margin-right: 10px;
