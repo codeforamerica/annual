@@ -651,6 +651,12 @@ $(function(){
     trigger: 'hover'
   });
 
+  $('.startupspop').popover({
+    placement: 'top',
+    trigger: 'hover',
+    html: true
+  });
+
 
   // Create map
   var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
@@ -794,6 +800,11 @@ $(function(){
     $('#markerHighlight').parent().css("z-index", "100")
   });
 
+  $('#mapInnovation').on('hidden.bs.dropdown', function () {
+    inset.removeLayer(insetMarkerLayer);
+    yearMarkers("2013")
+  })
+
 
   $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
@@ -822,6 +833,11 @@ $(function(){
     map.addLayer(codeacrossLayer);
     $('#markerHighlight').parent().css("z-index", "100")
   });
+
+  $('#codeacross').on('hidden.bs.dropdown', function () {
+    inset.removeLayer(insetMarkerLayer);
+    yearMarkers("2013")
+  })
 
 
   $('#summit').on('shown.bs.dropdown', function () {
@@ -852,11 +868,20 @@ $(function(){
     $('#markerHighlight').parent().css("z-index", "100")
   });
 
+  $('#summit').on('hidden.bs.dropdown', function () {
+    inset.removeLayer(insetMarkerLayer);
+    yearMarkers("2013")
+  })
+
 
   function yearMarkers(year) {
-     $svg = $("#marker");
-     $svgInsert = $('#markerInset')
-     switch (year) {
+    inset.removeLayer(insetMarkerLayer);
+    insetMarkerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
+    insetMarkerLayer.factory(insetMarkerFactory);
+    inset.addLayer(insetMarkerLayer)
+    $svg = $("#marker");
+    $svgInsert = $('#markerInset')
+    switch (year) {
       case "2011":
         $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
         $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
@@ -869,17 +894,17 @@ $(function(){
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
         $("#markerInsetCircle", $svgInsert).attr('style', "fill:#e87d2b");
       break;
-     }
-      map.removeLayer(codeacrossLayer)
-      map.removeLayer(summitLayer)
-      map.removeLayer(innovationLayer)
-      markerLayer.filter(function(f) {
-         return f.properties.year <= year;
-      });
-      insetMarkerLayer.filter(function(e) {
-         return e.properties.year <= year;
-      });
-      return false;
+    }
+    map.removeLayer(codeacrossLayer)
+    map.removeLayer(summitLayer)
+    map.removeLayer(innovationLayer)
+    markerLayer.filter(function(f) {
+     return f.properties.year <= year;
+    });
+    insetMarkerLayer.filter(function(e) {
+     return e.properties.year <= year;
+    });
+    return false;
   }
 
   
