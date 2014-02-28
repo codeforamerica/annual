@@ -651,6 +651,12 @@ $(function(){
     trigger: 'hover'
   });
 
+  $('.startupspop').popover({
+    placement: 'top',
+    trigger: 'hover',
+    html: true
+  });
+
 
   // Create map
   var layer = mapbox.layer().id('codeforamerica.h9pfapk3');

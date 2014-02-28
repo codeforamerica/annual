@@ -2018,42 +2018,47 @@ li {
   margin: 20px 20px 0 0;
 }
 
-/* line 19, ../sass/_startup-logos.scss */
+/* line 18, ../sass/_startup-logos.scss */
+a.startupspop:hover {
+  border: none;
+}
+
+/* line 23, ../sass/_startup-logos.scss */
 .startupspop.startup_CI {
   background-image: url("../img/apps/inverse_civicinsight.png");
 }
 
-/* line 23, ../sass/_startup-logos.scss */
+/* line 27, ../sass/_startup-logos.scss */
 .startupspop.startup_LD {
   background-image: url("../img/apps/inverse_localdata.png");
 }
 
-/* line 27, ../sass/_startup-logos.scss */
+/* line 31, ../sass/_startup-logos.scss */
 .startupspop.startup_TZ {
   background-image: url("../img/apps/inverse_textizen.png");
 }
 
-/* line 31, ../sass/_startup-logos.scss */
+/* line 35, ../sass/_startup-logos.scss */
 .startupspop.startup_AS {
   background-image: url("../img/apps/inverse_archivesocial.png");
 }
 
-/* line 35, ../sass/_startup-logos.scss */
+/* line 39, ../sass/_startup-logos.scss */
 .startupspop.startup_FAF {
   background-image: url("../img/apps/inverse_FAF.png");
 }
 
-/* line 39, ../sass/_startup-logos.scss */
+/* line 43, ../sass/_startup-logos.scss */
 .startupspop.startup_OC {
   background-image: url("../img/apps/inverse_opencounter.png");
 }
 
-/* line 43, ../sass/_startup-logos.scss */
+/* line 47, ../sass/_startup-logos.scss */
 .startupspop.startup_SP {
   background-image: url("../img/apps/inverse_smartprocure.png");
 }
 
-/* line 47, ../sass/_startup-logos.scss */
+/* line 51, ../sass/_startup-logos.scss */
 .startupspop.startup_SC {
   background-image: url("../img/apps/inverse_streetcred.png");
 }
