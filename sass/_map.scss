@@ -9,10 +9,10 @@
 #mapInset {
   position: relative; 
   top: 200px; 
-  bottom: 0; 
   right: -900px;
   width: 20%; 
   border: 1px solid #fff;
+  height: 200px
 }
 
 #map{
@@ -208,7 +208,7 @@
 }
 
 .mapscroll{ 
-  height:800px;
+  // height:800px;
 }
 
 .mapStories .year {
@@ -298,14 +298,11 @@
   text-shadow: none;
 }
 
-
 .yearText {
   background: #fff;
   font-size: 16px;
 
 }
-
-
 
 .zoomer{ 
   top:210px;
