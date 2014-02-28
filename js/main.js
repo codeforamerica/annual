@@ -775,7 +775,7 @@ $(function(){
   $('#mapInnovation').on('show.bs.dropdown', function () {
     // addStories("innovation")
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -809,7 +809,7 @@ $(function(){
   $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -842,7 +842,7 @@ $(function(){
 
   $('#summit').on('shown.bs.dropdown', function () {
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -883,12 +883,12 @@ $(function(){
     $svgInsert = $('#markerInset')
     switch (year) {
       case "2011":
-        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
-        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
+        $("#markerCircle", $svg).attr('style', "fill:#6D6E71");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6D6E71");
       break;
       case "2012":
-        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
-        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
+        $("#markerCircle", $svg).attr('style', "fill:#6D6E71");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6D6E71");
       break;
       default:
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
@@ -946,7 +946,7 @@ function addStories(name) {
 
 
   // var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
-  var colors = ["graphDark3", "graphDark2", "graphDark1", "graph", "graphLight1", "graphLight2", "graphLight3", "graphLight4"];
+  var colors = ["graph", "graph1", "graph2", "graph3", "graph4", "graph5", "graph6", "graph7"];
 
   $(".bargraph").each(function(i, el){
 

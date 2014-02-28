@@ -10,8 +10,9 @@
 #mapInset {
   position: absolute; 
   bottom: 0;
+  margin: 20px;
   right: 0;
-  border: 1px solid #fff;
+  border: 3px solid #fff;
   height: 200px;
   width: 20%;
 }
@@ -155,18 +156,22 @@
       @include  box-shadow(0px 0px 10px 5px #ccc);
       color: #000;
    }
-   &:active {
-      background: #fff;
-      color: $orange;
-      box-shadow: 0px;
-   }
  }
+.gray.open {
+  a{
+     color: $gray;
+   }
+   p.dropdown-menu {
+      color: $gray;
+   }
+}
  .open a{
    background: #fff;
    color: $orange;
    border: solid 1px #fff;
    outline: none;
  }
+
   p.dropdown-menu {
     color: $orange;
     width: 425px;
@@ -178,7 +183,14 @@
     border-radius: 0px;
     margin: 10px 5px;
   }
+  &.gray a{
+    color: $gray;
+  }
 }
+#2011 {
+  background: pink;
+}
+
 
 .mapStories .year {
   font-size: 40px;
