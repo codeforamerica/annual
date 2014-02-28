@@ -226,18 +226,18 @@ a.appspop:hover {
 }
 
 /* line 193, ../sass/_application-logos.scss */
-.appspop.criminalcase {
-  background-image: url("../img/apps/criminalcasesearch.png");
-}
-
-/* line 197, ../sass/_application-logos.scss */
 .appspop.city_voice {
   background-image: url("../img/apps/cityvoice_logo.jpg");
 }
 
-/* line 201, ../sass/_application-logos.scss */
+/* line 197, ../sass/_application-logos.scss */
 .appspop.civicinsight {
   background-image: url("../img/apps/civicinsight.jpg");
+}
+
+/* line 201, ../sass/_application-logos.scss */
+.appspop.ckan {
+  background-image: url("../img/apps/ckan.jpg");
 }
 
 /* line 205, ../sass/_application-logos.scss */
@@ -246,158 +246,178 @@ a.appspop:hover {
 }
 
 /* line 209, ../sass/_application-logos.scss */
+.appspop.councilmatic {
+  background-image: url("../img/apps/councilmatic.png");
+}
+
+/* line 213, ../sass/_application-logos.scss */
+.appspop.criminalcase {
+  background-image: url("../img/apps/criminalcasesearch.png");
+}
+
+/* line 217, ../sass/_application-logos.scss */
 .appspop.dctrees {
   background-image: url("../img/apps/dcstreettrees.png");
 }
 
-/* line 213, ../sass/_application-logos.scss */
+/* line 221, ../sass/_application-logos.scss */
 .appspop.development_fast_pass {
   background-image: url("../img/apps/development_fast_pass.png");
 }
 
-/* line 217, ../sass/_application-logos.scss */
+/* line 225, ../sass/_application-logos.scss */
 .appspop.discover_bps {
   background-image: url("../img/apps/discover_bps.png");
 }
 
-/* line 221, ../sass/_application-logos.scss */
+/* line 229, ../sass/_application-logos.scss */
 .appspop.early_oakland {
   background-image: url("../img/apps/early_oakland.png");
 }
 
-/* line 225, ../sass/_application-logos.scss */
+/* line 233, ../sass/_application-logos.scss */
 .appspop.faf_logo {
   background-image: url("../img/apps/faf_logo.jpg");
 }
 
-/* line 229, ../sass/_application-logos.scss */
+/* line 237, ../sass/_application-logos.scss */
 .appspop.fishstockingschedule {
   background-image: url("../img/apps/fishstockingschedule.png");
 }
 
-/* line 233, ../sass/_application-logos.scss */
+/* line 241, ../sass/_application-logos.scss */
 .appspop.floridabilltracker {
   background-image: url("../img/apps/floridabilltracker.png");
 }
 
-/* line 237, ../sass/_application-logos.scss */
+/* line 245, ../sass/_application-logos.scss */
 .appspop.flu_shot_finder {
   background-image: url("../img/apps/flu_shot_finder.jpg");
 }
 
-/* line 241, ../sass/_application-logos.scss */
+/* line 249, ../sass/_application-logos.scss */
 .appspop.hampton_roads_bus_app {
   background-image: url("../img/apps/hampton_roads_bus_app.png");
 }
 
-/* line 245, ../sass/_application-logos.scss */
+/* line 253, ../sass/_application-logos.scss */
 .appspop.honolulubudget {
   background-image: url("../img/apps/codeforhawaii.jpg");
 }
 
-/* line 249, ../sass/_application-logos.scss */
+/* line 257, ../sass/_application-logos.scss */
 .appspop.lakecraft {
   background-image: url("../img/apps/lakecraft.jpg");
 }
 
-/* line 253, ../sass/_application-logos.scss */
+/* line 261, ../sass/_application-logos.scss */
 .appspop.lasvegas_foodtrucks {
   background-image: url("../img/apps/lasvegas_foodtrucks_logo.jpg");
 }
 
-/* line 257, ../sass/_application-logos.scss */
+/* line 265, ../sass/_application-logos.scss */
 .appspop.lookatasheville {
   background-image: url("../img/apps/lookatasheville.png");
 }
 
-/* line 261, ../sass/_application-logos.scss */
+/* line 269, ../sass/_application-logos.scss */
 .appspop.louisville_app {
   background-image: url("../img/apps/louisville.png");
 }
 
-/* line 265, ../sass/_application-logos.scss */
+/* line 273, ../sass/_application-logos.scss */
+.appspop.localwiki {
+  background-image: url("../img/apps/localwiki.png");
+}
+
+/* line 277, ../sass/_application-logos.scss */
 .appspop.mapping_gentrification {
   background-image: url("../img/apps/codeforphillygentrification.png");
 }
 
-/* line 269, ../sass/_application-logos.scss */
+/* line 281, ../sass/_application-logos.scss */
 .appspop.nwdata {
   background-image: url("../img/apps/nwdata.png");
 }
 
-/* line 273, ../sass/_application-logos.scss */
+/* line 285, ../sass/_application-logos.scss */
 .appspop.ohana_api {
   background-image: url("../img/apps/ohana_api.jpg");
 }
 
-/* line 277, ../sass/_application-logos.scss */
+/* line 289, ../sass/_application-logos.scss */
 .appspop.omgtransit {
   background-image: url("../img/apps/omgtransit.png");
 }
 
-/* line 281, ../sass/_application-logos.scss */
+/* line 293, ../sass/_application-logos.scss */
 .appspop.openbudget_app {
   background-image: url("../img/apps/openbudget_app.png");
 }
 
-/* line 285, ../sass/_application-logos.scss */
+/* line 297, ../sass/_application-logos.scss */
 .appspop.oppcaster {
   background-image: url("../img/apps/oppcaster.png");
 }
 
-/* line 289, ../sass/_application-logos.scss */
+/* line 301, ../sass/_application-logos.scss */
 .appspop.opentwincitiesquestionnaire {
   background-image: url("../img/apps/opentwincitiesquestionnaire.png");
 }
 
-/* line 293, ../sass/_application-logos.scss */
+/* line 305, ../sass/_application-logos.scss */
 .appspop.pantrypickup_app {
   background-image: url("../img/apps/pantry_pickup.png");
 }
 
-/* line 297, ../sass/_application-logos.scss */
+/* line 309, ../sass/_application-logos.scss */
 .appspop.promptly {
   background-image: url("../img/apps/promptly_logo.jpg");
 }
 
-/* line 301, ../sass/_application-logos.scss */
+/* line 313, ../sass/_application-logos.scss */
 .appspop.recordtrac {
   background-image: url("../img/apps/recordtrac_logo.jpg");
 }
 
-/* line 305, ../sass/_application-logos.scss */
+/* line 317, ../sass/_application-logos.scss */
 .appspop.smartprocure {
   background-image: url("../img/apps/smartprocure_logo.jpg");
 }
 
-/* line 309, ../sass/_application-logos.scss */
+/* line 321, ../sass/_application-logos.scss */
 .appspop.smc_connect {
   background-image: url("../img/apps/smc_connect.png");
 }
 
-/* line 313, ../sass/_application-logos.scss */
+/* line 325, ../sass/_application-logos.scss */
 .appspop.streetcred {
   background-image: url("../img/apps/streetcred_logo.jpg");
 }
 
-/* line 317, ../sass/_application-logos.scss */
+/* line 329, ../sass/_application-logos.scss */
 .appspop.streetmix {
   background-image: url("../img/apps/streetmix_logo.png");
 }
 
-/* line 321, ../sass/_application-logos.scss */
+/* line 333, ../sass/_application-logos.scss */
 .appspop.textmybus {
   background-image: url("../img/apps/textmybus.png");
 }
 
-/* line 325, ../sass/_application-logos.scss */
+/* line 337, ../sass/_application-logos.scss */
 .appspop.tothetrails {
   background-image: url("../img/apps/tothetrails_logo.gif");
 }
 
-/* line 329, ../sass/_application-logos.scss */
+/* line 341, ../sass/_application-logos.scss */
 .appspop.whatsmydistrict {
   background-image: url("../img/apps/whatsmydistrict.png");
+}
+
+/* line 345, ../sass/_application-logos.scss */
+.appspop.wheresmybus {
+  background-image: url("../img/apps/wheresmyschoolbus.png");
 }
 
 /* line 1, ../sass/_backgrounds.scss */
