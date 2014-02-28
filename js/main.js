@@ -780,7 +780,7 @@ function addStories(name) {
 
 
   var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
-  var colors = ["graph", "graph-1", "graph-2", "graph-3", "graph-4", "graph-5", "graph-6", "graph-7"];
+  var colors = ["graphDark3", "graphDark2", "graphDark1", "graph", "graphLight1", "graphLight2", "graphLight3", "graphLight4"];
 
   $(".bargraph").each(function(i, el){
 

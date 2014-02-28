@@ -1720,11 +1720,7 @@ li {
   margin: 10px;
 }
 
-<<<<<<< HEAD
-/* line 220, ../sass/_map.scss */
-=======
 /* line 166, ../sass/_map.scss */
->>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .mapStories .year {
   font-size: 40px;
   padding: 10px;
@@ -1823,40 +1819,24 @@ li {
   text-shadow: none;
 }
 
-<<<<<<< HEAD
-/* line 307, ../sass/_map.scss */
-=======
 /* line 253, ../sass/_map.scss */
->>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-/* line 313, ../sass/_map.scss */
-=======
 /* line 259, ../sass/_map.scss */
->>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
-<<<<<<< HEAD
-/* line 318, ../sass/_map.scss */
-=======
 /* line 264, ../sass/_map.scss */
->>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomin {
   left: 50px;
 }
 
-<<<<<<< HEAD
-/* line 322, ../sass/_map.scss */
-=======
 /* line 268, ../sass/_map.scss */
->>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomout {
   top: 239px;
 }
