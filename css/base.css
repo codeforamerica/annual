@@ -2230,11 +2230,10 @@ a.startupspop:hover {
 
 /* line 12, ../sass/_getinvolved.scss */
 .getinvolved.joinus {
-  padding: 30px;
-  max-width: 500px;
+  padding: 30px 0px 45px;
 }
 
-/* line 17, ../sass/_getinvolved.scss */
+/* line 16, ../sass/_getinvolved.scss */
 .getinvolved p:first-child:first-letter {
   float: left;
   font-size: 48px;
@@ -2243,7 +2242,7 @@ a.startupspop:hover {
   padding-left: 3px;
 }
 
-/* line 25, ../sass/_getinvolved.scss */
+/* line 24, ../sass/_getinvolved.scss */
 .getinvolved h1 {
   color: #000 !important;
   font-size: 100px !important;
@@ -2251,14 +2250,14 @@ a.startupspop:hover {
   margin: 0px 0px 60px 0px;
 }
 
-/* line 32, ../sass/_getinvolved.scss */
+/* line 31, ../sass/_getinvolved.scss */
 .getinvolved h4 {
   text-transform: none;
   margin-top: 19px;
   font-size: 22px;
 }
 
-/* line 38, ../sass/_getinvolved.scss */
+/* line 37, ../sass/_getinvolved.scss */
 .getinvolved h5 {
   font-size: 16px;
   font-style: normal;
@@ -2266,43 +2265,43 @@ a.startupspop:hover {
   text-align: center;
 }
 
-/* line 45, ../sass/_getinvolved.scss */
+/* line 44, ../sass/_getinvolved.scss */
 .getinvolved p {
   font-size: 17px;
   line-height: 25px;
 }
 
-/* line 50, ../sass/_getinvolved.scss */
+/* line 49, ../sass/_getinvolved.scss */
 .getinvolved img {
   width: 40%;
   margin-top: 15px;
 }
 
-/* line 55, ../sass/_getinvolved.scss */
+/* line 54, ../sass/_getinvolved.scss */
 .getinvolved a {
   color: #000;
 }
 
-/* line 60, ../sass/_getinvolved.scss */
+/* line 59, ../sass/_getinvolved.scss */
 .getinvolved a:hover,
 .companies a:hover {
   color: #C82A45;
   border-bottom: #C82A45 solid 1px;
 }
 
-/* line 65, ../sass/_getinvolved.scss */
+/* line 64, ../sass/_getinvolved.scss */
 .getinvolved span {
   font-weight: 700;
 }
 
-/* line 69, ../sass/_getinvolved.scss */
+/* line 68, ../sass/_getinvolved.scss */
 .getinvolved li {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 300;
 }
 
-/* line 75, ../sass/_getinvolved.scss */
+/* line 74, ../sass/_getinvolved.scss */
 .getinvolved form {
   background: rgba(214, 214, 214, 0.7);
   padding: 25px 40px;
@@ -2310,7 +2309,7 @@ a.startupspop:hover {
   margin: 25px auto 10px auto;
 }
 
-/* line 82, ../sass/_getinvolved.scss */
+/* line 81, ../sass/_getinvolved.scss */
 .getinvolved label {
   color: #000;
   margin-right: 10px;
