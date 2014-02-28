@@ -1997,16 +1997,8 @@ li {
 /* Startup Logos
 /*
 /*****************************************************************************/
-/* line 15, ../sass/_startup-logos.scss */
-.startupspop.startup_CI,
-.startupspop.startup_LD,
-.startupspop.startup_TZ,
-.startupspop.startup_AS,
-.startupspop.startup_FAF,
-.startupspop.startup_OC,
-.startupspop.startup_SP,
-.startupspop.startup_SC {
-  background-image: url("../img/fellows_headshot.jpg");
+/* line 7, ../sass/_startup-logos.scss */
+.startupspop {
   background-size: 100px;
   float: left;
   width: 100px;
@@ -2014,44 +2006,44 @@ li {
   margin: 20px 20px 0 0;
 }
 
-/* line 24, ../sass/_startup-logos.scss */
+/* line 16, ../sass/_startup-logos.scss */
 .startupspop.startup_CI {
-  background-position: 0 0px;
+  background-image: url("../img/apps/inverse_civicinsight.png");
+}
+
+/* line 20, ../sass/_startup-logos.scss */
+.startupspop.startup_LD {
+  background-image: url("../img/apps/inverse_localdata.png");
+}
+
+/* line 24, ../sass/_startup-logos.scss */
+.startupspop.startup_TZ {
+  background-image: url("../img/apps/inverse_textizen.png");
 }
 
 /* line 28, ../sass/_startup-logos.scss */
-.startupspop.startup_LD {
-  background-position: 0 -100px;
+.startupspop.startup_AS {
+  background-image: url("../img/apps/inverse_archivesocial.png");
 }
 
 /* line 32, ../sass/_startup-logos.scss */
-.startupspop.startup_TZ {
-  background-position: 0 -200px;
+.startupspop.startup_FAF {
+  background-image: url("../img/apps/inverse_faf.png");
 }
 
 /* line 36, ../sass/_startup-logos.scss */
-.startupspop.startup_AS {
-  background-position: 0 -300px;
+.startupspop.startup_OC {
+  background-image: url("../img/apps/inverse_opencounter.png");
 }
 
 /* line 40, ../sass/_startup-logos.scss */
-.startupspop.startup_FAF {
-  background-position: 0 -400px;
+.startupspop.startup_SP {
+  background-image: url("../img/apps/inverse_smartprocure.png");
 }
 
 /* line 44, ../sass/_startup-logos.scss */
-.startupspop.startup_OC {
-  background-position: 0 -500px;
-}
-
-/* line 48, ../sass/_startup-logos.scss */
-.startupspop.startup_SP {
-  background-position: 0 -600px;
-}
-
-/* line 52, ../sass/_startup-logos.scss */
 .startupspop.startup_SC {
-  background-position: 0 -700px;
+  background-image: url("../img/apps/inverse_streetcred.png");
 }
 
 /*****************************************************************************/
