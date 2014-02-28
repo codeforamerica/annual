@@ -190,10 +190,6 @@ a.appspop:hover  {
   background-image: url('../img/apps/BTVmusicarchiveapp.jpg');
 }
 
-.appspop.criminalcase {
-  background-image: url('../img/apps/criminalcasesearch.png');
-}
-
 .appspop.city_voice {
   background-image: url('../img/apps/cityvoice_logo.jpg');
 }
@@ -202,8 +198,20 @@ a.appspop:hover  {
   background-image: url('../img/apps/civicinsight.jpg');
 }
 
+.appspop.ckan{
+  background-image: url('../img/apps/ckan.jpg');
+}
+
 .appspop.clickthathood{
   background-image: url('../img/apps/clickthathood.png');
+}
+
+.appspop.councilmatic{
+  background-image: url('../img/apps/councilmatic.png');
+}
+
+.appspop.criminalcase {
+  background-image: url('../img/apps/criminalcasesearch.png');
 }
 
 .appspop.dctrees{
@@ -260,6 +268,10 @@ a.appspop:hover  {
 
 .appspop.louisville_app {
   background-image: url('../img/apps/louisville.png');
+}
+
+.appspop.localwiki {
+  background-image: url('../img/apps/localwiki.png');
 }
 
 .appspop.mapping_gentrification {
@@ -328,4 +340,8 @@ a.appspop:hover  {
 
 .appspop.whatsmydistrict {
   background-image: url('../img/apps/whatsmydistrict.png');
+}
+
+.appspop.wheresmybus {
+  background-image: url('../img/apps/wheresmyschoolbus.png');
 }
