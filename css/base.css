@@ -628,7 +628,15 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
 }
 
-/* line 164, ../sass/_backgrounds.scss */
+/* line 163, ../sass/_backgrounds.scss */
+.pagebg.imagepressback {
+  background: url("../img/pressback.jpg") no-repeat;
+  background-size: cover;
+  background-position: right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pressback.jpg', sizingMethod='scale')";
+}
+
+/* line 170, ../sass/_backgrounds.scss */
 .pagebg img {
   min-width: 100%;
   min-height: 100%;
