@@ -723,10 +723,10 @@ $(function(){
      $svg = $("#marker");
      switch (year) {
       case "2011":
-        $("#markerCircle", $svg).attr('style', "fill:#00a175");
+        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
       break;
       case "2012":
-        $("#markerCircle", $svg).attr('style', "fill:#69579C");
+        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
       break;
       default:
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
