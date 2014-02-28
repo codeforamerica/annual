@@ -4,26 +4,26 @@
   .graph {
     background: $green;
   }
-  .graphDark1 {
-    background: darken( $green, 10% );
+  .graph1 {
+    background: lighten( $green, 10% );
   }
-  .graphDark2 {
-    background: darken( $green, 20% );
+  .graph2 {
+    background: lighten( $green, 25% );
   }
-  .graphDark3 {
-    background: darken( $green, 40% );
+  .graph3 {
+    background: lighten( $green, 40% );
   }
-  .graphLight1 {
-    background: lighten( $green, 25% ); 
+  .graph4 {
+    background: lighten( $green, 60% ); 
   }
-  .graphLight2 {
-    background: lighten( $green, 50% );
-  }
-  .graphLight3 {
+  .graph5 {
     background: lighten( $green, 75% );
   }
-  .graphLight4 {
-    background: lighten( $green, 90% );
+  .graph6 {
+    background: lighten( $green, 80% );
+  }
+  .graph7 {
+    background: lighten( $green, 95% );
   }
 }
 

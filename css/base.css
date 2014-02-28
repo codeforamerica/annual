@@ -2401,31 +2401,31 @@ iframe.twitter-share-button {
   background: #00a175;
 }
 /* line 7, ../sass/_finance.scss */
-.financials .graphDark1 {
-  background: #006e50;
+.financials .graph1 {
+  background: #00d49a;
 }
 /* line 10, ../sass/_finance.scss */
-.financials .graphDark2 {
-  background: #003b2b;
-}
-/* line 13, ../sass/_finance.scss */
-.financials .graphDark3 {
-  background: black;
-}
-/* line 16, ../sass/_finance.scss */
-.financials .graphLight1 {
+.financials .graph2 {
   background: #21ffc2;
 }
+/* line 13, ../sass/_finance.scss */
+.financials .graph3 {
+  background: #6effd7;
+}
+/* line 16, ../sass/_finance.scss */
+.financials .graph4 {
+  background: #d4fff3;
+}
 /* line 19, ../sass/_finance.scss */
-.financials .graphLight2 {
-  background: #a1ffe5;
+.financials .graph5 {
+  background: white;
 }
 /* line 22, ../sass/_finance.scss */
-.financials .graphLight3 {
+.financials .graph6 {
   background: white;
 }
 /* line 25, ../sass/_finance.scss */
-.financials .graphLight4 {
+.financials .graph7 {
   background: white;
 }
 
