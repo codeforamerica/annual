@@ -14,7 +14,11 @@
   height: 100px;
   margin: 20px 20px 0 0;
 }
-
+ a.startupspop {
+  &:hover {
+    border: none;
+  }
+ }
 
 .startupspop.startup_CI {
   background-image: url('../img/apps/inverse_civicinsight.png');
