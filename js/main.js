@@ -593,6 +593,13 @@ $(function(){
       return m;
   }
 
+  var insetMarkerFactory = function() {
+    var m = document.getElementById('marker').cloneNode(true);
+      m.style.display = 'block';
+      m.setAttribute('r', 3);
+      return m;
+  }
+
 
 
   var cycleMarker = function(direction){
@@ -628,7 +635,7 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
-  insetMarkerLayer.factory(markerFactory);
+  insetMarkerLayer.factory(insetMarkerFactory);
 
   var years = ["2011", "2012", "2013"]
 
@@ -644,6 +651,8 @@ $(function(){
   map.addLayer(markerLayer);
   inset.addLayer(insetMarkerLayer);
 
+
+
   /*
     Map story events
   */
@@ -655,6 +664,12 @@ $(function(){
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
+       return f.properties['story'] !== 'innovation';
+    });
+
+    map.removeLayer(insetMarkerLayer);
+    map.addLayer(insetMarkerLayer)
+    insetMarkerLayer.filter(function(f) {
        return f.properties['story'] !== 'innovation';
     });
 
