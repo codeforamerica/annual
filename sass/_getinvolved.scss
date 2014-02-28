@@ -1,10 +1,9 @@
 @import "colors";
 
 .getinvolved {
-  background: rgba(255, 255, 255, .87);
-  padding: 60px 80px;
-  max-width: 700px;
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
+  padding: 70px 80px;
   text-shadow: none;
   font-family: 'Arvo', 'Georgia', serif;
   margin: 100px 180px;
@@ -22,8 +21,9 @@
 }
 
 .getinvolved h1 {
-  margin: 0px;
   color: #000 !important;
+  font-size: 100px !important;
+  text-align: center;
 }
 
 .getinvolved h4 {
