@@ -12,6 +12,7 @@
 @import "colors";
 @import "typography";
 @import "getinvolved";
+@import "sidebar";
 
 /*****************************************************************************/
 /*
@@ -79,8 +80,8 @@
 
 .networkTitle {
   padding-top: 230px;
-  padding-left:20px;
-  margin-bottom: -200px;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 .panel-collapse {
@@ -411,63 +412,6 @@ input[type="text"] {
   -webkit-box-sizing:border-box; /* Safari */
 }
 
-.sidebar{ 
-  width:400px;
-  position:fixed;
-  left:0px;
-  top:0px;
-  bottom:0px;
-  z-index:-7;
-}
-
-.sidebartitle{ 
-  width:400px;
-  left:0px;
-  position:absolute;
-  top:80px;
-}
-
-.sidebartitle h1{ 
-  font-size: 100px;
-  color: #fff;
-  margin: 30px 0px 0px 50px;
-  text-align: left;
-  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.mapsidebar h1{ 
-  font-size: 100px;
-  color: #333;
-  margin-bottom: 0px;
-}
-
-.sidebartitle h2{ 
-  font-size: 35px;
-  position:relative;
-  left:-400px;
-  line-height: 45px;
-  margin-top:20px;
-  text-transform: uppercase;
-}
-
-.sidebartitle.appear h2{ 
-  left: 50px;
-  transition: left 1s;
-  -webkit-transition: left 1s;
-}
-
-.sidebartitle h2 img {
-  width: 100px;
-}
-
-iframe {
-  width: 100%;
-  min-height: 200px;
-}
-
-iframe.twitter-share-button{ 
-  min-height:20px;
-}
 
 .cityLeaders iframe {
   display: block;
