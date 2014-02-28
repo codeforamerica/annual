@@ -1999,6 +1999,7 @@ li {
 /*****************************************************************************/
 /* line 9, ../sass/_startup-logos.scss */
 .startupspop {
+  background: none;
   background-size: 100px;
   float: left;
   width: 100px;
@@ -2006,42 +2007,42 @@ li {
   margin: 20px 20px 0 0;
 }
 
-/* line 18, ../sass/_startup-logos.scss */
+/* line 19, ../sass/_startup-logos.scss */
 .startupspop.startup_CI {
   background-image: url("../img/apps/inverse_civicinsight.png");
 }
 
-/* line 22, ../sass/_startup-logos.scss */
+/* line 23, ../sass/_startup-logos.scss */
 .startupspop.startup_LD {
   background-image: url("../img/apps/inverse_localdata.png");
 }
 
-/* line 26, ../sass/_startup-logos.scss */
+/* line 27, ../sass/_startup-logos.scss */
 .startupspop.startup_TZ {
   background-image: url("../img/apps/inverse_textizen.png");
 }
 
-/* line 30, ../sass/_startup-logos.scss */
+/* line 31, ../sass/_startup-logos.scss */
 .startupspop.startup_AS {
   background-image: url("../img/apps/inverse_archivesocial.png");
 }
 
-/* line 34, ../sass/_startup-logos.scss */
+/* line 35, ../sass/_startup-logos.scss */
 .startupspop.startup_FAF {
   background-image: url("../img/apps/inverse_FAF.png");
 }
 
-/* line 38, ../sass/_startup-logos.scss */
+/* line 39, ../sass/_startup-logos.scss */
 .startupspop.startup_OC {
   background-image: url("../img/apps/inverse_opencounter.png");
 }
 
-/* line 42, ../sass/_startup-logos.scss */
+/* line 43, ../sass/_startup-logos.scss */
 .startupspop.startup_SP {
   background-image: url("../img/apps/inverse_smartprocure.png");
 }
 
-/* line 46, ../sass/_startup-logos.scss */
+/* line 47, ../sass/_startup-logos.scss */
 .startupspop.startup_SC {
   background-image: url("../img/apps/inverse_streetcred.png");
 }
@@ -2465,7 +2466,7 @@ iframe.twitter-share-button {
 
 /* line 82, ../sass/base.scss */
 .networkTitle {
-  padding-top: 230px;
+  padding-top: 10px;
   padding-left: 0px;
   margin-bottom: 0px;
 }
