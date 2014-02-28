@@ -120,28 +120,43 @@
   }
 }
 
+
+
 .mapDropdown {
-  margin-top: 40px;
-  a {
-    background: #fff;
-    color: #000;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    &:hover {
-      background: $orange;
-      color: #fff;
-    }
-    &:active {
-      background: $orange;
-      color: #fff;
-    }
-  }
+ margin-top: 60px;
+ a {
+   background: #FCFCFC;
+   color: #4D4D4D;
+   border: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   padding: 8px;
+   margin-bottom: 7px;
+   &:hover {
+      background: #fff;
+      -moz-box-shadow:    0px 0px 10px 5px #ccc;
+      -webkit-box-shadow: 0px 0px 10px 5px #ccc;
+      box-shadow:         0px 0px 10px 5px #ccc;
+      color: #000;
+   }
+   &:active {
+      background: #fff;
+      color: $orange;
+   }
+ }
+ .open a{
+   background: #fff;
+   color: $orange;
+   border: solid 1px #fff;
+ }
   p.dropdown-menu {
-    width: 500px;
-    font-size: 15px;
+    color: $orange;
+    width: 425px;
+    font-size: 14px;
+    font-weight: 500px;
     text-shadow: none;
     border: none;
-    padding: 5px;
+    padding: 20px;
     border-radius: 0px;
     margin: 10px;
   }
