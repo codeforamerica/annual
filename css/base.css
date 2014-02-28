@@ -550,7 +550,15 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cfa_office.jpg', sizingMethod='scale')";
 }
 
-/* line 158, ../sass/_backgrounds.scss */
+/* line 157, ../sass/_backgrounds.scss */
+.pagebg.imageannual_report_back {
+  background: url("../img/annual_report_back.jpg") no-repeat;
+  background-size: cover;
+  background-position: right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
+}
+
+/* line 164, ../sass/_backgrounds.scss */
 .pagebg img {
   min-width: 100%;
   min-height: 100%;
@@ -2101,7 +2109,7 @@ a.startupspop:hover {
 .getinvolved {
   background: rgba(255, 255, 255, 0.9);
   color: #000;
-  padding: 90px 80px;
+  padding: 70px 80px;
   text-shadow: none;
   font-family: 'Arvo', 'Georgia', serif;
   margin: 100px 180px;
