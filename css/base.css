@@ -197,7 +197,7 @@ a.appspop:hover {
 
 /* line 169, ../sass/_application-logos.scss */
 .appspop.adoptadrain {
-  background-image: url("../img/apps/adoptadrain.png");
+  background-image: url("../img/apps/adoptadrain.jpg");
 }
 
 /* line 173, ../sass/_application-logos.scss */
@@ -212,7 +212,7 @@ a.appspop:hover {
 
 /* line 181, ../sass/_application-logos.scss */
 .appspop.archivesocial {
-  background-image: url("../img/apps/archivesocial.png");
+  background-image: url("../img/apps/archivesocial_sq.png");
 }
 
 /* line 185, ../sass/_application-logos.scss */
@@ -222,7 +222,7 @@ a.appspop:hover {
 
 /* line 189, ../sass/_application-logos.scss */
 .appspop.BTVmusicarchiveapp {
-  background-image: url("../img/apps/BTVmusicarchiveapp.jpg");
+  background-image: url("../img/apps/vermontlibrary.png");
 }
 
 /* line 193, ../sass/_application-logos.scss */
@@ -242,7 +242,7 @@ a.appspop:hover {
 
 /* line 205, ../sass/_application-logos.scss */
 .appspop.clickthathood {
-  background-image: url("../img/apps/clickthathood.png");
+  background-image: url("../img/apps/clickthathood.jpg");
 }
 
 /* line 209, ../sass/_application-logos.scss */
@@ -252,7 +252,7 @@ a.appspop:hover {
 
 /* line 213, ../sass/_application-logos.scss */
 .appspop.criminalcase {
-  background-image: url("../img/apps/criminalcasesearch.png");
+  background-image: url("../img/apps/nycccs.jpg");
 }
 
 /* line 217, ../sass/_application-logos.scss */
@@ -267,7 +267,7 @@ a.appspop:hover {
 
 /* line 225, ../sass/_application-logos.scss */
 .appspop.discover_bps {
-  background-image: url("../img/apps/discover_bps.png");
+  background-image: url("../img/apps/discoverbpsnew.png");
 }
 
 /* line 229, ../sass/_application-logos.scss */
@@ -277,32 +277,32 @@ a.appspop:hover {
 
 /* line 233, ../sass/_application-logos.scss */
 .appspop.faf_logo {
-  background-image: url("../img/apps/faf_logo.jpg");
+  background-image: url("../img/apps/faf.jpg");
 }
 
 /* line 237, ../sass/_application-logos.scss */
 .appspop.fishstockingschedule {
-  background-image: url("../img/apps/fishstockingschedule.png");
+  background-image: url("../img/apps/fishstocking.png");
 }
 
 /* line 241, ../sass/_application-logos.scss */
 .appspop.floridabilltracker {
-  background-image: url("../img/apps/floridabilltracker.png");
+  background-image: url("../img/apps/fllegtracker.png");
 }
 
 /* line 245, ../sass/_application-logos.scss */
 .appspop.flu_shot_finder {
-  background-image: url("../img/apps/flu_shot_finder.jpg");
+  background-image: url("../img/apps/flu_shot_finder.png");
 }
 
 /* line 249, ../sass/_application-logos.scss */
 .appspop.hampton_roads_bus_app {
-  background-image: url("../img/apps/hampton_roads_bus_app.png");
+  background-image: url("../img/apps/hampton_roads.png");
 }
 
 /* line 253, ../sass/_application-logos.scss */
 .appspop.honolulubudget {
-  background-image: url("../img/apps/codeforhawaii.jpg");
+  background-image: url("../img/apps/honlulubudget.png");
 }
 
 /* line 257, ../sass/_application-logos.scss */
@@ -312,110 +312,125 @@ a.appspop:hover {
 
 /* line 261, ../sass/_application-logos.scss */
 .appspop.lasvegas_foodtrucks {
-  background-image: url("../img/apps/lasvegas_foodtrucks_logo.jpg");
+  background-image: url("../img/apps/foodtruckslv.png");
 }
 
 /* line 265, ../sass/_application-logos.scss */
+.appspop.localdata-logo {
+  background-image: url("../img/apps/localdata-logo.png");
+}
+
+/* line 269, ../sass/_application-logos.scss */
 .appspop.lookatasheville {
   background-image: url("../img/apps/lookatasheville.png");
 }
 
-/* line 269, ../sass/_application-logos.scss */
+/* line 273, ../sass/_application-logos.scss */
 .appspop.louisville_app {
-  background-image: url("../img/apps/louisville.png");
+  background-image: url("../img/apps/jailpop.jpg");
 }
 
-/* line 273, ../sass/_application-logos.scss */
+/* line 277, ../sass/_application-logos.scss */
 .appspop.localwiki {
   background-image: url("../img/apps/localwiki.png");
 }
 
-/* line 277, ../sass/_application-logos.scss */
+/* line 281, ../sass/_application-logos.scss */
 .appspop.mapping_gentrification {
-  background-image: url("../img/apps/codeforphillygentrification.png");
+  background-image: url("../img/apps/mappinggentrification.png");
 }
 
-/* line 281, ../sass/_application-logos.scss */
+/* line 285, ../sass/_application-logos.scss */
 .appspop.nwdata {
   background-image: url("../img/apps/nwdata.png");
 }
 
-/* line 285, ../sass/_application-logos.scss */
+/* line 289, ../sass/_application-logos.scss */
 .appspop.ohana_api {
   background-image: url("../img/apps/ohana_api.jpg");
 }
 
-/* line 289, ../sass/_application-logos.scss */
+/* line 293, ../sass/_application-logos.scss */
 .appspop.omgtransit {
   background-image: url("../img/apps/omgtransit.png");
 }
 
-/* line 293, ../sass/_application-logos.scss */
+/* line 297, ../sass/_application-logos.scss */
 .appspop.openbudget_app {
-  background-image: url("../img/apps/openbudget_app.png");
+  background-image: url("../img/apps/openbudgetoak.png");
 }
 
-/* line 297, ../sass/_application-logos.scss */
+/* line 301, ../sass/_application-logos.scss */
 .appspop.oppcaster {
   background-image: url("../img/apps/oppcaster.png");
 }
 
-/* line 301, ../sass/_application-logos.scss */
-.appspop.opentwincitiesquestionnaire {
-  background-image: url("../img/apps/opentwincitiesquestionnaire.png");
-}
-
 /* line 305, ../sass/_application-logos.scss */
-.appspop.pantrypickup_app {
-  background-image: url("../img/apps/pantry_pickup.png");
+.appspop.opencounter {
+  background-image: url("../img/apps/opencounter.png");
 }
 
 /* line 309, ../sass/_application-logos.scss */
-.appspop.promptly {
-  background-image: url("../img/apps/promptly_logo.jpg");
+.appspop.opentwincitiesquestionnaire {
+  background-image: url("../img/apps/dataquestionnaire.png");
 }
 
 /* line 313, ../sass/_application-logos.scss */
-.appspop.recordtrac {
-  background-image: url("../img/apps/recordtrac_logo.jpg");
+.appspop.pantrypickup_app {
+  background-image: url("../img/apps/pantry_pickup2.png");
 }
 
 /* line 317, ../sass/_application-logos.scss */
-.appspop.smartprocure {
-  background-image: url("../img/apps/smartprocure_logo.jpg");
+.appspop.promptly {
+  background-image: url("../img/apps/promptly.png");
 }
 
 /* line 321, ../sass/_application-logos.scss */
-.appspop.smc_connect {
-  background-image: url("../img/apps/smc_connect.png");
+.appspop.recordtrac {
+  background-image: url("../img/apps/recordtrac.png");
 }
 
 /* line 325, ../sass/_application-logos.scss */
-.appspop.streetcred {
-  background-image: url("../img/apps/streetcred_logo.jpg");
+.appspop.smartprocure {
+  background-image: url("../img/apps/smartprocure_sq.png");
 }
 
 /* line 329, ../sass/_application-logos.scss */
-.appspop.streetmix {
-  background-image: url("../img/apps/streetmix_logo.png");
+.appspop.smc_connect {
+  background-image: url("../img/apps/smcconnect.png");
 }
 
 /* line 333, ../sass/_application-logos.scss */
+.appspop.streetcred {
+  background-image: url("../img/apps/streetcredsq.png");
+}
+
+/* line 337, ../sass/_application-logos.scss */
+.appspop.streetmix {
+  background-image: url("../img/apps/streetmix.png");
+}
+
+/* line 341, ../sass/_application-logos.scss */
 .appspop.textmybus {
   background-image: url("../img/apps/textmybus.png");
 }
 
-/* line 337, ../sass/_application-logos.scss */
+/* line 345, ../sass/_application-logos.scss */
+.appspop.textizen {
+  background-image: url("../img/apps/textizensmall.png");
+}
+
+/* line 349, ../sass/_application-logos.scss */
 .appspop.tothetrails {
   background-image: url("../img/apps/tothetrails_logo.gif");
 }
 
-/* line 341, ../sass/_application-logos.scss */
+/* line 353, ../sass/_application-logos.scss */
 .appspop.whatsmydistrict {
   background-image: url("../img/apps/whatsmydistrict.png");
 }
 
-/* line 345, ../sass/_application-logos.scss */
+/* line 357, ../sass/_application-logos.scss */
 .appspop.wheresmybus {
   background-image: url("../img/apps/wheresmyschoolbus.png");
 }
