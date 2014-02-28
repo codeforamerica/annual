@@ -685,6 +685,16 @@ $(function(){
 
   });
 
+  insetMarkerLayer.addCallback("markeradded", function(l, m){
+    displayedMarkers.push(m);
+     $(m.element).css("opacity", "0");
+
+    setTimeout(function(){
+      $(m.element).animate({opacity: 1}, 400)
+    }, Math.random() * 300);
+
+  });
+
 
 
   var markerFactory = function() {
@@ -694,10 +704,9 @@ $(function(){
   }
 
   var insetMarkerFactory = function() {
-    var m = document.getElementById('marker').cloneNode(true);
-      m.style.display = 'block';
-      m.setAttribute('r', 3);
-      return m;
+    var i = document.getElementById('markerInset').cloneNode(true);
+      i.style.display = 'block';
+      return i;
   }
 
 
@@ -836,15 +845,19 @@ $(function(){
 
   function yearMarkers(year) {
      $svg = $("#marker");
+     $svgInsert = $('#markerInset')
      switch (year) {
       case "2011":
         $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
       break;
       case "2012":
         $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
       break;
       default:
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#e87d2b");
       break;
      }
       map.removeLayer(codeacrossLayer)
@@ -852,6 +865,9 @@ $(function(){
       map.removeLayer(innovationLayer)
       markerLayer.filter(function(f) {
          return f.properties.year <= year;
+      });
+      insetMarkerLayer.filter(function(e) {
+         return e.properties.year <= year;
       });
       return false;
   }
