@@ -565,8 +565,7 @@ $(function(){
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
-
-
+  var insetMarkerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
 
   var displayedMarkers = [];
   var currentMarker = null;
@@ -642,6 +641,7 @@ $(function(){
   var stories = ["summit", "codeacross", "innovation"]
 
   map.addLayer(markerLayer);
+  inset.addLayer(insetMarkerLayer);
 
   /*
     Map story events
@@ -725,7 +725,7 @@ $(function(){
         $("#markerCircle", $svg).attr('style', "fill:#00a175");
       break;
       case "2012":
-        $("#markerCircle", $svg).attr('style', "fill:#fedd44");
+        $("#markerCircle", $svg).attr('style', "fill:#69579C");
       break;
       default:
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
@@ -850,15 +850,15 @@ function addStories(name) {
     yearMarkers(2013);
   }, function(el, i){
     // clearInterval(arrowInterval);
-    $(".downarrow").animate({opacity:1}, 800, "swing");
+    // $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
-  $(".downarrow").on("click touchend", function(){
+  // $(".downarrow").on("click touchend", function(){
 
-     // $("html body").animate({
-     //    scrollTop: $("div.mapscroll").offset().top
-     //  }, 1500);
-  })
+  //    // $("html body").animate({
+  //    //    scrollTop: $("div.mapscroll").offset().top
+  //    //  }, 1500);
+  // })
  scrollEvent.on("top", $(".page"), function(el,i){
 
    $(".navbar li").removeClass("active");;
