@@ -500,29 +500,6 @@ $(function(){
   }, function(el, i, pos){
   });
 
-  scrollEvent.on("bottom", $(".map"), function(el,i){
-
-    $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  }, function(el, i, pos){
-  });
-  scrollEvent.on("top", $(".map"), function(el,i){
-    $("#mapcontainer").css({"position":"fixed", "top":"0", "bottom": "0"});
-
-
-  }, function(el, i, pos){
-
-    if($(".map").offset().top <= $(window).scrollTop())
-      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
-    else
-      $("#mapcontainer").css({"position":"absolute", "top":0});
-
-  });
-  scrollEvent.on("top", $(".scrollout"), function(el, i){
-      $("#mapcontainer").css({"position":"absolute", "top":$(".map").height(), "bottom":"auto", "height":$(window).height()});
-
-  }, function(){});
-
 
   var showRandomTooltip = function(){
 
@@ -584,6 +561,7 @@ $(function(){
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
+
 
 
   var displayedMarkers = [];
@@ -855,7 +833,7 @@ function addStories(name) {
   var mapcurrentyear = "2011";
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
-    yearMarkers(2013)();
+    yearMarkers(2013);
   }, function(el, i){
     // clearInterval(arrowInterval);
     $(".downarrow").animate({opacity:1}, 800, "swing");
@@ -863,9 +841,9 @@ function addStories(name) {
 
   $(".downarrow").on("click touchend", function(){
 
-     $("html body").animate({
-        scrollTop: $("div.mapscroll").offset().top
-      }, 1500);
+     // $("html body").animate({
+     //    scrollTop: $("div.mapscroll").offset().top
+     //  }, 1500);
   })
  scrollEvent.on("top", $(".page"), function(el,i){
 
