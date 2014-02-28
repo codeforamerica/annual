@@ -2208,10 +2208,11 @@ a.startupspop:hover {
 }
 /* line 34, ../sass/_typography.scss */
 .attribution a:hover {
+  border: none;
   color: #fff;
   text-decoration: none;
 }
-/* line 38, ../sass/_typography.scss */
+/* line 39, ../sass/_typography.scss */
 .attribution a:active {
   color: #fff;
   text-decoration: none;
