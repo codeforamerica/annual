@@ -1997,16 +1997,9 @@ li {
 /* Startup Logos
 /*
 /*****************************************************************************/
-/* line 15, ../sass/_startup-logos.scss */
-.startupspop.startup_CI,
-.startupspop.startup_LD,
-.startupspop.startup_TZ,
-.startupspop.startup_AS,
-.startupspop.startup_FAF,
-.startupspop.startup_OC,
-.startupspop.startup_SP,
-.startupspop.startup_SC {
-  background-image: url("../img/fellows_headshot.jpg");
+/* line 9, ../sass/_startup-logos.scss */
+.startupspop {
+  background: none;
   background-size: 100px;
   float: left;
   width: 100px;
@@ -2014,44 +2007,44 @@ li {
   margin: 20px 20px 0 0;
 }
 
-/* line 24, ../sass/_startup-logos.scss */
+/* line 19, ../sass/_startup-logos.scss */
 .startupspop.startup_CI {
-  background-position: 0 0px;
+  background-image: url("../img/apps/inverse_civicinsight.png");
 }
 
-/* line 28, ../sass/_startup-logos.scss */
+/* line 23, ../sass/_startup-logos.scss */
 .startupspop.startup_LD {
-  background-position: 0 -100px;
+  background-image: url("../img/apps/inverse_localdata.png");
 }
 
-/* line 32, ../sass/_startup-logos.scss */
+/* line 27, ../sass/_startup-logos.scss */
 .startupspop.startup_TZ {
-  background-position: 0 -200px;
+  background-image: url("../img/apps/inverse_textizen.png");
 }
 
-/* line 36, ../sass/_startup-logos.scss */
+/* line 31, ../sass/_startup-logos.scss */
 .startupspop.startup_AS {
-  background-position: 0 -300px;
+  background-image: url("../img/apps/inverse_archivesocial.png");
 }
 
-/* line 40, ../sass/_startup-logos.scss */
+/* line 35, ../sass/_startup-logos.scss */
 .startupspop.startup_FAF {
-  background-position: 0 -400px;
+  background-image: url("../img/apps/inverse_FAF.png");
 }
 
-/* line 44, ../sass/_startup-logos.scss */
+/* line 39, ../sass/_startup-logos.scss */
 .startupspop.startup_OC {
-  background-position: 0 -500px;
+  background-image: url("../img/apps/inverse_opencounter.png");
 }
 
-/* line 48, ../sass/_startup-logos.scss */
+/* line 43, ../sass/_startup-logos.scss */
 .startupspop.startup_SP {
-  background-position: 0 -600px;
+  background-image: url("../img/apps/inverse_smartprocure.png");
 }
 
-/* line 52, ../sass/_startup-logos.scss */
+/* line 47, ../sass/_startup-logos.scss */
 .startupspop.startup_SC {
-  background-position: 0 -700px;
+  background-image: url("../img/apps/inverse_streetcred.png");
 }
 
 /*****************************************************************************/
@@ -2059,6 +2052,35 @@ li {
 /* Specific typography changes for sections
 /*
 /*****************************************************************************/
+/* Intro Quotes Pages */
+/* line 11, ../sass/_typography.scss */
+.attribution {
+  bottom: 0;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+}
+/* line 17, ../sass/_typography.scss */
+.attribution a {
+  color: #e1e1e1;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  padding: 8px;
+  margin-bottom: 7px;
+}
+/* line 25, ../sass/_typography.scss */
+.attribution a:hover {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+/* line 29, ../sass/_typography.scss */
+.attribution a:active {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
 /* line 3, ../sass/_getinvolved.scss */
 .getinvolved {
   background: rgba(255, 255, 255, 0.87);
@@ -2444,7 +2466,7 @@ iframe.twitter-share-button {
 
 /* line 82, ../sass/base.scss */
 .networkTitle {
-  padding-top: 230px;
+  padding-top: 10px;
   padding-left: 0px;
   margin-bottom: 0px;
 }
