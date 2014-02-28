@@ -554,15 +554,18 @@ $(function(){
 
   // Create map
   var layer = mapbox.layer().id('codeforamerica.h9pfapk3');
+  var insetLayer =  mapbox.layer().id('codeforamerica.h9pfapk3');
   var storyLayer
 
   var map = mapbox.map('map', layer, null, [easey_handlers.DragHandler()]);
 
+  var inset = mapbox.map('mapInset', insetLayer, null, [easey_handlers.DragHandler()]);
+  inset.centerzoom({lat: 0, lon: 0 }, 0)
+
   map.centerzoom({lat: 43.6, lon: -79.4 }, 4)
 
   var markerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
-
-
+  var insetMarkerLayer = mapbox.markers.layer().url("js/cityLocations.geojson");
 
   var displayedMarkers = [];
   var currentMarker = null;
@@ -625,6 +628,7 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
+  insetMarkerLayer.factory(markerFactory);
 
   var years = ["2011", "2012", "2013"]
 
@@ -638,6 +642,7 @@ $(function(){
   var stories = ["summit", "codeacross", "innovation"]
 
   map.addLayer(markerLayer);
+  inset.addLayer(insetMarkerLayer);
 
   /*
     Map story events
@@ -716,12 +721,22 @@ $(function(){
 
   function yearMarkers(year) {
      $svg = $("#marker");
-      $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+     switch (year) {
+      case "2011":
+        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
+      break;
+      case "2012":
+        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
+      break;
+      default:
+        $("#markerCircle", $svg).attr('style', "fill:#e87d2b");
+      break;
+     }
       map.removeLayer(codeacrossLayer)
       map.removeLayer(summitLayer)
       map.removeLayer(innovationLayer)
       markerLayer.filter(function(f) {
-           return f.properties.year <= year;
+         return f.properties.year <= year;
       });
       return false;
   }
@@ -835,17 +850,8 @@ function addStories(name) {
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
     yearMarkers(2013);
-  }, function(el, i){
-    // clearInterval(arrowInterval);
-    $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
-  $(".downarrow").on("click touchend", function(){
-
-     // $("html body").animate({
-     //    scrollTop: $("div.mapscroll").offset().top
-     //  }, 1500);
-  })
  scrollEvent.on("top", $(".page"), function(el,i){
 
    $(".navbar li").removeClass("active");;

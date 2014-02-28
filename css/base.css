@@ -1529,7 +1529,17 @@ li {
 /* Map styling
 /*
 /*****************************************************************************/
-/* line 9, ../sass/_map.scss */
+/* line 10, ../sass/_map.scss */
+#mapInset {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #fff;
+  height: 200px;
+  width: 20%;
+}
+
+/* line 19, ../sass/_map.scss */
 #map {
   position: absolute;
   top: 0;
@@ -1537,7 +1547,7 @@ li {
   width: 100%;
 }
 
-/* line 13, ../sass/_map.scss */
+/* line 23, ../sass/_map.scss */
 #mapcontainer {
   position: absolute;
   top: 0;
@@ -1545,80 +1555,12 @@ li {
   width: 100%;
 }
 
-/* line 17, ../sass/_map.scss */
+/* line 27, ../sass/_map.scss */
 #map.apply {
   position: fixed !important;
 }
 
-/* line 21, ../sass/_map.scss */
-#map-story {
-  margin-top: 20px;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  z-index: 100;
-  background: #fff;
-}
-
-/* line 30, ../sass/_map.scss */
-#map-story h5 {
-  padding: 0px 10px;
-  color: #6D6E71;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* line 37, ../sass/_map.scss */
-#map-story ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 43, ../sass/_map.scss */
-#map-story a {
-  font-size: 13px;
-  background: #FFF;
-  color: #6D6E71;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #BBB;
-  border-bottom-width: 0;
-  min-width: 138px;
-  padding: 10px;
-  text-decoration: none;
-  text-shadow: none;
-}
-
-/* line 58, ../sass/_map.scss */
-#map-story a:hover {
-  background: #fff;
-  color: #4D4D4D !important;
-  border-left-width: 0px;
-}
-
-/* line 64, ../sass/_map.scss */
-#map-story li:last-child a {
-  border-bottom-width: 1px;
-  -webkit-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
-}
-
-/* line 70, ../sass/_map.scss */
-#map-story li:first-child a {
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-}
-
-/* line 75, ../sass/_map.scss */
-#map-story a.active {
-  background: #FFF;
-  color: #e87d2b;
-  border-left-width: 0px;
-}
-
-/* line 81, ../sass/_map.scss */
+/* line 31, ../sass/_map.scss */
 #marker {
   position: absolute;
   margin-top: -25px;
@@ -1629,7 +1571,7 @@ li {
   pointer-events: all;
 }
 
-/* line 91, ../sass/_map.scss */
+/* line 41, ../sass/_map.scss */
 #markerHighlight {
   position: absolute;
   margin-top: -25px;
@@ -1640,66 +1582,66 @@ li {
   pointer-events: all;
 }
 
-/* line 101, ../sass/_map.scss */
+/* line 51, ../sass/_map.scss */
 .citycardscontainer {
   display: none;
 }
 
-/* line 105, ../sass/_map.scss */
+/* line 55, ../sass/_map.scss */
 .citycard .tagline {
   text-shadow: none;
 }
 
-/* line 109, ../sass/_map.scss */
+/* line 59, ../sass/_map.scss */
 .citycard .tagline p {
   font-size: 16px;
   margin-top: 0px;
 }
 
-/* line 114, ../sass/_map.scss */
+/* line 64, ../sass/_map.scss */
 .citycard a {
   color: #000;
 }
 
-/* line 118, ../sass/_map.scss */
+/* line 68, ../sass/_map.scss */
 .citycard .partnersection {
   width: 190px;
 }
 
-/* line 122, ../sass/_map.scss */
+/* line 72, ../sass/_map.scss */
 .citycard ul {
   margin-left: 0px;
 }
 
-/* line 126, ../sass/_map.scss */
+/* line 76, ../sass/_map.scss */
 .citycard hr {
   border: solid 1px #C82A45;
   margin: 10px 0;
 }
 
-/* line 131, ../sass/_map.scss */
+/* line 81, ../sass/_map.scss */
 .citycard[data-year="2011"] h4 {
   background: #FED100;
 }
 
-/* line 135, ../sass/_map.scss */
+/* line 85, ../sass/_map.scss */
 .citycard[data-year="2011"] hr {
   border: solid 1px #FED100;
 }
 
-/* line 139, ../sass/_map.scss */
+/* line 89, ../sass/_map.scss */
 .citycard[data-year="2011"] h5 {
   color: #FED100;
 }
 
-/* line 143, ../sass/_map.scss */
+/* line 93, ../sass/_map.scss */
 .citycard .name {
   clear: both;
   padding-top: 10px;
   text-shadow: none;
 }
 
-/* line 149, ../sass/_map.scss */
+/* line 99, ../sass/_map.scss */
 .downarrow {
   position: absolute;
   bottom: 30px;
@@ -1707,7 +1649,7 @@ li {
   opacity: 0;
 }
 
-/* line 156, ../sass/_map.scss */
+/* line 106, ../sass/_map.scss */
 .downarrow svg {
   color: #fff;
   fill: #fff;
@@ -1715,14 +1657,14 @@ li {
   width: 50px;
 }
 
-/* line 163, ../sass/_map.scss */
+/* line 113, ../sass/_map.scss */
 .map {
   color: #333;
   position: relative;
   height: 100%;
   width: 100%;
 }
-/* line 166, ../sass/_map.scss */
+/* line 116, ../sass/_map.scss */
 .map .mapStories {
   z-index: 0;
   position: relative;
@@ -1730,11 +1672,11 @@ li {
   left: 0px;
 }
 
-/* line 176, ../sass/_map.scss */
+/* line 126, ../sass/_map.scss */
 .mapDropdown {
   margin-top: 60px;
 }
-/* line 178, ../sass/_map.scss */
+/* line 128, ../sass/_map.scss */
 .mapDropdown a {
   background: #FCFCFC;
   color: #4D4D4D;
@@ -1744,26 +1686,28 @@ li {
   padding: 8px;
   margin-bottom: 7px;
 }
-/* line 186, ../sass/_map.scss */
+/* line 136, ../sass/_map.scss */
 .mapDropdown a:hover {
   background: #fff;
-  -moz-box-shadow: 0px 0px 10px 5px #ccc;
-  -webkit-box-shadow: 0px 0px 10px 5px #ccc;
-  box-shadow: 0px 0px 10px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
+  -moz-box-shadow: 0px 0px 10px 5px #cccccc;
+  box-shadow: 0px 0px 10px 5px #cccccc;
   color: #000;
 }
-/* line 193, ../sass/_map.scss */
+/* line 141, ../sass/_map.scss */
 .mapDropdown a:active {
   background: #fff;
   color: #e87d2b;
+  box-shadow: 0px;
 }
-/* line 198, ../sass/_map.scss */
+/* line 147, ../sass/_map.scss */
 .mapDropdown .open a {
   background: #fff;
   color: #e87d2b;
   border: solid 1px #fff;
+  outline: none;
 }
-/* line 203, ../sass/_map.scss */
+/* line 153, ../sass/_map.scss */
 .mapDropdown p.dropdown-menu {
   color: #e87d2b;
   width: 425px;
@@ -1776,26 +1720,30 @@ li {
   margin: 10px;
 }
 
+<<<<<<< HEAD
 /* line 220, ../sass/_map.scss */
+=======
+/* line 166, ../sass/_map.scss */
+>>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .mapStories .year {
   font-size: 40px;
   padding: 10px;
   cursor: pointer;
 }
 
-/* line 226, ../sass/_map.scss */
+/* line 172, ../sass/_map.scss */
 .marker-popup {
   max-width: 600px;
   width: 600px;
   padding: 0px;
 }
 
-/* line 232, ../sass/_map.scss */
+/* line 178, ../sass/_map.scss */
 .marker-popup h4 {
   margin: 0px;
 }
 
-/* line 236, ../sass/_map.scss */
+/* line 182, ../sass/_map.scss */
 .marker-popup .close {
   position: absolute;
   top: 8px;
@@ -1804,7 +1752,7 @@ li {
   color: #fff;
 }
 
-/* line 244, ../sass/_map.scss */
+/* line 190, ../sass/_map.scss */
 .marker-popup .prev {
   position: absolute;
   top: 100px;
@@ -1818,7 +1766,7 @@ li {
   cursor: pointer;
 }
 
-/* line 257, ../sass/_map.scss */
+/* line 203, ../sass/_map.scss */
 .marker-popup .next {
   position: absolute;
   top: 100px;
@@ -1832,17 +1780,17 @@ li {
   cursor: pointer;
 }
 
-/* line 269, ../sass/_map.scss */
+/* line 215, ../sass/_map.scss */
 .marker-popup .next:hover {
   opacity: 1.0;
 }
 
-/* line 273, ../sass/_map.scss */
+/* line 219, ../sass/_map.scss */
 .marker-popup .prev:hover {
   opacity: 1.0;
 }
 
-/* line 277, ../sass/_map.scss */
+/* line 223, ../sass/_map.scss */
 .fellowshipyearfixed {
   position: fixed;
   top: 0px;
@@ -1851,7 +1799,7 @@ li {
   display: inherit;
 }
 
-/* line 285, ../sass/_map.scss */
+/* line 231, ../sass/_map.scss */
 .storyContainer {
   position: absolute;
   top: 50px;
@@ -1862,7 +1810,7 @@ li {
   border-radius: 3px;
 }
 
-/* line 295, ../sass/_map.scss */
+/* line 241, ../sass/_map.scss */
 .storyContainer p {
   font-size: 13px;
   color: #000;
@@ -1875,24 +1823,40 @@ li {
   text-shadow: none;
 }
 
+<<<<<<< HEAD
 /* line 307, ../sass/_map.scss */
+=======
+/* line 253, ../sass/_map.scss */
+>>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
+<<<<<<< HEAD
 /* line 313, ../sass/_map.scss */
+=======
+/* line 259, ../sass/_map.scss */
+>>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
+<<<<<<< HEAD
 /* line 318, ../sass/_map.scss */
+=======
+/* line 264, ../sass/_map.scss */
+>>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomin {
   left: 50px;
 }
 
+<<<<<<< HEAD
 /* line 322, ../sass/_map.scss */
+=======
+/* line 268, ../sass/_map.scss */
+>>>>>>> b3c5f9bc434021ef3a5e0a35a3b8c73c41757399
 .zoomout {
   top: 239px;
 }
