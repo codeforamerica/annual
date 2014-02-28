@@ -167,6 +167,10 @@
    border: solid 1px #fff;
    outline: none;
  }
+.gray.open a{
+   color: $gray;
+ }
+
   p.dropdown-menu {
     color: $orange;
     width: 425px;
@@ -178,7 +182,14 @@
     border-radius: 0px;
     margin: 10px 5px;
   }
+  &.gray a{
+    color: $gray;
+  }
 }
+#2011 {
+  background: pink;
+}
+
 
 .mapStories .year {
   font-size: 40px;
