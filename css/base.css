@@ -2232,11 +2232,11 @@ iframe.twitter-share-button {
 }
 /* line 7, ../sass/_finance.scss */
 .financials .graphDark1 {
-  background: #002118;
+  background: #006e50;
 }
 /* line 10, ../sass/_finance.scss */
 .financials .graphDark2 {
-  background: black;
+  background: #003b2b;
 }
 /* line 13, ../sass/_finance.scss */
 .financials .graphDark3 {
@@ -2375,7 +2375,7 @@ iframe.twitter-share-button {
 /*****************************************************************************/
 /* line 25, ../sass/base.scss */
 .appsIntro {
-  padding-bottom: 5px;
+  padding-bottom: 50px;
 }
 
 /* line 29, ../sass/base.scss */

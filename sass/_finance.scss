@@ -5,25 +5,25 @@
     background: $green;
   }
   .graphDark1 {
-    background: darken( $green, 25% ) 
+    background: darken( $green, 10% );
   }
   .graphDark2 {
-    background: darken( $green, 50% ) 
+    background: darken( $green, 20% );
   }
   .graphDark3 {
-    background: darken( $green, 75% ) 
+    background: darken( $green, 40% );
   }
   .graphLight1 {
-    background: lighten( $green, 25% ) 
+    background: lighten( $green, 25% ); 
   }
   .graphLight2 {
-    background: lighten( $green, 50% ) 
+    background: lighten( $green, 50% );
   }
   .graphLight3 {
-    background: lighten( $green, 75% ) 
+    background: lighten( $green, 75% );
   }
   .graphLight4 {
-    background: lighten( $green, 85% ) 
+    background: lighten( $green, 90% );
   }
 }
 
