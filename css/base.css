@@ -2149,29 +2149,34 @@ a.startupspop:hover {
 /* line 9, ../sass/_typography.scss */
 .attribution {
   bottom: 0;
-  padding: 20px;
+  padding: 20px 20px 0px 0px;
   position: absolute;
   right: 0;
-  max-width: 400px;
 }
-/* line 16, ../sass/_typography.scss */
+/* line 15, ../sass/_typography.scss */
 .attribution p {
   color: #fff;
   border: none;
+  display: inline;
   font-family: 'Open Sans', sans-serif;
   font-size: 9px;
   font-weight: 300;
   line-height: 20px;
-  margin-bottom: 7px;
-  padding: 8px;
+  margin-bottom: 0px;
+  padding: 0px;
   text-align: right;
 }
-/* line 29, ../sass/_typography.scss */
+/* line 28, ../sass/_typography.scss */
+.attribution img {
+  padding-bottom: 30px;
+  border: none;
+}
+/* line 34, ../sass/_typography.scss */
 .attribution a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 33, ../sass/_typography.scss */
+/* line 38, ../sass/_typography.scss */
 .attribution a:active {
   color: #fff;
   text-decoration: none;
