@@ -1,10 +1,20 @@
 @import "colors";
+@import "compass/css3";
 
 /*****************************************************************************/
 /*
 /* Map styling
 /*
 /*****************************************************************************/
+
+#mapInset {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  border: 1px solid #fff;
+  height: 200px;
+  width: 20%;
+}
 
 #map{
   position:absolute; top:0; bottom:0; width:100%; 
@@ -18,67 +28,17 @@
   position:fixed !important;
 }
 
-#map-story {
-  margin-top: 20px;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  z-index: 100;
-  background: #fff;
-}
-
-#map-story h5 {
-  padding: 0px 10px;
-  color: #6D6E71;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#map-story ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#map-story a {
-  font-size: 13px;
-  background: #FFF;
-  color: #6D6E71;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #BBB;
-  border-bottom-width: 0;
-  min-width: 138px;
-  padding: 10px;
-  text-decoration: none;
-  text-shadow: none;
-}
-
-#map-story a:hover {
-  background: #fff;
-  color: #4D4D4D !important;
-  border-left-width: 0px;
-}
-
-#map-story li:last-child a {
-  border-bottom-width: 1px;
-  -webkit-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
-}
-
-#map-story li:first-child a {
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-}
-
-#map-story a.active {
-  background: #FFF;
-  color: #e87d2b;
-  border-left-width: 0px;
-}
-
 #marker {
+  position:absolute;
+  margin-top:-25px;
+  margin-left:-25px;
+  width:50px;
+  height:50px;
+  display:none;
+  pointer-events:all;
+}
+
+#markerInset {
   position:absolute;
   margin-top:-25px;
   margin-left:-25px;
@@ -96,6 +56,13 @@
   height:50px;
   display:none;
   pointer-events:all;
+}
+
+#summit .dropdown-menu{
+  float: right;
+  position: relative;
+  top: -15px;
+  margin-right: 60px;
 }
 
 .citycardscontainer{ 
@@ -171,35 +138,46 @@
   }
 }
 
+
+
 .mapDropdown {
-  margin-top: 40px;
-  a {
-    background: #fff;
-    color: #000;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    &:hover {
-      background: $orange;
-      color: #fff;
-    }
-    &:active {
-      background: $orange;
-      color: #fff;
-    }
-  }
+ margin-top: 60px;
+ a {
+   background: #FCFCFC;
+   color: #4D4D4D;
+   border: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   padding: 8px;
+   margin-bottom: 7px;
+   &:hover {
+      background: #fff;
+      @include  box-shadow(0px 0px 10px 5px #ccc);
+      color: #000;
+   }
+   &:active {
+      background: #fff;
+      color: $orange;
+      box-shadow: 0px;
+   }
+ }
+ .open a{
+   background: #fff;
+   color: $orange;
+   border: solid 1px #fff;
+   outline: none;
+ }
   p.dropdown-menu {
-    width: 500px;
-    font-size: 15px;
+    color: $orange;
+    width: 425px;
+    font-size: 14px;
+    font-weight: 500px;
     text-shadow: none;
     border: none;
-    padding: 5px;
+    padding: 20px;
     border-radius: 0px;
-    margin: 10px;
+    margin: 10px 5px;
   }
-}
-
-.mapscroll{ 
-  height:800px;
 }
 
 .mapStories .year {
@@ -289,14 +267,11 @@
   text-shadow: none;
 }
 
-
 .yearText {
   background: #fff;
   font-size: 16px;
 
 }
-
-
 
 .zoomer{ 
   top:210px;

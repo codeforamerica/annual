@@ -12,6 +12,8 @@
 @import "colors";
 @import "typography";
 @import "getinvolved";
+@import "sidebar";
+@import "finance";
 
 /*****************************************************************************/
 /*
@@ -78,9 +80,9 @@
 }
 
 .networkTitle {
-  padding-top: 230px;
-  padding-left:20px;
-  margin-bottom: -200px;
+  padding-top: 10px;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 .panel-collapse {
@@ -411,63 +413,6 @@ input[type="text"] {
   -webkit-box-sizing:border-box; /* Safari */
 }
 
-.sidebar{ 
-  width:400px;
-  position:fixed;
-  left:0px;
-  top:0px;
-  bottom:0px;
-  z-index:-7;
-}
-
-.sidebartitle{ 
-  width:400px;
-  left:0px;
-  position:absolute;
-  top:80px;
-}
-
-.sidebartitle h1{ 
-  font-size: 100px;
-  color: #fff;
-  margin: 30px 0px 0px 50px;
-  text-align: left;
-  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.mapsidebar h1{ 
-  font-size: 100px;
-  color: #333;
-  margin-bottom: 0px;
-}
-
-.sidebartitle h2{ 
-  font-size: 35px;
-  position:relative;
-  left:-400px;
-  line-height: 45px;
-  margin-top:20px;
-  text-transform: uppercase;
-}
-
-.sidebartitle.appear h2{ 
-  left: 50px;
-  transition: left 1s;
-  -webkit-transition: left 1s;
-}
-
-.sidebartitle h2 img {
-  width: 100px;
-}
-
-iframe {
-  width: 100%;
-  min-height: 200px;
-}
-
-iframe.twitter-share-button{ 
-  min-height:20px;
-}
 
 .cityLeaders iframe {
   display: block;
@@ -917,97 +862,6 @@ img.progicons {
 
 .market h4.process {
   margin-top: 50px;
-}
-
-.financials h3 {
-  margin-top: 90px;
-}
-
-.financials h4 {
-  margin-top: 0px;
-}
-
-.financials h5 {
-  font-style: normal;
-  font-size: 19px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 0px;
-  line-height: 30px;
-}
-
-.financials p {
-  font-size: 17px;
-  line-height: 5px;
-  margin: 10px 0;
-}
-
-.financials .programs {
-  margin-bottom: 5px;
-}
-
-.financials .programs p {
-  margin-left: 25px;
-}
-
-.icon-question-sign.icon-white {
-  position: absolute;
-  margin: -5px 0px 0px 2px;
-}
-
-.financials .rightcol h5,
-.financials .rightcol h4,
-.financials .rightcol p {
-  text-align: right;
-}
-
-.financials br {
-  line-height: 30px;
-}
-
-.expenses a:hover,
-.revenues a:hover {
-  border-bottom: none;
-}
-
-.expenses .popover-content,
-.revenues .popover-content {
-  font-size: 14px;
-}
-
-.revenues .popover-content {
-  line-height: 22px;
-}
-
-.expensesdata, 
-.revenuedata {
-  cursor: pointer;
-}
-
-.expensesdata.active,
-.revenuedata.active,
-.financialsgroup.active {
-  color: #fedd44;
-}
-
-.financialsgroup {
-  cursor: pointer;
-}
-
-.graphsection {
-  height: 60px;
-  float: right;
-  cursor: pointer;
-}
-
-.graphsection.active {
-  background-color: #fedd44 !important;
-}
-
-.expenses.bargraph,
-.revenues.bargraph {
-  margin-top: 30px;
-  max-width: 960px;
 }
 
 .sharebutton{ 
