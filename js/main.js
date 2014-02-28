@@ -776,11 +776,10 @@ $(function(){
        return f.properties['story'] !== 'innovation';
     });
 
-    map.removeLayer(insetMarkerLayer);
-    map.addLayer(insetMarkerLayer)
-    insetMarkerLayer.filter(function(f) {
-       return f.properties['story'] !== 'innovation';
-    });
+    inset.removeLayer(insetMarkerLayer);
+    insetMarkerLayer = mapbox.markers.layer().features(innovation);
+    insetMarkerLayer.factory(insetMarkerFactory);
+    inset.addLayer(insetMarkerLayer)
 
     map.removeLayer(summitLayer);
     map.removeLayer(codeacrossLayer);
@@ -805,6 +804,10 @@ $(function(){
     markerLayer.filter(function(f) {
        return f.properties['story'] !== 'codeacross';
     });
+    inset.removeLayer(insetMarkerLayer);
+    insetMarkerLayer = mapbox.markers.layer().features(codeacross);
+    insetMarkerLayer.factory(insetMarkerFactory);
+    inset.addLayer(insetMarkerLayer)
 
     map.removeLayer(summitLayer);
     map.removeLayer(innovationLayer);
@@ -829,6 +832,13 @@ $(function(){
     markerLayer.filter(function(f) {
         return f.properties['story'] !== 'summit';
     });
+
+    inset.removeLayer(insetMarkerLayer);
+    insetMarkerLayer = mapbox.markers.layer().features(summit);
+    insetMarkerLayer.factory(insetMarkerFactory);
+    inset.addLayer(insetMarkerLayer)
+
+
     map.removeLayer(codeacrossLayer)
     map.removeLayer(innovationLayer);
     summitLayer = mapbox.markers.layer().features(summit);
