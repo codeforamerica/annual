@@ -628,6 +628,7 @@ $(function(){
 
 
   markerLayer.factory(markerFactory);
+  insetMarkerLayer.factory(markerFactory);
 
   var years = ["2011", "2012", "2013"]
 
@@ -848,17 +849,8 @@ function addStories(name) {
   var timer;
   scrollEvent.on("middle", $(".mapscroll"), function(el,i){
     yearMarkers(2013);
-  }, function(el, i){
-    // clearInterval(arrowInterval);
-    // $(".downarrow").animate({opacity:1}, 800, "swing");
   });
 
-  // $(".downarrow").on("click touchend", function(){
-
-  //    // $("html body").animate({
-  //    //    scrollTop: $("div.mapscroll").offset().top
-  //    //  }, 1500);
-  // })
  scrollEvent.on("top", $(".page"), function(el,i){
 
    $(".navbar li").removeClass("active");;
