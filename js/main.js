@@ -775,7 +775,7 @@ $(function(){
   $('#mapInnovation').on('show.bs.dropdown', function () {
     // addStories("innovation")
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -809,7 +809,7 @@ $(function(){
   $('#codeacross').on('shown.bs.dropdown', function () {
     // addStories("codeacross")
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {
@@ -842,7 +842,7 @@ $(function(){
 
   $('#summit').on('shown.bs.dropdown', function () {
     $svg = $("#marker");
-    $("#markerCircle", $svg).attr('style', "fill:#999595");
+    $("#markerCircle", $svg).attr('style', "stroke-width: 1;stroke: #e87d2b;fill:transparent");
     map.removeLayer(markerLayer);
     map.addLayer(markerLayer)
     markerLayer.filter(function(f) {

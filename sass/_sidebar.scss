@@ -13,6 +13,9 @@
   top:0px;
   bottom:0px;
   z-index:-7;
+  @media screen and (max-width: 480px) {
+    display:none;
+  }
 }
 
 .sidebartitle{ 
