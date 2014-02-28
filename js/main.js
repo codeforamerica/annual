@@ -883,12 +883,12 @@ $(function(){
     $svgInsert = $('#markerInset')
     switch (year) {
       case "2011":
-        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
-        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
+        $("#markerCircle", $svg).attr('style', "fill:#6D6E71");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6D6E71");
       break;
       case "2012":
-        $("#markerCircle", $svg).attr('style', "fill:#6E6E6E");
-        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6E6E6E");
+        $("#markerCircle", $svg).attr('style', "fill:#6D6E71");
+        $("#markerInsetCircle", $svgInsert).attr('style', "fill:#6D6E71");
       break;
       default:
         $("#markerCircle", $svg).attr('style', "fill:#e87d2b");

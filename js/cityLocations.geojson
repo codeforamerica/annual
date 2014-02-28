@@ -219,18 +219,18 @@
       "properties": { "city": "Mexico City", "year":"2013", "type": "story", "story": "summit" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-58.381593, -34.603723]},
-      "properties": { "city": "Buenos Aires", "year":"2013", "type": "story", "story": "summit" }
+      "properties": { "city": "Buenos Aires", "type": "story", "story": "summit" }
   }, {
       "geometry": { "type": "Point", "coordinates": [-66.105722, 18.466334]},
-      "properties": { "city": "San Juan", "year":"2013", "type": "story", "story": "summit" }
+      "properties": { "city": "San Juan", "type": "story", "story": "summit" }
   }, {
     "geometry": { "type": "Point", "coordinates": [5.799913, 53.201233]},
-    "properties": { "city": "Leeuwarden ", "year":"2013", "story":"summit"  }
+    "properties": { "city": "Leeuwarden ", "story":"summit"  }
   }, {
     "geometry": { "type": "Point", "coordinates": [139.753595, 35.694003]},
-    "properties": { "city": "Chiyoda-ku", "year":"2013", "story":"summit" }
+    "properties": { "city": "Chiyoda-ku", "story":"summit" }
   }, {
     "geometry": { "type": "Point", "coordinates": [138.599959, -34.928621]},
-    "properties": { "city": "Adelaide", "year":"2013", "story":"summit" }
+    "properties": { "city": "Adelaide", "story":"summit" }
   }]
 }
