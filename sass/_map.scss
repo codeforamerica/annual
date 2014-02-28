@@ -48,6 +48,13 @@
   pointer-events:all;
 }
 
+#summit .dropdown-menu{
+  float: right;
+  position: relative;
+  top: -15px;
+  margin-right: 60px;
+}
+
 .citycardscontainer{ 
   display:none;
 }
