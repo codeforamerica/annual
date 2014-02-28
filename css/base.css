@@ -1814,22 +1814,20 @@ li {
   box-shadow: 0px 0px 10px 5px #cccccc;
   color: #000;
 }
-/* line 158, ../sass/_map.scss */
-.mapDropdown a:active {
-  background: #fff;
-  color: #e87d2b;
-  box-shadow: 0px;
+/* line 160, ../sass/_map.scss */
+.mapDropdown .gray.open a {
+  color: #6d6e71;
 }
-/* line 164, ../sass/_map.scss */
+/* line 163, ../sass/_map.scss */
+.mapDropdown .gray.open p.dropdown-menu {
+  color: #6d6e71;
+}
+/* line 167, ../sass/_map.scss */
 .mapDropdown .open a {
   background: #fff;
   color: #e87d2b;
   border: solid 1px #fff;
   outline: none;
-}
-/* line 170, ../sass/_map.scss */
-.mapDropdown .gray.open a {
-  color: #6d6e71;
 }
 /* line 174, ../sass/_map.scss */
 .mapDropdown p.dropdown-menu {
