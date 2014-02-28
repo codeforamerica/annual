@@ -6,31 +6,39 @@
 
 
 
-/* Intro Quotes Pages */
-
 .attribution{
   bottom: 0;
   padding: 20px;
   position: absolute; 
   right: 0;
+  max-width: 400px;
+
+  p {
+  color: #fff;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 7px;
+  padding: 8px;
+  text-align: right;
+  }
 
    a {
-   color: #e1e1e1;
-   border: none;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 9px;
-   font-weight: 300;
-   padding: 8px;
-   margin-bottom: 7px;
    &:hover {
-      color: #e1e1e1;
+      color: #fff;
       text-decoration: none;
    }
    &:active {
-      color: #e1e1e1;
+      color: #fff;
       text-decoration: none;
    }
  }
+}
+
+.attribution.credits {
+
 }
 
 
