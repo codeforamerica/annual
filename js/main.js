@@ -765,6 +765,7 @@ function addStories(name) {
 
 
   var colors = ["#2f3d4a", "#384857", "#405264", "#50677C", "#839AAF", "#B4C2CF", "#E6EBEF", "#FFFFFF"];
+  var colors = ["graph", "graph-1", "graph-2", "graph-3", "graph-4", "graph-5", "graph-6", "graph-7"];
 
   $(".bargraph").each(function(i, el){
 
@@ -797,9 +798,9 @@ function addStories(name) {
 
       // create section
       var section = $("<div class='graphsection'></div>").css({
-        width:perc + "%",
-        background:colors[i]
-      });
+        width:perc + "%"
+        // background:colors[i]
+      }).addClass(colors[i]);
 
       // add classs for group
       if(group !== undefined) {

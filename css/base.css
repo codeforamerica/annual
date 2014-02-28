@@ -4,7 +4,6 @@
 /*
 /*****************************************************************************/
 /* line 7, ../sass/_application-logos.scss */
-
 .appspop {
   background-image: url("../img/apps_logos.png");
   background-size: 100px;
@@ -1777,16 +1776,7 @@ li {
   margin: 10px;
 }
 
-<<<<<<< HEAD
-/* line 216, ../sass/_map.scss */
-.mapscroll {
-  height: 800px;
-}
-
 /* line 220, ../sass/_map.scss */
-=======
-/* line 205, ../sass/_map.scss */
->>>>>>> 86dfce7470ae40a36e1591b3cf81af86187667f5
 .mapStories .year {
   font-size: 40px;
   padding: 10px;
@@ -1885,40 +1875,24 @@ li {
   text-shadow: none;
 }
 
-<<<<<<< HEAD
-/* line 308, ../sass/_map.scss */
-=======
-/* line 292, ../sass/_map.scss */
->>>>>>> 86dfce7470ae40a36e1591b3cf81af86187667f5
+/* line 307, ../sass/_map.scss */
 .yearText {
   background: #fff;
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-/* line 316, ../sass/_map.scss */
-=======
-/* line 298, ../sass/_map.scss */
->>>>>>> 86dfce7470ae40a36e1591b3cf81af86187667f5
+/* line 313, ../sass/_map.scss */
 .zoomer {
   top: 210px;
   left: 50px;
 }
 
-<<<<<<< HEAD
-/* line 321, ../sass/_map.scss */
-=======
-/* line 303, ../sass/_map.scss */
->>>>>>> 86dfce7470ae40a36e1591b3cf81af86187667f5
+/* line 318, ../sass/_map.scss */
 .zoomin {
   left: 50px;
 }
 
-<<<<<<< HEAD
-/* line 325, ../sass/_map.scss */
-=======
-/* line 307, ../sass/_map.scss */
->>>>>>> 86dfce7470ae40a36e1591b3cf81af86187667f5
+/* line 322, ../sass/_map.scss */
 .zoomout {
   top: 239px;
 }
@@ -3286,115 +3260,6 @@ img.progicons {
 }
 
 /* line 866, ../sass/base.scss */
-.financials h3 {
-  margin-top: 90px;
-}
-
-/* line 870, ../sass/base.scss */
-.financials h4 {
-  margin-top: 0px;
-}
-
-/* line 874, ../sass/base.scss */
-.financials h5 {
-  font-style: normal;
-  font-size: 19px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 0px;
-  line-height: 30px;
-}
-
-/* line 883, ../sass/base.scss */
-.financials p {
-  font-size: 17px;
-  line-height: 5px;
-  margin: 10px 0;
-}
-
-/* line 889, ../sass/base.scss */
-.financials .programs {
-  margin-bottom: 5px;
-}
-
-/* line 893, ../sass/base.scss */
-.financials .programs p {
-  margin-left: 25px;
-}
-
-/* line 897, ../sass/base.scss */
-.icon-question-sign.icon-white {
-  position: absolute;
-  margin: -5px 0px 0px 2px;
-}
-
-/* line 904, ../sass/base.scss */
-.financials .rightcol h5,
-.financials .rightcol h4,
-.financials .rightcol p {
-  text-align: right;
-}
-
-/* line 908, ../sass/base.scss */
-.financials br {
-  line-height: 30px;
-}
-
-/* line 913, ../sass/base.scss */
-.expenses a:hover,
-.revenues a:hover {
-  border-bottom: none;
-}
-
-/* line 918, ../sass/base.scss */
-.expenses .popover-content,
-.revenues .popover-content {
-  font-size: 14px;
-}
-
-/* line 922, ../sass/base.scss */
-.revenues .popover-content {
-  line-height: 22px;
-}
-
-/* line 927, ../sass/base.scss */
-.expensesdata,
-.revenuedata {
-  cursor: pointer;
-}
-
-/* line 933, ../sass/base.scss */
-.expensesdata.active,
-.revenuedata.active,
-.financialsgroup.active {
-  color: #fedd44;
-}
-
-/* line 937, ../sass/base.scss */
-.financialsgroup {
-  cursor: pointer;
-}
-
-/* line 941, ../sass/base.scss */
-.graphsection {
-  height: 60px;
-  float: right;
-  cursor: pointer;
-}
-
-/* line 947, ../sass/base.scss */
-.graphsection.active {
-  background-color: #fedd44 !important;
-}
-
-/* line 952, ../sass/base.scss */
-.expenses.bargraph,
-.revenues.bargraph {
-  margin-top: 30px;
-  max-width: 960px;
-}
-
-/* line 957, ../sass/base.scss */
 .sharebutton {
   position: fixed;
   bottom: 10px;
@@ -3403,7 +3268,7 @@ img.progicons {
   height: 70px;
 }
 
-/* line 965, ../sass/base.scss */
+/* line 874, ../sass/base.scss */
 .sharebutton iframe {
   min-height: auto;
 }
