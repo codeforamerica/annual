@@ -117,17 +117,6 @@
 }
 
 
-.superHeadline {
-  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
-  font-size: 80px;
-  color: #fff;
-  margin: 30px 0px 0px 00px;
-  text-align: left;
-  text-shadow: 0px 2px 6px rgba(0, 0, 0, .5);
-  text-transform: uppercase;
-  padding: 0px 0px 75px 0px;
-}
-
 .stories{
 }
 
@@ -144,6 +133,29 @@
   font-size: 18px;
   line-height: 30px;
   text-align: right;
+}
+
+.summary h3 {
+  @media screen and (max-width: 1080px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    text-align: left;
+  }
+
+}
+
+.superHeadline {
+  font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
+  font-size: 80px;
+  color: #fff;
+  margin: 30px 0px 0px 00px;
+  text-align: left;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, .5);
+  text-transform: uppercase;
+  padding: 0px 0px 75px 0px;
 }
 
 .network .people ul {
