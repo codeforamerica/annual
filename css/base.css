@@ -2059,6 +2059,35 @@ li {
 /* Specific typography changes for sections
 /*
 /*****************************************************************************/
+/* Intro Quotes Pages */
+/* line 11, ../sass/_typography.scss */
+.attribution {
+  bottom: 0;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+}
+/* line 17, ../sass/_typography.scss */
+.attribution a {
+  color: #e1e1e1;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  padding: 8px;
+  margin-bottom: 7px;
+}
+/* line 25, ../sass/_typography.scss */
+.attribution a:hover {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+/* line 29, ../sass/_typography.scss */
+.attribution a:active {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
 /* line 3, ../sass/_getinvolved.scss */
 .getinvolved {
   background: rgba(255, 255, 255, 0.87);
