@@ -317,7 +317,7 @@ a.appspop:hover {
 
 /* line 265, ../sass/_application-logos.scss */
 .appspop.localdata-logo {
-  background-image: url("../img/apps/localdata-logo.png");
+  background-image: url("../img/apps/localdata-Logo.png");
 }
 
 /* line 269, ../sass/_application-logos.scss */
@@ -2405,31 +2405,31 @@ iframe.twitter-share-button {
 }
 /* line 7, ../sass/_finance.scss */
 .financials .graph1 {
-  background: #00d49a;
+  background: #00c58f;
 }
 /* line 10, ../sass/_finance.scss */
 .financials .graph2 {
-  background: #21ffc2;
+  background: #00e8a9;
 }
 /* line 13, ../sass/_finance.scss */
 .financials .graph3 {
-  background: #6effd7;
+  background: #31ffc7;
 }
 /* line 16, ../sass/_finance.scss */
 .financials .graph4 {
-  background: #d4fff3;
+  background: #55ffd0;
 }
 /* line 19, ../sass/_finance.scss */
 .financials .graph5 {
-  background: white;
+  background: #78ffda;
 }
 /* line 22, ../sass/_finance.scss */
 .financials .graph6 {
-  background: white;
+  background: #c0ffee;
 }
 /* line 25, ../sass/_finance.scss */
 .financials .graph7 {
-  background: white;
+  background: #e3fff7;
 }
 
 /* line 30, ../sass/_finance.scss */
