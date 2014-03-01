@@ -154,6 +154,18 @@
   background-position:center;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cfa_office.jpg', sizingMethod='scale')";
 }
+.pagebg.imageannual_report_back{ 
+  background: url("../img/annual_report_back.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepressback{ 
+  background: url("../img/pressback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pressback.jpg', sizingMethod='scale')";
+}
 
 .pagebg img{ 
   min-width:100%;

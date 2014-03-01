@@ -199,5 +199,38 @@
   }, {
       "geometry": { "type": "Point", "coordinates": [-94.90, 38.85]},
       "properties": { "city": "Olathe", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-8.243890, 53.412910]},
+      "properties": { "city": "ireland", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [138.252924, 36.204824]},
+      "properties": { "city": "japan", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [10.451526, 51.165691]},
+      "properties": { "city": "germany", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [19.145136, 51.919438]},
+      "properties": { "city": "poland", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-77.297508, 18.109581]},
+      "properties": { "city": "jamaica", "year":"2013", "type": "story", "story": "standards" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-99.133208, 19.432608]},
+      "properties": { "city": "Mexico City", "year":"2013", "type": "story", "story": "summit" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-58.381593, -34.603723]},
+      "properties": { "city": "Buenos Aires", "type": "story", "story": "summit" }
+  }, {
+      "geometry": { "type": "Point", "coordinates": [-66.105722, 18.466334]},
+      "properties": { "city": "San Juan", "type": "story", "story": "summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [5.799913, 53.201233]},
+    "properties": { "city": "Leeuwarden ", "story":"summit"  }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [139.753595, 35.694003]},
+    "properties": { "city": "Chiyoda-ku", "story":"summit" }
+  }, {
+    "geometry": { "type": "Point", "coordinates": [138.599959, -34.928621]},
+    "properties": { "city": "Adelaide", "story":"summit" }
   }]
 }

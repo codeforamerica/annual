@@ -1,5 +1,32 @@
 @import "colors";
 
+.financials {
+  .graph {
+    background: $green;
+  }
+  .graph1 {
+    background: lighten( $green, 7% );
+  }
+  .graph2 {
+    background: lighten( $green, 14% );
+  }
+  .graph3 {
+    background: lighten( $green, 28% );
+  }
+  .graph4 {
+    background: lighten( $green, 35% ); 
+  }
+  .graph5 {
+    background: lighten( $green, 42% );
+  }
+  .graph6 {
+    background: lighten( $green, 56% );
+  }
+  .graph7 {
+    background: lighten( $green, 63% );
+  }
+}
+
 .financials h3 {
   margin-top: 90px;
 }

@@ -1,16 +1,16 @@
 @import "colors";
 
 .getinvolved {
-  background: rgba(255, 255, 255, .87);
-  padding: 60px 80px;
-  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
   color: #000;
+  padding: 70px 80px;
   text-shadow: none;
   font-family: 'Arvo', 'Georgia', serif;
-  margin: 100px 180px;
-  &.joinus {
-    margin: 0px;
-  }
+  margin: 200px 180px 100px;
+}
+
+.getinvolved.joinus {
+    padding: 30px 0px 45px;
 }
 
 .getinvolved p:first-child:first-letter { 
@@ -22,8 +22,10 @@
 }
 
 .getinvolved h1 {
-  margin: 0px;
   color: #000 !important;
+  font-size: 100px !important;
+  text-align: center;
+  margin: 0px 0px 60px 0px;
 }
 
 .getinvolved h4 {
@@ -33,8 +35,10 @@
 }
 
 .getinvolved h5 {
-  font-size: 17px;
+  font-size: 16px;
+  font-style: normal;
   margin-top: 13px;
+  text-align: center;
 }
 
 .getinvolved p {
@@ -68,10 +72,10 @@
 }
 
 .getinvolved form {
-  background: rgba(255,255,255, .7);
+  background: rgba(214,214,214, .7);
   padding: 25px 40px;
-  width: 500px;
-  margin: 25px auto;
+  width: 50%;
+  margin: 25px auto 10px auto;
 }
 
 .getinvolved label {
