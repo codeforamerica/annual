@@ -659,8 +659,14 @@ a.appspop:hover {
     background-size: 1024px;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 71, ../sass/_backgrounds.scss */
+  .pagebg.imageofficesummit {
+    background: #7ab5d6;
+  }
+}
 
-/* line 81, ../sass/_backgrounds.scss */
+/* line 85, ../sass/_backgrounds.scss */
 .pagebg.imageopen-closed {
   background: url("../img/open-closed.jpg") no-repeat;
   background-size: cover;
@@ -668,14 +674,20 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 81, ../sass/_backgrounds.scss */
+  /* line 85, ../sass/_backgrounds.scss */
   .pagebg.imageopen-closed {
     background: url("../img/open-closed_small.jpg") no-repeat;
     background-size: 1024px;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 85, ../sass/_backgrounds.scss */
+  .pagebg.imageopen-closed {
+    background: #7ab5d6;
+  }
+}
 
-/* line 91, ../sass/_backgrounds.scss */
+/* line 99, ../sass/_backgrounds.scss */
 .pagebg.imagegood_governance {
   background: url("../img/good_governance.jpg") no-repeat;
   background-size: cover;
@@ -683,20 +695,20 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 91, ../sass/_backgrounds.scss */
+  /* line 99, ../sass/_backgrounds.scss */
   .pagebg.imagegood_governance {
     background: url("../img/good_governance_small.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 91, ../sass/_backgrounds.scss */
+  /* line 99, ../sass/_backgrounds.scss */
   .pagebg.imagegood_governance {
     background: #7ab5d6;
   }
 }
 
-/* line 105, ../sass/_backgrounds.scss */
+/* line 113, ../sass/_backgrounds.scss */
 .pagebg.imageforthepeople {
   background: url("../img/forthepeople.jpg") no-repeat;
   background-size: cover;
@@ -704,14 +716,20 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 105, ../sass/_backgrounds.scss */
+  /* line 113, ../sass/_backgrounds.scss */
   .pagebg.imageforthepeople {
     background: url("../img/forthepeople_small.jpg") no-repeat;
     background-size: 1024px;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 113, ../sass/_backgrounds.scss */
+  .pagebg.imageforthepeople {
+    background: #7ab5d6;
+  }
+}
 
-/* line 117, ../sass/_backgrounds.scss */
+/* line 129, ../sass/_backgrounds.scss */
 .pagebg.imageiphone {
   background: url("../img/iphone.jpg") no-repeat;
   background-size: cover;
@@ -719,7 +737,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/iphone.jpg', sizingMethod='scale')";
 }
 
-/* line 123, ../sass/_backgrounds.scss */
+/* line 135, ../sass/_backgrounds.scss */
 .pagebg.imagebike {
   background: url("../img/bike.jpg");
   background-size: cover;
@@ -727,7 +745,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bike.jpg', sizingMethod='scale')";
 }
 
-/* line 129, ../sass/_backgrounds.scss */
+/* line 141, ../sass/_backgrounds.scss */
 .pagebg.imagechicagocityhall {
   background: url("../img/chicago_cityhall.jpg");
   background-size: cover;
@@ -735,7 +753,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/chicago_cityhall.jpg', sizingMethod='scale')";
 }
 
-/* line 135, ../sass/_backgrounds.scss */
+/* line 147, ../sass/_backgrounds.scss */
 .pagebg.imagebigdata2 {
   background: url("../img/big_data2.jpg");
   background-size: cover;
@@ -743,7 +761,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data_2.jpg', sizingMethod='scale')";
 }
 
-/* line 141, ../sass/_backgrounds.scss */
+/* line 153, ../sass/_backgrounds.scss */
 .pagebg.imagefellows {
   background: url("../img/fellows.jpg");
   background-size: cover;
@@ -751,7 +769,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellows.jpg', sizingMethod='scale')";
 }
 
-/* line 147, ../sass/_backgrounds.scss */
+/* line 159, ../sass/_backgrounds.scss */
 .pagebg.imagebigdata {
   background: url("../img/big_data.jpg");
   background-size: cover;
@@ -759,7 +777,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data.jpg', sizingMethod='scale')";
 }
 
-/* line 153, ../sass/_backgrounds.scss */
+/* line 165, ../sass/_backgrounds.scss */
 .pagebg.imagehonolulu {
   background: url("../img/honolulu.jpg");
   background-size: cover;
@@ -767,7 +785,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/honolulu.jpg', sizingMethod='scale')";
 }
 
-/* line 159, ../sass/_backgrounds.scss */
+/* line 171, ../sass/_backgrounds.scss */
 .pagebg.imageserena {
   background: url("../img/serena.jpg");
   background-size: cover;
@@ -775,7 +793,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/serena.jpg', sizingMethod='scale')";
 }
 
-/* line 165, ../sass/_backgrounds.scss */
+/* line 177, ../sass/_backgrounds.scss */
 .pagebg.imagecommunity {
   background: url("../img/community.jpg");
   background-size: cover;
@@ -783,7 +801,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/community.jpg', sizingMethod='scale')";
 }
 
-/* line 171, ../sass/_backgrounds.scss */
+/* line 183, ../sass/_backgrounds.scss */
 .pagebg.imagecfaoffice {
   background: url("../img/cfa_office.jpg");
   background-size: cover;
@@ -791,7 +809,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cfa_office.jpg', sizingMethod='scale')";
 }
 
-/* line 177, ../sass/_backgrounds.scss */
+/* line 189, ../sass/_backgrounds.scss */
 .pagebg.imageannual_report_back {
   background: url("../img/annual_report_back.jpg") no-repeat;
   background-size: cover;
@@ -799,7 +817,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
 }
 
-/* line 183, ../sass/_backgrounds.scss */
+/* line 195, ../sass/_backgrounds.scss */
 .pagebg.imagepressback {
   background: url("../img/pressback.jpg") no-repeat;
   background-size: cover;
@@ -807,7 +825,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pressback.jpg', sizingMethod='scale')";
 }
 
-/* line 190, ../sass/_backgrounds.scss */
+/* line 202, ../sass/_backgrounds.scss */
 .pagebg img {
   min-width: 100%;
   min-height: 100%;

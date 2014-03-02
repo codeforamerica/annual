@@ -77,6 +77,10 @@
     background: url("../img/officesummit_small.jpg") no-repeat;
     background-size: 1024px;
   }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
 }
 .pagebg.imageopen-closed{ 
   background: url("../img/open-closed.jpg") no-repeat;
@@ -86,6 +90,10 @@
   @media screen and (max-width: 1024px) {
     background: url("../img/open-closed_small.jpg") no-repeat;
     background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
   }
 }
 .pagebg.imagegood_governance{ 
@@ -110,6 +118,10 @@
   @media screen and (max-width: 1024px) {
     background: url("../img/forthepeople_small.jpg") no-repeat;
     background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
   }
 }
 
