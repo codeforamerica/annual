@@ -2484,12 +2484,13 @@ a.startupspop:hover {
 /* line 74, ../sass/_getinvolved.scss */
 .getinvolved form {
   background: rgba(214, 214, 214, 0.7);
-  padding: 25px 40px;
+  padding: 25px 30px;
   width: 50%;
   margin: 25px auto 10px auto;
+  text-align: center;
 }
 
-/* line 81, ../sass/_getinvolved.scss */
+/* line 82, ../sass/_getinvolved.scss */
 .getinvolved label {
   color: #000;
   margin-right: 10px;
