@@ -75,6 +75,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
     background: url("../img/officesummit_small.jpg") no-repeat;
+    background-size: 1024px;
   }
 }
 .pagebg.imageopen-closed{ 
@@ -84,6 +85,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
     background: url("../img/open-closed_small.jpg") no-repeat;
+    background-size: 1024px;
   }
 }
 .pagebg.imagegood_governance{ 
@@ -93,6 +95,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
     background: url("../img/good_governance_small.jpg") no-repeat;
+    background-size: 1024px;
   }
 }
 .pagebg.imageforthepeople{ 
@@ -102,6 +105,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
     background: url("../img/forthepeople_small.jpg") no-repeat;
+    background-size: 1024px;
   }
 }
 
