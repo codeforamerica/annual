@@ -358,7 +358,7 @@ a.appspop:hover  {
 //   background-image: url('../img/apps/wheresmyschoolbus.png');
 // }
 
-.adoptadrain, .adoptatwincities, .alexandriaplays, .archivesocial_sq, .bizfriendly_logo, .cityvoice_logo, .civicinsight, .clickthathood, .councilmatic, .dataquestionnaire, .development_fast_pass, .discoverbpsnew, .early_oakland, .fishstocking, .fllegtracker, .flu_shot_finder, .foodtruckslv, .hampton_roads, .honlulubudget, .lakecraft, .littlelibrariesmadison, .localwiki, .lookatasheville, .mappinggentrification, .nwdata, .oakland_answers, .omgtransit, .openbudgetoak, .opencounter, .oppcaster, .pantry_pickup2, .promptly, .recordtrac, .smartprocure_sq, .smcconnect, .streetcred_logo, .streetcredsq, .streetmix, .textizensmall, .textmybus, .tothetrails_logo, .vermontlibrary, .whatsmydistrict, .wheresmyschoolbus, .ohana_api, .ckan, .faf, .jailpop, .localdata-Logo, .nycccs, .streettrees{
+.adoptadrain, .adoptatwincities, .alexandriaplays, .archivesocial_sq, .bizfriendly_logo, .cityvoice_logo, .civicinsight, .clickthathood, .councilmatic, .dataquestionnaire, .development_fast_pass, .discoverbpsnew, .early_oakland, .fishstocking, .fllegtracker, .flu_shot_finder, .foodtruckslv, .hampton_roads, .honlulubudget, .lakecraft, .littlelibrariesmadison, .localwiki, .lookatasheville, .mappinggentrification, .nwdata, .oakland_answers, .omgtransit, .openbudgetoak, .opencounter, .oppcaster, .pantry_pickup2, .promptly, .recordtrac, .smartprocure_sq, .smcconnect, .streetcred_logo, .streetcredsq, .streetmix, .textizensmall, .textmybus, .tothetrails_logo, .vermontlibrary, .whatsmydistrict, .wheresmyschoolbus, .ohana_api, .ckan, .faf, .jailpop, .nycccs, .streettrees{
   background: url('../img/apps/appssprites.png') no-repeat;
 }
 
@@ -650,10 +650,8 @@ a.appspop:hover  {
   height: 100px;
 }
 
-.localdata-Logo{
-  background-position: -8px -315px ;
-  width: 100px;
-  height: 100px;
+.localdatalogo{
+  background-image: url('../img/apps/localdatalogo.png');
 }
 
 .nycccs{
