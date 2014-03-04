@@ -78,221 +78,7 @@
   font-weight: 300;
   text-align: left;
 }
-
-/* 2011 Fellows */
-
-.aaron {
-  background-position: 0 0;
-}
-
-.alan {
-  background-position: 0 -50px
-}
-
-.anna {
-  background-position: 0 -100px;
-}
-
-.chacha {
-  background-position: 0 -150px;
-}
-
-.erik {
-  background-position: 0 -200px;
-}
-
-.jeremy {
-  background-position: 0 -250px;
-}
-
-.joel {
-  background-position: 0 -300px;
-}
-
-.john {
-  background-position: 0 -350px;
-}
-
-.karla {
-  background-position: 0 -400px;
-}
-
-.matt {
-  background-position: 0 -450px;
-}
-
-.max {
-  background-position: 0 -500px;
-}
-
-.michael {
-  background-position: 0 -550px;
-}
-
-.michellek {
-  background-position: 0 -600px
-}
-
-.mjumbe {
-  background-position: 0 -650px;
-}
-
-.pete {
-  background-position: 0 -700px;
-}
-
-.ryan {
-  background-position: 0 -750px;
-}
-
-.scotts {
-  background-position: 0 -800px;
-}
-
-.talin {
-  background-position: 0 -850px;
-}
-
-.tyler {
-  background-position: 0 -900px;
-}
-
-/* 2012 fellows */
-
-.alexp {
-  background-position: 0 -950px;
-}
-
-.alexy {
-  background-position: 0 -1000px;
-}
-
-.alicia {
-  background-position: 0 -1050px;
-}
-
-.amir {
-  background-position: 0 -1100px
-}
-
-.angel {
-  background-position: 0 -1150px;
-}
-
-.aurelio {
-  background-position: 0 -1200px;
-}
-
-.ben {
-  background-position: 0 -1250px;
-}
-
-.diana {
-  background-position: 0 -1300px;
-}
-
-.eddie {
-  background-position: 0 -1350px;
-}
-
-.emily {
-  background-position: 0 -1400px;
-}
-
-.jesse {
-  background-position: 0 -1450px;
-}
-
-.jessica {
-  background-position: 0 -1500px;
-}
-
-.jim {
-  background-position: 0 -1550px;
-}
-
-.joe {
-  background-position: 0 -1600px
-}
-
-.liz {
-  background-position: 0 -1650px;
-}
-
-.matth {
-  background-position: 0 -1700px;
-}
-
-.michellel {
-  background-position: 0 -1750px;
-}
-
-.mick {
-  background-position: 0 -1800px;
-}
-
-.nick {
-  background-position: 0 -1850px;
-}
-
-.prashant {
-  background-position: 0 -1900px;
-}
-
-.rob {
-  background-position: 0 -1950px;
-}
-
-.ruthie {
-  background-position: 0 -2000px;
-}
-
-.serena {
-  background-position: 0 -2050px;
-}
-
-.sheba {
-  background-position: 0 -2100px;
-}
-
-.tamara {
-  background-position: 0 -2150px;
-}
-
-.zach {
-  background-position: 0 -2200px;
-}
-
-/* 2013 Fellows */
-
-.morefellowspop.alanw,
-.morefellowspop.andrewh,
-.morefellowspop.andyh,
-.morefellowspop.anselmb,
-.morefellowspop.arielk,
-.morefellowspop.cjb,
-.morefellowspop.crisc,
-.morefellowspop.dana,
-.morefellowspop.daveg,
-.morefellowspop.donelizaj,
-.morefellowspop.ezras,
-.morefellowspop.jacobs,
-.morefellowspop.katiel,
-.morefellowspop.lauram,
-.morefellowspop.lindsayb,
-.morefellowspop.louh,
-.morefellowspop.march,
-.morefellowspop.marcinw,
-.morefellowspop.moncefb,
-.morefellowspop.rebeccaa,
-.morefellowspop.reeddg,
-.morefellowspop.richaa,
-.morefellowspop.ryanc,
-.morefellowspop.shaunakk,
-.morefellowspop.sheilad,
-.morefellowspop.sophiap,
-.morefellowspop.tamaramp {
-  background-image: url('../img/fellows_headshot.jpg');
+.morefellowspop {
   background-size: 100px;
   float: left;
   width: 100px;
@@ -300,110 +86,171 @@
   margin: 20px 20px 0 0;
 }
 
-.morefellowspop.alanw {
-  background-position: 0 -5347px;
+.alan_100_2199, .andrew_100_2043, .andy_100_2099, .ans_100_2060, .arial_100, .cj_100_2076, .cris_100_2138, .dan_100_2191, .dave_100_2164, .doneliza_100_2205, .ezra_100_2056, .jake_100_2213, .katie_100_2207, .laura_100_2170, .lindsay_100, .lou_100_2106, .marc_100_2158, .marcin_100_2149, .moncef_100_2087, .rebecca_100_2090, .reed_100_2124, .richa_100_2211, .ryan_100_2067, .shaunak_100_2120, .sheila_100_0925, .sophia_100, .tamara_100_2107{
+  background: url('../img/fellowsSprite.png') no-repeat;
+
 }
 
-.morefellowspop.andrewh {
-  background-position: 0 -5447px;
+.alan_100_2199{
+  background-position: 0 0;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.andyh {
-  background-position: 0 -5547px;
+.andrew_100_2043{
+  background-position: -3px -109px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.anselmb {
-  background-position: 0 -5647px
+.andy_100_2099{
+  background-position: -6px -215px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.arielk {
-  background-position: 0 -5747px
+.ans_100_2060{
+  background-position: -9px -434px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.cjb {
-  background-position: 0 -5847px;
+.arial_100{
+  background-position: -199px -452px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.crisc {
-  background-position: 0 -5947px;
+.cj_100_2076{
+  background-position: -9px -324px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.dana {
-  background-position: 0 -6047px;
+.cris_100_2138{
+  background-position: -199px -348px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.daveg {
-  background-position: 0 -6147px;
+.dan_100_2191{
+  background-position: -308px -348px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.donelizaj {
-  background-position: 0 -6247px;
+.dave_100_2164{
+  background-position: -420px -344px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.ezras {
-  background-position: 0 -6347px;
+.doneliza_100_2205{
+  background-position: -541px -345px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.jacobs {
-  background-position: 0 -6447px;
+.ezra_100_2056{
+  background-position: -666px -339px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.katiel {
-  background-position: 0 -6547px;
+.jake_100_2213{
+  background-position: -209px -236px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.lauram {
-  background-position: 0 -6647px;
+.katie_100_2207{
+  background-position: -328px -236px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.lindsayb {
-  background-position: 0 -6747px;
+.laura_100_2170{
+  background-position: -438px -235px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.louh {
-  background-position: 0 -6847px;
+.lindsay_100{
+  background-position: -546px -232px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.march {
-  background-position: 0 -6947px;
+.lou_100_2106{
+  background-position: -656px -232px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.marcinw {
-  background-position: 0 -7047px;
+.marc_100_2158{
+  background-position: -213px -125px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.moncefb {
-  background-position: 0 -7147px;
+.marcin_100_2149{
+  background-position: -322px -124px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.rebeccaa {
-  background-position: 0 -7247px;
+.moncef_100_2087{
+  background-position: -436px -121px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.reeddg {
-  background-position: 0 -7347px;
+.rebecca_100_2090{
+  background-position: -545px -121px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.richaa {
-  background-position: 0 -7447px;
+.reed_100_2124{
+  background-position: -656px -122px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.ryanc {
-  background-position: 0 -7547px;
+.richa_100_2211{
+  background-position: -654px -4px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.shaunakk {
-  background-position: 0 -7647px;
+.ryan_100_2067{
+  background-position: -543px -4px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.sheilad {
-  background-position: 0 -7747px;
+.shaunak_100_2120{
+  background-position: -433px -2px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.sophiap {
-  background-position: 0 -7847px;
+.sheila_100_0925{
+  background-position: -323px -4px ;
+  width: 100px;
+  height: 100px;
 }
 
-.morefellowspop.tamaramp {
-  background-position: 0 -7947px;
+.sophia_100{
+  background-position: -216px -2px ;
+  width: 100px;
+  height: 100px;
 }
+
+.tamara_100_2107{
+  background-position: -109px -1px ;
+  width: 100px;
+  height: 100px;
+}
+
+
