@@ -7,8 +7,7 @@ Install
 
 This site is build using jekyll.
 
-    sudo gem install jekyll
-    sudo gem install rdiscount
+    bundle install
 
 Run
 ---
