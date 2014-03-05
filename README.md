@@ -12,5 +12,5 @@ This site is build using jekyll.
 Run
 ---
 
-    jekyll --server --auto
+    jekyll server auto
 
