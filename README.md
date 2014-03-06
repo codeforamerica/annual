@@ -1,8 +1,17 @@
-Code for America Annual Report.
+Code for America Annual Report, 2013.
 
-This site is build using jekyll. To run:
+View it live at [2013.codeforamerica.org](http://2013.codeforamerica.org).
 
-`sudo gem install jekyll`
+Install
+-------
 
-`jekyll --server --auto`
+This site is build using jekyll.
+
+    sudo gem install jekyll
+    sudo gem install rdiscount
+
+Run
+---
+
+    jekyll --server --auto
 
