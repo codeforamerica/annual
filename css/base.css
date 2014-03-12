@@ -693,7 +693,7 @@ a.appspop:hover {
 
 /* line 102, ../sass/_backgrounds.scss */
 .pagebg.imagegood_governance {
-  background: url("../img/good_governance.jpg") no-repeat;
+  background: url("../img/Muenster_Innenstadt.jpg") no-repeat;
   background-size: cover;
   background-position: right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
@@ -3027,7 +3027,7 @@ input[type="text"] {
   padding-left: 400px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-                               /* Firefox 
+                               /* Firefox
 -webkit-box-sizing:border-box; /* Safari */
 }
 
