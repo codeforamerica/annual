@@ -30,7 +30,7 @@
   margin: 20px 0px 65px 0px;
 }
 
-.page.homeQuote{ 
+.page.homeQuote{
   padding-top: 50px !important;
 }
 
@@ -217,8 +217,8 @@
     margin-left: -100px;
   }
 }
- 
-.title p{ 
+
+.title p{
   text-transform:uppercase;
   font-size: 63px;
   font-weight: 300;
@@ -244,18 +244,25 @@
   line-height: 13px;
 }
 
+.intropage img {
+  height: 200px;
+}
+
 /*****************************************************************************/
 /*
 /* Home
 /*
 /*****************************************************************************/
+.navbar .nav {
+  margin-top: 30px;
+}
 
 .navbar .container {
   margin-left: 50px;
 }
 
 .navbar .brand {
-  max-width: 60px;
+  max-height: 200px;
 }
 
 .navbar a:hover{
@@ -266,11 +273,12 @@
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
+  line-height: 200px;
   background-color: #1b1b1b;
   border-color: #1b1b1b;
 }
 
-#loading{ 
+#loading{
   background:#399fd3;
   position:fixed;
   top:0px;
@@ -297,8 +305,8 @@
   margin: 90px auto 117px;
   font-weight: 600;
 }
- 
-#loading p{ 
+
+#loading p{
   text-transform:uppercase;
   font-size: 63px;
   font-weight: 300;
@@ -399,51 +407,63 @@ input[type="text"] {
   margin: 10px 0px 10px 0px;
 }
 
-.clear{ 
+.clear{
   clear:both;
 }
 
 .page.quote,
-.page.story{ 
+.page.story{
   overflow-x: hidden;
   position: relative;
   padding: 250px 80px 200px 130px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
+  background-color: rgba(0,0,0,0.4);
 }
 
-.page.story{ 
+.page.story{
   /*padding: 80px 80px 100px;*/
 }
 
-.page.story.nosidebar{ 
+.page.story.nosidebar{
   padding:0px;
 }
 
 
 .page.quote h1,
-.page.story h1 { 
-  color:#fff;
-  font-size: 56px;
+.page.story h1 {
+  color: white;
+  font-size: 120px;
   letter-spacing: 1px;
   list-style: none;
-  line-height: 75px;
-  padding-top: 40px;
+  line-height: 120px;
+  text-shadow: 2px 2px 5px black;
+  margin-left: -250px;
+  margin-right: -250px;
+  padding-left: 250px;
+  padding-top: 250px;
 }
 
 .page.quote h1 {
   margin-bottom: 0px;
 }
 
-.page.story{ 
+.page.quote h3 {
+  text-shadow: 2px 2px 5px black;
+    margin-left: -250px;
+  margin-right: -250px;
+  padding: 0 250px;
+}
+
+.page.story{
   position:relative;
   width:100%;
   height:auto;
   padding-top:10px;
   padding-left:400px;
   box-sizing: border-box;
-  -moz-box-sizing:border-box; /* Firefox 
+  -moz-box-sizing:border-box; /* Firefox
   -webkit-box-sizing:border-box; /* Safari */
 }
 
@@ -712,7 +732,7 @@ img.progicons {
   color: #000;
   text-shadow: none;
 }
- 
+
 .popover-title,
 .popover-title {
   font-weight: 700;
@@ -720,7 +740,7 @@ img.progicons {
   border: none;
   letter-spacing: 1px;
   padding-bottom: 0px;
-} 
+}
 
 .captains .popover-content,
 .morefellows .popover-content {
@@ -862,7 +882,7 @@ img.progicons {
 .community .bios p,
 .market .bios p,
 .network .bios p {
-  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;  
+  font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel Book", "Georgia", Times, sans-serif;
   font-size: 20px;
   font-weight: 100;
   line-height: 24px;
@@ -898,7 +918,7 @@ img.progicons {
   margin-top: 50px;
 }
 
-.sharebutton{ 
+.sharebutton{
   position:fixed;
   bottom:10px;
   left:30px;
@@ -906,7 +926,7 @@ img.progicons {
   height:70px;
 }
 
-.sharebutton iframe{ 
+.sharebutton iframe{
   min-height:auto;
 }
 
