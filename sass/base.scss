@@ -253,6 +253,11 @@
 /* Home
 /*
 /*****************************************************************************/
+#content .navbar-inverse .navbar-inner {
+  background-color: rgba(255,255,255,0.4);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+  border-color: #bcbcbc;
+}
 .navbar .nav {
   margin-top: 30px;
 }
@@ -272,10 +277,16 @@
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
-  color: #ffffff;
+  color: #ddd;
   line-height: 200px;
-  background-color: #1b1b1b;
-  border-color: #1b1b1b;
+}
+.navbar .nav > li > a:focus, 
+.navbar .nav > li > a:hover {
+  color: #000;
+}
+.navbar-inverse .nav > li > a {
+  color: #777;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
 #loading{
