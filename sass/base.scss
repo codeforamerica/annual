@@ -30,9 +30,6 @@
   margin: 20px 0px 65px 0px;
 }
 
-.page.homeQuote{
-  padding-top: 50px !important;
-}
 
 .logo {
   display: block;
@@ -212,9 +209,7 @@
   }
   @media screen and (max-width: 480px) {
     text-align: left;
-    font-size: 30px;
-    text-align: left;
-    margin-left: -100px;
+    font-size: 35px;
   }
 }
 
@@ -453,7 +448,22 @@ input[type="text"] {
   margin-left: -250px;
   margin-right: -250px;
   padding-left: 250px;
-  padding-top: 250px;
+  padding-top: 0px;
+  @media screen and (max-width: 1200px) {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-top: 30px;
+    text-align: left;
+    font-size: 35px;
+    line-height: 60px;
+    text-align: left;
+  }
 }
 
 .page.quote h1 {
@@ -462,9 +472,22 @@ input[type="text"] {
 
 .page.quote h3 {
   text-shadow: 2px 2px 5px black;
-    margin-left: -250px;
+  margin-left: -250px;
   margin-right: -250px;
   padding: 0 250px;
+  @media screen and (max-width: 1200px) {
+    font-size: 26px;
+    line-height: 33px;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media screen and (max-width: 480px) {
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .page.story{
@@ -941,10 +964,36 @@ img.progicons {
   min-height:auto;
 }
 
-
-
-
-
-
-
-
+#next-meetup {
+  text-align: center;
+  margin-top: 40px;
+  #date {
+    display: inline-block;
+    text-align: center;
+    border: 3px solid #fff;
+    padding: 20px;
+    background: rgba(255,255,255,0.3);
+    color: #eee;
+  }
+  #meetup-details {
+    background: rgba(255,255,255,0.8);
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+    text-align: left;
+    #title {
+      margin-top: 0;
+    }
+    #venue {
+      text-transform: none;
+      line-height: 26px;
+    }
+    #description {
+      line-height: 22px;
+    }
+    @media (max-width: 767px) {
+      width: 90%;
+    }
+  }
+}
