@@ -41,26 +41,6 @@ title: Code for Münster | codeformuenster.org
 
 
 <div id="page">
-  <div class="sidebar">
-
-    {% for p in site.posts %}
-
-    <div class="sidebartitle" >
-      <h1>2013</h1>
-      {% if p.title != "stats" %}
-      <h2>{{ p.title }} <br/>
-      {% if p.icon %}
-        <img src="img/{{p.icon}}.png"/>
-      {% endif %}
-      </h2>
-
-      {% endif %}
-    </div>
-
-    {% endfor %}
-
-  </div>
-
   {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
