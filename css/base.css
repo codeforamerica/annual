@@ -3547,12 +3547,12 @@ img.progicons {
 }
 
 /* line 958, ../sass/base.scss */
-.sharebutton {
+.copyrightandbuttons {
   height: 70px;
 }
 
 /* line 962, ../sass/base.scss */
-.sharebutton iframe {
+.copyrightandbuttons iframe {
   min-height: auto;
 }
 
