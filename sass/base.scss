@@ -250,7 +250,7 @@
 /*****************************************************************************/
 #content .navbar-inverse .navbar-inner {
   background-color: rgba(255,255,255,0.4);
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
   border-color: #bcbcbc;
 }
 .navbar .nav {
@@ -280,7 +280,7 @@
   color: #000;
 }
 .navbar-inverse .nav > li > a {
-  color: #777;
+  color: #444;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
@@ -421,11 +421,14 @@ input[type="text"] {
 .page.story{
   overflow-x: hidden;
   position: relative;
-  padding: 250px 80px 200px 130px;
+  padding: 250px 80px 0px 130px;
   box-sizing: border-box;
   -moz-box-sizing:border-box; /* Firefox */
   -webkit-box-sizing:border-box; /* Safari */
   background-color: rgba(0,0,0,0.4);
+  @media screen and (max-height: 900px) {
+    padding: 150px 80px 200px 130px;
+  }
 }
 
 .page.story{
@@ -440,22 +443,22 @@ input[type="text"] {
 .page.quote h1,
 .page.story h1 {
   color: white;
-  font-size: 120px;
+  font-size: 90px;
   letter-spacing: 1px;
   list-style: none;
-  line-height: 120px;
+  line-height: 90px;
   text-shadow: 2px 2px 5px black;
   margin-left: -250px;
   margin-right: -250px;
   padding-left: 250px;
   padding-top: 0px;
   @media screen and (max-width: 1200px) {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 80px;
   }
   @media screen and (max-width: 900px) {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 50px;
   }
   @media screen and (max-width: 480px) {
     padding-top: 30px;
@@ -472,9 +475,9 @@ input[type="text"] {
 
 .page.quote h3 {
   text-shadow: 2px 2px 5px black;
-  margin-left: -250px;
+  /*margin-left: -250px;
   margin-right: -250px;
-  padding: 0 250px;
+  padding: 0 250px;*/
   @media screen and (max-width: 1200px) {
     font-size: 26px;
     line-height: 33px;
@@ -953,10 +956,6 @@ img.progicons {
 }
 
 .sharebutton{
-  position:fixed;
-  bottom:10px;
-  left:30px;
-  z-index:100;
   height:70px;
 }
 
@@ -964,6 +963,9 @@ img.progicons {
   min-height:auto;
 }
 
+/*
+  next meetup box
+*/
 #next-meetup {
   text-align: center;
   margin-top: 40px;
@@ -972,18 +974,22 @@ img.progicons {
     text-align: center;
     border: 3px solid #fff;
     padding: 20px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.4);
     color: #eee;
   }
   #meetup-details {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,1);
     width: 500px;
     margin: 0 auto;
+    margin-top: 15px;
     padding: 10px;
     color: #333;
     text-align: left;
     #title {
       margin-top: 0;
+      em {
+        font-size:smaller;
+      }
     }
     #venue {
       text-transform: none;
@@ -996,4 +1002,12 @@ img.progicons {
       width: 90%;
     }
   }
+}
+
+/*
+ since we don't have scorlling content (single page vs. scrolling page in original fork)
+ set these to 100% height and remove the javascript that achieved this
+*/
+.site, #content, #page, .homeQuote {
+  height:100%;
 }
