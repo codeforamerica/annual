@@ -18,7 +18,7 @@ a.appspop:hover {
   border: none;
 }
 
-/* line 47, ../sass/_application-logos.scss */
+/* line 20, ../sass/_application-logos.scss */
 .srtracker,
 .fm,
 .labs,
@@ -563,15 +563,14 @@ a.appspop:hover {
   left: 0px;
   right: 0px;
   z-index: -10;
-  display: none;
 }
 
-/* line 10, ../sass/_backgrounds.scss */
+/* line 9, ../sass/_backgrounds.scss */
 .pagebg.quote {
   z-index: -5;
 }
 
-/* line 17, ../sass/_backgrounds.scss */
+/* line 16, ../sass/_backgrounds.scss */
 .pagebg.imagestreetmixback {
   background: url("../img/streetmixback.jpg") no-repeat;
   background-size: cover;
@@ -579,7 +578,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/streetmixback.jpg', sizingMethod='scale')";
 }
 
-/* line 23, ../sass/_backgrounds.scss */
+/* line 22, ../sass/_backgrounds.scss */
 .pagebg.imagelivesback {
   background: url("../img/livesback.jpg") no-repeat;
   background-size: cover;
@@ -587,7 +586,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/livesback.jpg', sizingMethod='scale')";
 }
 
-/* line 29, ../sass/_backgrounds.scss */
+/* line 28, ../sass/_backgrounds.scss */
 .pagebg.imagepromptlyback {
   background: url("../img/promptlyback.jpg") no-repeat;
   background-size: cover;
@@ -595,7 +594,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/promptlyback.jpg', sizingMethod='scale')";
 }
 
-/* line 35, ../sass/_backgrounds.scss */
+/* line 34, ../sass/_backgrounds.scss */
 .pagebg.imagefellowsback {
   background: url("../img/fellowsback.jpg") no-repeat;
   background-size: cover;
@@ -603,7 +602,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellowsback.jpg', sizingMethod='scale')";
 }
 
-/* line 41, ../sass/_backgrounds.scss */
+/* line 40, ../sass/_backgrounds.scss */
 .pagebg.imagebrigadeback {
   background: url("../img/brigadeback.jpg") no-repeat;
   background-size: cover;
@@ -611,7 +610,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/brigadeback.jpg', sizingMethod='scale')";
 }
 
-/* line 47, ../sass/_backgrounds.scss */
+/* line 46, ../sass/_backgrounds.scss */
 .pagebg.imagestartupback {
   background: url("../img/startupback.jpg") no-repeat;
   background-size: cover;
@@ -619,7 +618,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/startupback.jpg', sizingMethod='scale')";
 }
 
-/* line 53, ../sass/_backgrounds.scss */
+/* line 52, ../sass/_backgrounds.scss */
 .pagebg.imagepeerback {
   background: url("../img/peerback.jpg") no-repeat;
   background-size: cover;
@@ -627,7 +626,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/peerback.jpg', sizingMethod='scale')";
 }
 
-/* line 59, ../sass/_backgrounds.scss */
+/* line 58, ../sass/_backgrounds.scss */
 .pagebg.imagecodeforallback {
   background: url("../img/codeforallback.jpg") no-repeat;
   background-size: cover;
@@ -635,7 +634,7 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
 }
 
-/* line 65, ../sass/_backgrounds.scss */
+/* line 64, ../sass/_backgrounds.scss */
 .pagebg.imagethanksback {
   background: url("../img/thanksback.jpg") no-repeat;
   background-size: cover;
@@ -643,13 +642,13 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/thanksback.jpg', sizingMethod='scale')";
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 65, ../sass/_backgrounds.scss */
+  /* line 64, ../sass/_backgrounds.scss */
   .pagebg.imagethanksback {
     background: #7ab5d6;
   }
 }
 
-/* line 74, ../sass/_backgrounds.scss */
+/* line 73, ../sass/_backgrounds.scss */
 .pagebg.imageofficesummit {
   background: url("../img/officesummit.jpg") no-repeat;
   background-size: cover;
@@ -657,20 +656,20 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 74, ../sass/_backgrounds.scss */
+  /* line 73, ../sass/_backgrounds.scss */
   .pagebg.imageofficesummit {
     background: url("../img/officesummit_small.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 74, ../sass/_backgrounds.scss */
+  /* line 73, ../sass/_backgrounds.scss */
   .pagebg.imageofficesummit {
     background: #7ab5d6;
   }
 }
 
-/* line 88, ../sass/_backgrounds.scss */
+/* line 87, ../sass/_backgrounds.scss */
 .pagebg.imageopen-closed {
   background: url("../img/open-closed.jpg") no-repeat;
   background-size: cover;
@@ -678,158 +677,41 @@ a.appspop:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 88, ../sass/_backgrounds.scss */
+  /* line 87, ../sass/_backgrounds.scss */
   .pagebg.imageopen-closed {
     background: url("../img/open-closed_small.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 88, ../sass/_backgrounds.scss */
+  /* line 87, ../sass/_backgrounds.scss */
   .pagebg.imageopen-closed {
     background: #7ab5d6;
   }
 }
 
-/* line 102, ../sass/_backgrounds.scss */
+/* line 101, ../sass/_backgrounds.scss */
 .pagebg.imagegood_governance {
-  background: url("../img/Muenster_Innenstadt.jpg") no-repeat;
+  background: url("../img/prinzipalmarkt15-grau.jpg") no-repeat;
   background-size: cover;
   background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/prinzipalmarkt15-grau.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
-  /* line 102, ../sass/_backgrounds.scss */
+  /* line 101, ../sass/_backgrounds.scss */
   .pagebg.imagegood_governance {
-    background: url("../img/Muenster_Innenstadt.jpg") no-repeat;
+    background: url("../img/prinzipalmarkt15-grau-1024.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 102, ../sass/_backgrounds.scss */
+  /* line 101, ../sass/_backgrounds.scss */
   .pagebg.imagegood_governance {
     background: #7ab5d6;
   }
 }
 
 /* line 116, ../sass/_backgrounds.scss */
-.pagebg.imageforthepeople {
-  background: url("../img/forthepeople.jpg") no-repeat;
-  background-size: cover;
-  background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
-}
-@media screen and (max-width: 1024px) {
-  /* line 116, ../sass/_backgrounds.scss */
-  .pagebg.imageforthepeople {
-    background: url("../img/forthepeople_small.jpg") no-repeat;
-    background-size: 1024px;
-  }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 116, ../sass/_backgrounds.scss */
-  .pagebg.imageforthepeople {
-    background: #7ab5d6;
-  }
-}
-
-/* line 132, ../sass/_backgrounds.scss */
-.pagebg.imageiphone {
-  background: url("../img/iphone.jpg") no-repeat;
-  background-size: cover;
-  background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/iphone.jpg', sizingMethod='scale')";
-}
-
-/* line 138, ../sass/_backgrounds.scss */
-.pagebg.imagebike {
-  background: url("../img/bike.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bike.jpg', sizingMethod='scale')";
-}
-
-/* line 144, ../sass/_backgrounds.scss */
-.pagebg.imagechicagocityhall {
-  background: url("../img/chicago_cityhall.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/chicago_cityhall.jpg', sizingMethod='scale')";
-}
-
-/* line 150, ../sass/_backgrounds.scss */
-.pagebg.imagebigdata2 {
-  background: url("../img/big_data2.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data_2.jpg', sizingMethod='scale')";
-}
-
-/* line 156, ../sass/_backgrounds.scss */
-.pagebg.imagefellows {
-  background: url("../img/fellows.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellows.jpg', sizingMethod='scale')";
-}
-
-/* line 162, ../sass/_backgrounds.scss */
-.pagebg.imagebigdata {
-  background: url("../img/big_data.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data.jpg', sizingMethod='scale')";
-}
-
-/* line 168, ../sass/_backgrounds.scss */
-.pagebg.imagehonolulu {
-  background: url("../img/honolulu.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/honolulu.jpg', sizingMethod='scale')";
-}
-
-/* line 174, ../sass/_backgrounds.scss */
-.pagebg.imageserena {
-  background: url("../img/serena.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/serena.jpg', sizingMethod='scale')";
-}
-
-/* line 180, ../sass/_backgrounds.scss */
-.pagebg.imagecommunity {
-  background: url("../img/community.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/community.jpg', sizingMethod='scale')";
-}
-
-/* line 186, ../sass/_backgrounds.scss */
-.pagebg.imagecfaoffice {
-  background: url("../img/cfa_office.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cfa_office.jpg', sizingMethod='scale')";
-}
-
-/* line 192, ../sass/_backgrounds.scss */
-.pagebg.imageannual_report_back {
-  background: url("../img/annual_report_back.jpg") no-repeat;
-  background-size: cover;
-  background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
-}
-
-/* line 198, ../sass/_backgrounds.scss */
-.pagebg.imagepressback {
-  background: url("../img/pressback.jpg") no-repeat;
-  background-size: cover;
-  background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pressback.jpg', sizingMethod='scale')";
-}
-
-/* line 205, ../sass/_backgrounds.scss */
 .pagebg img {
   min-width: 100%;
   min-height: 100%;
@@ -865,14 +747,14 @@ a.appspop:hover {
   transition: 0.6s ease-in-out left;
 }
 
-/* line 31, ../sass/_carousel.scss */
+/* line 30, ../sass/_carousel.scss */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
 }
 
-/* line 38, ../sass/_carousel.scss */
+/* line 36, ../sass/_carousel.scss */
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -884,7 +766,7 @@ a.appspop:hover {
   left: 0;
 }
 
-/* line 47, ../sass/_carousel.scss */
+/* line 46, ../sass/_carousel.scss */
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
@@ -902,7 +784,7 @@ a.appspop:hover {
   left: -100%;
 }
 
-/* line 62, ../sass/_carousel.scss */
+/* line 61, ../sass/_carousel.scss */
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
   left: 0;
@@ -918,7 +800,7 @@ a.appspop:hover {
   left: 100%;
 }
 
-/* line 75, ../sass/_carousel.scss */
+/* line 74, ../sass/_carousel.scss */
 .apps .carousel-control,
 .carousel-control {
   /*  position: absolute;
@@ -943,7 +825,7 @@ a.appspop:hover {
   left: auto;
 }
 
-/* line 96, ../sass/_carousel.scss */
+/* line 95, ../sass/_carousel.scss */
 .carousel-control:hover,
 .carousel-control:focus {
   color: #ffffff;
@@ -1113,7 +995,7 @@ a.appspop:hover {
   text-shadow: none;
 }
 
-/* line 77, ../sass/_fellows.scss */
+/* line 76, ../sass/_fellows.scss */
 .people ul,
 .fellowship ul {
   font-weight: 300;
@@ -1477,7 +1359,7 @@ li {
     left: 30px;
   }
 
-  /* line 68, ../sass/_media.scss */
+  /* line 67, ../sass/_media.scss */
   .sidebartitle h1,
   .fellowship .yeartitle h1 {
     font-size: 60px;
@@ -1488,7 +1370,7 @@ li {
     margin-left: 30px;
   }
 
-  /* line 77, ../sass/_media.scss */
+  /* line 76, ../sass/_media.scss */
   .sidebartitle h2,
   .fellowship .yeartitle h2 {
     font-size: 24px;
@@ -1506,7 +1388,7 @@ li {
     width: 100%;
   }
 
-  /* line 92, ../sass/_media.scss */
+  /* line 91, ../sass/_media.scss */
   .bios h5,
   .network .bios h5 {
     font-size: 17px;
@@ -1539,7 +1421,7 @@ li {
     padding: 20px 60px 0 30px;
   }
 
-  /* line 118, ../sass/_media.scss */
+  /* line 117, ../sass/_media.scss */
   .carousel-control.right,
   .carousel-control.left {
     font-size: 60px;
@@ -1579,7 +1461,7 @@ li {
     line-height: 54px;
   }
 
-  /* line 154, ../sass/_media.scss */
+  /* line 153, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: fixed;
@@ -1598,17 +1480,12 @@ li {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 175, ../sass/_media.scss */
+  /* line 173, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
     margin-right: 0px;
     margin-left: 0px;
-  }
-
-  /* line 186, ../sass/_media.scss */
-  .page.story {
-    padding-left: 20px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 480px) {
@@ -1618,6 +1495,12 @@ li {
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* line 186, ../sass/_media.scss */
+  .page.story {
+    padding-left: 20px;
+  }
+}
 /*****************************************************************************/
 /*
 /* Map styling
@@ -1803,18 +1686,18 @@ li {
 /* line 155, ../sass/_map.scss */
 .mapDropdown a:hover {
   background: #fff;
-  -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
-  -moz-box-shadow: 0px 0px 10px 5px #cccccc;
-  box-shadow: 0px 0px 10px 5px #cccccc;
+  -moz-box-shadow: 0px 0px 10px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 10px 5px #ccc;
+  box-shadow: 0px 0px 10px 5px #ccc;
   color: #000;
 }
 /* line 162, ../sass/_map.scss */
 .mapDropdown .gray.open a {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 /* line 165, ../sass/_map.scss */
 .mapDropdown .gray.open p.dropdown-menu {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 /* line 169, ../sass/_map.scss */
 .mapDropdown .open a {
@@ -1837,7 +1720,7 @@ li {
 }
 /* line 187, ../sass/_map.scss */
 .mapDropdown.gray a {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 
 /* line 191, ../sass/_map.scss */
@@ -1974,7 +1857,7 @@ li {
   text-align: left;
 }
 
-/* line 19, ../sass/_press.scss */
+/* line 11, ../sass/_press.scss */
 .press .atlanticcities,
 .press .latimes,
 .press .usatoday,
@@ -1988,7 +1871,7 @@ li {
   margin-bottom: 30px;
 }
 
-/* line 30, ../sass/_press.scss */
+/* line 26, ../sass/_press.scss */
 .press .pbs:hover,
 .press .time:hover,
 .press .details:hover,
@@ -1997,7 +1880,7 @@ li {
   background-position: 0 -40px;
 }
 
-/* line 38, ../sass/_press.scss */
+/* line 34, ../sass/_press.scss */
 .press .atlanticcities:hover,
 .press .usatoday:hover,
 .press .pbs:hover,
@@ -2276,7 +2159,7 @@ a.startupspop:hover {
   color: #000;
 }
 
-/* line 60, ../sass/_getinvolved.scss */
+/* line 59, ../sass/_getinvolved.scss */
 .getinvolved a:hover,
 .companies a:hover {
   color: #C82A45;
@@ -2470,7 +2353,7 @@ iframe.twitter-share-button {
   margin: -5px 0px 0px 2px;
 }
 
-/* line 68, ../sass/_finance.scss */
+/* line 66, ../sass/_finance.scss */
 .financials .rightcol h5,
 .financials .rightcol h4,
 .financials .rightcol p {
@@ -2482,13 +2365,13 @@ iframe.twitter-share-button {
   line-height: 30px;
 }
 
-/* line 77, ../sass/_finance.scss */
+/* line 76, ../sass/_finance.scss */
 .expenses a:hover,
 .revenues a:hover {
   border-bottom: none;
 }
 
-/* line 82, ../sass/_finance.scss */
+/* line 81, ../sass/_finance.scss */
 .expenses .popover-content,
 .revenues .popover-content {
   font-size: 14px;
@@ -2499,13 +2382,13 @@ iframe.twitter-share-button {
   line-height: 22px;
 }
 
-/* line 91, ../sass/_finance.scss */
+/* line 90, ../sass/_finance.scss */
 .expensesdata,
 .revenuedata {
   cursor: pointer;
 }
 
-/* line 97, ../sass/_finance.scss */
+/* line 95, ../sass/_finance.scss */
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
@@ -2529,7 +2412,7 @@ iframe.twitter-share-button {
   background-color: #fedd44 !important;
 }
 
-/* line 116, ../sass/_finance.scss */
+/* line 115, ../sass/_finance.scss */
 .expenses.bargraph,
 .revenues.bargraph {
   margin-top: 30px;
@@ -2711,7 +2594,7 @@ iframe.twitter-share-button {
   padding-bottom: 0px;
 }
 
-/* line 175, ../sass/base.scss */
+/* line 174, ../sass/base.scss */
 .title h1,
 .title p {
   text-align: center;
@@ -2719,7 +2602,7 @@ iframe.twitter-share-button {
   text-shadow: none;
 }
 @media screen and (max-width: 480px) {
-  /* line 175, ../sass/base.scss */
+  /* line 174, ../sass/base.scss */
   .title h1,
   .title p {
     font-size: 30%;
@@ -2785,7 +2668,7 @@ iframe.twitter-share-button {
   margin: 0px;
 }
 
-/* line 229, ../sass/base.scss */
+/* line 226, ../sass/base.scss */
 .morefellows,
 .themes,
 .community,
@@ -2817,7 +2700,7 @@ iframe.twitter-share-button {
 /* line 251, ../sass/base.scss */
 #content .navbar-inverse .navbar-inner {
   background-color: rgba(255, 255, 255, 0.4);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
   border-color: #bcbcbc;
 }
 
@@ -2841,7 +2724,7 @@ iframe.twitter-share-button {
   border-bottom: none;
 }
 
-/* line 274, ../sass/base.scss */
+/* line 272, ../sass/base.scss */
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
@@ -2849,7 +2732,7 @@ iframe.twitter-share-button {
   line-height: 200px;
 }
 
-/* line 279, ../sass/base.scss */
+/* line 278, ../sass/base.scss */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   color: #000;
@@ -2857,7 +2740,7 @@ iframe.twitter-share-button {
 
 /* line 282, ../sass/base.scss */
 .navbar-inverse .nav > li > a {
-  color: #777;
+  color: #444;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
@@ -2878,7 +2761,7 @@ iframe.twitter-share-button {
   margin: 100px auto 0px;
 }
 
-/* line 303, ../sass/base.scss */
+/* line 302, ../sass/base.scss */
 #loading h1,
 #loading p {
   text-align: center;
@@ -3011,12 +2894,12 @@ input[type="text"] {
   clear: both;
 }
 
-/* line 421, ../sass/base.scss */
+/* line 420, ../sass/base.scss */
 .page.quote,
 .page.story {
   overflow-x: hidden;
   position: relative;
-  padding: 250px 80px 200px 130px;
+  padding: 250px 80px 0px 130px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   /* Firefox */
@@ -3024,25 +2907,32 @@ input[type="text"] {
   /* Safari */
   background-color: rgba(0, 0, 0, 0.4);
 }
+@media screen and (max-height: 900px) {
+  /* line 420, ../sass/base.scss */
+  .page.quote,
+  .page.story {
+    padding: 150px 80px 200px 130px;
+  }
+}
 
-/* line 431, ../sass/base.scss */
+/* line 434, ../sass/base.scss */
 .page.story {
   /*padding: 80px 80px 100px;*/
 }
 
-/* line 435, ../sass/base.scss */
+/* line 438, ../sass/base.scss */
 .page.story.nosidebar {
   padding: 0px;
 }
 
-/* line 441, ../sass/base.scss */
+/* line 443, ../sass/base.scss */
 .page.quote h1,
 .page.story h1 {
   color: white;
-  font-size: 120px;
+  font-size: 90px;
   letter-spacing: 1px;
   list-style: none;
-  line-height: 120px;
+  line-height: 90px;
   text-shadow: 2px 2px 5px black;
   margin-left: -250px;
   margin-right: -250px;
@@ -3050,23 +2940,23 @@ input[type="text"] {
   padding-top: 0px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 441, ../sass/base.scss */
+  /* line 443, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 80px;
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 441, ../sass/base.scss */
+  /* line 443, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 50px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 441, ../sass/base.scss */
+  /* line 443, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
     padding-top: 30px;
@@ -3077,34 +2967,34 @@ input[type="text"] {
   }
 }
 
-/* line 469, ../sass/base.scss */
+/* line 472, ../sass/base.scss */
 .page.quote h1 {
   margin-bottom: 0px;
 }
 
-/* line 473, ../sass/base.scss */
+/* line 476, ../sass/base.scss */
 .page.quote h3 {
   text-shadow: 2px 2px 5px black;
-  margin-left: -250px;
+  /*margin-left: -250px;
   margin-right: -250px;
-  padding: 0 250px;
+  padding: 0 250px;*/
 }
 @media screen and (max-width: 1200px) {
-  /* line 473, ../sass/base.scss */
+  /* line 476, ../sass/base.scss */
   .page.quote h3 {
     font-size: 26px;
     line-height: 33px;
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 473, ../sass/base.scss */
+  /* line 476, ../sass/base.scss */
   .page.quote h3 {
     font-size: 20px;
     line-height: 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 473, ../sass/base.scss */
+  /* line 476, ../sass/base.scss */
   .page.quote h3 {
     text-align: left;
     font-size: 20px;
@@ -3112,7 +3002,7 @@ input[type="text"] {
   }
 }
 
-/* line 493, ../sass/base.scss */
+/* line 496, ../sass/base.scss */
 .page.story {
   position: relative;
   width: 100%;
@@ -3121,121 +3011,121 @@ input[type="text"] {
   padding-left: 400px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-                               /* Firefox
+                            /* Firefox
 -webkit-box-sizing:border-box; /* Safari */
 }
 
-/* line 505, ../sass/base.scss */
+/* line 508, ../sass/base.scss */
 .cityLeaders iframe {
   display: block;
   margin-top: 50px;
   min-height: 300px;
 }
 
-/* line 511, ../sass/base.scss */
+/* line 514, ../sass/base.scss */
 .quote .bigtext h1 {
   font-size: 73px;
   text-transform: uppercase;
 }
 
-/* line 516, ../sass/base.scss */
+/* line 519, ../sass/base.scss */
 .themes .span10 {
   margin-left: 10px;
 }
 
-/* line 520, ../sass/base.scss */
+/* line 523, ../sass/base.scss */
 .themes .headline {
   font-size: 50px;
   margin-top: 0px;
 }
 
-/* line 525, ../sass/base.scss */
+/* line 528, ../sass/base.scss */
 .bioleft {
   padding-right: 15px;
 }
 
-/* line 529, ../sass/base.scss */
+/* line 532, ../sass/base.scss */
 .bioleft p {
   text-align: right;
 }
 
-/* line 534, ../sass/base.scss */
+/* line 536, ../sass/base.scss */
 .bioright,
 .apps .bioright {
   padding-left: 15px;
 }
 
-/* line 538, ../sass/base.scss */
+/* line 541, ../sass/base.scss */
 .bios {
   margin: 35px auto;
   float: left;
 }
 
-/* line 544, ../sass/base.scss */
+/* line 546, ../sass/base.scss */
 .bios h3,
 .network .bios p {
   margin-top: -6px;
 }
 
-/* line 548, ../sass/base.scss */
+/* line 551, ../sass/base.scss */
 .bios h5 {
   margin-bottom: 15px;
 }
 
-/* line 552, ../sass/base.scss */
+/* line 555, ../sass/base.scss */
 .bios p {
   margin-top: 0px;
 }
 
-/* line 556, ../sass/base.scss */
+/* line 559, ../sass/base.scss */
 .bios.right .span6 {
   padding-left: 20px;
 }
 
-/* line 560, ../sass/base.scss */
+/* line 563, ../sass/base.scss */
 .bios.right .span6.bioleft {
   padding-left: 0px;
   margin-left: 0px;
 }
 
-/* line 565, ../sass/base.scss */
+/* line 568, ../sass/base.scss */
 .bios .url {
   font-size: 19px;
   font-weight: bold;
   text-align: left;
 }
 
-/* line 572, ../sass/base.scss */
+/* line 574, ../sass/base.scss */
 .moreapps,
 .captains {
   clear: both;
   float: left;
 }
 
-/* line 577, ../sass/base.scss */
+/* line 580, ../sass/base.scss */
 .moreapps h3 {
   margin-top: 1    0px;
 }
 
-/* line 581, ../sass/base.scss */
+/* line 584, ../sass/base.scss */
 .moreapps img {
   margin-top: 30px;
 }
 
-/* line 586, ../sass/base.scss */
+/* line 589, ../sass/base.scss */
 .market img {
   margin: 0px 0px;
   display: block;
 }
 
-/* line 591, ../sass/base.scss */
+/* line 594, ../sass/base.scss */
 .thanks h2 {
   text-align: center;
   text-transform: uppercase;
   margin: 0px auto 30px;
 }
 
-/* line 597, ../sass/base.scss */
+/* line 600, ../sass/base.scss */
 .thanks img {
   max-height: 60px;
   max-width: 242px;
@@ -3243,35 +3133,35 @@ input[type="text"] {
   display: block;
 }
 
-/* line 604, ../sass/base.scss */
+/* line 607, ../sass/base.scss */
 .cfa {
   /*margin-bottom: 200px;*/
 }
 
-/* line 608, ../sass/base.scss */
+/* line 611, ../sass/base.scss */
 .cfa h1 {
   text-align: right;
 }
 
-/* line 612, ../sass/base.scss */
+/* line 615, ../sass/base.scss */
 .cfa p {
   font-size: 18px;
   line-height: 30px;
 }
 
-/* line 617, ../sass/base.scss */
+/* line 620, ../sass/base.scss */
 .cfa a {
   font-weight: 300;
 }
 
-/* line 621, ../sass/base.scss */
+/* line 624, ../sass/base.scss */
 .people ul {
   float: left;
   line-height: 26px;
   margin: 0px 50px 50px 0px;
 }
 
-/* line 629, ../sass/base.scss */
+/* line 630, ../sass/base.scss */
 .people .google,
 .people .knight,
 .people .on {
@@ -3279,21 +3169,21 @@ input[type="text"] {
   height: 40px;
 }
 
-/* line 634, ../sass/base.scss */
+/* line 637, ../sass/base.scss */
 .people .google {
   background-image: url("../img/google.png");
   background-size: 105px;
   width: 105px;
 }
 
-/* line 640, ../sass/base.scss */
+/* line 643, ../sass/base.scss */
 .people .knight {
   background-image: url("../img/knight.png");
   background-size: 185px;
   width: 185px;
 }
 
-/* line 646, ../sass/base.scss */
+/* line 649, ../sass/base.scss */
 .people .on {
   background-image: url("../img/on.png");
   background-size: 135px;
@@ -3303,12 +3193,12 @@ input[type="text"] {
 /*
 Temporary css for image placeholders
 */
-/* line 656, ../sass/base.scss */
+/* line 659, ../sass/base.scss */
 .ecosystem h1 {
   margin-top: 70px;
 }
 
-/* line 660, ../sass/base.scss */
+/* line 663, ../sass/base.scss */
 .ecosystem h2 {
   font-size: 27px;
   font-weight: 300;
@@ -3316,12 +3206,12 @@ Temporary css for image placeholders
   margin-top: 58px;
 }
 
-/* line 667, ../sass/base.scss */
+/* line 670, ../sass/base.scss */
 .apps h3 {
   margin-bottom: 10px;
 }
 
-/* line 671, ../sass/base.scss */
+/* line 674, ../sass/base.scss */
 .companies {
   background-color: rgba(255, 255, 255, 0.75);
   color: #000;
@@ -3331,77 +3221,77 @@ Temporary css for image placeholders
   height: 345px;
 }
 
-/* line 680, ../sass/base.scss */
+/* line 683, ../sass/base.scss */
 .companies img {
   width: 82%;
   padding: 40px 0px 0px 5em;
 }
 
-/* line 685, ../sass/base.scss */
+/* line 688, ../sass/base.scss */
 .companies .companyblurb {
   float: left;
   padding: 40px 60px 0 0;
   text-align: left;
 }
 
-/* line 691, ../sass/base.scss */
+/* line 694, ../sass/base.scss */
 .companies .companyblurb img {
   width: 40%;
   padding-top: 0px;
 }
 
-/* line 696, ../sass/base.scss */
+/* line 699, ../sass/base.scss */
 .companies h5 {
   text-transform: uppercase;
   font-weight: 700;
   font-style: normal;
 }
 
-/* line 702, ../sass/base.scss */
+/* line 705, ../sass/base.scss */
 .companies p {
   font-size: 16px;
   line-height: 22px;
 }
 
-/* line 707, ../sass/base.scss */
+/* line 710, ../sass/base.scss */
 .companies a {
   color: #000;
 }
 
-/* line 711, ../sass/base.scss */
+/* line 714, ../sass/base.scss */
 .companies .contact {
   font-size: 16px;
 }
 
-/* line 715, ../sass/base.scss */
+/* line 718, ../sass/base.scss */
 .tagline {
   font-style: italic;
   font-weight: 700;
 }
 
-/* line 720, ../sass/base.scss */
+/* line 723, ../sass/base.scss */
 img.progicons {
   width: 100%;
   margin-top: -7px;
 }
 
-/* line 725, ../sass/base.scss */
+/* line 728, ../sass/base.scss */
 .market img.progicons {
   margin: 0;
 }
 
-/* line 729, ../sass/base.scss */
+/* line 732, ../sass/base.scss */
 .community img {
   margin: 0;
   display: block;
 }
 
-/* line 734, ../sass/base.scss */
+/* line 737, ../sass/base.scss */
 .community p {
   margin: 0px;
 }
 
-/* line 739, ../sass/base.scss */
+/* line 742, ../sass/base.scss */
 .community .people ul {
   margin: 0px 0px 8px 0px;
 }
@@ -3414,23 +3304,23 @@ img.progicons {
   border-bottom: none;
 }
 
-/* line 751, ../sass/base.scss */
+/* line 754, ../sass/base.scss */
 .popover {
   border-radius: 0px;
 }
 
-/* line 755, ../sass/base.scss */
+/* line 758, ../sass/base.scss */
 .popover-content {
   margin-top: 0px;
   padding-top: 0px;
 }
 
-/* line 759, ../sass/base.scss */
+/* line 762, ../sass/base.scss */
 .popovertopshim {
   margin-top: 50px;
 }
 
-/* line 764, ../sass/base.scss */
+/* line 766, ../sass/base.scss */
 .popover-title,
 .popover-content {
   font-weight: 300;
@@ -3438,7 +3328,7 @@ img.progicons {
   text-shadow: none;
 }
 
-/* line 771, ../sass/base.scss */
+/* line 773, ../sass/base.scss */
 .popover-title,
 .popover-title {
   font-weight: 700;
@@ -3448,14 +3338,14 @@ img.progicons {
   padding-bottom: 0px;
 }
 
-/* line 780, ../sass/base.scss */
+/* line 782, ../sass/base.scss */
 .captains .popover-content,
 .morefellows .popover-content {
   font-weight: 300;
   padding-top: 0px;
 }
 
-/* line 806, ../sass/base.scss */
+/* line 788, ../sass/base.scss */
 .jeff,
 .andrew,
 .bret,
@@ -3486,127 +3376,127 @@ img.progicons {
   margin: 20px 20px 0 0;
 }
 
-/* line 815, ../sass/base.scss */
+/* line 818, ../sass/base.scss */
 .andrew {
   background-position: 0 0px;
 }
 
-/* line 819, ../sass/base.scss */
+/* line 822, ../sass/base.scss */
 .bret {
   background-position: 0 -100px;
 }
 
-/* line 823, ../sass/base.scss */
+/* line 826, ../sass/base.scss */
 .burt {
   background-position: 0 -200px;
 }
 
-/* line 827, ../sass/base.scss */
+/* line 830, ../sass/base.scss */
 .chip {
   background-position: 0 -300px;
 }
 
-/* line 831, ../sass/base.scss */
+/* line 834, ../sass/base.scss */
 .chris {
   background-position: 0 -400px;
 }
 
-/* line 835, ../sass/base.scss */
+/* line 838, ../sass/base.scss */
 .chriswhit {
   background-position: 0 -500px;
 }
 
-/* line 839, ../sass/base.scss */
+/* line 842, ../sass/base.scss */
 .dave {
   background-position: 0 -600px;
 }
 
-/* line 843, ../sass/base.scss */
+/* line 846, ../sass/base.scss */
 .emma {
   background-position: 0 -700px;
 }
 
-/* line 847, ../sass/base.scss */
+/* line 850, ../sass/base.scss */
 .harlan {
   background-position: 0 -800px;
 }
 
-/* line 851, ../sass/base.scss */
+/* line 854, ../sass/base.scss */
 .jason {
   background-position: 0 -900px;
 }
 
-/* line 855, ../sass/base.scss */
+/* line 858, ../sass/base.scss */
 .jeff {
   background-position: 0 -1000px;
 }
 
-/* line 859, ../sass/base.scss */
+/* line 862, ../sass/base.scss */
 .jon {
   background-position: 0 -1100px;
 }
 
-/* line 863, ../sass/base.scss */
+/* line 866, ../sass/base.scss */
 .kevin {
   background-position: 0 -1200px;
 }
 
-/* line 867, ../sass/base.scss */
+/* line 870, ../sass/base.scss */
 .michelle {
   background-position: 0 -1300px;
 }
 
-/* line 871, ../sass/base.scss */
+/* line 874, ../sass/base.scss */
 .scott {
   background-position: 0 -1400px;
 }
 
-/* line 875, ../sass/base.scss */
+/* line 878, ../sass/base.scss */
 .steve {
   background-position: 0 -1500px;
 }
 
-/* line 879, ../sass/base.scss */
+/* line 882, ../sass/base.scss */
 .eddiet {
   background-position: 0 -1600px;
 }
 
-/* line 883, ../sass/base.scss */
+/* line 886, ../sass/base.scss */
 .noel {
   background-position: 0 -1700px;
 }
 
-/* line 887, ../sass/base.scss */
+/* line 890, ../sass/base.scss */
 .jasonl {
   background-position: 0 -1800px;
 }
 
-/* line 891, ../sass/base.scss */
+/* line 894, ../sass/base.scss */
 .chase {
   background-position: 0 -1900px;
 }
 
-/* line 895, ../sass/base.scss */
+/* line 898, ../sass/base.scss */
 .mevans {
   background-position: 0 -2000px;
 }
 
-/* line 899, ../sass/base.scss */
+/* line 902, ../sass/base.scss */
 .market h4 {
   margin-top: 40px;
 }
 
-/* line 903, ../sass/base.scss */
+/* line 906, ../sass/base.scss */
 .market .stats {
   margin-bottom: 10px;
 }
 
-/* line 907, ../sass/base.scss */
+/* line 910, ../sass/base.scss */
 .market .bios {
   margin-top: 30px;
 }
 
-/* line 911, ../sass/base.scss */
+/* line 914, ../sass/base.scss */
 .market .bios.right.bioquote {
   margin-top: 0px;
 }
@@ -3646,69 +3536,82 @@ img.progicons {
   text-align: left;
 }
 
-/* line 947, ../sass/base.scss */
+/* line 950, ../sass/base.scss */
 .market .stats h4 {
   margin-top: 20px;
 }
 
-/* line 951, ../sass/base.scss */
+/* line 954, ../sass/base.scss */
 .market h4.process {
   margin-top: 50px;
 }
 
-/* line 955, ../sass/base.scss */
+/* line 958, ../sass/base.scss */
 .sharebutton {
-  position: fixed;
-  bottom: 10px;
-  left: 30px;
-  z-index: 100;
   height: 70px;
 }
 
-/* line 963, ../sass/base.scss */
+/* line 962, ../sass/base.scss */
 .sharebutton iframe {
   min-height: auto;
 }
 
-/* line 967, ../sass/base.scss */
+/*
+  next meetup box
+*/
+/* line 969, ../sass/base.scss */
 #next-meetup {
   text-align: center;
   margin-top: 40px;
 }
-/* line 970, ../sass/base.scss */
+/* line 972, ../sass/base.scss */
 #next-meetup #date {
   display: inline-block;
   text-align: center;
   border: 3px solid #fff;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   color: #eee;
 }
-/* line 978, ../sass/base.scss */
+/* line 980, ../sass/base.scss */
 #next-meetup #meetup-details {
-  background: rgba(255, 255, 255, 0.8);
+  background: white;
   width: 500px;
   margin: 0 auto;
+  margin-top: 15px;
   padding: 10px;
   color: #333;
   text-align: left;
 }
-/* line 985, ../sass/base.scss */
+/* line 988, ../sass/base.scss */
 #next-meetup #meetup-details #title {
   margin-top: 0;
 }
-/* line 988, ../sass/base.scss */
+/* line 990, ../sass/base.scss */
+#next-meetup #meetup-details #title em {
+  font-size: smaller;
+}
+/* line 994, ../sass/base.scss */
 #next-meetup #meetup-details #venue {
   text-transform: none;
   line-height: 26px;
 }
-/* line 992, ../sass/base.scss */
+/* line 998, ../sass/base.scss */
 #next-meetup #meetup-details #description {
   line-height: 22px;
 }
 @media (max-width: 767px) {
-  /* line 978, ../sass/base.scss */
+  /* line 980, ../sass/base.scss */
   #next-meetup #meetup-details {
     width: 90%;
   }
+}
+
+/*
+ since we don't have scorlling content (single page vs. scrolling page in original fork)
+ set these to 100% height and remove the javascript that achieved this
+*/
+/* line 1011, ../sass/base.scss */
+.site, #content, #page, .homeQuote {
+  height: 100%;
 }
