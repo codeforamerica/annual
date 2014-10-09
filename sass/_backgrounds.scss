@@ -13,103 +13,15 @@
 
 }
 
-.pagebg.imagestreetmixback{
-  background: url("../img/streetmixback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/streetmixback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagelivesback{
-  background: url("../img/livesback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/livesback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagepromptlyback{
-  background: url("../img/promptlyback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/promptlyback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagefellowsback{
-  background: url("../img/fellowsback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellowsback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagebrigadeback{
-  background: url("../img/brigadeback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/brigadeback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagestartupback{
-  background: url("../img/startupback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/startupback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagepeerback{
-  background: url("../img/peerback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/peerback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagecodeforallback{
-  background: url("../img/codeforallback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
-}
-.pagebg.imagethanksback{
-  background: url("../img/thanksback.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/thanksback.jpg', sizingMethod='scale')";
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    background: #7ab5d6;
-  }
-}
-.pagebg.imageofficesummit{
-  background: url("../img/officesummit.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
-  @media screen and (max-width: 1024px) {
-    background: url("../img/officesummit_small.jpg") no-repeat;
-    background-size: 1024px;
-  }
-  //ipad
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    background: #7ab5d6;
-  }
-}
-.pagebg.imageopen-closed{
-  background: url("../img/open-closed.jpg") no-repeat;
-  background-size:cover;
-  background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
-  @media screen and (max-width: 1024px) {
-    background: url("../img/open-closed_small.jpg") no-repeat;
-    background-size: 1024px;
-  }
-  //ipad
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    background: #7ab5d6;
-  }
-}
 .pagebg.imagegood_governance{
+  background-color: #7ab5d6;
   background: url("../img/prinzipalmarkt15-grau.jpg") no-repeat;
   background-size:cover;
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/prinzipalmarkt15-grau.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
     background: url("../img/prinzipalmarkt15-grau-1024.jpg") no-repeat;
-    background-size: 1024px;
-  }
-  //ipad
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    background: #7ab5d6;
+    background-size: cover;
   }
 }
 
