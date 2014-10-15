@@ -4,6 +4,7 @@ GEM
     blankslate (2.1.2.4)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chunky_png (1.3.1)
     classifier (1.3.4)
       fast-stemmer (>= 1.0.0)
     coffee-script (2.2.0)
@@ -11,9 +12,14 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     colorator (0.1)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     execjs (2.2.0)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
+    fssm (0.2.10)
     jekyll (2.0.3)
       classifier (~> 1.3)
       colorator (~> 0.1)
@@ -32,6 +38,7 @@ GEM
     jekyll-sass-converter (1.0.0)
       sass (~> 3.2)
     kramdown (1.3.3)
+    libv8 (3.16.14.7)
     liquid (2.5.5)
     listen (2.7.7)
       celluloid (>= 0.15.2)
@@ -49,8 +56,12 @@ GEM
       ffi (>= 0.5.0)
     rdiscount (2.1.7.1)
     redcarpet (3.1.2)
+    ref (1.0.5)
     safe_yaml (1.0.3)
-    sass (3.3.8)
+    sass (3.2.19)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     timers (1.1.0)
     toml (0.1.1)
       parslet (~> 1.5.0)
@@ -60,5 +71,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   jekyll
   rdiscount
+  sass (~> 3.2.0)
+  therubyracer
