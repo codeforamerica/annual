@@ -7,6 +7,7 @@ $(function(){
       description = result.description;
       date = result.time;
       venue = result.venue_name;
+      debugger
       if(venue) {
         latLng = [result.lat, result.lon];
       }
@@ -14,6 +15,7 @@ $(function(){
       $('#next-meetup #title').html(title);
       $('#next-meetup #venue').html(venue);
       $('#next-meetup #description').html(description);
+      $('#next-meetup #rvsp').attr('href',result.meetup_url);
 
     }
   });
