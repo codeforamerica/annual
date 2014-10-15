@@ -982,7 +982,7 @@ img.progicons {
     width: 500px;
     margin: 0 auto;
     margin-top: 15px;
-    padding: 10px;
+    padding: 10px 10px 20px;
     color: #333;
     text-align: left;
     #title {
@@ -997,6 +997,16 @@ img.progicons {
     }
     #description {
       line-height: 22px;
+    }
+    #rvsp-button {
+      width: 240px;
+      margin: 10px auto;
+    }
+    #rvsp {
+      padding: 10px;
+      background: #ce5a4e;
+      border: 1px solid #ce5a4c;
+      width: 140px;
     }
     @media (max-width: 767px) {
       width: 90%;

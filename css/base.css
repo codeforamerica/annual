@@ -18,7 +18,7 @@ a.appspop:hover {
   border: none;
 }
 
-/* line 20, ../sass/_application-logos.scss */
+/* line 47, ../sass/_application-logos.scss */
 .srtracker,
 .fm,
 .labs,
@@ -622,14 +622,14 @@ a.appspop:hover {
   transition: 0.6s ease-in-out left;
 }
 
-/* line 30, ../sass/_carousel.scss */
+/* line 31, ../sass/_carousel.scss */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
 }
 
-/* line 36, ../sass/_carousel.scss */
+/* line 38, ../sass/_carousel.scss */
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -641,7 +641,7 @@ a.appspop:hover {
   left: 0;
 }
 
-/* line 46, ../sass/_carousel.scss */
+/* line 47, ../sass/_carousel.scss */
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
@@ -659,7 +659,7 @@ a.appspop:hover {
   left: -100%;
 }
 
-/* line 61, ../sass/_carousel.scss */
+/* line 62, ../sass/_carousel.scss */
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
   left: 0;
@@ -675,7 +675,7 @@ a.appspop:hover {
   left: 100%;
 }
 
-/* line 74, ../sass/_carousel.scss */
+/* line 75, ../sass/_carousel.scss */
 .apps .carousel-control,
 .carousel-control {
   /*  position: absolute;
@@ -700,7 +700,7 @@ a.appspop:hover {
   left: auto;
 }
 
-/* line 95, ../sass/_carousel.scss */
+/* line 96, ../sass/_carousel.scss */
 .carousel-control:hover,
 .carousel-control:focus {
   color: #ffffff;
@@ -870,7 +870,7 @@ a.appspop:hover {
   text-shadow: none;
 }
 
-/* line 76, ../sass/_fellows.scss */
+/* line 77, ../sass/_fellows.scss */
 .people ul,
 .fellowship ul {
   font-weight: 300;
@@ -1234,7 +1234,7 @@ li {
     left: 30px;
   }
 
-  /* line 67, ../sass/_media.scss */
+  /* line 68, ../sass/_media.scss */
   .sidebartitle h1,
   .fellowship .yeartitle h1 {
     font-size: 60px;
@@ -1245,7 +1245,7 @@ li {
     margin-left: 30px;
   }
 
-  /* line 76, ../sass/_media.scss */
+  /* line 77, ../sass/_media.scss */
   .sidebartitle h2,
   .fellowship .yeartitle h2 {
     font-size: 24px;
@@ -1263,7 +1263,7 @@ li {
     width: 100%;
   }
 
-  /* line 91, ../sass/_media.scss */
+  /* line 92, ../sass/_media.scss */
   .bios h5,
   .network .bios h5 {
     font-size: 17px;
@@ -1296,7 +1296,7 @@ li {
     padding: 20px 60px 0 30px;
   }
 
-  /* line 117, ../sass/_media.scss */
+  /* line 118, ../sass/_media.scss */
   .carousel-control.right,
   .carousel-control.left {
     font-size: 60px;
@@ -1336,7 +1336,7 @@ li {
     line-height: 54px;
   }
 
-  /* line 153, ../sass/_media.scss */
+  /* line 154, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: fixed;
@@ -1355,12 +1355,17 @@ li {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 173, ../sass/_media.scss */
+  /* line 175, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
     margin-right: 0px;
     margin-left: 0px;
+  }
+
+  /* line 186, ../sass/_media.scss */
+  .page.story {
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 480px) {
@@ -1370,12 +1375,6 @@ li {
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 186, ../sass/_media.scss */
-  .page.story {
-    padding-left: 20px;
-  }
-}
 /*****************************************************************************/
 /*
 /* Map styling
@@ -1561,18 +1560,18 @@ li {
 /* line 155, ../sass/_map.scss */
 .mapDropdown a:hover {
   background: #fff;
-  -moz-box-shadow: 0px 0px 10px 5px #ccc;
-  -webkit-box-shadow: 0px 0px 10px 5px #ccc;
-  box-shadow: 0px 0px 10px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
+  -moz-box-shadow: 0px 0px 10px 5px #cccccc;
+  box-shadow: 0px 0px 10px 5px #cccccc;
   color: #000;
 }
 /* line 162, ../sass/_map.scss */
 .mapDropdown .gray.open a {
-  color: #6D6E71;
+  color: #6d6e71;
 }
 /* line 165, ../sass/_map.scss */
 .mapDropdown .gray.open p.dropdown-menu {
-  color: #6D6E71;
+  color: #6d6e71;
 }
 /* line 169, ../sass/_map.scss */
 .mapDropdown .open a {
@@ -1595,7 +1594,7 @@ li {
 }
 /* line 187, ../sass/_map.scss */
 .mapDropdown.gray a {
-  color: #6D6E71;
+  color: #6d6e71;
 }
 
 /* line 191, ../sass/_map.scss */
@@ -1732,7 +1731,7 @@ li {
   text-align: left;
 }
 
-/* line 11, ../sass/_press.scss */
+/* line 19, ../sass/_press.scss */
 .press .atlanticcities,
 .press .latimes,
 .press .usatoday,
@@ -1746,7 +1745,7 @@ li {
   margin-bottom: 30px;
 }
 
-/* line 26, ../sass/_press.scss */
+/* line 30, ../sass/_press.scss */
 .press .pbs:hover,
 .press .time:hover,
 .press .details:hover,
@@ -1755,7 +1754,7 @@ li {
   background-position: 0 -40px;
 }
 
-/* line 34, ../sass/_press.scss */
+/* line 38, ../sass/_press.scss */
 .press .atlanticcities:hover,
 .press .usatoday:hover,
 .press .pbs:hover,
@@ -2034,7 +2033,7 @@ a.startupspop:hover {
   color: #000;
 }
 
-/* line 59, ../sass/_getinvolved.scss */
+/* line 60, ../sass/_getinvolved.scss */
 .getinvolved a:hover,
 .companies a:hover {
   color: #C82A45;
@@ -2228,7 +2227,7 @@ iframe.twitter-share-button {
   margin: -5px 0px 0px 2px;
 }
 
-/* line 66, ../sass/_finance.scss */
+/* line 68, ../sass/_finance.scss */
 .financials .rightcol h5,
 .financials .rightcol h4,
 .financials .rightcol p {
@@ -2240,13 +2239,13 @@ iframe.twitter-share-button {
   line-height: 30px;
 }
 
-/* line 76, ../sass/_finance.scss */
+/* line 77, ../sass/_finance.scss */
 .expenses a:hover,
 .revenues a:hover {
   border-bottom: none;
 }
 
-/* line 81, ../sass/_finance.scss */
+/* line 82, ../sass/_finance.scss */
 .expenses .popover-content,
 .revenues .popover-content {
   font-size: 14px;
@@ -2257,13 +2256,13 @@ iframe.twitter-share-button {
   line-height: 22px;
 }
 
-/* line 90, ../sass/_finance.scss */
+/* line 91, ../sass/_finance.scss */
 .expensesdata,
 .revenuedata {
   cursor: pointer;
 }
 
-/* line 95, ../sass/_finance.scss */
+/* line 97, ../sass/_finance.scss */
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
@@ -2287,7 +2286,7 @@ iframe.twitter-share-button {
   background-color: #fedd44 !important;
 }
 
-/* line 115, ../sass/_finance.scss */
+/* line 116, ../sass/_finance.scss */
 .expenses.bargraph,
 .revenues.bargraph {
   margin-top: 30px;
@@ -2469,7 +2468,7 @@ iframe.twitter-share-button {
   padding-bottom: 0px;
 }
 
-/* line 174, ../sass/base.scss */
+/* line 175, ../sass/base.scss */
 .title h1,
 .title p {
   text-align: center;
@@ -2477,7 +2476,7 @@ iframe.twitter-share-button {
   text-shadow: none;
 }
 @media screen and (max-width: 480px) {
-  /* line 174, ../sass/base.scss */
+  /* line 175, ../sass/base.scss */
   .title h1,
   .title p {
     font-size: 30%;
@@ -2543,7 +2542,7 @@ iframe.twitter-share-button {
   margin: 0px;
 }
 
-/* line 226, ../sass/base.scss */
+/* line 229, ../sass/base.scss */
 .morefellows,
 .themes,
 .community,
@@ -2599,7 +2598,7 @@ iframe.twitter-share-button {
   border-bottom: none;
 }
 
-/* line 272, ../sass/base.scss */
+/* line 274, ../sass/base.scss */
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
@@ -2607,7 +2606,7 @@ iframe.twitter-share-button {
   line-height: 200px;
 }
 
-/* line 278, ../sass/base.scss */
+/* line 279, ../sass/base.scss */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   color: #000;
@@ -2636,7 +2635,7 @@ iframe.twitter-share-button {
   margin: 100px auto 0px;
 }
 
-/* line 302, ../sass/base.scss */
+/* line 303, ../sass/base.scss */
 #loading h1,
 #loading p {
   text-align: center;
@@ -2769,7 +2768,7 @@ input[type="text"] {
   clear: both;
 }
 
-/* line 420, ../sass/base.scss */
+/* line 421, ../sass/base.scss */
 .page.quote,
 .page.story {
   overflow-x: hidden;
@@ -2783,7 +2782,7 @@ input[type="text"] {
   background-color: rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-height: 900px) {
-  /* line 420, ../sass/base.scss */
+  /* line 421, ../sass/base.scss */
   .page.quote,
   .page.story {
     padding: 150px 80px 200px 130px;
@@ -2800,7 +2799,7 @@ input[type="text"] {
   padding: 0px;
 }
 
-/* line 443, ../sass/base.scss */
+/* line 444, ../sass/base.scss */
 .page.quote h1,
 .page.story h1 {
   color: white;
@@ -2815,7 +2814,7 @@ input[type="text"] {
   padding-top: 0px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 443, ../sass/base.scss */
+  /* line 444, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
     font-size: 70px;
@@ -2823,7 +2822,7 @@ input[type="text"] {
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 443, ../sass/base.scss */
+  /* line 444, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
     font-size: 40px;
@@ -2831,7 +2830,7 @@ input[type="text"] {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 443, ../sass/base.scss */
+  /* line 444, ../sass/base.scss */
   .page.quote h1,
   .page.story h1 {
     padding-top: 30px;
@@ -2886,7 +2885,7 @@ input[type="text"] {
   padding-left: 400px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-                            /* Firefox
+                               /* Firefox
 -webkit-box-sizing:border-box; /* Safari */
 }
 
@@ -2924,7 +2923,7 @@ input[type="text"] {
   text-align: right;
 }
 
-/* line 536, ../sass/base.scss */
+/* line 537, ../sass/base.scss */
 .bioright,
 .apps .bioright {
   padding-left: 15px;
@@ -2936,7 +2935,7 @@ input[type="text"] {
   float: left;
 }
 
-/* line 546, ../sass/base.scss */
+/* line 547, ../sass/base.scss */
 .bios h3,
 .network .bios p {
   margin-top: -6px;
@@ -2970,7 +2969,7 @@ input[type="text"] {
   text-align: left;
 }
 
-/* line 574, ../sass/base.scss */
+/* line 575, ../sass/base.scss */
 .moreapps,
 .captains {
   clear: both;
@@ -3036,7 +3035,7 @@ input[type="text"] {
   margin: 0px 50px 50px 0px;
 }
 
-/* line 630, ../sass/base.scss */
+/* line 632, ../sass/base.scss */
 .people .google,
 .people .knight,
 .people .on {
@@ -3171,7 +3170,7 @@ img.progicons {
   margin: 0px 0px 8px 0px;
 }
 
-/* line 747, ../sass/base.scss */
+/* line 750, ../sass/base.scss */
 .captains a:hover,
 .fellowcard a:hover,
 .moreapps a:hover,
@@ -3195,7 +3194,7 @@ img.progicons {
   margin-top: 50px;
 }
 
-/* line 766, ../sass/base.scss */
+/* line 767, ../sass/base.scss */
 .popover-title,
 .popover-content {
   font-weight: 300;
@@ -3203,7 +3202,7 @@ img.progicons {
   text-shadow: none;
 }
 
-/* line 773, ../sass/base.scss */
+/* line 774, ../sass/base.scss */
 .popover-title,
 .popover-title {
   font-weight: 700;
@@ -3213,14 +3212,14 @@ img.progicons {
   padding-bottom: 0px;
 }
 
-/* line 782, ../sass/base.scss */
+/* line 783, ../sass/base.scss */
 .captains .popover-content,
 .morefellows .popover-content {
   font-weight: 300;
   padding-top: 0px;
 }
 
-/* line 788, ../sass/base.scss */
+/* line 809, ../sass/base.scss */
 .jeff,
 .andrew,
 .bret,
@@ -3376,7 +3375,7 @@ img.progicons {
   margin-top: 0px;
 }
 
-/* line 918, ../sass/base.scss */
+/* line 921, ../sass/base.scss */
 .morefellows .bios p,
 .community .bios p,
 .market .bios p,
@@ -3388,7 +3387,7 @@ img.progicons {
   margin-bottom: 10px;
 }
 
-/* line 929, ../sass/base.scss */
+/* line 932, ../sass/base.scss */
 .morefellows .bios h3,
 .community .bios h3,
 .market .bios h3,
@@ -3398,7 +3397,7 @@ img.progicons {
   text-align: left;
 }
 
-/* line 938, ../sass/base.scss */
+/* line 941, ../sass/base.scss */
 .morefellows .bios h5,
 .community .bios h5,
 .market .bios h5,
@@ -3454,7 +3453,7 @@ img.progicons {
   width: 500px;
   margin: 0 auto;
   margin-top: 15px;
-  padding: 10px;
+  padding: 10px 10px 20px;
   color: #333;
   text-align: left;
 }
@@ -3475,6 +3474,18 @@ img.progicons {
 #next-meetup #meetup-details #description {
   line-height: 22px;
 }
+/* line 1001, ../sass/base.scss */
+#next-meetup #meetup-details #rvsp-button {
+  width: 240px;
+  margin: 10px auto;
+}
+/* line 1005, ../sass/base.scss */
+#next-meetup #meetup-details #rvsp {
+  padding: 10px;
+  background: #ce5a4e;
+  border: 1px solid #ce5a4c;
+  width: 140px;
+}
 @media (max-width: 767px) {
   /* line 980, ../sass/base.scss */
   #next-meetup #meetup-details {
@@ -3486,7 +3497,7 @@ img.progicons {
  since we don't have scorlling content (single page vs. scrolling page in original fork)
  set these to 100% height and remove the javascript that achieved this
 */
-/* line 1011, ../sass/base.scss */
+/* line 1021, ../sass/base.scss */
 .site, #content, #page, .homeQuote {
   height: 100%;
 }
