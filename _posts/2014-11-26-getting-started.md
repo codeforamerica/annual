@@ -1,3 +1,7 @@
+---
+layout: blog
+title: Es geht los!
+---
 Hallo Open Data Freunde in Münster,
 
 es ist soweit, wir starten jetzt unseren Blog und berichten euch von unseren Treffen, Projekten und aktuellen Entwicklungen zu Open Data und Open Government in Münster, NRW und Deutschland.

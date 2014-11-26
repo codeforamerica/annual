@@ -7,7 +7,6 @@ $(function(){
       description = result.description;
       date = result.time;
       venue = result.venue_name;
-      debugger
       if(venue) {
         latLng = [result.lat, result.lon];
       }
