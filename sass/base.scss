@@ -1021,3 +1021,36 @@ img.progicons {
 .site, #content, #page, .homeQuote {
   height:100%;
 }
+
+
+.blog {
+  h2 a{
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  #page {
+    margin: 120px 20px 0;
+    li a {
+      font-weight: normal;
+      font-size: 1.1em;
+      text-shadow: none
+    }
+  }
+  .page {
+    padding: 20px;
+    ul {
+      li {
+        padding: 10px;
+        background: #909A92;
+      }
+    }
+  }
+  .post {
+    background: #909A92;
+    padding: 20px 40px;
+    text-shadow: none;
+    color: #fdfdfe;
+    h1, h2, h3 {
+      margin: 10px 0;
+    }
+  }
+}
