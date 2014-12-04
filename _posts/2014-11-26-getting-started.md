@@ -1,6 +1,8 @@
 ---
 layout: blog
 title: Es geht los!
+author: Mila Frerichs
+category: blog
 ---
 Hallo Open Data Freunde in Münster,
 
