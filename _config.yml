@@ -1,4 +1,10 @@
 markdown: rdiscount
 pygments: true
 paginate: 100
-permalink: pretty
+permalink: /:categories/:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "blog"
