@@ -1028,19 +1028,33 @@ img.progicons {
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
   }
   #page {
-    margin: 120px 20px 0;
+    width: 960px;
+    margin: 120px auto 0;
     li a {
       font-weight: normal;
       font-size: 1.1em;
-      text-shadow: none
+      text-shadow: none;
+      font-weight: 600;
     }
   }
   .page {
     padding: 20px;
     ul {
       li {
+        color: #444;
         padding: 10px;
         background: #909A92;
+        font-size: 15px;
+        margin-bottom: 20px;
+        text-shadow: none;
+        p {
+          font-weight: 600;
+          line-height: 30px;
+        }
+        h2 {
+          margin-top: 5px;
+          color: #323232;
+        }
       }
     }
   }
@@ -1048,9 +1062,15 @@ img.progicons {
     background: #909A92;
     padding: 20px 40px;
     text-shadow: none;
-    color: #fdfdfe;
+    color: #444;
     h1, h2, h3 {
-      margin: 10px 0;
+      margin: 15px 0;
+      color: #323232;
+    }
+    p {
+      font-weight: 600;
+      line-height: 40px;
+      margin-bottom: 50px;
     }
   }
 }

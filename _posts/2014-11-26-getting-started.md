@@ -4,8 +4,7 @@ title: Es geht los!
 author: Mila Frerichs
 category: blog
 ---
-Hallo Open Data Freunde in Münster,
-
+Hallo Open Data Freunde in Münster,<br/>
 es ist soweit, wir starten jetzt unseren Blog und berichten euch von unseren Treffen, Projekten und aktuellen Entwicklungen zu Open Data und Open Government in Münster, NRW und Deutschland.
 
 ## Wer sind wir?
