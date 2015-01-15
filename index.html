@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Code for America 2012 Annual Report
+title: Code for America 2013 Annual Report
 ---
 
 <div id="loading">
   <img src="img/CfA_logo_white.png" />
-  <h1>2012</h1> 
+  <h1>2013</h1> 
   <p>Annual Report</p>
 </div>
 
@@ -23,13 +23,13 @@ title: Code for America 2012 Annual Report
       <div class="nav-collapse collapse">
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
-          <li class="navfellowship"><a href="#">Fellowship</a></li>
-          <li class="navapps"><a href="#">Applications</a></li>
-          <li class="navbrigade"><a href="#">Brigade</a></li>
-          <li class="navaccelerator"><a href="#">Accelerator</a></li>
-          <li class="navpeernetwork"><a href="#">Peer Network</a></li>
-          <li class="navfoundersnote"><a href="#">Jen's Note</a></li>
-          <li class="navpeople"><a href="#">People</a></li>
+          <li class="navstories"><a href="#">Highlights</a></li>
+          <li class="navapps"><a href="#">Tech</a></li>
+          <li class="navnetwork"><a href="#">Network</a></li>
+          <li class="naveducate"><a href="#">Collaboration</a></li>
+          <li class="navpeople"><a href="#">Who We Are</a></li>
+          <li class="navjoinus"><a href="#">Join Us</a></li>
+          <li class="navpress"><a href="#">Press</a></li>
           <li class="navfinancials"><a href="#">Financials</a></li>
         </ul> <!-- nav -->
       </div> <!-- collapse -->
@@ -56,10 +56,13 @@ title: Code for America 2012 Annual Report
     {% for p in site.posts %}
 
     <div class="sidebartitle" >
-
-      <h1>2012</h1>
+      <h1>2013</h1>
       {% if p.title != "stats" %}
-      <h2>{{ p.title }}</h2>
+      <h2>{{ p.title }} <br/>
+      {% if p.icon %}
+        <img src="img/{{p.icon}}.png"/>
+      {% endif %}
+      </h2>
 
       {% endif %}
     </div>
@@ -71,6 +74,7 @@ title: Code for America 2012 Annual Report
   {% for p in site.posts %}
 
   {% if p.url != "/index.html" %}
+  <a name="{{ p.section }}"></a>
   <div class="page {{ p.pagetype }}" style="background-color:#{{ p.bgslide }};padding-top:{{ p.extrapadding }}" data-section="nav{{ p.section }}">
     {{ p.content | markdownify }}
     <div class="clear"></div>  
@@ -81,9 +85,11 @@ title: Code for America 2012 Annual Report
 </div>
 
 <div class="sharebutton">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://annual.codeforamerica.org" data-text="Check out @codeforamerica's 2012 Annual Report here:">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://2013.codeforamerica.org">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <div></div>
-  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fannual.codeforamerica.org&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; display:block; margin-top:5px;" allowTransparency="true"></iframe>
-  
+  <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2F2013.codeforamerica.org&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
 </div>
+
+
+
