@@ -1,0 +1,210 @@
+.pagebg{ 
+  position:fixed;
+  top:0px; 
+  bottom:0px;
+  left:0px;
+  right:0px;
+  z-index:-10;
+  display:none;
+}
+.pagebg.quote{ 
+  z-index:-5;
+}
+.pagebg.appear{ 
+
+}
+
+.pagebg.imagestreetmixback{ 
+  background: url("../img/streetmixback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/streetmixback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagelivesback{ 
+  background: url("../img/livesback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/livesback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepromptlyback{ 
+  background: url("../img/promptlyback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/promptlyback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagefellowsback{ 
+  background: url("../img/fellowsback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellowsback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagebrigadeback{ 
+  background: url("../img/brigadeback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/brigadeback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagestartupback{ 
+  background: url("../img/startupback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/startupback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepeerback{ 
+  background: url("../img/peerback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/peerback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagecodeforallback{ 
+  background: url("../img/codeforallback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/codeforallback.jpg', sizingMethod='scale')";
+}
+.pagebg.imagethanksback{ 
+  background: url("../img/thanksback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/thanksback.jpg', sizingMethod='scale')";
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
+}
+.pagebg.imageofficesummit{ 
+  background: url("../img/officesummit.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/officesummit.jpg', sizingMethod='scale')";
+  @media screen and (max-width: 1024px) {
+    background: url("../img/officesummit_small.jpg") no-repeat;
+    background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
+}
+.pagebg.imageopen-closed{ 
+  background: url("../img/open-closed.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
+  @media screen and (max-width: 1024px) {
+    background: url("../img/open-closed_small.jpg") no-repeat;
+    background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
+}
+.pagebg.imagegood_governance{ 
+  background: url("../img/good_governance.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+  @media screen and (max-width: 1024px) {
+    background: url("../img/good_governance_small.jpg") no-repeat;
+    background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
+}
+.pagebg.imageforthepeople{ 
+  background: url("../img/forthepeople.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/forthepeople.jpg', sizingMethod='scale')";
+  @media screen and (max-width: 1024px) {
+    background: url("../img/forthepeople_small.jpg") no-repeat;
+    background-size: 1024px;
+  }
+  //ipad
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    background: #7ab5d6;
+  }
+}
+
+
+.pagebg.imageiphone{ 
+  background: url("../img/iphone.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/iphone.jpg', sizingMethod='scale')";
+}
+.pagebg.imagebike{ 
+  background: url("../img/bike.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bike.jpg', sizingMethod='scale')";
+}
+.pagebg.imagechicagocityhall{ 
+  background: url("../img/chicago_cityhall.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/chicago_cityhall.jpg', sizingMethod='scale')";
+}
+.pagebg.imagebigdata2{ 
+  background: url("../img/big_data2.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data_2.jpg', sizingMethod='scale')";
+}
+.pagebg.imagefellows{ 
+  background: url("../img/fellows.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/fellows.jpg', sizingMethod='scale')";
+}
+.pagebg.imagebigdata{ 
+  background: url("../img/big_data.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/big_data.jpg', sizingMethod='scale')";
+}
+.pagebg.imagehonolulu{ 
+  background: url("../img/honolulu.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/honolulu.jpg', sizingMethod='scale')";
+}
+.pagebg.imageserena{ 
+  background: url("../img/serena.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/serena.jpg', sizingMethod='scale')";
+}
+.pagebg.imagecommunity{ 
+  background: url("../img/community.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/community.jpg', sizingMethod='scale')";
+}
+.pagebg.imagecfaoffice{ 
+  background: url("../img/cfa_office.jpg");
+  background-size:cover;
+  background-position:center;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/cfa_office.jpg', sizingMethod='scale')";
+}
+.pagebg.imageannual_report_back{ 
+  background: url("../img/annual_report_back.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/annual_report_back.jpg', sizingMethod='scale')";
+}
+.pagebg.imagepressback{ 
+  background: url("../img/pressback.jpg") no-repeat;
+  background-size:cover;
+  background-position:right;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/pressback.jpg', sizingMethod='scale')";
+}
+
+.pagebg img{ 
+  min-width:100%;
+  min-height:100%;
+}
+
+
