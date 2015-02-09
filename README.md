@@ -1,11 +1,9 @@
-Code for America Annual Report, 2013.
-
-View it live at [2013.codeforamerica.org](http://2013.codeforamerica.org).
+Port of San Diego economic impact report, 2015..
 
 Install
 -------
 
-This site is build using jekyll.
+This site was built using jekyll.
 
     sudo gem install jekyll
     sudo gem install rdiscount
@@ -13,5 +11,7 @@ This site is build using jekyll.
 Run
 ---
 
-    jekyll --server --auto
+    jekyll serve --watch
+
+Preview the generated site at: http://localhost:4000/
 
