@@ -18,7 +18,7 @@ a.appspop:hover {
   border: none;
 }
 
-/* line 47, ../sass/_application-logos.scss */
+/* line 20, ../sass/_application-logos.scss */
 .srtracker,
 .fm,
 .labs,
@@ -865,14 +865,14 @@ a.appspop:hover {
   transition: 0.6s ease-in-out left;
 }
 
-/* line 31, ../sass/_carousel.scss */
+/* line 30, ../sass/_carousel.scss */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
 }
 
-/* line 38, ../sass/_carousel.scss */
+/* line 36, ../sass/_carousel.scss */
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -884,7 +884,7 @@ a.appspop:hover {
   left: 0;
 }
 
-/* line 47, ../sass/_carousel.scss */
+/* line 46, ../sass/_carousel.scss */
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
@@ -902,7 +902,7 @@ a.appspop:hover {
   left: -100%;
 }
 
-/* line 62, ../sass/_carousel.scss */
+/* line 61, ../sass/_carousel.scss */
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
   left: 0;
@@ -918,7 +918,7 @@ a.appspop:hover {
   left: 100%;
 }
 
-/* line 75, ../sass/_carousel.scss */
+/* line 74, ../sass/_carousel.scss */
 .apps .carousel-control,
 .carousel-control {
   /*  position: absolute;
@@ -943,7 +943,7 @@ a.appspop:hover {
   left: auto;
 }
 
-/* line 96, ../sass/_carousel.scss */
+/* line 95, ../sass/_carousel.scss */
 .carousel-control:hover,
 .carousel-control:focus {
   color: #ffffff;
@@ -1113,7 +1113,7 @@ a.appspop:hover {
   text-shadow: none;
 }
 
-/* line 77, ../sass/_fellows.scss */
+/* line 76, ../sass/_fellows.scss */
 .people ul,
 .fellowship ul {
   font-weight: 300;
@@ -1466,7 +1466,7 @@ li {
     left: 30px;
   }
 
-  /* line 60, ../sass/_media.scss */
+  /* line 59, ../sass/_media.scss */
   .sidebartitle h1,
   .fellowship .yeartitle h1 {
     font-size: 60px;
@@ -1477,7 +1477,7 @@ li {
     margin-left: 30px;
   }
 
-  /* line 69, ../sass/_media.scss */
+  /* line 68, ../sass/_media.scss */
   .sidebartitle h2,
   .fellowship .yeartitle h2 {
     font-size: 24px;
@@ -1495,7 +1495,7 @@ li {
     width: 100%;
   }
 
-  /* line 84, ../sass/_media.scss */
+  /* line 83, ../sass/_media.scss */
   .bios h5,
   .network .bios h5 {
     font-size: 17px;
@@ -1503,19 +1503,19 @@ li {
 
   /* line 88, ../sass/_media.scss */
   #loading img {
-    width: 300px;
-    margin-top: 100px;
+    width: 250px;
+    margin-top: 75px;
   }
 
   /* line 93, ../sass/_media.scss */
   #loading h1 {
-    font-size: 130px;
-    margin: 50px auto 60px;
+    font-size: 48px;
+    margin: 50px auto 50px;
   }
 
   /* line 98, ../sass/_media.scss */
   #loading p {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   /* line 102, ../sass/_media.scss */
@@ -1528,7 +1528,7 @@ li {
     padding: 20px 60px 0 30px;
   }
 
-  /* line 110, ../sass/_media.scss */
+  /* line 109, ../sass/_media.scss */
   .carousel-control.right,
   .carousel-control.left {
     font-size: 60px;
@@ -1568,7 +1568,7 @@ li {
     line-height: 54px;
   }
 
-  /* line 146, ../sass/_media.scss */
+  /* line 145, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: fixed;
@@ -1587,17 +1587,12 @@ li {
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 167, ../sass/_media.scss */
+  /* line 165, ../sass/_media.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
     margin-right: 0px;
     margin-left: 0px;
-  }
-
-  /* line 178, ../sass/_media.scss */
-  .page.story {
-    padding-left: 20px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 480px) {
@@ -1607,6 +1602,12 @@ li {
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* line 178, ../sass/_media.scss */
+  .page.story {
+    padding-left: 20px;
+  }
+}
 /*****************************************************************************/
 /*
 /* Map styling
@@ -1792,18 +1793,18 @@ li {
 /* line 155, ../sass/_map.scss */
 .mapDropdown a:hover {
   background: #fff;
-  -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
-  -moz-box-shadow: 0px 0px 10px 5px #cccccc;
-  box-shadow: 0px 0px 10px 5px #cccccc;
+  -moz-box-shadow: 0px 0px 10px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 10px 5px #ccc;
+  box-shadow: 0px 0px 10px 5px #ccc;
   color: #000;
 }
 /* line 162, ../sass/_map.scss */
 .mapDropdown .gray.open a {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 /* line 165, ../sass/_map.scss */
 .mapDropdown .gray.open p.dropdown-menu {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 /* line 169, ../sass/_map.scss */
 .mapDropdown .open a {
@@ -1826,7 +1827,7 @@ li {
 }
 /* line 187, ../sass/_map.scss */
 .mapDropdown.gray a {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 
 /* line 191, ../sass/_map.scss */
@@ -1963,7 +1964,7 @@ li {
   text-align: left;
 }
 
-/* line 19, ../sass/_press.scss */
+/* line 11, ../sass/_press.scss */
 .press .atlanticcities,
 .press .latimes,
 .press .usatoday,
@@ -1977,7 +1978,7 @@ li {
   margin-bottom: 30px;
 }
 
-/* line 30, ../sass/_press.scss */
+/* line 26, ../sass/_press.scss */
 .press .pbs:hover,
 .press .time:hover,
 .press .details:hover,
@@ -1986,7 +1987,7 @@ li {
   background-position: 0 -40px;
 }
 
-/* line 38, ../sass/_press.scss */
+/* line 34, ../sass/_press.scss */
 .press .atlanticcities:hover,
 .press .usatoday:hover,
 .press .pbs:hover,
@@ -2265,7 +2266,7 @@ a.startupspop:hover {
   color: #000;
 }
 
-/* line 60, ../sass/_getinvolved.scss */
+/* line 59, ../sass/_getinvolved.scss */
 .getinvolved a:hover,
 .companies a:hover {
   color: #C82A45;
@@ -2459,7 +2460,7 @@ iframe.twitter-share-button {
   margin: -5px 0px 0px 2px;
 }
 
-/* line 68, ../sass/_finance.scss */
+/* line 66, ../sass/_finance.scss */
 .financials .rightcol h5,
 .financials .rightcol h4,
 .financials .rightcol p {
@@ -2471,13 +2472,13 @@ iframe.twitter-share-button {
   line-height: 30px;
 }
 
-/* line 77, ../sass/_finance.scss */
+/* line 76, ../sass/_finance.scss */
 .expenses a:hover,
 .revenues a:hover {
   border-bottom: none;
 }
 
-/* line 82, ../sass/_finance.scss */
+/* line 81, ../sass/_finance.scss */
 .expenses .popover-content,
 .revenues .popover-content {
   font-size: 14px;
@@ -2488,13 +2489,13 @@ iframe.twitter-share-button {
   line-height: 22px;
 }
 
-/* line 91, ../sass/_finance.scss */
+/* line 90, ../sass/_finance.scss */
 .expensesdata,
 .revenuedata {
   cursor: pointer;
 }
 
-/* line 97, ../sass/_finance.scss */
+/* line 95, ../sass/_finance.scss */
 .expensesdata.active,
 .revenuedata.active,
 .financialsgroup.active {
@@ -2518,7 +2519,7 @@ iframe.twitter-share-button {
   background-color: #fedd44 !important;
 }
 
-/* line 116, ../sass/_finance.scss */
+/* line 115, ../sass/_finance.scss */
 .expenses.bargraph,
 .revenues.bargraph {
   margin-top: 30px;
@@ -2705,7 +2706,7 @@ iframe.twitter-share-button {
   padding-bottom: 0px;
 }
 
-/* line 178, ../sass/base.scss */
+/* line 177, ../sass/base.scss */
 .title h1,
 .title p {
   text-align: center;
@@ -2713,7 +2714,7 @@ iframe.twitter-share-button {
   text-shadow: none;
 }
 @media screen and (max-width: 480px) {
-  /* line 178, ../sass/base.scss */
+  /* line 177, ../sass/base.scss */
   .title h1,
   .title p {
     font-size: 30%;
@@ -2781,7 +2782,7 @@ iframe.twitter-share-button {
   margin: 0px;
 }
 
-/* line 234, ../sass/base.scss */
+/* line 231, ../sass/base.scss */
 .morefellows,
 .themes,
 .community,
@@ -2812,7 +2813,7 @@ iframe.twitter-share-button {
 
 /* line 257, ../sass/base.scss */
 .navbar .brand {
-  max-width: 60px;
+  max-width: 85px;
 }
 
 /* line 261, ../sass/base.scss */
@@ -2820,7 +2821,7 @@ iframe.twitter-share-button {
   border-bottom: none;
 }
 
-/* line 267, ../sass/base.scss */
+/* line 265, ../sass/base.scss */
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
@@ -2846,7 +2847,7 @@ iframe.twitter-share-button {
   margin: 100px auto 0px;
 }
 
-/* line 289, ../sass/base.scss */
+/* line 288, ../sass/base.scss */
 #loading h1,
 #loading p {
   text-align: center;
@@ -2856,15 +2857,15 @@ iframe.twitter-share-button {
 
 /* line 295, ../sass/base.scss */
 #loading h1 {
-  font-size: 220px;
-  margin: 90px auto 117px;
+  font-size: 160px;
+  margin: 90px auto 85px;
   font-weight: 600;
 }
 
 /* line 301, ../sass/base.scss */
 #loading p {
   text-transform: uppercase;
-  font-size: 63px;
+  font-size: 64px;
   font-weight: 300;
 }
 
@@ -2979,7 +2980,7 @@ input[type="text"] {
   clear: both;
 }
 
-/* line 407, ../sass/base.scss */
+/* line 406, ../sass/base.scss */
 .page.quote,
 .page.story {
   overflow-x: hidden;
@@ -3002,7 +3003,7 @@ input[type="text"] {
   padding: 0px;
 }
 
-/* line 426, ../sass/base.scss */
+/* line 425, ../sass/base.scss */
 .page.quote h1,
 .page.story h1 {
   color: #fff;
@@ -3027,7 +3028,7 @@ input[type="text"] {
   padding-left: 400px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-                               /* Firefox 
+                            /* Firefox 
 -webkit-box-sizing:border-box; /* Safari */
 }
 
@@ -3065,7 +3066,7 @@ input[type="text"] {
   text-align: right;
 }
 
-/* line 480, ../sass/base.scss */
+/* line 479, ../sass/base.scss */
 .bioright,
 .apps .bioright {
   padding-left: 15px;
@@ -3077,7 +3078,7 @@ input[type="text"] {
   float: left;
 }
 
-/* line 490, ../sass/base.scss */
+/* line 489, ../sass/base.scss */
 .bios h3,
 .network .bios p {
   margin-top: -6px;
@@ -3111,7 +3112,7 @@ input[type="text"] {
   text-align: left;
 }
 
-/* line 518, ../sass/base.scss */
+/* line 517, ../sass/base.scss */
 .moreapps,
 .captains {
   clear: both;
@@ -3177,7 +3178,7 @@ input[type="text"] {
   margin: 0px 50px 50px 0px;
 }
 
-/* line 575, ../sass/base.scss */
+/* line 573, ../sass/base.scss */
 .people .google,
 .people .knight,
 .people .on {
@@ -3312,7 +3313,7 @@ img.progicons {
   margin: 0px 0px 8px 0px;
 }
 
-/* line 693, ../sass/base.scss */
+/* line 690, ../sass/base.scss */
 .captains a:hover,
 .fellowcard a:hover,
 .moreapps a:hover,
@@ -3336,7 +3337,7 @@ img.progicons {
   margin-top: 50px;
 }
 
-/* line 710, ../sass/base.scss */
+/* line 709, ../sass/base.scss */
 .popover-title,
 .popover-content {
   font-weight: 300;
@@ -3344,7 +3345,7 @@ img.progicons {
   text-shadow: none;
 }
 
-/* line 717, ../sass/base.scss */
+/* line 716, ../sass/base.scss */
 .popover-title,
 .popover-title {
   font-weight: 700;
@@ -3354,14 +3355,14 @@ img.progicons {
   padding-bottom: 0px;
 }
 
-/* line 726, ../sass/base.scss */
+/* line 725, ../sass/base.scss */
 .captains .popover-content,
 .morefellows .popover-content {
   font-weight: 300;
   padding-top: 0px;
 }
 
-/* line 752, ../sass/base.scss */
+/* line 731, ../sass/base.scss */
 .jeff,
 .andrew,
 .bret,
@@ -3517,7 +3518,7 @@ img.progicons {
   margin-top: 0px;
 }
 
-/* line 864, ../sass/base.scss */
+/* line 861, ../sass/base.scss */
 .morefellows .bios p,
 .community .bios p,
 .market .bios p,
@@ -3529,7 +3530,7 @@ img.progicons {
   margin-bottom: 10px;
 }
 
-/* line 875, ../sass/base.scss */
+/* line 872, ../sass/base.scss */
 .morefellows .bios h3,
 .community .bios h3,
 .market .bios h3,
@@ -3539,7 +3540,7 @@ img.progicons {
   text-align: left;
 }
 
-/* line 884, ../sass/base.scss */
+/* line 881, ../sass/base.scss */
 .morefellows .bios h5,
 .community .bios h5,
 .market .bios h5,
