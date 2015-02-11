@@ -85,13 +85,13 @@
     background: #7ab5d6;
   }
 }
-.pagebg.imageopen-closed{ 
-  background: url("../img/open-closed.jpg") no-repeat;
+.pagebg.bg_nevp{ 
+  background: url("../img/bg_nevp.jpg") no-repeat;
   background-size:cover;
   background-position:right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
-    background: url("../img/open-closed_small.jpg") no-repeat;
+    background: url("../img/bg_nevp_sm.jpg") no-repeat;
     background-size: 1024px;
   }
   //ipad
@@ -99,13 +99,13 @@
     background: #7ab5d6;
   }
 }
-.pagebg.imagegood_governance{ 
-  background: url("../img/good_governance.jpg") no-repeat;
+.pagebg.bg_dan_malcolm{ 
+  background: url("../img/bg_dan_malcolm.jpg") no-repeat;
   background-size:cover;
   background-position:right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg_dan_malcolm.jpg', sizingMethod='scale')";
   @media screen and (max-width: 1024px) {
-    background: url("../img/good_governance_small.jpg") no-repeat;
+    background: url("../img/bg_dan_malcolm_sm.jpg") no-repeat;
     background-size: 1024px;
   }
   //ipad

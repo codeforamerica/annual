@@ -671,43 +671,43 @@ a.appspop:hover {
 }
 
 /* line 88, ../sass/_backgrounds.scss */
-.pagebg.imageopen-closed {
-  background: url("../img/open-closed.jpg") no-repeat;
+.pagebg.bg_nevp {
+  background: url("../img/bg_nevp.jpg") no-repeat;
   background-size: cover;
   background-position: right;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/open-closed.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
   /* line 88, ../sass/_backgrounds.scss */
-  .pagebg.imageopen-closed {
-    background: url("../img/open-closed_small.jpg") no-repeat;
+  .pagebg.bg_nevp {
+    background: url("../img/bg_nevp_sm.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* line 88, ../sass/_backgrounds.scss */
-  .pagebg.imageopen-closed {
+  .pagebg.bg_nevp {
     background: #7ab5d6;
   }
 }
 
 /* line 102, ../sass/_backgrounds.scss */
-.pagebg.imagegood_governance {
-  background: url("../img/good_governance.jpg") no-repeat;
+.pagebg.bg_dan_malcolm {
+  background: url("../img/bg_dan_malcolm.jpg") no-repeat;
   background-size: cover;
   background-position: right;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/good_governance.jpg', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg_dan_malcolm.jpg', sizingMethod='scale')";
 }
 @media screen and (max-width: 1024px) {
   /* line 102, ../sass/_backgrounds.scss */
-  .pagebg.imagegood_governance {
-    background: url("../img/good_governance_small.jpg") no-repeat;
+  .pagebg.bg_dan_malcolm {
+    background: url("../img/bg_dan_malcolm_sm.jpg") no-repeat;
     background-size: 1024px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* line 102, ../sass/_backgrounds.scss */
-  .pagebg.imagegood_governance {
+  .pagebg.bg_dan_malcolm {
     background: #7ab5d6;
   }
 }
@@ -1350,15 +1350,16 @@ body {
 h1 {
   font-family: 'Gotham A', 'Gotham B', 'Open Sans Regular', 'Verdana', 'Helvetica', Arial;
   margin: .25em .25em 1em 0em;
+  font-weight: 700;
 }
 
-/* line 27, ../sass/_global-reset.scss */
+/* line 28, ../sass/_global-reset.scss */
 p {
   margin: 1em 0;
   line-height: 23px;
 }
 
-/* line 32, ../sass/_global-reset.scss */
+/* line 33, ../sass/_global-reset.scss */
 a {
   color: #fff;
   text-decoration: none;
@@ -1366,35 +1367,35 @@ a {
   cursor: pointer;
 }
 
-/* line 39, ../sass/_global-reset.scss */
+/* line 40, ../sass/_global-reset.scss */
 a:hover {
   color: #fff;
   border-bottom: #fff solid 1px;
   text-decoration: none;
 }
 
-/* line 45, ../sass/_global-reset.scss */
+/* line 46, ../sass/_global-reset.scss */
 table {
   font-size: inherit;
   font: 100%;
 }
 
-/* line 50, ../sass/_global-reset.scss */
+/* line 51, ../sass/_global-reset.scss */
 .page {
   clear: both;
 }
 
-/* line 53, ../sass/_global-reset.scss */
+/* line 54, ../sass/_global-reset.scss */
 .clear {
   clear: both;
 }
 
-/* line 57, ../sass/_global-reset.scss */
+/* line 58, ../sass/_global-reset.scss */
 li {
   list-style: none;
 }
 
-/* line 61, ../sass/_global-reset.scss */
+/* line 62, ../sass/_global-reset.scss */
 .row-fluid {
   max-width: 960px;
 }
@@ -2167,7 +2168,7 @@ a.startupspop:hover {
 /* line 9, ../sass/_typography.scss */
 .attribution {
   bottom: 0;
-  padding: 20px 20px 0px 0px;
+  padding: 0px 20px 20px 0px;
   position: absolute;
   right: 0;
 }
