@@ -1,4 +1,4 @@
 markdown: rdiscount
-pygments: true
+highlighter: pygments
 paginate: 100
 permalink: pretty
