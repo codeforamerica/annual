@@ -1,0 +1,106 @@
+//
+// _nav.scss
+//
+// Header and navigation styles.
+//
+
+$border: 1px solid rgba(0,0,0,0.08);
+
+header {
+  font-family: $serif;
+  overflow: hidden;
+  border-bottom: $border;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.04);
+}
+
+header * {
+  margin-top: 0;
+}
+
+div.logo {
+  padding: 15px;
+  float: left;
+
+  a {
+    text-decoration: none;
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  display: table;
+  list-style: none;
+}
+
+nav ul li {
+  display: table-cell;
+  border-left: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  vertical-align: middle;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  a:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+}
+
+nav ul li.active {
+  a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background-color: $red;
+  }
+}
+
+@media screen and (max-width: 1195px) {
+  // Break the nav down
+  nav {
+    float: none;
+    clear: both;
+    border-top: $border;
+    
+    ul li:last-of-type {
+      border-right: $border;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  div.logo {
+    padding: 10px;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav ul li.active {
+    display: inherit;
+    a {
+      padding: 10px;
+    }
+    a:before {
+      height: 2px;
+    }
+  }
+}

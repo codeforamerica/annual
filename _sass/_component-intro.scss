@@ -1,0 +1,34 @@
+//
+// _component_intro.scss
+//
+// Styles for the .intro component, which comes at the beginning of each category.
+//
+
+$padding: 2em;
+
+.intro__header {
+  background-color: $blue;
+  color: white;
+  @include span-columns(12 of 12);
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+.intro__header h1 {
+  color: white;
+}
+
+.intro__header h1, .intro__description {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+}
+
+.intro__description {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+.intro__description p {
+  font-size: $base-size * 2;
+  font-family: $sans-serif;
+}

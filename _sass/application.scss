@@ -1,0 +1,109 @@
+//
+// application.scss
+//
+// Our base file. Imports everything we need and holds
+// components we haven't broken out to partials.
+//
+
+// =====
+// Variables
+// =====
+
+$black: rgba(0,0,0,0.8);
+$red: #cf1b41;
+$green: #3e5641;
+$gray: #363537;
+$blue: #004b6a;
+
+$background-tint: rgba(0,0,0,0.04);
+$dark-tint: $gray;
+$text-color: $black;
+$primary-color: $red;
+$secondary-color: $blue;
+$third-color: $green;
+
+$serif: "Sentinel",serif;
+$sans-serif: "Proxima Nova",Helvetica,sans-serif;
+
+// =====
+// Imports
+// =====
+
+@import 'bourbon/bourbon';
+@import 'grid-settings';
+@import 'neat/neat';
+@import 'normalize';
+
+// =====
+// Base spacing rules
+// =====
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* + * {
+  // The lobotomized owl. Hoo, hoo.
+  margin-top: 1.5em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// =====
+// Base typography
+// =====
+
+$base-size: 18px;
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $sans-serif;
+  font-weight: 200;
+  line-height: 1.5;
+  color: $black;
+}
+
+h1 {
+  font-size: $base-size * 2.5;
+}
+
+h2 {
+  font-size: $base-size * 2;
+}
+
+h3 {
+  font-size: $base-size * 1.3;
+  line-height: 1.8;
+}
+
+p {
+  font-family: $serif;
+  font-size: $base-size;
+  line-height: 2;
+  color: $black;
+}
+
+// =====
+// Basic layout
+// =====
+
+main {
+  // @include outer-container();
+}
+
+// =====
+// Import the nav
+// =====
+@import 'nav';
+
+// =====
+// Import the .intro component
+// =====
+@import 'component-intro';
+
+// =====
+// Import the .story component
+// =====
+@import 'component-story';

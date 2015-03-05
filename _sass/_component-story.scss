@@ -1,0 +1,199 @@
+//
+// _component_story.scss
+//
+// Styles for the .story component, a flexible card that tells a short story.
+//
+
+$padding: 2em;
+
+.story {
+  margin-top: $padding * 2;
+  margin-bottom: $padding;
+  @include span-columns(12 of 12);
+
+  * + * {
+    margin-top: 0.5em;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.story__image {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 450px;
+}
+
+.story__body {
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
+  background-color: lighten(gray,45);
+  margin-top: -200px;
+}
+
+// =====
+// Story header (social/etc button)
+// =====
+
+.story__body__header {
+  background-color: $blue;
+  padding: 10px;
+  height: 50px;
+  ul {
+    list-style: none;
+    background-color: $blue;
+    display: block;
+    float: right;
+  }
+  ul li {
+    display: inline-block;
+    margin: 0;
+    padding-right: 5px;
+  }
+  ul li a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+[class^="story__body__header__link"] a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-indent: -9999px;
+
+  background-color: white;
+  border-radius: 100%;
+
+  background-image: url('/assets/images/icons/twitter.svg');
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include transition(opacity 0.08s ease-in 0s);
+}
+
+[class^="story__body__header__link"] a:hover { 
+  opacity: 0.5;
+}
+
+.story__body__header__link--twitter a {
+  background-image: url('/assets/images/icons/twitter-blue.svg');
+  background-size: 70%;
+}
+
+.story__body__header__link--facebook a {
+  background-color: rgba(0,0,0,0);
+  background-image: url('/assets/images/icons/facebook-white.svg');
+  background-size: 100%;
+}
+.story__body__header__link--information a {
+  background-image: url('/assets/images/icons/pencil-blue.svg');
+  background-size: 60%;
+}
+
+// =====
+// Story body
+// =====
+
+// Layout for the story section
+
+.story__body__content {
+  padding: $padding * 2;
+}
+
+.story__body__content__opener,
+.story__body__content__links {
+  @include span-columns (12 of 12);
+}
+
+.story__body__content__quote,
+.story__body__content__metrics {
+  @include span-columns (6 of 12);
+  padding-top: $padding;
+}
+
+.story__body__content__links {
+  padding-top: $padding;
+}
+
+.story__body__content__metrics {
+  @include omega();
+}
+
+// Quote styles
+
+.story__body__content__quote {
+  margin-top: 50px;
+}
+
+.story__body__content__quote:before {
+  content: "“";
+  display: block;
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 0;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.story__body__content__quote__credit {
+  font-style: italic;
+}
+
+// Metric styles
+
+.story__body__content__metrics__number {
+  font-weight: 800;
+  font-size: $base-size * 5;
+  line-height: 0.8;
+  letter-spacing: -2px;
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+
+ul.story__body__content__metrics li {
+  margin-bottom: 2em;
+}
+
+// Link styles
+
+ul.story__body__content__links li {
+  @include span-columns(4 of 12);
+  background-color: white;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: $padding * 2;
+  
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $black;
+    padding: $padding/2;
+  }
+
+  a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background-color: $blue;
+  }
+}
+
+p.story__body__content__link--header {
+  font-weight: bold;
+}
+
+p.story__body__content__link--header {
+  font-weight: bold;
+}
