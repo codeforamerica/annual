@@ -55,10 +55,15 @@ nav ul li {
     padding: 15px;
     text-decoration: none;
     color: $text-color;
+
+    background-size: 100% 201%;
+    background-image: linear-gradient(to bottom, white 50%, $red 50%);
+    @include transition(background-position 0.5s, color 0.5s, border-bottom-color 0.5s);
   }
 
   a:hover {
-    background-color: rgba(0,0,0,0.05);
+    background-position: 0 -100%;
+    color: white;
   }
 }
 
