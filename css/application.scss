@@ -25,8 +25,8 @@ $primary-color: $red;
 $secondary-color: $blue;
 $third-color: $green;
 
-$serif: "Sentinel",serif;
-$sans-serif: "Proxima Nova",Helvetica,sans-serif;
+$serif: "abril-text","Sentinel",serif;
+$sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 
 // =====
 // Imports
@@ -63,7 +63,7 @@ $base-size: 18px;
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.5;
   color: $black;
 }
@@ -83,6 +83,7 @@ h3 {
 
 p {
   font-family: $serif;
+  font-weight: 400;
   font-size: $base-size;
   line-height: 2;
   color: $black;
