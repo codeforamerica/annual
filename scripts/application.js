@@ -44,11 +44,48 @@ function encodeValue(data,baseKey,newKey) {
 }
 
 // =====
+// Build our data into HTML
+// =====
+
+var buildHTML = function(data, slug) {
+  // If we've got some data
+  if (data.length > 0) {
+    // Build the template
+    var template = _.template(
+      $(template).html(),
+      { variable: slug }
+    );
+    // Return the compiled html
+    return template(data);
+  } 
+  else {
+    console.log('No data. :(');
+    return null;
+  }
+}
+
+var formatData = function(categories,stories,intros) {
+  var data = _.map(categories, function(category){
+    var theStories = _.where(stories, { 'category' : category });
+    var theIntro = _.where(intros, { 'category' : category });
+    var completeCategory = 
+    { 
+      'category' : category,
+      'intro' : theIntro,
+      'stories' : theStories
+    };
+
+    return completeCategory;
+  }, { story: stories, intro: intros });
+
+  return data;
+}
+
+// =====
 // Get the data
 // =====
 
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1UTmofeY8rPZvXdN_CNJXfFgPlexiMmlSs5W8oPhqFko/pubhtml';
-var data;
 
 function init() {
   Tabletop.init( { key: public_spreadsheet_url,
@@ -79,37 +116,15 @@ function handleData(data,tabletop) {
 
   console.log(stories);
 
-  // For each category, ready our html
-  // ...
-  var html = [];
+  // Get our fully-formatted object with all our categories split out nicely
+  var formattedData = formatData(categories,stories,intros);
 
-  writeHTML(stories,'#js-story-template','stories','#js-main');
+  // Turn it into HTML that's ready to insert into the dom
+  var compiled = buildHTML(formattedData,'stories');
 
   // Write the totally packaged html to the DOM
+  //$('#js-main').html(compiled);
 
-}
-
-// =====
-// Publish it to the DOM
-// =====
-
-var writeHTML = function(data, template, slug, target) {
-  // If the endpoint gave us any data
-  if (data.length > 0) {
-    // Build the template
-    var template = _.template(
-      $(template).html(),
-      { variable: slug }
-    );
-    // Write the template to DOM
-    $(target).html(
-      template(data)
-    );
-    return true;
-  } else {
-    console.log('No data. :(');
-    return false;
-  }
 }
 
 $(window).resize(function(){
