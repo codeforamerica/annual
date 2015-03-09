@@ -14,9 +14,9 @@ layout: default
 </script>
 
 <script type="text/x-template" id="js-story-template">
-<section class="stories" id="">
-  <% _.each(categories, function(category){ %>
-    
+<% _.each(categories, function(category){ %>
+  <section class="stories" id="">
+
     <div class="intro">
       <div class="intro__header">
         <h1><%= category.intro[0].headline %></h1>
@@ -96,8 +96,7 @@ layout: default
         </div><!-- end .story__body -->
       </article><!-- end .story -->
     <% }); /* end _.each category.stories */ %>
-
-  <% }); /* end _.each categories */ %>
-</section>
+  </section>
+<% }); /* end _.each categories */ %>
 </script>
 
