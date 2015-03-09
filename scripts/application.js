@@ -47,12 +47,12 @@ function encodeValue(data,baseKey,newKey) {
 // Build our data into HTML
 // =====
 
-var buildHTML = function(data, slug) {
+var buildHTML = function(data, slug, templateId) {
   // If we've got some data
   if (data.length > 0) {
     // Build the template
     var template = _.template(
-      $(template).html(),
+      $('#js-story-template').html(),
       { variable: slug }
     );
     // Return the compiled html
@@ -120,10 +120,10 @@ function handleData(data,tabletop) {
   var formattedData = formatData(categories,stories,intros);
 
   // Turn it into HTML that's ready to insert into the dom
-  var compiled = buildHTML(formattedData,'stories');
+  var compiled = buildHTML(formattedData,'categories','#js-story-template');
 
   // Write the totally packaged html to the DOM
-  //$('#js-main').html(compiled);
+  $('#js-main').html(compiled);
 
 }
 
