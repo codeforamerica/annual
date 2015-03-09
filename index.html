@@ -9,16 +9,15 @@ layout: default
 
 </section>
 
-<script type="text/x-template" id="js-story-template-didfjhldshjfg">
-<% debugger; %>
-</script>
-
 <script type="text/x-template" id="js-story-template">
 <% _.each(categories, function(category){ %>
   <section class="stories" id="">
 
     <div class="intro">
       <div class="intro__header">
+        <p class="intro__header__overline">
+          <%= category.intro[0].category %>
+        </p>
         <h1><%= category.intro[0].headline %></h1>
       </div>
       <div class="intro__description">

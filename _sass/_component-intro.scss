@@ -18,9 +18,17 @@ $padding: 2em;
   color: white;
 }
 
-.intro__header h1, .intro__description {
+.intro__header h1, .intro__header p, .intro__description {
   @include span-columns(10 of 12);
   @include shift(1 of 12);
+}
+
+.intro__header p {
+  color: white;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-top: 1em;
+  margin-bottom: -20px;
 }
 
 .intro__description {

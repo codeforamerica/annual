@@ -111,6 +111,10 @@ p {
   @include outer-container();
 }
 
+.stories + .stories {
+  margin-top: 6em;
+}
+
 $padding: 2em;
 
 .story {
