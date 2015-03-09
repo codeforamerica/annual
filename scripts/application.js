@@ -24,25 +24,23 @@ var resize = function() {
 // Transform our data
 // =====
 
-// Encode the category names
-// # 'This Is Cool' 
-// => 'this-is-cool'
+// Create a new unique key-value pair out of an old key-value pair
+// # somedata = { foo: 'This Is Cool' }
+// encodeValue(somedata,foo,new_foo)
+// => { foo: 'It's So Cool', new_foo: 'it&#x27;s-so-cool' }
 
-function encodeValue(data,category,newCategory) {
-  var newStory = _.map(data, function(item){
-   var newEntry = _.mapObject(item, function(val,key) {
-      if (key == category) {
-        var response = _.escape(val);
-        response = response.split(' ').join('-').toLowerCase();
-        return response;
-      } 
-      else {
-        return val;
-      }
-    });
-    return newEntry;
+function encodeValue(data,baseKey,newKey) {
+  var newObject = _.map(data, function(item){
+    var response;
+    var response = _.pick(item, baseKey);
+    var response = response[baseKey];
+    var response = _.escape(response);
+    var response = response.split(' ').join('-').toLowerCase();
+    var response = _.object([newKey],[response])
+    var response = _.extend(item, response);
+    return response;
   });
-  return newStory;
+  return newObject;
 }
 
 // =====
@@ -65,16 +63,13 @@ function handleData(data,tabletop) {
   var intros;
   var categories;
 
-  // Put the data into a global variable
-  data = tabletop.sheets;
-
   // Pull out the stories and section intros
   stories = tabletop.sheets('story-cards').elements;
   intros = tabletop.sheets('intros').elements;
 
   // For each object, encode characters in the identified 'key' (replace spaces with dashes, encode html characters, return a new key/value)
-  stories = encodeValue(stories,'category','category-id');
-  intros = encodeValue(stories,'category','category-id');
+  stories = encodeValue(stories,'category','categoryId');
+  intros = encodeValue(intros,'category','categoryId');
 
   // Make a list of unique categories
   categories =  _.chain(stories)
@@ -83,7 +78,15 @@ function handleData(data,tabletop) {
                     .value();
 
   console.log(stories);
+
+  // For each category, ready our html
+  // ...
+  var html = [];
+
   writeHTML(stories,'#js-story-template','stories','#js-main');
+
+  // Write the totally packaged html to the DOM
+
 }
 
 // =====
