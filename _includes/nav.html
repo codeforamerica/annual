@@ -12,3 +12,19 @@
     </ul>
   </nav>
 </div><!-- end .container -->
+
+<script type="text/x-template" id="js-nav-template">
+  debugger;
+  <div class="container">
+    <div class="logo">
+      <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
+    </div>
+    <nav>
+      <ul>
+        <% _.each(categories, function(category){ %>
+          <li><a href="#"><%= category.category %></a></li>
+        <% }); %>
+      </ul>
+    </nav>
+  </div><!-- end .container -->
+</script>

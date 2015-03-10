@@ -52,7 +52,7 @@ var buildHTML = function(data, slug, templateId) {
   if (data.length > 0) {
     // Build the template
     var template = _.template(
-      $('#js-story-template').html(),
+      $(templateId).html(),
       { variable: slug }
     );
     // Return the compiled html
@@ -114,16 +114,21 @@ function handleData(data,tabletop) {
                     .uniq()
                     .value();
 
-  console.log(stories);
+  // Encode a key for the categories
+  categories = encodeValue(intros,'category','categoryId');
 
   // Get our fully-formatted object with all our categories split out nicely
   var formattedData = formatData(categories,stories,intros);
 
-  // Turn it into HTML that's ready to insert into the dom
-  var compiled = buildHTML(formattedData,'categories','#js-story-template');
+  // Turn nav into HTML that's ready to insert into the dom
+  var compiledNav = buildHTML(categories,'categories','#js-nav-template');
+
+  // Turn body content into HTML that's ready to insert into the dom
+  var compiledBody = buildHTML(formattedData,'categories','#js-story-template');
 
   // Write the totally packaged html to the DOM
-  $('#js-main').html(compiled);
+  $('#js-header').html(compiledNav);
+  $('#js-main').html(compiledBody);
 
   // Hide the loading screen
   $('#js-loading').css('opacity','0');
