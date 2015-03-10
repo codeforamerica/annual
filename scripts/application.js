@@ -125,6 +125,13 @@ function handleData(data,tabletop) {
   // Write the totally packaged html to the DOM
   $('#js-main').html(compiled);
 
+  // Hide the loading screen
+  $('#js-loading').css('opacity','0');
+
+  setTimeout(function() { 
+    $('#js-loading').css('display','none')
+  }, 2000);
+
 }
 
 $(window).resize(function(){
