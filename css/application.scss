@@ -195,6 +195,10 @@ p {
   margin-top: 6em;
 }
 
+.stories--opener + .stories {
+  margin-top: 0;
+}
+
 $padding: 2em;
 
 .story {

@@ -5,7 +5,7 @@ layout: default
 
 <script type="text/x-template" id="js-story-template">
 <% if (data.opener) { %>
-  <section class="stories stories--opener" id="<%  %>">
+  <section class="stories stories--opener" id="<% data.opener.category %>">
     <div class="intro">
       <div class="intro__content">
         <p><%= data.opener.category %></p>
