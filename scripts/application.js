@@ -29,7 +29,7 @@ var resize = function() {
 // encodeValue(somedata,foo,new_foo)
 // => { foo: 'It's So Cool', new_foo: 'it&#x27;s-so-cool' }
 
-function encodeValue(data,baseKey,newKey) {
+function createId(data,baseKey,newKey) {
   var newObject = _.map(data, function(item){
     var response;
     var response = _.pick(item, baseKey);
@@ -57,7 +57,7 @@ var buildHTML = function(data, slug, templateId) {
   return template(data);
 }
 
-var formatData = function(categories,stories,intros) {
+var combine = function(categories,stories,intros) {
   var data = _.map(categories, function(category){
     var theStories = _.where(stories, { 'category' : category['category'] });
     var response = 
@@ -98,12 +98,12 @@ function handleData(data,tabletop) {
   stories = tabletop.sheets('stories').elements;
 
   // For each object, encode characters in the identified 'key' (replace spaces with dashes, encode html characters, return a new key/value)
-  introduction = encodeValue(introduction,'category','categoryId');
-  categories = encodeValue(categories,'category','categoryId');
-  stories = encodeValue(stories,'category','categoryId');
+  introduction = createId(introduction,'category','categoryId');
+  categories = createId(categories,'category','categoryId');
+  stories = createId(stories,'category','categoryId');
 
   // Get our fully-formatted object with all our categories sorted nicely
-  var sections = formatData(categories,stories);
+  var sections = combine(categories,stories);
 
   // Build the HTML we'll put into the DOM
   var nav = buildHTML({ 
