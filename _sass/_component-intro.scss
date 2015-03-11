@@ -4,9 +4,9 @@
 // Styles for the .intro component, which comes at the beginning of each category.
 //
 
-$padding: 2em;
+$padding: 4em;
 
-.intro__header {
+.intro {
   background-color: $blue;
   color: white;
   @include span-columns(12 of 12);
@@ -14,29 +14,15 @@ $padding: 2em;
   padding-bottom: $padding;
 }
 
-.intro__header h1 {
-  color: white;
-}
-
-.intro__header h1, .intro__header p, .intro__description {
+.intro__content {
   @include span-columns(10 of 12);
   @include shift(1 of 12);
 }
 
-.intro__header p {
+.intro__content h1, .intro__content p {
   color: white;
-  font-weight: 400;
-  font-size: 1.3em;
-  margin-top: 1em;
-  margin-bottom: -20px;
 }
 
-.intro__description {
-  padding-top: $padding;
-  padding-bottom: $padding;
-}
-
-.intro__description p {
-  font-size: $base-size * 2;
-  font-family: $sans-serif;
+.intro__content p {
+  font-style: italic;
 }

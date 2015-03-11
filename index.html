@@ -4,32 +4,30 @@ layout: default
 ---
 
 <script type="text/x-template" id="js-story-template">
-<% if (data.introduction) { %>
-  <section class="stories" id="cfa-introduction">
+<% if (data.opener) { %>
+  <section class="stories stories--opener" id="<%  %>">
     <div class="intro">
-      <div class="intro__header">
-        <p class="intro__header__overline"><%= data.introduction.category %></p>
-        <h1><%= data.introduction.headline %></h1>
+      <div class="intro__content">
+        <p><%= data.opener.category %></p>
+        <h1><%= data.opener.headline %></h1>
       </div>
       <div class="intro__description">
-        <%= data.introduction.description %>
+        <%= data.opener.description %>
       </div>
     </div><!-- end .intro -->
   </section>
-<% } /* endif data.introduction */ %>
+<% } /* endif data.opener */ %>
 
 <% _.each(data.sections, function(section){ %>
   <section class="stories" id="<%= section.metadata.categoryId %>">
 
-    <div class="intro">
-      <div class="intro__header" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
-        <p class="intro__header__overline">
+    <div class="intro" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
+      <div class="intro__content">
+        <p class="intro__content__overline">
           <%= section.metadata.category %>
         </p>
         <h1><%= section.metadata.headline %></h1>
-      </div>
-      <div class="intro__description">
-        <h3><%= section.metadata.description %></h3>
+        <p><%= section.metadata.description %></p> 
       </div>
     </div><!-- end .intro -->
 
