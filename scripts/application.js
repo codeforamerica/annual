@@ -48,20 +48,13 @@ function encodeValue(data,baseKey,newKey) {
 // =====
 
 var buildHTML = function(data, slug, templateId) {
-  // If we've got some data
-  if (data.length > 0) {
-    // Build the template
-    var template = _.template(
-      $(templateId).html(),
-      { variable: slug }
-    );
-    // Return the compiled html
-    return template(data);
-  } 
-  else {
-    console.log('No data. :(');
-    return null;
-  }
+  // Build the template
+  var template = _.template(
+    $(templateId).html(),
+    { variable: slug }
+  );
+  // Return the compiled html
+  return template(data);
 }
 
 var formatData = function(categories,stories,intros) {
@@ -95,34 +88,43 @@ function init() {
 function handleData(data,tabletop) {
   console.log("They picked up! Handling the data...");
 
-  var stories;
-  var intros;
-  var categories;
+  var introduction,
+      categories,
+      stories;
 
   // Pull out the stories and section intros
-  stories = tabletop.sheets('story-cards').elements;
-  intros = tabletop.sheets('intros').elements;
+  introduction = tabletop.sheets('introduction').elements;
+  categories = tabletop.sheets('categories').elements;
+  stories = tabletop.sheets('stories').elements;
 
   // For each object, encode characters in the identified 'key' (replace spaces with dashes, encode html characters, return a new key/value)
+  introduction = encodeValue(introduction,'category','categoryId');
+  categories = encodeValue(categories,'category','categoryId');
   stories = encodeValue(stories,'category','categoryId');
-  categories = encodeValue(intros,'category','categoryId');
 
-  // Get our fully-formatted object with all our categories split out nicely
+  // Get our fully-formatted object with all our categories sorted nicely
   var sections = formatData(categories,stories);
 
-  // Turn nav into HTML that's ready to insert into the dom
-  var compiledNav = buildHTML(sections,'sections','#js-nav-template');
+  // Build the HTML we'll put into the DOM
+  var nav = buildHTML({ 
+                        'introduction' : introduction[0],
+                        'sections' : sections
+                      },'data','#js-nav-template');
 
-  // Turn body content into HTML that's ready to insert into the dom
-  var compiledBody = buildHTML(sections,'sections','#js-story-template');
+  var content = buildHTML({ 
+                            'introduction' : introduction[0],
+                            'sections' : sections
+                          },'data','#js-story-template');
 
   // Write the totally packaged html to the DOM
-  $('#js-header').html(compiledNav);
-  $('#js-main').html(compiledBody);
+  $('#js-header').html(nav);
+  $('#js-main').html(content);
+
+  // Resize the margin now that we filled in the header
+  resize();
 
   // Hide the loading screen
   $('#js-loading').css('opacity','0');
-
   setTimeout(function() { 
     $('#js-loading').css('display','none')
   }, 2000);
@@ -134,8 +136,6 @@ $(window).resize(function(){
 });
 
 $(document).ready(function(){
-  // Resize the window on ready
-  resize();
   // Run tabletop
   init();
 });

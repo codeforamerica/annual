@@ -4,27 +4,22 @@ layout: default
 ---
 
 <script type="text/x-template" id="js-story-template">
-<section class="stories" id="cfa-introduction">
-  <div class="intro">
-    <div class="intro__header">
-      <p class="intro__header__overline">
-        Introduction
-      </p>
-      <h1>Code for America Five Years In</h1>
-    </div>
-    <div class="intro__description">
-      <p>We’re on a mission to make government work for the people, by the people, in the 21st century. When we launched this experiment in 2009, no one believed that government wanted to do things differently. Five years in, there is so much enthusiasm to transform government services, we can’t keep up with the demand. It’s only with the dedicated hand raising of thousands of citizens, communities, and supporters, that we’ve reached where we are today. We hope even more hands will continue to join in.</p>
-      <p>In 2014, we hit an important milestone, moving from work primarily focused on showing what’s possible when you apply user-centered, data-driven, iterative approaches to government practices to deepening impact around key outcomes in health, economic development, and safety and justice. In learning how to take what we’ve learned and continue to iterate on it, we spent 2014 strengthening partnerships; made key team hires in tech, focus areas, and content; and advanced key programs including the Fellowship, the volunteer Brigade network, and the Summit.</p>
-      <p>As we celebrate Code for America five years in, our widening network of talented, dedicated people is changing tools and platforms, transitioning people and practices, and deepening impact on government digital services.</p>
-      <p>In gratitude,<br />
-      Jennifer Pahlka<br />
-      Founder and Executive Director, Code for America</p>
-    </div>
-  </div><!-- end .intro -->
-</section>
+<% if (data.introduction) { %>
+  <section class="stories" id="cfa-introduction">
+    <div class="intro">
+      <div class="intro__header">
+        <p class="intro__header__overline"><%= data.introduction.category %></p>
+        <h1><%= data.introduction.headline %></h1>
+      </div>
+      <div class="intro__description">
+        <%= data.introduction.description %>
+      </div>
+    </div><!-- end .intro -->
+  </section>
+<% } /* endif data.introduction */ %>
 
-<% _.each(sections, function(section){ %>
-  <section class="stories" id="">
+<% _.each(data.sections, function(section){ %>
+  <section class="stories" id="<%= section.metadata.categoryId %>">
 
     <div class="intro" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
       <div class="intro__header">
