@@ -23,22 +23,23 @@ layout: default
   </div><!-- end .intro -->
 </section>
 
-<% _.each(categories, function(category){ %>
+<% _.each(sections, function(section){ %>
+  debugger;
   <section class="stories" id="">
 
-    <div class="intro">
+    <div class="intro" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
       <div class="intro__header">
         <p class="intro__header__overline">
-          <%= category.intro[0].category %>
+          <%= section.metadata.category %>
         </p>
-        <h1><%= category.intro[0].headline %></h1>
+        <h1><%= section.metadata.headline %></h1>
       </div>
       <div class="intro__description">
-        <h3><%= category.intro[0].description %></h3>
+        <h3><%= section.metadata.description %></h3>
       </div>
     </div><!-- end .intro -->
 
-    <% _.each(category.stories, function(story){ %>
+    <% _.each(section.stories, function(story){ %>
       <article class="story">
         <div class="story__image" style="background-image:url('<%= story['image-link'] %>');">
         </div>
@@ -107,8 +108,8 @@ layout: default
           </div><!-- end .story__body__content -->
         </div><!-- end .story__body -->
       </article><!-- end .story -->
-    <% }); /* end _.each category.stories */ %>
+    <% }); /* end _.each section.stories */ %>
   </section>
-<% }); /* end _.each categories */ %>
+<% }); /* end _.each sections */ %>
 </script>
 

@@ -66,17 +66,15 @@ var buildHTML = function(data, slug, templateId) {
 
 var formatData = function(categories,stories,intros) {
   var data = _.map(categories, function(category){
-    var theStories = _.where(stories, { 'category' : category });
-    var theIntro = _.where(intros, { 'category' : category });
-    var completeCategory = 
+    var theStories = _.where(stories, { 'category' : category['category'] });
+    var response = 
     { 
-      'category' : category,
-      'intro' : theIntro,
+      'metadata' : category,
       'stories' : theStories
     };
 
-    return completeCategory;
-  }, { story: stories, intro: intros });
+    return response;
+  }, { story: stories });
 
   return data;
 }
@@ -88,13 +86,14 @@ var formatData = function(categories,stories,intros) {
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1UTmofeY8rPZvXdN_CNJXfFgPlexiMmlSs5W8oPhqFko/pubhtml';
 
 function init() {
+  console.log('Ring, ring. Calling Google Sheets...')
   Tabletop.init( { key: public_spreadsheet_url,
                    callback: handleData,
                    simpleSheet: true } );
 }
 
 function handleData(data,tabletop) {
-  console.log("Success!");
+  console.log("They picked up! Handling the data...");
 
   var stories;
   var intros;
@@ -106,28 +105,19 @@ function handleData(data,tabletop) {
 
   // For each object, encode characters in the identified 'key' (replace spaces with dashes, encode html characters, return a new key/value)
   stories = encodeValue(stories,'category','categoryId');
-  intros = encodeValue(intros,'category','categoryId');
-
-  // Make a list of unique categories
-  categories =  _.chain(stories)
-                    .pluck('category')
-                    .uniq()
-                    .value();
-
-  // Encode a key for the categories
   categories = encodeValue(intros,'category','categoryId');
 
   // Get our fully-formatted object with all our categories split out nicely
-  var formattedData = formatData(categories,stories,intros);
+  var formattedData = formatData(categories,stories);
 
   // Turn nav into HTML that's ready to insert into the dom
-  var compiledNav = buildHTML(categories,'categories','#js-nav-template');
+  // var compiledNav = buildHTML(categories,'categories','#js-nav-template');
 
   // Turn body content into HTML that's ready to insert into the dom
-  var compiledBody = buildHTML(formattedData,'categories','#js-story-template');
+  var compiledBody = buildHTML(formattedData,'sections','#js-story-template');
 
   // Write the totally packaged html to the DOM
-  $('#js-header').html(compiledNav);
+  // $('#js-header').html(compiledNav);
   $('#js-main').html(compiledBody);
 
   // Hide the loading screen
