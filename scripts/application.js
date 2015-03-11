@@ -108,16 +108,16 @@ function handleData(data,tabletop) {
   categories = encodeValue(intros,'category','categoryId');
 
   // Get our fully-formatted object with all our categories split out nicely
-  var formattedData = formatData(categories,stories);
+  var sections = formatData(categories,stories);
 
   // Turn nav into HTML that's ready to insert into the dom
-  // var compiledNav = buildHTML(categories,'categories','#js-nav-template');
+  var compiledNav = buildHTML(sections,'sections','#js-nav-template');
 
   // Turn body content into HTML that's ready to insert into the dom
-  var compiledBody = buildHTML(formattedData,'sections','#js-story-template');
+  var compiledBody = buildHTML(sections,'sections','#js-story-template');
 
   // Write the totally packaged html to the DOM
-  // $('#js-header').html(compiledNav);
+  $('#js-header').html(compiledNav);
   $('#js-main').html(compiledBody);
 
   // Hide the loading screen
