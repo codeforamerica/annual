@@ -5,6 +5,9 @@ This branch holds the code that powers the 2014 Code for America Annual Report. 
 
 This version pulls all data out of a Google Sheet and builds it into HTML.
 
+Check out the report at this link: [codeforamerica.github.io/annual/](http://codeforamerica.github.io/annual/)
+Check out the Google Sheet that serves it [at this link](https://docs.google.com/a/codeforamerica.org/spreadsheets/d/1UTmofeY8rPZvXdN_CNJXfFgPlexiMmlSs5W8oPhqFko/edit#gid=179182240).
+
 # Past annual reports
 
 We built our annual report differently in the past. To see or use that code, you can check out these branches:
