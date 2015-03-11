@@ -21,8 +21,8 @@ layout: default
 <% _.each(data.sections, function(section){ %>
   <section class="stories" id="<%= section.metadata.categoryId %>">
 
-    <div class="intro" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
-      <div class="intro__header">
+    <div class="intro">
+      <div class="intro__header" style="<% if (section.metadata.color !== "") { %> background-color: <%= section.metadata.color %>; <% } %>">
         <p class="intro__header__overline">
           <%= section.metadata.category %>
         </p>
