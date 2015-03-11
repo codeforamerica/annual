@@ -10,10 +10,10 @@ Check out the Google Sheet that serves it [at this link](https://docs.google.com
 
 # Past annual reports
 
-We built our annual report differently in the past. To see or use that code, you can check out these branches:
+We built our annual report differently in the past. To see old versions of the report source code, you can visit these tags:
 
-* [`2013-report`](https://github.com/codeforamerica/annual/tree/2013-report)
-* [`2012-report`](https://github.com/codeforamerica/annual/tree/2013-report)
+* [`2013`](https://github.com/codeforamerica/annual/releases/tag/2013)
+* [`2012`](https://github.com/codeforamerica/annual/releases/tag/2012)
 
 # What it's built on
 
