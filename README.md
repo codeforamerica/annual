@@ -36,3 +36,10 @@ jekyll serve --watch
 ```
 
 Then open your web browser of choice and head over to the url printed that's printed out.
+
+# In the future
+
+* Generate our HTML server side, take that burden off the client
+* Cache the Google Sheet so we don't make an API call for every visitor
+* Create a way to "make your own story" - submit your own story card
+* Create a super simple path to Fork this, copy the Google Sheet, and start generating your own Annual Report
