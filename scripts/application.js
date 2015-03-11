@@ -88,17 +88,17 @@ function init() {
 function handleData(data,tabletop) {
   console.log("They picked up! Handling the data...");
 
-  var introduction,
+  var opener,
       categories,
       stories;
 
   // Pull out the stories and section intros
-  introduction = tabletop.sheets('introduction').elements;
+  opener = tabletop.sheets('opener').elements;
   categories = tabletop.sheets('categories').elements;
   stories = tabletop.sheets('stories').elements;
 
   // For each object, encode characters in the identified 'key' (replace spaces with dashes, encode html characters, return a new key/value)
-  introduction = createId(introduction,'category','categoryId');
+  opener = createId(opener,'category','categoryId');
   categories = createId(categories,'category','categoryId');
   stories = createId(stories,'category','categoryId');
 
@@ -107,12 +107,12 @@ function handleData(data,tabletop) {
 
   // Build the HTML we'll put into the DOM
   var nav = buildHTML({ 
-                        'introduction' : introduction[0],
+                        'opener' : opener[0],
                         'sections' : sections
                       },'data','#js-nav-template');
 
   var content = buildHTML({ 
-                            'introduction' : introduction[0],
+                            'opener' : opener[0],
                             'sections' : sections
                           },'data','#js-story-template');
 

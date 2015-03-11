@@ -20,8 +20,8 @@
     </div>
     <nav>
       <ul>
-        <% if (data.introduction) { %>
-          <li><a id="header-<%= data.introduction.categoryId %>" href="#<%= data.introduction.categoryId %>"><%= data.introduction.category %></a></li>
+        <% if (data.opener) { %>
+          <li><a id="header-<%= data.opener.categoryId %>" href="#<%= data.opener.categoryId %>"><%= data.opener.category %></a></li>
         <% } %>
         <% _.each(data.sections, function(section){ %>
           <li><a id="header-<%= section.metadata.categoryId %>" href="#<%= section.metadata.categoryId %>"><%= section.metadata.category %></a></li>
