@@ -93,6 +93,10 @@ p {
 // Basic layout
 // =====
 
+.container {
+  @include outer-container();
+}
+
 // =====
 // Loading screen
 // =====
@@ -186,10 +190,6 @@ p {
 // =====
 // Import the .story component
 // =====
-
-.stories {
-  @include outer-container();
-}
 
 .stories + .stories {
   margin-top: 6em;
