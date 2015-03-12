@@ -15,14 +15,16 @@
   <div class="logo">
     <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
   </div>
-  <nav>
+  <nav class="nav">
     <ul>
+      <li class="currently">Currently Reading:</li>
       <% if (data.opener) { %>
-        <li><a id="header-<%= data.opener.categoryId %>" href="#<%= data.opener.categoryId %>"><%= data.opener.category %></a></li>
+        <li class="active"><a id="header-<%= data.opener.categoryId %>" href="#<%= data.opener.categoryId %>"><%= data.opener.category %></a></li>
       <% } %>
       <% _.each(data.sections, function(section){ %>
         <li><a id="header-<%= section.metadata.categoryId %>" href="#<%= section.metadata.categoryId %>"><%= section.metadata.category %></a></li>
       <% }); %>
+      <li class="expand"></li>
     </ul>
   </nav>
 </script>

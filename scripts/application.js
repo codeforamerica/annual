@@ -20,6 +20,10 @@ var resize = function() {
   $('#js-main').css('margin-top',offset);
 }
 
+$(window).resize(function(){
+  resize();
+});
+
 // =====
 // Transform our data
 // =====
@@ -105,6 +109,39 @@ function handleData(data,tabletop) {
   // Get our fully-formatted object with all our categories sorted nicely
   var sections = combine(categories,stories);
 
+  saveData(opener,sections);
+  makeReport(opener,sections);
+}
+
+// =====
+// Save the data
+// =====
+
+function saveData(opener,sections) {
+  console.log("Saving data...")
+  
+  var Report,
+      cachedAt;
+
+  cachedAt = new Date();
+
+  Report = 
+  {
+    'cachedAt' : cachedAt,
+    'opener' : opener,
+    'sections' : sections
+  }
+
+  localStorage.setItem('Report',JSON.stringify(Report));
+}
+
+// =====
+// Make the report
+// =====
+
+function makeReport(opener,sections) {
+  console.log("Making the report...");
+
   // Build the HTML we'll put into the DOM
   var nav = buildHTML({ 
                         'opener' : opener[0],
@@ -128,17 +165,64 @@ function handleData(data,tabletop) {
   setTimeout(function() { 
     $('#js-loading').css('display','none')
   }, 2000);
-
 }
 
-$(window).resize(function(){
-  resize();
-});
+// =====
+// Destroy the data and re-init (using for dev)
+// =====
 
-$(document).ready(function(){
-  // Run tabletop
+function refresh() {
+  localStorage.setItem('Report','');
   init();
-});
+}
+
+// =====
+// Let's go!
+// =====
+
+(function() {
+  console.log("Starting up...")
+  
+  var savedData;
+  savedData = localStorage.getItem('Report');
+
+  // Does the user have a saved Report from a previous load?
+  if (savedData !== null && savedData !== "") {
+    console.log("Found a saved Report, checking how long ago...")
+    // They have a saved Report, parse our data and use it
+    savedData = JSON.parse(savedData);
+
+    var cachedAt,
+        opener,
+        stories,
+        seconds;
+    
+    cachedAt = new Date(savedData['cachedAt']);
+    opener = savedData['opener'];
+    sections = savedData['sections'];
+
+    // Check if it was longer than 5 minutes ago (300 seconds)
+    seconds = Math.floor((new Date() - cachedAt) / 1000);
+    console.log("Data is " + (seconds / 60) + " minutes old...")
+
+    if (seconds < 300) {
+      // It's less than 5 minutes old
+      console.log("Data is fresh, less than 5 minutes old, using it...");
+      makeReport(opener,sections);
+    }
+    else {
+      // It's older than 5 minutes, make new data
+      console.log("Data is older than 5 minutes, getting new data...");
+      init();
+    }
+  }
+  else {
+    // No saved report, get the data from Google Sheets
+    console.log("No saved Report, getting fresh data...")
+    init();
+  }
+})();
+
 
 
 
