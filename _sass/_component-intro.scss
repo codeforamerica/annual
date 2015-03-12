@@ -27,14 +27,16 @@ $padding: 4em;
   font-style: italic;
 }
 
-// This is only for the opener, the first section in the Report
+// =====
+// Styles for the .opener, the first section of the report
+// =====
 
-.intro__description {
+.stories--opener .intro__description {
   @include span-columns(8 of 12);
   @include shift(1 of 12);
 }
 
-.intro__description p {
+.stories--opener .intro__description p {
   color: white;
   font-family: $sans-serif;
 }
