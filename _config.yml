@@ -1,1 +1,2 @@
 baseurl: '/annual'
+exclude: ['node_modules']
