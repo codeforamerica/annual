@@ -1,2 +1,22 @@
 baseurl: '/annual'
 exclude: ['node_modules']
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "stories"
+    values:
+      layout: "story"
+
+# Build our collections
+collections:
+  categories:
+    output: true
+    permalink: /categories/:path/
+  stories:
+    output: true
+    permalink: /stories/:path/
+  opener:
+    output: true
+    permalink: /opener/:path/
