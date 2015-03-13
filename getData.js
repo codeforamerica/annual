@@ -1,12 +1,12 @@
 var fs = require('fs');
 var _ = require('underscore');
+var YAML = require('yamljs');
 var Tabletop = require('tabletop');
-var YAML = require('json2yaml');
 
 var sheetUrl = 'https://docs.google.com/spreadsheets/d/1UTmofeY8rPZvXdN_CNJXfFgPlexiMmlSs5W8oPhqFko/pubhtml';
 
 function onLoad(data, tabletop) {
-  console.log( tabletop.foundSheetNames );
+  console.log( 'Found ' + tabletop.foundSheetNames );
 
   // An array of sheets found
   // => ['sheet-name','Other Sheet','what's a sheet']
@@ -36,12 +36,15 @@ function onLoad(data, tabletop) {
       }
 
       // Turn it into YAML, with a template
-      // ...
+      yamlObject = YAML.stringify(object);
 
-      fs.writeFile(directory + '/' + object['unique-id'], JSON.stringify(object), function (err) {
+      console.log(yamlObject);
+
+      fs.writeFile(directory + '/' + object['unique-id'] + '.html', yamlObject, function (err) {
         if (err) throw err;
         console.log('It\'s saved!');
       });
+
     });
   });
 };
