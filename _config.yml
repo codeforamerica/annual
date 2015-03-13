@@ -8,6 +8,18 @@ defaults:
       type: "stories"
     values:
       layout: "story"
+  -
+    scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
+  -
+    scope:
+      path: ""
+      type: "opener"
+    values:
+      layout: "opener"
 
 # Build our collections
 collections:
