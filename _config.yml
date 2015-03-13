@@ -1,4 +1,7 @@
-baseurl: ''
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+gems: ['kramdown']
 exclude: ['node_modules', 'getData.js', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
 
 defaults:
