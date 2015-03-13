@@ -96,6 +96,7 @@ p {
 
 .container {
   @include outer-container();
+  margin-top: 0;
 }
 
 // =====
