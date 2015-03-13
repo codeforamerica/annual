@@ -25,7 +25,7 @@ function onLoad(data, tabletop) {
     // Make a collection directory for that sheet
     var directory;
     directory = '_' + sheet;
-    fs.mkdirSync('/' + directory);
+    fs.mkdirSync(directory + '/');
 
     // For each object, save a YAML-formatted file in the directory
     _.each(objects, function(object){
