@@ -1,5 +1,5 @@
 baseurl: '/annual'
-exclude: ['node_modules']
+exclude: ['node_modules', 'getData.js', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
 
 defaults:
   -
