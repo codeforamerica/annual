@@ -43,7 +43,7 @@ layout: default
     <div class="container">
       <% _.each(section.stories, function(story){ %>
         <article class="story">
-          <div class="story__image" style="background-image:url('<%= story['image-link'] %>');">
+          <div class="story__image" style="background-image:url('{{ site.baseurl }}<%= story['image-link'] %>');">
           </div>
 
           <div class="story__body">
