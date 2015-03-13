@@ -77,7 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 2.5.3)
+  jekyll
   kramdown
   node
   puma
