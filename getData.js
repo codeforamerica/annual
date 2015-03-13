@@ -35,8 +35,11 @@ function onLoad(data, tabletop) {
         object = createUniqueId(object,columns);
       }
 
-      // Turn it into YAML, with a template
+      // Turn it into YAML
       yamlObject = YAML.stringify(object);
+
+      // Add those dashy-line-things to make it frontmatter
+      yamlObject = '---\n' + yamlObject + '---';
 
       console.log(yamlObject);
 
