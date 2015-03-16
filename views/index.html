@@ -1,6 +1,6 @@
 <%= partials.header %>
 
-<header>
+<header id="js-header">
   <div class="logo">
     <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
   </div>
@@ -19,25 +19,27 @@
   </nav>
 </header>
 
-<% if (data.opener) { %>
-  <% opener = data.opener[0] %>
+<div id="js-main">
+  <% if (data.opener) { %>
+    <% opener = data.opener[0] %>
 
-  <section class="stories stories--opener" id="<% opener.category %>">
-    <div class="intro" style="<% if (opener.color !== "") { %> background-color: <%= opener.color %>; <% } %>">
-      <div class="container">
+    <section class="stories stories--opener" id="<% opener.category %>">
+      <div class="intro" style="<% if (opener.color !== "") { %> background-color: <%= opener.color %>; <% } %>">
+        <div class="container">
 
-        <div class="intro__content">
-          <p><%= opener.category %></p>
-          <h1><%= opener.headline %></h1>
-        </div>
-        <div class="intro__description">
-          <%= opener.description %>
-        </div>
+          <div class="intro__content">
+            <p><%= opener.category %></p>
+            <h1><%= opener.headline %></h1>
+          </div>
+          <div class="intro__description">
+            <%= opener.description %>
+          </div>
 
-      </div><!-- end .container -->
-    </div><!-- end .intro -->
-  </section>
+        </div><!-- end .container -->
+      </div><!-- end .intro -->
+    </section>
 
-<% } /* endif data.opener */ %>
+  <% } /* endif data.opener */ %>
+</div>
 
 <%= partials.footer %>
