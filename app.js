@@ -25,8 +25,8 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/section/:id', function (req, res) {
-  res.render('section', {
+app.get('/category/:id', function (req, res) {
+  res.render('category', {
     title: 'Consolidate.js',
     requested: req.params.id,
     data: Report,
