@@ -1,5 +1,24 @@
 <%= partials.header %>
 
+<header>
+  <div class="logo">
+    <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li class="currently">Currently Reading:</li>
+      <% if (data.opener) { %>
+        <% opener = data.opener[0] %>
+        <li class="active"><a href=""><%= opener['category'] %></a></li>
+      <% } %>
+      <% _.each(data['categories'], function(category){ %>
+        <li class=""><a href="/category/<%= category['unique-id'] %>"><%= category['category'] %></a></li>
+      <% }); %>
+      <li class="expand"></li>
+    </ul>
+  </nav>
+</header>
+
 <% if (data.opener) { %>
   <% opener = data.opener[0] %>
 
