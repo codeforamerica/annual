@@ -63,8 +63,8 @@ function createUniqueId(object,columns) {
   var value;
   value = object[column];
 
-  // Escape HTML characters
-  value = _.escape(value);
+  // Remove non-alphanumeric characters, except for spaces
+  value = value.replace(/[^\w\s]/gi, '')
 
   // Replace spaces with dashes, lowercase the string
   value = value.split(' ').join('-').toLowerCase();
