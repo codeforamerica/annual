@@ -1,0 +1,24 @@
+<%= partials.header %>
+
+<% if (data.opener) { %>
+  <% opener = data.opener[0] %>
+
+  <section class="stories stories--opener" id="<% opener.category %>">
+    <div class="intro" style="<% if (opener.color !== "") { %> background-color: <%= opener.color %>; <% } %>">
+      <div class="container">
+
+        <div class="intro__content">
+          <p><%= opener.category %></p>
+          <h1><%= opener.headline %></h1>
+        </div>
+        <div class="intro__description">
+          <%= opener.description %>
+        </div>
+
+      </div><!-- end .container -->
+    </div><!-- end .intro -->
+  </section>
+
+<% } /* endif data.opener */ %>
+
+<%= partials.footer %>

@@ -5,11 +5,16 @@ var Tabletop = require('tabletop');
 
 var sheetUrl = 'https://docs.google.com/spreadsheets/d/1UTmofeY8rPZvXdN_CNJXfFgPlexiMmlSs5W8oPhqFko/pubhtml';
 
+// =====
+// Handle the data
+// =====
+
 function onLoad(data, tabletop) {
+  var Sheet = {};
   console.log( 'Found ' + tabletop.foundSheetNames );
 
   // An array of sheets found
-  // => ['sheet-name','Other Sheet','what's a sheet']
+  // => ['sheet-name','Other Sheet','that's a sheet']
   var sheets = tabletop.foundSheetNames;
 
   // For each sheet, generate a collection jekyll can use
@@ -18,38 +23,32 @@ function onLoad(data, tabletop) {
     var objects;
     objects = tabletop.sheets(sheet).all();
 
-    // Get an array of the column headers from the sheet, in order
+    // Get an array of the column headers from the sheet, in the correct order
+    // We do this because JS doesn't necessary require entries in an object to be read in order
+    // We'll use this below to create a unique ID from the first column, if needed
     var columns;
     columns = tabletop.sheets(sheet).column_names;
 
-    // Make a collection directory for that sheet
-    var directory;
-    directory = '_' + sheet;
-    fs.mkdirSync(directory + '/');
-
-    // For each object, save a YAML-formatted file in the directory
+    // For each object, make sure we have a unique id. If not, make one.
     _.each(objects, function(object){
-
-      // If there's no 'unique-id' key/value, create a unique slug from the first key/value
+      // If the 'unique-id' key doesn't exist, create a unique id from the first column key/value
       if (!object['unique-id']) {
         object = createUniqueId(object,columns);
       }
+    }); // end each objects
 
-      // Turn it into YAML
-      yamlObject = YAML.stringify(object);
+    // Insert our sheet and its objects (rows) into the Sheet object
+    Sheet[sheet] = objects;
 
-      // Add those dashy-line-things to make it frontmatter
-      yamlObject = '---\n' + yamlObject + '---';
+  }); // end each sheets
 
-      console.log(yamlObject);
+  Sheet = JSON.stringify(Sheet, null, 2);
 
-      fs.writeFile(directory + '/' + object['unique-id'] + '.html', yamlObject, function (err) {
-        if (err) throw err;
-        console.log('It\'s saved!');
-      });
-
-    });
+  fs.writeFile('data/Sheet.json', Sheet, function (err) {
+    if (err) throw err;
+    console.log('It\'s saved!');
   });
+
 };
 
 // =====
