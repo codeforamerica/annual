@@ -31,5 +31,5 @@
   "homepage": "https://github.com/codeforamerica/annual",
   "engines": {
     "node": "0.10.x"
-  },
+  }
 }
