@@ -32,10 +32,10 @@ $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 // Imports
 // =====
 
-@import 'bourbon/bourbon';
+@import 'vendor/bourbon/bourbon';
 @import 'grid-settings';
-@import 'neat/neat';
-@import 'normalize';
+@import 'vendor/neat/neat';
+@import 'vendor/normalize';
 
 // =====
 // Base spacing rules
