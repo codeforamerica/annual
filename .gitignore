@@ -3,4 +3,5 @@
 _site/
 _stories/
 _categories/
-_opener/
+_opener/node_modules
+node_modules
