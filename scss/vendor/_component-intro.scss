@@ -1,0 +1,42 @@
+//
+// _component_intro.scss
+//
+// Styles for the .intro component, which comes at the beginning of each category.
+//
+
+$padding: 4em;
+
+.intro {
+  background-color: $blue;
+  color: white;
+  @include span-columns(12 of 12);
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+.intro__content {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+}
+
+.intro__content h1, .intro__content p {
+  color: white;
+}
+
+.intro__content p {
+  font-style: italic;
+}
+
+// =====
+// Styles for the .opener, the first section of the report
+// =====
+
+.stories--opener .intro__description {
+  @include span-columns(8 of 12);
+  @include shift(1 of 12);
+}
+
+.stories--opener .intro__description p {
+  color: white;
+  font-family: $sans-serif;
+}
