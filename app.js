@@ -19,8 +19,32 @@ app.get('/', function(req, res){
     title: 'Consolidate.js',
     data: Report,
     partials: {
-      header: 'header',
-      footer: 'footer'
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
+app.get('/section/:id', function (req, res) {
+  res.render('section', {
+    title: 'Consolidate.js',
+    requested: req.params.id,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
+app.get('/story/:id', function (req, res) {
+  res.render('story', {
+    title: 'Consolidate.js',
+    requested: req.params.id,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
     }
   });
 });
