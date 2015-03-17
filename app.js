@@ -51,7 +51,6 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
     });
     checkData();
   } else {
-    checkData();
     next();
   }
 });
@@ -111,6 +110,11 @@ app.get('/story/:id', function (req, res) {
       footer: 'partials/footer'
     }
   });
+});
+
+app.get('/update', function (req, res) {
+  checkData();
+  res.send('Updating data...');
 });
 
 app.listen(process.env.PORT || 3000);
