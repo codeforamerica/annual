@@ -29,7 +29,7 @@ function checkData(){
       console.log('\nData out of date, getting new data...');
       getData(function(err,results){
         Report = results;
-        console.log(results);
+        console.log('We\'ve got data!');
       });
     }
   }
