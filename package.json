@@ -4,6 +4,7 @@
   "description": "An Annual Report builder from Code for America.",
   "main": "app.js",
   "dependencies": {
+    "asynch": "^0.5.2",
     "chokidar": "^1.0.0-rc4",
     "consolidate": "^0.11.0",
     "express": "^4.12.2",
