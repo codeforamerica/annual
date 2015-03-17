@@ -581,8 +581,8 @@ nav ul li.active a {
   background-size: 60%; }
 
 .story__body__header__link--facebook a {
-  background-image: url("/assets/images/icons/facebook-white.svg");
-  background-size: 100%; }
+  background-image: url("/assets/images/icons/fb-white.svg");
+  background-size: 80%; }
 
 .story__body__content {
   padding: 4em; }
