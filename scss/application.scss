@@ -181,8 +181,8 @@ $padding: 2em;
   width: 30px;
   text-indent: -9999px;
 
-  background-color: white;
   border-radius: 100%;
+  border: 2px solid white;
 
   background-image: url('{{ site.baseurl }}/assets/images/icons/twitter.svg');
   background-size: 60%;
@@ -197,19 +197,15 @@ $padding: 2em;
 }
 
 .story__body__header__link--twitter a {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/twitter-blue.svg');
-  background-size: 70%;
+  background-image: url('/assets/images/icons/twitter-white.svg');
+  background-size: 60%;
 }
 
 .story__body__header__link--facebook a {
-  background-color: rgba(0,0,0,0);
-  background-image: url('{{ site.baseurl }}/assets/images/icons/facebook-white.svg');
+  background-image: url('/assets/images/icons/facebook-white.svg');
   background-size: 100%;
 }
-.story__body__header__link--information a {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/pencil-blue.svg');
-  background-size: 60%;
-}
+
 
 // =====
 // Story body
