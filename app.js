@@ -28,12 +28,8 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
-app.get('*', function(req, res, next){
-  checkData(new Date());
-  next();
-});
-
 app.get('/', function(req, res){
+  checkData();
   res.render('index', {
     title: 'Consolidate.js',
     data: Report,
@@ -45,6 +41,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
+  checkData();
   res.render('category', {
     title: 'Consolidate.js',
     requested: req.params.id,
@@ -57,6 +54,7 @@ app.get('/category/:id', function (req, res) {
 });
 
 app.get('/story/:id', function (req, res) {
+  checkData();
   res.render('story', {
     title: 'Consolidate.js',
     requested: req.params.id,
