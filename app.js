@@ -58,7 +58,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Consolidate.js',
+    title: 'Intro',
     data: Report,
     partials: {
       header: 'partials/header',
@@ -68,20 +68,32 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
-  res.render('category', {
-    title: 'Consolidate.js',
-    requested: req.params.id,
-    data: Report,
-    partials: {
-      header: 'partials/header',
-      footer: 'partials/footer'
-    }
-  });
+  if (req.params.id == '2014-at-a-glance') {
+    res.render('timeline', {
+      title: 'Timeline',
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
+  } else {
+    res.render('category', {
+      title: 'Category',
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
+  }
 });
 
 app.get('/story/:id', function (req, res) {
   res.render('story', {
-    title: 'Consolidate.js',
+    title: 'Story',
     requested: req.params.id,
     data: Report,
     partials: {

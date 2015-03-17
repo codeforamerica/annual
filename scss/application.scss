@@ -150,6 +150,15 @@ $padding: 2em;
   margin-top: -100px;
 }
 
+.story--no-image {
+  .story__image {
+    display: none;
+  }
+  .story__body {
+    margin-top: 0;
+  }
+}
+
 // =====
 // Story header (social/etc button)
 // =====
@@ -397,3 +406,9 @@ p.next__content__headline span {
   border-bottom: 1px solid rgba(255,255,255,0.5);
   padding-bottom: 4px;
 }
+
+// =====
+// Import timeline component
+// =====
+
+@import 'component-timeline';

@@ -541,6 +541,11 @@ nav ul li.active a {
   .story__body:last-child {
     margin-right: 0; }
 
+.story--no-image .story__image {
+  display: none; }
+.story--no-image .story__body {
+  margin-top: 0; }
+
 .story__body__header {
   background-color: #004b6a;
   padding: 10px;
@@ -759,5 +764,103 @@ p.next__content__headline {
 p.next__content__headline span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 4px; }
+
+.timeline {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 82.75862%;
+  margin-left: 8.62069%; }
+  .timeline:last-child {
+    margin-right: 0; }
+
+.timeline * + * {
+  margin-top: 0; }
+
+.timeline ul {
+  position: relative;
+  list-style: none;
+  margin-left: 240px;
+  padding-top: 7em;
+  padding-bottom: 7em; }
+
+.timeline ul:before {
+  content: '';
+  width: 5px;
+  background-color: #6d6e7e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+
+.timeline ul li {
+  position: relative;
+  list-style: none;
+  margin-left: 50px; }
+
+.timeline ul li:before {
+  content: '';
+  position: absolute;
+  background-color: #6d6e7e;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  left: -60px;
+  margin-top: 2px; }
+
+.timeline ul li + li {
+  margin-top: 3em; }
+
+.timeline ul li .timeline__month {
+  position: absolute;
+  left: -270px;
+  width: 20%;
+  text-align: right; }
+
+.timeline ul li .timeline__month p {
+  font-style: italic;
+  font-weight: 600;
+  display: inline; }
+
+.timeline ul li .timeline__description {
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 2em; }
+
+.timeline ul li .timeline__description:before {
+  content: '';
+  height: 5px;
+  background-color: #004b6a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.timeline ul li:nth-child(1n):before {
+  background-color: #e87d2b; }
+.timeline ul li:nth-child(1n) .timeline__description:before {
+  background-color: #e87d2b; }
+.timeline ul li:nth-child(1n) .timeline__month p {
+  border-bottom: 3px solid #e87d2b; }
+
+.timeline ul li:nth-child(2n):before {
+  background-color: #004b6a; }
+.timeline ul li:nth-child(2n) .timeline__description:before {
+  background-color: #004b6a; }
+.timeline ul li:nth-child(2n) .timeline__month p {
+  border-bottom: 3px solid #004b6a; }
+
+.timeline ul li:nth-child(3n+3):before {
+  background-color: #cf1b41; }
+.timeline ul li:nth-child(3n+3) .timeline__description:before {
+  background-color: #cf1b41; }
+.timeline ul li:nth-child(3n+3) .timeline__month p {
+  border-bottom: 3px solid #cf1b41; }
+
+.timeline ul li:nth-child(4n+4):before {
+  background-color: #69579C; }
+.timeline ul li:nth-child(4n+4) .timeline__description:before {
+  background-color: #69579C; }
+.timeline ul li:nth-child(4n+4) .timeline__month p {
+  border-bottom: 3px solid #69579C; }
 
 /*# sourceMappingURL=application.css.map */
