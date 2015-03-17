@@ -687,34 +687,6 @@ p.story__body__content__link--header {
   clear: both;
   margin-bottom: 1em; }
 
-p.story__body__content__link--header:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: #004b6a;
-  margin-right: 10px;
-  display: block;
-  border-radius: 100%;
-  float: left;
-  margin-top: 2px;
-  margin-bottom: 10px;
-  background-repeat: no-repeat; }
-
-.story__body__content__link--github p.story__body__content__link--header:before {
-  background-image: url("{{ site.baseurl }}/assets/images/icons/github-white.svg");
-  background-size: 70%;
-  background-position: center center; }
-
-.story__body__content__link--app p.story__body__content__link--header:before {
-  background-image: url("{{ site.baseurl }}/assets/images/icons/power-white.svg");
-  background-size: 60%;
-  background-position: center center; }
-
-.story__body__content__link--blog p.story__body__content__link--header:before {
-  background-image: url("{{ site.baseurl }}/assets/images/icons/quotes-white.svg");
-  background-size: 60%;
-  background-position: center center; }
-
 p.story__body__content__link--link {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
   display: inline;
