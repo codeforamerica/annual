@@ -47,6 +47,8 @@ function onLoad(data, tabletop) {
   fs.writeFile('data/Sheet.json', Sheet, function (err) {
     if (err) throw err;
     console.log('It\'s saved!');
+    console.log('Written to' + __filename);
+    console.log('Written to..' + __dirname);
   });
 
 };
