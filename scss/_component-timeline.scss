@@ -1,0 +1,128 @@
+.timeline {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+}
+
+.timeline {
+  * + * {
+    margin-top: 0;
+  }
+}
+
+.timeline ul {
+  position: relative;
+  list-style: none;
+  margin-left: 240px;
+
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+
+.timeline ul:before {
+  content: '';
+  width: 5px;
+  background-color: #6d6e7e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline ul li {
+  position: relative;
+  list-style: none;
+  margin-left: 50px;
+}
+
+.timeline ul li:before {
+  content: '';
+  position: absolute;
+  background-color: #6d6e7e;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  left: -60px;
+  margin-top: 2px;
+}
+
+.timeline ul {
+  li + li {
+    margin-top: 3em;
+  }
+}
+
+.timeline ul li .timeline__month {
+  position: absolute;
+  left: -270px;
+  width: 20%;
+  text-align: right;
+}
+
+.timeline ul li .timeline__month p {
+  font-style: italic;
+  font-weight: 600;
+  display: inline;
+}
+
+.timeline ul li .timeline__description {
+  background-color: $background-tint;
+  padding: 2em;
+}
+
+.timeline ul li .timeline__description:before {
+  content: '';
+  height: 5px;
+  background-color: $blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; 
+}
+
+.timeline ul li:nth-child(1n) {
+  &:before {
+    background-color: #e87d2b;
+  } 
+  .timeline__description:before {
+    background-color: #e87d2b;
+  }
+  .timeline__month p {
+    border-bottom: 3px solid #e87d2b;
+  }
+}
+
+.timeline ul li:nth-child(2n) {
+  &:before {
+    background-color: $blue;
+  } 
+  .timeline__description:before {
+    background-color: $blue;
+  }
+  .timeline__month p {
+    border-bottom: 3px solid $blue;
+  }
+}
+
+.timeline ul li:nth-child(3n+3) {
+  &:before {
+    background-color: $red;
+  } 
+  .timeline__description:before {
+    background-color: $red;
+  }
+  .timeline__month p {
+    border-bottom: 3px solid $red;
+  }
+}
+
+.timeline ul li:nth-child(4n+4) {
+  &:before {
+    background-color: #69579C;
+  } 
+  .timeline__description:before {
+    background-color: #69579C;
+  }
+  .timeline__month p {
+    border-bottom: 3px solid #69579C;
+  }
+}
