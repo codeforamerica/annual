@@ -1,8 +1,5 @@
 .*/
 .DS_Store
 _site/
-_stories/
-_categories/
-_opener/node_modules
 node_modules
 data/*
