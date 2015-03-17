@@ -97,86 +97,6 @@ p {
 }
 
 // =====
-// Loading screen
-// =====
-
-.loading {
-  z-index: 9999;
-  position: fixed;
-  background-color: $red;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  @include transition(opacity 0.4s ease-out 0s);
-}
-
-.loading * {
-  color: white;
-  text-align: center;
-}
-
-.loading p {
-  font-family: $sans-serif;
-}
-
-// Spinner
-
-.loading__spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  font-size: 10px;
-}
-
-.loading__spinner > div {
-  background-color: white;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-  
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
-}
-
-.loading__spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
-
-.loading__spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-.loading__spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-.loading__spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
-
-@-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-  20% { -webkit-transform: scaleY(1.0) }
-}
-
-@keyframes stretchdelay {
-  0%, 40%, 100% { 
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% { 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
-}
-
-// =====
 // Import the nav
 // =====
 @import 'nav';
@@ -240,7 +160,6 @@ $padding: 2em;
   height: 50px;
   ul {
     list-style: none;
-    background-color: $blue;
     display: block;
     float: right;
   }
@@ -261,8 +180,8 @@ $padding: 2em;
   width: 30px;
   text-indent: -9999px;
 
-  background-color: white;
   border-radius: 100%;
+  border: 2px solid white;
 
   background-image: url('{{ site.baseurl }}/assets/images/icons/twitter.svg');
   background-size: 60%;
@@ -277,19 +196,15 @@ $padding: 2em;
 }
 
 .story__body__header__link--twitter a {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/twitter-blue.svg');
-  background-size: 70%;
+  background-image: url('/assets/images/icons/twitter-white.svg');
+  background-size: 60%;
 }
 
 .story__body__header__link--facebook a {
-  background-color: rgba(0,0,0,0);
-  background-image: url('{{ site.baseurl }}/assets/images/icons/facebook-white.svg');
-  background-size: 100%;
+  background-image: url('/assets/images/icons/fb-white.svg');
+  background-size: 80%;
 }
-.story__body__header__link--information a {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/pencil-blue.svg');
-  background-size: 60%;
-}
+
 
 // =====
 // Story body
@@ -364,22 +279,20 @@ ul.story__body__content__metrics li {
 
 ul.story__body__content__links li {
   @include span-columns(4 of 12);
-  background-color: white;
   position: relative;
   margin-top: 0;
   margin-bottom: $padding * 2;
   
   a {
     display: block;
+    background-color: white;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: $black;
     padding: $padding/2;
 
-    background-size: 100% 201%;
-    background-image: linear-gradient(to bottom, white 50%, $blue 50%);
-    @include transition(background-position 0.5s, color 0.5s, border-bottom-color 0.5s);
+    @include transition(opacity 0.4s ease-out 0s, transform 0.4s ease-out 0s);
   }
 
   a:before {
@@ -393,16 +306,8 @@ ul.story__body__content__links li {
   }
 
   a:hover {
-    background-position: 0 -100%;
-  }
-
-  a:hover p.story__body__content__link--header,
-  a:hover p.story__body__content__link--link {
-    color: white;
-  }
-  
-  a:hover p.story__body__content__link--link {
-    border-bottom-color: white;
+    opacity: 0.5;
+    transform: translateY(-10px);
   }
 
 }
@@ -412,38 +317,6 @@ p.story__body__content__link--header {
   line-height: 1.5;
   clear: both;
   margin-bottom: 1em;
-}
-
-p.story__body__content__link--header:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: $blue;
-  margin-right: 10px;
-  display: block;
-  border-radius: 100%;
-  float: left;
-  margin-top: 2px;
-  margin-bottom: 10px;
-  background-repeat: no-repeat;
-}
-
-.story__body__content__link--github p.story__body__content__link--header:before {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/github-white.svg');
-  background-size: 70%;
-  background-position: center center;
-}
-
-.story__body__content__link--app p.story__body__content__link--header:before {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/power-white.svg');
-  background-size: 60%;
-  background-position: center center;
-}
-
-.story__body__content__link--blog p.story__body__content__link--header:before {
-  background-image: url('{{ site.baseurl }}/assets/images/icons/quotes-white.svg');
-  background-size: 60%;
-  background-position: center center;
 }
 
 p.story__body__content__link--link {
