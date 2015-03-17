@@ -78,6 +78,16 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
+  } else if (req.params.id == 'supporters') {
+    res.render('supporters', {
+      title: 'Supporters',
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
   } else {
     res.render('category', {
       title: 'Category',

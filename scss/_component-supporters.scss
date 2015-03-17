@@ -1,0 +1,12 @@
+.supporters {
+  @include span-columns(10 of 12);
+  @include shift(1);
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.supporters__list {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}

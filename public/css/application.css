@@ -863,4 +863,22 @@ p.next__content__headline span {
 .timeline ul li:nth-child(4n+4) .timeline__month p {
   border-bottom: 3px solid #69579C; }
 
+.supporters {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 82.75862%;
+  margin-left: 8.62069%;
+  padding-top: 4em;
+  padding-bottom: 4em; }
+  .supporters:last-child {
+    margin-right: 0; }
+
+.supporters__list {
+  -webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 3;
+  /* Firefox */
+  column-count: 3; }
+
 /*# sourceMappingURL=application.css.map */
