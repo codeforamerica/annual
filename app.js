@@ -1,9 +1,23 @@
 var express = require('express');
 var fs = require('fs');
+var chokidar = require('chokidar');
 var _ = require('underscore');
 var cons = require('consolidate');
 var app = express();
+
+// Load the Report
 var Report = require('./data/Sheet.json');
+
+// Watch the Report for changes
+var watcher = chokidar.watch('data/Sheet.json', { persistent: true });
+watcher.on('change', function(){
+  Report = null;
+  fs.readFile('data/Sheet.json', function (err, data) {
+    if (err) throw err;
+    console.log('\n\n\n=========\n\n\nFound new data, reloading data...\n\n\n=========\n\n\n');
+    Report = JSON.parse(data);
+  });
+});
 
 app.engine('html', cons.underscore);
 app.set('view engine', 'html');
