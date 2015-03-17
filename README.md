@@ -25,7 +25,7 @@ This is currently built using the following technologies:
 # Deploy it locally
 
 **Core dependencies:**
-* Node 0.10.x
+* [Node 0.10.x](https://github.com/codeforamerica/howto/blob/master/Node.js.md)
 * Express 2.5.3
 
 ```
