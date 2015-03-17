@@ -1,0 +1,14 @@
+<%= partials.header %>
+
+<div class="container" style="margin-top:3em;text-align:center;">
+  <h1>Sorry, we're still trying to pull in some data.</h1>
+  <p>This page will automatically refresh in 5 seconds...</p>
+</div>
+
+<%= partials.footer %>
+
+<script type="text/javascript">
+  setTimeout(function(){
+    location.reload();
+  }, 5 * 1000)
+</script>
