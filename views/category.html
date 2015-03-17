@@ -61,8 +61,8 @@
       <% } %>
     <% });%>
 
-    <% _.each(data['stories'], function(story){ %>
-      <div class="container">
+    <div class="container">
+      <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
           <article class="story">
             <div class="story__image" style="background-image:url('<%= story['image-link'] %>');">
@@ -130,9 +130,9 @@
             </div><!-- end .story__body -->
           </article><!-- end .story -->
         <% } %>
-      </div><!-- end .container -->
-    <% }); %>
-
+      <% }); %>
+    </div><!-- end .container -->
+    
   </section>
 </div>
 
