@@ -1,0 +1,78 @@
+.financials {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.financials__header h1,
+.financials__breakdown h1 {
+  border-bottom: 1px solid $black;
+}
+
+.financials__header__total {
+  font-size: $base-size * 5;
+  font-family: $sans-serif;
+  font-weight: 200;
+  color: $blue;
+  margin-top: 0;
+
+  @include media($tablet) {
+    font-size: $base-size * 4;
+  }
+  @include media($mobile) {
+   font-size: $base-size * 2.5; 
+  }
+}
+
+.financials__breakdown {}
+
+.financials__breakdown__chart,
+.financials__breakdown__key {
+  @include span-columns(6 of 12);
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
+}
+
+
+.financials__breakdown__key ul {
+  list-style: none;
+  margin-top: 3em;
+  margin-left: 1em;
+
+  @include media($tablet) {
+    margin-left: 0;
+  }
+  @include media($mobile) {
+   margin-top: 0; 
+  }
+}
+
+.financials__breakdown__key ul li {
+  font-family: $sans-serif;
+}
+
+.financials__breakdown__key ul li p {
+  font-family: $sans-serif;
+  font-size: $base-size * 1.5;
+  display: inline-block;
+  border-bottom: 10px solid white;
+
+  @include media($mobile) {
+   font-size: $base-size;
+  }
+}
+
+.financials__breakdown__key ul li#program p {
+  border-bottom-color: #69579C;
+}
+
+.financials__breakdown__key ul li#general-administration p {
+  border-bottom-color: #00a175;
+}
+
+.financials__breakdown__key ul li#fundraising p {
+  border-bottom-color: #aa1c3a;
+}

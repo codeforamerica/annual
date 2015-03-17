@@ -881,4 +881,84 @@ p.next__content__headline span {
   /* Firefox */
   column-count: 3; }
 
+.financials {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 82.75862%;
+  margin-left: 8.62069%;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .financials:last-child {
+    margin-right: 0; }
+
+.financials__header h1,
+.financials__breakdown h1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
+
+.financials__header__total {
+  font-size: 90px;
+  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-weight: 200;
+  color: #004b6a;
+  margin-top: 0; }
+  @media screen and (max-width: 768px) {
+    .financials__header__total {
+      font-size: 72px; } }
+  @media screen and (max-width: 480px) {
+    .financials__header__total {
+      font-size: 45px; } }
+
+.financials__breakdown__chart,
+.financials__breakdown__key {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 48.27586%; }
+  .financials__breakdown__chart:last-child,
+  .financials__breakdown__key:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .financials__breakdown__chart,
+    .financials__breakdown__key {
+      float: left;
+      display: block;
+      margin-right: 3.44828%;
+      width: 100%; }
+      .financials__breakdown__chart:last-child,
+      .financials__breakdown__key:last-child {
+        margin-right: 0; } }
+
+.financials__breakdown__key ul {
+  list-style: none;
+  margin-top: 3em;
+  margin-left: 1em; }
+  @media screen and (max-width: 768px) {
+    .financials__breakdown__key ul {
+      margin-left: 0; } }
+  @media screen and (max-width: 480px) {
+    .financials__breakdown__key ul {
+      margin-top: 0; } }
+
+.financials__breakdown__key ul li {
+  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+
+.financials__breakdown__key ul li p {
+  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-size: 27px;
+  display: inline-block;
+  border-bottom: 10px solid white; }
+  @media screen and (max-width: 480px) {
+    .financials__breakdown__key ul li p {
+      font-size: 18px; } }
+
+.financials__breakdown__key ul li#program p {
+  border-bottom-color: #69579C; }
+
+.financials__breakdown__key ul li#general-administration p {
+  border-bottom-color: #00a175; }
+
+.financials__breakdown__key ul li#fundraising p {
+  border-bottom-color: #aa1c3a; }
+
 /*# sourceMappingURL=application.css.map */
