@@ -1,6 +1,17 @@
 <%= partials.header %>
 <% requested = _.findWhere(data['categories'], { 'unique-id' : requested }); %>
 
+<% if (requested['color']) { %>
+  <style>
+    ul.story__body__content__links li a:before {
+      background-color: <%= requested['color'] %>;
+    }
+    .story__body__header {
+      background-color: <%= requested['color'] %>;
+    }
+  </style>
+<% } %>
+
 <header id="js-header">
   <div class="logo">
     <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
