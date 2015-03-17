@@ -809,7 +809,7 @@ p.story__body__content__link--link {
   float: left;
   display: block;
   margin-right: 3.44828%;
-  width: 82.75862%;
+  width: 74.13793%;
   margin-left: 8.62069%; }
   .next__content:last-child {
     margin-right: 0; }
@@ -819,16 +819,29 @@ a.next__link {
   padding-top: 4em;
   padding-bottom: 4em;
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: white;
+  overflow: hidden;
   -webkit-transition: opacity 0.4s ease-out 0s;
   -moz-transition: opacity 0.4s ease-out 0s;
   transition: opacity 0.4s ease-out 0s; }
 
 a.next__link:hover {
   opacity: 0.5; }
+
+a.next__link:after {
+  position: absolute;
+  content: '';
+  background-image: url("/assets/images/icons/circle-right-white.svg");
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 100px; }
 
 p.next__content__read {
   text-transform: uppercase;
