@@ -11,8 +11,8 @@ $padding: 2em;
 .story {
   margin-top: $padding * 2;
   margin-bottom: $padding * 2;
-  @include span-columns(10 of 12);
-  @include shift(1 of 12);
+  @include span-columns(12 of 12);
+  // @include shift(1 of 12);
 }
 
 .story:before {
@@ -29,7 +29,7 @@ $padding: 2em;
 // =====
 
 .story__body {
-  @include span-columns(6 of 12);
+  @include span-columns(5 of 12);
 }
 
 .story__image {
@@ -151,6 +151,15 @@ $padding: 2em;
   display: table;
 }
 
+// .story__body__content__opener__box:before {
+//   content: '';
+//   height: 8px;
+//   width: 100px;
+//   background-color: $blue;
+//   display: block;
+//   margin-bottom: 1em;
+// }
+
 .story__body__content__opener__box {
   display: table-cell;
   vertical-align: middle;
@@ -159,6 +168,9 @@ $padding: 2em;
 .story__body__content__opener__box p {
   // Make the category title
   font-style: italic;
+  border: 2px solid $blue;
+  padding: 5px 10px;
+  display: inline-block;
 }
 
 // =====

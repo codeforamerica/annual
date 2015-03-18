@@ -521,8 +521,7 @@ nav ul li.active a {
   float: left;
   display: block;
   margin-right: 3.44828%;
-  width: 82.75862%;
-  margin-left: 8.62069%; }
+  width: 100%; }
   .story:last-child {
     margin-right: 0; }
 
@@ -538,7 +537,7 @@ nav ul li.active a {
   float: left;
   display: block;
   margin-right: 3.44828%;
-  width: 48.27586%; }
+  width: 39.65517%; }
   .story__body:last-child {
     margin-right: 0; }
 
@@ -610,7 +609,10 @@ nav ul li.active a {
   vertical-align: middle; }
 
 .story__body__content__opener__box p {
-  font-style: italic; }
+  font-style: italic;
+  border: 2px solid #004b6a;
+  padding: 5px 10px;
+  display: inline-block; }
 
 .story__body__content__quote__words {
   padding-top: 4.6em; }
