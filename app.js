@@ -5,6 +5,7 @@ var Tabletop = require('tabletop');
 var _ = require('underscore');
 var cons = require('consolidate');
 var app = express();
+app.locals._ = _;
 
 var getData = require('./getData.js');
 
@@ -35,7 +36,7 @@ function checkData(){
   }
 }
 
-app.engine('html', cons.underscore);
+app.engine('html', cons.ejs);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));

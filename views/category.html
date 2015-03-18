@@ -1,4 +1,4 @@
-<%= partials.header %>
+<% include partials/header.html %>
 <% requested = _.findWhere(data['categories'], { 'unique-id' : requested }); %>
 
 <% if (requested['color']) { %>
@@ -171,4 +171,4 @@ if (nextIndex <= indexLength) {
   </div><!-- end .next -->
 <% } %>
 
-<%= partials.footer %>
+<% include partials/footer.html %>
