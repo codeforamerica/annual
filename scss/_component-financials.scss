@@ -5,6 +5,11 @@
   padding-bottom: 2em;
 }
 
+.financials__header,
+.financials__breakdown {
+  @include span-columns(12 of 12);
+}
+
 .financials__header h1,
 .financials__breakdown h1 {
   border-bottom: 1px solid $black;

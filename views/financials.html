@@ -36,6 +36,27 @@
 </header>
 
 <div id="js-main">
+
+<% 
+
+var financials = data['financials'];
+financials = 
+_.chain(financials)
+.groupBy('category')
+.map(function(value, key) {
+    return {
+        "category" : key,
+        "unique-id" : value[0]['unique-id'],
+        "total" : _.where(value, { "total" : "TRUE" })[0],
+        "entries" : _.without(value, _.findWhere(value, { "total" : "TRUE" }))
+    }
+})
+.value();
+
+%>
+
+
+
   <section class="stories" id="{{ page.unique-id }}">
 
     <% _.each(data['categories'], function(category){ %>
@@ -63,30 +84,30 @@
     
     <div class="container">
       <div class="financials">
-        <div class="financials__header">
-          <h1>Total 2014 Expenses:</h1>
-          <p class="financials__header__total"><%= data['financials'][3]['amount'] %></p>
-        </div>
+        <% _.each(financials, function(financial){ %>
+          <div class="financials__header">
+            <h1>FY 2014: <%= financial['total']['label'] %></h1>
+            <p class="financials__header__total"><%= financial['total']['amount'] %></p>
+          </div>
 
-        <div class="financials__breakdown">
-          <h1>Breakdown by Program:</h1>
-          <div class="financials__breakdown__chart">
-            <canvas id="financials__chart" width="500px" height="500px"></canvas>
-          </div>
-          <div class="financials__breakdown__key">
-            <ul>
-              <li id="program">
-                <p><span><%= data['financials'][0]['percentage'] %>%</span> Program: $8,203,623</p>
-              </li>
-              <li id="general-administration">
-                <p><span><%= data['financials'][2]['percentage'] %>%</span> General Administration: $892,541</p>
-              </li>
-              <li id="fundraising">
-                <p><span><%= data['financials'][1]['percentage'] %>%</span> Fundraising: $520,492</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <div class="financials__breakdown">
+            <h2><strong>Breakdown</strong></h2>
+            <div class="financials__breakdown__chart">
+              <canvas id="financials__chart__<%= financial['unique-id'] %>" width="500px" height="500px"></canvas>
+            </div>
+
+            <div class="financials__breakdown__key">
+              <ul>
+                <% _.each(financial['entries'], function(entry){ %>
+                <li>
+                  <p><span style="background-color:<%= entry['color'] %>;"><%= entry['percentage'] %>%</span> <%= entry['label'] %>: <%= entry['amount'] %></p>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div><!-- end .financials__breakdown -->
+
+        <% }); %>
       </div>
     </div><!-- end .container -->
   </section>
@@ -129,38 +150,27 @@ if (nextIndex <= indexLength) {
 
 <script src="/scripts/vendor/Chart.js"></script>
 <%= partials.charts %>
+
 <script>
-  var financialData = [
-      // Program
-      {
-          value: <%= data['financials'][0]['percentage'] %>,
-          color:"#69579C",
-          highlight: "#69579C",
-          label: "<%= data['financials'][0]['expense-type'] %>: <%= data['financials'][0]['amount'] %>"
-      },
-      // Fundraising
-      {
-          value: <%= data['financials'][1]['percentage'] %>,
-          color: "#aa1c3a",
-          highlight: "#aa1c3a",
-          label: "<%= data['financials'][1]['expense-type'] %>: <%= data['financials'][1]['amount'] %>"
-      },
-      // Gen Admin
-      {
-          value: <%= data['financials'][2]['percentage'] %>,
-          color: "#00a175",
-          highlight: "#00a175",
-          label: "<%= data['financials'][2]['expense-type'] %>: <%= data['financials'][2]['amount'] %>"
-      }
-  ]
+<% _.each(financials, function(financial){ %>
+  var <%= financial['unique-id'] %>Data = [
+      <% _.each(financial['entries'], function(entry){ %>
+        {
+            value: "<%= entry['percentage'] %>",
+            color: "<%= entry['color'] %>",
+            highlight: "<%= entry['color'] %>",
+            label: "<%= entry['label'] %>: <%= entry['amount'] %>"
+        }<% if (entry !== _.last(financial['entries'])) { %>,<% } %>
+      <% }); %>
+  ];
 
   // Get the context of the canvas element we want to select
-  var ctx = document.getElementById("financials__chart").getContext("2d");
-  var myPieChart = new Chart(ctx).Pie(financialData,{
+  var <%= financial['unique-id'] %>El = document.getElementById("financials__chart__<%= financial['unique-id'] %>").getContext("2d");
+  var <%= financial['unique-id'] %>Chart = new Chart(<%= financial['unique-id'] %>El).Pie(<%= financial['unique-id'] %>Data,{
       responsive: true,
       animationEasing: "easeOutQuart"
   });
-
+<% }); %>  
 </script>
 
 <%= partials.footer %>

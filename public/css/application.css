@@ -892,6 +892,16 @@ p.next__content__headline span {
   .financials:last-child {
     margin-right: 0; }
 
+.financials__header,
+.financials__breakdown {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 100%; }
+  .financials__header:last-child,
+  .financials__breakdown:last-child {
+    margin-right: 0; }
+
 .financials__header h1,
 .financials__breakdown h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
