@@ -101,6 +101,7 @@ _.chain(financials)
                 <% _.each(financial['entries'], function(entry){ %>
                 <li>
                   <p><span style="background-color:<%= entry['color'] %>;"><%= entry['percentage'] %>%</span> <%= entry['label'] %>: <%= entry['amount'] %></p>
+                  <% if (!_.isEmpty(entry['note'])) { %> <small><%= entry['note'] %></small> <% } %>
                 </li>
                 <% }); %>
               </ul>
