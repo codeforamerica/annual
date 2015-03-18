@@ -952,13 +952,23 @@ p.next__content__headline span {
     .financials__breakdown__key ul li p {
       font-size: 18px; } }
 
+.financials__breakdown__key ul li p span {
+  font-weight: 800;
+  margin-right: 10px; }
+
 .financials__breakdown__key ul li#program p {
   border-bottom-color: #69579C; }
+  .financials__breakdown__key ul li#program p span {
+    color: #69579C; }
 
 .financials__breakdown__key ul li#general-administration p {
   border-bottom-color: #00a175; }
+  .financials__breakdown__key ul li#general-administration p span {
+    color: #00a175; }
 
 .financials__breakdown__key ul li#fundraising p {
   border-bottom-color: #aa1c3a; }
+  .financials__breakdown__key ul li#fundraising p span {
+    color: #aa1c3a; }
 
 /*# sourceMappingURL=application.css.map */

@@ -75,9 +75,15 @@
           </div>
           <div class="financials__breakdown__key">
             <ul>
-              <li id="program"><p>Program: $8,203,623</p></li>
-              <li id="general-administration"><p>General Administration: $892,541</p></li>
-              <li id="fundraising"><p>Fundraising: $520,492</p></li>
+              <li id="program">
+                <p><span><%= data['financials'][0]['percentage'] %>%</span> Program: $8,203,623</p>
+              </li>
+              <li id="general-administration">
+                <p><span><%= data['financials'][2]['percentage'] %>%</span> General Administration: $892,541</p>
+              </li>
+              <li id="fundraising">
+                <p><span><%= data['financials'][1]['percentage'] %>%</span> Fundraising: $520,492</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -122,6 +128,7 @@ if (nextIndex <= indexLength) {
 <% } %>
 
 <script src="/scripts/vendor/Chart.js"></script>
+<%= partials.charts %>
 <script>
   var financialData = [
       // Program

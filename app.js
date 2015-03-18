@@ -94,7 +94,8 @@ app.get('/category/:id', function (req, res) {
       data: Report,
       partials: {
         header: 'partials/header',
-        footer: 'partials/footer'
+        footer: 'partials/footer',
+        charts: 'partials/charts'
       }
     });
   } else {
