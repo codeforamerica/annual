@@ -5,6 +5,11 @@
   padding-bottom: 2em;
 }
 
+.financials__header,
+.financials__breakdown {
+  @include span-columns(12 of 12);
+}
+
 .financials__header h1,
 .financials__breakdown h1 {
   border-bottom: 1px solid $black;
@@ -25,8 +30,6 @@
   }
 }
 
-.financials__breakdown {}
-
 .financials__breakdown__chart,
 .financials__breakdown__key {
   @include span-columns(6 of 12);
@@ -39,14 +42,10 @@
 
 .financials__breakdown__key ul {
   list-style: none;
-  margin-top: 3em;
   margin-left: 1em;
 
   @include media($tablet) {
     margin-left: 0;
-  }
-  @include media($mobile) {
-   margin-top: 0; 
   }
 }
 
@@ -57,22 +56,37 @@
 .financials__breakdown__key ul li p {
   font-family: $sans-serif;
   font-size: $base-size * 1.5;
-  display: inline-block;
-  border-bottom: 10px solid white;
 
   @include media($mobile) {
    font-size: $base-size;
   }
 }
 
+.financials__breakdown__key ul li p span {
+  font-weight: 800;
+  margin-right: 10px;
+  background-color: $blue;
+  color: white;
+  width: 100px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
 .financials__breakdown__key ul li#program p {
-  border-bottom-color: #69579C;
+  span {
+    background-color: #69579C;
+  }
 }
 
 .financials__breakdown__key ul li#general-administration p {
-  border-bottom-color: #00a175;
+  span {
+    background-color: #00a175;
+  }
 }
 
 .financials__breakdown__key ul li#fundraising p {
-  border-bottom-color: #aa1c3a;
+  span {
+    background-color: #aa1c3a;
+  }
 }
