@@ -370,13 +370,17 @@ th {
 * {
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box; }
 
 * + * {
   margin-top: 1.5em; }
 
-* {
-  box-sizing: border-box; }
+.u-small-spacing * + * {
+  margin-top: 0.5em; }
+
+.u-row > * {
+  margin-top: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
@@ -388,7 +392,7 @@ h1 {
   font-size: 45px; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 32.4px; }
 
 h3 {
   font-size: 23.4px;
@@ -400,6 +404,9 @@ p {
   font-size: 18px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.8); }
+
+.u-unstyled {
+  list-style: none; }
 
 .container {
   max-width: 1440px;
@@ -497,48 +504,43 @@ nav ul li.active a {
   color: white;
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
 
-.stories + .stories {
-  margin-top: 6em; }
-
-.stories--opener + .stories {
-  margin-top: 0; }
-
 .story {
   margin-top: 4em;
   margin-bottom: 2em;
   float: left;
   display: block;
   margin-right: 3.44828%;
-  width: 100%; }
+  width: 82.75862%;
+  margin-left: 8.62069%; }
   .story:last-child {
     margin-right: 0; }
-  .story * + * {
-    margin-top: 0.5em; }
-  .story ul {
-    list-style: none; }
 
-.story__image {
-  float: left;
+.story:before {
+  content: '';
+  background-color: #aa1c3a;
+  height: 4px;
   display: block;
-  margin-right: 3.44828%;
-  width: 82.75862%;
-  margin-left: 8.62069%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 650px; }
-  .story__image:last-child {
-    margin-right: 0; }
+  margin-bottom: 2em;
+  margin-top: 2em; }
 
 .story__body {
   float: left;
   display: block;
   margin-right: 3.44828%;
-  width: 65.51724%;
-  margin-left: 17.24138%;
-  background-color: #f3f3f3;
-  margin-top: -100px; }
+  width: 48.27586%; }
   .story__body:last-child {
+    margin-right: 0; }
+
+.story__image {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 48.27586%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 400px; }
+  .story__image:last-child {
     margin-right: 0; }
 
 .story--no-image .story__image {
@@ -547,86 +549,32 @@ nav ul li.active a {
   margin-top: 0; }
 
 .story__body__header {
-  background-color: #004b6a;
-  padding: 10px;
-  height: 50px; }
-  .story__body__header ul {
-    list-style: none;
-    display: block;
-    float: right; }
-  .story__body__header ul li {
-    display: inline-block;
-    margin: 0;
-    padding-right: 5px; }
-  .story__body__header ul li a {
-    color: white;
-    text-decoration: none; }
-
-[class^="story__body__header__link"] a {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  text-indent: -9999px;
-  border-radius: 100%;
-  border: 2px solid white;
-  background-image: url("{{ site.baseurl }}/assets/images/icons/twitter.svg");
-  background-size: 60%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-transition: opacity 0.08s ease-in 0s;
-  -moz-transition: opacity 0.08s ease-in 0s;
-  transition: opacity 0.08s ease-in 0s; }
-
-[class^="story__body__header__link"] a:hover {
-  opacity: 0.5; }
-
-.story__body__header__link--twitter a {
-  background-image: url("/assets/images/icons/twitter-white.svg");
-  background-size: 60%; }
-
-.story__body__header__link--facebook a {
-  background-image: url("/assets/images/icons/fb-white.svg");
-  background-size: 80%; }
-
-.story__body__content {
-  padding: 4em; }
+  display: none; }
 
 .story__body__content__opener,
-.story__body__content__links {
+.story__body__content__links,
+.story__body__content__quote,
+.story__body__content__metrics {
   float: left;
   display: block;
   margin-right: 3.44828%;
   width: 100%; }
   .story__body__content__opener:last-child,
-  .story__body__content__links:last-child {
+  .story__body__content__links:last-child,
+  .story__body__content__quote:last-child,
+  .story__body__content__metrics:last-child {
     margin-right: 0; }
 
+.story__body__content__links,
 .story__body__content__quote,
 .story__body__content__metrics {
   padding-top: 2em; }
 
-.story__body__content__quote {
-  float: left;
-  display: block;
-  margin-right: 3.44828%;
-  width: 65.51724%; }
-  .story__body__content__quote:last-child {
-    margin-right: 0; }
-
-.story__body__content__metrics {
-  float: left;
-  display: block;
-  margin-right: 3.44828%;
-  width: 31.03448%;
-  margin-right: 0; }
-  .story__body__content__metrics:last-child {
-    margin-right: 0; }
-
-.story__body__content__links {
-  padding-top: 2em; }
+.story__body__content__opener p {
+  font-style: italic; }
 
 .story__body__content__quote {
-  margin-top: 50px; }
+  margin-top: 30px; }
 
 .story__body__content__quote:before {
   content: "“";
@@ -636,21 +584,43 @@ nav ul li.active a {
   line-height: 0;
   margin-top: 30px;
   margin-bottom: -5px;
-  color: rgba(51, 51, 51, 0.8); }
+  color: rgba(102, 102, 102, 0.8); }
 
 .story__body__content__quote__credit {
   font-style: italic; }
 
+ul.story__body__content__metrics li {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  ul.story__body__content__metrics li:last-child {
+    margin-right: 0; }
+
 .story__body__content__metrics__number {
   font-weight: 800;
-  font-size: 72px;
-  line-height: 0.8;
-  letter-spacing: -2px;
-  margin-top: 0;
-  color: rgba(51, 51, 51, 0.8); }
+  font-size: 48.6px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: rgba(51, 51, 51, 0.8);
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 31.03448%; }
+  .story__body__content__metrics__number:last-child {
+    margin-right: 0; }
 
-ul.story__body__content__metrics li {
-  margin-bottom: 2em; }
+.story__body__content__metrics__description {
+  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 65.51724%; }
+  .story__body__content__metrics__description:last-child {
+    margin-right: 0; }
 
 ul.story__body__content__links li {
   float: left;

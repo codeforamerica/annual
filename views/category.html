@@ -1,44 +1,21 @@
 <% 
-  var requested = _.findWhere(data['categories'], { 'unique-id' : requested }); 
+  var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
+  var title = requested['category'];
 %>
 
 <% include partials/header.html %>
-
-<%- JSON.stringify(requested) %>
+<% include partials/nav.html %>
 
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before {
       background-color: <%- requested['color'] %>;
     }
-    .story__body__header {
+    .story:before {
       background-color: <%- requested['color'] %>;
     }
   </style>
 <% } %>
-
-<header id="js-header">
-  <div class="logo">
-    <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
-  </div>
-  <nav class="nav">
-    <ul>
-      <li class="currently">Currently Reading:</li>
-      <% if (data.opener) { %>
-        <% opener = data.opener[0] %>
-        <li><a href="/"><%- opener['category'] %></a></li>
-      <% } %>
-      <% _.each(data['categories'], function(category){ %>
-        <li class="
-        <% if (category['unique-id'] == requested['unique-id']) { %>
-        active
-        <% } %>
-        "><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
-      <% }); %>
-      <li class="expand"></li>
-    </ul>
-  </nav>
-</header>
 
 <div id="js-main">
   <section class="stories" id="{{ page.unique-id }}">
@@ -69,13 +46,13 @@
     <div class="container">
       <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
-          <article class="story">
+          <article class="story u-small-spacing u-row">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
 
-            <div class="story__body">
+            <div class="story__body u-row">
               <div class="story__body__header">
-                <ul>
+                <ul class="u-unstyled">
                   <li class="story__body__header__link--facebook">
                     <a href="#">Share on Facebook</a>
                   </li>
@@ -85,9 +62,9 @@
                 </ul>
               </div>
               
-              <div class="story__body__content">
+              <div class="story__body__content u-row">
                 <div class="story__body__content__opener">
-                  <p><strong><%- story['category'] %></strong></p>
+                  <p><%- story['category'] %></p>
                   <h2><%- story['description'] %></h2>
                 </div>
 
@@ -96,22 +73,22 @@
                   <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
                 </div>
 
-                <ul class="story__body__content__metrics">
-                  <li>
+                <ul class="story__body__content__metrics u-unstyled u-row">
+                  <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%- story['metric-1-description'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-1-description'] %></p>
                   </li>
-                  <li>
+                  <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-2-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%- story['metric-2-description'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-2-description'] %></p>
                   </li>
-                  <li>
+                  <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-3-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%- story['metric-3-description'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-3-description'] %></p>
                   </li>
                 </ul>
 
-                <ul class="story__body__content__links">
+                <ul class="story__body__content__links u-unstyled">
                   <li class="story__body__content__link--<%- story['link-1-type'] %>">
                     <a href="<%- story['link-1-url'] %>">
                       <p class="story__body__content__link--header"><%- story['link-1-header'] %></p>
@@ -141,39 +118,5 @@
   </section>
 </div>
 
-<%
-var currentIndex,
-    nextIndex,
-    indexLength;
-
-var currentIndex = _.indexOf(data['categories'], requested);
-var nextIndex = currentIndex + 1;
-indexLength = data['categories'].length - 1;
-
-if (nextIndex <= indexLength) {
-  nextIndex = nextIndex;
-} else {
-  nextIndex = false;
-}
-%>
-
-<% if (_.isNumber(nextIndex)){ %>
-  <% var nextCategory = data['categories'][nextIndex] %>
-  <div class="next">
-    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
-    <% if (nextCategory['color']) { %>
-      background-color: <%- nextCategory['color'] %>;
-    <% } %>
-    ">
-      <div class="container">
-          <div class="next__content">
-            <p class="next__content__read">Continue Reading:</p>
-            <p class="next__content__overline"><%- nextCategory['category'] %></p>
-            <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
-          </div><!-- end .next__cpntent -->
-      </div><!-- end .container -->
-    </a>
-  </div><!-- end .next -->
-<% } %>
-
+<% include partials/next.html %>
 <% include partials/footer.html %>

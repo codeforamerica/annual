@@ -42,6 +42,7 @@ $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
   margin: 0;
   padding: 0;
   color: $black;
+  box-sizing: border-box;
 }
 
 * + * {
@@ -49,8 +50,14 @@ $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
   margin-top: 1.5em;
 }
 
-* {
-  box-sizing: border-box;
+.u-small-spacing {
+  * + * {
+    margin-top: 0.5em;
+  }
+}
+
+.u-row > * {
+  margin-top: 0;
 }
 
 // =====
@@ -71,7 +78,7 @@ h1 {
 }
 
 h2 {
-  font-size: $base-size * 2;
+  font-size: $base-size * 1.8;
 }
 
 h3 {
@@ -85,6 +92,15 @@ p {
   font-size: $base-size;
   line-height: 1.8;
   color: $black;
+}
+
+// =====
+// Utility classes
+//
+
+// Unstyled un-ordered list
+.u-unstyled {
+  list-style: none;
 }
 
 // =====
@@ -109,230 +125,7 @@ p {
 // =====
 // Import the .story component
 // =====
-
-.stories + .stories {
-  margin-top: 6em;
-}
-
-.stories--opener + .stories {
-  margin-top: 0;
-}
-
-$padding: 2em;
-
-.story {
-  margin-top: $padding * 2;
-  margin-bottom: $padding;
-  @include span-columns(12 of 12);
-
-  * + * {
-    margin-top: 0.5em;
-  }
-
-  ul {
-    list-style: none;
-  }
-}
-
-.story__image {
-  @include span-columns(10 of 12);
-  @include shift(1 of 12);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 650px;
-}
-
-.story__body {
-  @include span-columns(8 of 12);
-  @include shift(2 of 12);
-  background-color: lighten(gray,45);
-  margin-top: -100px;
-}
-
-.story--no-image {
-  .story__image {
-    display: none;
-  }
-  .story__body {
-    margin-top: 0;
-  }
-}
-
-// =====
-// Story header (social/etc button)
-// =====
-
-.story__body__header {
-  background-color: $blue;
-  padding: 10px;
-  height: 50px;
-  ul {
-    list-style: none;
-    display: block;
-    float: right;
-  }
-  ul li {
-    display: inline-block;
-    margin: 0;
-    padding-right: 5px;
-  }
-  ul li a {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-[class^="story__body__header__link"] a {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  text-indent: -9999px;
-
-  border-radius: 100%;
-  border: 2px solid white;
-
-  background-image: url('{{ site.baseurl }}/assets/images/icons/twitter.svg');
-  background-size: 60%;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  @include transition(opacity 0.08s ease-in 0s);
-}
-
-[class^="story__body__header__link"] a:hover { 
-  opacity: 0.5;
-}
-
-.story__body__header__link--twitter a {
-  background-image: url('/assets/images/icons/twitter-white.svg');
-  background-size: 60%;
-}
-
-.story__body__header__link--facebook a {
-  background-image: url('/assets/images/icons/fb-white.svg');
-  background-size: 80%;
-}
-
-
-// =====
-// Story body
-// =====
-
-// Layout for the story section
-
-.story__body__content {
-  padding: $padding * 2;
-}
-
-.story__body__content__opener,
-.story__body__content__links {
-  @include span-columns (12 of 12);
-}
-
-.story__body__content__quote,
-.story__body__content__metrics {
-  padding-top: $padding;
-}
-
-.story__body__content__quote {
-  @include span-columns (8 of 12);
-}
-
-.story__body__content__metrics {
-  @include span-columns (4 of 12);
-  @include omega();
-}
-
-.story__body__content__links {
-  padding-top: $padding;
-}
-
-// Quote styles
-
-.story__body__content__quote {
-  margin-top: 50px;
-}
-
-.story__body__content__quote:before {
-  content: "“";
-  display: block;
-  font-size: 150px;
-  font-weight: 900;
-  line-height: 0;
-  margin-top: 30px;
-  margin-bottom: -5px;
-  color: lighten($black,20);
-}
-
-.story__body__content__quote__credit {
-  font-style: italic;
-}
-
-// Metric styles
-
-.story__body__content__metrics__number {
-  font-weight: 800;
-  font-size: $base-size * 4;
-  line-height: 0.8;
-  letter-spacing: -2px;
-  margin-top: 0;
-  color: lighten($black,20);
-}
-
-ul.story__body__content__metrics li {
-  margin-bottom: 2em;
-}
-
-// Link styles
-
-ul.story__body__content__links li {
-  @include span-columns(4 of 12);
-  position: relative;
-  margin-top: 0;
-  margin-bottom: $padding * 2;
-  
-  a {
-    display: block;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: $black;
-    padding: $padding/2;
-
-    @include transition(opacity 0.4s ease-out 0s, transform 0.4s ease-out 0s);
-  }
-
-  a:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background-color: $blue;
-  }
-
-  a:hover {
-    opacity: 0.5;
-    transform: translateY(-10px);
-  }
-
-}
-
-p.story__body__content__link--header {
-  font-weight: bold;
-  line-height: 1.5;
-  clear: both;
-  margin-bottom: 1em;
-}
-
-p.story__body__content__link--link {
-  border-bottom: 1px solid $black;
-  display: inline;
-  line-height: 1.5;
-}
+@import 'component-story';
 
 // =====
 // Import next section component

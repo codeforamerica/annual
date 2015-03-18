@@ -127,5 +127,9 @@ app.get('/update', function (req, res) {
   res.send('Updating data...');
 });
 
+app.get('/data', function (req, res) {
+  res.json(Report);
+});
+
 app.listen(process.env.PORT || 3000);
 console.log('Express server listening on port 3000');

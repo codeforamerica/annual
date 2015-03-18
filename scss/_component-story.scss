@@ -1,0 +1,225 @@
+//
+// _component_intro.scss
+//
+// Styles for the .story component, which holds our story cards
+//
+
+$padding: 2em;
+
+// Basic layout and color bar across the top
+
+.story {
+  margin-top: $padding * 2;
+  margin-bottom: $padding;
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+}
+
+.story:before {
+  content: '';
+  background-color: #aa1c3a;
+  height: 4px;
+  display: block;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+// =====
+// Layout inside the card
+// =====
+
+.story__body {
+  @include span-columns(6 of 12);
+}
+
+.story__image {
+  @include span-columns(6 of 12);
+
+  // The image will be printed as inline css at render time
+  // This tees up sizing
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 400px;
+}
+
+
+// If there's no image, do something
+
+.story--no-image {
+  .story__image {
+    display: none;
+  }
+  .story__body {
+    margin-top: 0;
+  }
+}
+
+// =====
+// Story header (social/etc button)
+// (NOTE: HIDDEN WHILE WE WORK ON SOCIAL SHARING.)
+// =====
+
+// Hide the social sharing header for now
+.story__body__header {
+  display: none;
+}
+
+    // [class^="story__body__header__link"] a {
+    //   display: inline-block;
+    //   height: 30px;
+    //   width: 30px;
+    //   text-indent: -9999px;
+
+    //   border-radius: 100%;
+    //   border: 2px solid white;
+
+    //   background-image: url('{{ site.baseurl }}/assets/images/icons/twitter.svg');
+    //   background-size: 60%;
+    //   background-position: center center;
+    //   background-repeat: no-repeat;
+
+    //   @include transition(opacity 0.08s ease-in 0s);
+    // }
+
+    // [class^="story__body__header__link"] a:hover { 
+    //   opacity: 0.5;
+    // }
+
+    // .story__body__header__link--twitter a {
+    //   background-image: url('/assets/images/icons/twitter-white.svg');
+    //   background-size: 60%;
+    // }
+
+    // .story__body__header__link--facebook a {
+    //   background-image: url('/assets/images/icons/fb-white.svg');
+    //   background-size: 80%;
+    // }
+
+
+// =====
+// story__body__content basic spacing/layout
+// =====
+
+.story__body__content__opener,
+.story__body__content__links,
+.story__body__content__quote,
+.story__body__content__metrics {
+  @include span-columns (12 of 12);
+}
+.story__body__content__links,
+.story__body__content__quote,
+.story__body__content__metrics {
+  padding-top: $padding;
+}
+
+// =====
+// story__body__content__opener
+// =====
+
+.story__body__content__opener p {
+  // Make the category title
+  font-style: italic;
+}
+
+// =====
+// story__body__content__quote
+// =====
+
+.story__body__content__quote {
+  margin-top: 30px;
+}
+
+.story__body__content__quote:before {
+  content: "“";
+  display: block;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 0;
+  margin-top: 30px;
+  margin-bottom: -5px;
+  color: lighten($black,40);
+}
+
+.story__body__content__quote__credit {
+  font-style: italic;
+}
+
+// =====
+// story__body__contnet__metrics
+// =====
+
+ul.story__body__content__metrics {
+  li {
+    @include span-columns(12 of 12);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+}
+
+.story__body__content__metrics__number {
+  font-weight: 800;
+  font-size: $base-size * 2.7;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: lighten($black,20);
+  @include span-columns(4 of 12);
+}
+
+.story__body__content__metrics__description {
+  font-family: $sans-serif;
+  @include span-columns(8 of 12);
+}
+
+// =====
+// story__body__content__links
+// =====
+
+ul.story__body__content__links li {
+  @include span-columns(4 of 12);
+  position: relative;
+  margin-top: 0;
+  margin-bottom: $padding * 2;
+  
+  a {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $black;
+    padding: $padding/2;
+
+    @include transition(opacity 0.4s ease-out 0s, transform 0.4s ease-out 0s);
+  }
+
+  a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background-color: $blue;
+  }
+
+  a:hover {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+
+}
+
+p.story__body__content__link--header {
+  font-weight: bold;
+  line-height: 1.5;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+p.story__body__content__link--link {
+  border-bottom: 1px solid $black;
+  display: inline;
+  line-height: 1.5;
+}
