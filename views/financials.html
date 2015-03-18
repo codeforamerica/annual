@@ -1,13 +1,13 @@
-<%= partials.header %>
+<%- partials.header %>
 <% requested = _.findWhere(data['categories'], { 'unique-id' : requested }); %>
 
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before {
-      background-color: <%= requested['color'] %>;
+      background-color: <%- requested['color'] %>;
     }
     .story__body__header {
-      background-color: <%= requested['color'] %>;
+      background-color: <%- requested['color'] %>;
     }
   </style>
 <% } %>
@@ -21,14 +21,14 @@
       <li class="currently">Currently Reading:</li>
       <% if (data.opener) { %>
         <% opener = data.opener[0] %>
-        <li><a href="/"><%= opener['category'] %></a></li>
+        <li><a href="/"><%- opener['category'] %></a></li>
       <% } %>
       <% _.each(data['categories'], function(category){ %>
         <li class="
         <% if (category['unique-id'] == requested['unique-id']) { %>
         active
         <% } %>
-        "><a href="/category/<%= category['unique-id'] %>"><%= category['category'] %></a></li>
+        "><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
       <% }); %>
       <li class="expand"></li>
     </ul>
@@ -63,7 +63,7 @@ _.chain(financials)
       <% if (category['unique-id'] == requested['unique-id']) { %>
         <div class="intro" style="
           <% if (category['color']) { %>
-            background-color: <%= category['color'] %>;
+            background-color: <%- category['color'] %>;
           <% } %>
         ">
 
@@ -71,10 +71,10 @@ _.chain(financials)
 
             <div class="intro__content">
               <p class="intro__content__overline">
-                <%= category['category'] %>
+                <%- category['category'] %>
               </p>
-              <h1><%= category['headline'] %></h1>
-              <p><%= category['description'] %></p> 
+              <h1><%- category['headline'] %></h1>
+              <p><%- category['description'] %></p> 
             </div>
 
           </div><!-- end .container -->
@@ -86,22 +86,22 @@ _.chain(financials)
       <div class="financials">
         <% _.each(financials, function(financial){ %>
           <div class="financials__header">
-            <h1>FY 2014: <%= financial['total']['label'] %></h1>
-            <p class="financials__header__total"><%= financial['total']['amount'] %></p>
+            <h1>FY 2014: <%- financial['total']['label'] %></h1>
+            <p class="financials__header__total"><%- financial['total']['amount'] %></p>
           </div>
 
           <div class="financials__breakdown">
             <h2><strong>Breakdown</strong></h2>
             <div class="financials__breakdown__chart">
-              <canvas id="financials__chart__<%= financial['unique-id'] %>" width="500px" height="500px"></canvas>
+              <canvas id="financials__chart__<%- financial['unique-id'] %>" width="500px" height="500px"></canvas>
             </div>
 
             <div class="financials__breakdown__key">
               <ul>
                 <% _.each(financial['entries'], function(entry){ %>
                 <li>
-                  <p><span style="background-color:<%= entry['color'] %>;"><%= entry['percentage'] %>%</span> <%= entry['label'] %>: <%= entry['amount'] %></p>
-                  <% if (!_.isEmpty(entry['note'])) { %> <small><%= entry['note'] %></small> <% } %>
+                  <p><span style="background-color:<%- entry['color'] %>;"><%- entry['percentage'] %>%</span> <%- entry['label'] %>: <%- entry['amount'] %></p>
+                  <% if (!_.isEmpty(entry['note'])) { %> <small><%- entry['note'] %></small> <% } %>
                 </li>
                 <% }); %>
               </ul>
@@ -133,16 +133,16 @@ if (nextIndex <= indexLength) {
 <% if (_.isNumber(nextIndex)){ %>
   <% var nextCategory = data['categories'][nextIndex] %>
   <div class="next">
-    <a class="next__link" href="/category/<%= nextCategory['unique-id'] %>" style="
+    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
     <% if (nextCategory['color']) { %>
-      background-color: <%= nextCategory['color'] %>;
+      background-color: <%- nextCategory['color'] %>;
     <% } %>
     ">
       <div class="container">
           <div class="next__content">
             <p class="next__content__read">Continue Reading:</p>
-            <p class="next__content__overline"><%= nextCategory['category'] %></p>
-            <p class="next__content__headline"><span><%= nextCategory['headline'] %></span></p>
+            <p class="next__content__overline"><%- nextCategory['category'] %></p>
+            <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
           </div><!-- end .next__cpntent -->
       </div><!-- end .container -->
     </a>
@@ -150,28 +150,28 @@ if (nextIndex <= indexLength) {
 <% } %>
 
 <script src="/scripts/vendor/Chart.js"></script>
-<%= partials.charts %>
+<%- partials.charts %>
 
 <script>
 <% _.each(financials, function(financial){ %>
-  var <%= financial['unique-id'] %>Data = [
+  var <%- financial['unique-id'] %>Data = [
       <% _.each(financial['entries'], function(entry){ %>
         {
-            value: "<%= entry['percentage'] %>",
-            color: "<%= entry['color'] %>",
-            highlight: "<%= entry['color'] %>",
-            label: "<%= entry['label'] %>: <%= entry['amount'] %>"
+            value: "<%- entry['percentage'] %>",
+            color: "<%- entry['color'] %>",
+            highlight: "<%- entry['color'] %>",
+            label: "<%- entry['label'] %>: <%- entry['amount'] %>"
         }<% if (entry !== _.last(financial['entries'])) { %>,<% } %>
       <% }); %>
   ];
 
   // Get the context of the canvas element we want to select
-  var <%= financial['unique-id'] %>El = document.getElementById("financials__chart__<%= financial['unique-id'] %>").getContext("2d");
-  var <%= financial['unique-id'] %>Chart = new Chart(<%= financial['unique-id'] %>El).Pie(<%= financial['unique-id'] %>Data,{
+  var <%- financial['unique-id'] %>El = document.getElementById("financials__chart__<%- financial['unique-id'] %>").getContext("2d");
+  var <%- financial['unique-id'] %>Chart = new Chart(<%- financial['unique-id'] %>El).Pie(<%- financial['unique-id'] %>Data,{
       responsive: true,
       animationEasing: "easeOutQuart"
   });
 <% }); %>  
 </script>
 
-<%= partials.footer %>
+<%- partials.footer %>

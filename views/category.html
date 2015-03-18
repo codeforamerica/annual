@@ -1,13 +1,18 @@
+<% 
+  var requested = _.findWhere(data['categories'], { 'unique-id' : requested }); 
+%>
+
 <% include partials/header.html %>
-<% requested = _.findWhere(data['categories'], { 'unique-id' : requested }); %>
+
+<%- JSON.stringify(requested) %>
 
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before {
-      background-color: <%= requested['color'] %>;
+      background-color: <%- requested['color'] %>;
     }
     .story__body__header {
-      background-color: <%= requested['color'] %>;
+      background-color: <%- requested['color'] %>;
     }
   </style>
 <% } %>
@@ -21,14 +26,14 @@
       <li class="currently">Currently Reading:</li>
       <% if (data.opener) { %>
         <% opener = data.opener[0] %>
-        <li><a href="/"><%= opener['category'] %></a></li>
+        <li><a href="/"><%- opener['category'] %></a></li>
       <% } %>
       <% _.each(data['categories'], function(category){ %>
         <li class="
         <% if (category['unique-id'] == requested['unique-id']) { %>
         active
         <% } %>
-        "><a href="/category/<%= category['unique-id'] %>"><%= category['category'] %></a></li>
+        "><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
       <% }); %>
       <li class="expand"></li>
     </ul>
@@ -42,7 +47,7 @@
       <% if (category['unique-id'] == requested['unique-id']) { %>
         <div class="intro" style="
           <% if (category['color']) { %>
-            background-color: <%= category['color'] %>;
+            background-color: <%- category['color'] %>;
           <% } %>
         ">
 
@@ -50,10 +55,10 @@
 
             <div class="intro__content">
               <p class="intro__content__overline">
-                <%= category['category'] %>
+                <%- category['category'] %>
               </p>
-              <h1><%= category['headline'] %></h1>
-              <p><%= category['description'] %></p> 
+              <h1><%- category['headline'] %></h1>
+              <p><%- category['description'] %></p> 
             </div>
 
           </div><!-- end .container -->
@@ -65,7 +70,7 @@
       <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
           <article class="story">
-            <div class="story__image" style="background-image:url('<%= story['image-link'] %>');">
+            <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
 
             <div class="story__body">
@@ -82,47 +87,47 @@
               
               <div class="story__body__content">
                 <div class="story__body__content__opener">
-                  <p><strong><%= story['category'] %></strong></p>
-                  <h2><%= story['description'] %></h2>
+                  <p><strong><%- story['category'] %></strong></p>
+                  <h2><%- story['description'] %></h2>
                 </div>
 
                 <div class="story__body__content__quote">
-                  <p><%= story['quote'] %></p>
-                  <p class="story__body__content__quote__credit">&mdash; <%= story['quote-attribution'] %></p>
+                  <p><%- story['quote'] %></p>
+                  <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
                 </div>
 
                 <ul class="story__body__content__metrics">
                   <li>
-                    <p class="story__body__content__metrics__number"><%= story['metric-1-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%= story['metric-1-description'] %></p>
+                    <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
+                    <p class="story__body__content__body__metrics__description"><%- story['metric-1-description'] %></p>
                   </li>
                   <li>
-                    <p class="story__body__content__metrics__number"><%= story['metric-2-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%= story['metric-2-description'] %></p>
+                    <p class="story__body__content__metrics__number"><%- story['metric-2-number'] %></p>
+                    <p class="story__body__content__body__metrics__description"><%- story['metric-2-description'] %></p>
                   </li>
                   <li>
-                    <p class="story__body__content__metrics__number"><%= story['metric-3-number'] %></p>
-                    <p class="story__body__content__body__metrics__description"><%= story['metric-3-description'] %></p>
+                    <p class="story__body__content__metrics__number"><%- story['metric-3-number'] %></p>
+                    <p class="story__body__content__body__metrics__description"><%- story['metric-3-description'] %></p>
                   </li>
                 </ul>
 
                 <ul class="story__body__content__links">
-                  <li class="story__body__content__link--<%= story['link-1-type'] %>">
-                    <a href="<%= story['link-1-url'] %>">
-                      <p class="story__body__content__link--header"><%= story['link-1-header'] %></p>
-                      <p class="story__body__content__link--link"><%= story['link-1-description'] %></p>
+                  <li class="story__body__content__link--<%- story['link-1-type'] %>">
+                    <a href="<%- story['link-1-url'] %>">
+                      <p class="story__body__content__link--header"><%- story['link-1-header'] %></p>
+                      <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
                     </a>
                   </li>
-                  <li class="story__body__content__link--<%= story['link-2-type'] %>">
-                    <a href="<%= story['link-2-url'] %>">
-                      <p class="story__body__content__link--header"><%= story['link-2-header'] %></p>
-                      <p class="story__body__content__link--link"><%= story['link-2-description'] %></p>
+                  <li class="story__body__content__link--<%- story['link-2-type'] %>">
+                    <a href="<%- story['link-2-url'] %>">
+                      <p class="story__body__content__link--header"><%- story['link-2-header'] %></p>
+                      <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
                     </a>
                   </li>
-                  <li class="story__body__content__link--<%= story['link-3-type'] %>">
-                    <a href="<%= story['link-3-url'] %>">
-                      <p class="story__body__content__link--header"><%= story['link-3-header'] %></p>
-                      <p class="story__body__content__link--link"><%= story['link-3-description'] %></p>
+                  <li class="story__body__content__link--<%- story['link-3-type'] %>">
+                    <a href="<%- story['link-3-url'] %>">
+                      <p class="story__body__content__link--header"><%- story['link-3-header'] %></p>
+                      <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
                     </a>
                   </li>
                 </ul>
@@ -155,16 +160,16 @@ if (nextIndex <= indexLength) {
 <% if (_.isNumber(nextIndex)){ %>
   <% var nextCategory = data['categories'][nextIndex] %>
   <div class="next">
-    <a class="next__link" href="/category/<%= nextCategory['unique-id'] %>" style="
+    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
     <% if (nextCategory['color']) { %>
-      background-color: <%= nextCategory['color'] %>;
+      background-color: <%- nextCategory['color'] %>;
     <% } %>
     ">
       <div class="container">
           <div class="next__content">
             <p class="next__content__read">Continue Reading:</p>
-            <p class="next__content__overline"><%= nextCategory['category'] %></p>
-            <p class="next__content__headline"><span><%= nextCategory['headline'] %></span></p>
+            <p class="next__content__overline"><%- nextCategory['category'] %></p>
+            <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
           </div><!-- end .next__cpntent -->
       </div><!-- end .container -->
     </a>
