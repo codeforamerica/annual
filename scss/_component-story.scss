@@ -12,7 +12,11 @@ $padding: 2em;
   margin-top: $padding * 2;
   margin-bottom: $padding * 2;
   @include span-columns(12 of 12);
-  // @include shift(1 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(10 of 12);
+    @include shift(1 of 12);
+  }
 }
 
 .story:before {
@@ -28,10 +32,6 @@ $padding: 2em;
 // Layout inside the card
 // =====
 
-.story__body {
-  @include span-columns(5 of 12);
-}
-
 .story__image {
   @include span-columns(6 of 12);
 
@@ -41,8 +41,28 @@ $padding: 2em;
   background-repeat: no-repeat;
   background-position: top center;
   height: 400px;
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+  }
+
+  @include media($tablet) {
+    height: 350px;
+  }
+
+  @include media($mobile) {
+    height: 250px;
+  }
 }
 
+.story__body {
+  @include span-columns(5 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+    margin-top: $padding*2;
+  }
+}
 
 // If there's no image, do something
 
@@ -101,18 +121,37 @@ $padding: 2em;
 // story__body__content basic spacing/layout
 // =====
 
-.story__body__content__opener,
-.story__body__content__links,
-.story__body__content__quote,
-.story__body__content__metrics {
-  @include span-columns (12 of 12);
+.story__body__content__opener {
   position: relative;
+  @include span-columns (12 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns (10 of 12);
+    @include shift (1.4 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns (12 of 12);
+    @include shift(0);
+  }
 }
+
 
 .story__body__content__links,
 .story__body__content__quote,
 .story__body__content__metrics {
+  position: relative;
   padding-top: $padding * 2;
+
+  @include media($medium-desktop) {
+    @include span-columns (8 of 12);
+    @include shift(4 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns (12 of 12);
+    @include shift(0);
+  }
 }
 
 // =====
@@ -123,18 +162,40 @@ $padding: 2em;
 .story__body__content__quote:before,
 .story__body__content__metrics:before {
   content: '';
-  // display: block;
   position: absolute;
   background-color: rgba(0,0,0,0.2);
   height: 1px;
   width: 160%;
   margin-left: -60%;
+
+  @include media($medium-desktop) {
+    margin-left: 0;
+    @include span-columns(16 of 12);
+    @include shift(-4 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+    @include shift(0);
+    background-color: $black;
+    position: relative;
+  }
 }
 
 .u-before {
   position: absolute;
   margin-left: -60%;
   padding-top: 1em;
+
+  @include media($medium-desktop) {
+    margin-left: 0;
+    @include shift(-4 of 12);
+  }
+
+  @include media($tablet) {
+    @include shift(0);
+    position: relative;
+  }
 }
 
 .u-before p {
@@ -149,11 +210,20 @@ $padding: 2em;
   height: 400px;
   position: relative;
   display: table;
+
+  @include media($medium-desktop) {
+    height: auto;
+    display: block;
+  }
 }
 
 .story__body__content__opener__box {
   display: table-cell;
   vertical-align: middle;
+
+  @include media($medium-desktop) {
+    display: inherit;
+  }
 }
 
 .story__body__content__opener__box p {
