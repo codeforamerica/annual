@@ -33,6 +33,24 @@ $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 @import 'grid-settings';
 @import 'vendor/neat/neat';
 @import 'vendor/normalize';
+@import 'vendor/iconfont';
+
+// =====
+// Mixin helpers
+// =====
+
+@mixin iconfont() {
+  // Zurb iconfont settings, should go in a :before pseudo-selector
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
 
 // =====
 // Base spacing rules
@@ -78,7 +96,7 @@ h1 {
 }
 
 h2 {
-  font-size: $base-size * 1.8;
+  font-size: $base-size * 1.6;
 }
 
 h3 {

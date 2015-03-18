@@ -14,6 +14,9 @@
     .story:before {
       background-color: <%- requested['color'] %>;
     }
+    a.story__body__content__link--header {
+      background-color: <%- requested['color'] %>;
+    }
   </style>
 <% } %>
 
@@ -63,49 +66,55 @@
               </div>
               
               <div class="story__body__content u-row">
+
                 <div class="story__body__content__opener">
-                  <p><%- story['category'] %></p>
-                  <h2><%- story['description'] %></h2>
+                  <div class="story__body__content__opener__box">
+                    <p><%- story['category'] %></p>
+                    <h2><%- story['description'] %></h2>
+                  </div>
                 </div>
 
                 <div class="story__body__content__quote">
-                  <p><%- story['quote'] %></p>
+                  <div class="u-before"><p>In their words</p></div>
+                  <p class="story__body__content__quote__words"><%- story['quote'] %></p>
                   <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
                 </div>
 
                 <ul class="story__body__content__metrics u-unstyled u-row">
+                  <li class="u-before"><p>Metrics</p></li>
+                  <% if (story['metric-1-number']) { %>
                   <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
                     <p class="story__body__content__metrics__description"><%- story['metric-1-description'] %></p>
                   </li>
+                  <% } %>
+                  <% if (story['metric-2-number']) { %>
                   <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-2-number'] %></p>
                     <p class="story__body__content__metrics__description"><%- story['metric-2-description'] %></p>
                   </li>
+                  <% } %>
+                  <% if (story['metric-3-number']) { %>
                   <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-3-number'] %></p>
                     <p class="story__body__content__metrics__description"><%- story['metric-3-description'] %></p>
                   </li>
+                  <% } %>
                 </ul>
 
                 <ul class="story__body__content__links u-unstyled">
-                  <li class="story__body__content__link--<%- story['link-1-type'] %>">
-                    <a href="<%- story['link-1-url'] %>">
-                      <p class="story__body__content__link--header"><%- story['link-1-header'] %></p>
-                      <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
-                    </a>
+                  <li class="u-before"><p>Links</p></li>
+                  <li class="story__body__content__link--<%- story['link-1-type'] %> u-row">
+                    <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
+                    <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
                   </li>
-                  <li class="story__body__content__link--<%- story['link-2-type'] %>">
-                    <a href="<%- story['link-2-url'] %>">
-                      <p class="story__body__content__link--header"><%- story['link-2-header'] %></p>
-                      <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
-                    </a>
+                  <li class="story__body__content__link--<%- story['link-2-type'] %> u-row">
+                    <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
+                    <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
                   </li>
-                  <li class="story__body__content__link--<%- story['link-3-type'] %>">
-                    <a href="<%- story['link-3-url'] %>">
-                      <p class="story__body__content__link--header"><%- story['link-3-header'] %></p>
-                      <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
-                    </a>
+                  <li class="story__body__content__link--<%- story['link-3-type'] %> u-row">
+                    <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
+                    <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
                   </li>
                 </ul>
               </div><!-- end .story__body__content -->

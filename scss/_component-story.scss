@@ -10,7 +10,7 @@ $padding: 2em;
 
 .story {
   margin-top: $padding * 2;
-  margin-bottom: $padding;
+  margin-bottom: $padding * 2;
   @include span-columns(10 of 12);
   @include shift(1 of 12);
 }
@@ -19,7 +19,7 @@ $padding: 2em;
   content: '';
   background-color: #aa1c3a;
   height: 4px;
-  display: block;
+  display: none;
   margin-bottom: 2em;
   margin-top: 2em;
 }
@@ -106,18 +106,57 @@ $padding: 2em;
 .story__body__content__quote,
 .story__body__content__metrics {
   @include span-columns (12 of 12);
+  position: relative;
 }
+
 .story__body__content__links,
 .story__body__content__quote,
 .story__body__content__metrics {
-  padding-top: $padding;
+  padding-top: $padding * 2;
+}
+
+// =====
+// Lines and intros above each section in the story
+// =====
+
+.story__body__content__links:before,
+.story__body__content__quote:before,
+.story__body__content__metrics:before {
+  content: '';
+  // display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,0.2);
+  height: 1px;
+  width: 160%;
+  margin-left: -60%;
+}
+
+.u-before {
+  position: absolute;
+  margin-left: -60%;
+  padding-top: 1em;
+}
+
+.u-before p {
+  font-family: $sans-serif;
 }
 
 // =====
 // story__body__content__opener
 // =====
 
-.story__body__content__opener p {
+.story__body__content__opener {
+  height: 400px;
+  position: relative;
+  display: table;
+}
+
+.story__body__content__opener__box {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.story__body__content__opener__box p {
   // Make the category title
   font-style: italic;
 }
@@ -126,18 +165,18 @@ $padding: 2em;
 // story__body__content__quote
 // =====
 
-.story__body__content__quote {
-  margin-top: 30px;
+.story__body__content__quote__words {
+  padding-top: $padding * 2.3;
 }
 
-.story__body__content__quote:before {
+.story__body__content__quote__words:before {
   content: "“";
   display: block;
   font-size: 150px;
   font-weight: 900;
   line-height: 0;
-  margin-top: 30px;
-  margin-bottom: -5px;
+  // padding-bottom: 50px;
+  margin-bottom: 5px;
   color: lighten($black,40);
 }
 
@@ -146,15 +185,22 @@ $padding: 2em;
 }
 
 // =====
-// story__body__contnet__metrics
+// story__body__content__metrics
 // =====
 
 ul.story__body__content__metrics {
   li {
     @include span-columns(12 of 12);
-    border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: $padding/2;
     padding-bottom: $padding/2;
+  }
+
+  li + li {
+    border-top: 1px solid rgba(0,0,0,0.2);
+  }
+
+  li.u-before + li {
+    border-top: none;
   }
 }
 
@@ -163,7 +209,6 @@ ul.story__body__content__metrics {
   font-size: $base-size * 2.7;
   line-height: 1;
   letter-spacing: -1px;
-  color: lighten($black,20);
   @include span-columns(4 of 12);
 }
 
@@ -176,50 +221,67 @@ ul.story__body__content__metrics {
 // story__body__content__links
 // =====
 
-ul.story__body__content__links li {
-  @include span-columns(4 of 12);
-  position: relative;
-  margin-top: 0;
-  margin-bottom: $padding * 2;
-  
-  a {
-    display: block;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: $black;
-    padding: $padding/2;
-
-    @include transition(opacity 0.4s ease-out 0s, transform 0.4s ease-out 0s);
+ul.story__body__content__links {
+  li {
+    @include span-columns(12 of 12);
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
   }
 
-  a:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background-color: $blue;
+  li + li {
+    border-top: 1px solid rgba(0,0,0,0.2);
   }
 
-  a:hover {
-    opacity: 0.5;
-    transform: translateY(-10px);
+  li.u-before + li {
+    border-top: none;
   }
-
 }
 
-p.story__body__content__link--header {
-  font-weight: bold;
-  line-height: 1.5;
-  clear: both;
-  margin-bottom: 1em;
+a.story__body__content__link--header {
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: $blue;
+  color: white;
+  padding: 3px 10px;
+  font-family: $sans-serif;
+  margin-top: 1em;
+  display: inline-block;
+
+  @include transition(opacity 0.08s ease-in 0s);
 }
 
-p.story__body__content__link--link {
-  border-bottom: 1px solid $black;
-  display: inline;
-  line-height: 1.5;
+a.story__body__content__link--header:hover {
+  opacity: 0.7;
+}
+
+li.story__body__content__link--news a:before {
+  @include iconfont();
+  content: "\f163";
+  margin-right: 10px;
+}
+
+li.story__body__content__link--video a:before {
+  @include iconfont();
+  content: "\f198";
+  margin-right: 10px;
+}
+
+li.story__body__content__link--github a:before {
+  @include iconfont();
+  content: "\f1c9";
+  margin-right: 10px;
+}
+
+li.story__body__content__link--blog a:before {
+  @include iconfont();
+  content: "\f18e";
+  margin-right: 10px;
+}
+
+li.story__body__content__link--app a:before {
+  @include iconfont();
+  content: "\f179";
+  margin-right: 10px;
 }
