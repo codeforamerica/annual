@@ -93,6 +93,16 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   font-size: $base-size * 2.5;
+  
+  @include media($medium-desktop) {
+    font-size: $base-size * 2;  
+  }
+  @include media($tablet) {
+    font-size: $base-size * 1.9;
+  }
+  @include media($mobile) {
+    font-size: $base-size * 1.6;
+  }
 }
 
 h2 {

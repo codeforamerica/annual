@@ -401,6 +401,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 45px; }
+  @media screen and (max-width: 1000px) {
+    h1 {
+      font-size: 36px; } }
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 34.2px; } }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 28.8px; } }
 
 h2 {
   font-size: 28.8px; }
