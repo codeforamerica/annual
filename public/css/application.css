@@ -631,7 +631,15 @@ nav ul li.active a {
 .story__body__content__quote,
 .story__body__content__metrics {
   position: relative;
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 100%;
   padding-top: 4em; }
+  .story__body__content__links:last-child,
+  .story__body__content__quote:last-child,
+  .story__body__content__metrics:last-child {
+    margin-right: 0; }
   @media screen and (max-width: 1000px) {
     .story__body__content__links,
     .story__body__content__quote,

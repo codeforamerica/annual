@@ -141,6 +141,7 @@ $padding: 2em;
 .story__body__content__quote,
 .story__body__content__metrics {
   position: relative;
+  @include span-columns (12 of 12);
   padding-top: $padding * 2;
 
   @include media($medium-desktop) {
