@@ -931,44 +931,38 @@ p.next__content__headline span {
 
 .financials__breakdown__key ul {
   list-style: none;
-  margin-top: 3em;
   margin-left: 1em; }
   @media screen and (max-width: 768px) {
     .financials__breakdown__key ul {
       margin-left: 0; } }
-  @media screen and (max-width: 480px) {
-    .financials__breakdown__key ul {
-      margin-top: 0; } }
 
 .financials__breakdown__key ul li {
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
 
 .financials__breakdown__key ul li p {
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
-  font-size: 27px;
-  display: inline-block;
-  border-bottom: 10px solid white; }
+  font-size: 27px; }
   @media screen and (max-width: 480px) {
     .financials__breakdown__key ul li p {
       font-size: 18px; } }
 
 .financials__breakdown__key ul li p span {
   font-weight: 800;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-color: #004b6a;
+  color: white;
+  width: 100px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.2em; }
 
-.financials__breakdown__key ul li#program p {
-  border-bottom-color: #69579C; }
-  .financials__breakdown__key ul li#program p span {
-    color: #69579C; }
+.financials__breakdown__key ul li#program p span {
+  background-color: #69579C; }
 
-.financials__breakdown__key ul li#general-administration p {
-  border-bottom-color: #00a175; }
-  .financials__breakdown__key ul li#general-administration p span {
-    color: #00a175; }
+.financials__breakdown__key ul li#general-administration p span {
+  background-color: #00a175; }
 
-.financials__breakdown__key ul li#fundraising p {
-  border-bottom-color: #aa1c3a; }
-  .financials__breakdown__key ul li#fundraising p span {
-    color: #aa1c3a; }
+.financials__breakdown__key ul li#fundraising p span {
+  background-color: #aa1c3a; }
 
 /*# sourceMappingURL=application.css.map */
