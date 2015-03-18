@@ -5,27 +5,22 @@
 //
 
 $padding: 2em;
+$border-color: rgba(0,0,0,0.1);
 
 // Basic layout and color bar across the top
 
 .story {
+  position: relative;
   margin-top: $padding * 2;
   margin-bottom: $padding * 2;
-  @include span-columns(12 of 12);
-
-  @include media($medium-desktop) {
-    @include span-columns(10 of 12);
-    @include shift(1 of 12);
-  }
-}
-
-.story:before {
-  content: '';
-  background-color: #aa1c3a;
-  height: 4px;
-  display: none;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  // border: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: $padding * 2;
+  padding-left: $padding * 2;
+  padding-right: $padding * 2;
+  background-color: white;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.02);
 }
 
 // =====
@@ -34,6 +29,9 @@ $padding: 2em;
 
 .story__image {
   @include span-columns(6 of 12);
+  position: absolute;
+  left: 0;
+  top: 0;
 
   // The image will be printed as inline css at render time
   // This tees up sizing
@@ -56,11 +54,11 @@ $padding: 2em;
 }
 
 .story__body {
-  @include span-columns(5 of 12);
+  position: relative;
+  @include span-columns(12 of 12);
 
   @include media($medium-desktop) {
-    @include span-columns(12 of 12);
-    margin-top: $padding*2;
+    // ksks
   }
 }
 
@@ -123,36 +121,42 @@ $padding: 2em;
 
 .story__body__content__opener {
   position: relative;
-  @include span-columns (12 of 12);
+  @include span-columns(6 of 12);
+  @include shift(6 of 12);
 
   @include media($medium-desktop) {
-    @include span-columns (10 of 12);
-    @include shift (1.4 of 12);
+
   }
 
   @include media($tablet) {
-    @include span-columns (12 of 12);
-    @include shift(0);
+    
   }
 }
 
 
-.story__body__content__links,
 .story__body__content__quote,
 .story__body__content__metrics {
   position: relative;
-  @include span-columns (12 of 12);
-  padding-top: $padding * 2;
+  @include span-columns (6 of 12);
+  padding-top: $padding;
 
   @include media($medium-desktop) {
-    @include span-columns (8 of 12);
-    @include shift(4 of 12);
+
   }
 
   @include media($tablet) {
-    @include span-columns (12 of 12);
-    @include shift(0);
+
   }
+}
+
+.story__body__content__metrics {
+  @include omega();
+}
+
+.story__body__content__links {
+  position: relative;
+  @include span-columns (12 of 12);
+  padding-top: $padding;
 }
 
 // =====
@@ -163,44 +167,18 @@ $padding: 2em;
 .story__body__content__quote:before,
 .story__body__content__metrics:before {
   content: '';
-  position: absolute;
-  background-color: rgba(0,0,0,0.2);
+  position: relative;
+  background-color: rgba(0,0,0,0.1);
   height: 1px;
-  width: 160%;
-  margin-left: -60%;
+  @include span-columns(12 of 12);
 
   @include media($medium-desktop) {
-    margin-left: 0;
-    @include span-columns(16 of 12);
-    @include shift(-4 of 12);
+
   }
 
   @include media($tablet) {
-    @include span-columns(12 of 12);
-    @include shift(0);
-    background-color: $black;
-    position: relative;
+
   }
-}
-
-.u-before {
-  position: absolute;
-  margin-left: -60%;
-  padding-top: 1em;
-
-  @include media($medium-desktop) {
-    margin-left: 0;
-    @include shift(-4 of 12);
-  }
-
-  @include media($tablet) {
-    @include shift(0);
-    position: relative;
-  }
-}
-
-.u-before p {
-  font-family: $sans-serif;
 }
 
 // =====
@@ -229,12 +207,17 @@ $padding: 2em;
 
 .story__body__content__opener__box p {
   // Make the category title
+  font-size: $base-size * 0.8;
+  font-weight: bold;
   font-style: italic;
-  border: 1px solid $blue;
-  padding: 5px 10px;
   display: inline-block;
   margin-bottom: 0.5em;
 }
+
+// =====
+// story__body__content__opener__share
+// Sharing buttons
+// =====
 
 // =====
 // story__body__content__quote
@@ -252,7 +235,7 @@ $padding: 2em;
   line-height: 0;
   // padding-bottom: 50px;
   margin-bottom: 5px;
-  color: lighten($black,40);
+  color: $black;
 }
 
 .story__body__content__quote__credit {
@@ -271,11 +254,7 @@ ul.story__body__content__metrics {
   }
 
   li + li {
-    border-top: 1px solid rgba(0,0,0,0.2);
-  }
-
-  li.u-before + li {
-    border-top: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
 }
 
@@ -298,17 +277,9 @@ ul.story__body__content__metrics {
 
 ul.story__body__content__links {
   li {
-    @include span-columns(12 of 12);
+    @include span-columns(4 of 12);
     padding-top: $padding/2;
     padding-bottom: $padding/2;
-  }
-
-  li + li {
-    border-top: 1px solid rgba(0,0,0,0.2);
-  }
-
-  li.u-before + li {
-    border-top: none;
   }
 }
 

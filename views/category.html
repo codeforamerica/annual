@@ -79,13 +79,11 @@
                 </div>
 
                 <div class="story__body__content__quote">
-                  <div class="u-before"><p>In their words</p></div>
                   <p class="story__body__content__quote__words"><%- story['quote'] %></p>
                   <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
                 </div>
 
                 <ul class="story__body__content__metrics u-unstyled u-row">
-                  <li class="u-before"><p>Metrics</p></li>
                   <% if (story['metric-1-number']) { %>
                   <li class="u-row">
                     <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
@@ -107,7 +105,6 @@
                 </ul>
 
                 <ul class="story__body__content__links u-unstyled">
-                  <li class="u-before"><p>Links</p></li>
                   <li class="story__body__content__link--<%- story['link-1-type'] %> u-row">
                     <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
                     <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
