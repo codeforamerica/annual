@@ -97,6 +97,10 @@ h1 {
 
 h2 {
   font-size: $base-size * 1.6;
+
+  @include media($tablet) {
+    font-size: $base-size * 1.2;    
+  }
 }
 
 h3 {
@@ -110,6 +114,11 @@ p {
   font-size: $base-size;
   line-height: 1.8;
   color: $black;
+
+  @include media($tablet) {
+    font-size: $base-size * 0.9;
+    line-height: 2;
+  }
 }
 
 // =====

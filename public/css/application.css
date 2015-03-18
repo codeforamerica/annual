@@ -404,6 +404,9 @@ h1 {
 
 h2 {
   font-size: 28.8px; }
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 21.6px; } }
 
 h3 {
   font-size: 23.4px;
@@ -415,6 +418,10 @@ p {
   font-size: 18px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.8); }
+  @media screen and (max-width: 700px) {
+    p {
+      font-size: 16.2px;
+      line-height: 2; } }
 
 .u-unstyled {
   list-style: none; }
@@ -727,7 +734,8 @@ nav ul li.active a {
   font-style: italic;
   border: 1px solid #004b6a;
   padding: 5px 10px;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 0.5em; }
 
 .story__body__content__quote__words {
   padding-top: 4.6em; }
