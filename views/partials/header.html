@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/images/favicon.ico">
-    <title>2014 Annual Report | Code for America</title>
+    <title><% if (this.title){ %> <%- title %> | <% } %> Code for America 2014 Annual Report</title>
 
     <!-- Load Typekit '2014 CfA Annual Report' from @davidleonardii -->
     <script src="//use.typekit.net/inc1khj.js"></script>
@@ -14,3 +14,35 @@
     <link href="/css/application.css" rel="stylesheet">
   </head>
   <body>
+
+  <div id="js-offpage">
+    <a href="#" id="js-nav-close"></a>
+    <div class="nav__contents" id="js-contents">
+      <ul class="u-unstyled">
+          <li class="nav__contents__title"><strong>2014 Annual Report</strong> &nbsp;&nbsp;&nbsp;&nbsp;Pick a section to read:</li>
+          <% if (data.opener) { %>
+            <% opener = data.opener[0] %>
+            <li><a href="/">
+              <a href="/">
+                <div class="nav__contents__category"><p><%- opener['category'] %></p></div>
+              </a>
+            </li>
+          <% } %>
+          <% _.each(data['categories'], function(category){ %>
+            <li class="
+            <% if (category['unique-id'] == requested['unique-id']) { %>
+            active
+            <% } %>
+            ">
+              <a href="/category/<%- category['unique-id'] %>">
+                <div class="nav__contents__category"><p
+                style="border-bottom-color:<%- category['color'] %>;"
+                ><%- category['category'] %></p></div>
+              </a>
+            </li>
+          <% }); %>
+      </ul>
+    </div>  
+  </div>
+
+  <div id="js-page">

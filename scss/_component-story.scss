@@ -1,0 +1,417 @@
+//
+// _component_intro.scss
+//
+// Styles for the .story component, which holds our story cards
+//
+
+$padding: 2em;
+$border-color: rgba(0,0,0,0.1);
+
+// Basic layout and color bar across the top
+
+.story {
+  position: relative;
+  margin-top: $padding * 2;
+  margin-bottom: $padding * 2;
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  // border: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: $padding * 2;
+  padding-left: $padding * 2;
+  padding-right: $padding * 2;
+  background-color: white;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.02);
+  overflow: hidden;
+
+  @include media($medium-desktop) {
+    padding: 0;
+  }
+
+  @include media($mobile) {
+    @include span-columns(11 of 12);
+    @include shift(0.5 of 12);
+    margin-bottom: 0;
+  }
+}
+
+// =====
+// Layout inside the card
+// =====
+
+.story__image {
+  @include span-columns(6 of 12);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  // The image will be printed as inline css at render time
+  // This tees up sizing
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 400px;
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+    position: relative;
+  }
+
+  @include media($tablet) {
+    height: 350px;
+  }
+
+  @include media($mobile) {
+    height: 230px;
+  }
+}
+
+.story__body {
+  position: relative;
+  @include span-columns(12 of 12);
+
+  @include media($medium-desktop) {
+    padding: $padding * 1.8;
+  }
+
+  @include media($tablet) {
+    padding: $padding;
+  }
+
+  @include media($tablet) {
+    padding: $padding * 0.7;
+  }
+}
+
+// If there's no image, do something
+
+.story--no-image {
+  .story__image {
+    display: none;
+  }
+  .story__body {
+    margin-top: 0;
+  }
+}
+
+// =====
+// story__body__content basic spacing/layout
+// =====
+
+.story__body__content__opener {
+  position: relative;
+  @include span-columns(6 of 12);
+  @include shift(6 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+    @include shift(0);
+  }
+}
+
+.story__body__content__quote {
+  position: relative;
+  @include span-columns (6 of 12);
+  padding-top: $padding;
+
+  @include media($medium-desktop) {
+    @include span-columns(8 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
+}
+
+.story__body__content__metrics {
+  position: relative;
+  @include span-columns (6 of 12);
+  @include omega();
+  padding-top: $padding;
+
+  @include media($medium-desktop) {
+    @include span-columns(4 of 12);
+    @include omega();
+  }
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
+}
+
+.story__body__content__links {
+  position: relative;
+  @include span-columns (12 of 12);
+  padding-top: $padding;
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
+}
+
+// Line above links
+.story__body__content__links:before {
+  content: '';
+  position: relative;
+  background-color: $border-color;
+  height: 1px;
+  margin-bottom: $padding;
+  display: block;
+  width: calc(100% + 8em);
+  margin-left: -4em;
+
+  @include media($mobile) {
+    margin-bottom: $padding/2;
+  }
+}
+
+// =====
+// story__body__content__opener
+// =====
+
+.story__body__content__opener {
+  height: 400px;
+  position: relative;
+  display: table;
+
+  @include media($medium-desktop) {
+    height: auto;
+    display: block;
+  }
+}
+
+.story__body__content__opener__box {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+
+  @include media($medium-desktop) {
+    display: inherit;
+  }
+}
+
+.story__body__content__opener__box p {
+  // Make the category title
+  font-size: $base-size * 0.8;
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.story__body__content__opener__box:after {
+  content: '';
+  position: absolute;
+  background-color: $border-color;
+  height: 1px;
+  bottom: 0;
+  @include span-columns(15 of 12);
+  @include shift(-1 of 12);
+
+  @include media($medium-desktop) {
+    margin-top: $padding * 2;
+    position: relative;
+  }
+
+  @include media($mobile) {
+    margin-top: $padding;
+    position: relative;
+  }
+}
+
+// =====
+// story__body__content__opener__share
+// Sharing buttons
+// =====
+
+.story__body__content__opener__share {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+  clear: none;
+  margin-bottom: 1.5em;
+}
+
+.story__body__content__opener__share p {
+  display: inline-block;
+}
+
+.story__body__content__opener__share p a {
+  text-decoration: none;
+  @include transition(opacity 0.08s ease-in 0s);
+}
+
+.story__body__content__opener__share p a:before {
+  @include iconfont();
+
+  background-color: $blue;
+  border-radius: 100%;
+  color: white;
+  
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.story__body__content__opener__share p a:hover {
+  opacity: 0.8;
+}
+
+.story__body__content__opener__share--facebook a:before {
+  content: "\f1e4";
+}
+
+.story__body__content__opener__share--twitter a:before {
+  content: "\f1c4";
+}
+
+// =====
+// story__body__content__quote
+// =====
+
+.story__body__content__quote__words {
+  padding-top: $padding * 2.3;
+}
+
+.story__body__content__quote__words:before {
+  content: "“";
+  display: block;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 0;
+  // padding-bottom: 50px;
+  margin-bottom: 5px;
+  color: $black;
+}
+
+.story__body__content__quote__credit {
+  font-style: italic;
+}
+
+// =====
+// story__body__content__metrics
+// =====
+
+ul.story__body__content__metrics {
+  li {
+    @include span-columns(12 of 12);
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+
+  li + li {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+}
+
+.story__body__content__metrics__number {
+  font-weight: 800;
+  font-size: $base-size * 2.4;
+  line-height: 1;
+  letter-spacing: -1px;
+  @include span-columns(4 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+    margin-bottom: 0.5em;
+  }
+}
+
+.story__body__content__metrics__description {
+  font-family: $sans-serif;
+  @include span-columns(8 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+  }
+}
+
+// =====
+// story__body__content__links
+// =====
+
+ul.story__body__content__links {
+  li {
+    @include span-columns(4 of 12);
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+    }
+
+    @include media($mobile) {
+      padding-top: $padding/4;
+      padding-bottom: $padding/4;
+    }
+  }
+}
+
+a.story__body__content__link--header {
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: $blue;
+  color: white;
+  padding: 10px 10px;
+  font-family: $sans-serif;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1.3;
+
+  @include transition(opacity 0.08s ease-in 0s);
+
+  @include media($tablet) {
+    margin-top: 0.5em;
+  }
+}
+
+a.story__body__content__link--header:hover {
+  opacity: 0.7;
+}
+
+li.story__body__content__link--news a:before {
+  @include iconfont();
+  content: "\f163";
+  margin-right: 10px;
+  @include media($tablet) { display:none; };
+}
+
+li.story__body__content__link--video a:before {
+  @include iconfont();
+  content: "\f198";
+  margin-right: 10px;
+  @include media($tablet) { display:none; };
+}
+
+li.story__body__content__link--github a:before {
+  @include iconfont();
+  content: "\f1c9";
+  margin-right: 10px;
+  @include media($tablet) { display:none; };
+}
+
+li.story__body__content__link--blog a:before {
+  @include iconfont();
+  content: "\f18e";
+  margin-right: 10px;
+  @include media($tablet) { display:none; };
+}
+
+li.story__body__content__link--app a:before {
+  @include iconfont();
+  content: "\f179";
+  margin-right: 10px;
+  @include media($tablet) { display:none; };
+}

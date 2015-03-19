@@ -12,6 +12,11 @@ $padding: 4em;
   @include span-columns(12 of 12);
   padding-top: $padding;
   padding-bottom: $padding;
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
 }
 
 .intro__content {

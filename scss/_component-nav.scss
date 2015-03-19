@@ -1,0 +1,196 @@
+//
+// _nav.scss
+//
+// Header and navigation styles.
+//
+
+$border: 1px solid rgba(0,0,0,0.08);
+
+header {
+  font-family: $serif;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: $gray;
+  z-index: 99;
+  // box-shadow: 0 4px 2px -2px rgba(0,0,0,0.04);
+  margin-top: 0;
+  height: 60px;
+}
+
+header * {
+  margin-top: 0;
+  color: white;
+}
+
+div.logo {
+  padding: 19px 15px 0 15px;
+  float: left;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+
+    @include media($mobile) {
+      font-size: $base-size * 0.8;
+    }
+  }
+}
+
+// =====
+// Styles for the Table of Contents
+// =====
+
+nav {
+  padding: 15px;
+  float: right;
+}
+
+nav ul li {
+  margin-right: 5px;
+  display: none;
+  font-size: $base-size * 0.8;
+}
+
+nav ul li.currently,
+nav ul li.active,
+nav ul li.expand {
+  display: inline-block;
+}
+
+nav ul li.currently,
+nav ul li.active {
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: $base-size * 0.8;
+}
+
+nav ul li a:hover {
+  opacity: 0.8; 
+}
+
+nav ul li.active a {
+  font-style: italic;
+  border-bottom: 1px solid white;
+  margin-right: 35px;
+}
+
+// Expand button
+
+nav ul li.expand a:before {
+  @include iconfont();
+  content: "\f169";
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  margin-left: 10px;
+
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+// =====
+// nav__contents
+// The hidden nav that pops out and shows all sections
+// =====
+
+#js-offpage {
+  display: none;
+  background-color: $black;
+  height: 100vh;
+  @include span-columns(12 of 12);
+}
+
+#js-page {
+  // display: none;
+}
+
+.nav__contents {
+  width: 100%;
+  height: 100%;
+  @include span-columns(6 of 12);
+  @include shift(3 of 12);
+  margin-top: 0;
+  padding: 35px;
+  position: relative;
+
+  @include media($medium-desktop) {
+    @include span-columns(10 of 12);
+    @include shift(0 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns(10 of 12);
+  }
+
+  @include media($mobile) {
+    padding: 20px;
+  }
+}
+
+.nav__contents {
+  * {
+    color: white;
+    font-family: $serif;
+  }
+  * + * {
+    margin-top: 0;
+  }
+  p {
+    font-family: $sans-serif;
+  }
+}
+
+.nav__contents a {
+  text-decoration: none;
+  padding: 30px;
+}
+
+.nav__contents a:hover p {
+  opacity: 0.5;
+}
+
+.nav__contents ul {
+  li + li {
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+.nav__contents__category p {
+  border-bottom: 3px solid white;
+  display: inline-block;
+}
+
+.nav__contents__title {
+  padding-bottom: 35px;
+}
+
+a#js-nav-close {
+position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+}
+
+a#js-nav-close:before {
+  @include iconfont();
+  content: "\f216";
+
+  text-align: right;
+  font-size: 4em;
+  color: white;
+}
+
+#js-offpage {
+  display: none;
+}

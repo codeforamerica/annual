@@ -5,6 +5,7 @@ var Tabletop = require('tabletop');
 var _ = require('underscore');
 var cons = require('consolidate');
 var app = express();
+app.locals._ = _;
 
 var getData = require('./getData.js');
 
@@ -35,7 +36,7 @@ function checkData(){
   }
 }
 
-app.engine('html', cons.underscore);
+app.engine('html', cons.ejs);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
@@ -57,7 +58,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Intro',
+    title: 'Introduction',
     data: Report,
     partials: {
       header: 'partials/header',
@@ -100,7 +101,6 @@ app.get('/category/:id', function (req, res) {
     });
   } else {
     res.render('category', {
-      title: 'Category',
       requested: req.params.id,
       data: Report,
       partials: {
@@ -113,7 +113,6 @@ app.get('/category/:id', function (req, res) {
 
 app.get('/story/:id', function (req, res) {
   res.render('story', {
-    title: 'Story',
     requested: req.params.id,
     data: Report,
     partials: {
@@ -126,6 +125,10 @@ app.get('/story/:id', function (req, res) {
 app.get('/update', function (req, res) {
   checkData();
   res.send('Updating data...');
+});
+
+app.get('/data', function (req, res) {
+  res.json(Report);
 });
 
 app.listen(process.env.PORT || 3000);
