@@ -548,6 +548,26 @@ nav ul li.expand a:before {
   position: relative; }
   .nav__contents:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 1100px) {
+    .nav__contents {
+      float: left;
+      display: block;
+      margin-right: 3.44828%;
+      width: 82.75862%;
+      margin-left: 0%; }
+      .nav__contents:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 750px) {
+    .nav__contents {
+      float: left;
+      display: block;
+      margin-right: 3.44828%;
+      width: 82.75862%; }
+      .nav__contents:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .nav__contents {
+      padding: 20px; } }
 
 .nav__contents * {
   color: white;

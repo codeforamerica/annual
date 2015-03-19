@@ -112,6 +112,19 @@ nav ul li.expand a:before {
   margin-top: 0;
   padding: 35px;
   position: relative;
+
+  @include media($medium-desktop) {
+    @include span-columns(10 of 12);
+    @include shift(0 of 12);
+  }
+
+  @include media($tablet) {
+    @include span-columns(10 of 12);
+  }
+
+  @include media($mobile) {
+    padding: 20px;
+  }
 }
 
 .nav__contents {
