@@ -919,13 +919,17 @@ a.story__body__content__link--header {
   border-radius: 5px;
   background-color: #004b6a;
   color: white;
-  padding: 3px 10px;
+  padding: 10px 10px;
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
   margin-top: 1em;
   display: inline-block;
+  line-height: 1.3;
   -webkit-transition: opacity 0.08s ease-in 0s;
   -moz-transition: opacity 0.08s ease-in 0s;
   transition: opacity 0.08s ease-in 0s; }
+  @media screen and (max-width: 750px) {
+    a.story__body__content__link--header {
+      margin-top: 0.5em; } }
 
 a.story__body__content__link--header:hover {
   opacity: 0.7; }
@@ -942,6 +946,9 @@ li.story__body__content__link--news a:before {
   text-decoration: inherit;
   content: "\f163";
   margin-right: 10px; }
+  @media screen and (max-width: 750px) {
+    li.story__body__content__link--news a:before {
+      display: none; } }
 
 li.story__body__content__link--video a:before {
   font-family: "foundation-icons";
@@ -955,6 +962,9 @@ li.story__body__content__link--video a:before {
   text-decoration: inherit;
   content: "\f198";
   margin-right: 10px; }
+  @media screen and (max-width: 750px) {
+    li.story__body__content__link--video a:before {
+      display: none; } }
 
 li.story__body__content__link--github a:before {
   font-family: "foundation-icons";
@@ -968,6 +978,9 @@ li.story__body__content__link--github a:before {
   text-decoration: inherit;
   content: "\f1c9";
   margin-right: 10px; }
+  @media screen and (max-width: 750px) {
+    li.story__body__content__link--github a:before {
+      display: none; } }
 
 li.story__body__content__link--blog a:before {
   font-family: "foundation-icons";
@@ -981,6 +994,9 @@ li.story__body__content__link--blog a:before {
   text-decoration: inherit;
   content: "\f18e";
   margin-right: 10px; }
+  @media screen and (max-width: 750px) {
+    li.story__body__content__link--blog a:before {
+      display: none; } }
 
 li.story__body__content__link--app a:before {
   font-family: "foundation-icons";
@@ -994,6 +1010,9 @@ li.story__body__content__link--app a:before {
   text-decoration: inherit;
   content: "\f179";
   margin-right: 10px; }
+  @media screen and (max-width: 750px) {
+    li.story__body__content__link--app a:before {
+      display: none; } }
 
 .next {
   margin-top: 0;
