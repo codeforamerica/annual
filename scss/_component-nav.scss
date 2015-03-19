@@ -104,9 +104,6 @@ nav ul li.expand a:before {
 // The hidden nav that pops out and shows all sections
 // =====
 
-#js-offpage {
-}
-
 .nav__contents {
   width: 100%;
   height: 100%;
@@ -168,9 +165,9 @@ nav ul li.expand a:before {
 }
 
 a#js-nav-close {
-position: absolute;
-  top: 20px;
-  right: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   text-decoration: none;
 }
 
@@ -179,6 +176,6 @@ a#js-nav-close:before {
   content: "\f216";
 
   text-align: right;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
 }

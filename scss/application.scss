@@ -78,6 +78,7 @@ body {
 #js-offpage {
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   position: fixed;
   background-color: $black;
   margin-top: 0;
