@@ -119,6 +119,10 @@ $border-color: rgba(0,0,0,0.1);
   @include media($tablet) {
     @include span-columns(12 of 12);
   }
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
 }
 
 .story__body__content__metrics {
@@ -135,12 +139,20 @@ $border-color: rgba(0,0,0,0.1);
   @include media($tablet) {
     @include span-columns(12 of 12);
   }
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
 }
 
 .story__body__content__links {
   position: relative;
   @include span-columns (12 of 12);
   padding-top: $padding;
+
+  @include media($mobile) {
+    padding-top: $padding/2;
+  }
 }
 
 // Line above links
@@ -153,6 +165,10 @@ $border-color: rgba(0,0,0,0.1);
   display: block;
   width: calc(100% + 8em);
   margin-left: -4em;
+
+  @include media($mobile) {
+    margin-bottom: $padding/2;
+  }
 }
 
 // =====
@@ -200,6 +216,11 @@ $border-color: rgba(0,0,0,0.1);
 
   @include media($medium-desktop) {
     margin-top: $padding * 2;
+    position: relative;
+  }
+
+  @include media($mobile) {
+    margin-top: $padding;
     position: relative;
   }
 }
@@ -326,6 +347,11 @@ ul.story__body__content__links {
 
     @include media($tablet) {
       @include span-columns(12 of 12);
+    }
+
+    @include media($mobile) {
+      padding-top: $padding/4;
+      padding-bottom: $padding/4;
     }
   }
 }
