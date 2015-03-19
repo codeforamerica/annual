@@ -1,23 +1,18 @@
-<%- partials.header %>
+<% 
+  var requested = data.opener[0];
+  var title = 'Introduction';
+  var color = requested['color'];
 
-<header id="js-header">
-  <div class="logo">
-    <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
-  </div>
-  <nav class="nav">
-    <ul>
-      <li class="currently">Currently Reading:</li>
-      <% if (data.opener) { %>
-        <% opener = data.opener[0] %>
-        <li class="active"><a href="/"><%- opener['category'] %></a></li>
-      <% } %>
-      <% _.each(data['categories'], function(category){ %>
-        <li class=""><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
-      <% }); %>
-      <li class="expand"></li>
-    </ul>
-  </nav>
-</header>
+  function shadeColor(color, percent) {   
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+  }
+
+  var darkColor = shadeColor(color, -0.3);
+%>
+
+<% include partials/header.html %>
+<% include partials/nav.html %>
 
 <div id="js-main">
   <% if (data.opener) { %>
@@ -42,21 +37,5 @@
   <% } /* endif data.opener */ %>
 </div>
 
-<% var nextCategory = data['categories'][0] %>
-<div class="next">
-  <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
-  <% if (nextCategory['color']) { %>
-    background-color: <%- nextCategory['color'] %>;
-  <% } %>
-  ">
-    <div class="container">
-        <div class="next__content">
-          <p class="next__content__read">Continue Reading:</p>
-          <p class="next__content__overline"><%- nextCategory['category'] %></p>
-          <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
-        </div><!-- end .next__cpntent -->
-    </div><!-- end .container -->
-  </a>
-</div><!-- end .next -->
-
-<%- partials.footer %>
+<% include partials/next.html %>
+<% include partials/footer.html %>

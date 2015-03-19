@@ -8,7 +8,11 @@
       <li class="currently">Currently Reading:</li>
       <% if (data.opener) { %>
         <% opener = data.opener[0] %>
-        <li><a href="/"><%- opener['category'] %></a></li>
+        <li class="
+        <% if (title == "Introduction") { %>
+        active
+        <% } %>
+        "><a href="/"><%- opener['category'] %></a></li>
       <% } %>
 
       <% _.each(data['categories'], function(category){ %>
