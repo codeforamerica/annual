@@ -26,6 +26,11 @@ $border-color: rgba(0,0,0,0.1);
   @include media($medium-desktop) {
     padding: 0;
   }
+
+  @include media($medium-desktop) {
+    @include span-columns(11 of 12);
+    @include shift(0.5 of 12);
+  }
 }
 
 // =====
@@ -55,7 +60,7 @@ $border-color: rgba(0,0,0,0.1);
   }
 
   @include media($mobile) {
-    height: 250px;
+    height: 230px;
   }
 }
 
@@ -69,6 +74,10 @@ $border-color: rgba(0,0,0,0.1);
 
   @include media($tablet) {
     padding: $padding;
+  }
+
+  @include media($tablet) {
+    padding: $padding * 0.7;
   }
 }
 
