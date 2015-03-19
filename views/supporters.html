@@ -14,16 +14,6 @@
 <% include partials/header.html %>
 <% include partials/nav.html %>
 
-<style>
-p {
-  line-height: 1em;
-}
-
-h2 {
-  font-weight: bold;
-
-}
-</style>
 
 <% if (requested['color']) { %>
   <style>
@@ -72,8 +62,8 @@ h2 {
           var orgs = _.groupBy(data['supporters'], 'org-type');
         %>
         <% _.each(orgs, function(org){ %>
-          <h2><%- org[0]['org-type'] %></h2>
           <div class="supporters__list">
+            <h2><%- org[0]['org-type'] %></h2>
             <% _.each(org, function(supporter){ %>
               <p><%- supporter['name'] %></p>
             <% }); %>

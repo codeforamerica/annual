@@ -6,7 +6,47 @@
 }
 
 .supporters__list {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
+  @include row();
+  margin-top: 3em;
 }
+
+.supporters__list h2 {
+  @include fill-parent();
+}
+
+// Custom typography for supporters page
+
+.supporters {
+  p {
+    line-height: 1.7;
+  }
+  h2 {
+    font-weight: bold;
+  }
+}
+
+// Build the grid
+
+.supporters__list p {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  height: 2.5em;
+
+  @include media($tablet) {
+    width: 46%;
+    margin-right: 2%;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+    margin-right: 0;
+    height: auto;
+  }
+}
+
+// .supporters__list {
+//   -webkit-column-count: 3; /* Chrome, Safari, Opera */
+//   -moz-column-count: 3; /* Firefox */
+//   column-count: 3;
+// }

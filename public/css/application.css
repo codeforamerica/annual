@@ -1357,11 +1357,35 @@ p.next__content__headline span {
     margin-right: 0; }
 
 .supporters__list {
-  -webkit-column-count: 3;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 3;
-  /* Firefox */
-  column-count: 3; }
+  display: block;
+  margin-top: 3em; }
+  .supporters__list::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.supporters__list h2 {
+  width: 100%; }
+
+.supporters p {
+  line-height: 1.7; }
+.supporters h2 {
+  font-weight: bold; }
+
+.supporters__list p {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  height: 2.5em; }
+  @media screen and (max-width: 750px) {
+    .supporters__list p {
+      width: 46%;
+      margin-right: 2%; } }
+  @media screen and (max-width: 480px) {
+    .supporters__list p {
+      width: 100%;
+      margin-right: 0;
+      height: auto; } }
 
 .financials {
   float: left;
