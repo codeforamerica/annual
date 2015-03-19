@@ -8,18 +8,12 @@
 
 <% if (requested['color']) { %>
   <style>
-    ul.story__body__content__links li a:before {
+    ul.story__body__content__links li a:before, 
+    .story:before,
+    a.story__body__content__link--header,
+    .story__body__content__opener__share ul li a:before,
+    .story__body__content__opener__share p a:before {
       background-color: <%- requested['color'] %>;
-    }
-    .story:before {
-      background-color: <%- requested['color'] %>;
-    }
-    a.story__body__content__link--header {
-      background-color: <%- requested['color'] %>;
-    }
-    .story__body__content__opener__box p {
-      border-color: <%- requested['color'] %>;
-      color: <%- requested['color'] %>;
     }
   </style>
 <% } %>
@@ -58,22 +52,24 @@
             </div>
 
             <div class="story__body u-row">
-              <div class="story__body__header">
-                <ul class="u-unstyled">
-                  <li class="story__body__header__link--facebook">
-                    <a href="#">Share on Facebook</a>
-                  </li>
-                  <li class="story__body__header__link--twitter">
-                    <a href="#">Share on Twitter</a>
-                  </li>
-                </ul>
-              </div>
               
               <div class="story__body__content u-row">
 
                 <div class="story__body__content__opener">
+
                   <div class="story__body__content__opener__box">
-                    <p><%- story['category'] %></p>
+
+                    <!-- Social sharing -->
+                    <div class="story__body__content__opener__share">
+                      <p class="story__body__content__opener__share--facebook">
+                        <a href="#"></a>
+                      </p>
+                      <p class="story__body__content__opener__share--twitter">
+                        <a href="#"></a>
+                      </p>
+                    </div>
+
+                    <!-- <p><%- story['category'] %></p> -->
                     <h2><%- story['description'] %></h2>
                   </div>
                 </div>

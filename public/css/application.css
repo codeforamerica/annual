@@ -671,6 +671,51 @@ nav ul li.active a {
   display: inline-block;
   margin-bottom: 0.5em; }
 
+.story__body__content__opener__share {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+  clear: none;
+  margin-bottom: 1.5em; }
+
+.story__body__content__opener__share p {
+  display: inline-block; }
+
+.story__body__content__opener__share p a {
+  text-decoration: none;
+  -webkit-transition: opacity 0.08s ease-in 0s;
+  -moz-transition: opacity 0.08s ease-in 0s;
+  transition: opacity 0.08s ease-in 0s; }
+
+.story__body__content__opener__share p a:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  background-color: #004b6a;
+  border-radius: 100%;
+  color: white;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center; }
+
+.story__body__content__opener__share p a:hover {
+  opacity: 0.8; }
+
+.story__body__content__opener__share--facebook a:before {
+  content: "\f1e4"; }
+
+.story__body__content__opener__share--twitter a:before {
+  content: "\f1c4"; }
+
 .story__body__content__quote__words {
   padding-top: 4.6em; }
 
