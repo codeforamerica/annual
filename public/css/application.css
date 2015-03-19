@@ -474,11 +474,14 @@ header * {
   color: white; }
 
 div.logo {
-  padding: 15px 15px 0 15px;
+  padding: 19px 15px 0 15px;
   float: left; }
   div.logo a {
     text-decoration: none;
     font-weight: bold; }
+    @media screen and (max-width: 480px) {
+      div.logo a {
+        font-size: 14.4px; } }
 
 nav {
   padding: 15px;
@@ -490,9 +493,14 @@ nav ul li {
   font-size: 14.4px; }
 
 nav ul li.currently,
-nav ul li.expand,
-nav ul li.active {
+nav ul li.active,
+nav ul li.expand {
   display: inline-block; }
+
+@media screen and (max-width: 750px) {
+  nav ul li.currently,
+  nav ul li.active {
+    display: none; } }
 
 nav ul li a {
   text-decoration: none;
@@ -503,7 +511,8 @@ nav ul li a:hover {
 
 nav ul li.active a {
   font-style: italic;
-  border-bottom: 1px solid white; }
+  border-bottom: 1px solid white;
+  margin-right: 35px; }
 
 nav ul li.expand a:before {
   font-family: "foundation-icons";
@@ -522,7 +531,10 @@ nav ul li.expand a:before {
   line-height: 30px;
   text-align: center;
   font-size: 1.4em;
-  margin-left: 10px; }
+  margin-left: 10px;
+  position: fixed;
+  right: 15px;
+  top: 15px; }
 
 #js-offpage {
   display: none;

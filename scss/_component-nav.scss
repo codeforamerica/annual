@@ -25,12 +25,16 @@ header * {
 }
 
 div.logo {
-  padding: 15px 15px 0 15px;
+  padding: 19px 15px 0 15px;
   float: left;
 
   a {
     text-decoration: none;
     font-weight: bold;
+
+    @include media($mobile) {
+      font-size: $base-size * 0.8;
+    }
   }
 }
 
@@ -50,10 +54,16 @@ nav ul li {
 }
 
 nav ul li.currently,
-nav ul li.expand,
-nav ul li.active
- {
+nav ul li.active,
+nav ul li.expand {
   display: inline-block;
+}
+
+nav ul li.currently,
+nav ul li.active {
+  @include media($tablet) {
+    display: none;
+  }
 }
 
 nav ul li a {
@@ -68,13 +78,10 @@ nav ul li a:hover {
 nav ul li.active a {
   font-style: italic;
   border-bottom: 1px solid white;
+  margin-right: 35px;
 }
 
 // Expand button
-
-nav ul li.expand { 
-
-}
 
 nav ul li.expand a:before {
   @include iconfont();
@@ -86,6 +93,10 @@ nav ul li.expand a:before {
   text-align: center;
   font-size: 1.4em;
   margin-left: 10px;
+
+  position: fixed;
+  right: 15px;
+  top: 15px;
 }
 
 // =====

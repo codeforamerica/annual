@@ -3,7 +3,7 @@
     <a href="#">Code for America  &nbsp;|&nbsp; 2014 Annual Report</a>
   </div>
   <nav class="nav">
-    <ul class="u-unstyled">
+    <ul class="u-unstyled u-row">
 
       <li class="currently">Currently Reading:</li>
       <% if (data.opener) { %>
@@ -13,7 +13,7 @@
 
       <% _.each(data['categories'], function(category){ %>
 
-        <li class="
+        <li class="u-row
         <% if (category['unique-id'] == requested['unique-id']) { %>
         active
         <% } %>
