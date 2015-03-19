@@ -27,3 +27,20 @@
 // $(document).ready(function(){
 //   resize();
 // })
+
+// =====
+// Show and hide the contents screen
+// =====
+
+$(document).ready(function(){
+  $('#js-nav-open').click(function(e){
+    e.preventDefault();
+    $('#js-page').toggle();
+    $('#js-offpage').toggle();
+  });
+  $('#js-nav-close').click(function(e){
+    e.preventDefault();
+    $('#js-page').toggle();
+    $('#js-offpage').toggle();
+  });
+})
