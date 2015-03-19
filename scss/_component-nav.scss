@@ -43,7 +43,11 @@ div.logo {
     }
   }
   .logo__small {
-
+    font-weight: bold;
+    display: none;
+    @include media($mobile) {
+      display: inherit;
+    }
   }
 }
 

@@ -510,6 +510,12 @@ div.logo {
     @media screen and (max-width: 480px) {
       div.logo .logo__big {
         display: none; } }
+  div.logo .logo__small {
+    font-weight: bold;
+    display: none; }
+    @media screen and (max-width: 480px) {
+      div.logo .logo__small {
+        display: inherit; } }
 
 nav {
   padding: 15px;
