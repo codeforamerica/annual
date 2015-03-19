@@ -14,6 +14,17 @@
 <% include partials/header.html %>
 <% include partials/nav.html %>
 
+<style>
+p {
+  line-height: 1em;
+}
+
+h2 {
+  font-weight: bold;
+
+}
+</style>
+
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before {
@@ -53,6 +64,10 @@
     
     <div class="container">
       <div class="supporters">
+        <h2>Major Benefactors</h2>
+        <img src="http://www.codeforamerica.org/media/images/donate/knight_logo.jpg" style="padding: 5px">
+        <img src="http://www.codeforamerica.org/media/images/donate/on_logo.jpg"  style="padding: 5px">
+        <img src="http://www.codeforamerica.org/media/images/donate/google_logo.jpg"  style="padding: 5px">
         <%
           var orgs = _.groupBy(data['supporters'], 'org-type');
         %>
