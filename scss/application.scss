@@ -61,6 +61,36 @@ body {
 }
 
 // =====
+// Basic rules for our off-canvas nav
+// =====
+
+#js-page {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: lighten(gray,70);
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+#js-offpage {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  position: fixed;
+  background-color: $black;
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+
+// =====
 // Base spacing rules
 // =====
 
