@@ -1015,6 +1015,16 @@ li.story__body__content__link--app a:before {
   margin-left: 8.62069%; }
   .next__content:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 750px) {
+    .next__content {
+      float: left;
+      display: block;
+      margin-right: 3.44828%;
+      width: 91.37931%;
+      margin-left: 4.31034%;
+      margin-top: 1em; }
+      .next__content:last-child {
+        margin-right: 0; } }
 
 a.next__link {
   background-color: #004b6a;
@@ -1030,11 +1040,15 @@ a.next__link {
   -webkit-transition: opacity 0.4s ease-out 0s;
   -moz-transition: opacity 0.4s ease-out 0s;
   transition: opacity 0.4s ease-out 0s; }
+  @media screen and (max-width: 750px) {
+    a.next__link {
+      padding-top: 2em;
+      padding-bottom: 2em; } }
 
 a.next__link:hover {
   opacity: 0.5; }
 
-a.next__link:after {
+a.next__link:before {
   position: absolute;
   content: '';
   background-image: url("/assets/images/icons/circle-right-white.svg");
@@ -1044,6 +1058,18 @@ a.next__link:after {
   top: 0;
   bottom: 0;
   right: 100px; }
+  @media screen and (max-width: 1100px) {
+    a.next__link:before {
+      right: 50px; } }
+  @media screen and (max-width: 750px) {
+    a.next__link:before {
+      position: relative;
+      display: block;
+      margin: 0;
+      margin-bottom: 1em;
+      left: 0;
+      right: 0;
+      margin-left: 4.31034%; } }
 
 p.next__content__read {
   text-transform: uppercase;
@@ -1057,8 +1083,17 @@ p.next__content__overline {
 
 p.next__content__headline {
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 27px;
   margin-top: 0.5em; }
+  @media screen and (max-width: 1100px) {
+    p.next__content__headline {
+      font-size: 23.4px; } }
+  @media screen and (max-width: 750px) {
+    p.next__content__headline {
+      font-size: 20.7px; } }
+  @media screen and (max-width: 480px) {
+    p.next__content__headline {
+      font-size: 18px; } }
 
 p.next__content__headline span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);

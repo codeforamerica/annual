@@ -1,0 +1,115 @@
+//
+// _component_next.scss
+//
+// Styles for the .next component, the bottom-of-the-page-keep-reading thing
+//
+
+.next {
+  margin-top: 0;
+  @include span-columns(12 of 12);
+}
+
+.next * {
+  color: white;
+
+  @include media($tablet) {
+    // text-align: center;
+  }
+}
+
+.next__content {
+  @include span-columns(9 of 12);
+  @include shift(1 of 12);
+
+  @include media($tablet) {
+    @include span-columns(11 of 12);
+    @include shift(0.5 of 12);
+    margin-top: 1em;
+  }
+}
+
+a.next__link {
+  background-color: $blue;
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+
+  @include transition(opacity 0.4s ease-out 0s);
+
+  @include media($tablet) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+a.next__link:hover {
+  opacity: 0.5;
+}
+
+a.next__link:before {
+  position: absolute;
+  content: '';
+  background-image: url('/assets/images/icons/circle-right-white.svg');
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 100px;
+
+  @include media($medium-desktop) {
+    right: 50px;
+  }
+
+  @include media($tablet) {
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-bottom: 1em;
+    left: 0;
+    right: 0;
+    @include shift(0.5 of 12);
+  }
+}
+
+p.next__content__read {
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  letter-spacing: 4px;
+  font-size: $base-size * 0.8;
+  opacity: 0.8;
+}
+
+p.next__content__overline {
+  font-style: italic;
+}
+
+p.next__content__headline {
+  font-family: $sans-serif;
+  font-size: $base-size * 1.5;
+  margin-top: 0.5em;
+
+  @include media($medium-desktop) {
+    font-size: $base-size * 1.3;
+  }
+
+  @include media($tablet) {
+    font-size: $base-size * 1.15;
+  }
+
+  @include media($mobile) {
+    font-size: $base-size * 1;
+  }
+}
+
+p.next__content__headline span {
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 4px;
+}
