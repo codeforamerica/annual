@@ -57,7 +57,7 @@ $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 // =====
 
 body {
-  background-color: rgba(0,0,0,0.03);
+  background-color: lighten(gray,60);
 }
 
 // =====
@@ -212,6 +212,11 @@ p {
 // Import the .story component
 // =====
 @import 'component-story';
+
+// =====
+// Import the .opener component
+// =====
+@import 'component-opener';
 
 // =====
 // Import next section component

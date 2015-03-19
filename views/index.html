@@ -15,26 +15,26 @@
 <% include partials/nav.html %>
 
 <div id="js-main">
-  <% if (data.opener) { %>
-    <% opener = data.opener[0] %>
+  <section class="opener" id="<% requested.category %>">
 
-    <section class="stories stories--opener" id="<% opener.category %>">
-      <div class="intro" style="<% if (opener.color !== "") { %> background-color: <%- opener.color %>; <% } %>">
-        <div class="container">
+    <div class="opener__header">
+      <div class="container">
+        <div class="opener__header__content">
+          <p><%- requested.category %></p>
+          <h1><%- requested.headline %></h1>
+        </div>
+      </div>
+    </div>
 
-          <div class="intro__content">
-            <p><%- opener.category %></p>
-            <h1><%- opener.headline %></h1>
-          </div>
-          <div class="intro__description">
-            <%- opener.description %>
-          </div>
+    <div class="opener__image">
+      <img src="/assets/images/defaults/slider.gif" alt="">
+    </div>
 
-        </div><!-- end .container -->
-      </div><!-- end .intro -->
-    </section>
-
-  <% } /* endif data.opener */ %>
+    <div class="opener__body">
+      <%- requested.description %>
+    </div>
+   
+  </section><!-- end .opener -->
 </div>
 
 <% include partials/next.html %>
