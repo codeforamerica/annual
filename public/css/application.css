@@ -413,12 +413,15 @@ h1 {
   @media screen and (max-width: 480px) {
     h1 {
       font-size: 28.8px; } }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 23.4px; } }
 
 h2 {
   font-size: 27px; }
   @media screen and (max-width: 750px) {
     h2 {
-      font-size: 21.6px; } }
+      font-size: 18px; } }
 
 h3 {
   font-size: 23.4px;
@@ -433,6 +436,10 @@ p {
   @media screen and (max-width: 750px) {
     p {
       font-size: 16.2px;
+      line-height: 2; } }
+  @media screen and (max-width: 750px) {
+    p {
+      font-size: 14.4px;
       line-height: 2; } }
 
 .u-unstyled {

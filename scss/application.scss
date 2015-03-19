@@ -111,13 +111,16 @@ h1 {
   @include media($mobile) {
     font-size: $base-size * 1.6;
   }
+  @include media($mobile) {
+    font-size: $base-size * 1.3;
+  }
 }
 
 h2 {
   font-size: $base-size * 1.5;
 
   @include media($tablet) {
-    font-size: $base-size * 1.2;    
+    font-size: $base-size * 1;    
   }
 }
 
@@ -135,6 +138,10 @@ p {
 
   @include media($tablet) {
     font-size: $base-size * 0.9;
+    line-height: 2;
+  }
+  @include media($tablet) {
+    font-size: $base-size * 0.8;
     line-height: 2;
   }
 }
