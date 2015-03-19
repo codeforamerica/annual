@@ -94,7 +94,7 @@ nav ul li.expand a:before {
   font-size: 1.4em;
   margin-left: 10px;
 
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 15px;
 }
@@ -105,14 +105,6 @@ nav ul li.expand a:before {
 // =====
 
 #js-offpage {
-  display: none;
-  background-color: $black;
-  height: 100vh;
-  @include span-columns(12 of 12);
-}
-
-#js-page {
-  // display: none;
 }
 
 .nav__contents {
@@ -189,8 +181,4 @@ a#js-nav-close:before {
   text-align: right;
   font-size: 4em;
   color: white;
-}
-
-#js-offpage {
-  display: none;
 }

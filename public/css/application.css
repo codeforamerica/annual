@@ -381,6 +381,29 @@ th {
 body {
   background-color: rgba(0, 0, 0, 0.03); }
 
+#js-page {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1; }
+
+#js-offpage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -532,20 +555,9 @@ nav ul li.expand a:before {
   text-align: center;
   font-size: 1.4em;
   margin-left: 10px;
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 15px; }
-
-#js-offpage {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  float: left;
-  display: block;
-  margin-right: 3.44828%;
-  width: 100%; }
-  #js-offpage:last-child {
-    margin-right: 0; }
 
 .nav__contents {
   width: 100%;
@@ -626,9 +638,6 @@ a#js-nav-close:before {
   text-align: right;
   font-size: 4em;
   color: white; }
-
-#js-offpage {
-  display: none; }
 
 .intro {
   background-color: #004b6a;
