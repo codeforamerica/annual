@@ -30,11 +30,20 @@ div.logo {
 
   a {
     text-decoration: none;
-    font-weight: bold;
 
     @include media($mobile) {
       font-size: $base-size * 0.8;
     }
+  }
+
+  .logo__big {
+    font-weight: bold;
+    @include media($mobile) {
+      display: none;
+    }
+  }
+  .logo__small {
+
   }
 }
 

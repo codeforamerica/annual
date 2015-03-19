@@ -501,11 +501,15 @@ div.logo {
   padding: 19px 15px 0 15px;
   float: left; }
   div.logo a {
-    text-decoration: none;
-    font-weight: bold; }
+    text-decoration: none; }
     @media screen and (max-width: 480px) {
       div.logo a {
         font-size: 14.4px; } }
+  div.logo .logo__big {
+    font-weight: bold; }
+    @media screen and (max-width: 480px) {
+      div.logo .logo__big {
+        display: none; } }
 
 nav {
   padding: 15px;
