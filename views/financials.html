@@ -76,6 +76,7 @@ _.chain(financials)
           <div class="financials__header">
             <h1>FY 2014: <%- financial['total']['label'] %></h1>
             <p class="financials__header__total"><%- financial['total']['amount'] %></p>
+            <small><%- financial['total']['note'] %></small>
           </div>
 
           <div class="financials__breakdown">
