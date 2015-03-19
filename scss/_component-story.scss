@@ -21,6 +21,11 @@ $border-color: rgba(0,0,0,0.1);
   padding-right: $padding * 2;
   background-color: white;
   box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.02);
+  overflow: hidden;
+
+  @include media($medium-desktop) {
+    padding: 0;
+  }
 }
 
 // =====
@@ -42,6 +47,7 @@ $border-color: rgba(0,0,0,0.1);
 
   @include media($medium-desktop) {
     @include span-columns(12 of 12);
+    position: relative;
   }
 
   @include media($tablet) {
@@ -58,7 +64,11 @@ $border-color: rgba(0,0,0,0.1);
   @include span-columns(12 of 12);
 
   @include media($medium-desktop) {
-    // ksks
+    padding: $padding * 1.8;
+  }
+
+  @include media($tablet) {
+    padding: $padding;
   }
 }
 
@@ -74,49 +84,6 @@ $border-color: rgba(0,0,0,0.1);
 }
 
 // =====
-// Story header (social/etc button)
-// (NOTE: HIDDEN WHILE WE WORK ON SOCIAL SHARING.)
-// =====
-
-// Hide the social sharing header for now
-.story__body__header {
-  display: none;
-}
-
-    // [class^="story__body__header__link"] a {s
-    //   display: inline-block;
-    //   height: 30px;
-    //   width: 30px;
-    //   text-indent: -9999px;
-
-    //   border-radius: 100%;
-    //   border: 2px solid white;
-    //   background-color: red;
-
-    //   background-image: url('{{ site.baseurl }}/assets/images/icons/twitter.svg');
-    //   background-size: 60%;
-    //   background-position: center center;
-    //   background-repeat: no-repeat;
-
-    //   @include transition(opacity 0.08s ease-in 0s);
-    // }
-
-    // [class^="story__body__header__link"] a:hover { 
-    //   opacity: 0.5;
-    // }
-
-    // .story__body__header__link--twitter a {
-    //   background-image: url('/assets/images/icons/twitter-white.svg');
-    //   background-size: 60%;
-    // }
-
-    // .story__body__header__link--facebook a {
-    //   background-image: url('/assets/images/icons/fb-white.svg');
-    //   background-size: 80%;
-    // }
-
-
-// =====
 // story__body__content basic spacing/layout
 // =====
 
@@ -126,32 +93,39 @@ $border-color: rgba(0,0,0,0.1);
   @include shift(6 of 12);
 
   @include media($medium-desktop) {
-
-  }
-
-  @include media($tablet) {
-    
+    @include span-columns(12 of 12);
+    @include shift(0);
   }
 }
 
-
-.story__body__content__quote,
-.story__body__content__metrics {
+.story__body__content__quote {
   position: relative;
   @include span-columns (6 of 12);
   padding-top: $padding;
 
   @include media($medium-desktop) {
-
+    @include span-columns(8 of 12);
   }
 
   @include media($tablet) {
-
+    @include span-columns(12 of 12);
   }
 }
 
 .story__body__content__metrics {
+  position: relative;
+  @include span-columns (6 of 12);
   @include omega();
+  padding-top: $padding;
+
+  @include media($medium-desktop) {
+    @include span-columns(4 of 12);
+    @include omega();
+  }
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
 }
 
 .story__body__content__links {
@@ -160,26 +134,16 @@ $border-color: rgba(0,0,0,0.1);
   padding-top: $padding;
 }
 
-// =====
-// Lines and intros above each section in the story
-// =====
-
-.story__body__content__links:before,
-.story__body__content__quote:before,
-.story__body__content__metrics:before {
+// Line above links
+.story__body__content__links:before {
   content: '';
   position: relative;
-  background-color: rgba(0,0,0,0.1);
+  background-color: $border-color;
   height: 1px;
-  @include span-columns(12 of 12);
-
-  @include media($medium-desktop) {
-
-  }
-
-  @include media($tablet) {
-
-  }
+  margin-bottom: $padding;
+  display: block;
+  width: calc(100% + 8em);
+  margin-left: -4em;
 }
 
 // =====
@@ -200,6 +164,7 @@ $border-color: rgba(0,0,0,0.1);
 .story__body__content__opener__box {
   display: table-cell;
   vertical-align: middle;
+  position: relative;
 
   @include media($medium-desktop) {
     display: inherit;
@@ -213,6 +178,21 @@ $border-color: rgba(0,0,0,0.1);
   font-style: italic;
   display: inline-block;
   margin-bottom: 0.5em;
+}
+
+.story__body__content__opener__box:after {
+  content: '';
+  position: absolute;
+  background-color: $border-color;
+  height: 1px;
+  bottom: 0;
+  @include span-columns(15 of 12);
+  @include shift(-1 of 12);
+
+  @include media($medium-desktop) {
+    margin-top: $padding * 2;
+    position: relative;
+  }
 }
 
 // =====
@@ -305,15 +285,24 @@ ul.story__body__content__metrics {
 
 .story__body__content__metrics__number {
   font-weight: 800;
-  font-size: $base-size * 2.7;
+  font-size: $base-size * 2.4;
   line-height: 1;
   letter-spacing: -1px;
   @include span-columns(4 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+    margin-bottom: 0.5em;
+  }
 }
 
 .story__body__content__metrics__description {
   font-family: $sans-serif;
   @include span-columns(8 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(12 of 12);
+  }
 }
 
 // =====
@@ -325,6 +314,10 @@ ul.story__body__content__links {
     @include span-columns(4 of 12);
     padding-top: $padding/2;
     padding-bottom: $padding/2;
+
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+    }
   }
 }
 
