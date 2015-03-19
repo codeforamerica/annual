@@ -16,6 +16,21 @@
 
   padding-top: 7em;
   padding-bottom: 7em;
+
+  @include media($medium-desktop) {
+    margin-left: 180px;
+  }
+
+  @include media($tablet) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    margin-left: 0;
+  }
+
+  @include media($mobile) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 }
 
 .timeline ul:before {
@@ -56,6 +71,18 @@
   left: -270px;
   width: 20%;
   text-align: right;
+
+  @include media($medium-desktop) {
+    left: -220px;
+  }
+
+  @include media($tablet) {
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    margin-bottom: $padding;
+  }
 }
 
 .timeline ul li .timeline__month p {
@@ -65,8 +92,14 @@
 }
 
 .timeline ul li .timeline__description {
-  background-color: $background-tint;
+  background-color: white;
   padding: 2em;
+  position: relative;
+  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.02);
+
+  @include media($mobile) {
+    padding: 1em;
+  }
 }
 
 .timeline ul li .timeline__description:before {

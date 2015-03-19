@@ -1285,6 +1285,18 @@ p.next__content__headline span {
   margin-left: 240px;
   padding-top: 7em;
   padding-bottom: 7em; }
+  @media screen and (max-width: 1100px) {
+    .timeline ul {
+      margin-left: 180px; } }
+  @media screen and (max-width: 750px) {
+    .timeline ul {
+      padding-top: 4em;
+      padding-bottom: 4em;
+      margin-left: 0; } }
+  @media screen and (max-width: 480px) {
+    .timeline ul {
+      padding-top: 2em;
+      padding-bottom: 2em; } }
 
 .timeline ul:before {
   content: '';
@@ -1318,6 +1330,16 @@ p.next__content__headline span {
   left: -270px;
   width: 20%;
   text-align: right; }
+  @media screen and (max-width: 1100px) {
+    .timeline ul li .timeline__month {
+      left: -220px; } }
+  @media screen and (max-width: 750px) {
+    .timeline ul li .timeline__month {
+      position: relative;
+      left: 0;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 2em; } }
 
 .timeline ul li .timeline__month p {
   font-style: italic;
@@ -1325,8 +1347,13 @@ p.next__content__headline span {
   display: inline; }
 
 .timeline ul li .timeline__description {
-  background-color: rgba(0, 0, 0, 0.04);
-  padding: 2em; }
+  background-color: white;
+  padding: 2em;
+  position: relative;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.02); }
+  @media screen and (max-width: 480px) {
+    .timeline ul li .timeline__description {
+      padding: 1em; } }
 
 .timeline ul li .timeline__description:before {
   content: '';
