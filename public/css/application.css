@@ -565,13 +565,14 @@ nav ul li.active a {
   @media screen and (max-width: 1100px) {
     .story {
       padding: 0; } }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 480px) {
     .story {
       float: left;
       display: block;
       margin-right: 3.44828%;
       width: 91.37931%;
-      margin-left: 4.31034%; }
+      margin-left: 4.31034%;
+      margin-bottom: 0; }
       .story:last-child {
         margin-right: 0; } }
 
