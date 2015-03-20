@@ -1,0 +1,43 @@
+<% 
+
+  var meta_description,
+      meta_url,
+      meta_image;
+
+  if (type == "category" || type == "financials" || type == "supporters" || type == "timeline"){
+    meta_description = requested['headline'];
+  }
+  if (type == "category"){
+    meta_image = requested['headline'];
+  }
+
+%>
+
+<!-- SEO -->
+<meta name="author" content="Code for America">
+<meta name="description" content="<%- meta_description %>">
+<link rel="canonical" href="">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@codeforamerica">
+<meta name="twitter:creator" content="Code for America">
+<meta name="twitter:title" content="<%- title %> | Code for America 2014 Annual Report">
+<meta name="twitter:description" content="<%- meta_description %>">
+<meta name="twitter:image:src" content="">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:url" content="https://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<%- title %> | Code for America 2014 Annual Report">
+<meta property="og:image" content="">
+<meta property="og:description" content="<%- meta_description %>">
+<meta property="og:site_name" content="Code for America | 2014 Annual Report">
+<meta property="article:publisher" content="https://www.facebook.com/codeforamerica">
+
+<!-- Social: Google+ / Schema.org  -->
+<link rel="author" href="https://plus.google.com/+codeforamerica/posts"/>
+<link rel="publisher" href="https://plus.google.com/+codeforamerica/about"/>
+<meta itemprop="name" content="<%- title %> | Code for America 2014 Annual Report">
+<meta itemprop="description" content="<%- meta_description %>">
+<meta itemprop="image" content="">

@@ -59,6 +59,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 app.get('/', function(req, res){
   res.render('index', {
     title: 'Introduction',
+    type: 'introduction',
     data: Report,
     partials: {
       header: 'partials/header',
@@ -71,6 +72,7 @@ app.get('/category/:id', function (req, res) {
   if (req.params.id == '2014-at-a-glance') {
     res.render('timeline', {
       title: 'Timeline',
+      type: 'timeline',
       requested: req.params.id,
       data: Report,
       partials: {
@@ -81,6 +83,7 @@ app.get('/category/:id', function (req, res) {
   } else if (req.params.id == 'supporters') {
     res.render('supporters', {
       title: 'Supporters',
+      type: 'supporters',
       requested: req.params.id,
       data: Report,
       partials: {
@@ -91,6 +94,7 @@ app.get('/category/:id', function (req, res) {
   } else if (req.params.id == 'financials') {
     res.render('financials', {
       title: 'Financials',
+      type: 'financials',
       requested: req.params.id,
       data: Report,
       partials: {
@@ -102,6 +106,7 @@ app.get('/category/:id', function (req, res) {
   } else {
     res.render('category', {
       requested: req.params.id,
+      type: 'category',
       data: Report,
       partials: {
         header: 'partials/header',
@@ -114,6 +119,7 @@ app.get('/category/:id', function (req, res) {
 app.get('/story/:id', function (req, res) {
   res.render('story', {
     requested: req.params.id,
+    type: 'story',
     data: Report,
     partials: {
       header: 'partials/header',
