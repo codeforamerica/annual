@@ -1292,6 +1292,16 @@ li.story__body__content__link--app a:before {
   padding-right: 8px;
   padding-left: 3px; }
 
+.opener__body__text ul {
+  padding-left: 3em; }
+
+@media screen and (max-width: 750px) {
+  .opener__body__text ul li {
+    margin-top: 0; } }
+
+.opener__body__text ul li p {
+  font-style: italic; }
+
 .opener__body__contents {
   float: left;
   display: block;

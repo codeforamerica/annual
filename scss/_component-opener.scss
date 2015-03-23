@@ -133,6 +133,20 @@ $padding: 3em;
   padding-left: 3px;
 }
 
+.opener__body__text ul {
+  padding-left: 3em;
+}
+
+.opener__body__text ul li {
+  @include media($tablet) {
+    margin-top: 0;
+  }
+}
+
+.opener__body__text ul li p {
+  font-style: italic;
+}
+
 // =====
 // .opener__body__contents
 // =====
