@@ -18,7 +18,7 @@ $padding: 3em;
   background-color: $blue;
   color: white;
   padding-top: $padding;
-  padding-bottom: $padding;
+  padding-bottom: $padding*2.5;
   @include row();
 
   @include media($tablet) {
@@ -28,10 +28,7 @@ $padding: 3em;
 
 .opener__header * {
   color: white;
-
-  @include media($tablet) {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 // =====
@@ -39,13 +36,9 @@ $padding: 3em;
 // =====
 
 .opener__header__content {
-  @include span-columns(5 of 12);
-  @include shift(1 of 12);
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
 
-  @include media($tablet) {
-    @include span-columns(8 of 12);
-    @include shift(2 of 12);
-  }
   @include media($mobile) {
     @include span-columns(10 of 12);
     @include shift(1 of 12);
@@ -56,41 +49,23 @@ $padding: 3em;
   font-style: italic;
 }
 
+.opener__header__content h1 {
+  margin-top: 0.25em;
+}
+
 // =====
 // .opener__image
 // =====
 
 .opener__image {
-  position: absolute;
-  right: 12%;
-  top: 50px;
-
-  @include media($medium-desktop) {
-    right: 8%;
-  }
-
-  @include media($tablet) {
-    position: relative;
-    left: 50%;
-    margin-left: -125px;
-    margin-top: ($padding*4.5) * -1;
-    width: 0;
-  }
+  width: 100%;
 }
 
 .opener__image img {
-  width: 400px;
-  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.04);
-  border-radius: 15px;
-  background-color: white;
-
-  @include media($medium-desktop) {
-    width: 300px;    
-  }
-
-  @include media($tablet) {
-    width: 250px;
-  }
+  margin: 0 auto;
+  margin-top: -150px;
+  width: 50%;
+  display: block;
 }
 
 // =====
@@ -98,10 +73,10 @@ $padding: 3em;
 // =====
 
 .opener__body {
-  padding-top: $padding;
+  padding-top: $padding/2;
   padding-bottom: $padding;
-  @include span-columns(5 of 12);
-  @include shift(1 of 12);
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
 
   @include media($tablet) {
     padding-top: $padding*2;
@@ -112,4 +87,50 @@ $padding: 3em;
   @include media($tablet) {
     padding-top: $padding*1.5;
   }
+}
+
+.opener__body__text {
+  @include span-columns(7 of 12);
+}
+
+.opener__body__text p:first-child {
+  @include span-columns(18 of 12);
+  font-size: $base-size * 1.2;
+  clear: both;
+  color: $blue;
+  padding-bottom: $padding;
+  @include media($medium-desktop) {
+    color: $red;
+  }
+}
+
+.opener__body__text p:first-child:first-letter {
+  float: left; 
+  font-weight: bold;
+  font-size: 4em; 
+  line-height: 0.75em; 
+  padding-top: 4px; 
+  padding-right: 8px; 
+  padding-left: 3px;
+}
+
+.opener__body__contents {
+  @include span-columns(4.5 of 12);
+  @include shift(0.5 of 12);
+  padding-top: $padding*8;
+}
+
+.opener__body__contents ul li {
+  margin-top: 1em;
+}
+
+a.opener__body__contents__section {
+  text-decoration: none;
+  border-bottom: 3px solid $black;
+  padding-bottom: 2px;
+  font-style: italic;
+}
+
+.opener__body__contents p {
+  font-size: $base-size * 0.8;
 }
