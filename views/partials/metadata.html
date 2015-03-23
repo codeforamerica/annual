@@ -4,11 +4,29 @@
       meta_url,
       meta_image;
 
-  if (type == "category" || type == "financials" || type == "supporters" || type == "timeline"){
+  if (type == "category" || type == "financials" || type == "supporters" || type == "timeline")
+  {
     meta_description = requested['headline'];
   }
-  if (type == "category"){
-    meta_image = requested['headline'];
+  if (type == "introduction")
+  {
+    meta_description = requested['description'];
+    meta_description = meta_description.replace(/<(?:.|\n)*?>/gm, '');
+    meta_description = meta_description.substring(0,137);
+    meta_description += '...'
+
+  }
+
+  if (type == "category")
+  {
+    meta_image = _.findWhere(data['categories'], requested['unique-id']);
+    meta_image = _.findWhere(data['stories'], meta_image['category']);
+    meta_image = meta_image['image-link'];
+    meta_image = 'http://2014.codeforamerica.org' + meta_image;
+  }
+  else 
+  {
+    meta_image = 'http://2014.codeforamerica.org/assets/images/defaults/swag.jpg';
   }
 
 %>
@@ -16,7 +34,7 @@
 <!-- SEO -->
 <meta name="author" content="Code for America">
 <meta name="description" content="<%- meta_description %>">
-<link rel="canonical" href="">
+<link rel="canonical" href="http://2014.codeforamerica.org<%- url %>">
 
 <!-- Social: Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -24,13 +42,13 @@
 <meta name="twitter:creator" content="Code for America">
 <meta name="twitter:title" content="<%- title %> | Code for America 2014 Annual Report">
 <meta name="twitter:description" content="<%- meta_description %>">
-<meta name="twitter:image:src" content="">
+<meta name="twitter:image:src" content="<%- meta_image %>">
 
 <!-- Social: Facebook / Open Graph -->
-<meta property="og:url" content="https://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know">
-<meta property="og:type" content="article">
+<meta property="og:url" content="http://2014.codeforamerica.org<%- url %>">
+<meta property="og:this.type" content="article">
 <meta property="og:title" content="<%- title %> | Code for America 2014 Annual Report">
-<meta property="og:image" content="">
+<meta property="og:image" content="<%- meta_image %>">
 <meta property="og:description" content="<%- meta_description %>">
 <meta property="og:site_name" content="Code for America | 2014 Annual Report">
 <meta property="article:publisher" content="https://www.facebook.com/codeforamerica">
@@ -40,4 +58,4 @@
 <link rel="publisher" href="https://plus.google.com/+codeforamerica/about"/>
 <meta itemprop="name" content="<%- title %> | Code for America 2014 Annual Report">
 <meta itemprop="description" content="<%- meta_description %>">
-<meta itemprop="image" content="">
+<meta itemprop="image" content="<%- meta_image %>">
