@@ -18,21 +18,26 @@ exports.make = function(type, active, data, callback) {
 function buildNav(active, data, cb) {
   var nav = {};
 
+  // A bit of a gross patch to add the intro section on to the nav
+  var introduction = {};
+  introduction['name'] = data['opener'][0]['category'];
+  introduction['color'] = data['opener'][0]['color'];
+  introduction['class'] = "";
+  introduction['anchor-url'] = "/";
+  if (active == "introduction") {
+    introduction['class'] = 'active';
+  }
+  nav['introduction'] = introduction;
+
   _.each(data['categories'], function(category){    
     var pushing = {};
     pushing['name'] = category['category'];
     pushing['color'] = category['color'];
     pushing['class'] = "";
+    pushing['anchor-url'] = '/categories/' + category['unique-id'];
 
-    if (category['category'] == active) {
-      pushing['class'] = active;
-    }
-
-    if (category['category'] == "Introduction") {
-      pushing['anchor-url'] = "";
-    }
-    else {
-      pushing['anchor-url'] = '/categories/' + category['unique-id'];
+    if (category['unique-id'] == active) {
+      pushing['class'] = 'active';
     }
 
     // Push it into nav
