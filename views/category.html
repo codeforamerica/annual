@@ -9,6 +9,9 @@
   }
 
   var darkColor = shadeColor(color, -0.3);
+
+  var twitter_link,
+      facebook_link;
 %>
 
 <% include partials/header.html %>
@@ -54,7 +57,33 @@
     <div class="container">
       <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
-          <article class="story u-small-spacing u-row">
+          <%
+
+            twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
+              + '&url='
+              + 'http%3A%2F%2F2014.codeforamerica.org'
+              + url.replace(/\//g, '%2F')
+              + '%23'
+              + story['unique-id']
+              + '&text='
+              + encodeURIComponent(story['share-text']);
+
+            facebook_link = 'https://www.facebook.com/dialog/feed?'
+              + '&display=page'
+              + '&app_id=1412610745719231'
+              + '&link='
+              + 'http%3A%2F%2F2014.codeforamerica.org'
+              + url.replace(/\//g, '%2F')
+              + '%23'
+              + story['unique-id']
+              + '&caption='
+              + encodeURIComponent(story['share-text'])
+              + '&redirect_uri='
+              + 'http%3A%2F%2F2014.codeforamerica.org'
+              + url.replace(/\//g, '%2F');
+
+          %>
+          <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
 
@@ -69,10 +98,10 @@
                     <!-- Social sharing -->
                     <div class="story__body__content__opener__share">
                       <p class="story__body__content__opener__share--facebook">
-                        <a href="#"></a>
+                        <a href="<%- twitter_link %>" target="_blank"></a>
                       </p>
                       <p class="story__body__content__opener__share--twitter">
-                        <a href="#"></a>
+                        <a href="<%- facebook_link %>" target="_blank"></a>
                       </p>
                     </div>
 
