@@ -60,6 +60,7 @@ app.get('/', function(req, res){
   res.render('index', {
     title: 'Introduction',
     type: 'introduction',
+    url: req.originalUrl,
     data: Report,
     partials: {
       header: 'partials/header',
@@ -73,6 +74,7 @@ app.get('/category/:id', function (req, res) {
     res.render('timeline', {
       title: 'Timeline',
       type: 'timeline',
+      url: req.originalUrl,
       requested: req.params.id,
       data: Report,
       partials: {
@@ -84,6 +86,7 @@ app.get('/category/:id', function (req, res) {
     res.render('supporters', {
       title: 'Supporters',
       type: 'supporters',
+      url: req.originalUrl,
       requested: req.params.id,
       data: Report,
       partials: {
@@ -95,6 +98,7 @@ app.get('/category/:id', function (req, res) {
     res.render('financials', {
       title: 'Financials',
       type: 'financials',
+      url: req.originalUrl,
       requested: req.params.id,
       data: Report,
       partials: {
@@ -107,6 +111,7 @@ app.get('/category/:id', function (req, res) {
     res.render('category', {
       requested: req.params.id,
       type: 'category',
+      url: req.originalUrl,
       data: Report,
       partials: {
         header: 'partials/header',
@@ -120,6 +125,7 @@ app.get('/story/:id', function (req, res) {
   res.render('story', {
     requested: req.params.id,
     type: 'story',
+    url: req.originalUrl,
     data: Report,
     partials: {
       header: 'partials/header',
