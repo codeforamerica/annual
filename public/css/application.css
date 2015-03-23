@@ -1179,6 +1179,10 @@ li.story__body__content__link--app a:before {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 480px) {
+    .opener__header {
+      padding-top: 2.25em;
+      padding-bottom: 6em; } }
 
 .opener__header * {
   color: white;
@@ -1218,7 +1222,7 @@ li.story__body__content__link--app a:before {
   display: block; }
   @media screen and (max-width: 750px) {
     .opener__image img {
-      margin-top: -130px;
+      margin-top: -120px;
       width: 80%; } }
 
 .opener__body {
@@ -1255,35 +1259,37 @@ li.story__body__content__link--app a:before {
     .opener__body__text {
       width: 100%; } }
 
-.opener__body__text p.first {
+.opener__body__text div.first {
   float: left;
   display: block;
   margin-right: 3.44828%;
   width: 168.96552%;
-  font-size: 21.6px;
   clear: both;
-  color: #004b6a;
   padding-bottom: 3em; }
-  .opener__body__text p.first:last-child {
+  .opener__body__text div.first:last-child {
     margin-right: 0; }
   @media screen and (max-width: 1100px) {
-    .opener__body__text p.first {
+    .opener__body__text div.first {
       float: left;
       display: block;
       margin-right: 3.44828%;
       width: 168.96552%; }
-      .opener__body__text p.first:last-child {
+      .opener__body__text div.first:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 750px) {
-    .opener__body__text p.first {
+    .opener__body__text div.first {
       width: 100%;
-      font-size: 18px;
       padding-bottom: 1.5em; } }
+
+.opener__body__text div.first * {
+  color: #004b6a;
+  font-size: 21.6px; }
   @media screen and (max-width: 750px) {
-    .opener__body__text p.first {
+    .opener__body__text div.first * {
+      font-size: 18px;
       font-size: 14.4px; } }
 
-.opener__body__text p.first:first-letter {
+.opener__body__text div.first p:first-child:first-letter {
   float: left;
   font-weight: bold;
   font-size: 4em;
@@ -1316,6 +1322,13 @@ li.story__body__content__link--app a:before {
       width: 100%;
       margin-left: 0%;
       padding-top: 0; } }
+
+.opener__body__contents:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: block; }
 
 .opener__body__contents ul li {
   margin-top: 1em; }
