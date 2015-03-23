@@ -54,10 +54,14 @@ function buildNext(active, data, cb) {
 
   var currentIndex,
       nextIndex,
-      indexLength;
+      indexLength,
+      currentObject;
 
-  var currentIndex = _.indexOf(data['categories'], active);
-  var nextIndex = currentIndex + 1;
+  currentObject = _.where(data['categories'], {"unique-id":active})
+  console.log(data['categories']);
+  currentIndex = _.indexOf(data['categories'], currentObject);
+  console.log(currentIndex);
+  nextIndex = currentIndex + 1;
   indexLength = data['categories'].length - 1;
 
   if (nextIndex <= indexLength) {
