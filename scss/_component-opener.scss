@@ -20,10 +20,6 @@ $padding: 3em;
   padding-top: $padding;
   padding-bottom: $padding*2.5;
   @include row();
-
-  @include media($tablet) {
-    padding-bottom: $padding*4;
-  }
 }
 
 .opener__header * {
@@ -39,7 +35,7 @@ $padding: 3em;
   @include span-columns(8 of 12);
   @include shift(2 of 12);
 
-  @include media($mobile) {
+  @include media($tablet) {
     @include span-columns(10 of 12);
     @include shift(1 of 12);
   }
@@ -66,6 +62,11 @@ $padding: 3em;
   margin-top: -150px;
   width: 50%;
   display: block;
+
+  @include media($tablet) {
+    margin-top: -130px;
+    width: 80%;
+  }
 }
 
 // =====
@@ -78,33 +79,51 @@ $padding: 3em;
   @include span-columns(8 of 12);
   @include shift(2 of 12);
 
-  @include media($tablet) {
-    padding-top: $padding*2;
+  @include media($medium-desktop) {
     @include span-columns(10 of 12);
     @include shift(1 of 12);
   }
 
   @include media($tablet) {
-    padding-top: $padding*1.5;
+    padding-top: 0;
   }
 }
 
+// =====
+// .opener__body__text
+// =====
+
 .opener__body__text {
   @include span-columns(7 of 12);
+
+  @include media($tablet) {
+    @include fill-parent();
+  }
 }
 
-.opener__body__text p:first-child {
-  @include span-columns(18 of 12);
+.opener__body__text p.first {
+  @include span-columns(20 of 12);
   font-size: $base-size * 1.2;
   clear: both;
   color: $blue;
   padding-bottom: $padding;
+
   @include media($medium-desktop) {
-    color: $red;
+    @include span-columns(20 of 12);
+  }
+
+  @include media($tablet) {
+    @include fill-parent();
+    font-size: $base-size;
+    padding-bottom: $padding/2;
+  }
+
+  @include media($tablet) {
+    font-size: $base-size * 0.8;
   }
 }
 
-.opener__body__text p:first-child:first-letter {
+.opener__body__text p.first:first-letter {
   float: left; 
   font-weight: bold;
   font-size: 4em; 
@@ -114,10 +133,20 @@ $padding: 3em;
   padding-left: 3px;
 }
 
+// =====
+// .opener__body__contents
+// =====
+
 .opener__body__contents {
   @include span-columns(4.5 of 12);
   @include shift(0.5 of 12);
-  padding-top: $padding*8;
+  padding-top: $padding*7;
+
+  @include media($tablet) {
+    @include fill-parent();
+    @include shift(0);
+    padding-top: 0;
+  }
 }
 
 .opener__body__contents ul li {
