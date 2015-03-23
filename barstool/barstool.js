@@ -34,7 +34,7 @@ exports.fetch = function(callback) {
         // Looking good
         dats = JSON.parse(dats);
 
-        // Check if the data is old
+        // Check if the data is onLoad
         // the time when we got the data
         created = new Date(dats["created"]);
         // how many seconds ago we got the data
