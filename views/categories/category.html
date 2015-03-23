@@ -1,14 +1,22 @@
 <% include ../partials/header.html %>
 <% include ../partials/nav.html %>
 
+<% if (category['color']) { %>
+  <style>
+    ul.story__body__content__links li a:before, 
+    .story:before,
+    a.story__body__content__link--header,
+    .story__body__content__opener__share ul li a:before,
+    .story__body__content__opener__share p a:before {
+      background-color: <%- category['color'] %>;
+    }
+  </style>
+<% } %>
+
   <div id="js-main">
     <section class="stories" id="">
 
-      <div class="intro" style="
-        <% if (category['color']) { %>
-          background-color: <%- category['color'] %>;
-        <% } %>
-      ">
+      <div class="intro" style="background-color: <%- category['color'] %>;">
 
         <div class="container">
 
