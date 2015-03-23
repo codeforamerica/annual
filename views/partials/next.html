@@ -1,32 +1,11 @@
-<%
-var currentIndex,
-    nextIndex,
-    indexLength;
-
-var currentIndex = _.indexOf(data['categories'], requested);
-var nextIndex = currentIndex + 1;
-indexLength = data['categories'].length - 1;
-
-if (nextIndex <= indexLength) {
-  nextIndex = nextIndex;
-} else {
-  nextIndex = false;
-}
-%>
-
-<% if (_.isNumber(nextIndex)){ %>
-  <% var nextCategory = data['categories'][nextIndex] %>
+<% if (metadata['next-section'] !== "") { %>
   <div class="next">
-    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
-    <% if (nextCategory['color']) { %>
-      background-color: <%- nextCategory['color'] %>;
-    <% } %>
-    ">
+    <a class="next__link" href="<%- metadata['next-section']['anchor-url'] %>" style="<%- metadata['next-section']['color'] %>">
       <div class="container">
           <div class="next__content">
             <p class="next__content__read">Continue Reading:</p>
-            <p class="next__content__overline"><%- nextCategory['category'] %></p>
-            <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
+            <p class="next__content__overline"><%- metadata['next-section']['name'] %></p>
+            <p class="next__content__headline"><span><%- metadata['next-section']['headline'] %></span></p>
           </div><!-- end .next__cpntent -->
       </div><!-- end .container -->
     </a>

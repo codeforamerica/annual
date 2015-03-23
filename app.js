@@ -9,7 +9,7 @@ app.locals._ = _;
 
 // Set up our view engine, EJS using consolidate.js template helper
 app.engine('html', cons.ejs);
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 // Set up our routes

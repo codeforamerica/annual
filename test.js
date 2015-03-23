@@ -1,6 +1,7 @@
-var barstool = require('./barstool.js');
+var barstool = require('./barstool/barstool'),
+    _ = require('underscore');
 
-
-barstool.fetch( function (err,sheet) {
-  console.log( sheet.foundSheetNames );
-})
+barstool.fetch(function (err,Sheet) {
+  
+  console.log( Sheet['opener'] );
+});

@@ -4,31 +4,31 @@ var express = require('express'),
 
 router.get('/:id', function (req, res) {
 
-  Comment.get(req.params.id, function(err, response){
+  Category.get(req.params.id, function(err, response){
 
     // Special cases
     if (req.params.id == '2014-at-a-glance') {
       res.render('categories/timeline', {
-        metadata: response.metdata, 
+        metadata: response.metadata, 
         category: response.category
       });
     }
     else if (req.params.id == 'supporters') {
       res.render('categories/supporters', {
-        metadata: response.metdata, 
+        metadata: response.metadata, 
         category: response.category
       });
     }
     else if (req.params.id == 'financials') {
       res.render('categories/financials', {
-        metadata: response.metdata, 
+        metadata: response.metadata, 
         category: response.category
       });
     }
     // Default case
     else {
       res.render('categories/category', {
-        metadata: response.metdata, 
+        metadata: response.metadata, 
         category: response.category
       });
     }

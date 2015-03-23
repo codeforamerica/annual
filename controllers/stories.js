@@ -6,7 +6,7 @@ router.get('/:id', function (req, res) {
 
   Story.get(req.params.id, function(err, response){
     res.render('stories/story', {
-      metadata: response.metdata, 
+      metadata: response.metadata, 
       story: response.story
     });
   });

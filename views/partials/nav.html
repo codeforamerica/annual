@@ -1,4 +1,4 @@
-<header id="js-header" style="background-color:<%- darkColor %>">
+<header id="js-header" style="background-color:<%- category['dark-color'] %>">
   <div class="logo">
     <a href="#">
       <span class="logo__big">Code for America</span><span class="logo__small">CfA</span>  &nbsp;&nbsp; 2014 Annual Report
@@ -8,23 +8,10 @@
     <ul class="u-unstyled u-row">
 
       <li class="currently">Currently Reading:</li>
-      <% if (data.opener) { %>
-        <% opener = data.opener[0] %>
-        <li class="
-        <% if (title == "Introduction") { %>
-        active
-        <% } %>
-        "><a href="/"><%- opener['category'] %></a></li>
-      <% } %>
-
-      <% _.each(data['categories'], function(category){ %>
-
-        <li class="u-row
-        <% if (category['unique-id'] == requested['unique-id']) { %>
-        active
-        <% } %>
-        "><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
-
+      <% _.each(metadata['nav-sections'], function(section){ %>
+      <li class="u-row <%- section['class'] %>">
+        <a href="<%- section['anchor-url'] %>"><%- section['name'] %></a>
+      </li>
       <% }); %>
       <li class="expand"><a href="#" id="js-nav-open"></a></li>
     </ul>

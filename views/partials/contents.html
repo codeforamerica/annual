@@ -3,24 +3,12 @@
     <div class="nav__contents" id="js-contents">
       <ul class="u-unstyled">
           <li class="nav__contents__title"><strong>2014 Annual Report</strong></li>
-          <% if (data.opener) { %>
-            <% opener = data.opener[0] %>
-            <li><a href="/">
-              <a href="/">
-                <div class="nav__contents__category"><p><%- opener['category'] %></p></div>
-              </a>
-            </li>
-          <% } %>
-          <% _.each(data['categories'], function(category){ %>
-            <li class="
-            <% if (category['unique-id'] == requested['unique-id']) { %>
-            active
-            <% } %>
-            ">
-              <a href="/category/<%- category['unique-id'] %>">
+          <% _.each(metadata['nav-sections'], function(section){ %>
+            <li class="<%- section['class'] %>">
+              <a href="<%- section['anchor-url'] %>">
                 <div class="nav__contents__category"><p
-                style="border-bottom-color:<%- category['color'] %>;"
-                ><%- category['category'] %></p></div>
+                style="border-bottom-color:<%- section['color'] %>;"
+                ><%- section['name'] %></p></div>
               </a>
             </li>
           <% }); %>

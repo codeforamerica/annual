@@ -1,0 +1,104 @@
+<% include ../partials/header.html %>
+<% include ../partials/nav.html %>
+
+  <div id="js-main">
+    <section class="stories" id="">
+
+      <div class="intro" style="
+        <% if (category['color']) { %>
+          background-color: <%- category['color'] %>;
+        <% } %>
+      ">
+
+        <div class="container">
+
+          <div class="intro__content">
+            <p class="intro__content__overline">
+              <%- category['category'] %>
+            </p>
+            <h1><%- category['headline'] %></h1>
+          </div>
+
+        </div><!-- end .container -->
+      </div><!-- end .intro -->
+
+      <div class="container">
+        <% _.each(category['stories'], function(story){ %>
+          <article class="story u-small-spacing u-row">
+            <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
+            </div>
+
+            <div class="story__body u-row">
+              
+              <div class="story__body__content u-row">
+
+                <div class="story__body__content__opener">
+
+                  <div class="story__body__content__opener__box">
+
+                    <!-- Social sharing -->
+                    <div class="story__body__content__opener__share">
+                      <p class="story__body__content__opener__share--facebook">
+                        <a href="#"></a>
+                      </p>
+                      <p class="story__body__content__opener__share--twitter">
+                        <a href="#"></a>
+                      </p>
+                    </div>
+
+                    <!-- <p><%- story['category'] %></p> -->
+                    <h2><%- story['description'] %></h2>
+                  </div>
+                </div>
+
+                <div class="story__body__content__quote">
+                  <p class="story__body__content__quote__words"><%- story['quote'] %></p>
+                  <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
+                </div>
+
+                <ul class="story__body__content__metrics u-unstyled u-row">
+                  <% if (story['metric-1-number']) { %>
+                  <li class="u-row">
+                    <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-1-description'] %></p>
+                  </li>
+                  <% } %>
+                  <% if (story['metric-2-number']) { %>
+                  <li class="u-row">
+                    <p class="story__body__content__metrics__number"><%- story['metric-2-number'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-2-description'] %></p>
+                  </li>
+                  <% } %>
+                  <% if (story['metric-3-number']) { %>
+                  <li class="u-row">
+                    <p class="story__body__content__metrics__number"><%- story['metric-3-number'] %></p>
+                    <p class="story__body__content__metrics__description"><%- story['metric-3-description'] %></p>
+                  </li>
+                  <% } %>
+                </ul>
+
+                <ul class="story__body__content__links u-unstyled u-row">
+                  <li class="story__body__content__link--<%- story['link-1-type'] %>">
+                    <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
+                    <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
+                  </li>
+                  <li class="story__body__content__link--<%- story['link-2-type'] %>">
+                    <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
+                    <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
+                  </li>
+                  <li class="story__body__content__link--<%- story['link-3-type'] %>">
+                    <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
+                    <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
+                  </li>
+                </ul>
+              </div><!-- end .story__body__content -->
+            </div><!-- end .story__body -->
+          </article><!-- end .story -->
+        <% }); %>
+      </div><!-- end .container -->
+      
+    </section>
+  </div>
+
+<% include ../partials/next.html %>
+<% include ../partials/footer.html %>
