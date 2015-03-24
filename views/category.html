@@ -158,6 +158,13 @@
                     <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
                   </li>
                 </ul>
+                
+                <% if (story['photo-credit']) { %>
+                <div class="story__body__content__credit">
+                  <p>Photo by <%- story['photo-credit'] %></p>
+                </div>
+                <% } %>
+
               </div><!-- end .story__body__content -->
             </div><!-- end .story__body -->
           </article><!-- end .story -->

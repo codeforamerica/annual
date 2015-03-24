@@ -703,6 +703,9 @@ div.expand a:before {
   color: white;
   font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
 
+.stories {
+  padding-bottom: 2em; }
+
 .story {
   position: relative;
   margin-top: 4em;
@@ -915,6 +918,12 @@ div.expand a:before {
   font-style: italic;
   display: inline-block;
   margin-bottom: 0.5em; }
+
+.story__body__content__opener__box h2 {
+  font-size: 23.4px; }
+  @media screen and (max-width: 750px) {
+    .story__body__content__opener__box h2 {
+      font-size: 18px; } }
 
 .story__body__content__opener__box:after {
   content: '';
@@ -1171,6 +1180,20 @@ li.story__body__content__link--app a:before {
   @media screen and (max-width: 750px) {
     li.story__body__content__link--app a:before {
       display: none; } }
+
+.story__body__content__credit {
+  width: 100%;
+  overflow: auto;
+  padding-top: 3em; }
+  @media screen and (max-width: 750px) {
+    .story__body__content__credit {
+      padding-top: 1em; } }
+
+.story__body__content__credit p {
+  font-size: 14.4px;
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
 .opener {
   position: relative; }
