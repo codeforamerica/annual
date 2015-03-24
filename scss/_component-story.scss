@@ -223,12 +223,15 @@ $border-color: rgba(0,0,0,0.1);
   background-color: $border-color;
   height: 1px;
   bottom: 0;
-  @include span-columns(15 of 12);
-  @include shift(-1 of 12);
+  width: 5000px;
+  margin-left: -2500px;
+  display: block;
 
   @include media($medium-desktop) {
     margin-top: $padding * 2;
     position: relative;
+    width: calc(100% + 8em);
+    margin-left: -4em;
   }
 
   @include media($mobile) {
