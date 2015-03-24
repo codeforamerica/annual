@@ -1,0 +1,59 @@
+<% 
+  var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
+  var title = requested['category'];
+  var color = requested['color'];
+
+  function shadeColor(color, percent) {   
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+  }
+
+  var darkColor = shadeColor(color, -0.3);
+
+  var twitter_link,
+      facebook_link;
+%>
+
+<% include partials/header.html %>
+<% include partials/nav.html %>
+
+<div id="js-main">
+  <section class="closer" id="<% requested.category %>">
+
+    <div class="closer__header">
+      <div class="container">
+        <div class="closer__header__content">
+          <p><%- requested['category'] %></p>
+          <h1><%- requested['headline'] %></h1>
+        </div>
+
+        <div class="closer__header__actions">
+          <% _.each(data['actions'], function(action){ %>
+          <div class="closer__header__action">
+            <p><%- action['description'] %></p>
+            <p>
+            <% if (action['link-1-text'] !== "") { %>
+              <a href="<%- action['link-1-url'] %>" target="_blank"
+              onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action['unique-id'] %> 1');">
+                <%- action['link-1-text'] %>
+              </a>
+            <% } %>
+            <% if (action['link-2-text'] !== "") { %>
+              <a href="<%- action['link-2-url'] %>" target="_blank"
+              onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action['unique-id'] %> 2');">
+                <%- action['link-2-text'] %>
+              </a>
+            <% } %>
+            </p>
+          </div>
+          <% }); %>
+        </div>
+
+      </div>
+    </div>
+   
+  </section><!-- end .closer -->
+</div>
+
+<% include partials/next.html %>
+<% include partials/footer.html %>

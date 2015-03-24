@@ -107,6 +107,19 @@ app.get('/category/:id', function (req, res) {
         charts: 'partials/charts'
       }
     });
+  } else if (req.params.id == 'what-you-can-do') {
+    res.render('closer', {
+      title: 'What You Can Do',
+      type: 'closer',
+      url: req.originalUrl,
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer',
+        charts: 'partials/charts'
+      }
+    });
   } else {
     res.render('category', {
       requested: req.params.id,

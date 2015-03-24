@@ -1,0 +1,123 @@
+//
+// _component_closer.scss
+//
+// Styles for the .closer component, which holds our story cards
+//
+
+$padding: 3em;
+
+.closer {
+  position: relative;
+}
+
+// =====
+// .closer__header
+// =====
+
+.closer__header {
+  background-color: rgba(0,75,106,0.8);
+  @include background-image( linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0.6) 100%) );
+  min-height: 100vh;
+  color: white;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  @include row();
+  position: relative;
+}
+
+.closer__header:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/thanks/2014groupthanks.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.closer__header * {
+  color: white;
+  text-align: center;
+}
+
+// =====
+// .closer__header__content
+// =====
+
+.closer__header__content {
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
+
+  @include media($medium-desktop) {
+    @include span-columns(10 of 12);
+    @include shift(1 of 12);
+  }
+}
+
+.closer__header__content p {
+  font-style: italic;
+}
+
+.closer__header__content h1 {
+  font-weight: 700;
+  margin-top: 0.25em;
+}
+
+// =====
+// .closer__header__action
+// =====
+
+.closer__header__actions {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+}
+
+.closer__header__action > * {
+  margin-top: 0;
+}
+
+.closer__header__action {
+  @include span-columns(4 of 12);
+
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 1em;
+  margin-top: 0;
+
+  * + * {
+    margin-top: 1em;
+  }
+
+  @include media($medium-desktop) {
+    @include fill-parent();
+  }
+}
+
+.closer__header__action + .closer__header__action {
+  @include media($medium-desktop) {
+    margin-top: 1em;
+  }
+}
+
+.closer__header__action a {
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-family: $sans-serif;
+  display: inline-block;
+  line-height: 1.3;
+  border: 1px solid white;
+  font-weight: 700;
+
+  @include transition(all 0.3s ease-out 0s);
+}
+
+.closer__header__action a:hover {
+  background-color: white;
+  color: $blue;
+}
