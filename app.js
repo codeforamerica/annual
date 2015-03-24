@@ -47,7 +47,7 @@ app.use(express.static('public'));
 
 app.get(['/','/category/:id','/story/:id'], function(req, res, next){
   if (_.isEmpty(Report)) {
-    res.render('loading', {
+    res.render('error/loading', {
       title: 'Loading',
       partials: {
         header: 'partials/header',
