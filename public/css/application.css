@@ -401,7 +401,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  display: block;
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   opacity: 0;
@@ -433,6 +433,7 @@ body.js-menu-open #js-page {
   position: fixed;
   height: 100%; }
 body.js-menu-open #js-page:before {
+  display: block;
   opacity: 1; }
 body.js-menu-open #js-offpage {
   display: block; }
