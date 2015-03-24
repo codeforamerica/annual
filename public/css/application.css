@@ -1768,6 +1768,9 @@ a.supporters__image:hover {
   border: 1px solid white;
   font-weight: 700; }
 
+.action a + a {
+  margin-left: 10px; }
+
 .action a:hover {
   background-color: white;
   color: rgba(0, 0, 0, 0.8); }

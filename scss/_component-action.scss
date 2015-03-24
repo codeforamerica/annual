@@ -56,6 +56,12 @@
   font-weight: 700;
 }
 
+.action {
+  a + a {
+    margin-left: 10px;
+  }
+}
+
 .action a:hover {
   background-color: white;
   color: $black;

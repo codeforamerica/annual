@@ -22,7 +22,8 @@
     .story:before,
     a.story__body__content__link--header,
     .story__body__content__opener__share ul li a:before,
-    .story__body__content__opener__share p a:before {
+    .story__body__content__opener__share p a:before,
+    .action {
       background-color: <%- requested['color'] %>;
     }
   </style>
@@ -55,8 +56,15 @@
     <% });%>
 
     <div class="container">
+      <% var which_story = 0; %>
       <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
+          
+          <% which_story++ %>
+          <% if (which_story == 3) { %>
+            <% include partials/action.html %>
+          <% } %>
+
           <%
 
             twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
@@ -155,8 +163,6 @@
           </article><!-- end .story -->
         <% } %>
       <% }); %>
-
-      <% include partials/action.html %>
     </div><!-- end .container -->
     
   </section>

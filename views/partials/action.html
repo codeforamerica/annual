@@ -1,9 +1,19 @@
+<% 
+  var action;
+  action = _.sample(data['actions'], 1);
+%>
+
 <div class="action">
   <div class="action__content">
-    <p class="action__content__callto">Take Action</p>
-    <h2>Support Code for America's mission to make government work for everyone. Your donation is tax-deductible.</h2>
+    <p class="action__content__callto"><%- action[0]['header'] %></p>
+    <h2><%- action[0]['description'] %></h2>
     <p>
-      <a href="#">Donate now</a>
+    <% if (action[0]['link-1-text'] !== "") { %>
+      <a href="<%- action[0]['link-1-url'] %>" target="_blank"><%- action[0]['link-1-text'] %></a>
+    <% } %>
+    <% if (action[0]['link-2-text'] !== "") { %>
+      <a href="<%- action[0]['link-2-url'] %>" target="_blank"><%- action[0]['link-2-text'] %></a>
+    <% } %>
     </p>
   </div>
 </div>
