@@ -96,7 +96,18 @@ nav ul li.active a {
 
 // Expand button
 
-nav ul li.expand a:before {
+div.expand {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9999;
+}
+
+div.expand a:hover {
+  opacity: 0.2;
+}
+
+div.expand a:before {
   @include iconfont();
   content: "\f169";
   border: 1px solid white;
@@ -106,10 +117,8 @@ nav ul li.expand a:before {
   text-align: center;
   font-size: 1.4em;
   margin-left: 10px;
-
-  position: absolute;
-  right: 15px;
-  top: 15px;
+  color: white;
+  text-decoration: none;
 }
 
 // =====
@@ -118,25 +127,22 @@ nav ul li.expand a:before {
 // =====
 
 .nav__contents {
-  width: 100%;
+  width: 300px;
   height: 100%;
-  @include span-columns(6 of 12);
-  @include shift(3 of 12);
   margin-top: 0;
-  padding: 35px;
-  position: relative;
+  position: absolute;
+  right: 0;
 
   @include media($medium-desktop) {
-    @include span-columns(10 of 12);
-    @include shift(0 of 12);
+
   }
 
   @include media($tablet) {
-    @include span-columns(10 of 12);
+
   }
 
   @include media($mobile) {
-    padding: 20px;
+
   }
 }
 
@@ -155,17 +161,10 @@ nav ul li.expand a:before {
 
 .nav__contents a {
   text-decoration: none;
-  padding: 30px;
 }
 
 .nav__contents a:hover p {
   opacity: 0.5;
-}
-
-.nav__contents ul {
-  li + li {
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
 }
 
 .nav__contents__category p {
@@ -173,22 +172,23 @@ nav ul li.expand a:before {
   display: inline-block;
 }
 
-.nav__contents__title {
-  padding-bottom: 35px;
+.nav__contents ul li {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
 }
 
-a#js-nav-close {
+.nav__contents ul li.active {
+
+}
+
+.nav__contents ul li.active:before {
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: white;
+  display: block;
   position: absolute;
-  top: 15px;
-  right: 15px;
-  text-decoration: none;
-}
-
-a#js-nav-close:before {
-  @include iconfont();
-  content: "\f216";
-
-  text-align: right;
-  font-size: 3em;
-  color: white;
 }

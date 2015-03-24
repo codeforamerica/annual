@@ -15,7 +15,6 @@
 %>
 
 <% include partials/header.html %>
-<% include partials/nav.html %>
 
 <% if (requested['color']) { %>
   <style>
@@ -29,6 +28,7 @@
   </style>
 <% } %>
 <div id="js-main">
+  <% include partials/nav.html %>
   <section class="stories" id="{{ page.unique-id }}">
 
     <% _.each(data['categories'], function(category){ %>

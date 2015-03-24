@@ -72,7 +72,24 @@ body {
   top: 0;
   bottom: 100%;
   left: 0;
-  z-index: 1;
+  z-index: 2;
+  overflow: auto;
+  margin-top: 0;
+
+  @include transition(all 0.3s ease-in-out);
+}
+
+#js-page:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  opacity:0;
+
+  @include transition(all 0.3s ease-in-out);
 }
 
 #js-offpage {
@@ -87,7 +104,26 @@ body {
   bottom: 0;
   left: 0;
   z-index: 0;
-  display: none;
+}
+
+// When the menu is open
+
+body.js-menu-open {
+  #js-page {
+    @include transform(translateX(-300px));
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+  }
+  #js-page:before {
+    opacity: 1;
+  }
+  #js-offpage {
+    display: block;
+  }
+  div.expand a:before {
+    content: "\f217";
+  }
 }
 
 // =====

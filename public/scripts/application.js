@@ -33,32 +33,8 @@
 // =====
 
 $(document).ready(function(){
-  $('#js-nav-open').click(function(e){
+  $('#js-menu-toggle').click(function(e){
     e.preventDefault();
-    $('#js-offpage').show();
-    $('#js-header').css('position','relative');
-    $('#js-page').transition({ 
-      marginTop: '100vh',
-      duration: 500,
-      easing: 'snap',
-      complete: function(){
-        $('#js-page').hide();
-      }
-    });
-    $('#js-main').css('margin-top','0');
-  });
-  $('#js-nav-close').click(function(e){
-    e.preventDefault();
-    $('#js-page').show();
-    $('#js-page').transition({ 
-      marginTop: '0',
-      duration: 500,
-      easing: 'snap',
-      complete: function(){
-        $('#js-header').css('position','fixed');
-        $('#js-main').css('margin-top','60px');
-        $('#js-offpage').hide();
-      }
-    });
+    $('body').toggleClass('js-menu-open');
   });
 }) 
