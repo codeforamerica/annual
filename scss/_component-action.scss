@@ -1,0 +1,69 @@
+//
+// _component_action.scss
+//
+// Styles for the .action component, which holds our action cards
+//
+
+.action {
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+  background-color: white;
+  box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.06);
+  overflow: hidden;
+  background-color: $gray;
+  padding: $padding*1.5;
+  margin-bottom: $padding;
+
+  * + * {
+    margin-top: 0.5em;
+  }
+
+  @include media($medium-desktop) {
+    padding: $padding;
+  }
+  @include media($tablet) {
+    padding: $padding * 0.75;
+  }
+
+  @include media($mobile) {
+    @include span-columns(11 of 12);
+    @include shift(0.5 of 12);
+    margin-bottom: 0;
+    margin-top: 3em;
+  }
+}
+
+.action * {
+  color: white;
+}
+
+.action__content__callto {
+  font-style: italic;
+}
+
+.action a {
+  text-decoration: none;
+
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-family: $sans-serif;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1.3;
+  border: 1px solid white;
+  font-weight: 700;
+}
+
+.action {
+  a + a {
+    margin-left: 10px;
+  }
+}
+
+.action a:hover {
+  background-color: white;
+  color: $black;
+}

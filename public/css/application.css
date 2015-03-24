@@ -716,7 +716,7 @@ div.expand a:before {
   padding-left: 4em;
   padding-right: 4em;
   background-color: white;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.06);
   overflow: hidden; }
   .story:last-child {
     margin-right: 0; }
@@ -1714,5 +1714,66 @@ a.supporters__image:hover {
 
 .financials__breakdown__key ul li#fundraising p span {
   background-color: #aa1c3a; }
+
+.action {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 82.75862%;
+  margin-left: 8.62069%;
+  background-color: white;
+  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  background-color: #363537;
+  padding: 4.5em;
+  margin-bottom: 3em; }
+  .action:last-child {
+    margin-right: 0; }
+  .action * + * {
+    margin-top: 0.5em; }
+  @media screen and (max-width: 1100px) {
+    .action {
+      padding: 3em; } }
+  @media screen and (max-width: 750px) {
+    .action {
+      padding: 2.25em; } }
+  @media screen and (max-width: 480px) {
+    .action {
+      float: left;
+      display: block;
+      margin-right: 3.44828%;
+      width: 91.37931%;
+      margin-left: 4.31034%;
+      margin-bottom: 0;
+      margin-top: 3em; }
+      .action:last-child {
+        margin-right: 0; } }
+
+.action * {
+  color: white; }
+
+.action__content__callto {
+  font-style: italic; }
+
+.action a {
+  text-decoration: none;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1.3;
+  border: 1px solid white;
+  font-weight: 700; }
+
+.action a + a {
+  margin-left: 10px; }
+
+.action a:hover {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8); }
 
 /*# sourceMappingURL=application.css.map */

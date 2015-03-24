@@ -20,7 +20,7 @@ $border-color: rgba(0,0,0,0.1);
   padding-left: $padding * 2;
   padding-right: $padding * 2;
   background-color: white;
-  box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.02);
+  box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.06);
   overflow: hidden;
 
   @include media($medium-desktop) {
