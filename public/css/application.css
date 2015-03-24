@@ -593,6 +593,9 @@ div.expand {
 div.expand a:hover {
   opacity: 0.2; }
 
+div.expand a:active {
+  opacity: 1; }
+
 div.expand a:before {
   font-family: "foundation-icons";
   font-style: normal;
