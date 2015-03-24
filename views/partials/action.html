@@ -9,10 +9,16 @@
     <h2><%- action[0]['description'] %></h2>
     <p>
     <% if (action[0]['link-1-text'] !== "") { %>
-      <a href="<%- action[0]['link-1-url'] %>" target="_blank"><%- action[0]['link-1-text'] %></a>
+      <a href="<%- action[0]['link-1-url'] %>" target="_blank"
+      onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action[0]['unique-id'] %> 1');">
+        <%- action[0]['link-1-text'] %>
+      </a>
     <% } %>
     <% if (action[0]['link-2-text'] !== "") { %>
-      <a href="<%- action[0]['link-2-url'] %>" target="_blank"><%- action[0]['link-2-text'] %></a>
+      <a href="<%- action[0]['link-2-url'] %>" target="_blank"
+      onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action[0]['unique-id'] %> 2');">
+        <%- action[0]['link-2-text'] %>
+      </a>
     <% } %>
     </p>
   </div>
