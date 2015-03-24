@@ -12,7 +12,7 @@
   overflow: hidden;
   background-color: $gray;
   padding: $padding*1.5;
-  margin-bottom: $padding * 2;
+  margin-bottom: $padding;
 
   * + * {
     margin-top: 0.5em;
@@ -28,7 +28,8 @@
   @include media($mobile) {
     @include span-columns(11 of 12);
     @include shift(0.5 of 12);
-    margin-bottom: $padding;
+    margin-bottom: 0;
+    margin-top: 3em;
   }
 }
 

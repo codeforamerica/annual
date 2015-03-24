@@ -1726,7 +1726,7 @@ a.supporters__image:hover {
   overflow: hidden;
   background-color: #363537;
   padding: 4.5em;
-  margin-bottom: 6em; }
+  margin-bottom: 3em; }
   .action:last-child {
     margin-right: 0; }
   .action * + * {
@@ -1744,7 +1744,8 @@ a.supporters__image:hover {
       margin-right: 3.44828%;
       width: 91.37931%;
       margin-left: 4.31034%;
-      margin-bottom: 3em; }
+      margin-bottom: 0;
+      margin-top: 3em; }
       .action:last-child {
         margin-right: 0; } }
 
