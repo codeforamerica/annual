@@ -420,7 +420,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 0; }
+  z-index: 0;
+  display: none; }
 
 body.js-menu-open #js-page {
   -webkit-transform: translateX(-300px);
