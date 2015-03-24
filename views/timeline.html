@@ -26,7 +26,7 @@
 <% } %>
 
 <div id="js-main">
-  <section class="stories" id="{{ page.unique-id }}">
+  <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
 
     <% _.each(data['categories'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
