@@ -1240,16 +1240,18 @@ li.story__body__content__link--app a:before {
   margin-top: 0.25em; }
 
 .opener__image {
-  width: 100%; }
+  width: 100%;
+  margin-top: -120px; }
+  @media screen and (max-width: 480px) {
+    .opener__image {
+      margin-top: -80px; } }
 
 .opener__image img {
   margin: 0 auto;
-  margin-top: -150px;
-  width: 50%;
+  width: 55%;
   display: block; }
   @media screen and (max-width: 750px) {
     .opener__image img {
-      margin-top: -120px;
       width: 80%; } }
 
 .opener__body {
