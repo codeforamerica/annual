@@ -54,10 +54,11 @@
     
     <div class="container">
       <div class="supporters">
+
         <h2>Major Benefactors</h2>
-        <img src="http://www.codeforamerica.org/media/images/donate/knight_logo.jpg" style="padding: 5px">
-        <img src="http://www.codeforamerica.org/media/images/donate/on_logo.jpg"  style="padding: 5px">
-        <img src="http://www.codeforamerica.org/media/images/donate/google_logo.jpg"  style="padding: 5px">
+        <a class="supporters__image" href="http://www.knightfoundation.org/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/knight_logo.jpg"></a>
+        <a class="supporters__image" href="https://www.omidyar.com/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/on_logo.jpg"></a>
+        <a class="supporters__image" href="http://www.google.org/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/google_logo.jpg"></a>
         <%
           var orgs = _.groupBy(data['supporters'], 'org-type');
         %>

@@ -1594,24 +1594,26 @@ p.next__content__headline span {
   width: 100%; }
 
 .supporters p {
-  line-height: 1.7; }
+  line-height: 1.5; }
 .supporters h2 {
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0.5em; }
 
 .supporters__list p {
+  margin-top: 0;
   float: left;
-  width: 30%;
-  margin-right: 3%;
-  height: 2.5em; }
+  width: 46%;
+  margin-right: 2%; }
   @media screen and (max-width: 750px) {
     .supporters__list p {
-      width: 46%;
-      margin-right: 2%; } }
-  @media screen and (max-width: 480px) {
-    .supporters__list p {
       width: 100%;
-      margin-right: 0;
-      height: auto; } }
+      margin-right: 0; } }
+
+.supporters__image {
+  padding: 5px; }
+
+a.supporters__image:hover {
+  opacity: 0.2; }
 
 .financials {
   float: left;
