@@ -41,6 +41,10 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
+// =====
+// Routes
+// =====
+
 app.get(['/','/category/:id','/story/:id'], function(req, res, next){
   if (_.isEmpty(Report)) {
     res.render('loading', {
@@ -154,6 +158,22 @@ app.get('/update', function (req, res) {
 
 app.get('/data', function (req, res) {
   res.json(Report);
+});
+
+// =====
+// Error handling
+// =====
+
+// Catch 404
+app.use(function(req, res, next) {
+  res.status(404).render('error/404', {
+   url: req.originalUrl,
+  });
+});
+
+// Catch 500
+app.use(function(error, req, res, next) {
+  res.status(500).render('error/500', {});
 });
 
 app.listen(process.env.PORT || 3000);
