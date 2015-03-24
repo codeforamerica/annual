@@ -916,6 +916,12 @@ div.expand a:before {
   display: inline-block;
   margin-bottom: 0.5em; }
 
+.story__body__content__opener__box h2 {
+  font-size: 23.4px; }
+  @media screen and (max-width: 750px) {
+    .story__body__content__opener__box h2 {
+      font-size: 18px; } }
+
 .story__body__content__opener__box:after {
   content: '';
   position: absolute;
