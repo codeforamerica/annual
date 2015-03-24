@@ -25,6 +25,8 @@ $third-color: $green;
 $serif: "abril-text","Sentinel",serif;
 $sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 
+$padding: 2em;
+
 // =====
 // Imports
 // =====
@@ -283,3 +285,9 @@ p {
 // =====
 
 @import 'component-financials';
+
+// =====
+// Import action component
+// =====
+
+@import 'component-action';
