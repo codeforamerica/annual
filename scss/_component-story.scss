@@ -7,6 +7,10 @@
 $padding: 2em;
 $border-color: rgba(0,0,0,0.1);
 
+.stories {
+  padding-bottom: $padding;
+}
+
 // Basic layout and color bar across the top
 
 .story {
@@ -421,4 +425,25 @@ li.story__body__content__link--app a:before {
   content: "\f179";
   margin-right: 10px;
   @include media($tablet) { display:none; };
+}
+
+// =====
+// .story__body__content__credit
+// =====
+
+.story__body__content__credit {
+  @include fill-parent();
+  overflow: auto;
+  padding-top: 3em;
+
+  @include media($tablet) {
+    padding-top: 1em;    
+  }
+}
+
+.story__body__content__credit p {
+  font-size: $base-size * 0.8;
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.2);
 }
