@@ -17,16 +17,16 @@ if (nextIndex <= indexLength) {
 <% if (_.isNumber(nextIndex)){ %>
   <% var nextCategory = data['categories'][nextIndex] %>
   <div class="next">
-    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="
-    <% if (nextCategory['color']) { %>
-      background-color: <%- nextCategory['color'] %>;
-    <% } %>
-    ">
+    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="">
       <div class="container">
           <div class="next__content">
             <p class="next__content__read">Continue Reading:</p>
             <p class="next__content__overline"><%- nextCategory['category'] %></p>
-            <p class="next__content__headline"><span><%- nextCategory['headline'] %></span></p>
+            <p class="next__content__headline">
+              <span style="<% if (nextCategory['color']) { %> border-bottom-color: <%- nextCategory['color'] %>; <% } %>">
+                <%- nextCategory['headline'] %>
+              </span>
+            </p>
           </div><!-- end .next__cpntent -->
       </div><!-- end .container -->
     </a>

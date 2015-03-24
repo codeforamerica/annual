@@ -1380,7 +1380,7 @@ a.opener__body__contents__section {
         margin-right: 0; } }
 
 a.next__link {
-  background-color: #004b6a;
+  background-color: #504e51;
   padding-top: 4em;
   padding-bottom: 4em;
   display: block;
@@ -1449,7 +1449,7 @@ p.next__content__headline {
       font-size: 18px; } }
 
 p.next__content__headline span {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid white;
   padding-bottom: 4px; }
 
 .timeline {

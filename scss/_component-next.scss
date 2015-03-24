@@ -29,7 +29,7 @@
 }
 
 a.next__link {
-  background-color: $blue;
+  background-color: lighten($gray,10);
   padding-top: 4em;
   padding-bottom: 4em;
 
@@ -110,6 +110,6 @@ p.next__content__headline {
 }
 
 p.next__content__headline span {
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 3px solid white;
   padding-bottom: 4px;
 }
