@@ -156,10 +156,6 @@ app.get('/update', function (req, res) {
   res.send('Updating data...');
 });
 
-app.get('/data', function (req, res) {
-  res.json(Report);
-});
-
 // =====
 // Error handling
 // =====
