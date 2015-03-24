@@ -60,16 +60,19 @@ $padding: 3em;
 
 .opener__image {
   width: 100%;
+  margin-top: -120px;
+
+  @include media($mobile) {
+    margin-top: -80px;
+  }
 }
 
 .opener__image img {
   margin: 0 auto;
-  margin-top: -150px;
-  width: 50%;
+  width: 55%;
   display: block;
 
   @include media($tablet) {
-    margin-top: -120px;
     width: 80%;
   }
 }
