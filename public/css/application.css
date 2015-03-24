@@ -1609,6 +1609,12 @@ p.next__content__headline span {
       width: 100%;
       margin-right: 0; } }
 
+.supporters__image {
+  padding: 5px; }
+
+a.supporters__image:hover {
+  opacity: 0.2; }
+
 .financials {
   float: left;
   display: block;
