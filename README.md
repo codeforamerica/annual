@@ -32,11 +32,12 @@ This is currently built using the following technologies:
 git clone https://github.com/codeforamerica/annual.git
 cd annual
 npm install
-node getData.js
 node app.js
 ```
 
-Then open your web browser of choice and head over to the url printed that's printed out.
+Then open your web browser of choice and head over to [http://localhost:3000](http://localhost:3000/).
+
+To start pulling from a different Google Sheet, you'll need to edit `getData.js` and change the Google Sheet URL. More to come on this later.
 
 # In the future
 
