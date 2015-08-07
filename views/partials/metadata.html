@@ -22,40 +22,38 @@
     meta_image = _.findWhere(data['categories'], requested['unique-id']);
     meta_image = _.findWhere(data['stories'], meta_image['category']);
     meta_image = meta_image['image-link'];
-    meta_image = 'http://2014.codeforamerica.org' + meta_image;
+    meta_image = 'http://beta.afhnetwork.org' + meta_image;
   }
   else 
   {
-    meta_image = 'http://2014.codeforamerica.org/assets/images/defaults/swag.jpg';
+    meta_image = 'http://beta.afhnetwork.org/assets/images/defaults/default.jpg';
   }
 
 %>
 
 <!-- SEO -->
-<meta name="author" content="Code for America">
+<meta name="author" content="AFH Chapter Network">
 <meta name="description" content="<%- meta_description %>">
-<link rel="canonical" href="http://2014.codeforamerica.org<%- url %>">
+<link rel="canonical" href="http://beta.afhnetwork.org<%- url %>">
 
 <!-- Social: Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@codeforamerica">
-<meta name="twitter:creator" content="Code for America">
-<meta name="twitter:title" content="<%- title %> | Code for America 2014 Annual Report">
+<meta name="twitter:site" content="@afh_chapters">
+<meta name="twitter:creator" content="AFH Chapter Network">
+<meta name="twitter:title" content="<%- title %> | AFH Chapter Network">
 <meta name="twitter:description" content="<%- meta_description %>">
 <meta name="twitter:image:src" content="<%- meta_image %>">
 
 <!-- Social: Facebook / Open Graph -->
-<meta property="og:url" content="http://2014.codeforamerica.org<%- url %>">
+<meta property="og:url" content="http://beta.afhnetwork.org<%- url %>">
 <meta property="og:this.type" content="article">
-<meta property="og:title" content="<%- title %> | Code for America 2014 Annual Report">
+<meta property="og:title" content="<%- title %> | AFH Chapter Network">
 <meta property="og:image" content="<%- meta_image %>">
 <meta property="og:description" content="<%- meta_description %>">
-<meta property="og:site_name" content="Code for America | 2014 Annual Report">
-<meta property="article:publisher" content="https://www.facebook.com/codeforamerica">
+<meta property="og:site_name" content="AFH Chapter Network">
+<meta property="article:publisher" content="https://www.facebook.com/afhnetwork">
 
 <!-- Social: Google+ / Schema.org  -->
-<link rel="author" href="https://plus.google.com/+codeforamerica/posts"/>
-<link rel="publisher" href="https://plus.google.com/+codeforamerica/about"/>
-<meta itemprop="name" content="<%- title %> | Code for America 2014 Annual Report">
+<meta itemprop="name" content="<%- title %> | AFH Chapter Network">
 <meta itemprop="description" content="<%- meta_description %>">
 <meta itemprop="image" content="<%- meta_image %>">
