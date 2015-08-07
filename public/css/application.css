@@ -1908,4 +1908,53 @@ a.supporters__image:hover {
   background-color: white;
   color: #004b6a; }
 
-/*# sourceMappingURL=application.css.map */
+.header-share-icons {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+  clear: none;
+  margin-bottom: 2.5em; }
+
+.header-share-icons p {
+  display: inline-block;
+  margin-right: 10px; }
+
+.header-share-icons p a {
+  text-decoration: none;
+  -webkit-transition: opacity 0.08s ease-in 0s;
+  -moz-transition: opacity 0.08s ease-in 0s;
+  transition: opacity 0.08s ease-in 0s;
+  color: white !important; }
+
+.header-share-icons p a strong {
+  color: white !important; }
+
+.header-share-icons p a:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  background-color: white;
+  border-radius: 100%;
+  color: #004b6a;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 10px; }
+
+.header-share-icons p a:hover {
+  opacity: 0.8; }
+
+.header-share-icons--facebook a:before {
+  content: "\f1e4"; }
+
+.header-share-icons--twitter a:before {
+  content: "\f1c4"; }

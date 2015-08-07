@@ -179,9 +179,9 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   font-size: $base-size * 2.5;
-  
+
   @include media($medium-desktop) {
-    font-size: $base-size * 2;  
+    font-size: $base-size * 2;
   }
   @include media($tablet) {
     font-size: $base-size * 1.9;
@@ -198,7 +198,7 @@ h2 {
   font-size: $base-size * 1.5;
 
   @include media($tablet) {
-    font-size: $base-size * 1;    
+    font-size: $base-size * 1;
   }
 }
 
@@ -297,3 +297,58 @@ p {
 // =====
 
 @import 'component-closer';
+
+// =====
+// CUSTOM: Changes for Garrett's AFH Network
+// =====
+
+.header-share-icons {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+  clear: none;
+  margin-bottom: 2.5em;
+}
+
+.header-share-icons p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header-share-icons p a {
+  text-decoration: none;
+  @include transition(opacity 0.08s ease-in 0s);
+  color: white !important;
+}
+
+.header-share-icons p a strong {
+  color: white !important;
+}
+
+.header-share-icons p a:before {
+  @include iconfont();
+
+  background-color: white;
+  border-radius: 100%;
+  color: $blue;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.header-share-icons p a:hover {
+  opacity: 0.8;
+}
+
+.header-share-icons--facebook a:before {
+  content: "\f1e4";
+}
+
+.header-share-icons--twitter a:before {
+  content: "\f1c4";
+}

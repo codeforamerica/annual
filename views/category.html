@@ -1,9 +1,9 @@
-<% 
+<%
   var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
 
-  function shadeColor(color, percent) {   
+  function shadeColor(color, percent) {
     var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
   }
@@ -18,13 +18,16 @@
 
 <% if (requested['color']) { %>
   <style>
-    ul.story__body__content__links li a:before, 
+    ul.story__body__content__links li a:before,
     .story:before,
     a.story__body__content__link--header,
     .story__body__content__opener__share ul li a:before,
     .story__body__content__opener__share p a:before,
     .action {
       background-color: <%- requested['color'] %>;
+    }
+    .header-share-icons p a:before {
+      color: <%- requested['color'] %>;
     }
   </style>
 <% } %>
@@ -47,7 +50,21 @@
                 <%- category['category'] %>
               </p>
               <h1><%- category['headline'] %></h1>
-              <p><%- category['description'] %></p> 
+              <!--<p><%- category['description'] %></p>-->
+              <!-- CUSTOM FOR GARRETT'S AFH -->
+              <div class="header-share-icons">
+                <% if (category['twitter']) { %>
+                <p class="header-share-icons--facebook">
+                  <a href="https://twitter.com/<%- category['twitter'] %>" target="_blank">Follow <strong>@<%- category['twitter'] %></strong> on Twitter</a>
+                </p>
+                <% } %>
+                <% if (category['facebook']) { %>
+                <p class="header-share-icons--twitter">
+                  <a href="<%- category['facebook'] %>" target="_blank">Follow on Facebook</a>
+                </p>
+                <% } %>
+              </div>
+              <!-- END CUSTOM FOR GARRETT'S AFH -->
             </div>
 
           </div><!-- end .container -->
@@ -59,7 +76,7 @@
       <% var which_story = 0; %>
       <% _.each(data['stories'], function(story){ %>
         <% if (story['category'] == requested['category']) { %>
-          
+
           <% which_story++ %>
           <% if (which_story == 3) { %>
             <% include partials/action.html %>
@@ -96,7 +113,7 @@
             </div>
 
             <div class="story__body u-row">
-              
+
               <div class="story__body__content u-row">
 
                 <div class="story__body__content__opener">
@@ -158,7 +175,7 @@
                     <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
                   </li>
                 </ul>
-                
+
                 <% if (story['photo-credit']) { %>
                 <div class="story__body__content__credit">
                   <p>Photo by <%- story['photo-credit'] %></p>
@@ -171,7 +188,7 @@
         <% } %>
       <% }); %>
     </div><!-- end .container -->
-    
+
   </section>
 </div>
 
