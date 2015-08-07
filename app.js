@@ -74,7 +74,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
-  if (req.params.id == '2014-at-a-glance') {
+  if (req.params.id == '2015-activity') {
     res.render('timeline', {
       title: 'Timeline',
       type: 'timeline',
