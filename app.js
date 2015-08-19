@@ -151,6 +151,19 @@ app.get('/story/:id', function (req, res) {
   });
 });
 
+// Get a random story, refresh it every X seconds
+app.get('/random', function (req, res) {
+  res.render('random', {
+    type: 'random',
+    url: req.originalUrl,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
 app.get('/update', function (req, res) {
   checkData();
   res.send('Updating data...');

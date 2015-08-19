@@ -1,0 +1,151 @@
+<%
+  var story = _.sample(data['stories']);
+  var title = story['description'];
+  var requested = "";
+%>
+
+<% include partials/header.html %>
+
+<!-- Refresh every 120 (2 minutes) seconds -->
+<meta http-equiv="refresh" content="120">
+
+<style>
+  ul.story__body__content__links li a:before,
+  .story:before,
+  a.story__body__content__link--header,
+  .story__body__content__opener__share ul li a:before,
+  .story__body__content__opener__share p a:before,
+  .action {
+    background-color: #aa1c3a;
+  }
+
+  /* Some custom styles for random.html, because it's meant to be served on a
+   * rotating monitor.
+  **/
+  .story {
+    margin-top: 1em;
+    width: 92%;
+    margin-left: 4%;
+    padding: 0 2em 2em;
+  }
+  .story__body__content__quote,
+  .story__body__content__metrics {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  #js-page {
+    background-color: #F8F8F8;
+  }
+</style>
+
+<div class="container">
+
+      <%
+
+        twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
+          + '&url='
+          + 'http%3A%2F%2F2014.codeforamerica.org'
+          + url.replace(/\//g, '%2F')
+          + '%23'
+          + story['unique-id']
+          + '&text='
+          + encodeURIComponent(story['share-text']);
+
+        facebook_link = 'https://www.facebook.com/dialog/feed?'
+          + '&display=page'
+          + '&app_id=1412610745719231'
+          + '&link='
+          + 'http%3A%2F%2F2014.codeforamerica.org'
+          + url.replace(/\//g, '%2F')
+          + '%23'
+          + story['unique-id']
+          + '&caption='
+          + encodeURIComponent(story['share-text'])
+          + '&redirect_uri='
+          + 'http%3A%2F%2F2014.codeforamerica.org'
+          + url.replace(/\//g, '%2F');
+
+      %>
+      <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
+        <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
+        </div>
+
+        <div class="story__body u-row">
+
+          <div class="story__body__content u-row">
+
+            <div class="story__body__content__opener">
+
+              <div class="story__body__content__opener__box">
+
+                <!-- Social sharing -->
+                <div class="story__body__content__opener__share">
+                  <p class="story__body__content__opener__share--facebook">
+                    <a href="<%- twitter_link %>" target="_blank"></a>
+                  </p>
+                  <p class="story__body__content__opener__share--twitter">
+                    <a href="<%- facebook_link %>" target="_blank"></a>
+                  </p>
+                </div>
+
+                <!-- <p><%- story['category'] %></p> -->
+                <h2><%- story['description'] %></h2>
+              </div>
+            </div>
+
+            <div class="story__body__content__quote">
+              <p class="story__body__content__quote__words"><%- story['quote'] %></p>
+              <p class="story__body__content__quote__credit">&mdash; <%- story['quote-attribution'] %></p>
+            </div>
+
+            <ul class="story__body__content__metrics u-unstyled u-row">
+              <% if (story['metric-1-number']) { %>
+              <li class="u-row">
+                <p class="story__body__content__metrics__number"><%- story['metric-1-number'] %></p>
+                <p class="story__body__content__metrics__description"><%- story['metric-1-description'] %></p>
+              </li>
+              <% } %>
+              <% if (story['metric-2-number']) { %>
+              <li class="u-row">
+                <p class="story__body__content__metrics__number"><%- story['metric-2-number'] %></p>
+                <p class="story__body__content__metrics__description"><%- story['metric-2-description'] %></p>
+              </li>
+              <% } %>
+              <% if (story['metric-3-number']) { %>
+              <li class="u-row">
+                <p class="story__body__content__metrics__number"><%- story['metric-3-number'] %></p>
+                <p class="story__body__content__metrics__description"><%- story['metric-3-description'] %></p>
+              </li>
+              <% } %>
+            </ul>
+
+            <!--
+            <ul class="story__body__content__links u-unstyled u-row">
+              <li class="story__body__content__link--<%- story['link-1-type'] %>">
+                <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
+                <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
+              </li>
+              <li class="story__body__content__link--<%- story['link-2-type'] %>">
+                <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
+                <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
+              </li>
+              <li class="story__body__content__link--<%- story['link-3-type'] %>">
+                <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
+                <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
+              </li>
+            </ul>
+            -->
+
+            <% if (story['photo-credit']) { %>
+            <div class="story__body__content__credit">
+              <p>Photo by <%- story['photo-credit'] %></p>
+            </div>
+            <% } %>
+
+          </div><!-- end .story__body__content -->
+        </div><!-- end .story__body -->
+      </article><!-- end .story -->
+
+</div><!-- end .container -->
+
+<% include partials/footer.html %>
