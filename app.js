@@ -86,10 +86,10 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  /*} else if (req.params.id == 'supporters') {
-    res.render('supporters', {
-      title: 'Supporters',
-      type: 'supporters',
+  } else if (req.params.id == 'resources') {
+    res.render('resources', {
+      title: 'Resources',
+      type: 'resources',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
@@ -98,7 +98,7 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'financials') {
+  /*} else if (req.params.id == 'financials') {
     res.render('financials', {
       title: 'Financials',
       type: 'financials',
