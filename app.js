@@ -62,7 +62,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Introduction',
+    title: 'Introductions', //what does this do?
     type: 'introduction',
     url: req.originalUrl,
     data: Report,
@@ -86,7 +86,7 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'supporters') {
+  /*} else if (req.params.id == 'supporters') {
     res.render('supporters', {
       title: 'Supporters',
       type: 'supporters',
@@ -123,9 +123,9 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer',
         charts: 'partials/charts'
       }
-    });
+    });*/
   } else {
-    res.render('category', {
+    res.render('category', {    // categories are the individual chapter pages
       requested: req.params.id,
       type: 'category',
       url: req.originalUrl,
