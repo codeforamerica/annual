@@ -62,8 +62,8 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Introductions', //what does this do?
-    type: 'introduction',
+    title: 'Home', //what does this do?
+    type: 'home',
     url: req.originalUrl,
     data: Report,
     partials: {

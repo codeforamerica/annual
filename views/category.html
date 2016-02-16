@@ -1,3 +1,5 @@
+<!-- this template is the pages for all the chapters -->
+
 <%
   var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
   var title = requested['category'];
@@ -15,6 +17,7 @@
 %>
 
 <% include partials/header.html %>
+
 
 <% if (requested['color']) { %>
   <style>
@@ -51,6 +54,8 @@
               </p>
               <h1><%- category['headline'] %></h1>
               <!--<p><%- category['description'] %></p>-->
+              
+              
               <!-- CUSTOM FOR GARRETT'S AFH -->
               <div class="header-share-icons">
                 <% if (category['twitter']) { %>
