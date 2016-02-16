@@ -75,9 +75,9 @@ app.get('/', function(req, res){
 
 app.get('/category/:id', function (req, res) {
   if (req.params.id == '2015-activity') {
-    res.render('timeline', {
-      title: 'Timeline',
-      type: 'timeline',
+    res.render('people', {
+      title: 'People',
+      type: 'people',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
