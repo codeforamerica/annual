@@ -22,10 +22,34 @@ $primary-color: $red;
 $secondary-color: $blue;
 $third-color: $green;
 
-$serif: "abril-text","Sentinel",serif;
-$sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
 
 $padding: 2em;
+
+// =====
+// Fonts
+// =====
+
+@font-face {
+  font-family: 'Flama';
+  src: url('/assets/fonts/Flama/Flama-Basic.otf'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/Flama/Flama-Basic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url("/assets/fonts/Flama/Flama-Basic.otf") format("opentype");
+       
+  font-family: 'Flama-Bold';
+  src: url('/assets/fonts/Flama/Flama-Bold.otf'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/Flama/Flama-Bold.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url("/assets/fonts/Flama/Flama-Bold.otf") format("opentype");
+       
+  font-family: 'Flama-Italic';
+  src: url('/assets/fonts/Flama/Flama-BasicItalic.otf'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/Flama/Flama-BasicItalic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url("/assets/fonts/Flama/Flama-BasicItalic.otf") format("opentype");
+       
+}
+
+
+$serif: "Flama", serif;
+$sans-serif: "Flama", Helvetica,sans-serif;
 
 // =====
 // Imports
@@ -222,6 +246,17 @@ p {
     font-size: $base-size * 0.8;
     line-height: 2;
   }
+}
+
+.bold {
+  
+  font-family:'Flama-Bold';
+  
+}
+
+.italic {
+  
+  font-family:'Flama-Italic';
 }
 
 // =====

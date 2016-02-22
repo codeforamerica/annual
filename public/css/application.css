@@ -1,4 +1,17 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Flama';
+  src: url("/assets/fonts/Flama/Flama-Basic.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-Basic.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-Basic.otf") format("opentype");
+  font-family: 'Flama-Bold';
+  src: url("/assets/fonts/Flama/Flama-Bold.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-Bold.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-Bold.otf") format("opentype");
+  font-family: 'Flama-Italic';
+  src: url("/assets/fonts/Flama/Flama-BasicItalic.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-BasicItalic.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-BasicItalic.otf") format("opentype"); }
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -462,7 +475,7 @@ body.js-menu-open div.expand a:before {
   margin-top: 60px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8); }
@@ -493,7 +506,7 @@ h3 {
   line-height: 1.8; }
 
 p {
-  font-family: "abril-text", "Sentinel", serif;
+  font-family: "Flama", serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
@@ -506,6 +519,12 @@ p {
     p {
       font-size: 14.4px;
       line-height: 2; } }
+
+.bold {
+  font-family: 'Flama-Bold'; }
+
+.italic {
+  font-family: 'Flama-Italic'; }
 
 .u-unstyled {
   list-style-type: none; }
@@ -521,7 +540,7 @@ p {
     display: table; }
 
 header {
-  font-family: "abril-text", "Sentinel", serif;
+  font-family: "Flama", serif;
   overflow: hidden;
   width: 100%;
   position: fixed;
@@ -628,11 +647,11 @@ div.expand a:before {
 
 .nav__contents * {
   color: white;
-  font-family: "abril-text", "Sentinel", serif; }
+  font-family: "Flama", serif; }
 .nav__contents * + * {
   margin-top: 0; }
 .nav__contents p {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .nav__contents a {
   text-decoration: none; }
@@ -701,7 +720,7 @@ div.expand a:before {
 
 .stories--opener .intro__description p {
   color: white;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .stories {
   padding-bottom: 2em; }
@@ -1039,7 +1058,7 @@ ul.story__body__content__metrics li + li {
         margin-right: 0; } }
 
 .story__body__content__metrics__description {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   float: left;
   display: block;
   margin-right: 3.44828%;
@@ -1085,7 +1104,7 @@ a.story__body__content__link--header {
   background-color: #004b6a;
   color: white;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   margin-top: 1em;
   display: inline-block;
   line-height: 1.3;
@@ -1234,7 +1253,7 @@ li.story__body__content__link--app a:before {
         margin-right: 0; } }
 
 .opener__header__content p {
-  font-style: italic; }
+  font-family: "Flama-Italic"; }
 
 .opener__header__content h1 {
   margin-top: 0.25em; }
@@ -1449,7 +1468,7 @@ a.next__link:before {
 
 p.next__content__read {
   text-transform: uppercase;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   letter-spacing: 4px;
   font-size: 14.4px;
   opacity: 0.8; }
@@ -1458,7 +1477,7 @@ p.next__content__overline {
   font-style: italic; }
 
 p.next__content__headline {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   font-size: 27px;
   margin-top: 0.5em; }
   @media screen and (max-width: 1100px) {
@@ -1671,7 +1690,7 @@ a.supporters__image:hover {
 
 .financials__header__total {
   font-size: 90px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   font-weight: 200;
   color: #004b6a;
   margin-top: 0; }
@@ -1710,10 +1729,10 @@ a.supporters__image:hover {
       margin-left: 0; } }
 
 .financials__breakdown__key ul li {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .financials__breakdown__key ul li p {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   font-size: 27px; }
   @media screen and (max-width: 480px) {
     .financials__breakdown__key ul li p {
@@ -1785,7 +1804,7 @@ a.supporters__image:hover {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   margin-top: 1em;
   display: inline-block;
   line-height: 1.3;
@@ -1895,7 +1914,7 @@ a.supporters__image:hover {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   display: inline-block;
   line-height: 1.3;
   border: 1px solid white;
@@ -1958,3 +1977,5 @@ a.supporters__image:hover {
 
 .header-share-icons--twitter a:before {
   content: "\f1c4"; }
+
+/*# sourceMappingURL=application.css.map */
