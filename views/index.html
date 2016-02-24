@@ -43,24 +43,22 @@
           
         </div>
         
+        <ul class="u-unstyled">
+          
+            
+          <% _.each(data['categories'], function(category){ %>
+        
+            <li>
+              <p><a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>"><%- category['category'] %> </a>located at: <%- category['coordinates'] %>
+        <% }); %></p>
+            </li>
+            
+          </%>
+        
+        </ul>
+         
       </div>
       
-      <div class="opener__body__contents">
-        <ul class="u-unstyled">
-          <li><p><strong>Find a Local Chapter:</strong></p></li>
-          <% _.each(data['categories'], function(category){ %>
-            <li class="">
-              <p>
-                <a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>;">
-                  
-                  <%- category['category'] %>
-                </a>
-              </p>
-            </li>
-          <% }); %>
-      </ul>
-        </ul>
-      </div>
     </div>
    
   </section><!-- end .opener -->
