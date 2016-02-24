@@ -14,8 +14,10 @@ $red: #cf1b41;
 $green: #3e5641;
 $gray: #363537;
 $blue: #004b6a;
+$orange: #e16941;
 
-$background-tint: rgba(0,0,0,0.04);
+
+$background-tint: #ddd;
 $dark-tint: $gray;
 $text-color: $black;
 $primary-color: $red;
@@ -84,6 +86,7 @@ $sans-serif: "Flama", Helvetica,sans-serif;
 
 body {
   background-color: lighten(gray,60);
+  font-size:16px; // 1 em
 }
 
 // =====
@@ -167,7 +170,7 @@ body.js-menu-open {
 
 * + * {
   // The lobotomized owl. Hoo, hoo.
-  margin-top: 1.5em;
+ // margin-top: 1.5em;
 }
 
 .u-small-spacing {
@@ -192,7 +195,7 @@ body.js-menu-open {
 // Base typography
 // =====
 
-$base-size: 18px;
+$base-size: 16px;
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $sans-serif;
@@ -202,7 +205,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: $base-size * 2.5;
+  
+  font-size: 2em;
 
   @include media($medium-desktop) {
     font-size: $base-size * 2;
@@ -248,6 +252,7 @@ p {
   }
 }
 
+strong,
 .bold {
   
   font-family:'Flama-Bold';
@@ -337,6 +342,13 @@ p {
 // CUSTOM: Changes for Garrett's AFH Network
 // =====
 
+#logo {
+  
+  width:500px;
+  height:auto;
+  
+}
+
 .header-share-icons {
   position: relative;
   display: block;
@@ -386,4 +398,50 @@ p {
 
 .header-share-icons--twitter a:before {
   content: "\f1c4";
+}
+
+.first {
+  
+  
+}
+.cta {
+  
+  display:flex;
+  justify-content: space-between;
+  text-align: center;
+  margin:0 auto;
+  padding-left:0 !important;
+  padding-top:30px;
+  padding-bottom:30px;
+  
+  li {
+    
+    display:inline-block;
+    list-style: none;
+    
+    &:first-child {
+      
+      margin-left:4em;
+    }
+    
+    &:last-child {
+      
+      margin-right:4em;
+    }
+  }
+}
+
+.button {
+  
+    background-color:$blue;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #fff !important;
+    font-size:0.75em !important;
+    text-transform: uppercase;
+    letter-spacing: 0.065em;
 }
