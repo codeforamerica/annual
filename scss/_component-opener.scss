@@ -209,3 +209,16 @@ a.opener__body__contents__section {
 .opener__body__contents p {
   font-size: $base-size * 0.8;
 }
+
+.opener-body-map {
+  
+  width:100%;
+  height:auto;
+  overflow: auto;
+  padding-top:30px;  
+  
+  #map {
+    
+    height:400px;
+  }
+}

@@ -37,4 +37,20 @@ $(document).ready(function(){
     e.preventDefault();
     $('body').toggleClass('js-menu-open');
   });
+  
+  // =====
+  // LEAFLET
+  // =====
+  //LatLng()
+  var map = L.map('map').setView([0.29114, 9.20654], 2);
+  
+    // replace "toner" here with "terrain" or "watercolor"
+    var layer = new L.StamenTileLayer("toner-lite");
+
+    map.addLayer(layer);
+  
+    map.on('click', function(e) {
+        alert(e.latlng);
+    });
+  
 }) 
