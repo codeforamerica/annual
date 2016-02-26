@@ -553,15 +553,20 @@ header * {
   color: white; }
 
 div.logo {
-  padding: 16px 15px 0 15px;
+  padding: 10px 15px 0 15px;
   float: left; }
   div.logo a {
-    text-decoration: none; }
+    text-decoration: none;
+    display: block; }
     @media screen and (max-width: 480px) {
       div.logo a {
         font-size: 12.8px; } }
   div.logo .logo__big {
-    font-weight: bold; }
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    background-image: url("/assets/images/oac-social-media-logo.svg"); }
     @media screen and (max-width: 480px) {
       div.logo .logo__big {
         display: none; } }
