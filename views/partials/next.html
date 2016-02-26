@@ -14,7 +14,9 @@ if (nextIndex <= indexLength) {
 }
 %>
 
-<% if (_.isNumber(nextIndex)){ %>
+<div class="next">
+  
+<!--<% if (_.isNumber(nextIndex)){ %>
   <% var nextCategory = data['categories'][nextIndex] %>
   <div class="next">
     <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="">
@@ -27,12 +29,12 @@ if (nextIndex <= indexLength) {
                 <%- nextCategory['headline'] %>
               </span>
             </p>
-          </div><!-- end .next__content -->
+          </div>--> <!-- end .next__content -->
           
 
-      </div><!-- end .container -->
+      <!-- </div><!-- end .container -->
       
-    </a>
+   <!-- </a> -->
     
     <div class='container mailchimp'>
       

@@ -387,6 +387,9 @@ th {
   src: url("/assets/fonts/iconfont/foundation-icons.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/iconfont/foundation-icons.woff") format("woff"), url("/assets/fonts/iconfont/foundation-icons.ttf") format("truetype"), url("/assets/fonts/iconfont/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
+.hidden {
+  display: none; }
+
 body {
   background-color: white;
   font-size: 16px; }
