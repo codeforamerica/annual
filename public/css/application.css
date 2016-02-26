@@ -1035,8 +1035,7 @@ ul.story__body__content__metrics li + li {
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 .story__body__content__metrics__number {
-  font-weight: 800;
-  font-size: 38.4px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -1px;
   float: left;
