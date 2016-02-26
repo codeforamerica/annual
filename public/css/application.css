@@ -2001,6 +2001,7 @@ a.supporters__image:hover {
     .cta li:last-child {
       margin-right: 4em; }
 
+.tf-button,
 .button {
   background-color: #004b6a;
   display: inline-block;
@@ -2013,5 +2014,20 @@ a.supporters__image:hover {
   font-size: 0.75em !important;
   text-transform: uppercase;
   letter-spacing: 0.065em; }
+
+.mailchimp {
+  background-color: #504e51; }
+  .mailchimp form {
+    margin-left: 8.62069%;
+    float: left;
+    display: block;
+    margin-right: 3.44828%;
+    width: 22.41379%;
+    padding-left: 0 !important; }
+    .mailchimp form:last-child {
+      margin-right: 0; }
+    .mailchimp form #mc_embed_signup_scroll label {
+      font-family: "Flama", Helvetica, sans-serif;
+      font-weight: normal; }
 
 /*# sourceMappingURL=application.css.map */

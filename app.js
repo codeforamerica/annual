@@ -98,20 +98,19 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  /*} else if (req.params.id == 'financials') {
-    res.render('financials', {
-      title: 'Financials',
-      type: 'financials',
+  } else if (req.params.id == 'updates') {
+    res.render('updates', {
+      title: 'Updates',
+      type: 'updates',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
       partials: {
         header: 'partials/header',
-        footer: 'partials/footer',
-        charts: 'partials/charts'
+        footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'what-you-can-do') {
+  /* } else if (req.params.id == 'what-you-can-do') {
     res.render('closer', {
       title: 'What You Can Do',
       type: 'closer',
@@ -168,8 +167,11 @@ app.use(function(req, res, next) {
 });
 
 // Catch 500
+// Catch 500
 app.use(function(error, req, res, next) {
-  res.status(500).render('error/500', {});
+  res.status(500).render('error/500', {
+    error: error
+  });
 });
 
 app.listen(process.env.PORT || 3000);

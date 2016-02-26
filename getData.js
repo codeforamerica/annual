@@ -14,6 +14,7 @@ module.exports =
     // =====
 
     function onLoad(data, tabletop) {
+      
       console.log( 'Found ' + tabletop.foundSheetNames );
 
       // An array of sheets found
@@ -42,6 +43,8 @@ module.exports =
 
         // Insert our sheet and its objects (rows) into the Sheet object
         Sheet[sheet] = objects;
+        
+        console.log(Sheet[sheet]);
 
       }); // end each sheets
 

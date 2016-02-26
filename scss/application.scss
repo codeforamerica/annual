@@ -431,6 +431,7 @@ strong,
   }
 }
 
+.tf-button,
 .button {
   
     background-color:$blue;
@@ -446,4 +447,26 @@ strong,
     letter-spacing: 0.065em;
 }
 
+.mailchimp {
+  
+  background-color: #504e51;
+  
+  
+  form {
+    
+    margin-left: 8.62069%;
+    @include span-columns(3);
+    padding-left:0 !important;
+    
+    #mc_embed_signup_scroll {
+      
+      label {
+        
+        font-family: $sans-serif;
+        font-weight:normal;
+        
+      }
+    }
+  }
+}
 
