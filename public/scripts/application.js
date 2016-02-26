@@ -58,13 +58,15 @@ $(document).ready(function(){
 
     map.addLayer(layer);
   
-    map.on('click', function(e) {
+    /*map.on('click', function(e) {
         alert(e.latlng);
-    });
+    });*/
+    
+    //marker.bindPopup(popupContent).openPopup();
   
     $('.coordinates').each(function() {
     
-      console.log($(this).text());
+      //console.log($(this).text());
       var coords = $(this).text();
       
       if(coords != '') {
