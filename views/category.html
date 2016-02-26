@@ -88,7 +88,8 @@
           <% if (which_story == 3) { %>
             <% include partials/action.html %>
           <% } %>
-
+          
+          <!--
           <%
 
             twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
@@ -114,7 +115,8 @@
               + 'http%3A%2F%2F2014.codeforamerica.org'
               + url.replace(/\//g, '%2F');
 
-          %>
+          %>-->
+          
           <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
@@ -127,15 +129,16 @@
 
                   <div class="story__body__content__opener__box">
 
-                    <!-- Social sharing -->
+                    <!-- Social sharing  
                     <div class="story__body__content__opener__share">
-                      <p class="story__body__content__opener__share--facebook">
+                      <p class="story__ody__content__opener__share--facebook">
                         <a href="<%- twitter_link %>" target="_blank"></a>
                       </p>
                       <p class="story__body__content__opener__share--twitter">
                         <a href="<%- facebook_link %>" target="_blank"></a>
                       </p>
                     </div>
+                    -->
 
                     <!-- <p><%- story['category'] %></p> -->
                     <h2><%- story['description'] %></h2>
