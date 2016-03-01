@@ -544,7 +544,7 @@ header {
   position: fixed;
   top: 0;
   background-color: #363537;
-  z-index: 99;
+  z-index: 999;
   margin-top: 0;
   height: 60px; }
 
@@ -1396,7 +1396,8 @@ a.opener__body__contents__section {
   width: 100%;
   height: auto;
   overflow: auto;
-  padding-top: 30px; }
+  padding-top: 30px;
+  z-index: 6; }
   .opener-body-map #map {
     height: 400px; }
 
