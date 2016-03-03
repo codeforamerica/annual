@@ -62,8 +62,8 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Introduction',
-    type: 'introduction',
+    title: 'Home', //what does this do?
+    type: 'home',
     url: req.originalUrl,
     data: Report,
     partials: {
@@ -75,9 +75,9 @@ app.get('/', function(req, res){
 
 app.get('/category/:id', function (req, res) {
   if (req.params.id == '2015-activity') {
-    res.render('timeline', {
-      title: 'Timeline',
-      type: 'timeline',
+    res.render('people', {
+      title: 'People',
+      type: 'people',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
@@ -86,10 +86,10 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'supporters') {
-    res.render('supporters', {
-      title: 'Supporters',
-      type: 'supporters',
+  } else if (req.params.id == 'resources') {
+    res.render('resources', {
+      title: 'Resources',
+      type: 'resources',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
@@ -98,20 +98,19 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'financials') {
-    res.render('financials', {
-      title: 'Financials',
-      type: 'financials',
+  } else if (req.params.id == 'updates') {
+    res.render('updates', {
+      title: 'Updates',
+      type: 'updates',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
       partials: {
         header: 'partials/header',
-        footer: 'partials/footer',
-        charts: 'partials/charts'
+        footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'what-you-can-do') {
+  /* } else if (req.params.id == 'what-you-can-do') {
     res.render('closer', {
       title: 'What You Can Do',
       type: 'closer',
@@ -123,9 +122,9 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer',
         charts: 'partials/charts'
       }
-    });
+    });*/
   } else {
-    res.render('category', {
+    res.render('category', {    // categories are the individual chapter pages
       requested: req.params.id,
       type: 'category',
       url: req.originalUrl,
@@ -168,8 +167,11 @@ app.use(function(req, res, next) {
 });
 
 // Catch 500
+// Catch 500
 app.use(function(error, req, res, next) {
-  res.status(500).render('error/500', {});
+  res.status(500).render('error/500', {
+    error: error
+  });
 });
 
 app.listen(process.env.PORT || 3000);

@@ -1,12 +1,21 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Flama';
+  src: url("/assets/fonts/Flama/Flama-Basic.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-Basic.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-Basic.otf") format("opentype");
+  font-family: 'Flama-Bold';
+  src: url("/assets/fonts/Flama/Flama-Bold.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-Bold.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-Bold.otf") format("opentype");
+  font-family: 'Flama-Italic';
+  src: url("/assets/fonts/Flama/Flama-BasicItalic.otf");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/Flama/Flama-BasicItalic.otf?#iefix") format("embedded-opentype"), url("/assets/fonts/Flama/Flama-BasicItalic.otf") format("opentype"); }
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -378,8 +387,12 @@ th {
   src: url("/assets/fonts/iconfont/foundation-icons.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/iconfont/foundation-icons.woff") format("woff"), url("/assets/fonts/iconfont/foundation-icons.ttf") format("truetype"), url("/assets/fonts/iconfont/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
+.hidden {
+  display: none; }
+
 body {
-  background-color: white; }
+  background-color: white;
+  font-size: 16px; }
 
 #js-page {
   min-width: 100%;
@@ -446,9 +459,6 @@ body.js-menu-open div.expand a:before {
   color: rgba(0, 0, 0, 0.8);
   box-sizing: border-box; }
 
-* + * {
-  margin-top: 1.5em; }
-
 .u-small-spacing * + * {
   margin-top: 0.5em; }
 
@@ -462,50 +472,57 @@ body.js-menu-open div.expand a:before {
   margin-top: 60px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8); }
 
 h1 {
-  font-size: 45px; }
+  font-size: 2em; }
   @media screen and (max-width: 1100px) {
     h1 {
-      font-size: 36px; } }
+      font-size: 32px; } }
   @media screen and (max-width: 750px) {
     h1 {
-      font-size: 34.2px; } }
+      font-size: 30.4px; } }
   @media screen and (max-width: 480px) {
     h1 {
-      font-size: 28.8px; } }
+      font-size: 25.6px; } }
   @media screen and (max-width: 480px) {
     h1 {
-      font-size: 23.4px; } }
+      font-size: 20.8px; } }
 
 h2 {
-  font-size: 27px; }
+  font-size: 24px; }
   @media screen and (max-width: 750px) {
     h2 {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 h3 {
-  font-size: 23.4px;
+  font-size: 20.8px;
   line-height: 1.8; }
 
 p {
-  font-family: "abril-text", "Sentinel", serif;
+  font-family: "Flama", serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.8); }
   @media screen and (max-width: 750px) {
     p {
-      font-size: 16.2px;
+      font-size: 14.4px;
       line-height: 2; } }
   @media screen and (max-width: 750px) {
     p {
-      font-size: 14.4px;
+      font-size: 12.8px;
       line-height: 2; } }
+
+strong,
+.bold {
+  font-family: 'Flama-Bold'; }
+
+.italic {
+  font-family: 'Flama-Italic'; }
 
 .u-unstyled {
   list-style-type: none; }
@@ -521,13 +538,13 @@ p {
     display: table; }
 
 header {
-  font-family: "abril-text", "Sentinel", serif;
+  font-family: "Flama", serif;
   overflow: hidden;
   width: 100%;
   position: fixed;
   top: 0;
   background-color: #363537;
-  z-index: 99;
+  z-index: 999;
   margin-top: 0;
   height: 60px; }
 
@@ -536,15 +553,20 @@ header * {
   color: white; }
 
 div.logo {
-  padding: 16px 15px 0 15px;
+  padding: 10px 15px 0 15px;
   float: left; }
   div.logo a {
-    text-decoration: none; }
+    text-decoration: none;
+    display: block; }
     @media screen and (max-width: 480px) {
       div.logo a {
-        font-size: 14.4px; } }
+        font-size: 12.8px; } }
   div.logo .logo__big {
-    font-weight: bold; }
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    background-image: url("/assets/images/oac-social-media-logo.svg"); }
     @media screen and (max-width: 480px) {
       div.logo .logo__big {
         display: none; } }
@@ -562,7 +584,7 @@ nav {
 nav ul li {
   margin-right: 5px;
   display: none;
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 nav ul li.currently,
 nav ul li.active,
@@ -576,7 +598,7 @@ nav ul li.expand {
 
 nav ul li a {
   text-decoration: none;
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 nav ul li a:hover {
   opacity: 0.8; }
@@ -628,11 +650,11 @@ div.expand a:before {
 
 .nav__contents * {
   color: white;
-  font-family: "abril-text", "Sentinel", serif; }
+  font-family: "Flama", serif; }
 .nav__contents * + * {
   margin-top: 0; }
 .nav__contents p {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .nav__contents a {
   text-decoration: none; }
@@ -701,7 +723,7 @@ div.expand a:before {
 
 .stories--opener .intro__description p {
   color: white;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .stories {
   padding-bottom: 2em; }
@@ -913,17 +935,17 @@ div.expand a:before {
       display: inherit; } }
 
 .story__body__content__opener__box p {
-  font-size: 14.4px;
+  font-size: 12.8px;
   font-weight: bold;
   font-style: italic;
   display: inline-block;
   margin-bottom: 0.5em; }
 
 .story__body__content__opener__box h2 {
-  font-size: 23.4px; }
+  font-size: 20.8px; }
   @media screen and (max-width: 750px) {
     .story__body__content__opener__box h2 {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 .story__body__content__opener__box:after {
   content: '';
@@ -1018,8 +1040,7 @@ ul.story__body__content__metrics li + li {
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 .story__body__content__metrics__number {
-  font-weight: 800;
-  font-size: 43.2px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -1px;
   float: left;
@@ -1039,7 +1060,7 @@ ul.story__body__content__metrics li + li {
         margin-right: 0; } }
 
 .story__body__content__metrics__description {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   float: left;
   display: block;
   margin-right: 3.44828%;
@@ -1085,7 +1106,7 @@ a.story__body__content__link--header {
   background-color: #004b6a;
   color: white;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   margin-top: 1em;
   display: inline-block;
   line-height: 1.3;
@@ -1188,7 +1209,7 @@ li.story__body__content__link--app a:before {
       padding-top: 1em; } }
 
 .story__body__content__credit p {
-  font-size: 14.4px;
+  font-size: 12.8px;
   display: inline-block;
   padding-top: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
@@ -1197,8 +1218,7 @@ li.story__body__content__link--app a:before {
   position: relative; }
 
 .opener__header {
-  background-color: #004b6a;
-  color: white;
+  color: #363537;
   padding-top: 3em;
   padding-bottom: 7.5em;
   display: block; }
@@ -1212,7 +1232,7 @@ li.story__body__content__link--app a:before {
       padding-bottom: 6em; } }
 
 .opener__header * {
-  color: white;
+  color: #363537;
   text-align: center; }
 
 .opener__header__content {
@@ -1234,7 +1254,7 @@ li.story__body__content__link--app a:before {
         margin-right: 0; } }
 
 .opener__header__content p {
-  font-style: italic; }
+  font-family: 'Flama-Italic'; }
 
 .opener__header__content h1 {
   margin-top: 0.25em; }
@@ -1312,11 +1332,11 @@ li.story__body__content__link--app a:before {
 
 .opener__body__text div.first * {
   color: #004b6a;
-  font-size: 21.6px; }
+  font-size: 19.2px; }
   @media screen and (max-width: 750px) {
     .opener__body__text div.first * {
-      font-size: 18px;
-      font-size: 14.4px; } }
+      font-size: 16px;
+      font-size: 12.8px; } }
 
 .opener__body__text div.first p:first-child:first-letter {
   float: left;
@@ -1327,13 +1347,15 @@ li.story__body__content__link--app a:before {
   padding-right: 8px;
   padding-left: 3px; }
 
-.opener__body__text ul {
-  padding-left: 3em; }
+.opener__body__text ul li {
+  list-style: none; }
+  @media screen and (max-width: 750px) {
+    .opener__body__text ul li {
+      margin-top: 0; } }
+  .opener__body__text ul li:first-child {
+    margin-bottom: 2em; }
 
-@media screen and (max-width: 750px) {
-  .opener__body__text ul li {
-    margin-top: 0; } }
-
+.opener__body__text ul
 .opener__body__text ul li p {
   font-style: italic; }
 
@@ -1356,7 +1378,6 @@ li.story__body__content__link--app a:before {
   content: '';
   width: 100%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.25);
   display: block; }
 
 .opener__body__contents ul li {
@@ -1369,7 +1390,16 @@ a.opener__body__contents__section {
   font-style: italic; }
 
 .opener__body__contents p {
-  font-size: 14.4px; }
+  font-size: 12.8px; }
+
+.opener-body-map {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  padding-top: 30px;
+  z-index: 6; }
+  .opener-body-map #map {
+    height: 400px; }
 
 .next {
   margin-top: 0;
@@ -1449,27 +1479,27 @@ a.next__link:before {
 
 p.next__content__read {
   text-transform: uppercase;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   letter-spacing: 4px;
-  font-size: 14.4px;
+  font-size: 12.8px;
   opacity: 0.8; }
 
 p.next__content__overline {
   font-style: italic; }
 
 p.next__content__headline {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
-  font-size: 27px;
+  font-family: "Flama", Helvetica, sans-serif;
+  font-size: 24px;
   margin-top: 0.5em; }
   @media screen and (max-width: 1100px) {
     p.next__content__headline {
-      font-size: 23.4px; } }
+      font-size: 20.8px; } }
   @media screen and (max-width: 750px) {
     p.next__content__headline {
-      font-size: 20.7px; } }
+      font-size: 18.4px; } }
   @media screen and (max-width: 480px) {
     p.next__content__headline {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 p.next__content__headline span {
   border-bottom: 3px solid white;
@@ -1670,17 +1700,17 @@ a.supporters__image:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
 
 .financials__header__total {
-  font-size: 90px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-size: 80px;
+  font-family: "Flama", Helvetica, sans-serif;
   font-weight: 200;
   color: #004b6a;
   margin-top: 0; }
   @media screen and (max-width: 750px) {
     .financials__header__total {
-      font-size: 72px; } }
+      font-size: 64px; } }
   @media screen and (max-width: 480px) {
     .financials__header__total {
-      font-size: 45px; } }
+      font-size: 40px; } }
 
 .financials__breakdown__chart,
 .financials__breakdown__key {
@@ -1710,14 +1740,14 @@ a.supporters__image:hover {
       margin-left: 0; } }
 
 .financials__breakdown__key ul li {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif; }
+  font-family: "Flama", Helvetica, sans-serif; }
 
 .financials__breakdown__key ul li p {
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
-  font-size: 27px; }
+  font-family: "Flama", Helvetica, sans-serif;
+  font-size: 24px; }
   @media screen and (max-width: 480px) {
     .financials__breakdown__key ul li p {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 .financials__breakdown__key ul li p span {
   font-weight: 800;
@@ -1785,7 +1815,7 @@ a.supporters__image:hover {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   margin-top: 1em;
   display: inline-block;
   line-height: 1.3;
@@ -1895,7 +1925,7 @@ a.supporters__image:hover {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 10px 10px;
-  font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
+  font-family: "Flama", Helvetica, sans-serif;
   display: inline-block;
   line-height: 1.3;
   border: 1px solid white;
@@ -1907,6 +1937,10 @@ a.supporters__image:hover {
 .closer__header__action a:hover {
   background-color: white;
   color: #004b6a; }
+
+#logo {
+  width: 500px;
+  height: auto; }
 
 .header-share-icons {
   position: relative;
@@ -1958,3 +1992,50 @@ a.supporters__image:hover {
 
 .header-share-icons--twitter a:before {
   content: "\f1c4"; }
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 0 !important;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .cta li {
+    display: inline-block;
+    list-style: none; }
+    .cta li:first-child {
+      margin-left: 4em; }
+    .cta li:last-child {
+      margin-right: 4em; }
+
+.tf-button,
+.button {
+  background-color: #004b6a;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff !important;
+  font-size: 0.75em !important;
+  text-transform: uppercase;
+  letter-spacing: 0.065em; }
+
+.mailchimp {
+  background-color: #504e51; }
+  .mailchimp form {
+    margin-left: 8.62069%;
+    float: left;
+    display: block;
+    margin-right: 3.44828%;
+    width: 22.41379%;
+    padding-left: 0 !important; }
+    .mailchimp form:last-child {
+      margin-right: 0; }
+    .mailchimp form #mc_embed_signup_scroll label {
+      font-family: "Flama", Helvetica, sans-serif;
+      font-weight: normal; }
+
+/*# sourceMappingURL=application.css.map */

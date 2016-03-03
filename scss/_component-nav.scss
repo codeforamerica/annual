@@ -13,8 +13,7 @@ header {
   position: fixed;
   top: 0;
   background-color: $gray;
-  z-index: 99;
-  // box-shadow: 0 4px 2px -2px rgba(0,0,0,0.04);
+  z-index: 999;
   margin-top: 0;
   height: 60px;
 }
@@ -25,11 +24,13 @@ header * {
 }
 
 div.logo {
-  padding: 16px 15px 0 15px;
+  
+  padding: 10px 15px 0 15px;
   float: left;
 
   a {
     text-decoration: none;
+    display:block;
 
     @include media($mobile) {
       font-size: $base-size * 0.8;
@@ -37,7 +38,13 @@ div.logo {
   }
 
   .logo__big {
+    
+    display:block;
+    width:40px;
+    height:40px;
     font-weight: bold;
+    background-image: url('/assets/images/oac-social-media-logo.svg');
+    
     @include media($mobile) {
       display: none;
     }

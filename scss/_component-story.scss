@@ -329,8 +329,8 @@ ul.story__body__content__metrics {
 }
 
 .story__body__content__metrics__number {
-  font-weight: 800;
-  font-size: $base-size * 2.4;
+  //font-weight: 800;
+  font-size: $base-size * 1.75;
   line-height: 1;
   letter-spacing: -1px;
   @include span-columns(4 of 12);

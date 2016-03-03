@@ -15,10 +15,11 @@ $padding: 3em;
 // =====
 
 .opener__header {
-  background-color: $blue;
-  color: white;
+  
+  color: $gray;
   padding-top: $padding;
   padding-bottom: $padding*2.5;
+  
   @include row();
 
   @include media($mobile) {
@@ -28,7 +29,7 @@ $padding: 3em;
 }
 
 .opener__header * {
-  color: white;
+  color: $gray;
   text-align: center;
 }
 
@@ -47,7 +48,7 @@ $padding: 3em;
 }
 
 .opener__header__content p {
-  font-style: italic;
+  font-family:'Flama-Italic';
 }
 
 .opener__header__content h1 {
@@ -110,6 +111,7 @@ $padding: 3em;
 }
 
 .opener__body__text div.first {
+  
   @include span-columns(20 of 12);
   clear: both;
   padding-bottom: $padding;
@@ -145,15 +147,26 @@ $padding: 3em;
 }
 
 .opener__body__text ul {
-  padding-left: 3em;
+  
+ 
+  li {
+    
+    list-style: none;
+    
+    @include media($tablet) {
+      margin-top: 0;
+    }
+    
+    &:first-child {
+      
+      margin-bottom:2em;
+    }
 }
 
-.opener__body__text ul li {
-  @include media($tablet) {
-    margin-top: 0;
-  }
+ 
 }
 
+.opener__body__text ul 
 .opener__body__text ul li p {
   font-style: italic;
 }
@@ -178,7 +191,7 @@ $padding: 3em;
   content: '';
   width: 100%;
   height: 1px;
-  background-color: rgba(0,0,0,0.25);
+  //background-color: rgba(0,0,0,0.25);
   display: block;
 }
 
@@ -195,4 +208,18 @@ a.opener__body__contents__section {
 
 .opener__body__contents p {
   font-size: $base-size * 0.8;
+}
+
+.opener-body-map {
+  
+  width:100%;
+  height:auto;
+  overflow: auto;
+  padding-top:30px;
+  z-index:6;  
+  
+  #map {
+    
+    height:400px;
+  }
 }

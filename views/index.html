@@ -20,8 +20,8 @@
     <div class="opener__header">
       <div class="container">
         <div class="opener__header__content">
-          <p>The AFH Chapter Network</p>
-          <h1>We believe in a world where every community has a voice in the design of their built environment.</h1>
+          <img src='assets/images/oac-logo.svg' id='logo'>
+          <h1>Design makes it possible for everyone to dream and build.</h1>
         </div>
       </div>
     </div>
@@ -31,24 +31,34 @@
     </div>
 
     <div class="opener__body">
+      
       <div class="opener__body__text">
         <%- requested.description %>
       </div>
-      <div class="opener__body__contents">
+      
+      <div class="opener-body-map">
+        
+        <h2>Find a local chapter</h2>
+        <div id='map'>
+          
+        </div>
+        
         <ul class="u-unstyled">
-          <li><p><strong>Find a Local Chapter:</strong></p></li>
+          
+            
           <% _.each(data['categories'], function(category){ %>
-            <li class="">
-              <p>
-                <a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>;">
-                  <%- category['category'] %>
-                </a>
-              </p>
+        
+            <li>
+              <p><a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>"><%- category['category'] %> </a>located at: <span class='coordinates'><%- category['coordinates'] %></span>
+        <% }); %></p>
             </li>
-          <% }); %>
-      </ul>
+            
+          </%>
+        
         </ul>
+         
       </div>
+      
     </div>
    
   </section><!-- end .opener -->
@@ -56,3 +66,10 @@
 
 <% include partials/next.html %>
 <% include partials/footer.html %>
+
+<!-- typeform scripts -->
+
+<!-- volunteer -->
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+
+

@@ -4,7 +4,10 @@ var Tabletop = require('tabletop');
 module.exports = 
 
   function(callback) {
-    var sheetUrl = 'https://docs.google.com/spreadsheets/d/1MJljMlCyf34BddJoFsCgkCFb3XpYD4bt_a-LDe_S3AA/pubhtml';
+     var sheetUrl = 'https://docs.google.com/spreadsheets/d/1MJljMlCyf34BddJoFsCgkCFb3XpYD4bt_a-LDe_S3AA/pubhtml';
+    // the above is the live data site
+    // var sheetUrl = 'https://docs.google.com/spreadsheets/d/1m6BxCUb1nxf4dVNP3S8PFhUgalBNstpE3em83P2DC3I/pubhtml';
+    
     var Sheet = {};
 
     // =====
@@ -12,6 +15,7 @@ module.exports =
     // =====
 
     function onLoad(data, tabletop) {
+      
       console.log( 'Found ' + tabletop.foundSheetNames );
 
       // An array of sheets found
@@ -40,6 +44,8 @@ module.exports =
 
         // Insert our sheet and its objects (rows) into the Sheet object
         Sheet[sheet] = objects;
+        
+        console.log(Sheet[sheet]);
 
       }); // end each sheets
 

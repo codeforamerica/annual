@@ -1,3 +1,5 @@
+<!-- this template is the pages for all the chapters -->
+
 <%
   var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
   var title = requested['category'];
@@ -16,6 +18,7 @@
 
 <% include partials/header.html %>
 
+
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before,
@@ -31,8 +34,10 @@
     }
   </style>
 <% } %>
+
 <div id="js-main">
   <% include partials/nav.html %>
+  
   <section class="stories" id="{{ page.unique-id }}">
 
     <% _.each(data['categories'], function(category){ %>
@@ -51,6 +56,8 @@
               </p>
               <h1><%- category['headline'] %></h1>
               <!--<p><%- category['description'] %></p>-->
+              
+              
               <!-- CUSTOM FOR GARRETT'S AFH -->
               <div class="header-share-icons">
                 <% if (category['twitter']) { %>
@@ -78,10 +85,12 @@
         <% if (story['category'] == requested['category']) { %>
 
           <% which_story++ %>
-          <% if (which_story == 3) { %>
+          
+          <!--<% if (which_story == 3) { %>
             <% include partials/action.html %>
           <% } %>
-
+          
+          
           <%
 
             twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
@@ -107,7 +116,8 @@
               + 'http%3A%2F%2F2014.codeforamerica.org'
               + url.replace(/\//g, '%2F');
 
-          %>
+          %>-->
+          
           <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
@@ -120,15 +130,16 @@
 
                   <div class="story__body__content__opener__box">
 
-                    <!-- Social sharing -->
+                    <!-- Social sharing  
                     <div class="story__body__content__opener__share">
-                      <p class="story__body__content__opener__share--facebook">
+                      <p class="story__ody__content__opener__share--facebook">
                         <a href="<%- twitter_link %>" target="_blank"></a>
                       </p>
                       <p class="story__body__content__opener__share--twitter">
                         <a href="<%- facebook_link %>" target="_blank"></a>
                       </p>
                     </div>
+                    -->
 
                     <!-- <p><%- story['category'] %></p> -->
                     <h2><%- story['description'] %></h2>
@@ -162,18 +173,35 @@
                 </ul>
 
                 <ul class="story__body__content__links u-unstyled u-row">
+                  
                   <li class="story__body__content__link--<%- story['link-1-type'] %>">
-                    <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
-                    <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
-                  </li>
-                  <li class="story__body__content__link--<%- story['link-2-type'] %>">
-                    <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
-                    <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
-                  </li>
+                    
+                    <% if (story['link-1-description']) { %>
+                      <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
+                      <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
+                    
+                    <% } %>
+                    
+                    </li>
+                  
+                    <li class="story__body__content__link--<%- story['link-2-type'] %>">
+                    
+                    <% if (story['link-2-description']) { %>
+                        <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
+                        <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
+                      
+                    </li>
+                  <% } %>
+                  
                   <li class="story__body__content__link--<%- story['link-3-type'] %>">
-                    <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
-                    <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
+                  
+                    <% if (story['link-3-description']) { %> 
+                      <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
+                      <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
+                    <% } %>
+                    
                   </li>
+                  
                 </ul>
 
                 <% if (story['photo-credit']) { %>

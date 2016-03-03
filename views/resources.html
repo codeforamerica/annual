@@ -14,7 +14,6 @@
 <% include partials/header.html %>
 <% include partials/nav.html %>
 
-
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before {
@@ -27,7 +26,7 @@
 <% } %>
 
 <div id="js-main">
-  <section class="stories" id="{{ page.unique-id }}">
+  <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
 
     <% _.each(data['categories'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
@@ -53,24 +52,20 @@
     <% });%>
     
     <div class="container">
-      <div class="supporters">
-
-        <h2>Major Benefactors</h2>
-        <a class="supporters__image" href="http://www.knightfoundation.org/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/knight_logo.jpg"></a>
-        <a class="supporters__image" href="https://www.omidyar.com/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/on_logo.jpg"></a>
-        <a class="supporters__image" href="http://www.google.org/" target="_blank"><img src="http://www.codeforamerica.org/media/images/donate/google_logo.jpg"></a>
-        <%
-          var orgs = _.groupBy(data['supporters'], 'org-type');
-        %>
-        <% _.each(orgs, function(org){ %>
-          <div class="supporters__list">
-            <h2><%- org[0]['org-type'] %></h2>
-            <% _.each(org, function(supporter){ %>
-              <p><%- supporter['name'] %></p>
-            <% }); %>
-          </div>
-        <% }); %>
-      </div>
+      <div class="timeline">
+        <ul class="timeline__times">
+          <% _.each(data['timeline'], function(entry){ %>
+            <li>
+              <div class="timeline__month">
+                <p><%- entry['month'] %></p>
+              </div>
+              <div class="timeline__description">
+                <p><%- entry['description'] %></p>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+      </div><!-- end .timeline -->
     </div><!-- end .container -->
   </section>
 </div>
