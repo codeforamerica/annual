@@ -31,6 +31,7 @@ function checkData(){
       getData(function(err,results){
         Report = results;
         console.log('We\'ve got data!');
+
       });
     }
   }
@@ -61,6 +62,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 });
 
 app.get('/', function(req, res){
+
   res.render('index', {
     title: 'Home', //what does this do?
     type: 'home',
