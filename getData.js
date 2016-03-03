@@ -72,7 +72,7 @@ module.exports =
 			if(category['category'] == 'People'){
 		
 				var peopleObject = category['headline'];
-				category['headline'] = peopleObject;
+				category['headline'] = JSON.parse(peopleObject);
 			
 			}
 		}
