@@ -456,14 +456,47 @@ strong,
 footer {
   
   width:100%;
-  padding-left: 8.62069%;
+  
+  padding-top:30px;
+  padding-bottom:30px;
   background-color: #504e51;
+  height:auto;
+  overflow:auto;
+  
+  .f-container {
+    
+    @include span-columns(3);
+    padding-left: 8.62069%;
+    height:auto;
+    overflow: auto;
+  }
+  
+  .press {
+    
+    @include span-columns(4);
+    
+    li {
+      
+      list-style:none;
+    }
+  }
+  
+  .contact {
+    
+    clear:both;
+    width:100%;
+    text-align: center;
+    padding-top:30px;
+    
+  }
   
   .mailchimp {
+    
+    @include span-columns(4);
+
     form {
       
-      
-      @include span-columns(3);
+      background-color: #504e51;
       padding-left:0 !important;
       
       #mc_embed_signup_scroll {
