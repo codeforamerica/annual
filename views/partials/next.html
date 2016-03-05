@@ -6,10 +6,8 @@
     var contact = '';
     var CoC = '';
     
-    console.log("CATS:" + data['footer']);
     _.each(data['footer'], function(item) {
       
-      console.log(item['section']);
       if(item['section'] == 'Press') {
         
         links.push(item);
@@ -23,7 +21,6 @@
         contact = item['headline'];
       }
       
-      console.log(contact);
     })
   %>
   
@@ -75,3 +72,5 @@
   
   
 </footer><!-- end .next -->
+
+</div>

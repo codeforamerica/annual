@@ -1,5 +1,10 @@
 <% 
   var requested = data.opener[0];
+  var hero = data.opener[1];
+  
+  console.log(data.opener);
+  
+  var video = data.opener[2];
   var title = 'Introduction';
   var color = requested['color'];
 
@@ -27,7 +32,8 @@
     </div>
 
     <div class="opener__image">
-      <img src="/assets/images/defaults/Groupjump.jpg" alt="">
+      <img src="<%- hero.headline %>" alt="">
+      <%- console.log(hero) %>
     </div>
 
     <div class="opener__body">
