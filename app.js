@@ -76,10 +76,12 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
-  if (req.params.id == 'people') {
-    res.render('people', {
-      title: 'People',
-      type: 'people',
+  
+  console.log(req.params.id);
+  if (req.params.id == 'about-us') {
+    res.render('about-us', {
+      title: 'about-us',
+      type: 'about-us',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
@@ -100,7 +102,7 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  } else if (req.params.id == 'people') {
+  /*} else if (req.params.id == 'people') {
     res.render('people', {
       title: 'People',
       type: 'people',
@@ -111,7 +113,7 @@ app.get('/category/:id', function (req, res) {
         header: 'partials/header',
         footer: 'partials/footer'
       }
-    });
+    });*/
   } else if (req.params.id == 'updates') {
     res.render('updates', {
       title: 'Updates',
