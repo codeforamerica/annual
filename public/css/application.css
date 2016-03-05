@@ -1260,7 +1260,8 @@ li.story__body__content__link--app a:before {
 
 .opener__header__content h1 {
   margin-top: 0.25em;
-  color: white; }
+  color: white;
+  text-shadow: 1px 1px 2px black; }
 
 .opener__image {
   width: 100%;
