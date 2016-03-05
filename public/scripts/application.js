@@ -43,7 +43,12 @@ $(document).ready(function(){
   // LEAFLET
   // =====
   
-  var greenIcon = L.icon({
+  //console.log($('#map').length);
+  
+  //only run map code if the map container exists.
+  if($('#map').length > 0) {
+    
+    var greenIcon = L.icon({
     iconUrl: 'assets/images/oac-pin.svg',
 
     iconSize:     [20, 24], // size of the icon
@@ -78,4 +83,8 @@ $(document).ready(function(){
       }
       
     })
+    
+  }
+  
+  
 }) 
