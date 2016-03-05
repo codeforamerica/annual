@@ -83,10 +83,10 @@
 	   <% _.each(data['categories'], function(category){ %>
 	   <% if (category['unique-id'] == requested['unique-id']) { %>
 	   <% 
-		  var peopleObject = category['headline'];
+		  var peoplesObject = category['headline'];
 	  
-		  for (var key in peopleObject) {
-			if (peopleObject.hasOwnProperty(key)) {
+		  for (var peopleGroupNameKey in peoplesObject) {
+			if (peoplesObject.hasOwnProperty(peopleGroupNameKey)) {
 	  
 		
 		  %>		
@@ -94,11 +94,11 @@
 		  <div class="story__body u-row">
 			 <div class="story__body__content u-row">
 				<div style="">
-				   <h1><%- key %></h1>
+				   <h1><%- peopleGroupNameKey %></h1>
 				</div>
 			 </div>
 			 <%		
-				var peopleGroup = peopleObject[key];
+				var peopleGroup = peoplesObject[peopleGroupNameKey];
 			
 				for (var i = 0; i < peopleGroup.length; i++) { 
 					var person = peopleGroup[i];

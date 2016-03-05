@@ -101,7 +101,7 @@ app.get('/category/:id', function (req, res) {
       }
     });
   } else if (req.params.id == 'people') {
-    res.render('people2', {
+    res.render('people', {
       title: 'People',
       type: 'people',
       url: req.originalUrl,
