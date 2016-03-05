@@ -44,12 +44,14 @@
         </div>
         
         <ul class="u-unstyled">
-          
             
           <% _.each(data['categories'], function(category){ %>
         
             <li>
-              <p><a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>"><%- category['category'] %> </a>located at: <span class='coordinates'><%- category['coordinates'] %></span>
+              <p class='map-data'>
+                <a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>">
+                <span class='chapter-name'><%- category['category'] %> </a>
+                located at: <span class='coordinates'><%- category['coordinates'] %></span>
         <% }); %></p>
             </li>
             
