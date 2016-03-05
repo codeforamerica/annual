@@ -26,6 +26,7 @@
 <% } %>
 
 <div id="js-main">
+  
   <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
 
     <% _.each(data['categories'], function(category){ %>
@@ -36,7 +37,7 @@
           <% } %>
         ">
 
-          <div class="container">
+        <div class="container">
 
             <div class="intro__content">
               <p class="intro__content__overline">
@@ -48,23 +49,23 @@
 
           </div><!-- end .container -->
           
-        </div><!-- end .intro -->
+         </div><!-- end .intro -->
+          <div class="resource-body">
+            <ul class="resource-list">
+              <% _.each(data['updates'], function(update){ %>
+                <h1><%- update['headline'] %></h1>
+                  <p class='datestamp'><%- update['date'] %></p>
+                  <p><%- update['content'] %></p>
+              <% }); %>
+            </ul>
+          </div><!-- end .resource-body -->
+          
+       
       <% } %>
     <% });%>
     
-    <div class="resource-body">
-      <ul class="resource-list">
-        <% _.each(data['resources'], function(resource){ %>
-          <li>
-            <p><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></p>
-            <p><%- resource['description'] %></p>
-          </li>
-        <% }); %>
-      </ul>
-    </div><!-- end .resource-body -->
   </section>
-  
-</div> <!-- close #js-main -->
+</div>
 
 <% include partials/next.html %>
 <% include partials/footer.html %>

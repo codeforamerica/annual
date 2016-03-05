@@ -76,7 +76,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
-  if (req.params.id == '2015-activity') {
+  if (req.params.id == 'people') {
     res.render('people', {
       title: 'People',
       type: 'people',
