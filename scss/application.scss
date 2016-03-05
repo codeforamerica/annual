@@ -475,3 +475,11 @@ strong,
   }
 }
 
+.resource-body {
+  
+  padding-top:30px;
+  padding-bottom:30px;
+  @include span-columns(10 of 12);
+  @include shift(1 of 12);
+
+}

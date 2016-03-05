@@ -47,24 +47,24 @@
             </div>
 
           </div><!-- end .container -->
+          
         </div><!-- end .intro -->
       <% } %>
     <% });%>
     
-    <div class="container">
-      <div class="resources">
-        <ul class="resource-list">
-          <% _.each(data['resources'], function(resource){ %>
-            <li>
-              <p><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></p>
-              <p><%- resource['description'] %></p>
-            </li>
-          <% }); %>
-        </ul>
-      </div><!-- end .timeline -->
-    </div><!-- end .container -->
+    <div class="resource-body">
+      <ul class="resource-list">
+        <% _.each(data['resources'], function(resource){ %>
+          <li>
+            <p><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></p>
+            <p><%- resource['description'] %></p>
+          </li>
+        <% }); %>
+      </ul>
+    </div><!-- end .resource-body -->
   </section>
-</div>
+  
+</div> <!-- close #js-main -->
 
 <% include partials/next.html %>
 <% include partials/footer.html %>
