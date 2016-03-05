@@ -18,7 +18,6 @@
 
 <% include partials/header.html %>
 
-
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before,
@@ -86,37 +85,6 @@
 
           <% which_story++ %>
           
-          <!--<% if (which_story == 3) { %>
-            <% include partials/action.html %>
-          <% } %>
-          
-          
-          <%
-
-            twitter_link = 'https://twitter.com/intent/tweet?via=codeforamerica'
-              + '&url='
-              + 'http%3A%2F%2F2014.codeforamerica.org'
-              + url.replace(/\//g, '%2F')
-              + '%23'
-              + story['unique-id']
-              + '&text='
-              + encodeURIComponent(story['share-text']);
-
-            facebook_link = 'https://www.facebook.com/dialog/feed?'
-              + '&display=page'
-              + '&app_id=1412610745719231'
-              + '&link='
-              + 'http%3A%2F%2F2014.codeforamerica.org'
-              + url.replace(/\//g, '%2F')
-              + '%23'
-              + story['unique-id']
-              + '&caption='
-              + encodeURIComponent(story['share-text'])
-              + '&redirect_uri='
-              + 'http%3A%2F%2F2014.codeforamerica.org'
-              + url.replace(/\//g, '%2F');
-
-          %>-->
           
           <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
