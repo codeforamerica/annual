@@ -93,7 +93,7 @@
 	   <article class="story u-small-spacing u-row">
 		
 			
-				<div >
+				<div style="padding-left:30px;">
 				   <h1 style="font-size:3em;font-weight:bold;color:#e16941;"><%- peopleGroupNameKey %></h1>
 				</div>
 			
@@ -104,12 +104,35 @@
 					var person = peopleGroup[i];
 			
 				%>
-			 <div class="people_tile" style="padding:25px; float:left; width:300px; height:500px; border:thin gray ridge; margin:.1cm;">
+			 <div class="people_tile" style="padding:25px; float:left; width:300px; height:500px; border:thin #f1f1f1 ridge; margin:5px;">
 				<h3><%- person['name'] %></h3>
 				<div style=" width: 250px;     height: 250px;     position: relative;     overflow: hidden;     border-radius: 50%;">
 					<img style="height:auto;width:100%;" src="<%- person['avatarURL'] %>" alt="<%- person['name'] %>">
 				</div>
 				<p style="padding-top:15px;"><%- person['biography'] %></p>
+				
+				<!--twitter -->
+				<% if (person['twitter']){ %>
+					<a style="color:#CAE4F1;font-style:italic;text-decoration: none;" href="https://twitter.com/<%- person['twitter'] %>">@<%- person['twitter'] %></a>
+				<%} %>
+				
+				<!--facebook -->
+				<% if (person['facebook']){ %>
+					<a style="color:#CAE4F1;font-style:italic;text-decoration: none;" href="https://facebook.com/<%- person['facebook'] %>">http://facebook.com/<%- person['facebook'] %></a>
+				<%} %>
+				
+				<!--linkedin -->
+				<% if (person['linkedin']){ %>
+					<a style="color:#CAE4F1;font-style:italic;text-decoration: none;" href="https://linkedin.com/<%- person['linkedin'] %>">http://linkedin.com/<%- person['linkedin'] %></a>
+				<%} %>
+				
+				<!--email -->
+				<% if (person['email']){ %>
+					<a style="color:#CAE4F1;font-style:italic;text-decoration: none;" href="mailto:<%- person['email'] %>"><%- person['email'] %></a>
+				<%} %>
+				
+				
+			
 			</div>
 				<% 
 				   } 
