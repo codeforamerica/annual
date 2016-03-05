@@ -175,6 +175,7 @@ $padding: 3em;
 
 .opener__body__text ul {
   
+  width:100%;
  
   li {
     
@@ -249,4 +250,10 @@ a.opener__body__contents__section {
     
     height:400px;
   }
+}
+
+.video-embed {
+  
+  margin-top:30px;
+  padding-bottom:30px;
 }

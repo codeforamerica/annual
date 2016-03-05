@@ -1355,13 +1355,15 @@ li.story__body__content__link--app a:before {
   padding-right: 8px;
   padding-left: 3px; }
 
-.opener__body__text ul li {
-  list-style: none; }
-  @media screen and (max-width: 750px) {
-    .opener__body__text ul li {
-      margin-top: 0; } }
-  .opener__body__text ul li:first-child {
-    margin-bottom: 2em; }
+.opener__body__text ul {
+  width: 100%; }
+  .opener__body__text ul li {
+    list-style: none; }
+    @media screen and (max-width: 750px) {
+      .opener__body__text ul li {
+        margin-top: 0; } }
+    .opener__body__text ul li:first-child {
+      margin-bottom: 2em; }
 
 .opener__body__text ul
 .opener__body__text ul li p {
@@ -1408,6 +1410,10 @@ a.opener__body__contents__section {
   z-index: 6; }
   .opener-body-map #map {
     height: 400px; }
+
+.video-embed {
+  margin-top: 30px;
+  padding-bottom: 30px; }
 
 .next {
   margin-top: 0;
