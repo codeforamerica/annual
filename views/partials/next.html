@@ -1,41 +1,6 @@
-<%
-var currentIndex,
-    nextIndex,
-    indexLength;
-
-var currentIndex = _.indexOf(data['categories'], requested);
-var nextIndex = currentIndex + 1;
-indexLength = data['categories'].length - 1;
-
-if (nextIndex <= indexLength) {
-  nextIndex = nextIndex;
-} else {
-  nextIndex = false;
-}
-%>
-
 <div class="next">
   
-<!--<% if (_.isNumber(nextIndex)){ %>
-  <% var nextCategory = data['categories'][nextIndex] %>
-  <div class="next">
-    <a class="next__link" href="/category/<%- nextCategory['unique-id'] %>" style="">
-      <div class="container">
-          <div class="next__content">
-            <p class="next__content__read">Continue Reading:</p>
-            <p class="next__content__overline"><%- nextCategory['category'] %></p>
-            <p class="next__content__headline">
-              <span style="<% if (nextCategory['color']) { %> border-bottom-color: <%- nextCategory['color'] %>; <% } %>">
-                <%- nextCategory['headline'] %>
-              </span>
-            </p>
-          </div>--> <!-- end .next__content -->
-          
 
-      <!-- </div><!-- end .container -->
-      
-   <!-- </a> -->
-    
     <div class='container mailchimp'>
       
       <!-- Begin MailChimp Signup Form -->
@@ -60,6 +25,5 @@ if (nextIndex <= indexLength) {
           <!--End mc_embed_signup-->
           
     </div>
-  </div><!-- end .next -->
-<% } %>
-
+</div><!-- end .next -->
+  
