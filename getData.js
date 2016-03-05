@@ -45,7 +45,7 @@ module.exports =
         // Insert our sheet and its objects (rows) into the Sheet object
         Sheet[sheet] = objects;
         
-        console.log(Sheet[sheet]);
+        //console.log(Sheet[sheet]);
 
       }); // end each sheets
 

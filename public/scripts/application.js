@@ -49,42 +49,37 @@ $(document).ready(function(){
   if($('#map').length > 0) {
     
     var greenIcon = L.icon({
-    iconUrl: 'assets/images/oac-pin.svg',
-
-    iconSize:     [20, 24], // size of the icon
-    iconAnchor:   [10, 12], // point of the icon which will correspond to marker's location
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  });
+      iconUrl: 'assets/images/oac-pin.svg',
   
-  var map = L.map('map').setView([0.29114, 9.20654], 2);
+      iconSize:     [20, 24], // size of the icon
+      iconAnchor:   [10, 12], // point of the icon which will correspond to marker's location
+      popupAnchor:  [0,-12] // point from which the popup should open relative to the iconAnchor
+    });
   
-    // replace "toner" here with "terrain" or "watercolor"
+    var map = L.map('map').setView([0.29114, 9.20654], 2);
     var layer = new L.StamenTileLayer("toner-lite");
-
+        
     map.addLayer(layer);
   
     /*map.on('click', function(e) {
         alert(e.latlng);
     });*/
-    
-    //marker.bindPopup(popupContent).openPopup();
   
-    $('.coordinates').each(function() {
+    $('.map-data').each(function() {
     
-      //console.log($(this).text());
-      var coords = $(this).text();
+      var url = $(this).find('a').attr('href');
+      var chapter = '<a href="' + url + '">' + $(this).find('.chapter-name').text() + '</a>';
+      var coords = $(this).find('.coordinates').text();
       
       if(coords != '') {
         
         var lat = parseFloat(coords.split(',')[0]);
         var lng = parseFloat(coords.split(',')[1]);
-        L.marker([lat, lng], {icon: greenIcon}).addTo(map);
-        //console.log('latitude:', lat, lng);
-      }
       
+        L.marker([lat, lng], {icon: greenIcon}).addTo(map).bindPopup(chapter);
+        
+      }
     })
-    
-  }
-  
+  } /* close map */
   
 }) 
