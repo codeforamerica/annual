@@ -2023,18 +2023,19 @@ a.supporters__image:hover {
   text-transform: uppercase;
   letter-spacing: 0.065em; }
 
-.mailchimp {
+footer {
+  width: 100%;
+  padding-left: 8.62069%;
   background-color: #504e51; }
-  .mailchimp form {
-    margin-left: 8.62069%;
+  footer .mailchimp form {
     float: left;
     display: block;
     margin-right: 3.44828%;
     width: 22.41379%;
     padding-left: 0 !important; }
-    .mailchimp form:last-child {
+    footer .mailchimp form:last-child {
       margin-right: 0; }
-    .mailchimp form #mc_embed_signup_scroll label {
+    footer .mailchimp form #mc_embed_signup_scroll label {
       font-family: "Flama", Helvetica, sans-serif;
       font-weight: normal; }
 

@@ -452,28 +452,33 @@ strong,
     letter-spacing: 0.065em;
 }
 
-.mailchimp {
+
+footer {
   
+  width:100%;
+  padding-left: 8.62069%;
   background-color: #504e51;
   
-  
-  form {
-    
-    margin-left: 8.62069%;
-    @include span-columns(3);
-    padding-left:0 !important;
-    
-    #mc_embed_signup_scroll {
+  .mailchimp {
+    form {
       
-      label {
+      
+      @include span-columns(3);
+      padding-left:0 !important;
+      
+      #mc_embed_signup_scroll {
         
-        font-family: $sans-serif;
-        font-weight:normal;
-        
+        label {
+          
+          font-family: $sans-serif;
+          font-weight:normal;
+          
+        }
       }
     }
   }
 }
+
 
 .resource-body {
   
