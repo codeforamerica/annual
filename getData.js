@@ -5,9 +5,9 @@ module.exports =
 
   function(callback) {
      var sheetUrl = 'https://docs.google.com/spreadsheets/d/1MJljMlCyf34BddJoFsCgkCFb3XpYD4bt_a-LDe_S3AA/pubhtml';
-    // the above is the live data site
-    // var sheetUrl = 'https://docs.google.com/spreadsheets/d/1m6BxCUb1nxf4dVNP3S8PFhUgalBNstpE3em83P2DC3I/pubhtml';
-    
+     // the above is the live data site
+     //var sheetUrl = 'https://docs.google.com/spreadsheets/d/1m6BxCUb1nxf4dVNP3S8PFhUgalBNstpE3em83P2DC3I/pubhtml'; //Phidens doc
+   
     var Sheet = {};
 
     // =====
@@ -50,12 +50,38 @@ module.exports =
       }); // end each sheets
 
       Sheet['created'] = new Date();
+      
+      deSerializePeopleObject(Sheet); //hack
+      
       callback(null,Sheet);
     };
 
     // =====
+    // deserealize string used for people object. hacky solution, but we cannot make a new table for it, so it will have to do
+    // =====
+    
+    function deSerializePeopleObject(dataObject){
+  		 //hack
+    
+		var categories = dataObject['categories'];
+	
+		for (index = 0, len = categories.length; index < len; ++index) {
+		
+			var category = categories[index];
+			
+			if(category['category'] == 'People'){
+		
+				var peopleObject = category['headline'];
+				category['headline'] = JSON.parse(peopleObject);
+			
+			}
+		}
+    }
+    
+	// =====
     // Create a unique key/value for an object from the first item
     // =====
+    
 
     function createUniqueId(object,columns) {
       // Get the first column, in order from the Google Sheet

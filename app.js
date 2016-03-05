@@ -31,6 +31,7 @@ function checkData(){
       getData(function(err,results){
         Report = results;
         console.log('We\'ve got data!');
+
       });
     }
   }
@@ -61,6 +62,7 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
 });
 
 app.get('/', function(req, res){
+
   res.render('index', {
     title: 'Home', //what does this do?
     type: 'home',
@@ -74,10 +76,12 @@ app.get('/', function(req, res){
 });
 
 app.get('/category/:id', function (req, res) {
-  if (req.params.id == 'people') {
-    res.render('people', {
-      title: 'People',
-      type: 'people',
+  
+  console.log(req.params.id);
+  if (req.params.id == 'about-us') {
+    res.render('about-us', {
+      title: 'about-us',
+      type: 'about-us',
       url: req.originalUrl,
       requested: req.params.id,
       data: Report,
@@ -98,6 +102,18 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
+  /*} else if (req.params.id == 'people') {
+    res.render('people', {
+      title: 'People',
+      type: 'people',
+      url: req.originalUrl,
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });*/
   } else if (req.params.id == 'updates') {
     res.render('updates', {
       title: 'Updates',
