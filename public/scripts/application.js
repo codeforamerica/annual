@@ -55,8 +55,8 @@ $(document).ready(function(){
       iconAnchor:   [10, 12], // point of the icon which will correspond to marker's location
       popupAnchor:  [0,-12] // point from which the popup should open relative to the iconAnchor
     });
-  
-    var map = L.map('map').setView([0.29114, 9.20654], 2);
+    
+    var map = L.map('map').setView([14.54637, 8.97583], 2);
     var layer = new L.StamenTileLayer("toner-lite");
         
     map.addLayer(layer);
