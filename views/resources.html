@@ -52,16 +52,12 @@
     <% });%>
     
     <div class="container">
-      <div class="timeline">
-        <ul class="timeline__times">
-          <% _.each(data['timeline'], function(entry){ %>
+      <div class="resources">
+        <ul class="resource-list">
+          <% _.each(data['resources'], function(resource){ %>
             <li>
-              <div class="timeline__month">
-                <p><%- entry['month'] %></p>
-              </div>
-              <div class="timeline__description">
-                <p><%- entry['description'] %></p>
-              </div>
+              <p><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></p>
+              <p><%- resource['description'] %></p>
             </li>
           <% }); %>
         </ul>
