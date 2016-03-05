@@ -2023,20 +2023,50 @@ a.supporters__image:hover {
   text-transform: uppercase;
   letter-spacing: 0.065em; }
 
-.mailchimp {
-  background-color: #504e51; }
-  .mailchimp form {
-    margin-left: 8.62069%;
+footer {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #504e51;
+  height: auto;
+  overflow: auto; }
+  footer .f-container {
     float: left;
     display: block;
     margin-right: 3.44828%;
     width: 22.41379%;
-    padding-left: 0 !important; }
-    .mailchimp form:last-child {
+    padding-left: 8.62069%;
+    height: auto;
+    overflow: auto; }
+    footer .f-container:last-child {
       margin-right: 0; }
-    .mailchimp form #mc_embed_signup_scroll label {
-      font-family: "Flama", Helvetica, sans-serif;
-      font-weight: normal; }
+  footer .press {
+    float: left;
+    display: block;
+    margin-right: 3.44828%;
+    width: 31.03448%; }
+    footer .press:last-child {
+      margin-right: 0; }
+    footer .press li {
+      list-style: none; }
+  footer .contact {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px; }
+  footer .mailchimp {
+    float: left;
+    display: block;
+    margin-right: 3.44828%;
+    width: 31.03448%; }
+    footer .mailchimp:last-child {
+      margin-right: 0; }
+    footer .mailchimp form {
+      background-color: #504e51;
+      padding-left: 0 !important; }
+      footer .mailchimp form #mc_embed_signup_scroll label {
+        font-family: "Flama", Helvetica, sans-serif;
+        font-weight: normal; }
 
 .resource-body {
   padding-top: 30px;

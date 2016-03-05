@@ -452,28 +452,66 @@ strong,
     letter-spacing: 0.065em;
 }
 
-.mailchimp {
+
+footer {
   
+  width:100%;
+  
+  padding-top:30px;
+  padding-bottom:30px;
   background-color: #504e51;
+  height:auto;
+  overflow:auto;
   
-  
-  form {
+  .f-container {
     
-    margin-left: 8.62069%;
     @include span-columns(3);
-    padding-left:0 !important;
+    padding-left: 8.62069%;
+    height:auto;
+    overflow: auto;
+  }
+  
+  .press {
     
-    #mc_embed_signup_scroll {
+    @include span-columns(4);
+    
+    li {
       
-      label {
+      list-style:none;
+    }
+  }
+  
+  .contact {
+    
+    clear:both;
+    width:100%;
+    text-align: center;
+    padding-top:30px;
+    
+  }
+  
+  .mailchimp {
+    
+    @include span-columns(4);
+
+    form {
+      
+      background-color: #504e51;
+      padding-left:0 !important;
+      
+      #mc_embed_signup_scroll {
         
-        font-family: $sans-serif;
-        font-weight:normal;
-        
+        label {
+          
+          font-family: $sans-serif;
+          font-weight:normal;
+          
+        }
       }
     }
   }
 }
+
 
 .resource-body {
   
