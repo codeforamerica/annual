@@ -80,6 +80,37 @@ $(document).ready(function(){
         
       }
     })
+    
+    //handle columns
+    
+    $("#chapter-list li").each(function(index) {
+      
+      //console.log(index);
+      //handle the categories that aren't chpaters -- hide
+      if(index <= 2) {
+        
+        $(this).addClass('hidden');
+      
+      } else if(index <= 13) {
+        
+        $(this).appendTo('#cc-0');
+        $(this).removeClass('hidden');
+        
+      } else if (index <= 24) {
+        
+        $(this).appendTo('#cc-1');
+        $(this).removeClass('hidden');
+         
+      } else {
+        
+        $(this).appendTo('#cc-2');
+        $(this).removeClass('hidden');
+        
+      }
+      
+      
+    })
+    
   } /* close map */
   
 }) 

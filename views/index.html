@@ -52,22 +52,35 @@
           
         </div>
         
-        <ul class="u-unstyled">
+        <ul class="u-unstyled" id='chapter-list'>
             
           <% _.each(data['categories'], function(category){ %>
         
-            <li>
+            <li class='hidden'>
               <p class='map-data'>
                 <a class="opener__body__contents__section" href="/category/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>">
                 <span class='chapter-name'><%- category['category'] %> </a>
-                located at: <span class='coordinates'><%- category['coordinates'] %></span>
+                <span class='coordinates hidden'><%- category['coordinates'] %></span>
         <% }); %></p>
             </li>
             
           </%>
         
         </ul>
+        
+        <ul class='u-unstyled chapter-columns' id='cc-0'>
+          
+          <span class='hidden'>list1</span>
+        </ul>
+        
+        <ul class='u-unstyled chapter-columns' id='cc-1'>
+          <span class='hidden'>list2</span>
+        </ul>
          
+        <ul class='u-unstyled chapter-columns' id='cc-2'>
+          <span class='hidden'>list3</span>
+        </ul>
+     
       </div>
       
     </div>

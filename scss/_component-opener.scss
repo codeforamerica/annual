@@ -257,3 +257,9 @@ a.opener__body__contents__section {
   margin-top:30px;
   padding-bottom:30px;
 }
+
+.chapter-columns {
+  
+  @include span-columns(4);
+  padding-top:30px;
+}

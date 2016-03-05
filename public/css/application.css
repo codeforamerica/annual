@@ -1415,6 +1415,15 @@ a.opener__body__contents__section {
   margin-top: 30px;
   padding-bottom: 30px; }
 
+.chapter-columns {
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 31.03448%;
+  padding-top: 30px; }
+  .chapter-columns:last-child {
+    margin-right: 0; }
+
 .next {
   margin-top: 0;
   float: left;
