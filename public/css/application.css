@@ -2038,4 +2038,15 @@ a.supporters__image:hover {
       font-family: "Flama", Helvetica, sans-serif;
       font-weight: normal; }
 
+.resource-body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  float: left;
+  display: block;
+  margin-right: 3.44828%;
+  width: 82.75862%;
+  margin-left: 8.62069%; }
+  .resource-body:last-child {
+    margin-right: 0; }
+
 /*# sourceMappingURL=application.css.map */
