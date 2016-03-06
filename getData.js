@@ -61,7 +61,7 @@ module.exports =
     // =====
     
     function deSerializePeopleObject(dataObject){
-  		 //hack
+  	//hack
     
 		var categories = dataObject['categories'];
 	
@@ -69,7 +69,7 @@ module.exports =
 		
 			var category = categories[index];
 			
-			if(category['category'] == 'People'){
+			if(category['category'] == 'About Us'){
 		
 				var peopleObject = category['headline'];
 				category['headline'] = JSON.parse(peopleObject);

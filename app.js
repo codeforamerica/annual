@@ -102,18 +102,7 @@ app.get('/category/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
-  /*} else if (req.params.id == 'people') {
-    res.render('people', {
-      title: 'People',
-      type: 'people',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });*/
+
   } else if (req.params.id == 'updates') {
     res.render('updates', {
       title: 'Updates',
