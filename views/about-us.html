@@ -94,7 +94,7 @@
 	  
 		
 		  %>		
-	   <article class="story u-small-spacing u-row">
+	   <article class="story u-small-spacing u-row" style="padding-bottom:35px;">
 		
 			
 				<div style="padding-left:30px;">
@@ -141,9 +141,49 @@
 				
 			
 			</div>
-				<% 
-				   } 
-				   %>
+				
+
+			  <% 
+			   } 
+			   %>
+				   
+			
+			
+					
+					
+							<!--regional leaders contact-->
+			<% 
+		
+			if(peopleGroupNameKey == "Regional Leaders Council"){
+			
+			%>
+			
+			
+				<h3 style="padding-left:10px;padding-top:20px;clear:both;line-height:1.3;">Want to start a chapter? Connect with others in your region? Contact your respective representative<br></h3>
+		
+			<% 
+				var contactRegionalRepsDictionaryStr = '{ 	"North America East": "naeast@openarchcollab.org", 	"North America South": "nasouth@openarchcollab.org", 	"North America Central": "nacentral@openarchcollab.org", 	"North America West": "nawest@openarchcollab.org", 	"Latin America": "latam@openarchcollab.org", 	"Europe": "europe@openarchcollab.org", 	"Africa": "africa@openarchcollab.org", 	"Oceania": "oceania@openarchcollab.org", 	"Middle East": "middleeast@openarchcollab.org" }';
+				
+				var contactRegionalRepsDictionary = JSON.parse(contactRegionalRepsDictionaryStr);
+				
+				 for (var contact in contactRegionalRepsDictionary) {
+					if (contactRegionalRepsDictionary.hasOwnProperty(contact)) {
+							var contactEmail = contactRegionalRepsDictionary[contact];
+
+			%>
+	
+							<li class="story__body__content__link" style="list-style-type:none;float:left;margin-right:20px;margin-top:10px;margin-left:5px;">
+		  
+								<a href="mailto:<%- contactEmail %>" class="story__body__content__link--header"><%- contact %></a>
+			
+							</li>
+			<% 				  
+					}
+				 }
+		  
+			}
+			%>
+                  	
 			
 			 <!-- end .story__body__content -->
 		
