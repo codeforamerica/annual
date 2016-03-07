@@ -55,8 +55,8 @@
                About the Open Architecture Collaborative 
               </p>
               <h3 style="color:white;padding-bottom:50px;">	
-              The Open Architecture Collaborative is a global network of local grassroots chapters delivering design advocacy, facilitation, assessment and small build services to their local marginalized communities. We joined forces as an independant umbrella organization in March of 2016 but our chapters have been in operation since 2005 under the previous name of Architecture for Humanity. We are governed by a group of regional leaders and our board of directors. We believe in ground up action, fueled by inclusive participation. 
-			</h3>
+              	The Open Architecture Collaborative is a global network of local grassroots chapters delivering design advocacy, facilitation, assessment and small build services to their local marginalized communities. We joined forces as an independant umbrella organization in March of 2016 but our chapters have been in operation since 2005 under the previous name of Architecture for Humanity. We are governed by a group of regional leaders and our board of directors. We believe in ground up action, fueled by inclusive participation. 
+			  </h3>
 	
               <!--<p><%- category['description'] %></p>-->
 
@@ -108,15 +108,15 @@
 					var person = peopleGroup[i];
 			
 				%>
-			 <div class="people_tile" style="padding:25px; float:left; width:300px; height:500px; border:thin #f1f1f1 ridge; margin:5px;">
+			 <div class="people_tile" style="margin:auto;padding:25px; float:left; width:250px; height:400px; border:thin #f1f1f1 ridge; margin:5px;">
 				
-				<div style=" width: 250px;     height: 250px;     position: relative;     overflow: hidden;     border-radius: 50%;">
+				<div style="margin:auto;width: 175px;	height: 175px;     position: relative;     overflow: hidden;     border-radius: 50%;">
 					<img style="height:auto;width:100%;" src="<%- person['avatarURL'] %>" alt="<%- person['name'] %>">
 				</div>
 				
 				<h3><%- person['name'] %></h3>
 				
-				<p style="margin-top:-10px;padding-top:15px;padding-bottom:15px;"><%- person['biography'] %></p>
+				<p style="margin-top:-10px;padding-top:15px;padding-bottom:15px;line-height:1.3;"><%- person['biography'] %></p>
 				
 				<!--twitter -->
 				<% if (person['twitter']){ %>
