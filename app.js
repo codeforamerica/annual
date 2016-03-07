@@ -75,7 +75,7 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/category/:id', function (req, res) {
+app.get('/:id', function (req, res) {
   
   console.log(req.params.id);
   if (req.params.id == 'about-us') {

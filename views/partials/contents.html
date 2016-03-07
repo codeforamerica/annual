@@ -17,7 +17,7 @@
             <% } %>
             <% if (category['updated'] == 'N') { %> hidden <% } %>
             ">
-              <a href="/category/<%- category['unique-id'] %>">
+              <a href="/<%- category['unique-id'] %>">
                 <div class="nav__contents__category"><p
                 style="border-bottom-color:<%- category['color'] %>;"
                 ><%- category['category'] %></p></div>

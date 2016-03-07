@@ -22,7 +22,7 @@
         <% if (category['unique-id'] == requested['unique-id']) { %>
         active
         <% } %>
-        "><a href="/category/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
+        "><a href="/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
       <% }); %>
     </ul>
   </nav>
