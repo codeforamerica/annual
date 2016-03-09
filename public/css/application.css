@@ -1522,6 +1522,11 @@ p.next__content__headline span {
 footer .mailchimp #mc_embed_signup input {
   color: black; }
 
+.conduct ul {
+  margin-top: 30px; }
+  .conduct ul li {
+    list-style: none; }
+
 .timeline {
   float: left;
   display: block;
