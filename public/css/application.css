@@ -1528,6 +1528,9 @@ p.next__content__headline span {
   border-bottom: 3px solid white;
   padding-bottom: 4px; }
 
+footer .mailchimp #mc_embed_signup input {
+  color: black; }
+
 .timeline {
   float: left;
   display: block;
@@ -2085,7 +2088,8 @@ footer {
       padding-left: 0 !important; }
       footer .mailchimp form #mc_embed_signup_scroll label {
         font-family: "Flama", Helvetica, sans-serif;
-        font-weight: normal; }
+        font-weight: normal;
+        color: #000 !important; }
 
 .resource-body {
   padding-top: 30px;

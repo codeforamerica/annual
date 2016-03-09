@@ -12,10 +12,8 @@
 .next * {
   color: white;
 
-  @include media($tablet) {
-    // text-align: center;
-  }
 }
+
 
 .next__content {
   @include span-columns(9 of 12);
@@ -112,4 +110,18 @@ p.next__content__headline {
 p.next__content__headline span {
   border-bottom: 3px solid white;
   padding-bottom: 4px;
+}
+
+footer {
+  
+  .mailchimp {
+    
+    #mc_embed_signup{
+      
+      input {
+        
+        color:black;
+      }
+    }
+  }
 }
