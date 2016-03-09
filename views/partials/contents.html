@@ -2,6 +2,9 @@
     <div class="nav__contents" id="js-contents">
       <ul class="u-unstyled">
           <li class="nav__contents__title">Pick a section:</li>
+          
+          <li class='nav__contents__title'><a href='https://www.razoo.com/us/story/Open-Architecture-Collaborative' target='_blank'>Donate to OAC</a></li>
+          
           <% if (data.opener) { %>
             <% opener = data.opener[0] %>
             <li><a href="/">
@@ -10,6 +13,7 @@
               </a>
             </li>
           <% } %>
+          
           <% _.each(data['categories'], function(category){ %>
             <li class="
             <% if (category['unique-id'] == requested['unique-id']) { %>
