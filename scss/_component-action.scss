@@ -8,11 +8,9 @@
   @include span-columns(10 of 12);
   @include shift(1 of 12);
   background-color: white;
-  box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.06);
   overflow: hidden;
-  background-color: $gray;
-  padding: $padding*1.5;
-  margin-bottom: $padding;
+  background-color: $gray;  
+  margin-bottom: $padding/4;
 
   * + * {
     margin-top: 0.5em;
@@ -30,6 +28,44 @@
     @include shift(0.5 of 12);
     margin-bottom: 0;
     margin-top: 3em;
+  }
+  
+  .cta {
+    
+    display:list-item;
+    text-align: left;
+    padding-bottom:0;
+    
+    li {
+      
+      padding-bottom: $padding/4;
+      
+      &:first-child {
+        
+        margin-left:0;
+      }
+      
+      &:last-child {
+        
+        margin-left:3px;
+      }
+      
+      vertical-align: top;
+      margin-top:0;
+      
+      .tf-button, .button {
+          
+          background-color: #e16941;
+          border-color: #e16941;
+        }
+        
+      a {
+        
+        margin-top:0;
+        
+        
+      }
+    }
   }
 }
 

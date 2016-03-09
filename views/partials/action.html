@@ -1,26 +1,14 @@
-<!--<% 
+<% 
   var action;
   action = _.sample(data['actions'], 1);
 %>
 
 <div class="action">
-  <div class="action__content">
-    <p class="action__content__callto"><%- action[0]['header'] %></p>
-    <h2><%- action[0]['description'] %></h2>
-    <p>
-    <% if (action[0]['link-1-text'] !== "") { %>
-      <a href="<%- action[0]['link-1-url'] %>" target="_blank"
-      onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action[0]['unique-id'] %> 1');">
-        <%- action[0]['link-1-text'] %>
-      </a>
-    <% } %>
-    <% if (action[0]['link-2-text'] !== "") { %>
-      <a href="<%- action[0]['link-2-url'] %>" target="_blank"
-      onclick="ga('send', 'event', 'Action Card', 'Click Link', '<%- action[0]['unique-id'] %> 2');">
-        <%- action[0]['link-2-text'] %>
-      </a>
-    <% } %>
-    </p>
-  </div>
-</div>-->
+  
+  <h3>Take action with the Open Architecture Collaborative</h3>
+  <ul class='cta'>
+    <li><a class='tf-button typeform-share' href="https://chapternetwork.typeform.com/to/K8KU76" data-mode="2" target="_blank">Volunteer</a></li>
+    <li><a class='tf-button typeform-share' href="https://chapternetwork.typeform.com/to/q1RNPf" data-mode="1" target="_blank">Request Services</a></li><li><a class='button' href='https://www.razoo.com/us/story/Open-Architecture-Collaborative' target="_blank">Donate</a></li>
+</ul>  
+</div>
 

@@ -25,9 +25,6 @@
     a.story__body__content__link--header,
     .story__body__content__opener__share ul li a:before,
     .story__body__content__opener__share p a:before,
-    .action {
-      background-color: <%- requested['color'] %>;
-    }
     .header-share-icons p a:before {
       color: <%- requested['color'] %>;
     }
@@ -170,10 +167,13 @@
           </article><!-- end .story -->
         <% } %>
       <% }); %>
+      
+      
     </div><!-- end .container -->
-
+    
   </section>
 </div>
+
 
 <% include partials/next.html %>
 <% include partials/footer.html %>
