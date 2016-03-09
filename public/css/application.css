@@ -544,7 +544,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #363537;
+  background-color: #504e51;
   z-index: 999;
   margin-top: 0;
   height: 60px; }
@@ -1219,7 +1219,7 @@ li.story__body__content__link--app a:before {
   position: relative; }
 
 .opener__header {
-  color: #363537;
+  color: #504e51;
   padding-top: 3em;
   padding-bottom: 7.5em;
   display: block; }
@@ -1475,7 +1475,7 @@ a.opener__body__contents__section {
         margin-right: 0; } }
 
 a.next__link {
-  background-color: #504e51;
+  background-color: #6a676b;
   padding-top: 4em;
   padding-bottom: 4em;
   display: block;
@@ -1825,11 +1825,9 @@ a.supporters__image:hover {
   width: 82.75862%;
   margin-left: 8.62069%;
   background-color: white;
-  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  background-color: #363537;
-  padding: 4.5em;
-  margin-bottom: 3em; }
+  background-color: #504e51;
+  margin-bottom: 0.75em; }
   .action:last-child {
     margin-right: 0; }
   .action * + * {
@@ -1851,6 +1849,23 @@ a.supporters__image:hover {
       margin-top: 3em; }
       .action:last-child {
         margin-right: 0; } }
+  .action .cta {
+    display: list-item;
+    text-align: left;
+    padding-bottom: 0; }
+    .action .cta li {
+      padding-bottom: 0.75em;
+      vertical-align: top;
+      margin-top: 0; }
+      .action .cta li:first-child {
+        margin-left: 0; }
+      .action .cta li:last-child {
+        margin-left: 3px; }
+      .action .cta li .tf-button, .action .cta li .button {
+        background-color: #e16941;
+        border-color: #e16941; }
+      .action .cta li a {
+        margin-top: 0; }
 
 .action * {
   color: white; }

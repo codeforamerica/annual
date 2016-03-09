@@ -1,4 +1,4 @@
-<header id="js-header" style="background-color:<%- darkColor %>">
+<header id="js-header">
   <div class="logo">
     <a href="/">
       <span class="logo__big"></span><span class="logo__small">OAC</span>
@@ -16,7 +16,7 @@
         <% } %>
         "><a href="/"><%- opener['category'] %></a></li>
       <% } %>
-
+      
       <% _.each(data['categories'], function(category){ %>
         <li class="u-row
         <% if (category['unique-id'] == requested['unique-id']) { %>
@@ -24,6 +24,8 @@
         <% } %>
         "><a href="/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
       <% }); %>
+      
+        
     </ul>
   </nav>
 </header>
