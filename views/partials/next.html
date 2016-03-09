@@ -5,6 +5,7 @@
     var links = [];
     var contact = '';
     var CoC = '';
+    var social = [];
     
     _.each(data['footer'], function(item) {
       
@@ -12,6 +13,10 @@
         
         links.push(item);
               
+      } else if (item['section'] == 'Social') {
+      
+        social.push(item);
+        
       } else if (item['section'] == 'Conduct') {
         
         CoC = item['link'];
@@ -64,6 +69,14 @@
     
     <div class='f-container conduct'>
       <h3><a href="<%- CoC %>">Code of Conduct</a></h3>
+      
+      <ul>
+        <% for(var i = 0 ; i < social.length; i++) { %>
+          
+          <li><a href="<%- social[i]['link'] %>" target="_blank"><%- social[i]['headline'] %></a></li>
+          
+        <% } %>
+      </ul>
     </div>
 
     <div class='contact'>
