@@ -21,12 +21,18 @@
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before,
-    .story:before,
-    a.story__body__content__link--header,
+    
+    .header-share-icons p a:before,
     .story__body__content__opener__share ul li a:before,
     .story__body__content__opener__share p a:before,
-    .header-share-icons p a:before {
+     {
       color: <%- requested['color'] %>;
+    }
+    
+    
+    .story:before {
+      
+      color:white;
     }
   </style>
 <% } %>
