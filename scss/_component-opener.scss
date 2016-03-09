@@ -111,15 +111,21 @@ $padding: 3em;
 // =====
 
 .opener__body {
+  
   padding-top: $padding/2;
   padding-bottom: $padding;
-  @include span-columns(8 of 12);
-  @include shift(2 of 12);
+  //@include span-columns(6 of 12);
+  //@include shift(3 of 12);
+  
+  p {
+    
+    padding-bottom:$padding/4;
+  }
 
-  @include media($medium-desktop) {
+ /* @include media($medium-desktop) {
     @include span-columns(10 of 12);
     @include shift(1 of 12);
-  }
+  }*/
 
   @include media($tablet) {
     padding-top: 0;
@@ -131,14 +137,21 @@ $padding: 3em;
 // =====
 
 .opener__body__text {
-  @include span-columns(7 of 12);
+  @include span-columns(8 of 12);
+  @include shift(2);
 
   @include media($tablet) {
     @include fill-parent();
   }
+  
+  @include media($mobile) {
+    
+    @include span-columns (11 of 12);
+    @include shift(0.5);
+  }
 }
 
-.opener__body__text div.first {
+/*.opener__body__text div.first {
   
   @include span-columns(20 of 12);
   clear: both;
@@ -152,11 +165,13 @@ $padding: 3em;
     @include fill-parent();
     padding-bottom: $padding/2;
   }
-}
+}*/
 
 .opener__body__text div.first * {
   color: $blue;
   font-size: $base-size * 1.2;
+  
+  @include span-columns(8 of 12);
 
   @include media($tablet) {
     font-size: $base-size;
@@ -167,7 +182,7 @@ $padding: 3em;
 
 .opener__body__text ul {
   
-  width:100%;
+ // width:100%;
  
   li {
     
@@ -195,7 +210,7 @@ $padding: 3em;
 // .opener__body__contents
 // =====
 
-.opener__body__contents {
+/*.opener__body__contents {
   @include span-columns(4.5 of 12);
   @include shift(0.5 of 12);
   padding-top: $padding*7;
@@ -207,13 +222,6 @@ $padding: 3em;
   }
 }
 
-.opener__body__contents:before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  //background-color: rgba(0,0,0,0.25);
-  display: block;
-}
 
 .opener__body__contents ul li {
   margin-top: 1em;
@@ -228,7 +236,7 @@ a.opener__body__contents__section {
 
 .opener__body__contents p {
   font-size: $base-size * 0.8;
-}
+}*/
 
 .opener-body-map {
   
@@ -238,9 +246,19 @@ a.opener__body__contents__section {
   padding-top:30px;
   z-index:6;  
   
+  @include span-columns(8 of 12);
+  @include shift(2);
+  
   #map {
     
     height:400px;
+  }
+  
+  @include media($mobile) {
+    
+    @include span-columns(10 of 12);
+    @include shift(1);
+  
   }
 }
 
@@ -248,10 +266,44 @@ a.opener__body__contents__section {
   
   margin-top:30px;
   padding-bottom:30px;
+  
+  
+  @include span-columns(8 of 12);
+  @include shift(2);
+  
+  height:auto;
+  overflow:auto;
+  
+  iframe {
+    
+    display:block;
+    width:100%;
+    min-height:475px;
+    overflow:auto;
+    
+    @include media($mobile) {
+      
+      min-height:auto;
+    }
+  }
+  
+  @include media($mobile) {
+    
+    width:100%;
+    margin:0;
+  }
 }
 
 .chapter-columns {
   
   @include span-columns(4);
   padding-top:30px;
+}
+
+.map-data {
+  
+  a {
+    
+    text-decoration: none;
+  }
 }
