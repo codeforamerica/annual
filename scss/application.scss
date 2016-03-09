@@ -51,7 +51,7 @@ $padding: 2em;
 
 
 $serif: "Flama", serif;
-$sans-serif: "Flama", Helvetica,sans-serif;
+$sans-serif: "Flama", serif;
 
 // =====
 // Imports
@@ -92,6 +92,7 @@ $sans-serif: "Flama", Helvetica,sans-serif;
 body {
   background-color: lighten(gray,60);
   font-size:16px; // 1 em
+  font-family: $serif;
 }
 
 // =====
@@ -423,6 +424,31 @@ strong,
       
       margin-right:4em;
     }
+  }
+  
+  @include media($mobile) {
+    
+    display:list-item;
+    list-style:none;
+    
+    li {
+      
+      display:list-item;
+      margin-top:15px;
+      margin-bottom:15px !important;
+      
+      &:first-child {
+        
+        margin-left:0;
+        
+      }
+      
+      &:last-child {
+        
+        margin-right:0; 
+      }
+    }
+    
   }
 }
 
