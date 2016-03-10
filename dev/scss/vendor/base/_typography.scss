@@ -15,20 +15,21 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  font-weight: 700;
 }
 
 h1 {
-  
+
   font-size:$base-font-size * 2;
 }
 
 h2 {
-  
+
   font-size:$base-font-size * 1.75;
 }
 
 h3 {
-  
+
   font-size:$base-font-size * 1.25;
 }
 p {

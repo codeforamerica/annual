@@ -24,7 +24,6 @@ $primary-color: $red;
 $secondary-color: $blue;
 $third-color: $green;
 
-
 $padding: 2em;
 
 // =====
@@ -36,17 +35,20 @@ $padding: 2em;
   src: url('/assets/fonts/Flama/Flama-Basic.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-Basic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-Basic.otf") format("opentype");
+}
 
+@font-face {
   font-family: 'Flama-Bold';
   src: url('/assets/fonts/Flama/Flama-Bold.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-Bold.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-Bold.otf") format("opentype");
+}
 
+@font-face {
   font-family: 'Flama-Italic';
   src: url('/assets/fonts/Flama/Flama-BasicItalic.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-BasicItalic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-BasicItalic.otf") format("opentype");
-
 }
 
 
@@ -91,7 +93,7 @@ $sans-serif: "Flama", serif;
 
 body {
   background-color: lighten(gray,60);
-  font-size:16px; // 1 em
+  font-size: 16px; // 1 em
   font-family: $serif;
 }
 
@@ -202,17 +204,16 @@ body.js-menu-open {
 // Base typography
 // =====
 
-$base-size: 16px;
+$base-size: 18px;
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: $sans-serif;
+  font-family: "Flama-bold";
   font-weight: 300;
   line-height: 1.5;
   color: $black;
 }
 
 h1 {
-
   font-size: 2em;
 
   @include media($medium-desktop) {
@@ -261,13 +262,10 @@ p {
 
 strong,
 .bold {
-
   font-family:'Flama-Bold';
-
 }
 
 .italic {
-
   font-family:'Flama-Italic';
 }
 
@@ -348,7 +346,6 @@ strong,
 // =====
 // CUSTOM: Changes for Garrett's AFH Network
 // =====
-
 
 .header-share-icons {
   position: relative;
@@ -455,20 +452,21 @@ strong,
 
 .tf-button,
 .button {
-
-    background-color:$blue;
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    color: #fff !important;
-    font-size:0.75em !important;
-    text-transform: uppercase;
-    letter-spacing: 0.065em;
+  background-color:$blue;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff !important;
+  font-size:0.75em !important;
+  // text-transform: uppercase;
+  letter-spacing: 0.065em;
 }
-
+.tf-button--extra-space {
+  margin-top: .5em;
+}
 
 footer {
 
