@@ -2301,4 +2301,32 @@ img {
     .update-billboard-contributor {
       margin-bottom: 0; } }
 
+.update-post p + p {
+  margin-top: 1em; }
+
+.update-post-contributor {
+  display: block;
+  float: left;
+  width: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  margin-right: 2em;
+  margin-bottom: 1.6em; }
+  .update-post-contributor p + p {
+    margin-top: 1em; }
+  .update-post-contributor p {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5); }
+  .update-post-contributor img {
+    margin-top: 0;
+    border-radius: 50%;
+    display: block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2em; }
+  @media screen and (max-width: 480px) {
+    .update-post-contributor {
+      width: 100%; } }
+
 /*# sourceMappingURL=application.css.map */

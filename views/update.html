@@ -1,0 +1,63 @@
+<%
+  var requested = _.findWhere(data['updates'], { 'unique-id' : requested });
+  var title = requested['headline'];
+  var color = '#cf6347';
+
+  function shadeColor(color, percent) {
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+  }
+
+  var darkColor = shadeColor(color, -0.3);
+%>
+
+<% include partials/header.html %>
+<% include partials/nav.html %>
+
+<% if (color) { %>
+  <style>
+    ul.story__body__content__links li a:before {
+      background-color: <%- color %>;
+    }
+    .story__body__header {
+      background-color: <%- color %>;
+    }
+  </style>
+<% } %>
+
+<div id="js-main">
+
+  <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
+
+      <div class="intro" style="background-color: <%- color %>">
+        <div class="container">
+        <div class="intro__content">
+          <p class="intro__content__overline">
+            Updates
+          </p>
+          <h1><%- requested['headline'] %></h1>
+          <% if (requested['description'] !== '') { %>
+            <p><%- requested['description'] %></p>
+          <% } %>
+          <div class="update-post-image">
+            <img src="<%- requested['postImage'] %>" />
+          </div>
+        </div>
+        </div><!-- end .container -->
+      </div><!-- end .intro -->
+
+      <div class="page-content update-post">
+        <div class="update-post-contributor">
+          <img src="<%- requested['authorImageLink'] %>" alt="">
+          <p>Posted by <%- requested['authorName'] %></p>
+          <p><%- requested['authorBio'] %></p>
+        </div>
+        <p><strong>Posted on <%- requested['date'] %></strong></p>
+        <%- requested['fullContent'] %>
+      </div>
+
+  </section>
+</div>
+
+<% include partials/next.html %>
+<% include partials/footer.html %>

@@ -76,7 +76,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/:id', function (req, res) {
-  
+
   console.log(req.params.id);
   if (req.params.id == 'about-us') {
     res.render('about-us', {
@@ -146,6 +146,19 @@ app.get('/story/:id', function (req, res) {
   res.render('story', {
     requested: req.params.id,
     type: 'story',
+    url: req.originalUrl,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
+app.get('/updates/:id', function (req, res) {
+  res.render('update', {
+    requested: req.params.id,
+    type: 'update',
     url: req.originalUrl,
     data: Report,
     partials: {

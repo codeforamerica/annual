@@ -651,3 +651,37 @@ img {
     margin-bottom: 0
   }
 }
+
+
+.update-post {
+  p + p {
+    margin-top: 1em;
+  }
+}
+.update-post-contributor {
+  display: block;
+  float: left;
+  width: 250px;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 1em;
+  margin-right: 2em;
+  margin-bottom: 1.6em;
+  p + p { margin-top: 1em; }
+  p {
+    font-size: 0.9em;
+    color: rgba(0,0,0,0.5);
+  }
+  img {
+    margin-top: 0;
+    border-radius: 50%;
+    display: block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2em;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}
