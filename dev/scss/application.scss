@@ -614,7 +614,7 @@ img {
     float: none;
   }
 }
-.update-billboard-kicker p {
+.update-billboard-kicker {
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Flama-Bold";
@@ -683,5 +683,23 @@ img {
 
   @include media($mobile) {
     width: 100%;
+  }
+}
+
+
+.update-billboard--homepage {
+  .update-billboard-image {
+    width: 40%;
+    padding-left: 1em;
+    @include media($tablet) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .update-billboard-content {
+    width: 60%;
+    @include media($tablet) {
+      width: 100%;
+    }
   }
 }

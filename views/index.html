@@ -37,6 +37,27 @@
 
       <div class="opener__body__text">
         <%- requested.description %>
+        <div class="opener__body__text__section">
+          <% _.each(data['updates'], function(update){ %>
+            <div class="update-billboard update-billboard--homepage">
+              <p class="update-billboard-kicker">Most recent updates</p>
+              <% if (update['postImage'] !== '') { %>
+                <div class="update-billboard-image">
+                  <img src="<%- update['postImage'] %>" />
+                </div>
+              <% } %>
+              <div class="update-billboard-content">
+                <h2><%- update['headline'] %></h2>
+                <div class="update-billboard-contributor">
+                  <img src="<%- update['authorImageLink'] %>" alt="">
+                  <p>Posted by <%- update['authorName'] %> on <%- update['date'] %></p>
+                </div>
+                <p><%- update['shortDescription'] %></p>
+                <p><a href="/updates/<%- update['unique-id'] %>">Read the full post</a></p>
+              </div>
+            </div>
+          <% }); %>
+        </div>
       </div>
 
       <div class='video-embed'>
