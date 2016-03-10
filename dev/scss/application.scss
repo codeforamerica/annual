@@ -14,7 +14,7 @@ $red: #cf1b41;
 $green: #3e5641;
 $gray: #504e51;
 $blue: #004b6a;
-$orange: #e16941;
+$orange: #e16942;
 
 
 $background-tint: #ddd;
@@ -36,17 +36,17 @@ $padding: 2em;
   src: url('/assets/fonts/Flama/Flama-Basic.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-Basic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-Basic.otf") format("opentype");
-       
+
   font-family: 'Flama-Bold';
   src: url('/assets/fonts/Flama/Flama-Bold.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-Bold.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-Bold.otf") format("opentype");
-       
+
   font-family: 'Flama-Italic';
   src: url('/assets/fonts/Flama/Flama-BasicItalic.otf'); /* IE9 Compat Modes */
   src: url('/assets/fonts/Flama/Flama-BasicItalic.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url("/assets/fonts/Flama/Flama-BasicItalic.otf") format("opentype");
-       
+
 }
 
 
@@ -81,9 +81,9 @@ $sans-serif: "Flama", serif;
 }
 
 .hidden {
-  
+
   display:none;
-  
+
 }
 // =====
 // Color the body a little
@@ -212,7 +212,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  
+
   font-size: 2em;
 
   @include media($medium-desktop) {
@@ -261,13 +261,13 @@ p {
 
 strong,
 .bold {
-  
+
   font-family:'Flama-Bold';
-  
+
 }
 
 .italic {
-  
+
   font-family:'Flama-Italic';
 }
 
@@ -402,7 +402,7 @@ strong,
 }
 
 .cta {
-  
+
   display:flex;
   justify-content: space-between;
   text-align: center;
@@ -410,52 +410,52 @@ strong,
   padding-left:0 !important;
   padding-top:30px;
   padding-bottom:30px;
-  
+
   li {
-    
+
     display:inline-block;
     list-style: none;
-    
+
     &:first-child {
-      
+
       margin-left:4em;
     }
-    
+
     &:last-child {
-      
+
       margin-right:4em;
     }
   }
-  
+
   @include media($mobile) {
-    
+
     display:list-item;
     list-style:none;
-    
+
     li {
-      
+
       display:list-item;
       margin-top:15px;
       margin-bottom:15px !important;
-      
+
       &:first-child {
-        
+
         margin-left:0;
-        
+
       }
-      
+
       &:last-child {
-        
-        margin-right:0; 
+
+        margin-right:0;
       }
     }
-    
+
   }
 }
 
 .tf-button,
 .button {
-  
+
     background-color:$blue;
     display: inline-block;
     text-decoration: none;
@@ -471,55 +471,55 @@ strong,
 
 
 footer {
-  
+
   width:100%;
-  
+
   padding-top:30px;
   padding-bottom:30px;
   background-color: #504e51;
   height:auto;
   overflow:auto;
-  
+
   .f-container {
-    
+
     @include span-columns(3);
     padding-left: 8.62069%;
     height:auto;
     overflow: auto;
   }
-  
+
   .press {
-    
+
     @include span-columns(4);
-    
+
     li {
-      
+
       list-style:none;
     }
   }
-  
+
   .contact {
-    
+
     clear:both;
     width:100%;
     text-align: center;
     padding-top:30px;
-    
+
   }
-  
+
   .mailchimp {
-    
+
     @include span-columns(4);
 
     form {
-      
+
       background-color: #504e51;
       padding-left:0 !important;
-      
+
       #mc_embed_signup_scroll {
-        
+
         label {
-          
+
           font-family: $sans-serif;
           font-weight:normal;
           color:#000 !important;
@@ -531,7 +531,7 @@ footer {
 
 
 .resource-body {
-  
+
   padding-top:30px;
   padding-bottom:30px;
   @include span-columns(10 of 12);
