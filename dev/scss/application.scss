@@ -527,12 +527,57 @@ footer {
   }
 }
 
-
-.resource-body {
-
+// A default content wrapper
+.page-content {
   padding-top:30px;
   padding-bottom:30px;
-  @include span-columns(10 of 12);
-  @include shift(1 of 12);
+  @include span-columns(8 of 12);
+  @include shift(2 of 12);
 
+  @include media($tablet) {
+    @include span-columns(10 of 12);
+    @include shift(1 of 12);
+  }
+}
+
+img {
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+// Resource item
+.resource-item {
+  @include clearfix();
+}
+.resource-item + .resource-item {
+  margin-top: 2em;
+}
+.resource-item-icon {
+  display: block;
+  float: left;
+  width: 80px;
+  margin-right: 1em;
+  img {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  @include media($tablet) {
+    float: none;
+    clear: both;
+    width: 50px;
+    img {
+      margin-bottom: 0;
+    }
+  }
+}
+.resource-item--with-icon .resource-item-content {
+  display: block;
+  width: calc(100% - 80px - 1em);
+  float: right;
+  @include media($tablet) {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
 }

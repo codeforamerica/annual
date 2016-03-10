@@ -1,12 +1,12 @@
-<% 
+<%
   var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
   var hero = data['resources'][0];
 
   console.log('resources:', hero.url);
-  
-  function shadeColor(color, percent) {   
+
+  function shadeColor(color, percent) {
     var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
   }
@@ -29,13 +29,15 @@
 <% } %>
 
 <div id="js-main">
-  
-  
+
+
   <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
-    
+
+    <!--
     <div class="opener__image">
-  <img src="<%- hero.url %>" alt="">
-</div>
+      <img src="<%- hero.url %>" alt="">
+    </div>
+    -->
 
     <% _.each(data['categories'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
@@ -51,31 +53,38 @@
               <p class="intro__content__overline">
                 <%- category['category'] %>
               </p>
-              
+
               <h1><%- category['headline'] %></h1>
-              <p><%- category['description'] %></p> 
-              
             </div>
 
           </div><!-- end .container -->
-          
         </div><!-- end .intro -->
-        
+
+      <div class="page-content">
+        <%- category['description'] %>
+      </div>
+
       <% } %>
     <% });%>
-    
-    <div class="resource-body">
-      <ul class="resource-list">
-        <% _.each(data['resources'], function(resource){ %>
-          <li>
-            <p><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></p>
+
+    <div class="resource-body page-content">
+      <% _.each(data['resources'], function(resource){ %>
+        <div class="resource-item <%  if (resource['iconUrl'] !== '') { %>resource-item--with-icon<% } %>">
+          <%  if (resource['iconUrl'] !== '') { %>
+            <div class="resource-item-icon">
+              <img src="<%- resource['iconUrl'] %>" alt="">
+            </div>
+          <% } %>
+          <div class="resource-item-content">
+            <h3><a href='<%-resource["url"] %>'><%- resource['headline'] %></a></h3>
             <p><%- resource['description'] %></p>
-          </li>
-        <% }); %>
-      </ul>
+            <p><a href="<%-resource["url"] %>">Read this resource</a></p>
+          </div>
+        </div>
+      <% }); %>
     </div><!-- end .resource-body -->
   </section>
-  
+
 </div> <!-- close #js-main -->
 
 <% include partials/next.html %>
