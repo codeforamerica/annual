@@ -1,9 +1,9 @@
-<% 
+<%
   var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
 
-  function shadeColor(color, percent) {   
+  function shadeColor(color, percent) {
     var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
   }
@@ -26,44 +26,52 @@
 <% } %>
 
 <div id="js-main">
-  
+
   <section class="stories" id="<%- requested['unique-id'] %>" style="padding-bottom:0;">
 
     <% _.each(data['categories'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
-        <div class="intro" style="
-          <% if (category['color']) { %>
-            background-color: <%- category['color'] %>;
-          <% } %>
-        ">
-
+      <div class="intro" style="
+        <% if (category['color']) { %>
+        background-color: <%- category['color'] %>;
+        <% } %>
+      ">
         <div class="container">
+        <div class="intro__content">
+          <p class="intro__content__overline">
+            <%- category['category'] %>
+          </p>
+          <h1><%- category['headline'] %></h1>
+          <% if (category['description'] !== '') { %>
+            <p><%- category['description'] %></p>
+          <% } %>
+        </div>
+        </div><!-- end .container -->
+      </div><!-- end .intro -->
 
-            <div class="intro__content">
-              <p class="intro__content__overline">
-                <%- category['category'] %>
-              </p>
-              <h1><%- category['headline'] %></h1>
-              <p><%- category['description'] %></p> 
+      <div class="page-content">
+        <% _.each(data['updates'], function(update){ %>
+          <div class="update-billboard">
+            <div class="update-billboard-content">
+              <h2><%- update['headline'] %></h2>
+              <div class="update-billboard-contributor">
+                <img src="<%- update['authorImageLink'] %>" alt="">
+                <p>Posted by <%- update['authorName'] %> on <%- update['date'] %></p>
+              </div>
+              <p><%- update['shortDescription'] %></p>
+              <p><a href="/updates/<%- update['unique-id'] %>">Read the full post</a></p>
             </div>
-
-          </div><!-- end .container -->
-          
-         </div><!-- end .intro -->
-          <div class="resource-body">
-            <ul class="resource-list">
-              <% _.each(data['updates'], function(update){ %>
-                <h1><%- update['headline'] %></h1>
-                  <p class='datestamp'><%- update['date'] %></p>
-                  <p><%- update['content'] %></p>
-              <% }); %>
-            </ul>
-          </div><!-- end .resource-body -->
-          
-       
+            <% if (update['postImage'] !== '') { %>
+              <div class="update-billboard-image">
+                <img src="<%- update['postImage'] %>" />
+              </div>
+            <% } %>
+          </div>
+        <% }); %>
+      </div>
       <% } %>
     <% });%>
-    
+
   </section>
 </div>
 

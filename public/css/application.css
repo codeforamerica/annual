@@ -2240,4 +2240,60 @@ img {
       float: none;
       clear: both; } }
 
+.update-billboard-image {
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 3.4482758621%;
+  width: 48.275862069%; }
+  .update-billboard-image:last-child {
+    margin-right: 0; }
+  .update-billboard-image img {
+    margin-top: 0; }
+
+.update-billboard-content {
+  float: left;
+  display: block;
+  margin-right: 3.4482758621%;
+  width: 48.275862069%; }
+  .update-billboard-content:last-child {
+    margin-right: 0; }
+  .update-billboard-content * + * {
+    margin-top: .5em; }
+  .update-billboard-content h2 {
+    margin-top: 0; }
+
+.update-billboard-kicker p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Flama-Bold";
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9em;
+  margin-bottom: .2em; }
+
+.update-billboard-contributor {
+  display: block;
+  width: 100%;
+  clear: both;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: -.5em; }
+  .update-billboard-contributor::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .update-billboard-contributor img {
+    display: block;
+    float: left;
+    border-radius: 50%;
+    width: 60px;
+    height: auto; }
+  .update-billboard-contributor p {
+    display: block;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 25px;
+    left: 70px; }
+
 /*# sourceMappingURL=application.css.map */

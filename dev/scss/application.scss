@@ -581,3 +581,57 @@ img {
     clear: both;
   }
 }
+
+// Update billboard
+.update-billboard {
+
+}
+.update-billboard-image {
+  display: block;
+  @include span-columns(6 of 12);
+  img {
+    margin-top: 0;
+  }
+}
+.update-billboard-content {
+  @include span-columns(6 of 12);
+  * + * {
+    margin-top: .5em;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+.update-billboard-kicker p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Flama-Bold";
+  color: rgba(0,0,0,0.5);
+  font-size: 0.9em;
+  margin-bottom: .2em;
+}
+.update-billboard-contributor {
+  display: block;
+  width: 100%;
+  clear: both;
+  @include clearfix();
+  position: relative;
+  margin-top: 0;
+  margin-bottom: -.5em;
+
+  img {
+    display: block;
+    float: left;
+    border-radius: 50%;
+    width: 60px;
+    height: auto;
+  }
+  p {
+    display: block;
+    font-size: 0.9em;
+    color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 25px;
+    left: 70px;
+  }
+}
