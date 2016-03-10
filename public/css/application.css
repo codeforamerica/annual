@@ -2242,26 +2242,28 @@ img {
 
 .update-billboard-image {
   display: block;
-  float: left;
-  display: block;
-  margin-right: 3.4482758621%;
-  width: 48.275862069%; }
-  .update-billboard-image:last-child {
-    margin-right: 0; }
+  width: 50%;
+  padding-left: 1em;
+  float: right; }
   .update-billboard-image img {
     margin-top: 0; }
+  @media screen and (max-width: 750px) {
+    .update-billboard-image {
+      width: 100%;
+      padding: 0;
+      float: none; } }
 
 .update-billboard-content {
-  float: left;
-  display: block;
-  margin-right: 3.4482758621%;
-  width: 48.275862069%; }
-  .update-billboard-content:last-child {
-    margin-right: 0; }
+  width: 50%;
+  float: left; }
   .update-billboard-content * + * {
     margin-top: .5em; }
   .update-billboard-content h2 {
     margin-top: 0; }
+  @media screen and (max-width: 750px) {
+    .update-billboard-content {
+      width: 100%;
+      float: none; } }
 
 .update-billboard-kicker p {
   text-transform: uppercase;
@@ -2295,5 +2297,8 @@ img {
     position: absolute;
     top: 25px;
     left: 70px; }
+  @media screen and (max-width: 750px) {
+    .update-billboard-contributor {
+      margin-bottom: 0; } }
 
 /*# sourceMappingURL=application.css.map */

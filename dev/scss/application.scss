@@ -588,18 +588,30 @@ img {
 }
 .update-billboard-image {
   display: block;
-  @include span-columns(6 of 12);
+  width: 50%;
+  padding-left: 1em;
+  float: right;
   img {
     margin-top: 0;
   }
+  @include media($tablet) {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
 }
 .update-billboard-content {
-  @include span-columns(6 of 12);
+  width: 50%;
+  float: left;
   * + * {
     margin-top: .5em;
   }
   h2 {
     margin-top: 0;
+  }
+  @include media($tablet) {
+    width: 100%;
+    float: none;
   }
 }
 .update-billboard-kicker p {
@@ -633,5 +645,9 @@ img {
     position: absolute;
     top: 25px;
     left: 70px;
+  }
+
+  @include media($tablet) {
+    margin-bottom: 0
   }
 }
