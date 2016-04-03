@@ -46,6 +46,14 @@ app.use(express.static('public'));
 // Routes
 // =====
 
+
+app.get('/update', function (req, res) {
+  checkData();
+  res.send('Updating data...');
+});
+
+
+
 app.get(['/','/category/:id','/story/:id'], function(req, res, next){
   if (_.isEmpty(Report)) {
     res.render('error/loading', {
@@ -168,10 +176,7 @@ app.get('/updates/:id', function (req, res) {
   });
 });
 
-app.get('/update', function (req, res) {
-  checkData();
-  res.send('Updating data...');
-});
+
 
 // =====
 // Error handling
