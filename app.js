@@ -129,7 +129,7 @@ app.get('/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
- } else if (req.params.id.endsWith('page')) {  
+ } else if (endsWith(req.params.id, 'page')) {  
     res.render('htmlpage', {
       title: 'OAC',
       type: 'htmlpage',
