@@ -123,6 +123,18 @@ app.get('/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
+ } else if (req.params.id.endsWith('page')) {  
+    res.render('htmlpage', {
+      title: 'OAC',
+      type: 'htmlpage',
+      url: req.originalUrl,
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
   /* } else if (req.params.id == 'what-you-can-do') {
     res.render('closer', {
       title: 'What You Can Do',
