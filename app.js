@@ -14,6 +14,12 @@ getData(function(err,results){
   Report = results;
 });
 
+
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+
 function checkData(){
   if (_.isEmpty(Report)) {
     getData(function(err,results){
