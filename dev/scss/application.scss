@@ -584,7 +584,10 @@ img {
 
 // Update billboard
 .update-billboard {
-
+  @include clearfix();
+}
+.update-billboard + .update-billboard {
+  margin-top: 2em;
 }
 .update-billboard-image {
   display: block;
