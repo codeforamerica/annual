@@ -129,7 +129,7 @@ app.get('/:id', function (req, res) {
         footer: 'partials/footer'
       }
     });
- } else if (endsWith(req.params.id, 'page')) {  
+ } else if (endsWith(req.params.id, 'page')) {
     res.render('htmlpage', {
       title: 'OAC',
       type: 'htmlpage',
@@ -173,6 +173,21 @@ app.get('/story/:id', function (req, res) {
     requested: req.params.id,
     type: 'story',
     url: req.originalUrl,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
+// Get a page
+app.get('/page/:id', function (req, res) {
+  res.render('htmlpage', {
+    title: 'OAC',
+    type: 'htmlpage',
+    url: req.originalUrl,
+    requested: req.params.id,
     data: Report,
     partials: {
       header: 'partials/header',
