@@ -1,4 +1,4 @@
-<% 
+<%
 
   var meta_description,
       meta_url,
@@ -19,12 +19,12 @@
 
   if (type == "category")
   {
-    meta_image = _.findWhere(data['categories'], requested['unique-id']);
+    meta_image = _.findWhere(data['chapters'], requested['unique-id']);
     meta_image = _.findWhere(data['stories'], meta_image['category']);
     meta_image = meta_image['image-link'];
     meta_image = 'http://beta.afhnetwork.org' + meta_image;
   }
-  else 
+  else
   {
     meta_image = 'http://beta.afhnetwork.org/assets/images/defaults/default.jpg';
   }

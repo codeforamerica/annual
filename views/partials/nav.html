@@ -16,16 +16,17 @@
         <% } %>
         "><a href="/"><%- opener['category'] %></a></li>
       <% } %>
-      
-      <% _.each(data['categories'], function(category){ %>
+
+      <% var pages = _.union(data['pages'],data['chapters']) %>
+      <% _.each(pages, function(category){ %>
         <li class="u-row
         <% if (category['unique-id'] == requested['unique-id']) { %>
         active
         <% } %>
         "><a href="/<%- category['unique-id'] %>"><%- category['category'] %></a></li>
       <% }); %>
-      
-        
+
+
     </ul>
   </nav>
 </header>
