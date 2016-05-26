@@ -52,14 +52,13 @@ app.use(express.static('public'));
 // Routes
 // =====
 
-
+// Force a data update
 app.get('/update', function (req, res) {
   checkData();
   res.send('Updating data...');
 });
 
-
-
+// Check if the data is valid on all routes before handing
 app.get(['/','/category/:id','/story/:id'], function(req, res, next){
   if (_.isEmpty(Report)) {
     res.render('error/loading', {
@@ -75,8 +74,8 @@ app.get(['/','/category/:id','/story/:id'], function(req, res, next){
   }
 });
 
-app.get('/', function(req, res){
-
+// Get the homepage
+app.get('/', function(req, res) {
   res.render('index', {
     title: 'Home', //what does this do?
     type: 'home',
@@ -89,85 +88,48 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/:id', function (req, res) {
-
-  console.log(req.params.id);
-  if (req.params.id == 'about-us') {
-    res.render('about-us', {
-      title: 'about-us',
-      type: 'about-us',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });
-  } else if (req.params.id == 'resources') {
-    res.render('resources', {
-      title: 'Resources',
-      type: 'resources',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });
-
-  } else if (req.params.id == 'updates') {
-    res.render('updates', {
-      title: 'Updates',
-      type: 'updates',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });
- } else if (endsWith(req.params.id, 'page')) {
-    res.render('htmlpage', {
-      title: 'OAC',
-      type: 'htmlpage',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });
-  /* } else if (req.params.id == 'what-you-can-do') {
-    res.render('closer', {
-      title: 'What You Can Do',
-      type: 'closer',
-      url: req.originalUrl,
-      requested: req.params.id,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer',
-        charts: 'partials/charts'
-      }
-    });*/
-  } else {
-    res.render('category', {    // categories are the individual chapter pages
-      requested: req.params.id,
-      type: 'category',
-      url: req.originalUrl,
-      data: Report,
-      partials: {
-        header: 'partials/header',
-        footer: 'partials/footer'
-      }
-    });
-  }
+// Get various static pages with custom templates
+app.get('/about-us', function(req, res) {
+  res.render('about-us', {
+    title: 'about-us',
+    type: 'about-us',
+    url: req.originalUrl,
+    requested: 'about-us',
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+app.get('/resources', function(req, res) {
+  res.render('resources', {
+    title: 'Resources',
+    type: 'resources',
+    url: req.originalUrl,
+    requested: 'resources',
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+app.get('/updates', function(req, res, next) {
+  res.render('updates', {
+    title: 'Updates',
+    type: 'updates',
+    url: req.originalUrl,
+    requested: 'updates',
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
 });
 
+// Get a specific story
 app.get('/story/:id', function (req, res) {
   res.render('story', {
     requested: req.params.id,
@@ -181,21 +143,7 @@ app.get('/story/:id', function (req, res) {
   });
 });
 
-// Get a page
-app.get('/page/:id', function (req, res) {
-  res.render('htmlpage', {
-    title: 'OAC',
-    type: 'htmlpage',
-    url: req.originalUrl,
-    requested: req.params.id,
-    data: Report,
-    partials: {
-      header: 'partials/header',
-      footer: 'partials/footer'
-    }
-  });
-});
-
+// Get a specific update
 app.get('/updates/:id', function (req, res) {
   res.render('update', {
     requested: req.params.id,
@@ -209,7 +157,59 @@ app.get('/updates/:id', function (req, res) {
   });
 });
 
+// Try to dynamically route to the right chapter, if available
+app.get('/:id', function (req, res, next) {
+  // Try to find this ID in the chapters page
+  var requested = _.findWhere(Report['chapters'], { 'unique-id' : req.params.id });
+  // If requested is an object, that means there is a chapter with this ID. Return it.
+  if (typeof(requested) === "object") {
+    res.render('category', {    // categories are the individual chapter pages
+      requested: req.params.id,
+      type: 'category',
+      url: req.originalUrl,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
+  }
+  // Otherwise, next route
+  else {
+    next();
+  }
+});
 
+// Try to dynamically route to the right custom page, if available
+app.get('/:id', function (req, res, next) {
+  // Try to find this ID in the pages page
+  var requested = _.findWhere(Report['pages'], { 'unique-id' : req.params.id });
+  // If requested is an object, that means there is a page with this ID. Return it.
+  if (typeof(requested) === "object") {
+    res.render('htmlpage', {
+      title: 'OAC',
+      type: 'htmlpage',
+      url: req.originalUrl,
+      requested: req.params.id,
+      data: Report,
+      partials: {
+        header: 'partials/header',
+        footer: 'partials/footer'
+      }
+    });
+  }
+  // Otherwise, next route
+  else {
+    next();
+  }
+});
+
+// Last route to catch on this ... we couldn't find anything so serve a 404
+app.get('/:id', function (req, res) {
+  res.status(404).render('error/404', {
+   url: req.originalUrl,
+  });
+});
 
 // =====
 // Error handling

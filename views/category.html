@@ -1,7 +1,7 @@
 <!-- this template is the pages for all the chapters -->
 
 <%
-  var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
+  var requested = _.findWhere(data['chapters'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
 
@@ -21,17 +21,17 @@
 <% if (requested['color']) { %>
   <style>
     ul.story__body__content__links li a:before,
-    
+
     .header-share-icons p a:before,
     .story__body__content__opener__share ul li a:before,
     .story__body__content__opener__share p a:before,
      {
       color: <%- requested['color'] %>;
     }
-    
-    
+
+
     .story:before {
-      
+
       color:white;
     }
   </style>
@@ -39,10 +39,10 @@
 
 <div id="js-main">
   <% include partials/nav.html %>
-  
+
   <section class="stories" id="{{ page.unique-id }}">
 
-    <% _.each(data['categories'], function(category){ %>
+    <% _.each(data['chapters'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
         <div class="intro" style="
           <% if (category['color']) { %>
@@ -58,8 +58,8 @@
               </p>
               <h1><%- category['headline'] %></h1>
               <!--<p><%- category['description'] %></p>-->
-              
-              
+
+
               <!-- CUSTOM FOR GARRETT'S AFH -->
               <div class="header-share-icons">
                 <% if (category['twitter']) { %>
@@ -87,7 +87,7 @@
         <% if (story['category'] == requested['category']) { %>
 
           <% which_story++ %>
-          
+
           <article class="story u-small-spacing u-row" id="<%- story['unique-id'] %>">
             <div class="story__image" style="background-image:url('<%- story['image-link'] %>');">
             </div>
@@ -131,35 +131,35 @@
                 </ul>
 
                 <ul class="story__body__content__links u-unstyled u-row">
-                  
+
                   <li class="story__body__content__link--<%- story['link-1-type'] %>">
-                    
+
                     <% if (story['link-1-description']) { %>
                       <p class="story__body__content__link--link"><%- story['link-1-description'] %></p>
                       <p><a href="<%- story['link-1-url'] %>" class="story__body__content__link--header"><%- story['link-1-header'] %></a></p>
-                    
+
                     <% } %>
-                    
+
                     </li>
-                  
+
                     <li class="story__body__content__link--<%- story['link-2-type'] %>">
-                    
+
                     <% if (story['link-2-description']) { %>
                         <p class="story__body__content__link--link"><%- story['link-2-description'] %></p>
                         <p><a href="<%- story['link-2-url'] %>" class="story__body__content__link--header"><%- story['link-2-header'] %></a></p>
-                      
+
                     </li>
                   <% } %>
-                  
+
                   <li class="story__body__content__link--<%- story['link-3-type'] %>">
-                  
-                    <% if (story['link-3-description']) { %> 
+
+                    <% if (story['link-3-description']) { %>
                       <p class="story__body__content__link--link"><%- story['link-3-description'] %></p>
                       <p><a href="<%- story['link-3-url'] %>" class="story__body__content__link--header"><%- story['link-3-header'] %></a></p>
                     <% } %>
-                    
+
                   </li>
-                  
+
                 </ul>
 
                 <% if (story['photo-credit']) { %>
@@ -173,14 +173,13 @@
           </article><!-- end .story -->
         <% } %>
       <% }); %>
-      
-      
+
+
     </div><!-- end .container -->
-    
+
   </section>
 </div>
 
 
 <% include partials/next.html %>
 <% include partials/footer.html %>
-  

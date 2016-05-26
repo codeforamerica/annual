@@ -1,7 +1,7 @@
 <!-- this template is the pages for all the chapters -->
 
 <%
-  var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
+  var requested = _.findWhere(data['pages'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
 
@@ -37,10 +37,10 @@
 
 <div id="js-main">
   <% include partials/nav.html %>
-  
+
   <section class="stories" id="{{ page.unique-id }}">
 
-    <% _.each(data['categories'], function(category){ %>
+    <% _.each(data['pages'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
         <div class="intro" style="
           <% if (category['color']) { %>
@@ -52,12 +52,12 @@
 
             <div class="intro__content">
               <p class="intro__content__overline">
-               About the Open Architecture Collaborative 
+               About the Open Architecture Collaborative
               </p>
-              <h3 style="color:white;padding-bottom:50px;">	
-              	The Open Architecture Collaborative is a global network of local grassroots chapters delivering design advocacy, facilitation, assessment and small build services to their local marginalized communities. We joined forces as an independant umbrella organization in March of 2016 but our chapters have been in operation since 2005 under the previous name of Architecture for Humanity. We are governed by a group of regional leaders and our board of directors. We believe in ground up action, fueled by inclusive participation. 
+              <h3 style="color:white;padding-bottom:50px;">
+              	The Open Architecture Collaborative is a global network of local grassroots chapters delivering design advocacy, facilitation, assessment and small build services to their local marginalized communities. We joined forces as an independant umbrella organization in March of 2016 but our chapters have been in operation since 2005 under the previous name of Architecture for Humanity. We are governed by a group of regional leaders and our board of directors. We believe in ground up action, fueled by inclusive participation.
 			  </h3>
-	
+
               <!--<p><%- category['description'] %></p>-->
 
 
@@ -84,144 +84,145 @@
     <% });%>
 
 	<div class="container">
-	   <% _.each(data['categories'], function(category){ %>
+	   <% _.each(data['pages'], function(category){ %>
 	   <% if (category['unique-id'] == requested['unique-id']) { %>
-	   <% 
-		  var peoplesObject = category['headline'];
-	  
+	   <%
+		  var peoplesObject = JSON.parse(category['headline']);
+      debugger;
+
 		  for (var peopleGroupNameKey in peoplesObject) {
 			if (peoplesObject.hasOwnProperty(peopleGroupNameKey)) {
-	  
-		
-		  %>		
+
+
+		  %>
 	   <article class="story u-small-spacing u-row" style="padding-bottom:35px;">
-		
-			
+
+
 				<div style="padding-left:30px;">
 				   <h1 style="font-size:3em;font-weight:bold;color:#e16941;"><%- peopleGroupNameKey %></h1>
 				</div>
-			
-			 <%		
+
+			 <%
 				var peopleGroup = peoplesObject[peopleGroupNameKey];
-			
-				for (var i = 0; i < peopleGroup.length; i++) { 
+
+				for (var i = 0; i < peopleGroup.length; i++) {
 					var person = peopleGroup[i];
-			
+
 				%>
 			 <div class="people_tile" style="margin:auto;padding:25px; float:left; width:250px; height:440px; border:thin #f1f1f1 ridge; margin:5px;">
-				
+
 				<div style="margin:auto;	width: 175px;	height: 175px;     position: relative;     overflow: hidden;     border-radius: 50%; ">
 					<img style="height:auto;width:100%;margin-top:0px;" src="<%- person['avatarURL'] %>" alt="<%- person['name'] %>">
 				</div>
-				
+
 				<h3 style="margin-top:25px;line-height:1.3;"><%- person['name'] %></h3>
-				
+
 				<p style="margin-top:-5px;padding-top:15px;padding-bottom:15px;line-height:1.3;"><%- person['biography'] %></p>
-				
+
 				<!--twitter -->
 				<% if (person['twitter']){ %>
 					<a style="padding-bottom:15px;color:#b5cdd8;font-style:italic;text-decoration: none;" href="https://twitter.com/<%- person['twitter'] %>">@<%- person['twitter'] %></a>
 				<%} %>
-				
+
 				<!--facebook -->
 				<% if (person['facebook']){ %>
 					<a style="padding-bottom:15px;color:#b5cdd8;font-style:italic;text-decoration: none;" href="https://facebook.com/<%- person['facebook'] %>">facebook.com/<%- person['facebook'] %></a>
 				<%} %>
-				
+
 				<!--linkedin -->
 				<% if (person['linkedin']){ %>
 					<a style="padding-bottom:15px;color:#b5cdd8;font-style:italic;text-decoration: none;" href="https://linkedin.com/<%- person['linkedin'] %>">linkedin.com/<%- person['linkedin'] %></a>
 				<%} %>
-				
+
 				<!--email -->
 				<% if (person['email']){ %>
 					<a style="padding-bottom:15px;color:#b5cdd8;font-style:italic;text-decoration: none;" href="mailto:<%- person['email'] %>"><%- person['email'] %></a>
 				<%} %>
-				
-				
-			
-			</div>
-				
 
-			  <% 
-			   } 
+
+
+			</div>
+
+
+			  <%
+			   }
 			   %>
-				   
-			
-			
-					
-					
+
+
+
+
+
 							<!--regional leaders contact-->
-			<% 
-		
+			<%
+
 			if(peopleGroupNameKey == "Regional Leaders Council"){
-			
+
 			%>
-			
-			
+
+
 				<h3 style="padding-left:10px;padding-top:20px;clear:both;line-height:1.3;">Want to start a chapter? Connect with others in your region? Contact your respective representative<br></h3>
-		
-			<% 
+
+			<%
 				var contactRegionalRepsDictionaryStr = '{ 	"North America East": "naeast@openarchcollab.org", 	"North America South": "nasouth@openarchcollab.org", 	"North America Central": "nacentral@openarchcollab.org", 	"North America West": "nawest@openarchcollab.org", 	"Latin America": "latam@openarchcollab.org", 	"Europe": "europe@openarchcollab.org", 	"Africa": "africa@openarchcollab.org", 	"Oceania": "oceania@openarchcollab.org", 	"Middle East": "middleeast@openarchcollab.org" }';
-				
+
 				var contactRegionalRepsDictionary = JSON.parse(contactRegionalRepsDictionaryStr);
-				
+
 				 for (var contact in contactRegionalRepsDictionary) {
 					if (contactRegionalRepsDictionary.hasOwnProperty(contact)) {
 							var contactEmail = contactRegionalRepsDictionary[contact];
 
 			%>
-	
+
 							<li class="story__body__content__link" style="list-style-type:none;float:left;margin-right:20px;margin-top:10px;margin-left:5px;">
-		  
+
 								<a href="mailto:<%- contactEmail %>" class="story__body__content__link--header"><%- contact %></a>
-			
+
 							</li>
-			<% 				  
+			<%
 					}
 				 }
-		  
+
 			}
 			%>
-			
-			
-			
-			
-			
-			
-			
-			
-                  	
-			
+
+
+
+
+
+
+
+
+
+
 			 <!-- end .story__body__content -->
-		
+
 		  <!-- end .story__body -->
 	   </article>
-	   
 
-		
+
+
 	   <!-- end .story -->
-	   <% 
+	   <%
 		  }
 		  }
-	  
+
 		  %>
-		  
-		  
-		  	   
+
+
+
 	   <!-- supporters article -->
 	    <article class="story u-small-spacing u-row" style="padding-bottom:35px;">
-		
-	
+
+
 			<div style="padding-left:10px;">
 			   <h1 style="font-size:3em;font-weight:bold;color:#e16941;">Thanks to our Supporters</h1>
 			</div>
-			
+
 			<a href="http://currystonedesignprize.com/" target="_blank">
 				<img style="height:auto;max-width:350px;margin-bottom:45px;" src="https://i.imgur.com/e6RhLgm.png" />
 			</a>
-			
-			
+
+
 			<h2 style="font-size:2em;font-weight:bold;color:#dbdbdb;">Thanks to our in kind partners</h2>
 			<br>
 			<h4 style="padding-right:15px;">Branding - Eric Piper <a href="http://homestead-avl.com/" target="_blank">Homestead Design & Branding</a></h4>
@@ -233,15 +234,15 @@
 			<h4 style="padding-right:15px;">Software - <a href="http://www.autodesk.org/" target="_blank">Autodesk Foundation</a></h4>
 
 
-		
+
 		</article>
-		
-		
+
+
 		<article class="story u-small-spacing u-row" style="padding-bottom:35px;padding-top:35px;">
 		<h4 style="padding-right:15px;">We are currently applying for our federal tax exemption and our 501(c)3 status, and expect to receive it during the summer of 2016. The Open Architecture Collaborative is fiscally sponsored by <a href="http://www.codeforamerica.org/" target="_blank">Code for America</a> and all donations are tax deductible (in the U.S.A) under their nonprofit status.</a></h4>
-		
+
 		</article>
-		
+
 	   <% } %>
 	   <% }); %>
 	</div>

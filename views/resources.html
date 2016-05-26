@@ -1,5 +1,5 @@
 <%
-  var requested = _.findWhere(data['categories'], { 'unique-id' : requested });
+  var requested = _.findWhere(data['pages'], { 'unique-id' : requested });
   var title = requested['category'];
   var color = requested['color'];
   var hero = data['resources'][0];
@@ -39,7 +39,7 @@
     </div>
     -->
 
-    <% _.each(data['categories'], function(category){ %>
+    <% _.each(data['pages'], function(category){ %>
       <% if (category['unique-id'] == requested['unique-id']) { %>
         <div class="intro" style="
           <% if (category['color']) { %>

@@ -73,19 +73,19 @@
 
         <ul class="u-unstyled" id='chapter-list'>
 
-          <% _.each(data['categories'], function(category){ %>
+          <% _.each(data['chapters'], function(category){ %>
 
             <li class='hidden'>
               <p class='map-data'>
                 <a class="opener__body__contents__section" href="/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>">
-				  
+
 						<% if (category['updated'] == 'Y'){ %>
 								<span class='chapter-name'><%- category['category'] %></span>
 								<span class='coordinates hidden'><%- category['coordinates'] %></span>
 						<% } %>
-                
+
                 </a>
-                
+
         <% }); %></p>
             </li>
 
