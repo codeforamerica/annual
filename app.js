@@ -131,7 +131,7 @@ app.get('/updates', function(req, res, next) {
 
 // Redirects the /iopenarchitecture page to a custom external URL
 app.get('/iopenarchitecture', function(req, res, next) {
-  res.redirect('https://iopenarchitecture.org/');
+  res.redirect('https://www.iopenarchitecture.org/');
 });
 
 // Get a specific story
