@@ -129,6 +129,11 @@ app.get('/updates', function(req, res, next) {
   });
 });
 
+// Redirects the /iopenarchitecture page to a custom external URL
+app.get('/iopenarchitecture', function(req, res, next) {
+  res.redirect('https://iopenarchitecture.squarespace.com/');
+});
+
 // Get a specific story
 app.get('/story/:id', function (req, res) {
   res.render('story', {
