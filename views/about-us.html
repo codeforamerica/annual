@@ -94,7 +94,7 @@
 	   <% _.each(data['pages'], function(category){ %>
 	   <% if (category['unique-id'] == requested['unique-id']) { %>
 	   <%
-		  var peoplesObject = JSON.parse(category['headline']);
+		  var peoplesObject = JSON.parse(category['description']);
 
 		  for (var peopleGroupNameKey in peoplesObject) {
 			if (peoplesObject.hasOwnProperty(peopleGroupNameKey)) {
