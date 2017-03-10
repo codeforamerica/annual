@@ -88,6 +88,20 @@ app.get('/', function(req, res) {
   });
 });
 
+// Get the archive homepage
+app.get('/archive-homepage', function(req, res) {
+  res.render('__OLD__index', {
+    title: 'Home', //what does this do?
+    type: 'home',
+    url: req.originalUrl,
+    data: Report,
+    partials: {
+      header: 'partials/header',
+      footer: 'partials/footer'
+    }
+  });
+});
+
 // Get various static pages with custom templates
 app.get('/about-us', function(req, res) {
   res.render('about-us', {

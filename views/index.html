@@ -1,119 +1,758 @@
-<%
-  var requested = data.opener[0];
-  var hero = data.opener[1];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Open Architecture Collaborative</title>
 
-  //console.log(data.opener);
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link defer rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
-  var video = data.opener[2];
-  var title = 'Introduction';
-  var color = requested['color'];
+  <!-- Local CSS -->
+  <style>
+    @font-face {
+      font-family: 'Flama-Book';
+      src: url('/assets/fonts/Flama/Flama-Book.otf'); /* IE9 Compat Modes */
+      src: url('/assets/fonts/Flama/Flama-Book.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url("/assets/fonts/Flama/Flama-Book.otf") format("opentype");
+    }
 
-  function shadeColor(color, percent) {
-    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
-    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
-  }
+    @font-face {
+      font-family: 'Flama-Medium';
+      src: url('/assets/fonts/Flama/Flama-Medium.otf'); /* IE9 Compat Modes */
+      src: url('/assets/fonts/Flama/Flama-Medium.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url("/assets/fonts/Flama/Flama-Medium.otf") format("opentype");
+    }
 
-  var darkColor = shadeColor(color, -0.3);
-%>
+    html, body {
+      font-family: "Flama-Book";
+      font-size: 13px;
+      line-height: 1.3;
 
-<% include partials/header.html %>
-<% include partials/nav.html %>
+      max-width: 100%;
+    }
+    @media (min-width: 768px) {
+      html, body {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
 
-<div id="js-main">
-  <section class="opener" id="<% requested.category %>">
+    img {
+      max-width: 100%;
+    }
 
-    <div class="opener__header">
-      <div class="opener__header__content">
-        <img src='assets/images/oac-logo.svg' id='logo'>
-        <h1>Design makes it possible for everyone to dream and build.</h1>
+    /*** MODULE *************************************************************/
+    .module {
+      margin: 1.5rem 0;
+      padding: 1.5rem 0;
+    }
+
+    .module-header {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    /*** STORY **************************************************************/
+    .story {
+      display: block;
+      position: relative;
+    }
+    .story:before {
+      display: block;
+      position: relative;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+
+      margin-bottom: 1rem;
+    }
+    .story + .story { margin-top: 2rem }
+
+    /* Story introduction */
+    .story-introduction {
+      font-family: "Flama-Medium";
+      font-size: 1.3rem;
+    }
+
+    /* Story link */
+    a.story-link {
+      font-family: "Flama-Medium";
+      font-size: 1.3rem;
+      text-decoration: underline;
+    }
+    a.story-link:before {
+      content: '/'
+    }
+
+    /* Story image */
+    .story-image {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Story tagline */
+    .story-tagline {
+      font-size: 1.6rem;
+      color: black;
+    }
+    .story-tagline a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    /* Story half */
+    .story--half .story-image { margin-bottom: 1rem }
+    @media (min-width: 768px) {
+      .story--half .story-image { margin-bottom: 0 }
+    }
+
+    /* Story full */
+    .story--full .story-image {
+      margin-bottom: 1rem;
+    }
+
+
+    /* Story orange */
+    .story--orange:before { background-color: #E06940 }
+    .story--orange .story-introduction { color: #E06940 }
+    .story--orange a.story-link { color: #E06940 }
+    .story--orange a.story-link:hover,
+    .story--orange a.story-link:active { color: #E06940 }
+
+    /* Story medblue */
+    .story--medblue:before { background-color: #7E92A1 }
+    .story--medblue .story-introduction { color: #7E92A1 }
+    .story--medblue a.story-link { color: #7E92A1 }
+    .story--medblue a.story-link:hover,
+    .story--medblue a.story-link:active { color: #7E92A1 }
+
+    /* Story brownish */
+    .story--brownish:before { background-color: #A99F89 }
+    .story--brownish .story-introduction { color: #A99F89 }
+    .story--brownish a.story-link { color: #A99F89 }
+    .story--brownish a.story-link:hover,
+    .story--brownish a.story-link:active { color: #A99F89 }
+
+    /* Story red */
+    .story--red:before { background-color: #973F21 }
+    .story--red .story-introduction { color: #973F21 }
+    .story--red a.story-link { color: #973F21 }
+    .story--red a.story-link:hover,
+    .story--red a.story-link:active { color: #973F21 }
+
+    /* Story purple */
+    .story--purple:before { background-color: #80709F }
+    .story--purple .story-introduction { color: #80709F }
+    .story--purple a.story-link { color: #80709F }
+    .story--purple a.story-link:hover,
+    .story--purple a.story-link:active { color: #80709F }
+
+    /*** BLOCK **************************************************************/
+    .block {
+      display: block;
+      color: white;
+      padding: 3rem 0;
+    }
+    .block a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .block--blue { background-color: #70A0BE }
+    .block--purple { background-color: #80709F }
+    .block--lightblue { background-color: #F0F5F8 }
+
+    /*** CELEBRATE **********************************************************/
+    .celebrate + .celebrate {
+      margin-top: 2rem;
+    }
+    .celebrate p {
+      font-family: "Flama-Medium";
+      font-size: 1.3rem;
+    }
+    .celebrate a:before {
+      content: '/';
+    }
+
+    /*** HERO ***************************************************************/
+    .hero {
+      padding: 2rem 0;
+      background-image: url('/assets/images/new/hands.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-logo {
+      width: 180px;
+      height: auto;
+    }
+
+    .hero-tagline {
+      padding-top: 15vh;
+    }
+
+    .hero-tagline h1 {
+      font-family: "Flama-Medium";
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      color: #80709F;
+    }
+
+    @media (min-width: 768px) {
+      .hero-tagline { padding-top: 20vh }
+      .hero-tagline h1 { font-size: 4.5rem }
+    }
+
+    /*** INTRODUCTION *******************************************************/
+    .introduction {
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+    }
+
+    .introduction p {
+      font-size: 1.6rem;
+    }
+
+    .introduction a {
+      margin-top: 1rem;
+    }
+
+
+
+
+    .btn-primary {
+      background-color: #80709F;
+      border-color: #80709F;
+    }
+    .footer {
+      color: black;
+    }
+    .footer a.btn {
+      text-decoration: none;
+      color: white;
+    }
+    .footer a {
+      color: black;
+    }
+    .footer-section {
+      margin-bottom: 2rem;
+    }
+    #map {
+      height: 400px;
+      margin-bottom: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION: HEADER -->
+  <section class="hero">
+    <div class="container">
+      <div class="col-sm-10 col-md-offset-2 col-md-8">
+
+        <!-- LOGO -->
+        <div class="hero-logo">
+          <img src="/assets/images/oac_logo_blk.png" alt="Open Architecture Collaborative logo">
+        </div>
+
+        <!-- TAGLINE -->
+        <div class="hero-tagline">
+          <h1>Social design for social justice</h1>
+        </div>
+
+      </div>
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: INTRODUCTION -->
+  <section class="introduction">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-6 col-lg-5">
+          <p>We’re mobilizing architects, designers, and neighborhood leaders to end injustice in our communities. We use design to reach out and build new relationships.</p>
+          <a class="btn btn-lg btn-primary" href="#chapters" role="button">YOU CAN CHANGE THINGS. JOIN US.</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="opener__image">
-      <img src="<%- hero.headline %>" alt="">
+  <!-- SECTION: MISSION -->
+  <section class="block block--lightblue mission">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-6 col-lg-7">
+          <img src="/assets/images/new/words.png" alt="">
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="opener__body">
+  <!-- SECTION: ANNIVERSARY -->
+  <section class="block block--blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-6 col-lg-5">
+          <article class="celebrate">
+            <p>To celebrate our first anniversary, we’re trying something new: this website.</p>
+            <p><a href="https://chapternetwork.typeform.com/to/XnEjhX">Give us some quick feedback</a></p>
+          </article>
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
 
-      <div class="opener__body__text">
-        <%- requested.description %>
-        <div class="opener__body__text__section">
-          <% var update = _.first(data['updates']) %>
-          <div class="update-billboard update-billboard--homepage">
-            <p class="update-billboard-kicker">Most recent updates</p>
-            <% if (update['postImage'] !== '') { %>
-              <div class="update-billboard-image">
-                <img src="<%- update['postImage'] %>" />
+  <!-- SECTION: COMING SOON -->
+  <section class="block block--purple">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-6 col-lg-5">
+          <article class="celebrate">
+            <p>In the weeks to come, we’ll bring you stories about our volunteers the policy areas we work in and the community impact.</p>
+            <p><a href="#signup">Get the stories first: join our mailing list</a></p>
+          </article>
+        </div>
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: HOW WE DO IT -->
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+          <h3 class="module-header">This is how we do it.</h3>
+
+          <!-- STORY: CHAPTERS/VOLUNTEERS -->
+          <article class="story story--half story--orange">
+            <div class="row">
+              <div class="col-sm-6 col-sm-push-6">
+                <img class="story-image" src="/assets/images/new/volunteers.jpg" alt="">
               </div>
-            <% } %>
-            <div class="update-billboard-content">
-              <h2><%- update['headline'] %></h2>
-              <div class="update-billboard-contributor">
-                <img src="<%- update['authorImageLink'] %>" alt="">
-                <p>Posted by <%- update['authorName'] %> on <%- update['date'] %></p>
+              <div class="col-sm-6 col-sm-pull-6">
+                <p class="story-introduction">Our chapters work with communities around the world providing technical support to local  nonprofits, community associations and informal groups.</p>
+                <p><a class="story-link" href="#chapters">Find a chapter or start a new one</a></p>
               </div>
-              <p><%- update['shortDescription'] %></p>
-              <p><a href="/updates/<%- update['unique-id'] %>">Read the full post</a></p>
+            </div><!-- .row -->
+          </article>
+
+          <!-- STORY: COMMUNITY LEADERS -->
+          <article class="story story--half story--medblue">
+            <div class="row">
+              <div class="col-sm-6 col-sm-push-6">
+                <img class="story-image" src="/assets/images/new/community.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-sm-pull-6">
+                <p class="story-introduction"><a href="link-quiet"></a>Neighborhood leaders with a challenge to overcome or a project in mind reach out to us for help so they can try new approaches.</p>
+                <p><a class="story-link" href="#chapters">Get help with your local project</a></p>
+              </div>
+            </div><!-- .row -->
+          </article>
+
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: STORIES FROM THE FIELD -->
+  <a id="bogota"></a>
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+          <h3 class="module-header">Stories from the field.</h3>
+
+          <!-- STORY: BOGOTA -->
+          <article class="story story--full story--brownish">
+            <img class="story-image" src="/assets/images/new/bogota.jpg" alt="">
+            <p class="story-tagline"><a class="story-tagline-link" href="https://medium.com/@openarchcollab/bogot%C3%A1-chapter-provides-wraparound-services-for-informal-housing-market-b2f9545a9038#.nufca8aon">IN BOGOTA, COLUMBIA, a group of architects created a new model for informal housing projects that helps locals get the materials, design, and regulatory support they need.</a></p>
+          </article>
+
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: ON OUR FIRST YEAR -->
+  <a id="kickoff"></a>
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+          <h3 class="module-header">On our first year.</h3>
+
+          <article class="story story--full story--red">
+            <img class="story-image" src="/assets/images/new/year.jpg" alt="">
+            <p class="story-tagline"><a class="story-tagline-link" href="http://www.openarchcollab.org/updates/2016-end-of-year-message">ONE YEAR AGO TODAY we were an unaffiliated association of passionate people intent on creating a new organization. We’ve all done a whole lot of work since that day. But if we’ve learned anything in 12 months, it’s that we’ve only just begun.</a></p>
+          </article>
+
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: THE KICKOFF -->
+  <a id="kickoff"></a>
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+          <h3 class="module-header">The kickoff.</h3>
+
+          <article class="story story--full story--purple">
+            <img class="story-image" src="/assets/images/new/kickoff.jpg" alt="">
+            <p class="story-tagline"><a class="story-tagline-link" href="https://medium.com/@openarchcollab/leadership-priorities-94441b2040aa#.yu0jwr8we">A DAY BY DAY LOOK at the Open Architecture Collaborative Global Leadership Summit in Houston Texas over the weekend of Feb. 11, 2017.</a></p>
+          </article>
+
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <!-- SECTION: CHAPTERS -->
+  <a id="chapters"></a>
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+          <h3 class="module-header">Find a chapter.</h3>
+
+          <article class="story story--full story--purple">
+            <div id="map"></div>
+          </article>
+
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+  <div class="block block--lightblue">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-offset-2 col-md-8">
+
+          <article class="footer">
+            <div class="footer-section">
+              <h4>Visit our old site while we migrate content</h4>
+              <p>
+                <a href="http://www.openarchcollab.org/archive-homepage">Archived Homepage</a> /
+                <a href="http://www.openarchcollab.org/about-us">About Us</a> /
+                <a href="http://www.openarchcollab.org/updates">Updates</a> / 
+                <a href="http://www.openarchcollab.org/resources">Resources</a>
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class='video-embed page-content'>
-        <h2><%- video.headline %></h2>
-        <%- video.description %>
-      </div>
+            <div class="footer-section">
+              <h4>Take action with the Open Architecture Collaborative</h4>
+              <p>
+                <a class="btn btn-primary" href="https://chapternetwork.typeform.com/to/K8KU76" role="button">Volunteer and Stay Informed</a>
+                <a class="btn btn-primary" href="https://chapternetwork.typeform.com/to/q1RNPf" role="button">Request Services</a>
+                <a class="btn btn-primary" href="https://www.razoo.com/us/story/Open-Architecture-Collaborative" role="button">Donate</a>
+              </p>
+            </div>
 
-      <div class="opener-body-map">
+            <div class="row">
+              <div class="col-md-4">
+                <h4>Subscribe to our mailing list</h4>
 
-        <h2>Find a local chapter</h2>
-        <div id='map'>
+                <a id="signup"></a>
+                <div class="f-container mailchimp">
+                      <!-- Begin MailChimp Signup Form -->
+                      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                      <style type="text/css">
+                        	#mc_embed_signup{background:inherit; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                          #mc_embed_signup form {padding:0;margin-top: -15px}
+                          #mc_embed_signup input.email {width:100%}
+                        	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                        	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                      <div id="mc_embed_signup">
+                        <form action="//afhnetwork.us10.list-manage.com/subscribe/post?u=9b2a81d8eaec46259272cbaa7&amp;id=4806ed0b74" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                            <div id="mc_embed_signup_scroll">
+                        	<label for="mce-EMAIL"></label>
+                        	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9b2a81d8eaec46259272cbaa7_4806ed0b74" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
 
-        </div>
+              </div>
+              <div class="col-md-4">
+                <h4>Press</h4>
+                <p><a href="http://www.fastcodesign.com/3057654/what-renaming-a-failed-brand-taught-this-design-nonprofit/4">FastCo</a></p>
+                <p><a href="http://nonprofitquarterly.org/2016/01/22/from-centralized-organization-to-network-of-chapters-reborn-afh-completes-reorg/?utm_content=26742155&utm_medium=social&utm_source=twitter">NonProfit Quarterly</a></p>
+                <p><a href="http://www.architectmagazine.com/practice/architecture-for-humanity-announces-a-new-name-and-a-fresh-start">Architect</a></p>
+                <p><a href="http://archinect.com/news/article/148196237/architecture-for-humanity-s-next-chapter-garrett-jacobs-executive-director-of-afh-offshoot-the-chapter-network-on-one-to-one-11?utm_content=buffer92c10&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer">Interview with our ED - Archinect</a></p>
+              </div>
+              <div class="col-md-4">
+                <h4>Code of Conduct</h4>
+                <p><a href="https://twitter.com/openarchcollab">Twitter</a></p>
+                <p><a href="https://www.facebook.com/OpenArchCollab/">Facebook</a></p>
+                <p><a href="https://soundcloud.com/open-arch-collab">SoundCloud</a></p>
+              </div>
+            </div>
+          </article>
 
-        <ul class="u-unstyled" id='chapter-list'>
+        </div><!-- .col-sm-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </div>
 
-          <% _.each(data['chapters'], function(category){ %>
 
-            <li class='hidden'>
-              <p class='map-data'>
-                <a class="opener__body__contents__section" href="/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>">
+  <style>#mapthings{ display: none }</style>
+  <section id="mapthings">
+  <ul class="u-unstyled chapter-columns" id="cc-0">
+     <span class="hidden">list1</span>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/auckland-new-zealand" style="border-bottom-color:#7099ad">
+           <span class="chapter-name">Auckland, New Zealand</span>
+           <span class="coordinates hidden">-36.8484, 174.7633</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/bogota-colombia" style="border-bottom-color:#78698e">
+           <span class="chapter-name">Bogota, Colombia</span>
+           <span class="coordinates hidden">4.7109, -74.0720</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/boston-massachusetts" style="border-bottom-color:#66CDAA">
+           <span class="chapter-name">Boston, Massachusetts</span>
+           <span class="coordinates hidden">42.3600, -71.0588</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/cairo-egypt" style="border-bottom-color:#cf6347">
+           <span class="chapter-name">Cairo, Egypt</span>
+           <span class="coordinates hidden">30.0500,  31.2333</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/calgary-canada" style="border-bottom-color:">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/chicago-illinois" style="border-bottom-color:#cf6f36">
+           <span class="chapter-name">Chicago, Illinois</span>
+           <span class="coordinates hidden">41.8781, -87.6297</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/connecticut-usa" style="border-bottom-color:#568542">
+           <span class="chapter-name">Connecticut, USA</span>
+           <span class="coordinates hidden">41.6032, -73.0877</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/dallas-texas" style="border-bottom-color:#d3c15c">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/detroit-mi" style="border-bottom-color:#568542">
+           <span class="chapter-name">Detroit, MI</span>
+           <span class="coordinates hidden">42.3314, -83.0457</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/dhaka-bangladesh-" style="border-bottom-color:">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/genoa-italy" style="border-bottom-color:#7099ad">
+           <span class="chapter-name">Genoa, Italy</span>
+           <span class="coordinates hidden">44.4111, 8.9328</span>
+           </a>
+        </p>
+     </li>
+  </ul>
+  <ul class="u-unstyled chapter-columns" id="cc-1">
+     <span class="hidden">list2</span>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/guadelajara-mexico" style="border-bottom-color:#78698e">
+           <span class="chapter-name">Guadelajara, Mexico</span>
+           <span class="coordinates hidden">20.6596, -103.3396</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/houston-texas" style="border-bottom-color:#6D6E71">
+           <span class="chapter-name">Houston, Texas</span>
+           <span class="coordinates hidden">29.7604, -95.3698</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/lexington-kentucky" style="border-bottom-color:#3399ff">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/portugal" style="border-bottom-color:#9b6d17">
+           <span class="chapter-name">Portugal</span>
+           <span class="coordinates hidden">38. 7222, -9.1393</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/london-uk" style="border-bottom-color:#cf6f36">
+           <span class="chapter-name">London, UK</span>
+           <span class="coordinates hidden">51.5073, -0.1277</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/los-angeles-ca" style="border-bottom-color:#e2b781">
+           <span class="chapter-name">Los Angeles, CA</span>
+           <span class="coordinates hidden">34.0500, -118.2500</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/mexico-city-mexico" style="border-bottom-color:#d3c15c">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/minneapolis-minnesota" style="border-bottom-color:#568542">
+           <span class="chapter-name">Minneapolis, Minnesota</span>
+           <span class="coordinates hidden">44.9777, -93.2650</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/monterrey-mexico" style="border-bottom-color:#7099ad">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/new-orleans-louisiana" style="border-bottom-color:#78698e">
+           <span class="chapter-name">New Orleans, Louisiana</span>
+           <span class="coordinates hidden">29.9510, -90.0715</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/new-york-city-ny" style="border-bottom-color:#6D6E71">
+           <span class="chapter-name">New York City, NY</span>
+           <span class="coordinates hidden">40.7127, -74.0059</span>
+           </a>
+        </p>
+     </li>
+  </ul>
+  <ul class="u-unstyled chapter-columns" id="cc-2">
+     <span class="hidden">list3</span>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/portland-oregon" style="border-bottom-color:#cf6347">
+           <span class="chapter-name">Portland, Oregon</span>
+           <span class="coordinates hidden">45.5230, -122.6764</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/san-diego-ca" style="border-bottom-color:#cf6f36">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/san-francisco-ca" style="border-bottom-color:#e2b781">
+           <span class="chapter-name">San Francisco, CA</span>
+           <span class="coordinates hidden">37.7749, -122.4194</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/tokyo-japan" style="border-bottom-color:#d3c15c">
+           <span class="chapter-name">Tokyo, Japan</span>
+           <span class="coordinates hidden">35.6894, 139.6917</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/toronto-canada" style="border-bottom-color:#cf6f36">
+           <span class="chapter-name">Toronto, Canada</span>
+           <span class="coordinates hidden">43.6532, -79.3831</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/vancouver-canada" style="border-bottom-color:#7099ad">
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/venice-italy" style="border-bottom-color:#78698e">
+           <span class="chapter-name">Venice, Italy</span>
+           <span class="coordinates hidden">45.4408, 12.3155</span>
+           </a>
+        </p>
+     </li>
+     <li class="">
+        <p class="map-data">
+           <a class="opener__body__contents__section" href="/washington-dc" style="border-bottom-color:#6D6E71">
+           <span class="chapter-name">Washington, DC</span>
+           <span class="coordinates hidden">38.9067, -77.0311</span>
+           </a>
+        </p>
+     </li>
+  </ul>
+  </section>
 
-						<% if (category['updated'] == 'Y'){ %>
-								<span class='chapter-name'><%- category['category'] %></span>
-								<span class='coordinates hidden'><%- category['coordinates'] %></span>
-						<% } %>
 
-                </a>
 
-        <% }); %></p>
-            </li>
+  <script defer src="/scripts/vendor/jquery-1.11.2.min.js"></script>
+  <script defer src="/scripts/vendor/jquery.transit.min.js"></script>
+  <script defer src="/scripts/vendor/underscore-min.js"></script>
 
-        </ul>
 
-        <ul class='u-unstyled chapter-columns' id='cc-0'>
-
-          <span class='hidden'>list1</span>
-        </ul>
-
-        <ul class='u-unstyled chapter-columns' id='cc-1'>
-          <span class='hidden'>list2</span>
-        </ul>
-
-        <ul class='u-unstyled chapter-columns' id='cc-2'>
-          <span class='hidden'>list3</span>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section><!-- end .opener -->
-</div>
-
-<% include partials/next.html %>
-<% include partials/footer.html %>
-
-<!-- typeform scripts -->
-
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+  <script defer src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script defer type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+  <script defer src="/scripts/application.js"></script>
+</body>
+</html>

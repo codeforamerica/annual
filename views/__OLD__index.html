@@ -1,0 +1,119 @@
+<%
+  var requested = data.opener[0];
+  var hero = data.opener[1];
+
+  //console.log(data.opener);
+
+  var video = data.opener[2];
+  var title = 'Introduction';
+  var color = requested['color'];
+
+  function shadeColor(color, percent) {
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+  }
+
+  var darkColor = shadeColor(color, -0.3);
+%>
+
+<% include partials/header.html %>
+<% include partials/nav.html %>
+
+<div id="js-main">
+  <section class="opener" id="<% requested.category %>">
+
+    <div class="opener__header">
+      <div class="opener__header__content">
+        <img src='assets/images/oac-logo.svg' id='logo'>
+        <h1>Design makes it possible for everyone to dream and build.</h1>
+      </div>
+    </div>
+
+    <div class="opener__image">
+      <img src="<%- hero.headline %>" alt="">
+    </div>
+
+    <div class="opener__body">
+
+      <div class="opener__body__text">
+        <%- requested.description %>
+        <div class="opener__body__text__section">
+          <% var update = _.first(data['updates']) %>
+          <div class="update-billboard update-billboard--homepage">
+            <p class="update-billboard-kicker">Most recent updates</p>
+            <% if (update['postImage'] !== '') { %>
+              <div class="update-billboard-image">
+                <img src="<%- update['postImage'] %>" />
+              </div>
+            <% } %>
+            <div class="update-billboard-content">
+              <h2><%- update['headline'] %></h2>
+              <div class="update-billboard-contributor">
+                <img src="<%- update['authorImageLink'] %>" alt="">
+                <p>Posted by <%- update['authorName'] %> on <%- update['date'] %></p>
+              </div>
+              <p><%- update['shortDescription'] %></p>
+              <p><a href="/updates/<%- update['unique-id'] %>">Read the full post</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='video-embed page-content'>
+        <h2><%- video.headline %></h2>
+        <%- video.description %>
+      </div>
+
+      <div class="opener-body-map">
+
+        <h2>Find a local chapter</h2>
+        <div id='map'>
+
+        </div>
+
+        <ul class="u-unstyled" id='chapter-list'>
+
+          <% _.each(data['chapters'], function(category){ %>
+
+            <li class='hidden'>
+              <p class='map-data'>
+                <a class="opener__body__contents__section" href="/<%- category['unique-id'] %>" style="border-bottom-color:<%- category['color'] %>">
+
+						<% if (category['updated'] == 'Y'){ %>
+								<span class='chapter-name'><%- category['category'] %></span>
+								<span class='coordinates hidden'><%- category['coordinates'] %></span>
+						<% } %>
+
+                </a>
+
+        <% }); %></p>
+            </li>
+
+        </ul>
+
+        <ul class='u-unstyled chapter-columns' id='cc-0'>
+
+          <span class='hidden'>list1</span>
+        </ul>
+
+        <ul class='u-unstyled chapter-columns' id='cc-1'>
+          <span class='hidden'>list2</span>
+        </ul>
+
+        <ul class='u-unstyled chapter-columns' id='cc-2'>
+          <span class='hidden'>list3</span>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section><!-- end .opener -->
+</div>
+
+<% include partials/next.html %>
+<% include partials/footer.html %>
+
+<!-- typeform scripts -->
+
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
