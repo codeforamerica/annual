@@ -37,8 +37,5 @@
   "bugs": {
     "url": "https://github.com/codeforamerica/annual/issues"
   },
-  "homepage": "https://github.com/codeforamerica/annual",
-  "engines": {
-    "node": "0.10.x"
-  }
+  "homepage": "https://github.com/codeforamerica/annual"
 }
