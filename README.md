@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/gjacobs86/openarchcollab.org.png?label=ready&title=Ready)](https://waffle.io/gjacobs86/openarchcollab.org?utm_source=badge)
 openarchcollab.org
 =======
 
